@@ -4,3 +4,7 @@
 .pytest_cache/
 .ruff_cache/
 *.pyc
+a-vllm.log
+solutions/
+submission.parquet
+!reference.csv

@@ -8,8 +8,12 @@ Package Management
 - FORBIDDEN: uv pip install, @latest syntax
 
 Formatting
-- Format: uv run --frozen ruff format *.py
-- Check: uv run --frozen ruff check *.py
-- Fix: uv run --frozen ruff check *.py --fix
-- Sort imports: uv run --frozen ruff check --select I *.py --fix
-- Type checking: uv run --frozen mypy *.py
+- Format: uvx ruff format *.py
+- Check: uvx ruff check *.py
+- Fix: uvx ruff check *.py --fix
+- Sort imports: uvx ruff check --select I *.py --fix
+- Type checking (mypy): uvx mypy *.py
+- Type checking (pyright): uvx pyright *.py
+
+When searching for vLLM library code
+- Download vLLM library code by running `uv pip install vllm==0.11.2 --no-deps`
