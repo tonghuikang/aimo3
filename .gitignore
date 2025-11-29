@@ -8,3 +8,4 @@ a-vllm.log
 solutions/
 submission.parquet
 !reference.csv
+env.json

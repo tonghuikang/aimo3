@@ -5,9 +5,7 @@ This is some template code where you can use to serve vLLM and solve [AI Mathema
 
 # Setup
 
-You have to somehow setup uv.
-
-I actually not know how to do this, just ask Claude Code et al.
+Run `uv sync` to install packages in .venv
 
 
 # Deploy inference
