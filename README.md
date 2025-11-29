@@ -1,6 +1,8 @@
 # AIMO 3 template code
 
-This is some template code where you can use to serve vLLM and solve [AI Mathematical Olympaid 3](https://www.kaggle.com/competitions/ai-mathematical-olympiad-progress-prize-3)
+This is some template code where you can use to serve vLLM and solve [AI Mathematical Olympaid 3](https://www.kaggle.com/competitions/ai-mathematical-olympiad-progress-prize-3).
+
+Please read the [Kaggle discussions](https://www.kaggle.com/competitions/ai-mathematical-olympiad-progress-prize-3/discussion/643580) post for more context.
 
 
 # Setup
