@@ -13,7 +13,7 @@ class UserSecretsClient:
             warnings.warn(
                 "\n\nenv.json not found.\n"
                 "If run locally with remote GPUs, env.json should contain something like\n"
-                '{ "REMOTE_VLLM_URL": "https://tonghuikang--example-gpt-oss-inference-serve.modal.run/v1" }\n\n'
+                '{ "REMOTE_VLLM_URL": "https://<handle>--example-gpt-oss-inference-serve.modal.run/v1" }\n\n'
                 "Run `uv run modal deploy inference.py` to get the URL\n",
                 stacklevel=2,
             )
