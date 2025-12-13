@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMO3 Leaderboard Monitor</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #1a1a2e;
+            color: #eee;
+        }
+        h1 {
+            text-align: center;
+            color: #00d9ff;
+            margin-bottom: 20px;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            overflow-x: auto;
+        }
+        .status {
+            text-align: center;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            background: #16213e;
+        }
+        .status.loading {
+            color: #fbbf24;
+        }
+        .status.success {
+            color: #10b981;
+        }
+        .status.error {
+            color: #ef4444;
+        }
+        .grid-container {
+            background: #16213e;
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+        }
+        .grid-container h2 {
+            color: #00d9ff;
+            margin-top: 0;
+        }
+        .header-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 8px 12px;
+            text-align: center;
+            border: 1px solid #333;
+            white-space: nowrap;
+        }
+        th {
+            background: #0d1b2a;
+            color: #00d9ff;
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        th.team-header {
+            text-align: left;
+            min-width: 180px;
+            position: sticky;
+            left: 0;
+            z-index: 20;
+            background: #0d1b2a;
+        }
+        th.pos-header {
+            min-width: 50px;
+            position: sticky;
+            left: 0;
+            z-index: 20;
+            background: #0d1b2a;
+        }
+        td.pos-cell {
+            font-weight: 500;
+            color: #888;
+            position: sticky;
+            left: 0;
+            background: #16213e;
+            z-index: 5;
+        }
+        td.team-cell {
+            text-align: left;
+            font-weight: 500;
+            color: #00d9ff;
+            position: sticky;
+            left: 50px;
+            background: #16213e;
+            z-index: 5;
+        }
+        td.score-cell {
+            background: #1a2744;
+        }
+        td.score-cell.has-data {
+            background: #0d2818;
+        }
+        .score-value {
+            font-weight: bold;
+            color: #10b981;
+        }
+        .time-value {
+            font-size: 11px;
+            color: #888;
+            display: block;
+        }
+        .no-data {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        .date-header {
+            font-size: 11px;
+        }
+        tr:hover td {
+            background: #1a3a5c;
+        }
+        tr:hover td.pos-cell,
+        tr:hover td.team-cell {
+            background: #1a3a5c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AIMO3 Leaderboard History</h1>
+
+        <div id="status" class="status loading">Loading data...</div>
+
+        <div class="grid-container">
+            <div id="grid-table">
+                <div class="no-data">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'https://tonghuikang--leaderboard-monitor-get-history.modal.run';
+
+        function formatMinutes(minutes) {
+            if (minutes === undefined || minutes === null) return '';
+            if (minutes < 0) return '?';
+            const hours = Math.floor(minutes / 60);
+            const mins = minutes % 60;
+            return `${hours}h ${mins}m`;
+        }
+
+        function renderGrid(positions, history) {
+            if (!positions || positions.length === 0) {
+                return '<div class="no-data">No data available yet. The cron job runs every minute.</div>';
+            }
+
+            // Collect all unique dates across all teams
+            const allDates = new Set();
+            for (const teamId of Object.keys(history)) {
+                for (const date of Object.keys(history[teamId])) {
+                    // Extract base date (mm-dd) from keys like "12-11" or "12-11-1"
+                    const baseDate = date.substring(0, 5);
+                    allDates.add(baseDate);
+                }
+            }
+
+            // Sort dates (most recent first)
+            const sortedDates = Array.from(allDates).sort().reverse();
+
+            if (sortedDates.length === 0) {
+                return '<div class="no-data">No historical data recorded yet.</div>';
+            }
+
+            // Build table
+            let html = '<table>';
+
+            // Header row with dates
+            html += '<thead><tr>';
+            html += '<th class="pos-header">#</th>';
+            html += '<th class="team-header">Team</th>';
+            html += '<th>Score</th>';
+            html += '<th>Subs</th>';
+            for (const date of sortedDates) {
+                html += `<th class="date-header">${date}</th>`;
+            }
+            html += '</tr></thead>';
+
+            // Body rows with teams (already sorted by position)
+            html += '<tbody>';
+            for (const pos of positions) {
+                const [teamId, teamName, position, subCount] = pos;
+                const teamHist = history[teamId] || {};
+
+                // Calculate max score for this team
+                let maxScore = 0;
+                for (const key of Object.keys(teamHist)) {
+                    if (teamHist[key].score > maxScore) {
+                        maxScore = teamHist[key].score;
+                    }
+                }
+
+                html += '<tr>';
+                html += `<td class="pos-cell">${position}</td>`;
+                html += `<td class="team-cell">${teamName}</td>`;
+                html += `<td class="score-cell has-data"><span class="score-value">${maxScore}</span></td>`;
+                html += `<td class="score-cell">${subCount}</td>`;
+
+                // First pass: collect entries for each date
+                const dateEntries = [];
+                for (const date of sortedDates) {
+                    let entry = null;
+                    for (const key of Object.keys(teamHist)) {
+                        if (key.startsWith(date)) {
+                            if (!entry || key > entry.key) {
+                                entry = { key, data: teamHist[key] };
+                            }
+                        }
+                    }
+                    dateEntries.push(entry);
+                }
+
+                // Second pass: determine if score is better than previous date's score
+                // sortedDates is newest first, so we iterate backwards (oldest to newest)
+                let prevScore = 0;
+                const showScore = new Array(dateEntries.length).fill(false);
+                for (let i = dateEntries.length - 1; i >= 0; i--) {
+                    const entry = dateEntries[i];
+                    if (entry && entry.data.score > prevScore) {
+                        showScore[i] = true;
+                    }
+                    // Update prevScore to current entry's score (if exists) for next iteration
+                    if (entry) {
+                        prevScore = entry.data.score;
+                    }
+                }
+
+                // Third pass: render cells
+                for (let i = 0; i < sortedDates.length; i++) {
+                    const entry = dateEntries[i];
+                    if (!entry) {
+                        // No data for this date
+                        html += '<td class="score-cell">-</td>';
+                    } else {
+                        // Check if submission_time is before 2025-12-12-00-00
+                        const subTime = entry.data.submission_time || '';
+                        const isBeforeCutoff = subTime < '2025-12-12-00-00';
+                        const timeStr = formatMinutes(entry.data.minutes_taken);
+
+                        if (isBeforeCutoff) {
+                            // Before cutoff, show "-" for both score and time
+                            html += '<td class="score-cell has-data">';
+                            html += '<span class="score-value">-</span>';
+                            html += '<span class="time-value">-</span>';
+                            html += '</td>';
+                        } else if (showScore[i]) {
+                            // Score improved, show actual score and time
+                            html += '<td class="score-cell has-data">';
+                            html += `<span class="score-value">${entry.data.score}</span>`;
+                            html += `<span class="time-value">${timeStr}</span>`;
+                            html += '</td>';
+                        } else {
+                            // Has data but score didn't improve, show "-" for score
+                            html += '<td class="score-cell has-data">';
+                            html += '<span class="score-value">-</span>';
+                            html += `<span class="time-value">${timeStr}</span>`;
+                            html += '</td>';
+                        }
+                    }
+                }
+                html += '</tr>';
+            }
+            html += '</tbody></table>';
+
+            return html;
+        }
+
+        async function loadData() {
+            const statusEl = document.getElementById('status');
+            const gridEl = document.getElementById('grid-table');
+
+            statusEl.className = 'status loading';
+            statusEl.textContent = 'Loading data...';
+
+            try {
+                const response = await fetch(API_URL);
+                const data = await response.json();
+
+                if (data.error) {
+                    statusEl.className = 'status error';
+                    statusEl.textContent = `Error: ${data.error}`;
+                    return;
+                }
+
+                const positions = data.positions || [];
+                const history = data.history || {};
+
+                if (positions.length === 0) {
+                    statusEl.className = 'status';
+                    statusEl.textContent = 'No data available yet';
+                    gridEl.innerHTML = '<div class="no-data">No data yet. The cron job runs every minute.</div>';
+                    return;
+                }
+
+                gridEl.innerHTML = renderGrid(positions, history);
+
+                const teamCount = positions.length;
+                const historyCount = Object.keys(history).length;
+                statusEl.className = 'status success';
+                statusEl.textContent = 'You will see up to 30 minutes of variance in the time';
+            } catch (e) {
+                statusEl.className = 'status error';
+                statusEl.textContent = `Error: ${e.message}`;
+                console.error('Failed to load data:', e);
+            }
+        }
+
+        // Load data on page load (once)
+        loadData();
+    </script>
+</body>
+</html>
