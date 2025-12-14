@@ -377,6 +377,7 @@
                 for (let i = 0; i < tokenIds.length; i++) {
                     const tokenId = tokenIds[i];
                     let text;
+                    let mergedWithPrevious = false;
 
                     // Check if it's a special token
                     if (SPECIAL_TOKENS[tokenId]) {
@@ -384,17 +385,43 @@
                     } else {
                         // Decode using tiktoken
                         try {
-                            const decoded = window.tiktoken.decode([tokenId]);
-                            text = decoded;
+                            const singleDecoded = window.tiktoken.decode([tokenId]);
+                            text = singleDecoded;
+
+                            // Check if this token should be merged with the previous one
+                            // This handles multi-byte UTF-8 characters that span tokens
+                            if (i > 0 && tokenGroups.length > 0) {
+                                const prevGroup = tokenGroups[tokenGroups.length - 1];
+                                const prevTokenId = tokenIds[prevGroup.indices[prevGroup.indices.length - 1]];
+
+                                // Only try merging if previous wasn't a special token
+                                if (!SPECIAL_TOKENS[prevTokenId]) {
+                                    // Get all token IDs from the previous group plus current
+                                    const combinedIds = [...prevGroup.indices.map(idx => tokenIds[idx]), tokenId];
+                                    const combinedDecoded = window.tiktoken.decode(combinedIds);
+
+                                    // Check if combined decoding is different from concatenation
+                                    const concatenated = prevGroup.text + singleDecoded;
+
+                                    if (combinedDecoded !== concatenated) {
+                                        // Merge: update previous group instead of creating new one
+                                        prevGroup.text = combinedDecoded;
+                                        prevGroup.indices.push(i);
+                                        mergedWithPrevious = true;
+                                    }
+                                }
+                            }
                         } catch (e) {
                             text = `[${tokenId}]`;
                         }
                     }
 
-                    tokenGroups.push({
-                        text: text,
-                        indices: [i]
-                    });
+                    if (!mergedWithPrevious) {
+                        tokenGroups.push({
+                            text: text,
+                            indices: [i]
+                        });
+                    }
                 }
 
                 displayText();
