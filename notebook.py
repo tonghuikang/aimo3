@@ -20,9 +20,6 @@ import time
 from kaggle_secrets import UserSecretsClient
 
 secrets = UserSecretsClient()
-REMOTE_VLLM_URL = "NOT_AVAILABLE"
-if not serve_vllm_on_kaggle:
-    REMOTE_VLLM_URL = secrets.get_secret("REMOTE_VLLM_URL")
 
 
 start_time = time.time()
@@ -43,6 +40,11 @@ def is_on_kaggle_interactive() -> bool:
 
 def is_on_kaggle() -> bool:
     return bool(os.getenv("KAGGLE_KERNEL_RUN_TYPE"))
+
+
+REMOTE_VLLM_URL = "NOT_AVAILABLE"
+if not serve_vllm_on_kaggle or not is_on_kaggle():
+    REMOTE_VLLM_URL = secrets.get_secret("REMOTE_VLLM_URL")
 
 
 # Some debugger warning on Kaggle
@@ -904,7 +906,7 @@ def predict(id_: pl.Series, problem: pl.Series) -> pl.DataFrame | pd.DataFrame:
 
         if not is_on_kaggle():
             # if you want to debug a particular question locally
-            if not("Alice" not in question_text):
+            if "Norwegian" not in question_text:
                 print("not on kaggle, skipping question")  # not popping cutoff_times
                 return pl.DataFrame({"id": id_, "answer": 12315})
 
