@@ -351,12 +351,12 @@ class LocalJupyterSession:
     Thread-safe: creates its own ZMQ context for use within a single thread.
     """
 
-    def __init__(self) -> None:
+    def __init__(self, timeout: float = 10.0) -> None:
         import zmq
         from jupyter_client.blocking.client import BlockingKernelClient
         from jupyter_client.manager import KernelManager
 
-        self._default_timeout = 10.0
+        self._default_timeout = timeout
         # Create a dedicated ZMQ context for this session (thread-safe)
         self._zmq_context = zmq.Context()
         self._km = KernelManager(context=self._zmq_context)
