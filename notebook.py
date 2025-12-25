@@ -12,6 +12,7 @@
 
 # %% [code] {"jupyter":{"outputs_hidden":false}}
 run_all_questions_on_kaggle = False  # ignored for submissions
+replication_count_for_commit_runs = 2
 
 # %% [code] {"jupyter":{"outputs_hidden":false}}
 import os
@@ -78,22 +79,6 @@ if is_on_kaggle():
         ]
     )
 
-
-# %% [code] {"_kg_hide-output":true,"jupyter":{"outputs_hidden":false}}
-import subprocess
-
-if is_on_kaggle():
-    subprocess.run(
-        [
-            "pip",
-            "uninstall",
-            "--yes",
-            "tensorflow",
-            "matplotlib",
-            "keras",
-            "scikit-learn",
-        ]
-    )
 
 # %% [code] {"_kg_hide-output":true,"jupyter":{"outputs_hidden":false}}
 import os
@@ -1197,9 +1182,21 @@ import pandas as pd
 import polars as pl
 
 if is_on_kaggle():
-    pd.read_csv(
+    df = pd.read_csv(
         "/kaggle/input/ai-mathematical-olympiad-progress-prize-3/reference.csv"
-    ).drop("answer", axis=1).to_csv("reference.csv", index=False)
+    ).drop("answer", axis=1)
+
+    replication_count = min(replication_count_for_commit_runs, 50 // len(df))
+
+    dfs = []
+    for replication_idx in range(replication_count):
+        df_copy = df.copy()
+        df_copy["id"] = df_copy["id"] + f"_{replication_idx}"
+        dfs.append(df_copy)
+    pd.concat(dfs, ignore_index=True).to_csv("reference.csv", index=False)
+
+
+# %% [code] {"_kg_hide-output":true,"_kg_hide-input":false,"jupyter":{"outputs_hidden":false},"execution":{"execution_failed":"2025-11-24T02:04:57.769Z"}}
 
 
 # Replace this function with your inference code.
