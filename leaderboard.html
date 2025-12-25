@@ -70,6 +70,7 @@
             --pos-width: 40px;
             --team-width: 180px;
             --score-width: 60px;
+            --date-col-width: 60px;
         }
         table {
             width: 100%;
@@ -153,6 +154,9 @@
         }
         td.score-cell {
             background: #1a2744;
+            width: var(--date-col-width);
+            min-width: var(--date-col-width);
+            max-width: var(--date-col-width);
         }
         td.score-cell.has-data {
             background: #0d2818;
@@ -173,6 +177,9 @@
         }
         .date-header {
             font-size: 11px;
+            width: var(--date-col-width);
+            min-width: var(--date-col-width);
+            max-width: var(--date-col-width);
         }
         tr:hover td {
             background: #1a3a5c;
@@ -188,6 +195,7 @@
                 --pos-width: 28px;
                 --team-width: 90px;
                 --score-width: 52px;
+                --date-col-width: 52px;
             }
             body {
                 padding: 10px;
@@ -296,8 +304,8 @@
                 }
             }
 
-            // Sort dates (most recent first)
-            const sortedDates = Array.from(allDates).sort().reverse();
+            // Sort dates (most recent first) and filter out dates before 12-12
+            const sortedDates = Array.from(allDates).sort().reverse().filter(date => date >= '12-12');
 
             if (sortedDates.length === 0) {
                 return '<div class="no-data">No historical data recorded yet.</div>';
