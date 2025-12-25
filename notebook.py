@@ -737,7 +737,7 @@ def generate_solution(
         generation_idx = 0
         tool_call_count = 0
 
-        for iteration in range(3):
+        for iteration in range(64):
         # Loop until we get an answer
             while True:
                 # Loop to handle tool calls within each iteration
@@ -749,7 +749,7 @@ def generate_solution(
                 stream: Stream[Completion] = client.completions.create(
                     model="vllm-model",
                     prompt=all_token_ids,
-                    max_tokens=max_model_len - len(all_token_ids) - 8192,
+                    max_tokens=max_model_len - len(all_token_ids) - 8192 * 2,
                     temperature=1.0,
                     stream=True,
                     extra_body=dict(
@@ -803,10 +803,6 @@ def generate_solution(
                         and "}" in chunk_text
                         and is_valid_answer_string(extract_boxed_text(text_response))
                     ):
-                        break
-                    if iteration == 0 and cutoff_times[-1] - time.time() < 90:
-                        break
-                    if iteration == 1 and cutoff_times[-1] - time.time() < 30:
                         break
 
                 # Append response token IDs to prompt for multi-turn
