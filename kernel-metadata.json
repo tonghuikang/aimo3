@@ -1,0 +1,22 @@
+{
+  "id_no": 102822045,
+  "code_file": "notebook.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": false,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "kernel_sources": [
+    "huikang/pip-install-aimo3-1"
+  ],
+  "competition_sources": [
+    "ai-mathematical-olympiad-progress-prize-3"
+  ],
+  "model_sources": [
+    "danielhanchen/gpt-oss-120b/Transformers/default/1",
+    "danielhanchen/gpt-oss-20b/Transformers/default/1",
+    "qwen-lm/qwen-3/Transformers/30b-a3b-thinking-2507-fp8/1"
+  ]
+}
