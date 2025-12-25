@@ -801,45 +801,32 @@ question_id_to_solver_to_token_length: dict[str, dict[int, int]] = {"": {}}
 question_id_to_solver_to_answer: dict[str, dict[int, int]] = {"": {}}
 
 
-import math
-
-
 def vote_answer(question_id: str, force_answer: bool = False) -> int | None:
-    # derive counter from solver_to_answer
+    """Majority voting with larger answer as tiebreaker."""
     solver_to_answer = question_id_to_solver_to_answer[question_id]
-    counter = Counter(solver_to_answer.values())
-    if force_answer and not counter:
+    answer_counter = Counter(solver_to_answer.values())
+    if force_answer and not answer_counter:
         print(f"Current GPU usage {get_gpu_kv_cache_usage()}")
         print("force_answer=True but no answer recorded")
         completed_question_ids.add(question_id)
         return 12453
 
-    # voting mechanism
-    modified_counter: dict[int, float] = {}
-    for value, count in counter.items():
-        # re-weighted because smaller answers seems to be wrong
-        # "1.25 +" because log(1) = 0
-        modified_counter[value] = (
-            modified_counter.get(value, 0.0) + math.log(1.25 + abs(value)) * count
-        )
-
-    total_score = sum(modified_counter.values())
-    score_list = sorted(
-        (score, counter[value], value) for value, score in modified_counter.items()
+    # Sort by (count, value) - higher count wins, larger value breaks ties
+    sorted_answers = sorted(
+        answer_counter.items(), key=lambda x: (x[1], x[0]), reverse=True
     )
+
     if force_answer:
-        print(f"score_list | {total_score:8.1f} over {sum(counter.values())} attempts")
+        print(f"Votes over {sum(answer_counter.values())} attempts")
         print(f"Current GPU usage {get_gpu_kv_cache_usage()}")
-        for score, count, value in score_list[::-1]:
-            print(f"{value:10}   {score:8.1f} {count:8d}")
-        return score_list[-1][-1]
-    if score_list[-1][0] > max(1, total_score / (2 + math.log(1 + total_score))):
-        if len(score_list) == 1:
-            completed_question_ids.add(question_id)
-        else:
-            if score_list[-1][0] - score_list[-2][0] > 1:
-                # win by a certain number of points at least
-                completed_question_ids.add(question_id)
+        for value, count in sorted_answers:
+            print(f"{value:10}   {count:8d}")
+        return sorted_answers[0][0]
+
+    # Mark as completed as long as there's any answer
+    if sorted_answers:
+        completed_question_ids.add(question_id)
+
     return None
 
 
