@@ -2,7 +2,7 @@
 # References
 # - https://www.kaggle.com/code/huikang/arc-agi-2-code-approach
 # - https://www.kaggle.com/code/huikang/r1-distill-qwen-tir
-# 
+#
 # ```
 # uv run python3 kaggle.py
 # ```
@@ -12,7 +12,7 @@
 
 # %% [code] {"jupyter":{"outputs_hidden":false}}
 serve_vllm_on_kaggle = True
-run_all_questions = False   # ignored for submissions
+run_all_questions = False  # ignored for submissions
 
 # %% [code] {"jupyter":{"outputs_hidden":false}}
 import os
@@ -84,15 +84,15 @@ import numpy as np
 
 
 cutoff_times = [
-    int(x) for x in np.linspace(final_cutoff_time, start_time + 15 * 60, 50 + 1)
-]  # 5 minutes loading time at the start
+    int(x) for x in np.linspace(final_cutoff_time, start_time + 30 * 60, 50 + 1)
+]  # generous allowance at the start
 cutoff_times.pop()
 
-import shutil
+from datetime import datetime
 
-if __name__ == "__main__" and os.path.exists("solutions"):
-    shutil.rmtree("solutions")
-os.makedirs("solutions", exist_ok=True)
+RUN_DIR = f"runs/{datetime.now().strftime('%Y-%m-%d-%H-%M-%S')}"
+SOLUTIONS_DIR = f"{RUN_DIR}/solutions"
+os.makedirs(SOLUTIONS_DIR, exist_ok=True)
 
 if is_on_kaggle():
     if serve_vllm_on_kaggle:
@@ -211,6 +211,7 @@ if is_on_kaggle_interactive():
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Code execution
 
+
 # %% [code] {"jupyter":{"outputs_hidden":false}}
 class LocalJupyterSession:
     """Stateful helper that proxies execution through a local Jupyter kernel.
@@ -220,7 +221,8 @@ class LocalJupyterSession:
 
     def __init__(self, timeout: float = 10.0) -> None:
         import zmq
-        from jupyter_client import BlockingKernelClient, KernelManager
+        from jupyter_client.blocking.client import BlockingKernelClient
+        from jupyter_client.manager import KernelManager
 
         self._default_timeout = timeout
         # Create a dedicated ZMQ context for this session (thread-safe)
@@ -230,16 +232,118 @@ class LocalJupyterSession:
         self._client: BlockingKernelClient = self._km.blocking_client()
         self._client.start_channels()
         self._client.wait_for_ready(timeout=self._default_timeout)
+        # Disable colors in IPython tracebacks
+        self._client.execute("%colors NoColor", store_history=False)
+        # Track msg_id of a timed-out execution that may still be running
+        self._pending_msg_id: str | None = None
+
+    def _drain_pending_output(self) -> str:
+        """Drain output from a previous timed-out execution. Interrupts if still running."""
+        if self._pending_msg_id is None:
+            return ""
+
+        msg_id = self._pending_msg_id
+        self._pending_msg_id = None
+        client = self._client
+
+        stdout_parts: list[str] = []
+        stderr_parts: list[str] = []
+        execution_finished = False
+
+        # Drain any available output without blocking long
+        while True:
+            try:
+                msg = client.get_iopub_msg(timeout=0.1)
+            except queue.Empty:
+                break
+
+            if msg.get("parent_header", {}).get("msg_id") != msg_id:
+                continue
+
+            msg_type = msg.get("msg_type")
+            content = msg.get("content", {})
+
+            if msg_type == "stream":
+                text = content.get("text", "")
+                if content.get("name") == "stdout":
+                    stdout_parts.append(text)
+                else:
+                    stderr_parts.append(text)
+            elif msg_type == "error":
+                traceback_data = content.get("traceback")
+                if traceback_data:
+                    stderr_parts.append("\n".join(traceback_data))
+            elif msg_type in {"execute_result", "display_data"}:
+                data = content.get("data", {})
+                text = data.get("text/plain")
+                if text:
+                    stdout_parts.append(text if text.endswith("\n") else f"{text}\n")
+            elif msg_type == "status" and content.get("execution_state") == "idle":
+                execution_finished = True
+                break
+
+        # If still running, interrupt it
+        if not execution_finished:
+            self._km.interrupt_kernel()
+            # Collect interrupt traceback
+            while True:
+                try:
+                    msg = client.get_iopub_msg(timeout=1.0)
+                except queue.Empty:
+                    break
+                if msg.get("parent_header", {}).get("msg_id") != msg_id:
+                    continue
+                msg_type = msg.get("msg_type")
+                content = msg.get("content", {})
+                if msg_type == "stream":
+                    text = content.get("text", "")
+                    if content.get("name") == "stdout":
+                        stdout_parts.append(text)
+                    else:
+                        stderr_parts.append(text)
+                elif msg_type == "error":
+                    traceback_data = content.get("traceback")
+                    if traceback_data:
+                        stderr_parts.append("\n".join(traceback_data))
+                elif msg_type == "status" and content.get("execution_state") == "idle":
+                    break
+
+        # Drain shell channel
+        while True:
+            try:
+                reply = client.get_shell_msg(timeout=0.1)
+                if reply.get("parent_header", {}).get("msg_id") == msg_id:
+                    break
+            except queue.Empty:
+                break
+
+        # Combine output
+        output = "".join(stdout_parts)
+        if stderr_parts:
+            output = (
+                f"{output.rstrip()}\n{''.join(stderr_parts)}"
+                if output
+                else "".join(stderr_parts)
+            )
+
+        if output.strip():
+            end_marker = (
+                "[End previous output]"
+                if execution_finished
+                else "[End previous output - interrupted]"
+            )
+            return f"[Previous execution output]\n{output.rstrip()}\n{end_marker}\n"
+        return ""
 
     def execute(self, code: str, timeout: float | None = None) -> str:
         """Execute code in the kernel, returning combined stdout/stderr output."""
+        # Drain any pending output from previous timed-out execution
+        pending_output = self._drain_pending_output()
+
         client = self._client
         effective_timeout = timeout or self._default_timeout
         msg_id = client.execute(
-            code,
-            store_history=True,
-            allow_stdin=False,
-            stop_on_error=False,
+            code, store_history=True, allow_stdin=False, stop_on_error=False
         )
 
         stdout_parts: list[str] = []
@@ -248,10 +352,20 @@ class LocalJupyterSession:
         while True:
             try:
                 msg = client.get_iopub_msg(timeout=effective_timeout)
-            except queue.Empty as exc:
-                raise TimeoutError(
-                    "Timed out waiting for Jupyter kernel output."
-                ) from exc
+            except queue.Empty:
+                # Deferred interruption: let kernel continue, interrupt on next execute()
+                self._pending_msg_id = msg_id
+                # Return partial output with timeout message
+                partial_output = "".join(stdout_parts)
+                if stderr_parts:
+                    partial_output = (
+                        f"{partial_output.rstrip()}\n{''.join(stderr_parts)}"
+                        if partial_output
+                        else "".join(stderr_parts)
+                    )
+                error_msg = "[TIMEOUT] Execution still running. Will drain remaining output on next call."
+                result = f"{partial_output.rstrip()}\n{error_msg}".lstrip()
+                return f"{pending_output}{result}" if pending_output else result
 
             if msg.get("parent_header", {}).get("msg_id") != msg_id:
                 continue
@@ -285,10 +399,19 @@ class LocalJupyterSession:
         while True:
             try:
                 reply = client.get_shell_msg(timeout=effective_timeout)
-            except queue.Empty as exc:
-                raise TimeoutError(
-                    "Timed out waiting for Jupyter kernel execution reply."
-                ) from exc
+            except queue.Empty:
+                # Shell channel timeout - also use deferred interruption
+                self._pending_msg_id = msg_id
+                partial_output = "".join(stdout_parts)
+                if stderr_parts:
+                    partial_output = (
+                        f"{partial_output.rstrip()}\n{''.join(stderr_parts)}"
+                        if partial_output
+                        else "".join(stderr_parts)
+                    )
+                error_msg = "[TIMEOUT] Execution still running. Will drain remaining output on next call."
+                result = f"{partial_output.rstrip()}\n{error_msg}".lstrip()
+                return f"{pending_output}{result}" if pending_output else result
 
             if reply.get("parent_header", {}).get("msg_id") == msg_id:
                 break
@@ -303,12 +426,9 @@ class LocalJupyterSession:
                 stdout = stderr
 
         if not stdout.strip():
-            stdout = (
-                "[WARN] No output available. Use print() to output anything to stdout to "
-                "receive the output"
-            )
+            stdout = "[WARN] No output available. Use print() to output anything to stdout to receive the output"
 
-        return stdout
+        return f"{pending_output}{stdout}" if pending_output else stdout
 
     def close(self) -> None:
         import contextlib
@@ -345,6 +465,7 @@ def execute_python_code(
         return session.execute(script, timeout=timeout)
     except TimeoutError as exc:
         return f"[ERROR] {exc}"
+
 
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Token processing
@@ -479,6 +600,7 @@ def append_tool_response_token_ids(
     )
     return all_tokens + tool_tokens
 
+
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-25T11:23:07.544491Z","iopub.execute_input":"2025-11-25T11:23:07.544919Z","iopub.status.idle":"2025-11-25T11:23:07.550311Z","shell.execute_reply.started":"2025-11-25T11:23:07.5449Z","shell.execute_reply":"2025-11-25T11:23:07.549876Z"}}
 from cachetools import cached, TTLCache
 import os
@@ -502,6 +624,7 @@ def get_gpu_kv_cache_usage(question_id: str | None = None) -> float:
     except (requests.RequestException, ValueError, IndexError):
         pass
     return -1
+
 
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:22:55.289753Z","iopub.execute_input":"2025-11-24T08:22:55.289878Z","iopub.status.idle":"2025-11-24T08:23:00.176618Z","shell.execute_reply.started":"2025-11-24T08:22:55.289861Z","shell.execute_reply":"2025-11-24T08:23:00.176183Z"}}
 if is_on_kaggle_interactive():
@@ -529,6 +652,7 @@ if is_on_kaggle_interactive():
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Text processing
 
+
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:23:00.326586Z","iopub.execute_input":"2025-11-24T08:23:00.326712Z","iopub.status.idle":"2025-11-24T08:23:00.333663Z","shell.execute_reply.started":"2025-11-24T08:23:00.326702Z","shell.execute_reply":"2025-11-24T08:23:00.333234Z"}}
 def extract_boxed_text(text: str) -> str:
     """Extract text inside \\boxed{} from LaTeX-formatted text"""
@@ -553,6 +677,7 @@ def is_valid_answer_string(text: str) -> bool:
     except Exception:
         pass
     return False
+
 
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:23:00.334105Z","iopub.execute_input":"2025-11-24T08:23:00.334228Z","iopub.status.idle":"2025-11-24T08:23:00.341278Z","shell.execute_reply.started":"2025-11-24T08:23:00.334218Z","shell.execute_reply":"2025-11-24T08:23:00.340907Z"}}
 from collections import Counter
@@ -602,8 +727,10 @@ def vote_answer(question_id: str, force_answer: bool = False) -> int | None:
                 completed_question_ids.add(question_id)
     return None
 
+
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Generate solution
+
 
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:26:53.213762Z","iopub.execute_input":"2025-11-24T08:26:53.214218Z","iopub.status.idle":"2025-11-24T08:26:53.221603Z","shell.execute_reply.started":"2025-11-24T08:26:53.214205Z","shell.execute_reply":"2025-11-24T08:26:53.221218Z"}}
 def generate_solution(
@@ -804,7 +931,7 @@ def generate_solution(
             if is_valid_answer_string(boxed_text):
                 answer_suffix = f"{boxed_text}"
             total_tokens = len(all_token_ids)
-            base_path = f"solutions/{question_id}/{solution_index:02d}-{total_tokens:05d}-{tool_call_count:03d}-{answer_suffix}"
+            base_path = f"{SOLUTIONS_DIR}/{question_id}/{solution_index:02d}-{total_tokens:05d}-{tool_call_count:02d}-{answer_suffix}"
             # Save full stream as token IDs (one token ID per line)
             with open(f"{base_path}-tokens.txt", "w") as f:
                 for token_id in all_token_ids:
@@ -824,6 +951,7 @@ def generate_solution(
         if jupyter_session is not None:
             jupyter_session.close()
 
+
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:26:54.553208Z","iopub.execute_input":"2025-11-24T08:26:54.553692Z","iopub.status.idle":"2025-11-24T08:27:03.475341Z","shell.execute_reply.started":"2025-11-24T08:26:54.553671Z","shell.execute_reply":"2025-11-24T08:27:03.474837Z"}}
 if is_on_kaggle_interactive():
     generate_solution("What is 1+1?")
@@ -837,7 +965,7 @@ def solve(question_text: str, question_id: str = "") -> int:
     print(f"processing {question_id}")
     await_client()
     print("client connected")
-    os.makedirs(f"solutions/{question_id}", exist_ok=True)
+    os.makedirs(f"{SOLUTIONS_DIR}/{question_id}", exist_ok=True)
     question_id_to_counter[question_id] = Counter()
     completed_question_ids.discard(question_id)  # just in case question_id collides
 
@@ -862,9 +990,65 @@ def solve(question_text: str, question_id: str = "") -> int:
     assert final_answer is not None
     return final_answer
 
+
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:27:06.481067Z","iopub.execute_input":"2025-11-24T08:27:06.481501Z","iopub.status.idle":"2025-11-24T08:27:19.404564Z","shell.execute_reply.started":"2025-11-24T08:27:06.481486Z","shell.execute_reply":"2025-11-24T08:27:19.404121Z"}}
 if is_on_kaggle_interactive():
     solve("What is 1+1?")
+
+if not is_on_kaggle() and __name__ == "__main__":
+    # stack trace without inference_server is easier to debug
+    print("solving")
+
+    question_id = "dd7f5e"
+    question_text = """
+Let $\\mathcal{F}$ be the set of functions $\\alpha \\colon \\mathbb{Z}\\to \\mathbb{Z}$ for which there are only finitely many $n \\in \\mathbb{Z}$ such that $\\alpha(n) \\neq 0$. 
+
+For two functions $\\alpha$ and $\\beta$ in $\\mathcal{F}$, define their product $\\alpha\\star\\beta$ to be $\\sum\\limits_{n\\in\\mathbb{Z}} \\alpha(n)\\cdot \\beta(n)$. Also, for $n\\in\\mathbb{Z}$, define a shift operator $S_n \\colon \\mathcal{F}\\to \\mathcal{F}$ by $S_n(\\alpha)(t)=\\alpha(t+n)$ for all $t \\in \\mathbb{Z}$.
+
+A function $\\alpha \\in \\mathcal{F}$ is called \\emph{shifty} if 
+\\begin{itemize}
+    \\item $\\alpha(m)=0$ for all integers $m<0$ and $m>8$ and
+    \\item There exists $\\beta \\in \\mathcal{F}$ and integers $k \\neq l$ such that for all $n \\in \\mathbb{Z}$
+    \\begin{equation*}
+        S_n(\\alpha)\\star\\beta =
+        \\begin{cases}
+            1 & n \\in \\{k,l\\} \\\\
+            0 & n \\not \\in \\{k,l\\}
+        \\end{cases}
+        \\; .
+    \\end{equation*}
+\\end{itemize}
+How many shifty functions are there in $\\mathcal{F}$?
+""".strip()
+
+    #     question_id = "92ba6a"
+    #     question_text = """
+    # Alice and Bob are each holding some integer number of sweets. Alice says to Bob: ``If we each added the number of sweets we're holding to our (positive integer) age, my answer would be double yours. If we took the product, then my answer would be four times yours.'' Bob replies: ``Why don't you give me five of your sweets because then both our sum and product would be equal.'' What is the product of Alice and Bob's ages?
+    # """.strip()
+
+    #     question_id = "641659"
+    #     question_text = """
+    # Let $ABC$ be a triangle with $AB \\neq AC$, circumcircle $\\Omega$, and incircle $\\omega$. Let the contact points of $\\omega$ with $BC$, $CA$, and $AB$ be $D$, $E$, and $F$, respectively. Let the circumcircle of $AFE$ meet $\\Omega$ at $K$ and let the reflection of $K$ in $EF$ be $K'$. Let $N$ denote the foot of the perpendicular from $D$ to $EF$. The circle tangent to line $BN$ and passing through $B$ and $K$ intersects $BC$ again at $T \\neq B$.
+
+    # Let sequence $(F_n)_{n \\geq 0}$ be defined by $F_0 = 0$, $F_1 = 1$ and for $n \\geq 2$, $F_n = F_{n-1} + F_{n-2}$. Call $ABC$ $n$\\emph{-tastic} if $BD = F_n$, $CD = F_{n+1}$, and $KNK'B$ is cyclic. Across all $n$-tastic triangles, let $a_n$ denote the maximum possible value of $\\frac{CT \\cdot NB}{BT \\cdot NE}$. Let $\\alpha$ denote the smallest real number such that for all sufficiently large $n$, $a_{2n} < \\alpha$. Given that $\\alpha = p + \\sqrt{q}$ for rationals $p$ and $q$, what is the remainder when $\\left\\lfloor p^{q^p} \\right\\rfloor$ is divided by $99991$?
+    # """.strip()
+
+    #     question_id = "86e8e5"
+    #     question_text = """
+    # Let $n \\geq 6$ be a positive integer. We call a positive integer $n$-Norwegian if it has three distinct positive divisors whose sum is equal to $n$. Let $f(n)$ denote the smallest $n$-Norwegian positive integer. Let $M=3^{2025!}$ and for a non-negative integer $c$ define
+    # \\begin{equation*}
+    #     g(c)=\\frac{1}{2025!}\\left\\lfloor \\frac{2025! f(M+c)}{M}\\right\\rfloor.
+    # \\end{equation*}
+    # We can write
+    # \\begin{equation*}
+    #     g(0)+g(4M)+g(1848374)+g(10162574)+g(265710644)+g(44636594)=\\frac{p}{q}
+    # \\end{equation*}
+    # where $p$ and $q$ are coprime positive integers. What is the remainder when $p+q$ is divided by $99991$?
+    # """.strip()
+
+    os.makedirs(f"{SOLUTIONS_DIR}/{question_id}", exist_ok=True)
+    solve(question_text, question_id)
+    exit()
 
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Submission server
@@ -892,17 +1076,20 @@ def predict(id_: pl.Series, problem: pl.Series) -> pl.DataFrame | pd.DataFrame:
 
     if not run_all_questions:
         if is_on_kaggle_commit():
-                if serve_vllm_on_kaggle:
-                    # to conserve Kaggle H100 quota
-                    if not("Norwegian" in question_text or "Alice" in question_text):
-                        print("on kaggle commit, skipping question")  # not popping cutoff_times
-                        return pl.DataFrame({"id": id_, "answer": 12315})
-                else:
-                    # to get quicker feedback
-                    if not("Norwegian" in question_text or "Alice" in question_text):
-                        print("on kaggle commit, skipping question")  # not popping cutoff_times
-                        return pl.DataFrame({"id": id_, "answer": 12315})
-
+            if serve_vllm_on_kaggle:
+                # to conserve Kaggle H100 quota
+                if not ("Norwegian" in question_text or "Alice" in question_text):
+                    print(
+                        "on kaggle commit, skipping question"
+                    )  # not popping cutoff_times
+                    return pl.DataFrame({"id": id_, "answer": 12315})
+            else:
+                # to get quicker feedback
+                if not ("Norwegian" in question_text or "Alice" in question_text):
+                    print(
+                        "on kaggle commit, skipping question"
+                    )  # not popping cutoff_times
+                    return pl.DataFrame({"id": id_, "answer": 12315})
 
         if not is_on_kaggle():
             # if you want to debug a particular question locally
