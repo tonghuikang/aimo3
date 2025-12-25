@@ -22,6 +22,7 @@ dependencies = [
     "jupyter-client>=8.6.3",
     "ipykernel>=7.1.0",
     "fastapi>=0.122.0",
+    "kaggle>=1.8.3",
 ]
 
 [dependency-groups]

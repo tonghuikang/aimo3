@@ -11,8 +11,7 @@
 # # Configuration
 
 # %% [code] {"jupyter":{"outputs_hidden":false}}
-serve_vllm_on_kaggle = True
-run_all_questions = False  # ignored for submissions
+run_all_questions_on_kaggle = False  # ignored for submissions
 
 # %% [code] {"jupyter":{"outputs_hidden":false}}
 import os
@@ -45,7 +44,7 @@ def is_on_kaggle() -> bool:
 
 
 REMOTE_VLLM_URL = "NOT_AVAILABLE"
-if not serve_vllm_on_kaggle or not is_on_kaggle():
+if not is_on_kaggle():
     REMOTE_VLLM_URL = secrets.get_secret("REMOTE_VLLM_URL")
 
 
@@ -57,8 +56,7 @@ os.environ["PYDEVD_DISABLE_FILE_VALIDATION"] = "1"
 print(f"{is_on_kaggle()=}")
 print(f"{is_on_kaggle_interactive()=}")
 print(f"{is_on_kaggle_commit()=}")
-print(f"{serve_vllm_on_kaggle=}")
-print(f"{run_all_questions=}")
+print(f"{run_all_questions_on_kaggle=}")
 print(f"{REMOTE_VLLM_URL[::-1][:13][::-1]=}")
 
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
@@ -246,25 +244,8 @@ def save_stats(
 
 
 if is_on_kaggle():
-    if serve_vllm_on_kaggle:
-        assert torch.cuda.is_available()
-        assert torch.cuda.device_count() == 1
-    else:
-        # Check internet access is available when using remote inference
-        import urllib.request
-        from urllib.error import URLError
-
-        try:
-            urllib.request.urlopen("https://modal.com", timeout=5)
-            print("Internet access confirmed")
-        except (URLError, TimeoutError) as e:
-            raise RuntimeError(
-                "Internet access required when serve_vllm_on_kaggle=False"
-            ) from e
-
-        # Check that you are not wasting Kaggle GPUs
-        assert not torch.cuda.is_available()
-        assert torch.cuda.device_count() == 0
+    assert torch.cuda.is_available()
+    assert torch.cuda.device_count() == 1
 
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Serve vLLM
@@ -331,7 +312,7 @@ def start_vllm_server() -> subprocess.Popen[bytes]:
 
 
 # Start the server
-if is_on_kaggle() and serve_vllm_on_kaggle:
+if is_on_kaggle():
     vllm_process: subprocess.Popen[bytes] = start_vllm_server()
 
 # %% [code] {"jupyter":{"outputs_hidden":false}}
@@ -627,15 +608,10 @@ from openai import OpenAI, Stream
 from openai.types import Completion
 
 # Point the client to vLLM server (local on Kaggle, Modal otherwise)
-if is_on_kaggle() and serve_vllm_on_kaggle:
+if is_on_kaggle():
     os.environ["OPENAI_API_BASE"] = "http://127.0.0.1:8000/v1"
 else:
     os.environ["OPENAI_API_BASE"] = REMOTE_VLLM_URL
-    if is_on_kaggle():
-        # openai_harmony uses TIKTOKEN_ENCODINGS_BASE to read pre-downloaded files
-        os.environ["TIKTOKEN_ENCODINGS_BASE"] = (
-            "/kaggle/usr/lib/pip_install_aimo3_1/tiktoken_encodings"
-        )
 os.environ["OPENAI_API_KEY"] = "sk-local"  # any non-empty string
 
 client: OpenAI = OpenAI(
@@ -1232,27 +1208,18 @@ def predict(id_: pl.Series, problem: pl.Series) -> pl.DataFrame | pd.DataFrame:
     question_id: str = id_.item(0)
     question_text: str = problem.item(0)
 
-    if not run_all_questions:
+    if not run_all_questions_on_kaggle:  # should be ignored for submissions
         if is_on_kaggle_commit():
-            if serve_vllm_on_kaggle:
-                # to conserve Kaggle H100 quota
-                if not ("Norwegian" in question_text or "Alice" in question_text):
-                    print(
-                        "on kaggle commit, skipping question"
-                    )  # not popping cutoff_times
-                    return pl.DataFrame({"id": id_, "answer": 12315})
-            else:
-                # to get quicker feedback
-                if not ("Norwegian" in question_text or "Alice" in question_text):
-                    print(
-                        "on kaggle commit, skipping question"
-                    )  # not popping cutoff_times
-                    return pl.DataFrame({"id": id_, "answer": 12315})
-
-        if not is_on_kaggle():
-            # if you want to debug a particular question locally
-            if "Norwegian" not in question_text:
-                print("not on kaggle, skipping question")  # not popping cutoff_times
+            # to only run for hard problems
+            if not (
+                "shifty" in question_text  # noqa: E713
+                or "tournament" in question_text
+                or "KNK" in question_text
+                or "Norwe" in question_text
+                or "Alice" in question_text
+            ):
+                print("on kaggle commit, skipping question")
+                # not popping cutoff_times
                 return pl.DataFrame({"id": id_, "answer": 12315})
 
     # Make a prediction
