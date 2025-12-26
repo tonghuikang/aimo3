@@ -322,9 +322,9 @@ def await_client(printing: bool = False):
         raise
 
 
-if is_on_kaggle_interactive():
-    # cannot await client on submission
-    # because inference server needs to start within 15 minutes
+if is_on_kaggle():
+    # inference server needs to start within 15 minutes
+    # we should be able to await now with cache_model()
     await_client()
 
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
@@ -1015,8 +1015,6 @@ def solve_single(
     """
     Single solution attempt with side effects (file saving, voting).
     """
-    await_client()
-    print("Client connected")
     if question_id in completed_question_ids:
         return ""
     if time.time() >= cutoff_times[-1]:
