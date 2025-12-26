@@ -248,7 +248,7 @@ with open("a-vllm.log", "w") as f:
 # %% [code] {"execution":{"iopub.status.busy":"2025-11-24T08:13:52.188688Z","iopub.execute_input":"2025-11-24T08:13:52.188811Z","iopub.status.idle":"2025-11-24T08:13:52.194435Z","shell.execute_reply.started":"2025-11-24T08:13:52.188802Z","shell.execute_reply":"2025-11-24T08:13:52.194061Z"},"jupyter":{"outputs_hidden":false}}
 import subprocess
 
-num_generations = 6
+num_generations = 8
 max_model_len = 131072
 
 
@@ -1033,7 +1033,7 @@ def solve_single(
             return True
         if time.time() >= cutoff_times[-1]:
             return True
-        solver_index_to_gpu_threshold = [95, 90, 85, 80, 75, 70]
+        solver_index_to_gpu_threshold = [95, 90, 85, 80, 75, 70, 65, 60, 55]
         solver_index_mod = solver_index % len(solver_index_to_gpu_threshold)
         gpu_kv_cache_usage = get_gpu_kv_cache_usage(question_id)
         if gpu_kv_cache_usage > solver_index_to_gpu_threshold[solver_index_mod]:
