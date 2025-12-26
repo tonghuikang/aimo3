@@ -310,17 +310,34 @@ def await_client(printing: bool = False):
     for _ in range(15 * 60):
         time.sleep(1)
         try:
-            model_list = client.models.list()
+            model_list = openai_client.models.list()
             if printing:
                 print(model_list)
         except NameError:
-            raise  # maybe you did not run the cell initializing client
+            raise  # maybe you did not run the cell initializing openai_client
         except Exception:
             continue
         break
     else:
         raise
 
+
+# %% [code]
+import os
+from openai import OpenAI, Stream
+from openai.types import Completion
+
+# Point the openai_client to vLLM server (local on Kaggle, Modal otherwise)
+if is_on_kaggle():
+    os.environ["OPENAI_API_BASE"] = "http://127.0.0.1:8000/v1"
+else:
+    os.environ["OPENAI_API_BASE"] = REMOTE_VLLM_URL
+os.environ["OPENAI_API_KEY"] = "sk-local"  # any non-empty string
+
+openai_client: OpenAI = OpenAI(
+    base_url=os.environ["OPENAI_API_BASE"],
+    api_key=os.environ["OPENAI_API_KEY"],
+)
 
 if is_on_kaggle():
     # inference server needs to start within 15 minutes
@@ -598,22 +615,6 @@ def execute_python_code(session: LocalJupyterSession, script: str) -> str:
 # # Token processing
 
 # %% [code] {"execution":{"iopub.status.busy":"2025-11-24T08:13:52.195997Z","iopub.execute_input":"2025-11-24T08:13:52.196102Z","iopub.status.idle":"2025-11-24T08:14:00.409293Z","shell.execute_reply.started":"2025-11-24T08:13:52.196092Z","shell.execute_reply":"2025-11-24T08:14:00.408863Z"},"jupyter":{"outputs_hidden":false}}
-import os
-from openai import OpenAI, Stream
-from openai.types import Completion
-
-# Point the client to vLLM server (local on Kaggle, Modal otherwise)
-if is_on_kaggle():
-    os.environ["OPENAI_API_BASE"] = "http://127.0.0.1:8000/v1"
-else:
-    os.environ["OPENAI_API_BASE"] = REMOTE_VLLM_URL
-os.environ["OPENAI_API_KEY"] = "sk-local"  # any non-empty string
-
-client: OpenAI = OpenAI(
-    base_url=os.environ["OPENAI_API_BASE"],
-    api_key=os.environ["OPENAI_API_KEY"],
-)
-
 # Initialize openai-harmony encoding for GPT-OSS models
 from openai_harmony import (
     Conversation,
@@ -737,7 +738,7 @@ if is_on_kaggle_interactive():
         system_content="Reply your answer in \\boxed{}",
         user_content="How many r are there in strawberry?",
     )
-    resp: Completion = client.completions.create(
+    resp: Completion = openai_client.completions.create(
         model="vllm-model",
         prompt=test_prompt_ids,
         max_tokens=1024,
@@ -853,7 +854,7 @@ def rollout_given_state(
                 return all_token_ids
 
             # Use streaming with completions API
-            stream: Stream[Completion] = client.completions.create(
+            stream: Stream[Completion] = openai_client.completions.create(
                 model="vllm-model",
                 prompt=all_token_ids,
                 max_tokens=max_model_len - len(all_token_ids) - 8192 * 2,
