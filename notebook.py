@@ -376,8 +376,10 @@ class LocalJupyterSession:
         self._client: BlockingKernelClient = self._km.blocking_client()
         self._client.start_channels()
         self._client.wait_for_ready(timeout=None)
-        # Disable colors in IPython tracebacks
+        # Disable colors and use minimal tracebacks to avoid IPython cascade errors
+        # (IPython 7.x has a bug where get_records() returns None and find_recursion crashes)
         self._client.execute("%colors NoColor", store_history=False)
+        self._client.execute("%xmode Minimal", store_history=False)
         # Track msg_id of a timed-out execution that may still be running
         self._pending_msg_id: str | None = None
 
@@ -985,6 +987,12 @@ random.seed(42)
 np.random.seed(42)
 """
 
+SYSTEM_CONTENT = (
+    "You will solve the problem and return the final answer in \\boxed{}. "
+    "The answer is expected to be an integer between 0 and 99999, inclusive. "
+    "Do not guess the answer, unless specifically given permission to."
+)
+
 
 def rollout(
     all_token_ids: list[int],
@@ -1032,7 +1040,7 @@ def solve_single(
 
     # Build initial prompt as token IDs with Python tool enabled
     all_token_ids: list[int] = build_prompt_token_ids(
-        system_content="You will solve the problem and return the final answer in \\boxed{}. The answer is expected to be an integer between 0 and 99999, inclusive. Do not guess the answer, unless specifically given permission to.",
+        system_content=SYSTEM_CONTENT,
         user_content=question_text,
     )
 
