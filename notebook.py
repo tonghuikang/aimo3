@@ -752,8 +752,7 @@ if is_on_kaggle_interactive():
         max_tokens=1024,
         temperature=1.0,
         extra_body=dict(
-            min_p=0.02,
-            stop_token_ids=stop_token_ids,
+            stop_token_ids=stop_token_ids,  # does not work on external inference
             return_token_ids=True,
         ),
     )
@@ -877,11 +876,14 @@ def rollout_given_state(
             for chunk in stream:
                 # Get token IDs from the chunk (vLLM extension)
                 chunk_token_ids = getattr(chunk.choices[0], "token_ids", None)
+                token_id = None
                 if chunk_token_ids:
                     # Process tokens through harmony parser for text
                     for token_id in chunk_token_ids:
                         all_token_ids.append(token_id)
                         stream_parser.process(token_id)
+                        if token_id in stop_token_ids:
+                            break
 
                 # Also get text directly if available
                 chunk_text = chunk.choices[0].text
@@ -891,6 +893,9 @@ def rollout_given_state(
                 # Check finish_reason to see if generation completed naturally
                 finish_reason = chunk.choices[0].finish_reason
                 if finish_reason:
+                    break
+
+                if token_id in stop_token_ids:
                     break
 
                 if should_stop():
