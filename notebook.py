@@ -44,10 +44,21 @@ def is_on_kaggle() -> bool:
     return bool(os.getenv("KAGGLE_KERNEL_RUN_TYPE"))
 
 
-REMOTE_VLLM_URL = "NOT_AVAILABLE"
-if not is_on_kaggle():
-    REMOTE_VLLM_URL = secrets.get_secret("REMOTE_VLLM_URL")
+INFERENCE_URL = "NOT_AVAILABLE"
+INFERENCE_API_KEY = "sk-local"
+MODEL_NAME = "vllm-model"
 
+model_provider = "fireworks"  # modal, fireworks, tinker?
+
+if not is_on_kaggle():
+    if model_provider == "modal":
+        INFERENCE_URL = secrets.get_secret("MODAL_INFERENCE_URL")
+    elif model_provider == "fireworks":
+        INFERENCE_URL = "https://api.fireworks.ai/inference/v1"
+        INFERENCE_API_KEY = secrets.get_secret("FIREWORKS_API_KEY")
+        MODEL_NAME = "accounts/fireworks/models/gpt-oss-120b"
+    else:
+        raise ValueError(f"Unknown model_provider: {model_provider}")
 
 # Some debugger warning on Kaggle
 os.environ["PYDEVD_DISABLE_FILE_VALIDATION"] = "1"
@@ -58,7 +69,7 @@ print(f"{is_on_kaggle()=}")
 print(f"{is_on_kaggle_interactive()=}")
 print(f"{is_on_kaggle_commit()=}")
 print(f"{run_all_questions_on_kaggle=}")
-print(f"{REMOTE_VLLM_URL[::-1][:13][::-1]=}")
+print(f"{INFERENCE_URL[::-1][:13][::-1]=}")
 
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Setup
@@ -327,16 +338,13 @@ import os
 from openai import OpenAI, Stream
 from openai.types import Completion
 
-# Point the openai_client to vLLM server (local on Kaggle, Modal otherwise)
+# Point the openai_client to inference server (local vLLM on Kaggle, remote otherwise)
 if is_on_kaggle():
-    os.environ["OPENAI_API_BASE"] = "http://127.0.0.1:8000/v1"
-else:
-    os.environ["OPENAI_API_BASE"] = REMOTE_VLLM_URL
-os.environ["OPENAI_API_KEY"] = "sk-local"  # any non-empty string
+    INFERENCE_URL = "http://127.0.0.1:8000/v1"
 
 openai_client: OpenAI = OpenAI(
-    base_url=os.environ["OPENAI_API_BASE"],
-    api_key=os.environ["OPENAI_API_KEY"],
+    base_url=INFERENCE_URL,
+    api_key=INFERENCE_API_KEY,
 )
 
 if is_on_kaggle():
@@ -717,7 +725,7 @@ def get_gpu_kv_cache_usage(question_id: str | None) -> float:
     # question_id is used as cache key
     # Parse vLLM /metrics endpoint using configured base URL
     try:
-        base_url = os.environ["OPENAI_API_BASE"]
+        base_url = INFERENCE_URL
         # Remove /v1 suffix to get metrics endpoint
         metrics_url = base_url.replace("/v1", "/metrics")
         resp = requests.get(metrics_url, timeout=5)
@@ -739,7 +747,7 @@ if is_on_kaggle_interactive():
         user_content="How many r are there in strawberry?",
     )
     resp: Completion = openai_client.completions.create(
-        model="vllm-model",
+        model=MODEL_NAME,
         prompt=test_prompt_ids,
         max_tokens=1024,
         temperature=1.0,
@@ -855,16 +863,12 @@ def rollout_given_state(
 
             # Use streaming with completions API
             stream: Stream[Completion] = openai_client.completions.create(
-                model="vllm-model",
+                model=MODEL_NAME,
                 prompt=all_token_ids,
                 max_tokens=max_model_len - len(all_token_ids) - 8192 * 2,
                 temperature=1.0,
                 stream=True,
-                extra_body=dict(
-                    min_p=0.02,
-                    stop_token_ids=stop_token_ids,
-                    return_token_ids=True,
-                ),
+                extra_body=dict(return_token_ids=True),
             )
 
             # Use StreamableParser to process streaming tokens

@@ -12,9 +12,8 @@ class UserSecretsClient:
         if not os.path.exists("env.json"):
             warnings.warn(
                 "\n\nenv.json not found.\n"
-                "If run locally with remote GPUs, env.json should contain something like\n"
-                '{ "REMOTE_VLLM_URL": "https://<handle>--example-gpt-oss-inference-serve.modal.run/v1" }\n\n'
-                "Run `uv run modal deploy inference.py` to get the URL\n",
+                "If run locally with remote inference, env.json should contain:\n"
+                '{ "MODAL_INFERENCE_URL": "...", "FIREWORKS_API_KEY": "..." }\n',
                 stacklevel=2,
             )
             self._secrets: dict[str, str] = {}
