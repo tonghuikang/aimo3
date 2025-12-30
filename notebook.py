@@ -376,10 +376,11 @@ class LocalJupyterSession:
         self._client: BlockingKernelClient = self._km.blocking_client()
         self._client.start_channels()
         self._client.wait_for_ready(timeout=None)
-        # Disable colors and use minimal tracebacks to avoid IPython cascade errors
+        # Disable colors and use plain tracebacks to avoid IPython cascade errors
         # (IPython 7.x has a bug where get_records() returns None and find_recursion crashes)
+        # Plain mode shows line numbers while avoiding the VerboseTB code path
         self._client.execute("%colors NoColor", store_history=False)
-        self._client.execute("%xmode Minimal", store_history=False)
+        self._client.execute("%xmode Plain", store_history=False)
         # Track msg_id of a timed-out execution that may still be running
         self._pending_msg_id: str | None = None
 

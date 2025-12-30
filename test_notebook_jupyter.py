@@ -147,7 +147,7 @@ def test_generate_solution_fd_leak():
                 self.set_final_answer()
 
         with patch.object(
-            notebook.client.completions, "create", mock_completions_create
+            notebook.openai_client.completions, "create", mock_completions_create
         ):
             with patch(
                 "notebook.StreamableParser.__init__", mock_parser_init, create=True
@@ -202,13 +202,15 @@ def test_jupyter_session_no_ansi_colors():
 
     session.close()
 
+    # With %xmode Plain, we get plain tracebacks with line numbers (avoids IPython cascade bug)
     expected = """\
----------------------------------------------------------------------------
-NameError                                 Traceback (most recent call last)
-Cell In[1], line 1
-----> 1 undefined_variable
+Traceback (most recent call last):
 
-NameError: name 'undefined_variable' is not defined"""
+  Cell In[1], line 1
+    undefined_variable
+
+NameError: name 'undefined_variable' is not defined
+"""
 
     assert result == expected, f"Expected:\n{repr(expected)}\n\nGot:\n{repr(result)}"
 
@@ -311,18 +313,17 @@ while True: pass
         ), f"Got: {repr(result3)}"
 
         # Next call interrupts pending, shows KeyboardInterrupt, runs new code
+        # With %xmode Plain, we get plain tracebacks with line numbers (avoids IPython cascade bug)
         result4 = session.execute("print('after hang')")
         print(f"After hang: {repr(result4)}")
         expected4 = """\
 [Previous execution output]
----------------------------------------------------------------------------
-KeyboardInterrupt                         Traceback (most recent call last)
-Cell In[6], line 4
-      2 print('before hang')
-      3 sys.stdout.flush()
-----> 4 while True: pass
+Traceback (most recent call last):
 
-KeyboardInterrupt:
+  Cell In[6], line 4
+    while True: pass
+
+KeyboardInterrupt
 [End previous output - interrupted]
 after hang
 """
