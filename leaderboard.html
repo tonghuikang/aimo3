@@ -355,8 +355,9 @@
                 // Calculate max score for this team
                 let maxScore = 0;
                 for (const key of Object.keys(teamHist)) {
-                    if (teamHist[key].score > maxScore) {
-                        maxScore = teamHist[key].score;
+                    const score = parseInt(teamHist[key].score) || 0;
+                    if (score > maxScore) {
+                        maxScore = score;
                     }
                 }
 
