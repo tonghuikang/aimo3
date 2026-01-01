@@ -305,7 +305,28 @@
             }
 
             // Sort dates (most recent first) and filter out dates before 12-12
-            const sortedDates = Array.from(allDates).sort().reverse().filter(date => date >= '12-12');
+            // Competition runs from Oct 2025 to ~Mar 2026
+            // Months 10-12 are 2025, months 01-09 are 2026
+            const sortedDates = Array.from(allDates).sort((a, b) => {
+                const monthA = parseInt(a.substring(0, 2));
+                const monthB = parseInt(b.substring(0, 2));
+                // Months 1-9 are 2026, months 10-12 are 2025
+                const yearA = monthA <= 9 ? 2026 : 2025;
+                const yearB = monthB <= 9 ? 2026 : 2025;
+                if (yearA !== yearB) return yearB - yearA; // Most recent year first (2026 before 2025)
+                // Within same year, sort by date descending
+                return b.localeCompare(a);
+            }).filter(date => {
+                const month = parseInt(date.substring(0, 2));
+                // Include 2025 dates from 12-12 onwards, and all 2026 dates (months 01-09)
+                if (month === 12) {
+                    return date >= '12-12'; // 2025 December, only 12th onwards
+                }
+                if (month >= 10 && month <= 11) {
+                    return false; // Exclude Oct-Nov 2025 (before competition start)
+                }
+                return true; // All 2026 months (01-09)
+            });
 
             if (sortedDates.length === 0) {
                 return '<div class="no-data">No historical data recorded yet.</div>';
