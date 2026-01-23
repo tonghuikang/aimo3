@@ -11,8 +11,8 @@ vllm_image = (
     )
     .entrypoint([])
     .uv_pip_install(
-        "vllm==0.11.2",
-        "huggingface_hub[hf_transfer]==0.35.0",
+        "vllm==0.13.0",
+        "huggingface-hub==0.36.0",
     )
 )
 

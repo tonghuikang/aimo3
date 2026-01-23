@@ -198,7 +198,7 @@ def check_leaderboard():
     return result.stdout
 
 
-@app.function(min_containers=1)
+@app.function(max_containers=1)
 @modal.fastapi_endpoint(method="GET")
 def get_history():
     """Return leaderboard positions and historical scores as JSON.
