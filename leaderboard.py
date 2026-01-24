@@ -123,7 +123,9 @@ def check_leaderboard():
         submission_date_str = entry["submission_date"]
 
         # Add to positions list
-        leaderboard_positions.append([team_id, team_name, position, submission_count])
+        leaderboard_positions.append(
+            [team_id, team_name, position, submission_count, score]
+        )
 
         # Parse submission time to create date key and calculate minutes_taken
         if submission_date_str:
@@ -186,14 +188,8 @@ def check_leaderboard():
     print(f"{'Pos':>4} {'Team':<25} {'Score':>6} {'Subs':>5}")
     print(f"{'-' * 4} {'-' * 25} {'-' * 6} {'-' * 5}")
     for pos in leaderboard_positions[:10]:
-        team_id, team_name, position, sub_count = pos
-        # Get latest score from history
-        team_hist = history_dict.get(team_id, {})
-        latest_score = ""
-        if team_hist:
-            latest_key = max(team_hist.keys())
-            latest_score = team_hist[latest_key].get("score", "")
-        print(f"{position:>4} {team_name[:25]:<25} {latest_score:>6} {sub_count:>5}")
+        team_id, team_name, position, sub_count, score = pos
+        print(f"{position:>4} {team_name[:25]:<25} {score:>6} {sub_count:>5}")
 
     return result.stdout
 
@@ -205,7 +201,7 @@ def get_history():
 
     Format:
     {
-        "positions": [[team_id, team_name, position, submission_count], ...],
+        "positions": [[team_id, team_name, position, submission_count, score], ...],
         "history": {team_id: {date: {score, minutes_taken, submission_time}}}
     }
     """

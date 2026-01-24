@@ -349,22 +349,13 @@
             // Body rows with teams (already sorted by position)
             html += '<tbody>';
             for (const pos of positions) {
-                const [teamId, teamName, position, subCount] = pos;
+                const [teamId, teamName, position, subCount, score] = pos;
                 const teamHist = history[teamId] || {};
-
-                // Calculate max score for this team
-                let maxScore = 0;
-                for (const key of Object.keys(teamHist)) {
-                    const score = parseInt(teamHist[key].score) || 0;
-                    if (score > maxScore) {
-                        maxScore = score;
-                    }
-                }
 
                 html += '<tr>';
                 html += `<td class="pos-cell">${position}</td>`;
                 html += `<td class="team-cell">${teamName}</td>`;
-                html += `<td class="total-score-cell"><span class="score-value">${maxScore}</span></td>`;
+                html += `<td class="total-score-cell"><span class="score-value">${score}</span></td>`;
                 html += `<td class="score-cell">${subCount}</td>`;
 
                 // First pass: collect entries for each date
