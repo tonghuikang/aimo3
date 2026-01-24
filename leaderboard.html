@@ -373,21 +373,21 @@
                 }
 
                 // Second pass: determine if score improved compared to ALL previous entries
-                // Sort all team history entries by submission_time to find when scores actually improved
+                // Sort all team history entries by date key to find when scores actually improved
                 const allEntries = Object.entries(teamHist)
-                    .map(([key, data]) => ({ key, ...data }))
-                    .sort((a, b) => (a.submission_time || '').localeCompare(b.submission_time || ''));
+                    .map(([key, data]) => ({ key, score: data[0], minutes_taken: data[1] }))
+                    .sort((a, b) => a.key.localeCompare(b.key));
 
                 // Track the running max score to detect genuine improvements
-                const scoreAtTime = {};  // submission_time -> whether this was a new high score
+                const scoreAtKey = {};  // date_key -> whether this was a new high score
                 let runningMaxScore = 0;
                 for (const entry of allEntries) {
                     const currentScore = parseInt(entry.score) || 0;
                     if (currentScore > runningMaxScore) {
-                        scoreAtTime[entry.submission_time] = currentScore;
+                        scoreAtKey[entry.key] = currentScore;
                         runningMaxScore = currentScore;
                     } else {
-                        scoreAtTime[entry.submission_time] = null;  // Not a new high
+                        scoreAtKey[entry.key] = null;  // Not a new high
                     }
                 }
 
@@ -398,19 +398,10 @@
                         // No data for this date
                         html += '<td class="score-cell">-</td>';
                     } else {
-                        // Check if submission_time is before 2025-12-12-00-00
-                        const subTime = entry.data.submission_time || '';
-                        const isBeforeCutoff = subTime < '2025-12-12-00-00';
-                        const timeStr = formatMinutes(entry.data.minutes_taken);
-                        const newHighScore = scoreAtTime[subTime];
+                        const timeStr = formatMinutes(entry.data[1]);
+                        const newHighScore = scoreAtKey[entry.key];
 
-                        if (isBeforeCutoff) {
-                            // Before cutoff, show "-" for both score and time
-                            html += '<td class="score-cell has-data">';
-                            html += '<span class="score-value">-</span>';
-                            html += '<span class="time-value">-</span>';
-                            html += '</td>';
-                        } else if (newHighScore) {
+                        if (newHighScore) {
                             // This submission achieved a new high score
                             html += '<td class="score-cell has-data">';
                             html += `<span class="score-value">${newHighScore}</span>`;

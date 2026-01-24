@@ -202,7 +202,7 @@ def get_history():
     Format:
     {
         "positions": [[team_id, team_name, position, submission_count, score], ...],
-        "history": {team_id: {date: {score, minutes_taken, submission_time}}}
+        "history": {team_id: {date: [score, minutes_taken]}}
     }
     """
     from fastapi.responses import JSONResponse
@@ -210,8 +210,25 @@ def get_history():
     # Single lookup - cached by cron job
     cached = positions_dict.get("cached_response", {"positions": [], "history": {}})
 
+    # Transform history to compact format and filter old entries
+    all_history = cached.get("history", {})
+    compact_history = {}
+    for team_id, entries in all_history.items():
+        compact_entries = {}
+        for date_key, data in entries.items():
+            # Filter entries before 12-12 cutoff
+            month = date_key[:2]
+            if month in ("10", "11"):  # Oct/Nov 2025
+                continue
+            if month == "12" and date_key < "12-12":  # Dec before 12th
+                continue
+            # Transform to array: [score, minutes_taken]
+            compact_entries[date_key] = [data["score"], data["minutes_taken"]]
+        if compact_entries:
+            compact_history[team_id] = compact_entries
+
     return JSONResponse(
-        content=cached,
+        content={"positions": cached.get("positions", []), "history": compact_history},
         headers={
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET, OPTIONS",
