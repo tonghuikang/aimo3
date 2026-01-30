@@ -48,6 +48,7 @@ def parse_leaderboard_csv(csv_content: str) -> list[dict]:
     timeout=20 * 60,
     max_containers=1,
 )
+@modal.concurrent(max_inputs=16)
 def check_leaderboard():
     import subprocess
     from pathlib import Path
