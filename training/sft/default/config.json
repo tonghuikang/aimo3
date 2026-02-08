@@ -1,0 +1,25 @@
+{
+  "log_path": "./training/sft/default/",
+  "model_name": "openai/gpt-oss-120b",
+  "load_checkpoint_path": null,
+  "dataset_builder": {
+    "batch_size": 16,
+    "max_length": 32768
+  },
+  "learning_rate": 0.0002,
+  "lr_schedule": "linear",
+  "num_epochs": 1,
+  "lora_rank": 32,
+  "base_url": null,
+  "evaluator_builders": [],
+  "infrequent_evaluator_builders": [],
+  "save_every": 0,
+  "eval_every": 0,
+  "infrequent_eval_every": 0,
+  "adam_beta1": 0.9,
+  "adam_beta2": 0.95,
+  "adam_eps": 1e-08,
+  "wandb_project": null,
+  "wandb_name": null,
+  "enable_trace": false
+}
