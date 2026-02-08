@@ -18,7 +18,6 @@ submission.parquet
 data/annotate/**/*.txt
 !data/annotate/**/findings.txt
 !data/annotate/**/*-reflections.txt
-data/corpus/
 data/corpus_full.jsonl
 code.diff
 logs.log
