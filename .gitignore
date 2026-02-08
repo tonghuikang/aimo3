@@ -15,7 +15,6 @@ submission.parquet
 !problems/problem_sources/aimo3.csv
 *.cpp
 *.diff
-data/alternate/**/*.jsonl
 data/annotate/**/*.txt
 !data/annotate/**/findings.txt
 !data/annotate/**/*-reflections.txt
