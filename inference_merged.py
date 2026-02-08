@@ -1,5 +1,5 @@
-# uv run modal deploy inference.py
-# See https://modal.com/docs/examples/gpt_oss_inference
+# uv run modal deploy inference_merged.py
+# Serves the merged model from the merged-model volume
 
 import os
 import modal
@@ -17,9 +17,8 @@ vllm_image = (
     )
 )
 
-# Model configuration
-MODEL_NAME = "openai/gpt-oss-120b"
-MODEL_REVISION = "main"
+# Model configuration - merged model from volume
+MODEL_PATH = "/merged/model"
 
 # Volume setup for caching
 hf_cache_vol = modal.Volume.from_name("huggingface-cache", create_if_missing=True)
@@ -27,8 +26,9 @@ vllm_cache_vol = modal.Volume.from_name("vllm-cache", create_if_missing=True)
 flashinfer_cache_vol = modal.Volume.from_name(
     "flashinfer-cache", create_if_missing=True
 )
+merged_model_vol = modal.Volume.from_name("merged-model", create_if_missing=True)
 
-vllm_passphrase = os.environ.get("VLLM_PASSPHRASE")
+vllm_passphrase = str(os.environ.get("VLLM_PASSPHRASE")) + "-merged"
 
 # App configuration
 app = modal.App(f"example-gpt-oss-inference{vllm_passphrase}")
@@ -48,6 +48,7 @@ VLLM_PORT = 8000
         "/root/.cache/huggingface": hf_cache_vol,
         "/root/.cache/vllm": vllm_cache_vol,
         "/root/.cache/flashinfer": flashinfer_cache_vol,
+        "/merged": merged_model_vol,
     },
     max_containers=1,
 )
@@ -60,9 +61,7 @@ def serve():
         "vllm",
         "serve",
         "--uvicorn-log-level=info",
-        MODEL_NAME,
-        "--revision",
-        MODEL_REVISION,
+        MODEL_PATH,
         "--served-model-name",
         "vllm-model",
         "--tensor-parallel-size",

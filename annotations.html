@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annotations</title>
+    <script type="module">
+        // Import js-tiktoken for live token decoding (in background)
+        import { Tiktoken } from 'https://esm.sh/js-tiktoken@1.0.21';
+
+        // Load o200k_base encoding ranks in background
+        fetch('data/o200k_base.json').then(r => r.json()).then(o200kRanks => {
+            // Harmony special tokens
+            const specialTokens = {
+                '<|endoftext|>': 199999,
+                '<|startoftext|>': 199998,
+                '<|return|>': 200002,
+                '<|constrain|>': 200003,
+                '<|channel|>': 200005,
+                '<|start|>': 200006,
+                '<|end|>': 200007,
+                '<|message|>': 200008,
+                '<|call|>': 200012
+            };
+
+            window.tiktoken = new Tiktoken(o200kRanks, specialTokens);
+            window.tiktokenReady = true;
+            window.dispatchEvent(new Event('tiktokenReady'));
+        });
+    </script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 30px 0;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th {
+            background: #4a5568;
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover { background: #5a6578; }
+        th.count { text-align: center; width: 50px; }
+        th[data-tooltip] {
+            position: relative;
+            cursor: help;
+        }
+        th[data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a202c;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: normal;
+            white-space: nowrap;
+            z-index: 100;
+            margin-top: 4px;
+        }
+        th[data-tooltip]:last-child:hover::after {
+            left: auto;
+            right: 0;
+            transform: none;
+        }
+        td.reward { text-align: center; }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+        td.count { text-align: center; font-weight: 600; }
+        .clickable-count { cursor: pointer; }
+        .clickable-count:hover { opacity: 0.7; }
+        td.count.better { color: #10b981; }
+        td.count.worse { color: #ef4444; }
+        td.count.mixed { color: #f59e0b; }
+        td.count.neutral { color: #8b5cf6; }
+        td.count.unlabeled { color: #9ca3af; }
+        tr:hover { background: #f8fafc; }
+        .problem-id, .state-link, .action-link {
+            color: #2196f3;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .problem-id:hover, .state-link:hover, .action-link:hover {
+            text-decoration: underline;
+        }
+        .loading { text-align: center; padding: 40px; color: #666; }
+        .empty-state { text-align: center; padding: 40px; color: #999; }
+        .reward-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .reward-badge.high { background: #10b981; color: #fff; }
+        .reward-badge.medium { background: #f59e0b; color: #fff; }
+        .reward-badge.low { background: #ef4444; color: #fff; }
+        .summary {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+        .summary span {
+            margin: 0 12px;
+            font-weight: 600;
+        }
+        .summary .better { color: #10b981; }
+        .summary .mixed { color: #f59e0b; }
+        .summary .worse { color: #ef4444; }
+        .summary .neutral { color: #8b5cf6; }
+        .summary .unlabeled { color: #9ca3af; }
+        .summary .learnable { color: inherit; }
+        .filter-info {
+            background: #e0f2fe;
+            border: 1px solid #7dd3fc;
+            border-radius: 6px;
+            padding: 10px 16px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #0369a1;
+        }
+        .filter-info a { color: #0284c7; }
+
+        /* Two-panel layout */
+        .panel-container {
+            display: flex;
+            flex: 1;
+            overflow: hidden;
+        }
+        .left-panel {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            border-right: 1px solid #e0e0e0;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .right-panel {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            background: #f8fafc;
+        }
+        .right-panel h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #4a5568;
+        }
+        .right-panel .position-info {
+            margin-bottom: 15px;
+        }
+        .right-panel .label-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+        }
+        .right-panel .label-badge.better { background: #10b981; }
+        .right-panel .label-badge.mixed { background: #f59e0b; }
+        .right-panel .label-badge.worse { background: #ef4444; }
+        .right-panel .label-badge.neutral { background: #8b5cf6; }
+        .right-panel .label-badge.unlabeled { background: #9ca3af; }
+        .right-panel .label-lists {
+            margin-top: 10px;
+            padding: 8px;
+            background: #f1f5f9;
+            border-radius: 6px;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        .right-panel .reason {
+            margin-top: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .right-panel .alternate {
+            margin-top: 15px;
+            padding: 10px;
+            background: white;
+            border-radius: 6px;
+            border-left: 3px solid #9ca3af;
+        }
+        .right-panel .alternate.better {
+            border-left-color: #10b981;
+            background: rgba(16, 185, 129, 0.05);
+        }
+        .right-panel .alternate.mixed {
+            border-left-color: #f59e0b;
+            background: rgba(245, 158, 11, 0.05);
+        }
+        .right-panel .alternate.worse {
+            border-left-color: #ef4444;
+            background: rgba(239, 68, 68, 0.05);
+        }
+        .right-panel .alternate.neutral {
+            border-left-color: #8b5cf6;
+            background: rgba(139, 92, 246, 0.05);
+        }
+        .right-panel .alternate.unlabeled {
+            border-left-color: #9ca3af;
+        }
+        .right-panel .alternate-header {
+            font-size: 11px;
+            color: #666;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+        .right-panel .alternate-text {
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 12px;
+            line-height: 1.5;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .right-panel .empty {
+            color: #999;
+            font-style: italic;
+        }
+
+        /* Colored spans for labeled text */
+        .labeled-span {
+            cursor: pointer;
+            border-radius: 2px;
+            padding: 1px 0;
+        }
+        .labeled-span:hover {
+            text-decoration: underline;
+        }
+        .labeled-span.better { color: #10b981; background: rgba(16, 185, 129, 0.1); }
+        .labeled-span.mixed { color: #f59e0b; background: rgba(245, 158, 11, 0.1); }
+        .labeled-span.worse { color: #ef4444; background: rgba(239, 68, 68, 0.1); }
+        .labeled-span.neutral { color: #8b5cf6; background: rgba(139, 92, 246, 0.1); }
+        .labeled-span.unlabeled { color: #9ca3af; background: rgba(156, 163, 175, 0.1); }
+        .labeled-span.selected {
+            outline: 2px solid #2196f3;
+            outline-offset: 1px;
+        }
+        .prompt-section {
+            color: #6b7280;
+        }
+
+        /* JSONL viewer mode */
+        .jsonl-viewer {
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 11px;
+            background: #1e1e1e;
+            color: #d4d4d4;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <nav style="text-align:center; padding:20px 0; font-size:16px;">
+        <a href="problems.html" style="color:#2196f3; text-decoration:none;">Problems</a> &middot;
+        <strong style="font-size:22px;">Annotations</strong> &middot;
+        <a href="corpus.html" style="color:#2196f3; text-decoration:none;">Corpus</a>
+    </nav>
+    <script>document.querySelectorAll('nav a').forEach(a => { if (location.search) a.href += location.search; });</script>
+    <div class="container" id="home-view">
+        <div id="summary" class="summary"></div>
+        <div id="filter-info" class="filter-info" style="display:none;"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th onclick="sortAnnotations('problem_id')">Problem ID</th>
+                    <th onclick="sortAnnotations('state_hash')">State</th>
+                    <th onclick="sortAnnotations('action_hash')">Action</th>
+                    <th class="count" data-tooltip="Action length in tokens" onclick="sortAnnotations('action_length')">Length</th>
+                    <th class="count" data-tooltip="Reflection file exists and is non-empty" onclick="sortAnnotations('reflection_exists')">Reflection</th>
+                    <th class="count" data-tooltip="Better: original is better than alternates" onclick="sortAnnotations('better')">+</th>
+                    <th class="count" data-tooltip="Mixed: original is neutral but has better/worse alternates" onclick="sortAnnotations('mixed')">±</th>
+                    <th class="count" data-tooltip="Worse: original is worse than alternates" onclick="sortAnnotations('worse')">-</th>
+                    <th class="count" data-tooltip="Neutral: original is neutral, no better/worse alternates" onclick="sortAnnotations('neutral')">=</th>
+                    <th class="count" data-tooltip="Unlabeled: no annotation" onclick="sortAnnotations('unlabeled')">?</th>
+                    <th class="count" data-tooltip="Reward of the original trace" onclick="sortAnnotations('action_reward')">Reward</th>
+                    <th class="count" data-tooltip="Learnable: number of completions that are better" onclick="sortAnnotations('learnable')">!</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <div id="loading-state" class="loading">Loading...</div>
+        <div id="empty-state" class="empty-state" style="display:none;">
+            No labels found.
+        </div>
+
+        <!-- Inline annotation view (shown when navigated with problem+state+action) -->
+        <div id="inline-view" style="display:none; margin-top:20px; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; width:100vw; padding:0 20px;">
+            <div id="inline-panels" class="panel-container" style="display:flex; border:1px solid #e0e0e0; border-radius:8px; overflow:hidden;">
+                <div class="left-panel" id="inline-left-panel" style="overflow-y:auto;">
+                    <div class="loading">Loading...</div>
+                </div>
+                <div class="right-panel" id="inline-right-panel" style="overflow-y:auto;">
+                    <div class="empty">Click a colored span to view alternates</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        // Sort state
+        let annSortColumn = null;
+        let annSortAsc = true;
+        let lastFilter = {};
+
+        // WeakMap to cache DOM rows for each entry
+        const annotationRowMap = new WeakMap();
+
+        function sortAnnotations(col) {
+            if (annSortColumn === col) {
+                annSortAsc = !annSortAsc;
+            } else {
+                annSortColumn = col;
+                annSortAsc = typeof getAnnotationSortValue({}, col) === 'number' ? false : true;
+            }
+            renderTable(lastFilter);
+        }
+
+        function getAnnotationSortValue(entry, col) {
+            switch (col) {
+                case 'problem_id': return entry.problem_id || '';
+                case 'state_hash': return entry.state_hash || '';
+                case 'action_hash': return entry.action_hash || '';
+                case 'action_length': return entry.action_length || 0;
+                case 'reflection_exists': return entry.reflection_exists ? 1 : 0;
+                case 'better': return entry.better || 0;
+                case 'mixed': return entry.mixed || 0;
+                case 'worse': return entry.worse || 0;
+                case 'neutral': return entry.neutral || 0;
+                case 'unlabeled': return entry.unlabeled || 0;
+                case 'action_reward': return entry.action_reward || 0;
+                case 'learnable': return entry.learnable || 0;
+                default: return '';
+            }
+        }
+
+        // Global state
+        let labelsIndex = [];
+        let currentEntry = null;
+        let currentLabels = {};      // Maps start position (int) to label data
+        let currentSpans = {};       // Maps start position (int) to end position (int)
+        let currentAlternates = {};  // Maps start position (int) to alternates
+        let currentPromptTokens = [];
+        let currentTokens = [];
+
+        // Panel element helpers
+        function getLeftPanel() { return document.getElementById('inline-left-panel'); }
+        function getRightPanel() { return document.getElementById('inline-right-panel'); }
+
+        // Special token IDs
+        const SPECIAL_TOKENS = {
+            200006: '<|start|>',
+            200007: '<|end|>',
+            200008: '<|message|>',
+            200012: '<|call|>'
+        };
+
+        // Decode tokens to text
+        function decodeTokens(tokenIds) {
+            if (!window.tiktokenReady || !window.tiktoken) {
+                return '[Tiktoken not ready]';
+            }
+            let result = '';
+            let regularTokens = [];
+            for (const id of tokenIds) {
+                if (SPECIAL_TOKENS[id]) {
+                    if (regularTokens.length > 0) {
+                        result += window.tiktoken.decode(regularTokens);
+                        regularTokens = [];
+                    }
+                    result += SPECIAL_TOKENS[id];
+                } else {
+                    regularTokens.push(id);
+                }
+            }
+            if (regularTokens.length > 0) {
+                result += window.tiktoken.decode(regularTokens);
+            }
+            return result;
+        }
+
+        // Load labels index
+        async function init() {
+            // Check for JSONL viewer mode
+            const params = new URLSearchParams(window.location.search);
+            const path = params.get('path');
+            if (path) {
+                document.getElementById('home-view').style.display = 'none';
+                document.body.classList.add('jsonl-viewer');
+                try {
+                    const resp = await fetch(path);
+                    document.body.textContent = await resp.text();
+                } catch (err) {
+                    document.body.textContent = 'Error: ' + err.message;
+                }
+                return;
+            }
+
+            try {
+                const resp = await fetch('data/labels.jsonl?t=' + Date.now());
+                const text = await resp.text();
+                labelsIndex = text.trim().split('\n')
+                    .filter(line => line.trim())
+                    .map(line => JSON.parse(line));
+
+                if (labelsIndex.length === 0) {
+                    document.getElementById('loading-state').style.display = 'none';
+                    document.getElementById('empty-state').style.display = 'block';
+                    return;
+                }
+
+                // Check for query params
+                const problem = params.get('problem');
+                const state = params.get('state');
+                const action = params.get('action');
+
+                // If all three params present, show table filtered + inline view
+                if (problem && state && action) {
+                    const idx = labelsIndex.findIndex(e =>
+                        e.problem_id === problem &&
+                        e.state_hash === state &&
+                        e.action_hash === action
+                    );
+                    if (idx >= 0) {
+                        renderTable({ problem, state, action });
+                        const scrollTo = params.get('scrollTo');
+                        openInlineView(idx, scrollTo);
+                    }
+                } else if (problem || state) {
+                    renderTable({ problem, state });
+                } else {
+                    renderTable();
+                }
+            } catch (err) {
+                document.getElementById('loading-state').textContent = 'Error: ' + err.message;
+            }
+        }
+
+        // Build a DOM row for an annotation entry, using cache if available
+        function buildAnnotationRow(entry) {
+            // Check cache first
+            if (annotationRowMap.has(entry)) {
+                return annotationRowMap.get(entry);
+            }
+
+            // Helper function to create clickable count cells
+            const countCell = (value, type, idx) => {
+                if (value > 0) {
+                    return `<span class="clickable-count" onclick="openModalWithScroll(${idx}, '${type}'); event.stopPropagation()">${value}</span>`;
+                }
+                return '0';
+            };
+
+            // Find index of this entry
+            const idx = labelsIndex.indexOf(entry);
+            const rewardClass = entry.action_reward >= 1 ? 'high' : entry.action_reward > 0 ? 'medium' : 'low';
+
+            // Build the row element
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td><a href="?problem=${entry.problem_id}" class="problem-id" onclick="event.stopPropagation()">${entry.problem_id}</a></td>
+                <td><a href="?problem=${entry.problem_id}&state=${entry.state_hash}" class="state-link" onclick="event.stopPropagation()">${entry.state_hash}</a></td>
+                <td><a href="?problem=${entry.problem_id}&state=${entry.state_hash}&action=${entry.action_hash}" class="action-link" onclick="event.stopPropagation()">${entry.action_hash}</a></td>
+                <td class="count">${entry.action_length || 0}</td>
+                <td class="count">${entry.reflection_exists
+                    ? `<a href="?problem=${entry.problem_id}&state=${entry.state_hash}&action=${entry.action_hash}" onclick="event.stopPropagation()" style="text-decoration:none">&#x2713;</a>`
+                    : '-'}</td>
+                <td class="count better">${countCell(entry.better || 0, 'better', idx)}</td>
+                <td class="count mixed">${countCell(entry.mixed || 0, 'mixed', idx)}</td>
+                <td class="count worse">${countCell(entry.worse || 0, 'worse', idx)}</td>
+                <td class="count neutral">${countCell(entry.neutral || 0, 'neutral', idx)}</td>
+                <td class="count unlabeled">${countCell(entry.unlabeled || 0, 'unlabeled', idx)}</td>
+                <td class="reward"><span class="reward-badge ${rewardClass}">${entry.action_reward.toFixed(3)}</span></td>
+                <td class="count">${entry.learnable || 0}</td>
+            `;
+
+            // Cache the row
+            annotationRowMap.set(entry, tr);
+            return tr;
+        }
+
+        // Render home view table
+        function renderTable(filter = {}) {
+            lastFilter = filter;
+            const tbody = document.getElementById('table-body');
+
+            // Filter entries based on params
+            let filtered = labelsIndex;
+            if (filter.problem) {
+                if (filter.problem.includes('*')) {
+                    const re = new RegExp('^' + filter.problem.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*') + '$');
+                    filtered = filtered.filter(e => re.test(e.problem_id));
+                } else {
+                    filtered = filtered.filter(e => e.problem_id === filter.problem);
+                }
+            }
+            if (filter.state) {
+                filtered = filtered.filter(e => e.state_hash === filter.state);
+            }
+            if (filter.action) {
+                filtered = filtered.filter(e => e.action_hash === filter.action);
+            }
+
+            // Compute totals
+            const totals = filtered.reduce((acc, e) => {
+                acc.better += e.better || 0;
+                acc.mixed += e.mixed || 0;
+                acc.worse += e.worse || 0;
+                acc.neutral += e.neutral || 0;
+                acc.unlabeled += e.unlabeled || 0;
+                acc.learnable += e.learnable || 0;
+                return acc;
+            }, { better: 0, mixed: 0, worse: 0, neutral: 0, unlabeled: 0, learnable: 0 });
+
+            // Show summary
+            document.getElementById('summary').innerHTML = `
+                <span class="better">+ ${totals.better}</span>
+                <span class="mixed">± ${totals.mixed}</span>
+                <span class="worse">- ${totals.worse}</span>
+                <span class="neutral">= ${totals.neutral}</span>
+                <span class="unlabeled">? ${totals.unlabeled}</span>
+                <span class="learnable">! ${totals.learnable}</span>
+            `;
+
+            // Show filter indicator if filtering
+            const filterInfo = document.getElementById('filter-info');
+            if (filter.problem || filter.state || filter.action) {
+                const parts = [];
+                if (filter.problem) parts.push(`problem: ${filter.problem}`);
+                if (filter.state) parts.push(`state: ${filter.state}`);
+                if (filter.action) parts.push(`action: ${filter.action}`);
+                const jsonLink = filter.action && filter.problem && filter.state
+                    ? ` <a href="?path=data/label/${filter.problem}/${filter.state}/${filter.action}.jsonl">(show json)</a>`
+                    : '';
+                filterInfo.innerHTML = `Filtering by ${parts.join(', ')} <a href="annotations.html">(clear)</a>${jsonLink}`;
+                filterInfo.style.display = 'block';
+            } else {
+                filterInfo.style.display = 'none';
+            }
+
+            // Sort
+            if (annSortColumn) {
+                filtered.forEach((e, i) => e._sortIdx = i);
+                filtered = filtered.slice().sort((a, b) => {
+                    const va = getAnnotationSortValue(a, annSortColumn);
+                    const vb = getAnnotationSortValue(b, annSortColumn);
+                    let cmp = 0;
+                    if (typeof va === 'number' && typeof vb === 'number') {
+                        cmp = va - vb;
+                    } else {
+                        cmp = String(va).localeCompare(String(vb));
+                    }
+                    return (annSortAsc ? cmp : -cmp) || a._sortIdx - b._sortIdx;
+                });
+                const sortedSet = new Set(filtered);
+                labelsIndex = [...filtered, ...labelsIndex.filter(e => !sortedSet.has(e))];
+            }
+
+            // Build DocumentFragment with cached rows
+            const frag = document.createDocumentFragment();
+            for (const entry of filtered) {
+                const row = buildAnnotationRow(entry);
+                frag.appendChild(row);
+            }
+
+            // Replace all children with the fragment
+            tbody.replaceChildren(frag);
+            document.getElementById('loading-state').style.display = 'none';
+        }
+
+        // Navigate to inline view and scroll to first occurrence of a label type
+        function openModalWithScroll(idx, labelType) {
+            const entry = labelsIndex[idx];
+            window.location.href = `?problem=${entry.problem_id}&state=${entry.state_hash}&action=${entry.action_hash}&scrollTo=${labelType}`;
+        }
+
+        // Size inline panels to fill remaining viewport
+        function sizeInlinePanels() {
+            const panels = document.getElementById('inline-panels');
+            if (!panels || document.getElementById('inline-view').style.display === 'none') return;
+            // Walk offsetParent chain to get absolute document offset
+            let docTop = 0;
+            let el = panels;
+            while (el) { docTop += el.offsetTop; el = el.offsetParent; }
+            panels.style.height = Math.max(400, window.innerHeight - docTop - 20) + 'px';
+        }
+
+        // Open inline annotation view (no modal)
+        async function openInlineView(idx, scrollToType = null) {
+            currentEntry = labelsIndex[idx];
+            document.getElementById('inline-view').style.display = 'block';
+            getLeftPanel().innerHTML = '<div class="loading">Loading...</div>';
+            getRightPanel().innerHTML = '<div class="empty">Click a colored span to view alternates</div>';
+
+            try {
+                const [stateResp, actionResp, labelResp, altResp] = await Promise.all([
+                    fetch(`data/raw/${currentEntry.problem_id}/${currentEntry.state_hash}/state.json`),
+                    fetch(`data/raw/${currentEntry.problem_id}/${currentEntry.state_hash}/${currentEntry.action_hash}/action.json`),
+                    fetch(`data/label/${currentEntry.problem_id}/${currentEntry.state_hash}/${currentEntry.action_hash}.jsonl`),
+                    fetch(`data/alternate/${currentEntry.problem_id}/${currentEntry.state_hash}/${currentEntry.action_hash}.jsonl`)
+                ]);
+
+                const stateData = await stateResp.json();
+                currentPromptTokens = stateData.tokens || [];
+                const actionData = await actionResp.json();
+                currentTokens = actionData.tokens;
+
+                currentLabels = {};
+                currentSpans = {};
+                const labelText = await labelResp.text();
+                for (const line of labelText.trim().split('\n')) {
+                    if (line) {
+                        const data = JSON.parse(line);
+                        for (const [spanKey, labelData] of Object.entries(data)) {
+                            const parts = spanKey.split('-');
+                            const start = parseInt(parts[0]);
+                            currentLabels[start] = labelData;
+                            if (parts.length > 1) currentSpans[start] = parseInt(parts[1]);
+                        }
+                    }
+                }
+
+                currentAlternates = {};
+                const altText = await altResp.text();
+                for (const line of altText.trim().split('\n')) {
+                    if (line) {
+                        const data = JSON.parse(line);
+                        for (const [posKey, alts] of Object.entries(data)) {
+                            const pos = parseInt(posKey);
+                            if (!currentAlternates[pos]) currentAlternates[pos] = [];
+                            currentAlternates[pos].push(...alts);
+                        }
+                    }
+                }
+
+                const render = () => {
+                    renderLeftPanel();
+                    // Size panels first so scrollIntoView works correctly
+                    document.body.style.overflow = 'hidden';
+                    sizeInlinePanels();
+                    window.addEventListener('resize', sizeInlinePanels);
+                    // Check for position param and select it
+                    const params = new URLSearchParams(window.location.search);
+                    const posParam = params.get('pos');
+                    if (posParam && currentAlternates[parseInt(posParam)]) {
+                        selectPosition(parseInt(posParam));
+                    } else if (scrollToType) {
+                        const firstPos = findFirstPositionOfType(scrollToType);
+                        if (firstPos !== null) selectPosition(firstPos);
+                    } else {
+                        // No position selected - show reflection if available
+                        showReflection();
+                    }
+                };
+
+                if (window.tiktokenReady) render();
+                else window.addEventListener('tiktokenReady', render, { once: true });
+            } catch (err) {
+                getLeftPanel().innerHTML = `<div class="loading">Error: ${err.message}</div>`;
+            }
+        }
+
+        // Render left panel with colored spans
+        function renderLeftPanel() {
+            // Build HTML starting with prompt (if any)
+            let html = '';
+
+            if (currentPromptTokens.length > 0) {
+                const promptText = decodeTokens(currentPromptTokens);
+                html += `<div class="prompt-section">${escapeHtml(promptText)}</div>`;
+            }
+
+            // Get all positions with alternates (both labeled and unlabeled)
+            const allPositions = Object.keys(currentAlternates)
+                .map(Number)
+                .sort((a, b) => a - b);
+
+            if (allPositions.length === 0) {
+                html += escapeHtml(decodeTokens(currentTokens));
+                getLeftPanel().innerHTML = html;
+                return;
+            }
+
+            // Build a map of token index -> span position it belongs to
+            // For overlapping spans, later (inner) spans take precedence
+            const tokenToSpan = new Array(currentTokens.length).fill(null);
+
+            for (const pos of allPositions) {
+                const spanEnd = currentSpans[pos] !== undefined
+                    ? currentSpans[pos]
+                    : (allPositions.indexOf(pos) + 1 < allPositions.length
+                        ? allPositions[allPositions.indexOf(pos) + 1]
+                        : Math.min(pos + 100, currentTokens.length));
+
+                // Mark all tokens in this span's range
+                for (let t = pos; t < spanEnd && t < currentTokens.length; t++) {
+                    tokenToSpan[t] = pos;
+                }
+            }
+
+            // Now render by grouping consecutive tokens with the same span
+            let currentSpanPos = null;
+            let spanStartIdx = 0;
+
+            for (let t = 0; t <= currentTokens.length; t++) {
+                // Use -1 as end sentinel to ensure final plain text chunk gets flushed
+                const thisSpanPos = t < currentTokens.length ? tokenToSpan[t] : -1;
+
+                if (thisSpanPos !== currentSpanPos) {
+                    // Flush previous group
+                    if (t > spanStartIdx) {
+                        const text = decodeTokens(currentTokens.slice(spanStartIdx, t));
+                        if (currentSpanPos !== null) {
+                            const labelInfo = currentLabels[currentSpanPos];
+                            const labelClass = labelInfo ? getLabelClass(labelInfo) : 'unlabeled';
+                            html += `<span class="labeled-span ${labelClass}" data-pos="${currentSpanPos}" onclick="selectPosition(${currentSpanPos})">${escapeHtml(text)}</span>`;
+                        } else {
+                            html += escapeHtml(text);
+                        }
+                    }
+                    currentSpanPos = thisSpanPos;
+                    spanStartIdx = t;
+                }
+            }
+
+            getLeftPanel().innerHTML = html;
+        }
+
+        // Select a position and show alternates
+        function selectPosition(pos) {
+            // Update URL query params with position
+            const url = new URL(window.location);
+            url.searchParams.set('pos', pos);
+            history.pushState({}, '', url);
+
+            // Update selection highlighting
+            document.querySelectorAll('.labeled-span').forEach(el => {
+                el.classList.remove('selected');
+            });
+            const selectedEl = document.querySelector(`.labeled-span[data-pos="${pos}"]`);
+            if (selectedEl) {
+                selectedEl.classList.add('selected');
+                // Scroll to show the start of the span (not center, since spans can be large)
+                selectedEl.scrollIntoView({ behavior: 'instant', block: 'start' });
+                // Adjust scroll to add some padding at top
+                getLeftPanel().scrollTop -= 50;
+            }
+
+            // Render right panel
+            const labelInfo = currentLabels[pos] || {better: [], neutral: [], worse: [], reason: ''};
+            const alts = currentAlternates[pos] || [];
+            const hasLabel = isLabeled(labelInfo);
+
+            // Find the end of this segment from stored span or fall back
+            const allPositions = Object.keys(currentAlternates).map(Number).sort((a, b) => a - b);
+            const posIdx = allPositions.indexOf(pos);
+            const spanEnd = currentSpans[pos] !== undefined
+                ? currentSpans[pos]
+                : (posIdx + 1 < allPositions.length
+                    ? allPositions[posIdx + 1]
+                    : Math.min(pos + 100, currentTokens.length));
+            const originalText = decodeTokens(currentTokens.slice(pos, spanEnd));
+
+            // Format better/neutral/worse lists for display
+            const betterList = labelInfo.better || [];
+            const neutralList = labelInfo.neutral || [];
+            const worseList = labelInfo.worse || [];
+            const betterStr = betterList.length > 0 ? betterList.join(', ') : '(none)';
+            const neutralStr = neutralList.length > 0 ? neutralList.join(', ') : '(none)';
+            const worseStr = worseList.length > 0 ? worseList.join(', ') : '(none)';
+
+            // Show span range in header
+            const spanLabel = currentSpans[pos] !== undefined ? `Span ${pos}-${spanEnd}` : `Position ${pos}`;
+
+            let html = `
+                <div class="position-info">
+                    <h3>${spanLabel}</h3>
+                    <span class="label-badge ${getLabelClass(labelInfo)}">${getLabelText(labelInfo)}</span>
+                    ${hasLabel ? `<div class="label-lists"><strong>Better:</strong> ${escapeHtml(betterStr)}<br><strong>Neutral:</strong> ${escapeHtml(neutralStr)}<br><strong>Worse:</strong> ${escapeHtml(worseStr)}</div>` : ''}
+                    ${labelInfo.reason ? `<div class="reason">${escapeHtml(labelInfo.reason)}</div>` : ''}
+                </div>
+            `;
+
+            if (alts.length === 0) {
+                html += '<div class="empty">No alternates at this position</div>';
+            } else {
+                for (const altObj of alts) {
+                    for (const [altId, tokens] of Object.entries(altObj)) {
+                        const altText = decodeTokens(tokens);
+                        const altClass = getAltClass(altId, labelInfo);
+                        html += `
+                            <div class="alternate ${altClass}">
+                                <div class="alternate-header">${altId}</div>
+                                <div class="alternate-text">${escapeHtml(altText)}</div>
+                            </div>
+                        `;
+                    }
+                }
+            }
+
+            getRightPanel().innerHTML = html;
+        }
+
+        // Show reflection text in the right panel
+        async function showReflection() {
+            if (!currentEntry) return;
+            const reflectionUrl = `data/annotate/${currentEntry.problem_id}/${currentEntry.state_hash}/${currentEntry.action_hash}-reflections.txt`;
+            try {
+                const resp = await fetch(reflectionUrl);
+                if (!resp.ok) {
+                    getRightPanel().innerHTML = '<div class="empty">No reflection file found</div>';
+                    return;
+                }
+                const text = await resp.text();
+                if (!text.trim()) {
+                    getRightPanel().innerHTML = '<div class="empty">Reflection file is empty</div>';
+                    return;
+                }
+                const linkedText = escapeHtml(text).replace(/Token (\d+)(-\d+)?/g, (match, num) =>
+                    `<a href="?problem=${currentEntry.problem_id}&amp;state=${currentEntry.state_hash}&amp;action=${currentEntry.action_hash}&amp;pos=${num}" style="color:#2196f3; text-decoration:none;" onclick="event.preventDefault(); selectPosition(${num})">${match}</a>`
+                );
+                getRightPanel().innerHTML = `
+                    <h3>Reflection</h3>
+                    <div style="font-family: 'SF Mono', Monaco, 'Courier New', monospace; font-size: 13px; line-height: 1.6; white-space: pre-wrap; word-wrap: break-word;">${linkedText}</div>
+                `;
+            } catch {
+                getRightPanel().innerHTML = '<div class="empty">Click a colored span to view alternates</div>';
+            }
+        }
+
+        // Handle browser back/forward
+        window.addEventListener('popstate', () => {
+            // Reload the page to handle navigation properly
+            window.location.reload();
+        });
+
+        // Helper functions
+        function getLabelClass(labelInfo) {
+            // Format: {better: [...], neutral: [...], worse: [...], reason: "..."}
+            const better = labelInfo.better || [];
+            const neutral = labelInfo.neutral || [];
+            const worse = labelInfo.worse || [];
+
+            if (better.includes('original')) return 'better';
+            if (worse.includes('original')) return 'worse';
+            if (neutral.includes('original')) {
+                // Check if there are other better/worse alternatives (mixed case)
+                const hasBetterAlt = better.some(id => id !== 'original');
+                const hasWorseAlt = worse.some(id => id !== 'original');
+                if (hasBetterAlt || hasWorseAlt) return 'mixed';
+                return 'neutral';
+            }
+            // Has annotation but original not explicitly listed
+            if (better.length > 0 || neutral.length > 0 || worse.length > 0 || labelInfo.reason) {
+                // If there are better/worse alternatives, count as mixed
+                if (better.length > 0 || worse.length > 0) return 'mixed';
+                return 'neutral';
+            }
+            return 'unlabeled';
+        }
+
+        function getLabelText(labelInfo) {
+            // Format: {better: [...], neutral: [...], worse: [...], reason: "..."}
+            const better = labelInfo.better || [];
+            const neutral = labelInfo.neutral || [];
+            const worse = labelInfo.worse || [];
+
+            if (better.includes('original')) return 'Original Better';
+            if (worse.includes('original')) return 'Original Worse';
+            if (neutral.includes('original')) {
+                // Check if there are other better/worse alternatives (mixed case)
+                const hasBetterAlt = better.some(id => id !== 'original');
+                const hasWorseAlt = worse.some(id => id !== 'original');
+                if (hasBetterAlt || hasWorseAlt) return 'Mixed';
+                return 'Neutral';
+            }
+            // Has annotation but original not explicitly listed
+            if (better.length > 0 || neutral.length > 0 || worse.length > 0 || labelInfo.reason) {
+                // If there are better/worse alternatives, count as mixed
+                if (better.length > 0 || worse.length > 0) return 'Mixed';
+                return 'Neutral';
+            }
+            return 'Unlabeled';
+        }
+
+        function getAltClass(altId, labelInfo) {
+            const better = labelInfo.better || [];
+            const neutral = labelInfo.neutral || [];
+            const worse = labelInfo.worse || [];
+
+            if (better.includes(altId)) return 'better';
+            if (worse.includes(altId)) return 'worse';
+            if (neutral.includes(altId)) return 'neutral';
+            return 'unlabeled';
+        }
+
+        function isLabeled(labelInfo) {
+            if (!labelInfo) return false;
+            const better = labelInfo.better || [];
+            const neutral = labelInfo.neutral || [];
+            const worse = labelInfo.worse || [];
+            return better.length > 0 || neutral.length > 0 || worse.length > 0 || !!labelInfo.reason;
+        }
+
+        function findFirstPositionOfType(type) {
+            const positions = Object.keys(currentAlternates).map(Number).sort((a, b) => a - b);
+            for (const pos of positions) {
+                const labelInfo = currentLabels[pos];
+                const labelClass = labelInfo ? getLabelClass(labelInfo) : 'unlabeled';
+                if (labelClass === type) {
+                    return pos;
+                }
+            }
+            return null;
+        }
+
+        function escapeHtml(text) {
+            return text
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#039;');
+        }
+
+        // Initialize immediately - tiktoken only needed for modal
+        init();
+    </script>
+</body>
+</html>

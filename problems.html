@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problems</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <script type="module">
+        const tiktokenTimings = {};
+        let t0 = performance.now();
+
+        // Import js-tiktoken for live token decoding
+        import { Tiktoken } from 'https://esm.sh/js-tiktoken@1.0.21';
+        tiktokenTimings.import = performance.now() - t0; t0 = performance.now();
+
+        // Load o200k_base encoding ranks
+        const o200kRanks = await fetch('data/o200k_base.json').then(r => r.json());
+        tiktokenTimings.fetchRanks = performance.now() - t0; t0 = performance.now();
+
+        // Harmony special tokens
+        const specialTokens = {
+            '<|endoftext|>': 199999,
+            '<|startoftext|>': 199998,
+            '<|return|>': 200002,
+            '<|constrain|>': 200003,
+            '<|channel|>': 200005,
+            '<|start|>': 200006,
+            '<|end|>': 200007,
+            '<|message|>': 200008,
+            '<|call|>': 200012
+        };
+
+        window.tiktoken = new Tiktoken(o200kRanks, specialTokens);
+        tiktokenTimings.init = performance.now() - t0;
+        window.tiktokenReady = true;
+        window.tiktokenTimings = tiktokenTimings;
+        console.log('Tiktoken timings (ms):', tiktokenTimings);
+
+        // Signal that tiktoken is ready
+        window.dispatchEvent(new Event('tiktokenReady'));
+    </script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 30px 0;
+            color: #333;
+        }
+        .summary {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: #666;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th {
+            background: #4a5568;
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover { background: #5a6578; }
+        th[data-tooltip] {
+            position: relative;
+            cursor: help;
+        }
+        th[data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a202c;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: normal;
+            white-space: nowrap;
+            z-index: 100;
+            margin-top: 4px;
+        }
+        th[data-tooltip]:last-child:hover::after {
+            left: auto;
+            right: 0;
+            transform: none;
+        }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+        tr:hover { background: #f8fafc; }
+        tr.selected { background: #e3f2fd; }
+        .problem-id {
+            color: #2196f3;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .problem-id:hover { text-decoration: underline; }
+        .completion-dots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            max-width: calc(10 * 24px + 9 * 4px); /* 10 dots + 9 gaps */
+        }
+        .completion-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        .completion-dot:hover { transform: scale(1.1); }
+        .completion-dot.correct { background: #10b981; }
+        .completion-dot.partial { background: #f59e0b; }
+        .completion-dot.incorrect { background: #ef4444; }
+        .completion-dot.neutral { background: #9ca3af; }
+        .reward-badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .reward-badge.high { background: #10b981; color: #fff; }
+        .reward-badge.medium { background: #f59e0b; color: #fff; }
+        .reward-badge.low { background: #ef4444; color: #fff; }
+        /* Modal styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        .modal-overlay.active { display: flex; justify-content: center; }
+        .modal {
+            background: white;
+            border-radius: 12px;
+            max-width: 1200px;
+            width: 100%;
+            margin: auto;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        .modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: white;
+            z-index: 10;
+        }
+        .modal-header h2 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+            padding: 5px 10px;
+        }
+        .close-btn:hover { color: #333; }
+        .modal-body { padding: 20px; }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .metric-card {
+            background: #f8fafc;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        .metric-card .label {
+            font-size: 11px;
+            color: #666;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .metric-card .value {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .metric-card .value.success { color: #333; }
+        .metric-card .value.error { color: #ef4444; }
+        .section-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin: 20px 0 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .conversation-container {
+            background: #f8fafc;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            color: #333;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .message-block {
+            margin-bottom: 10px;
+            padding: 8px 12px 12px;
+            border-radius: 6px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+        }
+        .message-block.collapsed {
+            padding: 8px 12px 12px;
+        }
+        .message-block.collapsed .message-header {
+            margin-bottom: 0;
+        }
+        .message-header {
+            font-weight: normal;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            user-select: none;
+            line-height: 1.2;
+        }
+        .message-header:hover { opacity: 0.8; }
+        .collapse-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 14px;
+            height: 14px;
+            font-size: 10px;
+            line-height: 1;
+            color: #666;
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+        .message-header .collapse-icon { color: #888; }
+        .message-block.collapsed .collapse-icon { transform: rotate(-90deg); }
+        .message-block.collapsed .message-content { display: none; }
+        .collapsible-section {
+            border-radius: 6px;
+        }
+        .collapsible-header {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .collapsible-header:hover { opacity: 0.9; }
+        .collapsible-section.collapsed .collapse-icon { transform: rotate(-90deg); }
+        .collapsible-section.collapsed .collapsible-content { display: none; }
+        .section-divider {
+            border-radius: 6px;
+            margin-bottom: 15px;
+        }
+        .prompt-section-wrapper {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-family: 'Consolas', 'Monaco', 'Menlo', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .completion-section-wrapper {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            font-family: 'Consolas', 'Monaco', 'Menlo', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .section-header {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 10px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            background: #f8fafc;
+            border: 1px solid #e0e0e0;
+            color: #333;
+        }
+        .section-header { gap: 10px; }
+        .collapsible-header {
+            gap: 10px;
+            justify-content: flex-start;
+        }
+        /* Keep header rows vertically centered regardless of content height */
+        .section-header,
+        .collapsible-header,
+        .completion-card-header,
+        .message-header {
+            align-items: center;
+        }
+        .section-header.prompt-header {
+        }
+        .section-header.completion-header {
+        }
+        /* Keep collapse/expand buttons on the right while text stays flush left */
+        .section-header .expand-collapse-btn {
+            margin-left: auto;
+        }
+        .expand-collapse-btn {
+            padding: 4px 10px;
+            font-size: 11px;
+            border: 1px solid currentColor;
+            background: transparent;
+            color: inherit;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: none;
+            letter-spacing: normal;
+            font-weight: 500;
+        }
+        .expand-collapse-btn:hover {
+            opacity: 0.8;
+        }
+        .message-header.system { color: #666; }
+        .message-header.developer { color: #666; }
+        .message-header.user { color: #666; }
+        .message-header.assistant { color: #666; }
+        .message-header.python { color: #666; }
+        .channel-tag {
+            font-size: inherit;
+            padding: 2px 6px;
+            border-radius: 3px;
+            background: rgba(255,255,255,0.1);
+            color: #888;
+            font-weight: normal;
+        }
+        .message-content {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .message-content.code-content {
+            color: #333;
+            background: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 3px solid #888;
+        }
+        .message-content.output-content {
+            color: #854d0e;
+            background: #fefce8;
+            padding: 10px;
+            border-radius: 4px;
+            border-left: 3px solid #eab308;
+        }
+        .tabs {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+        .tab {
+            padding: 8px 16px;
+            border: 1px solid #e0e0e0;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+        .tab:hover { background: #f5f5f5; }
+        .tab.active { background: #4a5568; color: white; border-color: #4a5568; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .completion-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .completion-card-header {
+            background: #f8fafc;
+            padding: 12px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        .completion-card-header h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .completion-card-body { padding: 15px; }
+        .problem-text {
+            background: #f8fafc;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            line-height: 1.6;
+        }
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+        }
+        .boundary-marker {
+            text-align: center;
+            padding: 8px 0;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 12px;
+            color: #9ca3af;
+            margin: 10px 0;
+        }
+        .boundary-marker.prompt-end {
+            color: #6b7280;
+            border-top: 1px dashed #d1d5db;
+            padding-top: 12px;
+        }
+        .token-marker {
+            font-weight: 600;
+            display: block;
+        }
+        .token-marker.completion-start {
+            color: #059669;
+            margin-bottom: 8px;
+        }
+        .token-marker.prompt-end {
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <nav style="text-align:center; padding:20px 0; font-size:16px;">
+        <strong style="font-size:22px;">Problems</strong> &middot;
+        <a href="annotations.html" style="color:#2196f3; text-decoration:none;">Annotations</a> &middot;
+        <a href="corpus.html" style="color:#2196f3; text-decoration:none;">Corpus</a>
+    </nav>
+    <script>document.querySelectorAll('nav a').forEach(a => { if (location.search) a.href += location.search; });</script>
+    <div class="container">
+        <div id="summary" class="summary"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th onclick="sortTable('problem_id')">Problem ID</th>
+                    <th onclick="sortTable('timestamp')">Time</th>
+                    <th onclick="sortTable('actions')">Actions</th>
+                    <th data-tooltip="Findings file exists and is non-empty" onclick="sortTable('has_findings')">Findings</th>
+                    <th onclick="sortTable('reward')">Accuracy</th>
+                    <th onclick="sortTable('prompt_tokens')">Prompt</th>
+                    <th data-tooltip="Token length of shortest correct completion" onclick="sortTable('shortest')">Shortest</th>
+                    <th data-tooltip="Token length of longest correct completion" onclick="sortTable('longest')">Longest</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <div id="loading-state" class="loading">Loading...</div>
+        <div id="empty-state" class="empty-state" style="display:none;">
+            No states generated yet. Run generate.py first.
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h2 id="modal-title">Loading...</h2>
+                <button class="close-btn" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <div style="text-align:center;padding:40px;">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let indexData = null;
+        let sortColumn = 'timestamp';
+        let sortAsc = false;
+        let currentState = null;
+        let currentProblemId = null;
+        let currentStateHash = null;
+        let currentCompletionIdx = 0;
+        const problemRowMap = new WeakMap();
+
+        // Base36 hash function matching Python's tokens_to_base36_hash
+        const BASE36_CHARS = "0123456789abcdefghijklmnopqrstuvwxyz";
+
+        async function tokensToBase36Hash(tokenIds, length = 6) {
+            // Convert tokens to bytes (4 bytes per token, big-endian)
+            const bytes = new Uint8Array(tokenIds.length * 4);
+            for (let i = 0; i < tokenIds.length; i++) {
+                const t = tokenIds[i];
+                bytes[i * 4] = (t >> 24) & 0xff;
+                bytes[i * 4 + 1] = (t >> 16) & 0xff;
+                bytes[i * 4 + 2] = (t >> 8) & 0xff;
+                bytes[i * 4 + 3] = t & 0xff;
+            }
+            // SHA256 hash
+            const hashBuffer = await crypto.subtle.digest('SHA-256', bytes);
+            const hashArray = new Uint8Array(hashBuffer);
+            // Take first 8 bytes as big-endian number
+            let num = BigInt(0);
+            for (let i = 0; i < 8; i++) {
+                num = (num << 8n) | BigInt(hashArray[i]);
+            }
+            // Convert to base36
+            let result = "";
+            while (num > 0n && result.length < length) {
+                result = BASE36_CHARS[Number(num % 36n)] + result;
+                num = num / 36n;
+            }
+            return result.padStart(length, '0').slice(0, length);
+        }
+
+        // Maps for hash lookups
+        let stateHashMap = {}; // stateHash -> {problem_id, state_hash}
+        let actionHashMap = {}; // actionHash -> {problem_id, state_hash, actionIdx}
+
+        // Special tokens for harmony encoding
+        const SPECIAL_TOKENS = {
+            199998: '<|startoftext|>',
+            199999: '<|endoftext|>',
+            200002: '<|return|>',
+            200003: '<|constrain|>',
+            200005: '<|channel|>',
+            200006: '<|start|>',
+            200007: '<|end|>',
+            200008: '<|message|>',
+            200012: '<|call|>'
+        };
+
+        // Tokens to hide from display (structural markers)
+        const HIDDEN_TOKENS = new Set([200012]); // <|call|>
+
+        // Decode tokens to text using tiktoken
+        function decodeTokens(tokenIds) {
+            if (!window.tiktokenReady || !window.tiktoken) {
+                return '(Tokenizer loading...)';
+            }
+            try {
+                // Separate special tokens from regular tokens for proper decoding
+                let result = '';
+                let regularTokens = [];
+
+                for (const tokenId of tokenIds) {
+                    // Skip hidden structural tokens
+                    if (HIDDEN_TOKENS.has(tokenId)) {
+                        continue;
+                    }
+                    if (SPECIAL_TOKENS[tokenId]) {
+                        // Flush any accumulated regular tokens first
+                        if (regularTokens.length > 0) {
+                            result += window.tiktoken.decode(regularTokens);
+                            regularTokens = [];
+                        }
+                        result += SPECIAL_TOKENS[tokenId];
+                    } else {
+                        regularTokens.push(tokenId);
+                    }
+                }
+                // Flush remaining regular tokens
+                if (regularTokens.length > 0) {
+                    result += window.tiktoken.decode(regularTokens);
+                }
+                return result;
+            } catch (e) {
+                console.error('Decode error:', e);
+                return '(Decode error)';
+            }
+        }
+
+        // Parse JSON while preserving answer fields as strings (to avoid precision loss)
+        function parseJsonBigInt(text) {
+            // Replace "answer": <number> with "answer": "<number>" to preserve precision
+            const processed = text.replace(/"answer":\s*(-?\d+)/g, (match, num) => {
+                console.assert(/^-?\d+$/.test(num), `Answer must be an integer: ${num}`);
+                return `"answer":"${num}"`;
+            });
+            return JSON.parse(processed);
+        }
+
+        async function init() {
+            try {
+                const resp = await fetch('data/problems.jsonl?t=' + Date.now());
+                const text = await resp.text();
+                // Parse JSONL (one JSON object per line)
+                const allEntries = text.trim().split('\n')
+                    .filter(line => line.trim())
+                    .map(line => JSON.parse(line));
+
+                // Merge entries by (problem_id, state_hash), combining action_hashes and completion_rewards
+                const entryMap = new Map();
+                for (const entry of allEntries) {
+                    const key = `${entry.problem_id}:${entry.state_hash}`;
+                    const existing = entryMap.get(key);
+                    if (!existing) {
+                        entryMap.set(key, { ...entry });
+                    } else {
+                        // Merge action_hashes and completion_rewards (dedupe by action_hash)
+                        const actionRewardMap = new Map();
+                        existing.action_hashes.forEach((h, i) => actionRewardMap.set(h, existing.completion_rewards[i]));
+                        entry.action_hashes.forEach((h, i) => actionRewardMap.set(h, entry.completion_rewards[i]));
+                        existing.action_hashes = Array.from(actionRewardMap.keys());
+                        existing.completion_rewards = Array.from(actionRewardMap.values());
+                        // Merge shortest/longest
+                        if (entry.shortest != null) {
+                            existing.shortest = existing.shortest != null ? Math.min(existing.shortest, entry.shortest) : entry.shortest;
+                        }
+                        if (entry.longest != null) {
+                            existing.longest = existing.longest != null ? Math.max(existing.longest, entry.longest) : entry.longest;
+                        }
+                        // Keep latest timestamp
+                        if (entry.timestamp > existing.timestamp) {
+                            existing.timestamp = entry.timestamp;
+                        }
+                    }
+                }
+                // Calculate reward from completion_rewards for each entry
+                const states = Array.from(entryMap.values()).map(entry => {
+                    const rewards = entry.completion_rewards || [];
+                    const reward = rewards.length > 0 ? rewards.reduce((a, b) => a + b, 0) / rewards.length : 0;
+                    return { ...entry, reward };
+                });
+
+                indexData = { states };
+                renderTable();
+                loadFromUrl();
+            } catch (err) {
+                document.getElementById('loading-state').style.display = 'none';
+                document.getElementById('empty-state').textContent = 'Error loading index: ' + err.message;
+                document.getElementById('empty-state').style.display = 'block';
+            }
+        }
+
+        function sortTable(col) {
+            if (sortColumn === col) {
+                sortAsc = !sortAsc;
+            } else {
+                sortColumn = col;
+                sortAsc = col === 'problem_id' || col === 'model_version';
+            }
+            renderTable();
+        }
+
+        function getSortValue(item, col) {
+            switch (col) {
+                case 'problem_id': return item.problem_id;
+                case 'has_findings': return item.has_findings ? 1 : 0;
+                case 'prompt_tokens': return item.prompt_tokens;
+                case 'timestamp': return item.timestamp;
+                case 'actions': return item.action_hashes ? item.action_hashes.length : 0;
+                case 'reward': return item.reward;
+                case 'shortest': return item.shortest != null ? item.shortest : Infinity;
+                case 'longest': return item.longest != null ? item.longest : Infinity;
+                default: return '';
+            }
+        }
+
+        function buildProblemRow(item, index) {
+            // Check WeakMap cache first
+            if (problemRowMap.has(item)) {
+                return problemRowMap.get(item);
+            }
+
+            // Build new TR element from the same template
+            const tr = document.createElement('tr');
+            tr.dataset.index = index;
+            tr.onclick = function() { selectRow(this); };
+
+            tr.innerHTML = `
+                <td><span class="problem-id" onclick="event.stopPropagation(); openModal('${item.problem_id}', '${item.state_hash}')">${item.problem_id}</span></td>
+                <td>${formatTime(item.timestamp)}</td>
+                <td>
+                    <div class="completion-dots">
+                        ${(item.completion_rewards || [item.reward]).map((r, idx) =>
+                            `<div class="completion-dot ${r >= 1 ? 'correct' : r > 0 ? 'partial' : 'incorrect'}"
+                                  onclick="event.stopPropagation(); openModal('${item.problem_id}', '${item.state_hash}', ${idx})"
+                                  title="Action ${idx + 1}: reward ${r.toFixed(2)}"></div>`
+                        ).join('')}
+                    </div>
+                </td>
+                <td>${item.has_findings ? `<a href="data/annotate/${item.problem_id}/findings.txt" style="text-decoration:none" onclick="event.stopPropagation()">✓</a>` : ''}</td>
+                <td><span class="reward-badge ${item.reward >= 1 ? 'high' : item.reward > 0 ? 'medium' : 'low'}">${item.reward.toFixed(3)}</span></td>
+                <td>${item.prompt_tokens.toLocaleString()}</td>
+                <td>${item.shortest != null ? item.shortest.toLocaleString() : '—'}</td>
+                <td>${item.longest != null ? item.longest.toLocaleString() : '—'}</td>
+            `;
+
+            // Cache the TR element
+            problemRowMap.set(item, tr);
+            return tr;
+        }
+
+        function renderTable() {
+            const states = (indexData.states || []).slice();
+            states.forEach((s, i) => s._sortIdx = i);
+            states.sort((a, b) => {
+                const va = getSortValue(a, sortColumn);
+                const vb = getSortValue(b, sortColumn);
+                let cmp = 0;
+                if (typeof va === 'number' && typeof vb === 'number') {
+                    cmp = va - vb;
+                } else {
+                    cmp = String(va).localeCompare(String(vb));
+                }
+                return (sortAsc ? cmp : -cmp) || a._sortIdx - b._sortIdx;
+            });
+            indexData.states = states;
+            const uniqueProblems = new Set(states.map(s => s.problem_id));
+            const totalActions = states.reduce((sum, s) => sum + (s.action_hashes ? s.action_hashes.length : 0), 0);
+            document.getElementById('summary').innerHTML =
+                `${uniqueProblems.size} problems &bull; ${totalActions.toLocaleString()} actions`;
+            document.getElementById('loading-state').style.display = 'none';
+
+            // Build hash maps from index data
+            for (const item of states) {
+                if (item.state_hash) {
+                    stateHashMap[item.state_hash] = { problem_id: item.problem_id, state_hash: item.state_hash };
+                }
+                if (item.action_hashes) {
+                    item.action_hashes.forEach((hash, idx) => {
+                        actionHashMap[hash] = { problem_id: item.problem_id, state_hash: item.state_hash, actionIdx: idx };
+                    });
+                }
+            }
+
+            if (states.length === 0) {
+                document.getElementById('empty-state').style.display = 'block';
+                return;
+            }
+
+            // Build DocumentFragment with cached/new rows in sorted order
+            const tbody = document.getElementById('table-body');
+            const fragment = document.createDocumentFragment();
+
+            states.forEach((item, i) => {
+                const row = buildProblemRow(item, i);
+                fragment.appendChild(row);
+            });
+
+            // Replace all children with the sorted fragment
+            tbody.replaceChildren(fragment);
+        }
+
+        function formatTime(timestamp) {
+            const parts = timestamp.split('-');
+            if (parts.length >= 5) {
+                return `${parts[0]}/${parts[1]}-${parts[2]}:${parts[3]}:${parts[4]}`;
+            }
+            return timestamp;
+        }
+
+        function selectRow(row) {
+            document.querySelectorAll('tr').forEach(r => r.classList.remove('selected'));
+            row.classList.add('selected');
+        }
+
+        async function openModal(problemId, stateHash, completionIdx = null) {
+            currentProblemId = problemId;
+            currentStateHash = stateHash;
+            // Restore collapse state from URL params
+            restoreCollapseState();
+            document.getElementById('modal-overlay').classList.add('active');
+            document.getElementById('modal-title').textContent = 'Loading...';
+            document.getElementById('modal-body').innerHTML = '<div style="text-align:center;padding:40px;">Loading...</div>';
+
+            try {
+                const timings = {};
+                let t0 = performance.now();
+
+                // Find the index entry to get action_hashes
+                const indexEntry = indexData.states.find(s => s.problem_id === problemId && s.state_hash === stateHash);
+                if (!indexEntry) {
+                    throw new Error('Entry not found in index');
+                }
+
+                const actionHashes = indexEntry.action_hashes || [];
+                timings.indexLookup = performance.now() - t0; t0 = performance.now();
+
+                // Load state from hierarchical structure
+                const stateResp = await fetch(`data/raw/${problemId}/${stateHash}/state.json`);
+                const stateData = parseJsonBigInt(await stateResp.text());
+                timings.stateJson = performance.now() - t0; t0 = performance.now();
+
+                // Load actions from their directories
+                const actions = [];
+                for (const actionHash of actionHashes) {
+                    const actionResp = await fetch(`data/raw/${problemId}/${stateHash}/${actionHash}/action.json`);
+                    const actionData = parseJsonBigInt(await actionResp.text());
+                    timings[`action_${actionHash}`] = performance.now() - t0; t0 = performance.now();
+                    actions.push(actionData);
+                }
+                console.log('Load timings (ms):', timings);
+
+                // Reconstruct full state object
+                currentState = {
+                    problem: stateData.problem,
+                    tokens: stateData.tokens,
+                    actions: actions,
+                    reward: stateData.reward,
+                    model_version: stateData.model_version
+                };
+
+                timings.renderModal = performance.now() - t0; t0 = performance.now();
+                renderModal(currentState, completionIdx);
+                timings.renderModalDone = performance.now() - t0; t0 = performance.now();
+                await updateUrl(completionIdx !== null ? completionIdx : 0);
+                timings.updateUrl = performance.now() - t0;
+                console.log('Final timings (ms):', timings);
+                window.lastTimings = timings;
+            } catch (err) {
+                document.getElementById('modal-body').innerHTML = `<div style="color:red;padding:20px;">Error: ${err.message}</div>`;
+            }
+        }
+
+        function closeModal(event) {
+            if (!event || event.target === document.getElementById('modal-overlay')) {
+                document.getElementById('modal-overlay').classList.remove('active');
+                currentProblemId = null;
+                currentStateHash = null;
+                history.pushState(null, '', window.location.pathname);
+            }
+        }
+
+        async function updateUrl(actionIdx) {
+            // Use query params: ?state=stateHash&action=actionHash
+            const action = currentState.actions[actionIdx];
+            const actionHash = await tokensToBase36Hash(action.tokens);
+            const url = new URL(window.location);
+            url.searchParams.set('state', currentStateHash);
+            url.searchParams.set('action', actionHash);
+            history.pushState(null, '', url);
+            // Update maps for back navigation
+            stateHashMap[currentStateHash] = { problem_id: currentProblemId, state_hash: currentStateHash };
+            actionHashMap[actionHash] = { problem_id: currentProblemId, state_hash: currentStateHash, actionIdx };
+        }
+
+        function loadFromUrl() {
+            // Read from query params: ?state=stateHash&action=actionHash
+            const params = new URLSearchParams(window.location.search);
+            const stateHash = params.get('state');
+            const actionHash = params.get('action');
+            if (stateHash) {
+                openModalByHash(stateHash, actionHash);
+            }
+        }
+
+        async function openModalByHash(stateHash, actionHash) {
+            // Look up from hash map (populated from problems.jsonl)
+            const stateInfo = stateHashMap[stateHash];
+            const actionIdx = actionHash && actionHashMap[actionHash] ? actionHashMap[actionHash].actionIdx : 0;
+
+            if (!stateInfo) {
+                document.getElementById('modal-overlay').classList.add('active');
+                document.getElementById('modal-title').textContent = 'Error';
+                document.getElementById('modal-body').innerHTML = '<div style="color:red;padding:20px;">State not found. Hash may be from old data.</div>';
+                return;
+            }
+
+            // Load the state
+            openModal(stateInfo.problem_id, stateInfo.state_hash, actionIdx);
+        }
+
+        function parseConversation(text, isCompletion = false) {
+            const messages = [];
+            let isFirstCompletionMessage = isCompletion;
+
+            // For completion text that starts mid-message (plain text, no leading special tokens),
+            // extract the continuation content first
+            if (isCompletion && text && !text.startsWith('<|start|>') && !text.startsWith('<|channel|>')) {
+                // Find where the first message boundary is
+                const firstEnd = text.indexOf('<|end|>');
+                const firstStart = text.indexOf('<|start|>');
+                let boundary = -1;
+                if (firstEnd !== -1 && firstStart !== -1) {
+                    boundary = Math.min(firstEnd, firstStart);
+                } else if (firstEnd !== -1) {
+                    boundary = firstEnd;
+                } else if (firstStart !== -1) {
+                    boundary = firstStart;
+                }
+
+                // Extract the continuation content
+                const continuationContent = boundary !== -1 ? text.substring(0, boundary).trim() : text.trim();
+                if (continuationContent) {
+                    messages.push({
+                        role: 'assistant',
+                        channel: 'analysis',
+                        target: null,
+                        content: continuationContent,
+                        type: 'analysis',
+                        header: 'assistant (continuation)'
+                    });
+                    isFirstCompletionMessage = false;
+                }
+
+                // Continue parsing the rest
+                if (boundary !== -1) {
+                    text = text.substring(boundary);
+                } else {
+                    return messages;
+                }
+            }
+
+            // Split on <|start|> or standalone <|channel|> (for completion messages that start with channel)
+            const parts = text.split(/(?=<\|start\|>|(?<!<\|start\|>[^<]*)<\|channel\|>)/g).filter(p => p.trim());
+
+            for (const part of parts) {
+                // Handle <|start|>role<|message|>... (simple message)
+                const simpleStartMatch = part.match(/^<\|start\|>([^<]+)<\|message\|>(.*?)(?:<\|call\|>|<\|end\|>|$)/s);
+                if (simpleStartMatch) {
+                    const header = simpleStartMatch[1].trim();
+                    const content = simpleStartMatch[2].trim();
+                    const roleMatch = header.match(/^(\w+)/);
+                    const toMatch = header.match(/to=(\S+)/);
+                    const role = roleMatch ? roleMatch[1] : 'unknown';
+                    const target = toMatch ? toMatch[1] : null;
+                    let type = 'message';
+                    let channel = null;
+                    if (target === 'python') { type = 'code'; channel = 'python'; }
+                    else if (role === 'python') { type = 'output'; }
+                    messages.push({ role, channel, target, content, type, header });
+                    isFirstCompletionMessage = false;
+                    continue;
+                }
+
+                // Handle <|start|>role<|channel|>channel<|message|>... (message with channel)
+                const channelStartMatch = part.match(/^<\|start\|>([^<]+)<\|channel\|>([^<]+)<\|message\|>(.*?)(?:<\|call\|>|<\|end\|>|$)/s);
+                if (channelStartMatch) {
+                    const startHeader = channelStartMatch[1].trim();
+                    const channelFull = channelStartMatch[2].trim();
+                    const content = channelStartMatch[3].trim();
+                    const roleMatch = startHeader.match(/^(\w+)/);
+                    const toMatch = startHeader.match(/to=(\S+)/);
+                    const role = roleMatch ? roleMatch[1] : 'unknown';
+                    const target = toMatch ? toMatch[1] : null;
+                    const channelParts = channelFull.match(/^(\w+)(?:\s+to=(\S+))?/);
+                    const channel = channelParts ? channelParts[1] : channelFull;
+                    const channelTarget = channelParts && channelParts[2] ? channelParts[2] : null;
+                    let type = 'message';
+                    if (role === 'python') { type = 'output'; }
+                    else if (channelTarget === 'python') { type = 'code'; }
+                    else if (channel) { type = 'analysis'; }
+                    // Use full channel text for display
+                    messages.push({ role, channel: channelFull, target, content, type, header: startHeader });
+                    isFirstCompletionMessage = false;
+                    continue;
+                }
+
+                // Handle <|channel|>channel<|message|>... (completion message starting with channel, no <|start|>)
+                // This is a continuation of an assistant message from the prompt
+                const channelOnlyMatch = part.match(/^<\|channel\|>([^<]+)<\|message\|>(.*?)(?:<\|call\|>|<\|end\|>|$)/s);
+                if (channelOnlyMatch) {
+                    const channelFull = channelOnlyMatch[1].trim();
+                    const content = channelOnlyMatch[2].trim();
+                    const channelParts = channelFull.match(/^(\w+)(?:\s+to=(\S+))?/);
+                    const channel = channelParts ? channelParts[1] : channelFull;
+                    const channelTarget = channelParts && channelParts[2] ? channelParts[2] : null;
+                    let type = 'message';
+                    let role = 'assistant';
+                    if (channelTarget === 'python') { type = 'code'; }
+                    else if (channel === 'analysis') { type = 'analysis'; }
+                    // Mark as continuation if it's the first message in completion
+                    const header = isFirstCompletionMessage ? 'assistant (continuation)' : 'assistant';
+                    messages.push({ role, channel, target: channelTarget, content, type, header });
+                    isFirstCompletionMessage = false;
+                    continue;
+                }
+
+                // Handle <|start|>role at end of prompt (partial message with no content)
+                const partialStartMatch = part.match(/^<\|start\|>(\w+)\s*$/);
+                if (partialStartMatch) {
+                    const role = partialStartMatch[1].trim();
+                    messages.push({ role, channel: null, target: null, content: '', type: 'message', header: role });
+                    continue;
+                }
+            }
+            return messages;
+        }
+
+        function renderModal(state, completionIdx) {
+            const isCorrect = state.reward > 0;
+            currentCompletionIdx = completionIdx !== null ? completionIdx : 0;
+
+            document.getElementById('modal-title').textContent = `Problem ${state.problem.id}`;
+
+            const action = state.actions[currentCompletionIdx];
+            const actionReward = action.reward;
+            const actionTokens = action.tokens ? action.tokens.length : 0;
+            const isActionCorrect = actionReward > 0;
+            const modelVersion = action.model_version || state.model_version || 'gpt-oss-120b';
+            const submittedAnswer = action.answer;
+            const timeGenerated = action.time_generated;
+
+            // Decode tokens live using tiktoken
+            // Parse prompt and completion SEPARATELY (don't concatenate)
+            const promptText = state.tokens ? decodeTokens(state.tokens) : '';
+            const actionText = action.tokens ? decodeTokens(action.tokens) : '';
+
+            // Parse each section independently
+            const promptMessages = parseConversation(promptText, false);
+            const completionMessages = parseConversation(actionText, true);
+
+            // Initialize default state - only last completion message is expanded
+            if (!window.hasRestoredFromUrl) {
+                // By default, only the last completion message is expanded
+                if (completionMessages.length > 0) {
+                    expandedMessages.add('completion-msg-' + (completionMessages.length - 1));
+                }
+            }
+            window.hasRestoredFromUrl = true;
+
+            let html = `
+                <div class="section-title">Metrics</div>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="label">Action Reward</div>
+                        <div class="value ${isActionCorrect ? 'success' : 'error'}">${actionReward.toFixed(3)}</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="label">Prompt Tokens</div>
+                        <div class="value">${state.tokens.length.toLocaleString()}</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="label">Action Tokens</div>
+                        <div class="value">${actionTokens.toLocaleString()}</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="label">Expected Answer</div>
+                        <div class="value">${state.problem.answer}</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="label">Submitted Answer</div>
+                        <div class="value ${submittedAnswer !== null && submittedAnswer === state.problem.answer ? 'success' : submittedAnswer !== null ? 'error' : ''}">${submittedAnswer !== null ? submittedAnswer : '—'}</div>
+                    </div>
+                </div>
+
+                <div class="section-title">Problem Statement</div>
+                <div class="problem-text" id="problem-text">${escapeHtml(state.problem.statement)}</div>
+
+                <div class="section-title" style="display:flex;justify-content:space-between;align-items:center;">
+                    <span>Action ${currentCompletionIdx + 1} of ${state.actions.length}</span>
+                    <div class="nav-buttons">
+                        <button onclick="navigateCompletion(-1)" ${currentCompletionIdx === 0 ? 'disabled' : ''} style="padding:5px 15px;cursor:pointer;">← Prev</button>
+                        <button onclick="navigateCompletion(1)" ${currentCompletionIdx === state.actions.length - 1 ? 'disabled' : ''} style="padding:5px 15px;cursor:pointer;">Next →</button>
+                    </div>
+                </div>
+
+                <div class="completion-card">
+                    <div class="completion-card-header">
+                        <h3>Action ${currentCompletionIdx + 1}</h3>
+                        <div style="display:flex;gap:10px;align-items:center;">
+                            <span style="font-size:12px;color:#666;">${modelVersion} · ${formatTime(timeGenerated)}</span>
+                            <span class="reward-badge ${actionReward >= 1 ? 'high' : actionReward > 0 ? 'medium' : 'low'}">${actionReward.toFixed(2)}</span>
+                            <button id="view-toggle-btn" class="tab" onclick="toggleViewMode()">${currentViewMode === 'parsed' ? 'Raw' : 'Parsed'}</button>
+                        </div>
+                    </div>
+                    <div class="completion-card-body">
+                        <div id="parsed-0" class="tab-content ${currentViewMode === 'parsed' ? 'active' : ''}">
+                            <div class="prompt-section-wrapper">
+                                <div id="prompt-section" class="collapsible-section ${promptCollapsed ? 'collapsed' : ''}">
+                                    <div class="section-header prompt-header collapsible-header" onclick="togglePromptSection()">
+                                        <span><span class="collapse-icon">▼</span> Prompt (${promptMessages.length} messages)</span>
+                                        <button id="prompt-toggle-btn" class="expand-collapse-btn" onclick="event.stopPropagation(); toggleAllPrompt()">${promptAllExpanded ? 'Collapse All' : 'Expand All'}</button>
+                                    </div>
+                                    <div class="collapsible-content">
+                                        ${promptMessages.length > 0 ? promptMessages.map((msg, i) => {
+                                            const isLastMsg = i === promptMessages.length - 1;
+                                            return `
+                                            <div id="prompt-msg-${i}" class="message-block ${expandedMessages.has('prompt-msg-' + i) ? '' : 'collapsed'}">
+                                                <div class="message-header ${msg.role}" onclick="toggleMessage('prompt-msg-${i}')">
+                                                    <span class="collapse-icon">▼</span>
+                                                    ${msg.header || msg.role}
+                                                    ${msg.channel ? `<span class="channel-tag">${msg.channel}</span>` : ''}
+                                                </div>
+                                                <div class="message-content ${msg.type === 'code' ? 'code-content' : ''} ${msg.type === 'output' ? 'output-content' : ''}">${escapeHtml(msg.content)}${isLastMsg ? '<span class="token-marker prompt-end">&lt;|prompt_end|&gt;</span>' : ''}</div>
+                                            </div>
+                                        `}).join('') : '<div class="message-content">(No prompt messages)</div>'}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="completion-section-wrapper">
+                                <div id="completion-section" class="collapsible-section">
+                                    <div class="section-header completion-header">
+                                        <span>Completion (${completionMessages.length} messages)</span>
+                                        <button id="completion-toggle-btn" class="expand-collapse-btn" onclick="toggleAllCompletion()">${completionAllExpanded ? 'Collapse All' : 'Expand All'}</button>
+                                    </div>
+                                    ${completionMessages.length > 0 ? completionMessages.map((msg, i) => `
+                                        <div id="completion-msg-${i}" class="message-block ${expandedMessages.has('completion-msg-' + i) ? '' : 'collapsed'}">
+                                            <div class="message-header ${msg.role}" onclick="toggleMessage('completion-msg-${i}')">
+                                                <span class="collapse-icon">▼</span>
+                                                ${msg.header || msg.role}
+                                                ${msg.channel ? `<span class="channel-tag">${msg.channel}</span>` : ''}
+                                            </div>
+                                            <div class="message-content ${msg.type === 'code' ? 'code-content' : ''} ${msg.type === 'output' ? 'output-content' : ''}">${i === 0 ? '<span class="token-marker completion-start">&lt;|completion_start|&gt;</span>' : ''}${escapeHtml(msg.content)}</div>
+                                        </div>
+                                    `).join('') : `<div class="message-content">${escapeHtml(actionText) || '(Tokenizer loading or no tokens available)'}</div>`}
+                                </div>
+                            </div>
+                        </div>
+                        <div id="raw-0" class="tab-content ${currentViewMode === 'raw' ? 'active' : ''}">
+                            <div class="prompt-section-wrapper">
+                                <div class="section-header prompt-header">
+                                    <span>Prompt</span>
+                                </div>
+                                <div style="white-space:pre-wrap;">${escapeHtml(promptText) || '(No prompt)'}</div>
+                            </div>
+                            <div class="completion-section-wrapper">
+                                <div class="section-header completion-header">
+                                    <span>Completion</span>
+                                </div>
+                                <div style="white-space:pre-wrap;">${escapeHtml(actionText) || '(No completion)'}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('modal-body').innerHTML = html;
+
+            renderMathInElement(document.getElementById('problem-text'), {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\[', right: '\\]', display: true},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\begin{equation*}', right: '\\end{equation*}', display: true},
+                    {left: '\\begin{equation}', right: '\\end{equation}', display: true},
+                    {left: '\\begin{align*}', right: '\\end{align*}', display: true},
+                    {left: '\\begin{align}', right: '\\end{align}', display: true}
+                ],
+                throwOnError: false
+            });
+        }
+
+
+        async function navigateCompletion(delta) {
+            if (!currentState) return;
+            const newIdx = currentCompletionIdx + delta;
+            if (newIdx >= 0 && newIdx < currentState.actions.length) {
+                renderModal(currentState, newIdx);
+                if (currentProblemId && currentStateHash) {
+                    await updateUrl(newIdx);
+                }
+            }
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Collapse state management - track EXPANDED messages (since default is collapsed)
+        let expandedMessages = new Set();
+        let promptCollapsed = true; // Default collapsed
+
+        function toggleMessage(msgId) {
+            const el = document.getElementById(msgId);
+            if (!el) return;
+            if (expandedMessages.has(msgId)) {
+                expandedMessages.delete(msgId);
+                el.classList.add('collapsed');
+            } else {
+                expandedMessages.add(msgId);
+                el.classList.remove('collapsed');
+            }
+            updateCollapseParams();
+        }
+
+        function togglePromptSection() {
+            promptCollapsed = !promptCollapsed;
+            const section = document.getElementById('prompt-section');
+            if (section) {
+                section.classList.toggle('collapsed', promptCollapsed);
+            }
+            updateCollapseParams();
+        }
+
+        let promptAllExpanded = false;
+        let completionAllExpanded = false;
+
+        function toggleAllPrompt() {
+            const elements = document.querySelectorAll('[id^="prompt-msg-"]');
+            promptAllExpanded = !promptAllExpanded;
+            elements.forEach(el => {
+                if (promptAllExpanded) {
+                    el.classList.remove('collapsed');
+                    expandedMessages.add(el.id);
+                } else {
+                    el.classList.add('collapsed');
+                    expandedMessages.delete(el.id);
+                }
+            });
+            // Also toggle prompt section
+            promptCollapsed = !promptAllExpanded;
+            const section = document.getElementById('prompt-section');
+            if (section) section.classList.toggle('collapsed', promptCollapsed);
+            document.getElementById('prompt-toggle-btn').textContent = promptAllExpanded ? 'Collapse All' : 'Expand All';
+            updateCollapseParams();
+        }
+
+        function toggleAllCompletion() {
+            const elements = document.querySelectorAll('[id^="completion-msg-"]');
+            completionAllExpanded = !completionAllExpanded;
+            elements.forEach(el => {
+                if (completionAllExpanded) {
+                    el.classList.remove('collapsed');
+                    expandedMessages.add(el.id);
+                } else {
+                    el.classList.add('collapsed');
+                    expandedMessages.delete(el.id);
+                }
+            });
+            document.getElementById('completion-toggle-btn').textContent = completionAllExpanded ? 'Collapse All' : 'Expand All';
+            updateCollapseParams();
+        }
+
+        let currentViewMode = 'parsed';
+
+        function toggleViewMode() {
+            currentViewMode = currentViewMode === 'parsed' ? 'raw' : 'parsed';
+            document.getElementById('parsed-0').classList.toggle('active', currentViewMode === 'parsed');
+            document.getElementById('raw-0').classList.toggle('active', currentViewMode === 'raw');
+            document.getElementById('view-toggle-btn').textContent = currentViewMode === 'parsed' ? 'Raw' : 'Parsed';
+            updateCollapseParams();
+        }
+
+        function updateCollapseParams() {
+            // No-op: URL only contains state hash and action hash
+            // Collapse state is not persisted in URL
+        }
+
+        function restoreCollapseState() {
+            // Reset to defaults - collapse state is not in URL
+            promptCollapsed = true;
+            expandedMessages = new Set();
+            currentViewMode = 'parsed';
+        }
+
+        // Handle keyboard
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+            if (e.key === 'ArrowLeft') navigateCompletion(-1);
+            if (e.key === 'ArrowRight') navigateCompletion(1);
+        });
+
+        // Handle browser back/forward
+        window.addEventListener('popstate', () => {
+            const params = new URLSearchParams(window.location.search);
+            const stateHash = params.get('state');
+            const actionHash = params.get('action');
+            if (stateHash) {
+                openModalByHash(stateHash, actionHash);
+            } else {
+                document.getElementById('modal-overlay').classList.remove('active');
+            }
+        });
+
+        // Initialize
+        init();
+
+        // Re-render modal when tiktoken becomes ready (for lazy decoding)
+        window.addEventListener('tiktokenReady', () => {
+            if (currentState && document.getElementById('modal-overlay').classList.contains('active')) {
+                const urlParams = new URLSearchParams(window.location.search);
+                const actionHash = urlParams.get('action');
+                const actionIdx = currentState.actions?.findIndex(a => a.hash === actionHash) ?? 0;
+                renderModal(currentState, actionIdx >= 0 ? actionIdx : 0);
+            }
+        });
+    </script>
+</body>
+</html>

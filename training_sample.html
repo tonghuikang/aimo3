@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Sample Results</title>
+    <script type="module">
+        import { Tiktoken } from 'https://esm.sh/js-tiktoken@1.0.21';
+
+        fetch('data/o200k_base.json').then(r => r.json()).then(o200kRanks => {
+            const specialTokens = {
+                '<|endoftext|>': 199999,
+                '<|startoftext|>': 199998,
+                '<|return|>': 200002,
+                '<|constrain|>': 200003,
+                '<|channel|>': 200005,
+                '<|start|>': 200006,
+                '<|end|>': 200007,
+                '<|message|>': 200008,
+                '<|call|>': 200012
+            };
+
+            window.tiktoken = new Tiktoken(o200kRanks, specialTokens);
+            window.tiktokenReady = true;
+            window.dispatchEvent(new Event('tiktokenReady'));
+        });
+    </script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+        }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 30px 0;
+            color: #2c3e50;
+        }
+        .summary {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: #7f8c8d;
+        }
+        .summary .positive { color: #27ae60; font-weight: 600; }
+        .summary .negative { color: #e74c3c; font-weight: 600; }
+        .filter-info {
+            background: #e8f4fd;
+            border: 1px solid #81c4f8;
+            border-radius: 6px;
+            padding: 10px 16px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #1e5a8a;
+        }
+        .filter-info a { color: #1565c0; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th {
+            background: #34495e;
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover { background: #3d566e; }
+        th.num { text-align: right; }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+        td.num { text-align: right; font-family: 'SF Mono', Monaco, monospace; }
+        tr:hover { background: #ecf0f1; }
+        .link {
+            color: #3498db;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .link:hover { text-decoration: underline; }
+        .positive { color: #27ae60; }
+        .negative { color: #e74c3c; }
+        .loading { text-align: center; padding: 40px; color: #7f8c8d; }
+        .empty-state { text-align: center; padding: 40px; color: #95a5a6; }
+
+        /* Detail section */
+        .detail-section {
+            margin-top: 20px;
+            display: none;
+        }
+        .detail-section.show { display: block; }
+        .detail-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+        .token-content {
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        /* Per-token styles */
+        .token {
+            position: relative;
+            cursor: pointer;
+            border-radius: 2px;
+            padding: 1px 0;
+        }
+        .token:hover {
+            outline: 1px solid #333;
+        }
+
+        /* Token tooltip */
+        .token-tooltip {
+            position: fixed;
+            background: #2c3e50;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.15s;
+            z-index: 10000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            white-space: nowrap;
+        }
+        .token-tooltip.show { opacity: 1; }
+        .token-tooltip-row { display: flex; justify-content: space-between; gap: 16px; }
+        .token-tooltip-label { color: #95a5a6; }
+        .token-tooltip-value { font-family: 'SF Mono', Monaco, monospace; }
+        .token-tooltip-value.positive { color: #2ecc71; }
+        .token-tooltip-value.negative { color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Training Sample Results</h1>
+        <div id="summary" class="summary"></div>
+        <div id="filter-info" class="filter-info" style="display:none;"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th onclick="sortTable('index')">#</th>
+                    <th onclick="sortTable('logpath')">Logpath</th>
+                    <th onclick="sortTable('split')">Split</th>
+                    <th onclick="sortTable('batch')">Batch</th>
+                    <th onclick="sortTable('problem_id')">Problem ID</th>
+                    <th onclick="sortTable('state_hash')">State</th>
+                    <th onclick="sortTable('action_hash')">Action</th>
+                    <th onclick="sortTable('span')">Span</th>
+                    <th onclick="sortTable('trace_id')">Trace</th>
+                    <th class="num" onclick="sortTable('base')">Base</th>
+                    <th class="num" onclick="sortTable('trained')">Trained</th>
+                    <th class="num" onclick="sortTable('improvement')">Improvement</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <div id="loading-state" class="loading">Loading...</div>
+        <div id="empty-state" class="empty-state" style="display:none;">
+            No training samples found. Run train_sample.py first.
+        </div>
+
+        <!-- Detail section (shown when a sample is selected via URL) -->
+        <div id="detail-section" class="detail-section">
+            <h2 class="detail-title">Completion</h2>
+            <div id="token-content" class="token-content"></div>
+        </div>
+    </div>
+
+    <!-- Token tooltip element -->
+    <div id="token-tooltip" class="token-tooltip"></div>
+
+    <script>
+        const SPECIAL_TOKENS = {
+            199998: '<|startoftext|>',
+            199999: '<|endoftext|>',
+            200002: '<|return|>',
+            200003: '<|constrain|>',
+            200005: '<|channel|>',
+            200006: '<|start|>',
+            200007: '<|end|>',
+            200008: '<|message|>',
+            200012: '<|call|>'
+        };
+
+        let allSamples = [];
+        let sortColumn = null;
+        let sortAsc = true;
+        let lastFilter = {};
+        const rowMap = new WeakMap();
+        const tokenTooltip = document.getElementById('token-tooltip');
+
+        function decodeToken(tokenId) {
+            if (SPECIAL_TOKENS[tokenId]) {
+                return SPECIAL_TOKENS[tokenId];
+            }
+            if (!window.tiktokenReady || !window.tiktoken) {
+                return `[${tokenId}]`;
+            }
+            return window.tiktoken.decode([tokenId]);
+        }
+
+        function getLogprobColor(diff, avgLogprob) {
+            // Color: Red (worse) → Yellow (neutral) → Green (better)
+            let r, g, b;
+            if (diff >= 0) {
+                // Interpolate from yellow to green
+                const t = Math.min(diff / 0.5, 1);
+                r = Math.round(241 - t * 202); // 241 → 39
+                g = Math.round(196 - t * 22);  // 196 → 174
+                b = Math.round(15 + t * 81);   // 15 → 96
+            } else {
+                // Interpolate from yellow to red
+                const t = Math.min(-diff / 0.5, 1);
+                r = Math.round(241 - t * 10);  // 241 → 231
+                g = Math.round(196 - t * 120); // 196 → 76
+                b = Math.round(15 + t * 45);   // 15 → 60
+            }
+            // Opacity based on average logprob: 0 → transparent, -3 → 0.7
+            const opacity = Math.min(Math.abs(avgLogprob) / 3, 1) * 0.7;
+            return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+        }
+
+        async function loadData(logpath) {
+            const response = await fetch(`training/sample/${logpath}/index.jsonl`);
+            const text = await response.text();
+            return text.trim().split('\n').filter(line => line).map(line => JSON.parse(line));
+        }
+
+        function buildUrl(params) {
+            const url = new URL(window.location.href);
+            url.search = '';
+            for (const [key, value] of Object.entries(params)) {
+                if (value) url.searchParams.set(key, value);
+            }
+            return url.toString();
+        }
+
+        function sortTable(col) {
+            if (sortColumn === col) {
+                sortAsc = !sortAsc;
+            } else {
+                sortColumn = col;
+                sortAsc = (col === 'base' || col === 'trained' || col === 'improvement') ? false : true;
+            }
+            renderTable(allSamples, lastFilter);
+        }
+
+        function getSortValue(sample, col) {
+            const completionLen = sample.completion_len ?? 100;
+            switch (col) {
+                case 'index': return 0; // stable order
+                case 'logpath': return sample.logpath || 'default';
+                case 'split': return sample.split || 'train';
+                case 'batch': return sample.batch ?? Infinity;
+                case 'problem_id': return sample.problem_id || '';
+                case 'state_hash': return sample.state_hash || '';
+                case 'action_hash': return sample.action_hash || '';
+                case 'span': return sample.span || '';
+                case 'trace_id': return sample.trace_id || '';
+                case 'base': return sample.base_sum / completionLen;
+                case 'trained': return sample.trained_sum / completionLen;
+                case 'improvement': {
+                    const baseAvg = sample.base_sum / completionLen;
+                    const trainedAvg = sample.trained_sum / completionLen;
+                    return baseAvg !== 0 ? 1 - trainedAvg / baseAvg : 0;
+                }
+                default: return '';
+            }
+        }
+
+        function buildRow(sample, idx) {
+            const existing = rowMap.get(sample);
+            if (existing) return existing;
+
+            const completionLen = sample.completion_len ?? 100;
+            const baseAvg = sample.base_sum / completionLen;
+            const trainedAvg = sample.trained_sum / completionLen;
+            const ratio = baseAvg !== 0 ? trainedAvg / baseAvg : 1;
+            const improvement = 1 - ratio;
+            const improvementPct = improvement * 100;
+            const improvementClass = improvement > 0 ? 'positive' : 'negative';
+            const logpath = sample.logpath || 'default';
+
+            const tr = document.createElement('tr');
+            tr.innerHTML =
+                `<td></td>` +
+                `<td><a href="${buildUrl({logpath})}" class="link">${logpath}</a></td>` +
+                `<td>${sample.split || 'train'}</td>` +
+                `<td>${sample.batch ?? '-'}</td>` +
+                `<td><a href="${buildUrl({logpath, problem: sample.problem_id})}" class="link">${sample.problem_id}</a></td>` +
+                `<td><a href="${buildUrl({logpath, problem: sample.problem_id, state: sample.state_hash})}" class="link">${sample.state_hash}</a></td>` +
+                `<td><a href="${buildUrl({logpath, problem: sample.problem_id, state: sample.state_hash, action: sample.action_hash})}" class="link">${sample.action_hash}</a></td>` +
+                `<td><a href="${buildUrl({logpath, problem: sample.problem_id, state: sample.state_hash, action: sample.action_hash, span: sample.span})}" class="link">${sample.span}</a></td>` +
+                `<td><a href="${buildUrl({logpath, problem: sample.problem_id, state: sample.state_hash, action: sample.action_hash, span: sample.span, trace: sample.trace_id})}" class="link">${sample.trace_id}</a></td>` +
+                `<td class="num">${baseAvg.toFixed(3)}</td>` +
+                `<td class="num">${trainedAvg.toFixed(3)}</td>` +
+                `<td class="num ${improvementClass}">${improvementPct.toFixed(1)}%</td>`;
+            rowMap.set(sample, tr);
+            return tr;
+        }
+
+        function renderTable(samples, filter = {}) {
+            lastFilter = filter;
+            const tbody = document.getElementById('table-body');
+            document.getElementById('loading-state').style.display = 'none';
+
+            // Filter samples (logpath is already filtered by loading the correct index file)
+            let filtered = samples;
+            if (filter.split) filtered = filtered.filter(s => (s.split || 'train') === filter.split);
+            if (filter.problem) filtered = filtered.filter(s => s.problem_id === filter.problem);
+            if (filter.state) filtered = filtered.filter(s => s.state_hash === filter.state);
+            if (filter.action) filtered = filtered.filter(s => s.action_hash === filter.action);
+            if (filter.span) filtered = filtered.filter(s => s.span === filter.span);
+            if (filter.trace) filtered = filtered.filter(s => s.trace_id === filter.trace);
+
+            // Show filter info (logpath is always required, so don't show it as a filter)
+            const filterInfo = document.getElementById('filter-info');
+            if (filter.split || filter.problem || filter.state || filter.action || filter.span || filter.trace) {
+                const parts = [];
+                if (filter.split) parts.push(`split: ${filter.split}`);
+                if (filter.problem) parts.push(`problem: ${filter.problem}`);
+                if (filter.state) parts.push(`state: ${filter.state}`);
+                if (filter.action) parts.push(`action: ${filter.action}`);
+                if (filter.span) parts.push(`span: ${filter.span}`);
+                if (filter.trace) parts.push(`trace: ${filter.trace}`);
+                filterInfo.innerHTML = `Filtering by ${parts.join(', ')} <a href="?logpath=${filter.logpath}">(clear)</a>`;
+                filterInfo.style.display = 'block';
+            } else {
+                filterInfo.style.display = 'none';
+            }
+
+            if (filtered.length === 0) {
+                document.getElementById('empty-state').style.display = 'block';
+                tbody.replaceChildren();
+                return;
+            }
+
+            document.getElementById('empty-state').style.display = 'none';
+
+            // Sort
+            if (sortColumn) {
+                filtered.forEach((s, i) => s._sortIdx = i);
+                filtered = filtered.slice().sort((a, b) => {
+                    const va = getSortValue(a, sortColumn);
+                    const vb = getSortValue(b, sortColumn);
+                    let cmp = 0;
+                    if (typeof va === 'number' && typeof vb === 'number') {
+                        cmp = va - vb;
+                    } else {
+                        cmp = String(va).localeCompare(String(vb));
+                    }
+                    return (sortAsc ? cmp : -cmp) || a._sortIdx - b._sortIdx;
+                });
+                const sortedSet = new Set(filtered);
+                allSamples = [...filtered, ...allSamples.filter(e => !sortedSet.has(e))];
+            }
+
+            // Build rows efficiently using cached elements
+            const frag = document.createDocumentFragment();
+            for (let i = 0; i < filtered.length; i++) {
+                const tr = buildRow(filtered[i], i);
+                tr.firstElementChild.textContent = i + 1;
+                frag.appendChild(tr);
+            }
+            tbody.replaceChildren(frag);
+
+            // Show detail if filtered to single trace
+            if (filter.trace && filtered.length === 1) {
+                showDetail(filtered[0]);
+            } else {
+                document.getElementById('detail-section').classList.remove('show');
+            }
+
+            updateSummary(filtered);
+        }
+
+        function updateSummary(samples) {
+            if (samples.length === 0) {
+                document.getElementById('summary').innerHTML = 'No samples';
+                return;
+            }
+
+            const avgBasePerTok = samples.reduce((sum, s) => sum + s.base_sum / (s.completion_len ?? 100), 0) / samples.length;
+            const avgTrainedPerTok = samples.reduce((sum, s) => sum + s.trained_sum / (s.completion_len ?? 100), 0) / samples.length;
+            const avgRatio = avgBasePerTok !== 0 ? avgTrainedPerTok / avgBasePerTok : 1;
+            const avgImprovement = 1 - avgRatio;
+            const avgImprovementPct = avgImprovement * 100;
+            const improvementClass = avgImprovement > 0 ? 'positive' : 'negative';
+
+            document.getElementById('summary').innerHTML =
+                `${samples.length} samples &bull; ` +
+                `avg base: ${avgBasePerTok.toFixed(3)} &bull; ` +
+                `avg trained: ${avgTrainedPerTok.toFixed(3)} &bull; ` +
+                `improvement: <span class="${improvementClass}">${avgImprovementPct.toFixed(1)}%</span>`;
+        }
+
+        async function showDetail(sample) {
+            const section = document.getElementById('detail-section');
+            const content = document.getElementById('token-content');
+
+            content.textContent = 'Loading...';
+            section.classList.add('show');
+
+            try {
+                const logpath = sample.logpath || 'default';
+                const basePath = `training/sample/${logpath}/${sample.problem_id}/${sample.state_hash}/${sample.action_hash}/${sample.span}/${sample.trace_id}`;
+                const trainingPath = `data/training/${sample.problem_id}/${sample.state_hash}/${sample.action_hash}/${sample.span}/${sample.trace_id}.jsonl`;
+
+                const [initialResp, tunedResp, trainingResp] = await Promise.all([
+                    fetch(`${basePath}/initial.jsonl`),
+                    fetch(`${basePath}/tuned.jsonl`),
+                    fetch(trainingPath)
+                ]);
+
+                const initialData = JSON.parse((await initialResp.text()).trim());
+                const tunedData = JSON.parse((await tunedResp.text()).trim());
+                const trainingData = JSON.parse((await trainingResp.text()).trim());
+
+                const initialLogprobs = initialData.logprobs;
+                const tunedLogprobs = tunedData.logprobs;
+                const promptTokens = trainingData.prompt_tokens;
+                const completionTokens = trainingData.tokens;
+
+                const render = () => {
+                    const promptLen = promptTokens.length;
+                    const tokenData = [];
+                    let html = '';
+
+                    for (let i = 0; i < completionTokens.length; i++) {
+                        const tokenId = completionTokens[i];
+                        const tokenText = decodeToken(tokenId);
+
+                        const logprobIdx = promptLen - 1 + i;
+                        const base = initialLogprobs[logprobIdx] ?? 0;
+                        const trained = tunedLogprobs[logprobIdx] ?? 0;
+
+                        tokenData.push({ base, trained });
+
+                        const diff = trained - base;
+                        const avgLogprob = (base + trained) / 2;
+                        const bgColor = getLogprobColor(diff, avgLogprob);
+                        const escaped = tokenText
+                            .replace(/&/g, '&amp;')
+                            .replace(/</g, '&lt;')
+                            .replace(/>/g, '&gt;');
+                        html += `<span class="token" data-idx="${i}" style="background: ${bgColor}">${escaped}</span>`;
+                    }
+
+                    content.innerHTML = html;
+
+                    // Add hover listeners
+                    content.querySelectorAll('.token').forEach(el => {
+                        const idx = parseInt(el.dataset.idx);
+                        el.addEventListener('mousemove', (e) => {
+                            const data = tokenData[idx];
+                            const diff = data.trained - data.base;
+                            const diffClass = diff >= 0 ? 'positive' : 'negative';
+                            tokenTooltip.innerHTML = `
+                                <div class="token-tooltip-row">
+                                    <span class="token-tooltip-label">Trained:</span>
+                                    <span class="token-tooltip-value">${data.trained.toFixed(3)}</span>
+                                </div>
+                                <div class="token-tooltip-row">
+                                    <span class="token-tooltip-label">Base:</span>
+                                    <span class="token-tooltip-value">${data.base.toFixed(3)}</span>
+                                </div>
+                                <div class="token-tooltip-row">
+                                    <span class="token-tooltip-label">Diff:</span>
+                                    <span class="token-tooltip-value ${diffClass}">${diff >= 0 ? '+' : ''}${diff.toFixed(3)}</span>
+                                </div>
+                            `;
+                            tokenTooltip.style.left = e.pageX + 12 + 'px';
+                            tokenTooltip.style.top = e.pageY + 12 + 'px';
+                            tokenTooltip.classList.add('show');
+                        });
+
+                        el.addEventListener('mouseleave', () => {
+                            tokenTooltip.classList.remove('show');
+                        });
+                    });
+                };
+
+                if (window.tiktokenReady) {
+                    render();
+                } else {
+                    window.addEventListener('tiktokenReady', render, { once: true });
+                }
+            } catch (err) {
+                content.textContent = 'Error loading data: ' + err.message;
+            }
+        }
+
+        async function init() {
+            try {
+                const params = new URLSearchParams(window.location.search);
+                if (!params.get('logpath')) {
+                    params.set('logpath', 'default');
+                    window.history.replaceState({}, '', '?' + params.toString());
+                }
+                const logpath = params.get('logpath');
+
+                allSamples = await loadData(logpath);
+                // Sort by split (train first, validation later), then by batch index
+                allSamples.sort((a, b) => {
+                    const aSplit = a.split || 'train';
+                    const bSplit = b.split || 'train';
+                    if (aSplit !== bSplit) {
+                        return aSplit === 'train' ? -1 : 1;
+                    }
+                    return (a.batch ?? Infinity) - (b.batch ?? Infinity);
+                });
+
+                const filter = {
+                    logpath: logpath,
+                    split: params.get('split'),
+                    problem: params.get('problem'),
+                    state: params.get('state'),
+                    action: params.get('action'),
+                    span: params.get('span'),
+                    trace: params.get('trace')
+                };
+
+                renderTable(allSamples, filter);
+            } catch (err) {
+                document.getElementById('loading-state').style.display = 'none';
+                document.getElementById('empty-state').textContent = 'Error loading data: ' + err.message;
+                document.getElementById('empty-state').style.display = 'block';
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>

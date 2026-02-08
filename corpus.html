@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Corpus</title>
+    <script type="module">
+        import { Tiktoken } from 'https://esm.sh/js-tiktoken@1.0.21';
+
+        fetch('data/o200k_base.json').then(r => r.json()).then(o200kRanks => {
+            const specialTokens = {
+                '<|endoftext|>': 199999,
+                '<|startoftext|>': 199998,
+                '<|return|>': 200002,
+                '<|constrain|>': 200003,
+                '<|channel|>': 200005,
+                '<|start|>': 200006,
+                '<|end|>': 200007,
+                '<|message|>': 200008,
+                '<|call|>': 200012
+            };
+
+            window.tiktoken = new Tiktoken(o200kRanks, specialTokens);
+            window.tiktokenReady = true;
+            window.dispatchEvent(new Event('tiktokenReady'));
+        });
+    </script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 600;
+            margin: 30px 0;
+            color: #333;
+        }
+        .summary {
+            text-align: center;
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: #666;
+        }
+        .filter-info {
+            background: #e0f2fe;
+            border: 1px solid #7dd3fc;
+            border-radius: 6px;
+            padding: 10px 16px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            color: #0369a1;
+        }
+        .filter-info a { color: #0284c7; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        th {
+            background: #4a5568;
+            color: white;
+            padding: 12px 16px;
+            text-align: left;
+            font-weight: 500;
+            font-size: 14px;
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover { background: #5a6578; }
+        th.count { text-align: center; width: 80px; }
+        th, td { white-space: nowrap; }
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+        td.count { text-align: center; }
+        tr:hover { background: #f8fafc; }
+        .link {
+            color: #2196f3;
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .link:hover { text-decoration: underline; }
+        .loading { text-align: center; padding: 40px; color: #666; }
+        .empty-state { text-align: center; padding: 40px; color: #999; }
+        .trace-content {
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <nav style="text-align:center; padding:20px 0; font-size:16px;">
+        <a href="problems.html" style="color:#2196f3; text-decoration:none;">Problems</a> &middot;
+        <a href="annotations.html" style="color:#2196f3; text-decoration:none;">Annotations</a> &middot;
+        <strong style="font-size:22px;">Corpus</strong>
+    </nav>
+    <script>document.querySelectorAll('nav a').forEach(a => { if (location.search) a.href += location.search; });</script>
+    <div class="container">
+        <div id="summary" class="summary"></div>
+        <div id="filter-info" class="filter-info" style="display:none;"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th onclick="sortCorpus('problem_id')" title="Problem identifier">Problem ID</th>
+                    <th onclick="sortCorpus('state_hash')" title="State hash (problem + conversation context)">State</th>
+                    <th onclick="sortCorpus('action_hash')" title="Action hash (model generation)">Action</th>
+                    <th onclick="sortCorpus('span')" title="Token span range (start-end) within the action">Span</th>
+                    <th onclick="sortCorpus('trace_id')" title="Completion variant ID ('original' or alternate)">Trace ID</th>
+                    <th class="count" onclick="sortCorpus('prompt_token_count')" title="Number of prompt tokens (state + action prefix)">Prompt</th>
+                    <th class="count" onclick="sortCorpus('completion_token_count')" title="Number of completion tokens in the span">Completion</th>
+                    <th class="count" onclick="sortCorpus('character_count')" title="Total characters (prompt + completion)">Chars</th>
+                    <th class="count" id="included-header" onclick="cycleIncludedFilter()" title="Selected for training corpus (click to filter)">Included</th>
+                    <th class="count" id="correct-header" onclick="cycleCorrectFilter()" title="Action trace produces the correct final answer (click to filter)">Correct</th>
+                    <th class="count" id="boxed-header" onclick="cycleBoxedFilter()" title="This completion or any alternative at same position contains \\boxed{} (click to filter)">Boxed</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+        <div id="loading-state" class="loading">Loading...</div>
+        <div id="empty-state" class="empty-state" style="display:none;">
+            No training examples found. Run create_corpus.py first.
+        </div>
+
+        <!-- Trace Content Section (shown when filtered to specific trace) -->
+        <div id="trace-section" style="display:none; margin-top: 20px;">
+            <h2 style="font-size: 18px; margin-bottom: 12px; color: #333;">Completion</h2>
+            <div id="completion-content" class="trace-content" style="margin-bottom: 20px;"></div>
+            <h2 style="font-size: 18px; margin-bottom: 12px; color: #333;">Prompt</h2>
+            <div id="prompt-content" class="trace-content"></div>
+        </div>
+    </div>
+
+    <script>
+        const SPECIAL_TOKENS = {
+            199998: '<|startoftext|>',
+            199999: '<|endoftext|>',
+            200002: '<|return|>',
+            200003: '<|constrain|>',
+            200005: '<|channel|>',
+            200006: '<|start|>',
+            200007: '<|end|>',
+            200008: '<|message|>',
+            200012: '<|call|>'
+        };
+
+        function decodeTokens(tokenIds) {
+            if (!window.tiktokenReady || !window.tiktoken) {
+                return '[Tiktoken not ready]';
+            }
+            let result = '';
+            let regularTokens = [];
+            for (const id of tokenIds) {
+                if (SPECIAL_TOKENS[id]) {
+                    if (regularTokens.length > 0) {
+                        result += window.tiktoken.decode(regularTokens);
+                        regularTokens = [];
+                    }
+                    result += SPECIAL_TOKENS[id];
+                } else {
+                    regularTokens.push(id);
+                }
+            }
+            if (regularTokens.length > 0) {
+                result += window.tiktoken.decode(regularTokens);
+            }
+            return result;
+        }
+
+        let corpusSortColumn = null;
+        let corpusSortAsc = true;
+        let lastCorpusFilter = {};
+        // null = no filter, true = only true, false = only false
+        let includedFilter = null;
+        let correctFilter = null;
+        let boxedFilter = null;
+
+        function sortCorpus(col) {
+            if (corpusSortColumn === col) {
+                corpusSortAsc = !corpusSortAsc;
+            } else {
+                corpusSortColumn = col;
+                corpusSortAsc = (col === 'prompt_token_count' || col === 'completion_token_count') ? false : true;
+            }
+            renderTable(lastCorpusFilter);
+        }
+
+        function cycleBoolFilter(currentVal) {
+            if (currentVal === null) return true;
+            if (currentVal === true) return false;
+            return null;
+        }
+
+        function updateFilterHeader(id, val) {
+            const header = document.getElementById(id);
+            if (val === null) header.style.background = '';
+            else if (val === true) header.style.background = '#2e7d32';
+            else header.style.background = '#c62828';
+        }
+
+        function updateBoolParam(key, val) {
+            const url = new URL(window.location);
+            if (val === null) url.searchParams.delete(key);
+            else url.searchParams.set(key, String(val));
+            history.replaceState(null, '', url);
+        }
+
+        function cycleIncludedFilter() {
+            includedFilter = cycleBoolFilter(includedFilter);
+            updateFilterHeader('included-header', includedFilter);
+            updateBoolParam('included', includedFilter);
+            renderTable(lastCorpusFilter);
+        }
+
+        function cycleCorrectFilter() {
+            correctFilter = cycleBoolFilter(correctFilter);
+            updateFilterHeader('correct-header', correctFilter);
+            const url = new URL(window.location);
+            if (correctFilter === null) url.searchParams.delete('correct');
+            else url.searchParams.set('correct', String(correctFilter));
+            history.replaceState(null, '', url);
+            renderTable(lastCorpusFilter);
+        }
+
+        function cycleBoxedFilter() {
+            boxedFilter = cycleBoolFilter(boxedFilter);
+            updateFilterHeader('boxed-header', boxedFilter);
+            updateBoolParam('boxed', boxedFilter);
+            renderTable(lastCorpusFilter);
+        }
+
+        function getCorpusSortValue(entry, col) {
+            switch (col) {
+                case 'problem_id': return entry.problem_id || '';
+                case 'state_hash': return entry.state_hash || '';
+                case 'action_hash': return entry.action_hash || '';
+                case 'span': return entry.span || '';
+                case 'trace_id': return entry.trace_id || '';
+                case 'prompt_token_count': return entry.prompt_token_count || 0;
+                case 'completion_token_count': return entry.completion_token_count || 0;
+                case 'character_count': return entry.character_count || 0;
+                case 'included': return entry.included ? 1 : 0;
+                case 'correct_trace': return entry.correct_trace ? 1 : 0;
+                case 'has_boxed': return entry.has_boxed ? 1 : 0;
+                default: return '';
+            }
+        }
+
+        let corpusIndex = [];
+        let filteredIndex = [];
+        // Map from entry to its pre-built <tr> element
+        const rowMap = new WeakMap();
+
+        function buildRow(entry) {
+            const existing = rowMap.get(entry);
+            if (existing) return existing;
+            const tr = document.createElement('tr');
+            tr.innerHTML =
+                `<td><a href="?problem=${entry.problem_id}" class="link">${entry.problem_id}</a></td>` +
+                `<td><a href="?problem=${entry.problem_id}&state=${entry.state_hash}" class="link">${entry.state_hash}</a></td>` +
+                `<td><a href="?problem=${entry.problem_id}&state=${entry.state_hash}&action=${entry.action_hash}" class="link">${entry.action_hash}</a></td>` +
+                `<td><a href="?problem=${entry.problem_id}&state=${entry.state_hash}&action=${entry.action_hash}&span=${entry.span}" class="link">${entry.span}</a></td>` +
+                `<td><a href="?problem=${entry.problem_id}&state=${entry.state_hash}&action=${entry.action_hash}&span=${entry.span}&trace=${entry.trace_id}" class="link">${entry.trace_id}</a></td>` +
+                `<td class="count">${entry.prompt_token_count.toLocaleString()}</td>` +
+                `<td class="count">${entry.completion_token_count.toLocaleString()}</td>` +
+                `<td class="count">${(entry.character_count || 0).toLocaleString()}</td>` +
+                `<td class="count">${entry.included ? '✓' : ''}</td>` +
+                `<td class="count" style="color:${entry.correct_trace ? '#2e7d32' : '#c62828'};font-weight:bold">${entry.correct_trace ? '✓' : '✗'}</td>` +
+                `<td class="count">${entry.has_boxed ? '✓' : ''}</td>`;
+            rowMap.set(entry, tr);
+            return tr;
+        }
+
+        async function init() {
+            try {
+                const resp = await fetch('data/corpus.jsonl?t=' + Date.now());
+                const text = await resp.text();
+                corpusIndex = text.trim().split('\n')
+                    .filter(line => line.trim())
+                    .map(line => JSON.parse(line));
+
+                if (corpusIndex.length === 0) {
+                    document.getElementById('loading-state').style.display = 'none';
+                    document.getElementById('empty-state').style.display = 'block';
+                    return;
+                }
+
+                // Check for filter params
+                const params = new URLSearchParams(window.location.search);
+                const problem = params.get('problem');
+                const state = params.get('state');
+                const action = params.get('action');
+                const span = params.get('span');
+                const trace = params.get('trace');
+
+                // Restore bool filters from URL
+                if (params.has('included')) {
+                    includedFilter = params.get('included') === 'true';
+                    updateFilterHeader('included-header', includedFilter);
+                }
+                if (params.has('correct')) {
+                    correctFilter = params.get('correct') === 'true';
+                    updateFilterHeader('correct-header', correctFilter);
+                }
+                if (params.has('boxed')) {
+                    boxedFilter = params.get('boxed') === 'true';
+                    updateFilterHeader('boxed-header', boxedFilter);
+                }
+
+                renderTable({ problem, state, action, span, trace });
+            } catch (err) {
+                document.getElementById('loading-state').textContent = 'Error: ' + err.message;
+            }
+        }
+
+        function renderTable(filter = {}) {
+            lastCorpusFilter = filter;
+            // Filter entries
+            filteredIndex = corpusIndex;
+            if (filter.problem) {
+                if (filter.problem.includes('*')) {
+                    const re = new RegExp('^' + filter.problem.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*') + '$');
+                    filteredIndex = filteredIndex.filter(e => re.test(e.problem_id));
+                } else {
+                    filteredIndex = filteredIndex.filter(e => e.problem_id === filter.problem);
+                }
+            }
+            if (filter.state) {
+                filteredIndex = filteredIndex.filter(e => e.state_hash === filter.state);
+            }
+            if (filter.action) {
+                filteredIndex = filteredIndex.filter(e => e.action_hash === filter.action);
+            }
+            if (filter.span) {
+                filteredIndex = filteredIndex.filter(e => e.span === filter.span);
+            }
+            if (filter.trace) {
+                filteredIndex = filteredIndex.filter(e => e.trace_id === filter.trace);
+            }
+            if (includedFilter !== null) {
+                filteredIndex = filteredIndex.filter(e => e.included === includedFilter);
+            }
+            if (correctFilter !== null) {
+                filteredIndex = filteredIndex.filter(e => e.correct_trace === correctFilter);
+            }
+            if (boxedFilter !== null) {
+                filteredIndex = filteredIndex.filter(e => e.has_boxed === boxedFilter);
+            }
+
+            // Update summary
+            const totalPrompt = filteredIndex.reduce((sum, e) => sum + e.prompt_token_count, 0);
+            const totalCompletion = filteredIndex.reduce((sum, e) => sum + e.completion_token_count, 0);
+            const totalChars = filteredIndex.reduce((sum, e) => sum + (e.character_count || 0), 0);
+            document.getElementById('summary').innerHTML =
+                `${filteredIndex.length.toLocaleString()} corpus entries &bull; ` +
+                `${totalPrompt.toLocaleString()} prompt tokens &bull; ` +
+                `${totalCompletion.toLocaleString()} completion tokens &bull; ` +
+                `${totalChars.toLocaleString()} characters`;
+
+            // Show filter indicator if filtering
+            const filterInfo = document.getElementById('filter-info');
+            if (filter.problem || filter.state || filter.action || filter.span || filter.trace) {
+                const parts = [];
+                if (filter.problem) parts.push(`problem: ${filter.problem}`);
+                if (filter.state) parts.push(`state: ${filter.state}`);
+                if (filter.action) parts.push(`action: ${filter.action}`);
+                if (filter.span) parts.push(`span: ${filter.span}`);
+                if (filter.trace) parts.push(`trace: ${filter.trace}`);
+                filterInfo.innerHTML = `Filtering by ${parts.join(', ')} <a href="corpus.html">(clear)</a>`;
+                filterInfo.style.display = 'block';
+            } else {
+                filterInfo.style.display = 'none';
+            }
+
+            // Sort
+            if (corpusSortColumn) {
+                filteredIndex.forEach((e, i) => e._sortIdx = i);
+                filteredIndex = filteredIndex.slice().sort((a, b) => {
+                    const va = getCorpusSortValue(a, corpusSortColumn);
+                    const vb = getCorpusSortValue(b, corpusSortColumn);
+                    let cmp = 0;
+                    if (typeof va === 'number' && typeof vb === 'number') {
+                        cmp = va - vb;
+                    } else {
+                        cmp = String(va).localeCompare(String(vb));
+                    }
+                    return (corpusSortAsc ? cmp : -cmp) || a._sortIdx - b._sortIdx;
+                });
+                const sortedSet = new Set(filteredIndex);
+                corpusIndex = [...filteredIndex, ...corpusIndex.filter(e => !sortedSet.has(e))];
+            }
+            const tbody = document.getElementById('table-body');
+            const frag = document.createDocumentFragment();
+            for (const entry of filteredIndex) {
+                frag.appendChild(buildRow(entry));
+            }
+            tbody.replaceChildren(frag);
+            document.getElementById('loading-state').style.display = 'none';
+
+            // Show trace content if filtered to a specific trace
+            if (filter.trace && filteredIndex.length === 1) {
+                showTraceContent(filteredIndex[0]);
+            } else {
+                document.getElementById('trace-section').style.display = 'none';
+            }
+        }
+
+        async function showTraceContent(entry) {
+            const traceSection = document.getElementById('trace-section');
+            const completionContent = document.getElementById('completion-content');
+            const promptContent = document.getElementById('prompt-content');
+
+            traceSection.style.display = 'block';
+            completionContent.textContent = 'Loading...';
+            promptContent.textContent = 'Loading...';
+
+            try {
+                // Load prompt and completion tokens from training file
+                const tracePath = `data/corpus/${entry.problem_id}/${entry.state_hash}/${entry.action_hash}/${entry.span}/${entry.trace_id}.jsonl`;
+                const traceResp = await fetch(tracePath);
+                const traceText = await traceResp.text();
+                const traceData = JSON.parse(traceText.trim());
+
+                const promptTokens = traceData.prompt_tokens;
+                const completionTokens = traceData.tokens;
+
+                const render = () => {
+                    completionContent.textContent = decodeTokens(completionTokens);
+                    promptContent.textContent = decodeTokens(promptTokens);
+                };
+
+                if (window.tiktokenReady) {
+                    render();
+                } else {
+                    window.addEventListener('tiktokenReady', render, { once: true });
+                }
+            } catch (err) {
+                completionContent.textContent = 'Error: ' + err.message;
+                promptContent.textContent = 'Error loading prompt';
+            }
+        }
+
+        init();
+    </script>
+</body>
+</html>
