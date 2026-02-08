@@ -1,0 +1,57 @@
+{"19-75": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"75-126": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"126-138": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"138-306": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"306-340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"340-389": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"389-439": {"better": ["original"], "neutral": [], "worse": ["v7vvmy"], "reason": "The original restates the condition correctly; v7vvmy is speculative and does not advance the solution."}}
+{"439-449": {"better": ["r6zzjz"], "neutral": [], "worse": ["1kk72l"], "reason": "r6zzjz derives the concrete formula for S_n(\u03b1)\u22c6\u03b2, while 1kk72l is vague speculation about infinity."}}
+{"449-471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"471-529": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"529-588": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"588-626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"626-631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"631-676": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"676-702": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"702-761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"761-828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"828-877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"877-958": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"958-1042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1042-1079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1079-1103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1103-1212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1212-1233": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1233-1599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1599-1603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1603-1684": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1684-1737": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1737-1747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1747-1853": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1853-1886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1886-2041": {"better": [], "neutral": ["original", "0bk6ro", "50ip7k", "ytn9ff", "z1zecf", "zizsk5"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2041-2047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2047-2127": {"better": [], "neutral": ["original", "p8vobv", "h70qv3", "riumki", "wfvcp2", "7iv8fd"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2127-2191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2191-2197": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2197-2252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2252-2255": {"better": ["rcs3kq"], "neutral": [], "worse": ["original"], "reason": "rcs3kq states the needed divisibility argument (a=\u00b11); the original is a non-informative filler."}}
+{"2255-2261": {"better": [], "neutral": ["original", "wu3556", "rfekk8", "0bk6ro", "csonyu", "e68g2f"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2261-2301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2301-2307": {"better": ["uq4ubx"], "neutral": [], "worse": ["vy7ypn"], "reason": "uq4ubx derives the shift/inner-product relation; vy7ypn is content-free."}}
+{"2307-2396": {"better": [], "neutral": ["original", "nc24dn", "umjk56", "jj9fjk", "fuhglh", "kdrvim"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2396-2443": {"better": ["hajp76"], "neutral": [], "worse": ["8yglh2"], "reason": "hajp76 uses support to simplify to \u03b1(0)\u03b2(-n); 8yglh2 merely restates the target equation."}}
+{"2443-2548": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2548-2587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2587-2707": {"better": [], "neutral": ["original", "rfekk8", "k4op59", "csonyu", "0bk6ro"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2707-2713": {"better": ["original"], "neutral": [], "worse": ["rewpqu"], "reason": "The original gives the correct conclusion, while rewpqu is confused about \u201cmultiple values at 0.\u201d"}}
+{"2713-2742": {"better": ["original"], "neutral": [], "worse": ["ymqxwt"], "reason": "The original correctly rules out \u03b1\u22610; ymqxwt is just a formatting note."}}
+{"2742-2757": {"better": [], "neutral": ["original", "rfekk8", "kf0o1a", "0bk6ro", "csonyu"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2757-2938": {"better": [], "neutral": ["original", "lvs5k2", "wb5dph", "0bk6ro", "jdrkwj", "a5sq52"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2938-2943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2943-3047": {"better": [], "neutral": ["original", "loltzm", "0bk6ro", "ax5671", "uhz67m"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"3047-3053": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3053-3071": {"better": [], "neutral": ["original", "0bk6ro", "g4d1lb", "d9o5zd", "x7pf1q", "t2es3k"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"3071-3077": {"better": [], "neutral": ["original", "0bk6ro", "csonyu", "i0ap4h", "k78447"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"3077-3098": {"better": ["lyr1n7"], "neutral": [], "worse": ["4fc8mq"], "reason": "lyr1n7 interprets the condition correctly; 4fc8mq adopts a vacuous misreading that would change the problem."}}
+{"3098-3107": {"better": ["original", "k78447", "orh8xi"], "neutral": [], "worse": ["3oycp0", "f52d7p", "cpgyrt"], "reason": "Original has correct boxed answer 2. Correct answer has been sufficiently repeated in history."}}

@@ -1,0 +1,235 @@
+{"165-242": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly analyze f(M+c) computation needs"}}
+{"242-323": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly analyze divisor properties"}}
+{"323-344": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly state the minimization goal"}}
+{"344-371": {"better": [], "neutral": [], "worse": [], "reason": "All completions appropriately explore divisor structure"}}
+{"371-446": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly analyze LCM minimization approach"}}
+{"446-501": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly derive lcm requirements"}}
+{"501-528": {"better": [], "neutral": [], "worse": [], "reason": "All completions appropriately analyze divisor sum constraints"}}
+{"528-615": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly explore minimization strategies"}}
+{"615-635": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly analyze minimal X construction"}}
+{"635-664": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly discuss M as power of 3"}}
+{"664-709": {"better": [], "neutral": [], "worse": [], "reason": "syah34 correctly identifies M's divisor structure as powers of 3; 7c6kq1 incorrectly tries X=N approach which fails"}}
+{"709-853": {"better": [], "neutral": [], "worse": [], "reason": "w3h9mj provides thorough analysis recognizing that sum of three divisors of M must be powers of 3 and explores whether c can be sum of two powers of 3, while 2eho79 stays generic and less actionable"}}
+{"853-918": {"better": [], "neutral": [], "worse": [], "reason": "7ef4l3 correctly derives that if c = 3^i + 3^j then X=M works as all smaller powers of 3 divide M, while kucpae does not advance the construction"}}
+{"918-1174": {"better": [], "neutral": [], "worse": [], "reason": "9lfper correctly questions whether X < M is possible (\"Could we get something smaller?\"), which is the right instinct since the correct answer has f(N) = (16/25)N < M. n7ypjh incorrectly dismisses X < M by claiming \"sum cannot reach M+c\", committing to the wrong framework early."}}
+{"1174-1452": {"better": [], "neutral": [], "worse": [], "reason": "The original and l6dolo incorrectly conclude X \u2265 M (\"X must be at least M\"), which is wrong since the correct answer has f(N) = (16/25)N < M. bxeash correctly identifies \"X could be less than M\" with the right bound X \u2265 N/3. c8jrzh, despite being verbose, correctly concludes \"it's possible that X < M can have sum M+c\"."}}
+{"1452-1463": {"better": [], "neutral": [], "worse": [], "reason": "p835sl incorrectly asserts \"minimal X is at least M\" which is wrong (correct answer has f(N) = (16/25)N < M). zdidxa, despite being verbose, correctly questions the X \u2265 M claim and concludes \"it's possible for X<M to have sum = M+small\", which is the right direction. Original and others are neutral hedged statements."}}
+{"1463-1503": {"better": [], "neutral": [], "worse": [], "reason": "0ti0lo correctly identifies that if c not sum of two powers of 3 then need X = M*p with additional prime factor; krle5n is confused"}}
+{"1503-1626": {"better": [], "neutral": [], "worse": [], "reason": "e9y26i correctly focuses on testing c=1848374 for sum of two powers of 3; sjcvbp computes g(c) prematurely without verifying the representation"}}
+{"1626-1645": {"better": [], "neutral": [], "worse": [], "reason": "1i2p50 correctly explains why c=0 case fails using base-3 representation argument, while y0ze5b is mostly noncommittal"}}
+{"1645-1685": {"better": [], "neutral": [], "worse": [], "reason": "co0f8u correctly observes that if representation fails, may need X > M with additional prime factors, while 5r0tk3 is too terse to add reasoning"}}
+{"1685-1781": {"better": [], "neutral": [], "worse": [], "reason": "8s64i3 correctly identifies that minimal X will be of form 3^k * p with additional prime factor when c not sum of two powers of 3, while u3b29c is only a generic restatement"}}
+{"1781-1801": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1801-1916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1916-2032": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2032-2113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2185-2245": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2245-2251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2251-2307": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2307-2401": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2401-2444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2444-2481": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2481-2516": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2516-2560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2560-2624": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2624-2671": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2671-2740": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2740-2809": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2809-2915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2915-3004": {"better": [], "neutral": ["original", "hi13qo", "kvxnnv", "o2wxom", "sv6hxg", "lj2fxy"], "worse": [], "reason": "All completions explore the same framework: minimize d such that c can be expressed as sum of two divisors of M*d. lj2fxy adds the useful observation that only small exponents of 3 yield divisors \u2264 c, but all stay within the M*d framework without questioning it."}}
+{"3004-3073": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3073-3117": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3117-3125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3125-3153": {"better": ["nw3xcn"], "neutral": ["99x5vp", "y99zle", "9saxmy", "pfhwc4"], "worse": ["original"], "reason": "nw3xcn importantly questions \"But this may not be minimal if we can get even smaller X not multiple of M?\" and explores X < M scenarios. This questioning is valuable because the correct answer has f(N) = (16/25)N < M. The original definitively states \"minimal f(N) is M times the smallest d\" without any hesitation, prematurely committing to the wrong framework."}}
+{"3153-3585": {"better": ["vyzu1h"], "neutral": ["original", "zmm6ub", "zm6syg", "g2s698", "ksa5s4"], "worse": [], "reason": "vyzu1h correctly identifies that the optimal d should be LCM(a,b) for the pair (a,b) with a+b=c that minimizes that LCM. This is the correct optimization structure within this framework. Others either restate the goal or explore tangential 3-power considerations."}}
+{"3585-3666": {"better": ["ljeml1", "c7kmz6"], "neutral": ["ochwde", "pbmwyh", "y2l3gu"], "worse": ["original"], "reason": "The original incorrectly concludes \"at least one divisor must be \u2265 M, which means X \u2265 M\" and locks in f(N) = M*d \u2014 this is wrong since the correct answer has f(N) = (16/25)N < M. ljeml1 correctly identifies \"X < M might be possible\" and that \"X must be > M/3\" but doesn't need to be \u2265 M. c7kmz6 correctly notes \"we could have representation without M as a divisor\" for X < M. These keep the search space open for the correct solution family."}}
+{"3666-3761": {"better": ["woprsg", "9bn1v3", "hsntr4"], "neutral": [], "worse": ["original", "x45hlc", "r8f2vn"], "reason": "The original, x45hlc (\"our earlier reduction is plausible\"), and r8f2vn (\"f(N) = M*d_min\") all commit to the wrong f(N) = M*d framework without questioning whether X < M is possible. Since the correct answer has f(N) = (16/25)N < M, this commitment to the X = M*d model is an error that forecloses the correct solution path. The remaining alternates at least acknowledge additional complexity in the divisor structure."}}
+{"3761-3810": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3810-3916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3916-3942": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3942-3965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3965-3999": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3999-4105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4105-4153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4153-4176": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4176-4184": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4184-4237": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4237-4260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4260-4443": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4443-4545": {"better": ["ccl3jf", "brjm28"], "neutral": ["hqr9kz"], "worse": ["original", "kcvbn9", "ksi6gc"], "reason": "ccl3jf questions whether X could avoid having M as a divisor entirely, and brjm28 explicitly explores \"three divisors none equal to M but still sum to M + c\" with a d1 = M - x construction. Both keep the door open for the correct solution where f(N) = (16/25)N < M. The original, kcvbn9, and ksi6gc all commit to \"f(N) = M*d\" without questioning the X \u2265 M assumption, which forecloses the correct answer."}}
+{"4545-4617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4617-4656": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4656-4681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4681-4719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4719-4823": {"better": ["original", "r7b6ut"], "neutral": ["whqxg9", "yfhfi6", "fd22se"], "worse": ["kvrsdb"], "reason": "kvrsdb derives \"g(c) = e\" (an integer) from the f(N) = M*e framework, but this is wrong \u2014 the correct answer is g(c) = 16/25 (a fraction). By committing to g being an integer, kvrsdb makes it harder to detect that the entire M*e framework is flawed. The original and r7b6ut correctly focus on the representation question without prematurely computing g, keeping the analysis more open."}}
+{"4823-4890": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4890-4927": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4927-5016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5016-5112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5112-5204": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5204-5324": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5324-5557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5557-5596": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5596-5762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5762-5790": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5790-5864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5864-5878": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5878-5883": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5883-5914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5914-6109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6109-6170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6170-6270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6270-6305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6305-6587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6587-6604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6604-6677": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6677-6741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6741-6874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6874-6930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6930-6993": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6993-7024": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7024-7062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7062-7140": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7140-7214": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7214-7418": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7418-7589": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7589-7612": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7612-7686": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7686-7715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7715-7734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7734-7974": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7974-8081": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8081-8190": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8190-8237": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8237-8321": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8321-8335": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8335-8359": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8359-8431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8431-8505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8505-8540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8540-8616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8616-8868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8868-8930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8930-9147": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9147-9474": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9474-9520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9520-9608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9608-9838": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9838-9981": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9981-10039": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10039-10054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10054-10064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10064-10113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10190-10205": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10451-10531": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10531-10540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10540-10931": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10931-11067": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11148-11207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11233-11454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11454-11517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11517-11643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11643-11829": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11910-11917": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11917-12038": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12038-12101": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12101-12148": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12148-12206": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12206-12259": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12259-12311": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12311-12351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12351-12384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12384-12405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12405-12415": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12415-12434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12434-12439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12439-12896": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12896-12912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13002-13052": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13052-13102": {"better": [], "neutral": ["original", "p8tzbd", "m419td", "bu6lun", "1aemr4", "e53r28"], "worse": [], "reason": "All completions conclude f(N) = M*254051 within the constrained M*e family. This is correct within that framework, but the framework itself is wrong (the global optimum uses a different construction). Since all commit to the same conclusion equally, they're all neutral relative to each other."}}
+{"13102-13147": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13147-13180": {"better": ["mwrzdm"], "neutral": ["original", "zz5u7d", "z836uu", "hnl3ni", "nhh2n5"], "worse": [], "reason": "mwrzdm at least verifies the representation has distinct divisors and checks divisibility, which is more careful. All others just assert f(N)/M=254051 or compute g(c) without verification. None question whether the M*e framework captures the global minimum."}}
+{"13180-13272": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13272-13361": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13361-13374": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13374-13384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13384-13402": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13424-13431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13431-13524": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13524-13550": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13550-13558": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13558-13858": {"better": [], "neutral": ["original", "pteho5", "zn8snk", "m007b5", "udywst", "hsu5c3"], "worse": [], "reason": "All completions stay within the M*e framework and merely verify that e=254051 is minimal within that framework. None question whether the framework itself captures the global minimum (it doesn't \u2014 correct answer uses f(N)=(16/25)N). Since all make the same mistake equally, all neutral."}}
+{"13858-13878": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13908-14044": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14044-14202": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14202-14333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14333-14412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14412-14479": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14479-14518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14518-14539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14539-14642": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14642-14661": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14661-14736": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14736-14994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14994-15208": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15208-15445": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15445-15494": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15494-15512": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15512-15625": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15625-15693": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15693-15782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15782-15918": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15918-15924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15924-16049": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16049-16147": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16147-16203": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16203-16258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16258-16285": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16285-16390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16390-16398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16398-16439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16439-16465": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16465-16503": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16503-16604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16670-16740": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16740-16761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16761-16812": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16812-16913": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16913-16931": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17033-17048": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17048-17081": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17081-17134": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17134-17384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17457-17461": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17461-17531": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17721-17729": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17729-17756": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17756-17825": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17825-17835": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17835-17863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17863-17917": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17917-17925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17925-17951": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17951-17958": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17958-18061": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18061-18070": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18070-18074": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18074-18260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18260-18306": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18306-18448": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18448-18573": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18618-18644": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18697-18728": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18755-18759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18759-18792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18792-18799": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18799-18853": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18853-18860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18860-18962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18962-19042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19042-19069": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19069-19108": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19108-19112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19112-19120": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19120-19144": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19144-19154": {"better": ["r5fosu"], "neutral": ["wywm6p", "p40rli"], "worse": ["original", "8ujxmq"], "reason": "Original has wrong boxed answer 54070, correct answer is 41. Not boxing the answer provides a chance to move on from the wrong answer."}}

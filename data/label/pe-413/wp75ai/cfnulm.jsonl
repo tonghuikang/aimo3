@@ -1,0 +1,190 @@
+{"235-352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"352-438": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"438-451": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"451-467": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"467-495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"495-698": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"698-751": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"751-760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"760-789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"789-1006": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1006-1081": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1081-1201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1201-1279": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1279-1389": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1389-1428": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1428-1470": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1470-1563": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1563-1594": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1594-1648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1648-1758": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1758-1794": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1794-1863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1863-1911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1911-1947": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1947-2106": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2106-2273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2273-2335": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2335-2349": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2349-2415": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2415-2456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2456-2477": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2477-2532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2532-2678": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2678-2758": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2758-2802": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2866-2956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2956-3134": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3134-3159": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3235-3244": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3244-3278": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3278-3326": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3326-3488": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3686-3800": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3800-3847": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3847-3943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3943-4103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4103-4173": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4173-4210": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4210-4293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4293-4332": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4332-4352": {"better": ["b1ayo1"], "neutral": ["6l756k"], "worse": [], "reason": "Original is vague (\"count of strings where exactly one substring divisible\"). b1ayo1 is better because it correctly explains the key insight: \"number of suffixes with remainder r matters because each can lead to a new suffix later\" and explicitly derives \"number of suffixes that become zero after this is count_{r s.t. (r*10 + x) mod d = 0}\" - this is exactly the multiplicity tracking needed for the correct solution. 6l756k mentions multiset but doesn't explain why counts matter."}}
+{"4352-4365": {"better": [], "neutral": ["m7ahtx", "g3vb46"], "worse": [], "reason": "Original is brief and non-substantive (\"Let's think about a DP approach\"). Both alternates elaborate: m7ahtx correctly derives state space as d^i and recognizes it's huge but posits \"reachable far smaller\". g3vb46 goes further by proposing bitmask compression (2^d states), then self-corrects that \"we need to know full remainders\" - but crucially says \"we can merge\" same-remainder suffixes using a set approach. This is actually the WRONG approach (set loses multiplicity), but the trace later corrects this. Neutral since all lead to DP development."}}
+{"4365-4518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4518-4594": {"better": ["bkp64d"], "neutral": ["fsxnzx"], "worse": [], "reason": "bkp64d explicitly says \"If we store the multiset of remainders\" and correctly explains the counting mechanism for divisible substrings. fsxnzx discusses counting but doesn't mention multiset explicitly. Original explores state space via brute enumeration (\"try compute state count for d=10\") without advancing the algorithmic insight."}}
+{"4594-4674": {"better": ["l7s9l3"], "neutral": ["dd8nk3"], "worse": [], "reason": "l7s9l3 is better because it explicitly identifies the key insight: \"set of remainders at position i is just the multiset of remainders\" and correctly explains why order doesn't matter: \"having the multiset of remainders is sufficient to compute the multiset after adding a digit.\" dd8nk3 discusses state transitions but doesn't formalize the multiset insight. Original discusses state space bounds without algorithmic progress."}}
+{"4674-5404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5480-5494": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5494-5502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5502-5528": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5528-5561": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5561-5599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5599-5979": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5979-6016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6185-6216": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6216-6319": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6319-6444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6444-6469": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6469-6541": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6541-6559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6559-6639": {"better": ["kv0gx6"], "neutral": ["u1fry1"], "worse": [], "reason": "kv0gx6 is better because it explicitly recognizes that \"multiset (with multiplicities)\" is needed and explains why: \"having two suffixes with same remainder r, they are indistinguishable for future because both will evolve identically...So we can store the multiset (with multiplicities)\". This is the key insight. u1fry1 correctly notes bitmask is insufficient but doesn't develop the multiset idea. Original discusses linear recurrence but misses the multiset insight entirely."}}
+{"6639-6711": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6711-6791": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6791-6914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6914-6981": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6981-6997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6997-7017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7017-7132": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7132-7171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7171-7376": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7376-7405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7405-7482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7482-7621": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7621-7751": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7751-7859": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7859-7944": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7944-7949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7949-8036": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8036-8123": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8123-8223": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8223-8244": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8244-8323": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8323-8405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8405-8465": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8465-8470": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8470-8604": {"better": ["uyocy0"], "neutral": ["yotdf1"], "worse": [], "reason": "uyocy0 is better because it directly proposes the working solution: \"implement DP with memoization...over the state (pos, count, suffix vector)\" with pruning for count>1. This is exactly the correct approach. yotdf1 proposes backward DP but is less clear. Original discusses inclusion-exclusion which is a dead-end approach for this problem."}}
+{"8604-8610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8610-8653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8653-8780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8780-8851": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8851-8880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8880-8921": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8921-8964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8964-8975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8975-9013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9013-9615": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9615-9688": {"better": [], "neutral": ["4gekvn", "10oxy9"], "worse": [], "reason": "All three versions correctly identify the DP state as (position, zero_seen flag, suffix remainder multiset). Original uses clearer phrasing about transition conditions. 4gekvn simplifies but still captures essence. 10oxy9 is slightly more verbose but equivalent. All correctly formulate the DP approach with multiset tracking."}}
+{"9688-9830": {"better": [], "neutral": ["lrk0vc", "psh14b"], "worse": [], "reason": "Original provides the most complete formal description of the transition function including the key formula \"count_z = (a% d == 0 ? 1 : 0) + count_{r in M where (r*10 + a) % d == 0}\". Alternates lrk0vc and psh14b correctly summarize the pruning conditions but are less precise than the original's full formulation."}}
+{"9830-10134": {"better": ["5rc92o"], "neutral": ["dlrfmv"], "worse": [], "reason": "5rc92o is better because it explicitly states the key insight: \"we need to know at each remainder value the count of suffixes that have that remainder. Because if we have multiple suffixes mapping to zero...they contribute multiple zeros.\" This is the core of the multiplicity bug fix. dlrfmv discusses state space complexity but doesn't highlight why counts matter for correctness. Original is too brief."}}
+{"10178-10211": {"better": ["h3o6vy"], "neutral": ["2pwlz5"], "worse": [], "reason": "h3o6vy is better because it provides concrete analysis: references that \"for d=7 reachable states...can be huge (~7^7 = 823543)\" and proposes testing \"for d up to maybe 12 to see how many distinct multisets appear reachable via BFS.\" This computational approach validates the DP feasibility. 2pwlz5 is vague (\"Nevertheless, may still be large\"). Original makes the same observation but less concrete."}}
+{"10211-10237": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10237-10392": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10392-10400": {"better": [], "neutral": ["hg78ap", "i9rfhu"], "worse": [], "reason": "Original (\"storing count per remainder is necessary\") is a clear correct statement. hg78ap questions whether multiplicity matters much in practice - reasonable exploration. i9rfhu proposes the count vector approach. All three arrive at the same conclusion that counts are needed, just with different framing."}}
+{"10400-10493": {"better": ["ruq2g7"], "neutral": ["hjzd8c"], "worse": [], "reason": "ruq2g7 is better because it explicitly gives a concrete example: \"for d=3, different suffixes could have remainder 1 and 1. So multiplicity can be >1.\" This directly demonstrates why multiplicity tracking is essential. hjzd8c and original discuss the same bounding but without the illustrative example. Original is technically correct but more abstract."}}
+{"10493-10499": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10499-10552": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10552-10611": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10611-10624": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10624-10667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10667-10701": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10701-10733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10733-10790": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10790-10844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10844-10924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10924-10984": {"better": ["i3eqtj"], "neutral": ["ir2nr3"], "worse": [], "reason": "i3eqtj is better because it provides the clearest and most complete formulation of the DP with explicit constraints and the critical final condition \"zeroSeen must be True when pos==d\". Original and ir2nr3 are less detailed - ir2nr3 is very brief (\"But we need to compress remainder counts to something manageable\") without explaining the termination condition."}}
+{"10984-11034": {"better": ["mn3ylz"], "neutral": ["l03gy0"], "worse": [], "reason": "mn3ylz is better because it provides concrete complexity analysis: \"compositions of pos into d parts. There are C(pos + d - 1, d - 1) possibilities...C(37,18) ~ (some billions)...reachable might be far lower.\" This analysis is crucial for understanding feasibility. l03gy0 describes the compression but without complexity bounds. Original is optimistic but vague."}}
+{"11034-11360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11360-11390": {"better": [], "neutral": ["338bg5", "ffllgn"], "worse": [], "reason": "All three versions make the same observation - ~3.5e10 count vectors is huge but reachable states likely far fewer. Original adds the optimistic note \"reachable vectors likely far fewer\" which proves correct. Alternates are slightly more pessimistic but equivalent in substance."}}
+{"11390-11437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11437-11513": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11513-11553": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11553-11668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11668-11686": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11686-11767": {"better": ["ke1wg5"], "neutral": ["zoi219"], "worse": [], "reason": "ke1wg5 is better because it provides thorough analysis explaining why each substring is uniquely counted: \"a suffix ending at position pos is not counted earlier\" and derives the pruning condition clearly: \"number of new zeros at this step can be >1, in which case the branch should be pruned.\" zoi219 is correct but brief. Original is correct but less explanatory."}}
+{"11767-11831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11831-11875": {"better": ["ep64xm"], "neutral": ["z2g2ml"], "worse": [], "reason": "ep64xm is better because it states the critical termination condition explicitly: \"At final pos = d...we require zero_seen true (i.e., exactly one zero found somewhere).\" This is essential for correctness. z2g2ml is vaguer (\"ensures at most one\"). Original discusses edge cases but misses the explicit final requirement."}}
+{"11875-11879": {"better": ["9tmlzo"], "neutral": ["7vr8b4"], "worse": [], "reason": "9tmlzo is better because it proposes concrete verification: \"Let's test for d up to 7 and verify counts match known values.\" This validation step is crucial for catching bugs. 7vr8b4 describes implementation but doesn't suggest verification. Original (\"Thus DP works\") is an unsupported assertion."}}
+{"11879-11909": {"better": ["1wp6u2"], "neutral": ["cql6vh"], "worse": [], "reason": "1wp6u2 is better because it explains the key pruning insight: \"zero_seen=1 states cannot generate suffix remainder zero again; this restricts vector combos.\" This explains why the theoretical huge state space becomes manageable. cql6vh mentions pruning but less precisely. Original is vague about feasibility."}}
+{"11909-12366": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12366-12388": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12572-12618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12618-12643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12643-12691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12691-12709": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12709-12751": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13192-13199": {"better": ["crfq7m"], "neutral": ["i5ty3a"], "worse": [], "reason": "crfq7m is better because it provides deep analysis of WHY d=10 gives 0, then extends to d=5 case with detailed reasoning about digit 0 or 5 creating multiple substrings. It then correctly derives that d=5 count 4096 = 8^4 (first digit is 5, remaining 4 digits avoid {0,5}). This thorough exploration validates the DP correctness. i5ty3a just confirms d=10 gives 0 without insight. Original is too terse."}}
+{"13199-13757": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13757-13762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13762-13868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13868-13938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13938-13948": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13948-14240": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14240-14289": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14345-14350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14350-14394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14464-14470": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14470-14514": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14698-14703": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14703-14747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14788-14832": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14892-14897": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14897-14941": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14997-15002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15002-15046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15131-15171": {"better": [], "neutral": ["fzghkx", "5qnmp7"], "worse": [], "reason": "All three arrive at the same point - summing counts for d=1..19. Original is clearest (\"But we need F(10^{19}) = sum_{d=1}^{19} count_d\"). Alternates just list counts without the formula context."}}
+{"15171-15319": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15371-15516": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15516-15578": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15692-15766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15868-15950": {"better": ["xk29f3"], "neutral": ["oa427f"], "worse": [], "reason": "xk29f3 and oa427f both correctly focus on the key remaining step: \"we need answer modulo 99991.\" xk29f3 is slightly more focused. Original digresses into verification for d=8,9 which, while thorough, is tangential to reaching the final answer at this late stage of the solution."}}
+{"15950-15969": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15969-16036": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16036-16114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16114-16135": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16135-16219": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16219-16297": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16297-16319": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16429-16440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16440-16505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16505-16562": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16562-16814": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16814-16920": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17295-17305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17305-17314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17314-17321": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17321-17344": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17371-17400": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17400-17434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17454-17475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17475-17481": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17481-17494": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 64573 but answer has not been sufficiently repeated."}}

@@ -1,0 +1,171 @@
+{"109-134": {"better": ["v4jhev"], "neutral": ["original", "c334rl"], "worse": ["bykfik"], "reason": "Alternate v4jhev provides the most thorough analysis of what \"smallest number with digit sum n\" means, carefully reasoning through digit placement. Original starts well but less detailed. bykfik is too terse - just states \"compute efficiently\" without explaining the approach."}}
+{"134-406": {"better": ["ggfgf3"], "neutral": ["original", "w6btjt", "j38uoa"], "worse": ["2lbdaj"], "reason": "Alternate ggfgf3 provides clearest reasoning that fewer digits always means smaller number, with concrete example (99 < 100). 2lbdaj starts confused (\"Wait: Nothing ensures...\") showing unclear thinking."}}
+{"406-453": {"better": ["dat3us"], "neutral": ["original", "tdxkj3", "1yd7lm", "1modak"], "worse": [], "reason": "Alternate dat3us provides the most comprehensive testing with multiple edge cases (n=9, n=8, n=11) and explicitly verifies each result. Others test fewer cases."}}
+{"453-513": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"513-540": {"better": ["ap56bo"], "neutral": ["original", "vk7f55", "h8xrf7", "x40mdg"], "worse": [], "reason": "Alternate ap56bo derives the explicit formula s(n) = (r+1)*10^q - 1 with algebraic verification (testing n=10 -> 2*10-1=19). This provides the key closed-form needed for efficient computation. Others just verify specific cases without deriving the general formula."}}
+{"540-639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"639-770": {"better": ["c63hhf", "ulxuxq"], "neutral": ["original", "2suyl1", "0szsvf"], "worse": [], "reason": "Alternates c63hhf and ulxuxq provide rigorous proof that 199 is minimal for n=19 by reasoning about digit constraints: need 3 digits (since 2 digits max sum is 18), then minimize leading digit. This systematic approach is better than just checking alternatives."}}
+{"770-811": {"better": ["5dx206"], "neutral": ["original", "edz8k2", "p2pd8q", "8imtht"], "worse": [], "reason": "Alternate 5dx206 provides the cleanest derivation: s(n) = r*10^q + (10^q-1) = (r+1)*10^q - 1, with verification for r=0 case. This unified formula is essential for the subsequent S(k) derivation."}}
+{"811-849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"849-1008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1008-1043": {"better": ["mxkhj4"], "neutral": ["original", "04pj56", "sbjxvi", "08jhsf"], "worse": [], "reason": "Alternate mxkhj4 explicitly handles both r>0 and r=0 cases, verifying the unified formula works for both. This careful case analysis ensures the formula is correct for all n."}}
+{"1043-1137": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1137-1173": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1173-1256": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1256-1354": {"better": ["tgvmv8"], "neutral": ["original", "ga4cx5", "7urje7", "tbtq6d"], "worse": [], "reason": "Alternate tgvmv8 explicitly computes f_90 \u2248 2.88e18 and derives Q up to ~3e17, identifying that modular arithmetic is essential. This concrete analysis of the problem scale is important for implementation."}}
+{"1354-1409": {"better": ["89l909"], "neutral": ["original", "mbzpnc", "jqz5fr", "vbifge"], "worse": [], "reason": "Alternate 89l909 provides the key insight of grouping by q (floor(n/9)) and explains the block structure [9q, 9q+8]. This is the foundation for deriving the closed-form S(k) formula."}}
+{"1409-1455": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1455-1519": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1519-1530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1530-1557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1557-1589": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1589-1624": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1624-1787": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1787-1846": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1846-1869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1869-2051": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2051-2094": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2094-2104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2104-2112": {"better": ["rveqft"], "neutral": ["original", "lwrg5a", "ql4w70", "p9mfnu"], "worse": [], "reason": "Alternate rveqft derives the elegant simplification: 45*(10^Q-1)/9 = 5*(10^Q-1). This algebraic insight (45/9=5) simplifies the formula significantly."}}
+{"2112-2155": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2155-2233": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2233-2375": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2430-2462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2462-2493": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2493-2575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2575-2596": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2596-2619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2619-2643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2643-2668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2668-2681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2681-2691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2691-2712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2712-2747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2747-2754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2754-2777": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2777-2785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2785-2855": {"better": [], "neutral": ["original", "7ymhw1", "3avqmm", "fj4ne2", "9bz04m"], "worse": [], "reason": "All completions correctly identify that the initial formula gives 1075 instead of 1074 - an off-by-1 error. This is a critical error discovery that leads to formula correction."}}
+{"2855-2912": {"better": ["ji88fe"], "neutral": ["original", "o1sux1", "m4a5ka", "64wxwq"], "worse": [], "reason": "Alternates ji88fe and u3xc38 identify the root cause of the off-by-1 error: including n=0 in the q=0 block sum. They correctly reason that the full block sum includes an extra term for n=0 (r=0, q=0). Original just notes the discrepancy without diagnosing."}}
+{"2912-3032": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3032-3085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3085-3119": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3119-3144": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3144-3186": {"better": ["m3h20t", "lf2d8j"], "neutral": ["original", "21d91l", "jdq7bi"], "worse": [], "reason": "Alternates m3h20t and lf2d8j provide best diagnosis - m3h20t verifies with brute force code, lf2d8j explicitly identifies n=0 as the overcounted term with value 1. Original hypothesizes but doesn't confirm."}}
+{"3186-3400": {"better": [], "neutral": ["original", "81smgq", "yttigl", "rb2x7x", "r5mr6w"], "worse": [], "reason": "All completions correctly identify that the q=0 block includes n=0 term which contributes an extra 1 to the sum. Original explains most clearly that the overcount is exactly 1 from the r=0,q=0 term."}}
+{"3400-3432": {"better": ["5evv5j"], "neutral": ["original", "hqlz92", "lqk45m", "v984qx"], "worse": [], "reason": "Alternate 5evv5j most clearly states the fix: \"we need to subtract 1 from our sum\" to exclude the n=0 term. It derives the corrected formula. v984qx has good detailed analysis but gets confused about the -k subtraction."}}
+{"3432-3563": {"better": ["jycwh5", "42v9k6"], "neutral": ["original", "gzaqy1", "dqqunn"], "worse": [], "reason": "Alternates jycwh5 and 42v9k6 directly state the correction: jycwh5 computes 45-1=44 explicitly, and 42v9k6 states we need to subtract 1 for r=0. Original is less direct."}}
+{"3563-3756": {"better": [], "neutral": ["original", "uhye4g", "qh50or", "n4oiuc", "45tcj8"], "worse": [], "reason": "All completions correctly identify that the sum needs to subtract 1 to correct for the n=0 term. Original provides the most detailed derivation showing 45-1=44."}}
+{"3756-3817": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3817-4026": {"better": ["uy1dt0"], "neutral": ["original", "8o0qxr", "ib1vu1", "kb8tx5"], "worse": [], "reason": "Alternate uy1dt0 provides a concrete verification with k=5 showing sum=20 and formula check. Original and others explain the Q=0 edge case correctly but without explicit numerical verification."}}
+{"4026-4088": {"better": [], "neutral": ["original", "ntn3l9", "fjuvo2", "nf67vq", "1nqeb7"], "worse": [], "reason": "All completions correctly identify that the r=0 term needs to be subtracted to exclude n=0. Alternate 1nqeb7 states it most concisely."}}
+{"4088-4115": {"better": ["0iscd7"], "neutral": ["original", "blylhq", "wm2hj0", "awxm2u"], "worse": [], "reason": "Alternate 0iscd7 provides the clearest unified formula and verifies it works for Q=0 case explicitly with a worked example. Others just transition to formula without verification."}}
+{"4115-4192": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4192-4221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4221-4278": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4278-4282": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4282-4341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4341-4405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4405-4441": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4441-4540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4540-4590": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4590-4617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4617-4627": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4627-4644": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4644-4656": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4656-4672": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4672-4785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4785-4798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4798-4818": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4818-4923": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4923-4944": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4944-4951": {"better": ["qbbx7f", "1drfq9", "l3vfv3"], "neutral": ["original", "ig9mli"], "worse": [], "reason": "Alternates qbbx7f, 1drfq9, l3vfv3 all verify the corrected formula immediately by plugging in k=20 and showing 1100-26=1074. This is the critical verification that the formula correction is correct."}}
+{"4951-5018": {"better": [], "neutral": ["original", "4iuthp", "sdehbj", "as3gz5", "fcmi7s"], "worse": [], "reason": "All completions correctly verify S(20)=1074 using the derived formula. This is the key verification that the corrected formula (subtracting k+6) is correct. All arrive at the same result."}}
+{"5018-5067": {"better": [], "neutral": ["original", "gxt18x", "47xtc4", "cagz9g"], "worse": [], "reason": "All completions correctly state the final formula S(k) = 10^Q * (5 + (rem+1)*(rem+2)/2) - (k+6). Minor variations in notation but all equivalent."}}
+{"5067-5104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5104-5121": {"better": ["fvb5mv"], "neutral": ["original", "ektfjf", "7uxzrx", "xcuc56"], "worse": [], "reason": "Alternate fvb5mv provides explicit verification for S(1)=1, showing the formula works for small values. Others are transition statements without verification."}}
+{"5121-5133": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5133-5348": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5348-5359": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5359-5369": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5369-5478": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5478-5495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5495-5510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5510-5516": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5516-5526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5526-5565": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5565-5643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5643-5733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5733-5813": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5813-5874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5874-5939": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5939-5943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5943-6062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6062-6153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6153-6164": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6164-6202": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6202-6222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6316-6322": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6498-6598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6598-6605": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6605-6645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6645-6664": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6664-6685": {"better": [], "neutral": ["original", "3nzgay", "5bwdks", "bf5kea", "4ezca8"], "worse": [], "reason": "All completions correctly state or confirm the answer 922058210. Alternate 4ezca8 is more thorough in suggesting verification approaches but all reach the same correct conclusion."}}
+{"6685-6763": {"better": [], "neutral": ["original", "4voun1", "hrlfhj", "ij7f4g", "0ayftl"], "worse": [], "reason": "All completions appropriately suggest brute-force verification for small values. All transition to code implementations for testing which is good practice."}}
+{"6763-6787": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6787-6900": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6900-6936": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6936-7008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7008-7015": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7246-7318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7318-7366": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7366-7476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7476-7535": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7535-7537": {"better": ["ltdclk", "nbpuyq"], "neutral": ["original", "2rzqb6", "vk7f55"], "worse": [], "reason": "Alternates ltdclk and nbpuyq provide complete verification for S(10)=64, computing both via formula and manually (45+19=64). This thorough cross-check validates the formula."}}
+{"7537-7632": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7632-7637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7637-7733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7733-7764": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7764-7866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7866-7897": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7897-7931": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7931-7940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7940-8001": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8001-8009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8049-8064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8064-8105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8215-8452": {"better": ["pkqfwn"], "neutral": ["original", "pm26zm", "337d5e", "6xampv"], "worse": [], "reason": "Alternate pkqfwn systematically verifies S(1)=1, S(2)=3, S(3)=6, S(5)=15, S(8)=36, S(13)=181 with detailed manual calculations. This comprehensive verification builds confidence in the formula."}}
+{"8452-8461": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8461-8540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8540-8549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8569-8718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8718-8724": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8769-8787": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8807-8813": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8813-8835": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8835-8876": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8876-8897": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8897-8909": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8909-8917": {"better": [], "neutral": ["original", "6k2k9o", "mzs96e", "713tg7"], "worse": [], "reason": "Alternate has correct boxed answer 922058210 but answer has not been sufficiently repeated."}}
+{"8917-8981": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8981-9013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9013-9018": {"better": [], "neutral": ["original", "s80kgr", "5q4cqy", "t6ua7c", "u9xgjl"], "worse": [], "reason": "All completions confirm the answer is correct or transition to output. Alternate s80kgr references the S(20)=1074 verification, 5q4cqy verifies r=0 case. All equivalent."}}
+{"9018-9054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9054-9138": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9138-9314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9357-9460": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9524-9640": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9640-9656": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9680-9753": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9753-9760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9783-9820": {"better": [], "neutral": ["original", "hquh57", "1o4bsq", "fu2ofq", "4k9j33"], "worse": [], "reason": "Alternate has correct boxed answer 922058210 but answer has not been sufficiently repeated."}}
+{"9820-9912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9912-9976": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9976-10034": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10034-10039": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10039-10066": {"better": [], "neutral": ["original", "nx0uar", "8349ko", "sdd8vy", "jtjudi"], "worse": [], "reason": "Alternate has correct boxed answer 922058210 but answer has not been sufficiently repeated."}}
+{"10066-10074": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10074-10136": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10136-10219": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10219-10256": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10256-10262": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10262-10276": {"better": [], "neutral": ["original", "vofmto", "luv3vi", "zaoby5", "2xrgd0"], "worse": [], "reason": "Original has correct boxed answer 922058210 but answer has not been sufficiently repeated."}}

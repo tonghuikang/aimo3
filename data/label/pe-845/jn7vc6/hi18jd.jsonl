@@ -1,0 +1,74 @@
+{"35-76": {"better": [], "neutral": ["original", "tp9s29", "cjn17y"], "worse": [], "reason": "All three completions correctly identify the need for combinatorial counting. No significant differentiation."}}
+{"76-120": {"better": [], "neutral": ["original", "418r5y", "075pdn"], "worse": [], "reason": "All completions describe the problem setup correctly without notable differences."}}
+{"120-135": {"better": [], "neutral": ["original", "qasgn0", "5zf4ac"], "worse": [], "reason": "All completions express the same goal. No significant differentiation."}}
+{"135-147": {"better": [], "neutral": ["original", "jhvggz", "u9jeaf"], "worse": [], "reason": "All completions discuss approaches using generating functions or DP, no significant advantage."}}
+{"147-195": {"better": [], "neutral": ["original", "6uktq0", "c6tccq"], "worse": [], "reason": "All completions discuss similar counting approaches by digit length."}}
+{"195-222": {"better": [], "neutral": ["original", "k1z910", "6lario"], "worse": [], "reason": "All completions describe the same high-level approach of summing counts by length."}}
+{"222-300": {"better": [], "neutral": ["original", "m3m9wv", "qx7krp"], "worse": [], "reason": "All completions discuss the estimation/density approach with similar reasoning."}}
+{"300-317": {"better": [], "neutral": ["original", "f6popx", "iwfjd7"], "worse": [], "reason": "All completions discuss density/probability estimates. iwfjd7 does a good variance calculation but no completion is distinctly better."}}
+{"317-424": {"better": [], "neutral": ["original", "7350vq", "mw3rhk"], "worse": [], "reason": "All completions explore estimation approaches. 7350vq correctly estimates L~17 which aligns with the actual answer."}}
+{"424-961": {"better": [], "neutral": ["original", "z8jjoj", "t0spdt"], "worse": [], "reason": "All completions explore density approximations. The original has a lengthy but reasonable analysis."}}
+{"961-1160": {"better": [], "neutral": ["original", "ny1417", "xz99tg"], "worse": [], "reason": "All completions arrive at similar estimates (L~17 digits). No significant differentiation."}}
+{"1160-1309": {"better": [], "neutral": ["original", "3wmfe7", "9q6eex"], "worse": [], "reason": "All completions correctly identify that DP is feasible with small L and proceed with the algorithm design."}}
+{"1309-1322": {"better": [], "neutral": ["original", "fmvc6l", "y3cmat"], "worse": [], "reason": "All completions confirm the DP approach is sufficient with small L."}}
+{"1322-1332": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1332-1391": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1391-1501": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1501-1547": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1547-1569": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1569-1571": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1571-1628": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1628-1695": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1695-1843": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1843-1892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1892-1928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1928-1993": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1993-2050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2050-2098": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2098-2177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2177-2247": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2247-2333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2333-2472": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2472-2500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2500-2506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2506-2551": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2551-2556": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2556-2559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2559-2600": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2600-2686": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2686-2701": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2701-2761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2761-2867": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2867-2901": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2901-2912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2912-2957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2957-2990": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2990-3029": {"better": ["qjmtth"], "neutral": ["ing1e0"], "worse": ["original"], "reason": "qjmtth correctly identifies the critical issue: offset counts among numbers from 10^{L-1} to 10^L-1 (exactly L digits with leading digit non-zero), NOT all L-digit strings including leading zeros. The original wrongly states we find offset-th among all numbers in [0,10^L-1] including leading zeros, which leads to the wrong answer. ing1e0 is neutral as it doesn't clarify this distinction."}}
+{"3029-3034": {"better": [], "neutral": ["original", "huo7e7", "90f0pq"], "worse": [], "reason": "All completions commit to the leading-zeros approach without recognizing the offset issue. huo7e7 and 90f0pq explicitly discuss including leading zeros, but the error was already committed at Token 2990."}}
+{"3034-3093": {"better": [], "neutral": ["original", "unnuvb"], "worse": ["75f2vq"], "reason": "75f2vq starts the digit loop with \"For digit d from 0 to 9\" for all positions including the first, which is incorrect - the first digit should be 1-9 for counting exactly L-digit numbers. The original and unnuvb are neutral as they describe the algorithm without specifying the digit range."}}
+{"3093-3104": {"better": [], "neutral": ["original", "taf37q", "vtv73n"], "worse": [], "reason": "All completions describe the count formula correctly. The underlying issue is in which numbers to enumerate, not the counting formula."}}
+{"3104-3117": {"better": [], "neutral": ["original", "x68g5w", "gico6t"], "worse": [], "reason": "All completions describe the prime counting setup similarly."}}
+{"3117-3129": {"better": [], "neutral": ["original", "3qevca", "9xm9pl"], "worse": [], "reason": "All completions describe the completion counting formula similarly."}}
+{"3129-3153": {"better": [], "neutral": ["original", "ky9ss5", "vgyvuj"], "worse": [], "reason": "All completions describe the same formula for counting completions."}}
+{"3153-3176": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3176-3221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3221-3307": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3307-3360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3360-3446": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3446-3459": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3459-3478": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3478-3964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4164-4251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4251-4283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4320-4352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4352-4367": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4367-4418": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4418-4497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4497-4529": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4529-4597": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4597-4612": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4612-4626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4626-4974": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4974-5003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5111-5150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5172-5191": {"better": ["t8zxi1", "69thex"], "neutral": [], "worse": ["original"], "reason": "Original has wrong boxed answer 50721, correct answer is 38822. Not boxing the answer provides a chance to move on from the wrong answer."}}

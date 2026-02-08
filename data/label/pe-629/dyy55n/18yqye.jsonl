@@ -1,0 +1,165 @@
+{"184-201": {"better": [], "neutral": ["original", "mdcfmn", "q729jh", "lsrziw", "4gvb5y"], "worse": [], "reason": "All completions correctly identify this as an impartial game with Grundy numbers. The alternates provide more detail about terminal positions and Sprague-Grundy theorem, but all arrive at the same correct understanding."}}
+{"201-369": {"better": [], "neutral": ["original", "b1nswl", "mmvofi"], "worse": [], "reason": "All completions correctly frame the problem as counting partitions where XOR of Grundy numbers is nonzero. No significant quality differences."}}
+{"369-613": {"better": [], "neutral": ["original", "ge62ho", "1wv9qv"], "worse": [], "reason": "All completions correctly explain the Sprague-Grundy theorem application for splitting games - Grundy number of a position is XOR of individual pile Grundy numbers. ge62ho is more concise but all reach the same correct understanding."}}
+{"613-697": {"better": [], "neutral": ["original", "7wedg2", "mootgp"], "worse": [], "reason": "All completions correctly identify winning positions as those with XOR != 0 and correctly note G(1) = 0. No meaningful differences."}}
+{"697-732": {"better": ["vricwx"], "neutral": ["original", "u79lcp"], "worse": [], "reason": "vricwx explicitly mentions the key formula g(n) = sum_{k=2}^{n} f(n,k), which is more complete than the original which only states f(n,k) without connecting to g(n). u79lcp is too brief."}}
+{"732-789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"789-823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"823-831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"831-843": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"843-955": {"better": ["original"], "neutral": ["p0vrmx", "ed2ql2", "xcavg9"], "worse": ["gqkvcs"], "reason": "The original makes a key hypothesis: \"For k large, perhaps G(s) = s-1?\" which is exactly the insight that will simplify the problem. This is a valuable early conjecture. gqkvcs is worse because it goes into excessive detail about generating functions without making progress on the key insight."}}
+{"955-1003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1003-1062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1062-1104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1104-1243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1243-1565": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1665-1752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1752-1835": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1835-1895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1895-1940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1940-2003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2003-2075": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2075-2094": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2094-2141": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2141-2213": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2213-2638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2638-2669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2669-2799": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2799-2851": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2851-2966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2966-3027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3027-3102": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3102-3120": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3120-3127": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3127-3153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3153-3210": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3210-3263": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3263-3345": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3345-3433": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3433-3465": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3465-3651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3651-3680": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3680-3717": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3717-3729": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3729-3796": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3796-4047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4047-4050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4050-4128": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4128-4302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4302-4339": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4339-4377": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4377-4386": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4386-4441": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4441-4502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4502-4608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4608-4697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4697-4959": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4959-4965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4965-4984": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4984-5057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5057-5131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5131-5397": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5397-5442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6045-6076": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6210-6284": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6343-6382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6523-6525": {"better": ["wagakq", "oqqsla"], "neutral": ["zfijey", "jobpha"], "worse": ["original"], "reason": "The original just says \"Okay\" which provides no insight. wagakq and oqqsla explicitly identify the key insight that for k>=4 Grundy numbers are s-1, while for k=2 they alternate. This is the crucial discovery that simplifies the problem. zfijey and jobpha are generic statements about computing for each k."}}
+{"6525-6634": {"better": ["original", "fce3z6"], "neutral": ["j7vk4i"], "worse": ["zy26bh"], "reason": "The original and fce3z6 explicitly state the key insight that for k>=4, G(s)=s-1 and thus f(200,k) is identical for all k>=4. This leads directly to the simplification g(200) = f(200,2) + f(200,3) + sum_{k>=4} f(200,4). zy26bh is too vague (just mentions counting partitions). j7vk4i focuses only on verifying k=2 pattern without the k>=4 insight."}}
+{"6634-6684": {"better": ["ajwqup", "7mtdqf"], "neutral": ["original", "phnya9"], "worse": [], "reason": "ajwqup and 7mtdqf explicitly state the complete formula g(200) = f(200,2) + f(200,3) + (200-3)*f(200,4), which is the key simplification. The original is less explicit, just saying \"maybe for k=5...200 same as k=4\". phnya9 is incomplete (\"Thus we need to compute:\")."}}
+{"6684-6818": {"better": ["fe5x6b"], "neutral": ["original", "nz4t5k", "f2ws12"], "worse": [], "reason": "fe5x6b provides the most complete and explicit formula with clear reasoning: \"n-3 = 197\" and \"we only need to compute f(n,2), f(n,3), and f(n,4)\". The original and other alternates state the formula but with less clear justification."}}
+{"6818-6842": {"better": ["88boai"], "neutral": ["original", "6pctno", "nxied4"], "worse": [], "reason": "88boai provides the most complete statement including what f(200,4) represents (\"number of partitions of 200 with XOR of Grundy numbers non-zero, where G(s)=s-1\"). The other completions just state the formula without the Grundy interpretation."}}
+{"6842-6873": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6873-6892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6892-7165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7165-7252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7252-7271": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7271-7304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7304-7370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7370-7399": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7438-7487": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7535-7565": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7905-8099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8099-8221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8221-8241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8241-8273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8273-8294": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8294-8316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8316-8395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8395-8422": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8422-8440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8440-8558": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8558-8690": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8690-8930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8930-8993": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9087-9105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9105-9129": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9129-9160": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9160-9164": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9164-9171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9171-9174": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9174-9186": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9186-9206": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9206-9258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9258-9264": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9264-9293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9293-9368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9368-9387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9387-9424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9424-9435": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9435-9446": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9446-9452": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9452-9497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9497-9560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9560-9587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9587-9604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9604-9648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9648-9706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9706-9738": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9738-9745": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9745-10071": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10071-10304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10304-10313": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10313-10471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10675-10696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10696-10727": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10766-10855": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10855-10895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10895-10935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10935-10992": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11049-11066": {"better": ["gyq729"], "neutral": ["original", "pw0w7a", "qvaw82", "m9k0xb"], "worse": [], "reason": "gyq729 proposes to verify the key assumption that f(n,k) is identical for k>=4 by checking f(200,k) for k=4..10. This verification step strengthens confidence in the answer. The other completions just state the answer without suggesting verification."}}
+{"11066-11115": {"better": ["i52at9"], "neutral": ["original", "56sehp", "4n13vf", "14jbcp"], "worse": [], "reason": "i52at9 verifies the correctness of the solution by reasoning about problem semantics - confirming partitions match the definition (unordered sets), and that terminal positions (all ones) align with Grundy theory for impartial games. This thorough verification is more valuable than just suggesting to check f(200,5) and f(200,6)."}}
+{"11115-11164": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11164-11215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11253-11363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11363-11377": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11377-11439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11439-11485": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11577-11602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11602-11671": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11695-11702": {"better": [], "neutral": ["original", "pw0w7a", "j4o902", "6zju38", "6ypy90"], "worse": [], "reason": "Alternate has correct boxed answer 626616617 but answer has not been sufficiently repeated."}}
+{"11702-11977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11977-11991": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11991-12015": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12015-12062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12062-12158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12158-12238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12238-12250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12315-12340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12340-12369": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12369-12384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12384-12540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12540-12569": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12609-12659": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12726-12791": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12875-13035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13035-13093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13154-13159": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13159-13165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13165-13232": {"better": [], "neutral": ["original", "idvzod", "ihemho", "b6ukou", "m8ivdr"], "worse": [], "reason": "Alternate has correct boxed answer 626616617 but answer has not been sufficiently repeated."}}
+{"13232-13298": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13298-13335": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13335-13405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13534-13543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13543-13555": {"better": [], "neutral": ["original", "n6zb3i", "lws0li", "8d3bx5", "qaroul"], "worse": [], "reason": "Alternate has correct boxed answer 626616617 but answer has not been sufficiently repeated."}}
+{"13555-13565": {"better": [], "neutral": ["original", "t7lzts", "eoa6tp", "55tdyf", "v8jh1o"], "worse": [], "reason": "Alternate has correct boxed answer 626616617 but answer has not been sufficiently repeated."}}
+{"13565-13576": {"better": [], "neutral": ["original", "eokjkt", "6v5tn8", "6m4b4w", "od2aim"], "worse": [], "reason": "Original has correct boxed answer 626616617 but answer has not been sufficiently repeated."}}

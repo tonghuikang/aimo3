@@ -1,0 +1,240 @@
+{"124-256": {"better": [], "neutral": ["original", "mtv1m8", "osemtb"], "worse": [], "reason": "All three completions identify the key conjugate pair (sqrt(p)+sqrt(q)) and (sqrt(q)-sqrt(p)) and begin exploring whether their powers sum to integers. The original and osemtb are more detailed, while mtv1m8 is slightly briefer, but all reach similar conclusions and make comparable progress toward the solution."}}
+{"256-334": {"better": [], "neutral": ["original", "xrl3a6", "9rcsyc"], "worse": [], "reason": "All three define a = sqrt(p)+sqrt(q) and b = sqrt(q)-sqrt(p) and note a*b = q-p. The original and xrl3a6 are concise; 9rcsyc begins expanding binomials which is a valid approach. All make similar progress toward the key identity."}}
+{"334-474": {"better": [], "neutral": ["original", "pb3of9", "0rpfe3"], "worse": [], "reason": "All three make the simple observation that both a and b are positive (since q > p). The original begins exploring whether a^n + b^n is integer, which is a reasonable next step. The alternates simply confirm positivity. All make comparable incremental progress."}}
+{"474-1052": {"better": [], "neutral": ["original", "xq8hqu", "h3xw9e"], "worse": [], "reason": "All three verify with the concrete example p=2, q=3 that a^2 + b^2 = 10 (integer). The original provides a longer, more detailed binomial expansion argument. The alternates are more concise but reach the same conclusion. All correctly establish that a^{2n} + b^{2n} is integer."}}
+{"1052-1646": {"better": [], "neutral": ["original", "1pwu4z", "9f2nuu"], "worse": [], "reason": "All three identify the key condition b < 1 for the fractional part to approach 1, and analyze what happens when b >= 1. The original is longer and considers details about when b^{2n} might or might not tend to zero. Alternates 1pwu4z and 9f2nuu are somewhat more concise and direct. All reach the same correct conclusion about the b < 1 condition."}}
+{"1646-2003": {"better": ["3rqd21"], "neutral": ["zt84qi"], "worse": ["original"], "reason": "The original gets bogged down computing a^{2n} for p=2, q=10 where b>1, exploring a tangent about non-integer b^{2n}. Alternate 3rqd21 provides the key algebraic identity: writing b^{2n} = B + f (integer + fractional), showing frac(a^{2n}) = 1 - f, and then correctly analyzing when this approaches 1. This is cleaner and more direct. Alternate zt84qi is brief but points in the right direction. The original is less efficient because it tests a case where b>1, which is not the main path."}}
+{"2003-2356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2356-2424": {"better": ["twy4f9"], "neutral": ["original", "blregv"], "worse": [], "reason": "Alternate twy4f9 is better because it comprehensively analyzes all cases: b<1 gives fractional part tending to 1, b=1 gives fractional part always 0, and b>1 gives fractional part not approaching 1 (due to equidistribution). This gives the complete necessary-and-sufficient condition in one step. The original and blregv both correctly identify b<1 as the key condition but do not analyze the b=1 and b>1 cases as thoroughly."}}
+{"2424-2479": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2479-2711": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2711-2751": {"better": ["6wvktg"], "neutral": ["original", "rlwc7x"], "worse": [], "reason": "Alternate 6wvktg is better because it immediately derives the algebraic condition: sqrt(q) < 1 + sqrt(p) implies q < (1+sqrt(p))^2 = 1 + 2*sqrt(p) + p, and then characterizes the integer constraint q-p < 1+2*sqrt(p). This directly advances toward the bound formula. The original and rlwc7x merely state the condition sqrt(q)-sqrt(p) < 1 without deriving the integer constraint."}}
+{"2751-2765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2765-3079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3079-3093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3093-3104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3104-3163": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3163-3269": {"better": [], "neutral": ["original", "wur6ah", "xvyo0k"], "worse": [], "reason": "The original suggests rewriting as q <= p + floor(2*sqrt(p)), which is wrong (too restrictive), but hedges with \"need to compute precisely.\" Alternate wur6ah proposes the same wrong bound but also notes \"need exact inequality.\" Alternate xvyo0k avoids committing to a specific wrong bound by trying an alternative algebraic manipulation. All three are similarly positioned -- none derives the correct bound yet, and none fully commits to an error that cannot be corrected."}}
+{"3269-3698": {"better": [], "neutral": ["original", "cp541q", "85fbpq"], "worse": [], "reason": "THE WRONG BOUND. The original derives q <= p + floor(2*sqrt(p)) through a flawed floor argument. Alternate 85fbpq reaches the same wrong bound q <= floor(p + 2t) for non-perfect-square p. Alternate cp541q is vaguer and does not commit to a specific wrong bound, but also does not derive the correct one. All three fail to arrive at the correct bound q <= ceil(p + 2*sqrt(p)), so none is meaningfully better or worse than the others at this critical juncture."}}
+{"3698-3724": {"better": [], "neutral": ["original", "i5xo7u", "9lodnv"], "worse": [], "reason": "All three state the same wrong bound q <= p + floor(2*sqrt(p)). The original spells it out as a difference condition, while alternates i5xo7u and 9lodnv state it more concisely. Since all commit to the identical incorrect bound, none is better or worse than the others. The error will need to be caught downstream."}}
+{"3724-4014": {"better": ["original"], "neutral": [], "worse": ["31eno9", "afmg3b"], "reason": "KEY ERROR DISCOVERY. The original tests the borderline case p=2, q=5 and discovers that sqrt(5)-sqrt(2)=0.822 < 1 but q=5 > p+floor(2*sqrt(p))=4, proving the derived bound is too restrictive. This self-correction is critical for reaching the right answer. Alternate 31eno9 merely notes \"p < q, so difference positive\" -- trivial and misses the error entirely. Alternate afmg3b accepts the wrong bound q-p <= floor(2*sqrt(p)) without questioning it and moves on to p+q <= 2011. Both alternates fail to catch the error, which would lead to an incorrect final answer."}}
+{"4014-4042": {"better": ["maygui"], "neutral": ["original"], "worse": ["ty1odx"], "reason": "The original simply restates q < p + 2*sqrt(p) + 1 without verification. Alternate maygui is better because it immediately computes the concrete example p=2 and shows q must be less than 5.8284, so q<=5, confirming q=5 qualifies. This directly resolves the earlier error. Alternate ty1odx is worse because it again suggests q <= floor(p + 2*sqrt(p)), which is the same wrong bound that was just shown to be too restrictive."}}
+{"4042-4419": {"better": ["akqd13"], "neutral": ["original", "ehpezt"], "worse": [], "reason": "The original works through the correction carefully, computing L = p + 2*sqrt(p) + 1 and realizing floor(L) = 5 for p=2, which includes q=5. It identifies the discrepancy with the earlier wrong bound but takes a long path. Alternate ehpezt also discovers the bound is too strict by testing p=2, q=5 -- similar progress to original. Alternate akqd13 is better because it directly and correctly derives q <= p + floor(2*sqrt(p)) + 1 with clear algebraic reasoning, correctly handling both perfect-square and non-perfect-square cases, arriving closest to the correct final bound in a single step."}}
+{"4419-4539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4539-4861": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4861-4950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4950-5011": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5011-5026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5026-5033": {"better": ["logkqp"], "neutral": ["mvmp7k"], "worse": ["original"], "reason": "The original merely states \"Thus condition is q <= S\" which is a terse reference to the previously-defined S without simplification. Alternate logkqp is significantly better: it proposes q <= ceil(p + 2*sqrt(p)) and then thoroughly verifies it with four examples (p=2, p=9, p=1, p=4, p=3), covering both perfect-square and non-perfect-square cases. This is the correct unified bound that the trace needs. Alternate mvmp7k provides an equivalent formulation using floor but is less clean. logkqp's direct verification makes it clearly superior."}}
+{"5033-5270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5270-5287": {"better": [], "neutral": ["original", "gkrmwu", "xkhsf8"], "worse": [], "reason": "All three state the correct bound q <= ceil(p + 2*sqrt(p)). The original adds \"Let's verify with examples\" which is helpful. The alternates are more terse but equivalent. All arrive at the same correct condition."}}
+{"5287-5332": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5332-5391": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5391-5472": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5472-5566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5566-5587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5587-5890": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5890-6273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6273-6325": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6325-6466": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6466-6513": {"better": ["bfhcew"], "neutral": ["original", "ymupc6"], "worse": [], "reason": "Alternate bfhcew is better because it derives the full formula N(p,q) = ceil(-2011/(2*log10(b))) in one step, providing the complete closed-form expression needed for computation. The original and ymupc6 both correctly state b^{2n} <= 10^{-2011} but the original leaves the formula implicit, and ymupc6 states it but less completely than bfhcew which also explains the sign logic clearly."}}
+{"6513-6559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6559-6593": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6593-6631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6631-6655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6655-6673": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6673-6713": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6713-6783": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6783-6839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6839-6846": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6846-6950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6950-7100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7100-7228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7228-7405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7405-7773": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7773-7789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7789-7852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7852-7977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7977-8027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8027-8303": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8303-8572": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8572-8612": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8612-8629": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8629-8706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8706-8848": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8848-8930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8930-8933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8933-8940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8940-8957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8957-8966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8966-9068": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9068-9078": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9078-9128": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9128-9166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9166-9204": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9204-9670": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9670-9700": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9700-9891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9891-9904": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9904-10056": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10056-10062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10062-10332": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10332-10407": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10407-10437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10437-10493": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10493-10535": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10535-10575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10575-10579": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10579-10625": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10625-10630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10630-10633": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10633-10667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10667-10848": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10848-10869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10869-10924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10924-10942": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10942-10946": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10946-10970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10970-11178": {"better": ["b06uro"], "neutral": ["original", "atbhy2"], "worse": [], "reason": "Alternate b06uro is slightly better because it includes the modular reduction (total + N) % MOD inside the loop, which is more memory-efficient and directly computes the answer modulo 99991. The original computes the full sum without modular reduction, requiring a separate mod step later. Alternate atbhy2 also includes modular reduction and adds a pair counter, similar to b06uro. All three implement the correct algorithm."}}
+{"11178-11189": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11222-11245": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11281-11295": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11295-11352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11352-11382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11382-11409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11409-11423": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11423-11462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11462-11501": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11501-11530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11530-11557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11557-11596": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11596-11626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11626-11632": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11632-11655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11655-11708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11708-11861": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11861-11895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11895-12003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12265-12302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12302-12326": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12326-12368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12368-12391": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12391-12412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12412-12523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12523-12598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12598-12747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12747-12810": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12918-13007": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13007-13018": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13018-13440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13440-13454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13523-13545": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13545-13584": {"better": ["rpel5a"], "neutral": ["original"], "worse": ["4dja9l"], "reason": "Alternate rpel5a is better because it concisely states the sum and immediately computes the correct final answer modulo 99991 = 77726, moving efficiently toward conclusion. The original notes the sum seems correct but then wants to do more checking, which is reasonable but slower. Alternate 4dja9l goes into a lengthy analysis of tolerance checking and potential errors in the verification code, which is unnecessarily cautious at this stage when the computation has already been verified."}}
+{"13584-13598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13598-13698": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13698-13712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13712-13780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13780-13815": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13815-13872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13872-13924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13924-13935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13935-13952": {"better": [], "neutral": ["original", "00d64q", "j1hlsl"], "worse": [], "reason": "All three state the answer is 77726 modulo 99991. The original says \"we need to compute answer modulo 99991, which is 77726.\" Alternates 00d64q and j1hlsl say essentially the same thing. All arrive at the correct answer with similar directness."}}
+{"13952-13973": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13973-14072": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14072-14218": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14218-14310": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14310-14543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14543-14552": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14552-14616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14616-14721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14721-14732": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14755-14773": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14773-14811": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14811-14870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14870-15100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15100-15106": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15132-15156": {"better": ["original"], "neutral": [], "worse": ["ywrkjn", "ucx7xq"], "reason": "The original explicitly states the sum value (709,313,889) and computes the final answer (77726 mod 99991), providing complete information. Alternates ywrkjn (\"N and sum appear consistent\") and ucx7xq (\"sum total is reliable\") are vague and do not state the actual answer value, which is less useful at this critical conclusion point."}}
+{"15156-15184": {"better": ["lf3hlq", "kjanph"], "neutral": [], "worse": ["original"], "reason": "The original wastes time questioning whether 99991 is prime, which is irrelevant to computing a modular remainder. Alternates lf3hlq (\"produce final answer in boxed format\") and kjanph (\"correct is 77726\") both move toward concluding, with kjanph explicitly confirming the correct answer. Both are more productive than the original's tangent."}}
+{"15184-15236": {"better": ["ic42t7", "sav2pp"], "neutral": [], "worse": ["original"], "reason": "The original continues with unnecessary further checking of floating-point edge cases after the answer has already been verified. Alternates ic42t7 (\"Thus answer: 77726\") and sav2pp (\"Now we can provide final answer\") correctly recognize the computation is complete and move to state the final answer. At this point further verification is wasteful."}}
+{"15236-15265": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15265-15401": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15401-15414": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15785-16297": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16297-16706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16706-17061": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17061-17065": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17065-17104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17158-17181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17181-17224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17224-17247": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17273-17403": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17403-17950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17950-18030": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18030-18085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18085-18089": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18089-18145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18145-18186": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18186-18269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18269-18354": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18354-18392": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18392-18482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18482-18597": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18597-18619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18619-18673": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18673-18690": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18690-18761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18761-19336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19336-19741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19741-19767": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19767-19780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19780-19805": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19805-19829": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19829-19960": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19960-19967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19967-19992": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19992-20046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20046-20203": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20203-20207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20233-20257": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20257-20400": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20439-20526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20549-20616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20652-20687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20687-20705": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20705-20854": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20854-20870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20890-20905": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20905-20909": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20909-21100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21100-21177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21177-21188": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21188-21288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21288-21348": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21348-21631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21631-21810": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21810-21828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21828-21914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21914-21919": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21919-21943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21943-21980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21980-21997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21997-22047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22047-22305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22305-22391": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22391-22453": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22453-22522": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22522-22526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22526-22616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22616-22621": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22621-22629": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22629-22648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22648-22683": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22683-22689": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22689-22708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22732-22741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22741-22831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22831-22844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22844-22867": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22867-22884": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22884-22893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22893-22912": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 77726. Correct answer has been sufficiently repeated in history."}}

@@ -1,0 +1,237 @@
+{"114-181": {"better": [], "neutral": ["original", "h7fi2b", "cqs8un", "0ftdsa", "8kz5up"], "worse": [], "reason": "All completions correctly identify that they need to compute the sum of contiguous integer substrings and explore the interpretation of leading zeros. They all reach the same correct understanding that substrings are interpreted as integers (so \"02\" = 2)."}}
+{"181-340": {"better": ["original"], "neutral": ["2urdli", "tvlsmw", "poes9m", "q0zgzy"], "worse": [], "reason": "The original provides more detail by beginning to outline the formula approach (sum_{i=1..L} d_i * f(i)) and recognizes it's a contribution-based calculation. The alternates simply state a formula is needed without beginning to derive it."}}
+{"340-504": {"better": ["pq1rvm"], "neutral": ["original", "hxg6s0", "zsu86d", "ecxc8w"], "worse": [], "reason": "pq1rvm directly derives the correct formula S = sum d_i * i * (10^{L-i+1} - 1)/9 in a concise and complete way. The original and other alternates begin deriving but don't complete to the closed form in this token."}}
+{"504-679": {"better": [], "neutral": ["original", "1kfnbe", "a895dq", "zdhx9y", "o44joc"], "worse": [], "reason": "All completions derive the same correct formula for digit contributions, arriving at the geometric sum (10^{L-t+1} - 1)/9. They use equivalent reasoning."}}
+{"679-730": {"better": [], "neutral": ["original", "4h8dnn", "my20uk", "o3eq5i", "frtv1a"], "worse": [], "reason": "All completions state the same correct formula and note the need for modular inverse of 9. No substantive difference in reasoning quality."}}
+{"730-836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"836-884": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"884-928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"928-973": {"better": [], "neutral": ["original", "maflly", "yuvmdm", "x0fqf9", "9jbv8f"], "worse": [], "reason": "All alternates correctly compute t=4 contribution as 4*4*1=16. Mathematically equivalent with minor formatting differences."}}
+{"973-996": {"better": [], "neutral": ["original", "q8s9w3", "7yer0r", "1ddfpq", "l41tc3"], "worse": [], "reason": "All completions correctly verify that the formula gives 2222+0+66+16 = 2304, matching the example. This confirms the formula is correct."}}
+{"996-1030": {"better": ["vf8sal"], "neutral": ["original", "sbggzd", "1idfvg", "n0f52r"], "worse": [], "reason": "vf8sal makes progress by introducing the key insight that C consists of K repetitions of P and introduces notation L_P for the pattern length. The others just restate the formula without this forward progress."}}
+{"1030-1043": {"better": ["nxbb1u"], "neutral": ["original", "c5dtuy", "a7o8ft"], "worse": ["wdfae1"], "reason": "nxbb1u advances the solution by noting we need to handle K copies of P. Original and c5dtuy set up MOD notation. wdfae1 is vague (\"prefix structure\")."}}
+{"1043-1109": {"better": ["original"], "neutral": ["vxdnzb", "lh8p68"], "worse": ["c571p1", "gacjmy"], "reason": "Original correctly introduces notation M = length(P), L = M*K, K=10^12 which is essential. vxdnzb and lh8p68 are okay. c571p1 and gacjmy are too vague."}}
+{"1109-1174": {"better": ["original"], "neutral": ["c4h8i9", "sawyzt"], "worse": ["ut559c", "asdqcw"], "reason": "Original clearly explains the periodicity: d_pos = d[(pos-1) mod M + 1], which is key to the solution. c4h8i9 and sawyzt note periodicity less precisely. ut559c and asdqcw are vague."}}
+{"1174-1214": {"better": ["0t3nyu"], "neutral": ["original", "xjrqkr"], "worse": ["yhywin", "svehl3"], "reason": "0t3nyu explicitly writes the sum with i_mod showing periodic structure. Original and xjrqkr state the sum correctly. yhywin and svehl3 are too vague."}}
+{"1214-1230": {"better": ["original"], "neutral": ["rwggu2", "9fqbg1"], "worse": ["900v0r", "tkdh90"], "reason": "Original correctly identifies that huge L prevents iteration, must use periodicity. rwggu2 and 9fqbg1 set up computation. 900v0r and tkdh90 don't address the key complexity issue."}}
+{"1230-1368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1368-1425": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1425-1431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1431-1458": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1458-1476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1476-1490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1490-1497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1497-1536": {"better": ["j95zvp"], "neutral": ["original", "e8sdit", "bujzhs", "dntb9z"], "worse": [], "reason": "j95zvp clearly defines the indexing i = u*M + r with u=0..K-1 (block index), r=1..M (position within block). All correct but j95zvp is cleanest."}}
+{"1536-1577": {"better": ["2cvogm"], "neutral": ["original", "rqj3a2"], "worse": ["2vy5f3", "x3ee31"], "reason": "2cvogm gives the clearest formulation i = r + t*M with ranges specified. Original and rqj3a2 are also correct. 2vy5f3 is too brief. x3ee31 restarts notation unnecessarily."}}
+{"1577-1640": {"better": ["8qgm53"], "neutral": ["original", "gawlr6", "2riw3a", "530f8f"], "worse": [], "reason": "8qgm53 immediately simplifies the double sum, factoring out to M*sum(t) + K*j. Others correctly express B but don't simplify as quickly."}}
+{"1640-1690": {"better": [], "neutral": ["original", "ad0qjt", "vgxj7p", "fzuh8d", "hy8icj"], "worse": [], "reason": "All alternates correctly compute the inner sum = M*(K-1)*K/2 + K*j. Minor variations in notation don't affect correctness."}}
+{"1690-1719": {"better": ["t6anx7", "lr6lt6"], "neutral": ["original", "hhzwen", "y2zvu5"], "worse": [], "reason": "t6anx7 and lr6lt6 immediately factor B into sum_j d[j] and sum_j d[j]*j terms, which is the key insight. Others correct but don't factor."}}
+{"1719-1760": {"better": ["binpp9"], "neutral": ["original", "j98xxw", "uo1g74"], "worse": ["8bjvwc"], "reason": "binpp9 introduces S_d notation which helps organize the computation. Original and others are correct. 8bjvwc has confusing \"Wait factor\" that distracts."}}
+{"1760-1800": {"better": [], "neutral": ["original", "1mqc8x", "hjggrv", "vtjswm", "mqe8xx"], "worse": [], "reason": "All completions correctly define the key sums S0 (digit sum) and S1 (weighted digit sum). These are essential intermediate values for the solution."}}
+{"1800-1827": {"better": [], "neutral": ["original", "04pa23", "wdp8mq", "201vfz", "l1y2hy"], "worse": [], "reason": "All completions correctly state the key formula B = (M * K*(K-1)/2) * S0 + K * S1 with modular computation notes."}}
+{"1827-1874": {"better": ["u66xky"], "neutral": ["original", "541z3n"], "worse": ["vk7f55", "mjh3t2"], "reason": "u66xky provides detailed analysis of the approximate size of M and explicitly explains the computational approach needed. vk7f55 is trivial (\"Ok\") and mjh3t2 simply restates the A formula without advancing the solution."}}
+{"1874-1924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1924-1930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1930-1964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1964-1999": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1999-2046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2046-2075": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2075-2177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2177-2219": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2219-2274": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2274-2306": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2306-2354": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2354-2376": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2376-2428": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2428-2460": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2460-2473": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2473-2506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2506-2562": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2562-2614": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2614-2686": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2686-2748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2748-2846": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2846-2961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2961-2997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2997-3893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3893-4195": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4195-4265": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4265-4322": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4322-4401": {"better": ["ziya7e"], "neutral": ["original", "qk4w5w", "1p6r5g"], "worse": ["0ky8br"], "reason": "ziya7e provides detailed calculation of prime count by digit length, showing M could be 5-7 million. Original explains iterative computation of W0. 0ky8br just mentions computing \"quickly\" without details."}}
+{"4401-4441": {"better": ["ll3w92"], "neutral": ["original", "xym9x8", "qmbd97"], "worse": ["0henyj"], "reason": "ll3w92 explains the iterative algorithm with running inv10^j and gives complexity analysis O(M). Original and others are correct. 0henyj is too terse, just restating formula."}}
+{"4441-4454": {"better": ["hstsq5"], "neutral": ["original", "jer789", "ayb266"], "worse": ["ur4ki1"], "reason": "hstsq5 gives clear algorithm structure with running position index. Original and others are okay. ur4ki1 gets bogged down in calculations that distract from the main implementation plan."}}
+{"4454-4482": {"better": ["qjhr3n"], "neutral": ["f75pnx", "dhzvj4"], "worse": ["original", "0zh3jr"], "reason": "qjhr3n correctly identifies we can process streaming without storing all digits. f75pnx and dhzvj4 provide useful analysis. Original and 0zh3jr spend too much time on approximations that could be computed directly."}}
+{"4482-4501": {"better": ["lil2dm"], "neutral": ["33is61", "z9h6y7"], "worse": ["original", "9ovocf"], "reason": "lil2dm gives clear plan to generate primes and compute sums with reasonable complexity estimate. 33is61 and z9h6y7 are okay. Original and 9ovocf continue with verbose estimates instead of proceeding to implementation."}}
+{"4501-4504": {"better": [], "neutral": ["original", "zh944r", "fxwnb0", "lpm444", "sazlyl"], "worse": [], "reason": "All alternates transition appropriately to implementation planning. Minor differences in verbosity and estimates don't affect correctness."}}
+{"4504-4748": {"better": ["j45sun"], "neutral": ["original", "y58h4x", "fitthi"], "worse": ["bqhhvf"], "reason": "j45sun provides the exact value of the millionth prime (15485863) and clear sieve strategy. Original and others are reasonable. bqhhvf is too brief, lacking useful details."}}
+{"4748-4775": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4775-4793": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4793-4807": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4807-4813": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4813-4819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4819-4873": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4873-4875": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4875-4906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4906-5022": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5022-5054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5054-5059": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5059-5088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5088-5111": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5111-5156": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5156-5160": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5160-5190": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5190-5194": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5194-5220": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5220-5245": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5245-5264": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5264-5290": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5290-5423": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5423-5434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5434-5500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5500-5518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5518-5589": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5589-5610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5610-5639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5639-5672": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5672-5685": {"better": [], "neutral": ["original", "85ihwg"], "worse": [], "reason": "All alternates express the same term2 = K_mod * S1 computation with minor formatting differences. Mathematically equivalent."}}
+{"5685-5696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5696-5700": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5700-5851": {"better": ["original"], "neutral": ["tu8bdb", "6bphyd"], "worse": ["r4785v", "e706uu"], "reason": "Original provides detailed explanation of how Python's pow handles large exponents (10^12) efficiently via repeated squaring, which is valuable context. tu8bdb and 6bphyd are decent but less detailed. r4785v is too brief. e706uu jumps to formula without setup."}}
+{"5851-5938": {"better": [], "neutral": ["original", "koke3v", "ahnmfl", "u43qp8", "uils6b"], "worse": [], "reason": "All alternates correctly discuss computing R^K = pow(R, K, MOD). Slight variations in explanation but all mathematically equivalent and correct."}}
+{"5938-5945": {"better": ["mdhkz0"], "neutral": ["kt4wjn", "94q8cw"], "worse": ["kjfk7l"], "reason": "mdhkz0 is better because it provides the explicit formula for S_t = sum t*R^t with computation details. kt4wjn and 94q8cw are also reasonable. kjfk7l just restates \"need S_t\" without providing the formula."}}
+{"5945-5978": {"better": ["z36b97"], "neutral": ["original", "wb4r4v"], "worse": ["bd4gtf", "rcst7y"], "reason": "z36b97 provides thorough analysis of when R=1 might occur (order of 10 mod MOD), explains why M ~ millions won't cause this. Original and wb4r4v are reasonable. bd4gtf and rcst7y are too brief."}}
+{"5978-5981": {"better": ["kumg2p"], "neutral": ["omo775", "luqgaf"], "worse": ["original", "5zdbxc"], "reason": "kumg2p provides thorough explanation of edge case (R=1) and why it won't happen. omo775 and luqgaf are serviceable. Original \"So compute:\" and 5zdbxc are too terse, lacking substance."}}
+{"5981-6008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6008-6011": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6011-6043": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6043-6082": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6082-6102": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6102-6147": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6147-6201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6201-6251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6251-6314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6314-6413": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6413-6419": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6419-6460": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6460-6534": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6534-6537": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6537-6544": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6544-6559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6559-6591": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6591-6632": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6632-6643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6643-6857": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6857-6861": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6861-6912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6912-6931": {"better": ["original", "91qdcp"], "neutral": ["zylcn2", "0j2tll", "926sdn"], "worse": [], "reason": "Original and 91qdcp state the correct final formula S = inv9 * (A - B) % MOD with the important reminder about handling negative modulo. The others don't state the key formula."}}
+{"6931-6938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6938-6941": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6941-6956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6956-7023": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7023-7029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7029-7034": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7034-7060": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7060-7074": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7074-7126": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7126-7157": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7194-7234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7283-7302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7302-7332": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7332-7334": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7334-7342": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7342-7386": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7386-7389": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7389-7396": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7396-7433": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7433-7446": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7446-7480": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7480-7482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7482-7505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7505-7518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7518-7567": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7567-7576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7576-7593": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7593-7596": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7596-7611": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7611-7638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7638-7664": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7664-7685": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7685-7694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7694-7697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7697-7706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7706-7768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7768-7890": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7890-7913": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7913-7943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7943-7961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7961-7976": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7976-8030": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8030-8037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8037-8171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8171-8202": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8230-8448": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8448-8514": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8569-8587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8587-8616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8661-8718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8798-8804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8804-8859": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8859-9038": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9038-9095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9148-9167": {"better": ["1aydle"], "neutral": ["original", "iw966i", "x3bmcm", "r9e9ed"], "worse": [], "reason": "1aydle provides the best analysis by computing and verifying that 7.2M/1M = 7.245905 digits per prime, which is plausible for primes with 6-8 digits. The other completions state the value but don't verify it as carefully."}}
+{"9167-9185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9185-9213": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9213-9228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9228-9242": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9242-9282": {"better": ["i1dlx0", "uwfh7g"], "neutral": ["original", "eanlsz", "mlnlxt"], "worse": [], "reason": "i1dlx0 correctly moves forward to computing the final answer with K=10^12. uwfh7g provides useful sanity check that S0 < 9*total_digits. The original unnecessarily checks exact values when mod values are sufficient."}}
+{"9282-9384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9384-9415": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9493-9511": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9511-9521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9521-9530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9530-9539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9539-9547": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9547-9574": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9602-9608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9608-9638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9663-9750": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9789-9799": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9799-9821": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9848-9871": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9901-9926": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9956-9981": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10014-10046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10081-10105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10139-10168": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10219-10253": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10294-10360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10360-10364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10364-10437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10471-10499": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10499-10533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10533-10576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10610-10644": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10677-10706": {"better": [], "neutral": ["original", "osrvrw", "701yk7", "dun7e9", "8cu3eg"], "worse": [], "reason": "All completions compute S = inv9 * (A - B) % MOD, the final step of the formula. They all use equivalent code."}}
+{"10734-10781": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10781-10817": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10817-10902": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10902-10953": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10984-11010": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11041-11056": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11056-11071": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11071-11669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11669-11681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11719-11731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11731-11736": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11736-11763": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11790-11813": {"better": [], "neutral": ["original", "hr3uow", "uyql3d", "lqxxgv", "5eqaev"], "worse": [], "reason": "All completions correctly state the final answer S(C(1e6, 1e12)) mod MOD = 879,476,477. The original and alternates all reach the same correct answer using equivalent reasoning."}}
+{"11813-11965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11965-11982": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11982-11987": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11987-12035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12035-12067": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12067-12110": {"better": ["pm0cpe", "mfgswj", "51ixt8"], "neutral": ["original", "wonafl"], "worse": [], "reason": "pm0cpe, mfgswj, and 51ixt8 directly state the final answer S = 879,476,477. The original discusses verification of X^{-K} computation, which is less direct."}}
+{"12110-12252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12252-12280": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12280-12297": {"better": ["original", "d46x3r"], "neutral": ["fxaqg6", "tazyc4", "vj7san"], "worse": [], "reason": "Original and d46x3r directly state the final answer 879476477, which is correct. The other alternates discuss verification details but don't commit to the answer."}}
+{"12297-12309": {"better": [], "neutral": ["original", "z5k6il", "rwhxg9", "4kslo8", "9zd7j9"], "worse": [], "reason": "Original has correct boxed answer 879476477 but answer has not been sufficiently repeated."}}

@@ -1,0 +1,167 @@
+{"568-598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"598-620": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"620-643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"643-668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"668-691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"691-715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"715-730": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"730-771": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"771-842": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"842-1236": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1236-1271": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1271-1290": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1290-1304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1304-1392": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1392-1437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1437-1561": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1561-1588": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1588-1648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1648-1677": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1677-1765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1765-1781": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1781-1933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1933-1967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1967-2011": {"better": ["559cyl", "nwwiu2"], "neutral": ["original"], "worse": [], "reason": "559cyl explicitly proves p=2 cannot work using parity. nwwiu2 provides rigorous double-check that p|4k^2+1 is necessary. Both show more thorough verification than original which only examines the converse direction."}}
+{"2011-2103": {"better": ["5qwkrg"], "neutral": ["original", "ndpn83"], "worse": [], "reason": "5qwkrg provides a complete proof that p=2 cannot divide both consecutive terms (using parity argument: subtracting conditions gives 1 \u2261 0 mod 2, contradiction). Original and ndpn83 start the verification but 5qwkrg is more complete."}}
+{"2103-2139": {"better": ["j7kxue"], "neutral": ["original", "kaqkvj"], "worse": [], "reason": "j7kxue provides a complete derivation including both directions of the proof: p|4k^2+1 is necessary AND sufficient (shows how to construct valid n). Original and kaqkvj cover part of the argument."}}
+{"2139-2197": {"better": [], "neutral": ["original", "dkknlv", "ie3fil"], "worse": [], "reason": "All completions continue the derivation correctly. ie3fil summarizes the complete reasoning. Equivalent progress."}}
+{"2197-2272": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2272-2289": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2289-2441": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2441-2463": {"better": ["l2retm", "rf0r7n"], "neutral": ["original"], "worse": [], "reason": "l2retm and rf0r7n explicitly state the key result P(k) = largest prime divisor of 4k^2+1, with rf0r7n additionally confirming that p=2 cannot appear. Original only states the set equivalence without explicitly giving the formula for P(k)."}}
+{"2463-2521": {"better": ["hlzz0v"], "neutral": ["original", "gvvv1g"], "worse": [], "reason": "hlzz0v provides the most complete statement, noting that if 4k^2+1 is prime then P(k) equals that prime, otherwise we need the largest prime factor. Original and gvvv1g are more concise but equivalent."}}
+{"2521-2579": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2579-2612": {"better": [], "neutral": ["original", "ofkpaj", "qp569c"], "worse": [], "reason": "All completions correctly reduce the problem to computing sum of largest prime factors of 4k^2+1. Equivalent statements."}}
+{"2612-2705": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2705-2785": {"better": ["f8zm7d"], "neutral": ["original", "xrsa7k"], "worse": [], "reason": "f8zm7d provides the most complete algorithm description: sieve for largest prime factor, processing primes in decreasing order, marking if not already set. Original notes the problem with precomputing SPF. xrsa7k suggests sieve approach but less detailed."}}
+{"2785-3401": {"better": ["original"], "neutral": ["iy92f5"], "worse": ["irbtxf"], "reason": "Original provides the most detailed algorithm: sieve small primes up to sqrt(max), divide out completely, then cofactor is either 1 or prime > sqrt(max). iy92f5 notes the connection to n^2+1 form. irbtxf gives trivial observation about congruence mod 4 without algorithmic insight."}}
+{"3401-3568": {"better": ["pga2ng"], "neutral": ["original", "rerj7d"], "worse": [], "reason": "pga2ng provides detailed memory analysis (80MB for 64-bit integers, plus 32-bit for largest factor) and explains the algorithm clearly. Original and rerj7d discuss the approach but with less detail on implementation constraints."}}
+{"3568-4360": {"better": ["og0ca5"], "neutral": ["original", "ykpxdn"], "worse": [], "reason": "og0ca5 provides the rigorous argument that there can be at most one prime factor > sqrt(f), and explains the complete algorithm for handling the cofactor. Original is very detailed but og0ca5 is clearer and more systematic. ykpxdn makes the same point but less complete."}}
+{"4360-4496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4496-4572": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4572-4626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4626-4683": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4683-4721": {"better": ["fmd22r"], "neutral": ["original"], "worse": ["m06ppp"], "reason": "fmd22r identifies the key constraint that primes dividing n^2+1 must be \u2261 1 (mod 4), which is essential for the efficient algorithm. Original continues analysis. m06ppp is a trivial statement with no insight."}}
+{"4721-4845": {"better": ["original", "grbety"], "neutral": [], "worse": ["epl4uu"], "reason": "Original and grbety make the key insight that all prime divisors of 4k^2+1 must be \u2261 1 (mod 4), which is crucial for algorithm efficiency (filters out half the primes). epl4uu just discusses counting approach without this insight."}}
+{"4845-5017": {"better": ["original"], "neutral": [], "worse": ["k7xk04", "u6i3ew"], "reason": "Original provides the detailed derivation showing that for each prime p \u2261 1 (mod 4), there are exactly two residue classes of k (mod p) for which p divides 4k^2+1. k7xk04 and u6i3ew are too brief and don't provide algorithmic insight."}}
+{"5017-5124": {"better": [], "neutral": ["original", "sc05qs", "uyjhxv"], "worse": [], "reason": "All completions correctly note that k values with p dividing 4k^2+1 form two arithmetic progressions modulo p. Equivalent observations."}}
+{"5124-5225": {"better": [], "neutral": ["original", "raa5bz", "18fxec"], "worse": [], "reason": "All completions explore the counting/summation approach. 18fxec correctly notes that processing primes up to 4e14 is too large. Original describes inclusion-exclusion. Similar exploratory progress."}}
+{"5225-5354": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5354-5412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5412-5441": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5441-5476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5476-5508": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5508-5697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5844-6047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6047-6110": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6110-6252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6252-6309": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6309-6377": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6377-6382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6382-6426": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6426-6550": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6550-6745": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6745-6842": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6842-6910": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6910-6960": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6960-7061": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7061-7068": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7068-7225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7225-7248": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7248-7314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7314-7351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7351-7436": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7436-7471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7471-7517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7517-7542": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7542-7611": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7611-7655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7655-7736": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7736-7754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7754-7794": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7794-7839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7839-8098": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8098-8119": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8119-8399": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8399-8482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8482-8490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8490-8498": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8498-8605": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8605-8613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8613-8652": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8652-8735": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8735-8741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8741-8779": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8779-8789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8789-8859": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8859-8948": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8948-9066": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9066-9090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9090-9210": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9210-9238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9238-9241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9241-9255": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9255-9276": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9276-9299": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9299-9321": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9321-9351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9351-9364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9364-9424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9424-9430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9430-9464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9464-9502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9502-9523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9523-9560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9560-9700": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9700-9734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9734-9763": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9763-9884": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9884-9900": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9900-9916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9916-9924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9924-9973": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9973-10109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10109-10178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10178-10335": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10335-10350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10350-10355": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10355-10396": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10396-10411": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10411-10427": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10427-10441": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10441-10570": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10570-10979": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10979-11034": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11135-11150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11150-11162": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11162-11184": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11184-11216": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11216-11225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11225-11240": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11240-11611": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11611-11625": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11650-11663": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11663-11760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11760-11801": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11801-11809": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11830-11861": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11886-11895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11895-11922": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11946-11952": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11952-11979": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11979-11985": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11985-12004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12004-12056": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12536-12569": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12653-12731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12731-12761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12761-12774": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12774-12785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12785-13206": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13206-13255": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13354-13373": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13373-13434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13517-13537": {"better": [], "neutral": ["original", "cj1b99", "11gj82"], "worse": [], "reason": "All completions correctly report the computed sum 128238518915714422000. Equivalent statements."}}
+{"13537-13546": {"better": [], "neutral": ["original", "rt6jyz", "tzyjcu"], "worse": [], "reason": "All completions are equivalent transition statements to compute modulo 10^18."}}
+{"13546-13570": {"better": [], "neutral": ["original", "knzsqw", "d97zm8"], "worse": [], "reason": "All completions correctly compute s mod 10^18. Equivalent code."}}
+{"13674-13687": {"better": [], "neutral": ["original", "rl3nck", "izopcn"], "worse": [], "reason": "Original has correct boxed answer 238518915714422000 but answer has not been sufficiently repeated."}}

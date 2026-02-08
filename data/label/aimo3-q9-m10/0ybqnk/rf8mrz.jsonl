@@ -1,0 +1,204 @@
+{"96-159": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"159-243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"243-273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"273-451": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"451-541": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"541-585": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"585-621": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"621-798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"798-838": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"838-868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"868-942": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"942-975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"975-989": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"989-1009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1009-1134": {"better": ["fvq6ko"], "neutral": ["zkqcn7", "1juwi9", "2u3kwl", "77387b"], "worse": ["original"], "reason": "The alternate fvq6ko succinctly identifies the cross-correlation form, while the original is more meandering."}}
+{"1134-1183": {"better": ["9fr56k"], "neutral": ["original", "wp5i10", "kbh1hd"], "worse": ["2e41pr", "6mhrrn"], "reason": "9fr56k introduces the key generating function formulation A(z)B(z) = z^k + z^l which reduces the problem to polynomial factorization; 2e41pr and 6mhrrn are vague ('factor something' 'some factorization') without substance."}}
+{"1183-1229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1229-1357": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1357-1429": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1429-1558": {"better": ["original", "hrzstw"], "neutral": ["blw0xa"], "worse": ["6scbek", "cdqfxs", "4hxdgd"], "reason": "The original introduces the key polynomial product formulation A(x)B(x)=x^k+x^l, which is the critical insight. hrzstw also identifies the divisor-in-convolution-ring framing. 6scbek, cdqfxs, and 4hxdgd merely restate the counting problem without advancing the mathematical approach."}}
+{"1558-1635": {"better": ["s60qwo", "n00rnp"], "neutral": ["9ib962", "tpl1cl", "xh9ngp"], "worse": ["original"], "reason": "Alternates s60qwo and n00rnp correctly factor x^k + x^l = x^k(1 + x^d) which is the key insight for the cyclotomic approach. The original just states the goal without this factorization."}}
+{"1635-1899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1899-1979": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1979-2022": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2022-2093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2093-2143": {"better": ["ud16et"], "neutral": ["gyoptb", "b4ub9j", "lzo7qb"], "worse": ["original", "8b1fra"], "reason": "ud16et identifies the key decomposition x^k + x^l = x^g(x^u + 1) and discusses cyclotomic factors; original and 8b1fra only state basic facts without the deeper structure"}}
+{"2143-2224": {"better": ["f7p4dw"], "neutral": ["original", "cysj5p", "hafi07", "rvvg1l"], "worse": ["c4b8ps"], "reason": "f7p4dw immediately starts the cyclotomic factorization of 1+x^d, making more progress. c4b8ps is too brief (\"the core is 1+x^d\") without developing the idea. The others all clearly state A(x)=x^r*D(x) where D divides 1+x^d at similar levels of detail."}}
+{"2224-2230": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2230-2251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2251-2288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2288-2315": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2315-2378": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2378-2402": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2402-2417": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2417-2444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2444-2459": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2459-2478": {"better": ["8j67ug", "p470o0"], "neutral": ["5nlu0x", "07t4g3"], "worse": ["original", "c44ylh"], "reason": "8j67ug and p470o0 correctly derive that G(x) divides (1+x^d) since G has non-zero constant term; original and c44ylh just restate the equation without insight"}}
+{"2478-2546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2546-2577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2577-2632": {"better": ["02588e"], "neutral": ["30fxei", "bceoro", "dju44x"], "worse": ["original", "lq7dg7"], "reason": "02588e gives a thorough derivation showing G must divide (1+x^D) since G has non-zero constant term; original and lq7dg7 make vague statements about 'limited divisors' without derivation"}}
+{"2632-2768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2768-2791": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2791-2812": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2812-2959": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2959-3053": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3053-3137": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3137-3260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3260-3273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3273-3609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3609-3638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3638-3681": {"better": ["6crf8s", "3uylqo"], "neutral": ["7etn2i", "uqvbc4", "lzqwod"], "worse": ["original"], "reason": "6crf8s gives a constructive proof showing how to build \u03b2; 3uylqo correctly identifies the cyclotomic factorization; original just states classification without justification"}}
+{"3681-3704": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3704-4056": {"better": ["zsunyz"], "neutral": ["original", "6hgs9b"], "worse": ["4gthri", "t3mefu", "xmjm0l"], "reason": "Alternate zsunyz correctly identifies the cyclotomic factorization structure and notes that G must be a product of cyclotomic factors. The original discusses sign but is verbose. The worse alternates are incomplete fragments."}}
+{"4056-4072": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4072-4114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4114-4144": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4144-4183": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4183-4266": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4266-4308": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4308-4330": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4330-4374": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4374-4424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4424-4630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4630-4660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4660-4694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4694-4757": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4757-4882": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4882-4927": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4927-4956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4956-5022": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5022-5096": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5096-5181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5181-5289": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5289-5570": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5570-5598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5598-5696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5696-5774": {"better": ["cozi1q", "7zleh0"], "neutral": ["original", "tnptmf"], "worse": ["ejep8m", "qjanwr"], "reason": "cozi1q and 7zleh0 correctly state the factorization indices as m=2^{s+1}\u00b7u (u|o) without incorrectly simplifying. ejep8m and qjanwr incorrectly simplify to m=2e where e|d (claiming 2^{s+1}\u00b7u = 2\u00b7(divisor of d)), which is wrong for even d \u2014 e.g., for d=6, this would include \u03a6_2 and \u03a6_6 which don't divide x^6+1. The original correctly states the formula for odd d but doesn't address even d. tnptmf stays uncertain."}}
+{"5774-6005": {"better": ["2i5kdk"], "neutral": ["gsvy37", "ofzmg8"], "worse": ["original", "58sjoa", "rjcvth"], "reason": "2i5kdk correctly identifies that the cyclotomic factors of x^d+1 are \u03a6_{2^{s+1}\u00b7u} for u|o (where d=2^s\u00b7o, o odd), preserving the crucial v_2 constraint. The original incorrectly derives x^d+1=\u220f_{e|d}\u03a6_{2e}, which is only valid for odd d. For d=6, the correct factors are \u03a6_4\u00b7\u03a6_12 (not \u03a6_2\u00b7\u03a6_4\u00b7\u03a6_6\u00b7\u03a6_12). rjcvth checks d=6 and gets 4,12 but then contradicts itself with the wrong conclusion. 58sjoa only verifies the odd case. gsvy37 and ofzmg8 are uncertain/confused but don't commit to a wrong formula."}}
+{"6005-6049": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6049-6108": {"better": ["pzmb5v"], "neutral": ["gtaklt", "9rp64e", "1q05px"], "worse": ["original", "td622a"], "reason": "pzmb5v verifies that monomials (G=1) work by constructing explicit \u03b2; original and td622a just state the correspondence without verification"}}
+{"6108-6410": {"better": ["jo2c9y", "g5164h"], "neutral": ["8xdptx", "uc3stj", "zri82a"], "worse": ["original"], "reason": "jo2c9y and g5164h prove that any product of \u03a6_{2e} can be realized by choosing d=lcm(e_i); original doesn't justify why the union across all d yields all such products"}}
+{"6410-6451": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6451-6518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6518-6648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6648-6876": {"better": [], "neutral": ["original", "j35uww", "2j49rs", "7lslbh", "y39352", "nmvcez"], "worse": [], "reason": "All completions commit the same error: they conclude any subset of even-index cyclotomic polynomials can be realized via d=lcm(e_i), relying on the incorrect factorization x^d+1=\u220f_{e|d}\u03a6_{2e}. This fails for even d \u2014 e.g., \u03a6_2 and \u03a6_4 cannot both appear in the same x^d+1. Since all completions make the same error, all are neutral."}}
+{"6876-6934": {"better": [], "neutral": ["original", "1g30ck", "qd7qs5", "ojtnl0", "uqpjfc", "dgbc3x"], "worse": [], "reason": "All completions commit to the same incorrect conclusion that any product of distinct even-index cyclotomic polynomials with degree \u226410 is valid, missing the v_2 constraint. Since all make the same error, all neutral."}}
+{"6934-7025": {"better": ["a299bm", "qu3u4y", "ikrp4j"], "neutral": [], "worse": ["original", "sapk1i", "7w4zzh"], "reason": "The original claims count = 2^{t+1} which assumes all subsets are valid. But alternates a299bm, qu3u4y, ikrp4j correctly note that product degrees must sum \u226410, so only certain subsets are valid. sapk1i and 7w4zzh make the same error as original."}}
+{"7025-7328": {"better": ["m99l34", "jg82r5", "sxs4iq", "bjej1u", "wrac2r"], "neutral": [], "worse": ["original"], "reason": "All five alternates correctly note that only subsets with total degree \u226410 are valid (not all subsets). wrac2r even provides the correct counting formula \u03a3(11-deg(G)). The original just computes \u03c6(2e) formulas without addressing the subset constraint."}}
+{"7328-7355": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7355-7367": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7367-7385": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7385-7388": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7388-7533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7533-7571": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7780-7923": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7923-7927": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7927-7961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7961-8032": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8032-8097": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8097-8134": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8134-8164": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8164-8169": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8169-8193": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8193-8220": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8220-8247": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8247-8281": {"better": ["3x0c5l", "rovfax"], "neutral": ["original", "p6181m"], "worse": ["e1d6nu", "jv9c6r"], "reason": "Alternates 3x0c5l and rovfax clearly explain why degree constraint matters: product degrees are additive, so we must restrict to subsets with total degree \u226410. e1d6nu is unclear; jv9c6r is incomplete."}}
+{"8281-8307": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8307-8331": {"better": ["hgxwp6"], "neutral": ["0nqlhm", "2x8fe5", "knizqp"], "worse": ["original", "z70n7h"], "reason": "Alternate hgxwp6 provides the complete counting formula: total = \u03a3(2 * (11 - deg)) over valid subsets. This combines sign factor, shift count, and degree constraint into one clear formula. The original just notes that not all subsets are valid without giving the formula."}}
+{"8331-8356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8356-8393": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8393-8447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8447-8472": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8472-8499": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8499-8576": {"better": ["original"], "neutral": ["yg90j2", "znt01e"], "worse": ["g9wutg", "ipidqa", "3wobzu"], "reason": "The original correctly derives the counting formula total = 2*(11*N - sum_D) where N is the number of valid subsets and sum_D is the sum of degrees. This algebraic manipulation is key to efficient computation. The worse alternates are too vague."}}
+{"8576-8591": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8591-8677": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8677-8685": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8685-8694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8694-8700": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8700-8706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8706-8712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8712-8718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8718-8724": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8724-8730": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8730-8736": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8736-8742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8742-8748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8748-8754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8754-8760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8760-8766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8766-8777": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8777-8819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8819-8881": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8881-8899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8899-8965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8965-9095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9143-9194": {"better": [], "neutral": ["original", "b9p0di", "grmhn8", "6uvoa4", "uw3eyr"], "worse": [], "reason": "All completions compute the same (wrong) answer 544 via the same formula. None questions the underlying flawed subset count (81 subsets from the incorrect factorization). All neutral relative to each other."}}
+{"9194-9223": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9245-9317": {"better": ["cyv381", "mdz7zj"], "neutral": ["wu4lyb", "z0br2r"], "worse": ["original", "rokh3m"], "reason": "Alternates cyv381 and mdz7zj provide rigorous verification that each \u03b1 indeed satisfies the shifty condition by constructing explicit \u03b2. cyv381 shows the construction: B(x) = x^K(1+x^d)/G(x). The original just asks to double-check without providing verification."}}
+{"9317-9457": {"better": ["x859pq"], "neutral": ["original", "mt2qv8", "ph7v47", "g9iooj"], "worse": ["f939zt"], "reason": "Alternate x859pq verifies the constant term property: cyclotomic polynomials \u03a6_n for n>1 have constant term 1, so products also have constant term 1. This confirms G(0)=\u00b11. The original discusses content/primitivity which is correct but less direct."}}
+{"9457-9471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9471-9515": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9515-9557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9557-9564": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9564-9887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9887-9897": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9897-9923": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9923-10079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10079-10210": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10210-10244": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10244-10249": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10249-10255": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10255-10261": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10261-10403": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10403-10478": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10478-10613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10613-10642": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10642-10763": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10763-10777": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10777-10869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10869-10873": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10873-10907": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10907-10973": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10973-10978": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10978-11258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11258-11368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11368-11395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11395-11458": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11458-11698": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11698-11714": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11714-11722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11722-11770": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11770-11790": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11790-11831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11993-11994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15137-15170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15170-15194": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15194-15340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15463-15703": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15729-15895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15895-15899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15899-15906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15906-15914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15914-15996": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15996-16041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16041-16049": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16049-16125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16125-16563": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16563-16569": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16569-16577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16577-16597": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16597-16682": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16682-16688": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16688-16698": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16698-16747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16747-16752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16752-16808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16808-16887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16887-16900": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16900-17020": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17111-17125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17125-17189": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17207-17211": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17211-17223": {"better": ["9oh5oa", "sah6qs", "8ijtxw", "dofu9n"], "neutral": [], "worse": ["original", "kmxbdy"], "reason": "Original has wrong boxed answer 544, correct answer is 270. Not boxing the answer provides a chance to move on from the wrong answer."}}

@@ -1,0 +1,222 @@
+{"120-142": {"better": [], "neutral": ["original", "hyfqei", "1wyjwc"], "worse": [], "reason": "All completions correctly restate the given information (F(100)=36) and the goal (F(10^18) mod 99991). No significant difference in reasoning quality."}}
+{"142-721": {"better": ["original"], "neutral": [], "worse": ["y1xcny", "wspx8v"], "reason": "The original provides thorough geometric reasoning about minimal enclosing circles, circumradii, and positioning constraints. y1xcny is too vague (\"determine F(R) formula\"). wspx8v only states the inradius formula without the crucial geometric insight about fitting triangles inside circles."}}
+{"721-1266": {"better": [], "neutral": ["original", "ag1qoc", "y1q0aj"], "worse": [], "reason": "All three completions correctly identify the key insight that a right triangle's minimal enclosing circle has radius c/2 (half hypotenuse). ag1qoc additionally provides the inradius formula r = n(m-n), y1q0aj gives the same geometric reasoning as original. All are valid approaches."}}
+{"1266-1343": {"better": [], "neutral": ["original", "eqyknk", "xgaa3v"], "worse": [], "reason": "All three correctly state the problem reduction: maximize inradius among primitive Pythagorean triples with c/2 < R. xgaa3v additionally includes the inradius formula explicitly. All are equivalent correct statements."}}
+{"1343-1345": {"better": ["hxigv5"], "neutral": ["shgnxz"], "worse": ["original"], "reason": "Original just says \"Alright\" which adds nothing. hxigv5 correctly analyzes the integer condition (c <= 2R-1) and clarifies the strict inequality. shgnxz at least states the next goal. The original's brevity provides no value."}}
+{"1345-1620": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1620-1635": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1635-1720": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1720-1765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1765-1799": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1799-1946": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1946-1952": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2072-2130": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2130-2199": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2199-2247": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2247-2314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2314-2327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2327-2520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2520-2732": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2732-3080": {"better": ["4r3e42"], "neutral": ["original"], "worse": [], "reason": "4r3e42 provides the detailed algebraic derivation showing f_opt = (\u221a2-1)/2, working through rationalization steps. Original states the result without showing the calculation."}}
+{"3080-3240": {"better": [], "neutral": ["original", "z9mzmx", "xhb0bf"], "worse": [], "reason": "All three correctly compute the approximation r_max \u2248 R*(\u221a2-1) and verify with R=100 getting ~41.42 vs actual 36, demonstrating integer constraints matter. xhb0bf also mentions needing result mod 99991."}}
+{"3240-3253": {"better": ["07lmpc"], "neutral": ["original", "4w7b9q"], "worse": [], "reason": "07lmpc makes the key connection to Pell equation solutions and continued fractions of \u221a2+1, which is the crucial insight for efficiently computing the answer. Original and 4w7b9q are more generic statements about finding near-optimal pairs."}}
+{"3253-3282": {"better": ["cxinu3"], "neutral": ["original", "bo8cgu"], "worse": [], "reason": "cxinu3 recognizes that brute force enumeration is impossible and outlines an algorithmic approach. It also correctly notes that for large R, we can find near-optimal pairs satisfying constraints. Original and bo8cgu restate the problem without addressing computational feasibility."}}
+{"3282-3392": {"better": [], "neutral": ["original", "6558cx", "5d6vfk"], "worse": [], "reason": "All three correctly note that parity/coprime constraints are not very restrictive for large numbers due to density arguments. 5d6vfk specifically notes we need F(10^18) mod 99991."}}
+{"3392-3409": {"better": [], "neutral": ["original", "2ja7yv", "pg5yg3"], "worse": [], "reason": "All three recognize we need exact integer maximum modulo 99991, with 2ja7yv and pg5yg3 noting it's approximately floor(R*(\u221a2-1)) with small adjustments. All valid transitional statements."}}
+{"3409-3476": {"better": ["8cyu1m"], "neutral": ["original", "19ecw3"], "worse": [], "reason": "8cyu1m introduces the substitution u=n, v=m-n and derives the constraint 2u\u00b2+2uv+v\u00b2 which is the key quadratic form. This change of variables is crucial for the Pell equation approach. Original suggests search near ratio 2.414, 19ecw3 does basic substitution."}}
+{"3476-3705": {"better": ["original"], "neutral": ["zdyvrk", "khg5r8"], "worse": [], "reason": "Original computes concrete numerical estimates: k\u00b2+1 = 4+2\u221a2 \u2248 6.828, t \u2248 0.5415*\u221aR \u2248 5.415e8, m \u2248 1.307e9. These specific numbers are valuable for verifying the algorithm. Alternates are vaguer about the computation."}}
+{"3705-3825": {"better": [], "neutral": ["original", "ilo5zk", "k3x6nr"], "worse": [], "reason": "All three compute r \u2248 \u221a2*t\u00b2 \u2248 4.14e17, confirming the earlier approximation R*(\u221a2-1). ilo5zk has the most compact derivation, original and k3x6nr provide similar detailed calculations."}}
+{"3825-3877": {"better": ["1orahm"], "neutral": ["original", "yyxr6h"], "worse": [], "reason": "1orahm clarifies the exact constraint: m\u00b2+n\u00b2 \u2264 2R-1 (strictly less than 2R means \u2264 2R-1 for integers). This precision is important for the algorithm. Original and yyxr6h are more general statements."}}
+{"3877-3957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3957-4002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4002-4085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4085-4170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4170-4322": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4322-4364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4364-4463": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4463-4524": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4524-4800": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4800-4856": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4856-5106": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5106-5143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5143-5192": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5192-5364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5364-5385": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5385-5440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5440-5757": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5757-5809": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5809-5889": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5889-5917": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5917-6142": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6142-6173": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6173-6379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6379-6401": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6401-6418": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6418-6453": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6453-6497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6497-6569": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6569-6640": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6640-6673": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6673-6723": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6723-6874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6874-6893": {"better": [], "neutral": ["original", "ju9qtg"], "worse": [], "reason": "Both correctly state that r ~ (\u221a2-1)R for large R. ju9qtg is more concise, original provides the same insight in slightly more words."}}
+{"6893-6929": {"better": ["4akrkt"], "neutral": ["original", "uwmhxk"], "worse": [], "reason": "4akrkt computes the concrete numerical estimate F \u2248 414213562373095100 and initiates Python computation for precision. This advances toward the answer. Original and uwmhxk state the challenge without computing specific values."}}
+{"6929-6975": {"better": ["1sx0ub"], "neutral": ["original", "ctyy37"], "worse": [], "reason": "1sx0ub tests the Pell equation hypothesis with the R=100 case, computing u=9, v=4 for the optimal (m,n)=(13,4), and notes u/v=2.25 doesn't match \u221a2. This verification reveals a subtle issue with the parameterization. Original and ctyy37 propose approaches without testing them."}}
+{"6975-7008": {"better": ["56n2ow"], "neutral": ["original", "vtg7y2"], "worse": [], "reason": "56n2ow correctly identifies continued fractions and Pell equation p_k\u00b2-2q_k\u00b2=\u00b11 as the method for approximating ratio \u221a2. This is the key algorithmic insight. Original is less specific, vtg7y2 suggests coordinate transformation which is more complex."}}
+{"7008-7272": {"better": ["original"], "neutral": ["wy37ya", "9v3yif"], "worse": [], "reason": "Original derives the explicit formula for u_max: u < -v + sqrt(2R-v\u00b2), including discriminant analysis D=4(2R-v\u00b2). This is the key formula for the search algorithm. wy37ya is vague, 9v3yif discusses convexity without deriving the formula."}}
+{"7272-7311": {"better": ["34ezzq"], "neutral": ["original", "8po85r"], "worse": [], "reason": "34ezzq gives the explicit formula u_max = floor(sqrt(2R-v\u00b2)-v) and lists the constraints (u odd, gcd(u,v)=1). This is the complete algorithm specification. Original is similar but more verbose, 8po85r analyzes function behavior without giving the formula."}}
+{"7311-7352": {"better": ["sc3tql"], "neutral": ["original", "ab0jyr"], "worse": [], "reason": "sc3tql recognizes that searching near v \u2248 5.415e8 is feasible and suggests computing ub for that v then adjusting for constraints. This is practical. Original notes brute force is impossible but doesn't suggest alternative. ab0jyr is too brief."}}
+{"7352-7419": {"better": ["uchqas"], "neutral": ["original", "avh0fg"], "worse": [], "reason": "uchqas explicitly connects to Pell equation recurrences and suggests optimal (m,n) are convergents of 1+\u221a2. This is the key insight for the efficient algorithm. Original discusses continuous optimization, avh0fg mentions Pell but less specifically."}}
+{"7419-7462": {"better": [], "neutral": ["original", "spxls8", "y1opur"], "worse": [], "reason": "All three state the goal of finding v that maximizes v*floor(ub(v)) with ub(v) = sqrt(2R-v\u00b2)-v. All equivalent formulations of the optimization problem."}}
+{"7462-7495": {"better": ["xcsm0i"], "neutral": ["original", "ub3dqu"], "worse": [], "reason": "xcsm0i derives the continuous function f(v) = v*sqrt(2R-v\u00b2)-v\u00b2 and notes this can be differentiated to find optimum. This sets up the calculus approach. Original just states the optimum, ub3dqu is too brief."}}
+{"7495-7561": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7561-7595": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7595-7657": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7657-7792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7792-7907": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7907-7925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7925-7987": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7987-8092": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8092-8187": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8187-8263": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8263-8352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8352-8440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8440-8455": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8455-8485": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8485-8526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8526-8593": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8593-8645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8645-8692": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8692-8708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8708-8881": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8881-8892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8892-8977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8977-8983": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8983-9031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9031-9061": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9061-9083": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9083-9134": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9134-9224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9224-9248": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9248-9314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9314-9354": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9354-9408": {"better": ["8euflh"], "neutral": ["original", "31xcf7"], "worse": [], "reason": "8euflh provides detailed analysis: removing a few units changes product by ~5e8 (0.05% of total 4e17), confirming adjustments for constraints are manageable. Original is practical, 31xcf7 raises concern about 10^6 being insufficient without quantifying."}}
+{"9408-9432": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9432-9457": {"better": ["i4ifdk"], "neutral": ["original", "wt4l3y"], "worse": [], "reason": "i4ifdk provides precise implementation details: use isqrt for integer sqrt, compute D=2R-v\u00b2, s=isqrt(D), ub=s-v, and verifies s\u00b2\u2264D<(s+1)\u00b2. This is complete algorithm specification. wt4l3y mentions isqrt but less precisely, original just states feasibility."}}
+{"9457-9464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9464-9613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9613-10097": {"better": ["vgbek5"], "neutral": ["original", "0w2ftv"], "worse": [], "reason": "vgbek5 identifies the subtle issue that if 2R-v\u00b2 is a perfect square, u=s-v would give Q=2R (equality, not allowed). It derives the safe bound u_max=floor(sqrt(2R-1-v\u00b2)-v). This edge case handling is crucial for correctness. Original discovers the issue but doesn't fix it, 0w2ftv proves floor(sqrtS-v)=floor(sqrtS)-v."}}
+{"10097-10250": {"better": [], "neutral": ["original", "rwnnyu", "gylrc8"], "worse": [], "reason": "All three correctly identify confusion between c and c\u00b2. The key is c=m\u00b2+n\u00b2 (not c\u00b2=m\u00b2+n\u00b2), so condition c/2<R becomes m\u00b2+n\u00b2<2R. All eventually arrive at correct understanding."}}
+{"10250-10374": {"better": ["iby3wo"], "neutral": ["original", "amc332"], "worse": [], "reason": "iby3wo provides the clearest verification: for R=100, m=13,n=4 gives c=m\u00b2+n\u00b2=185<200=2R, and c/2=92.5<100. This concrete example confirms the condition. amc332 has the wrong interpretation (c\u00b2=m\u00b2+n\u00b2), original discusses but less clearly."}}
+{"10374-10488": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10488-10520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10520-10581": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10581-10667": {"better": ["ufnqz3"], "neutral": ["original", "55my9b"], "worse": [], "reason": "ufnqz3 derives the exact formula for strict inequality: need Q\u22642R-1, so (u+v)\u00b2\u22642R-v\u00b2-1, giving u_max=floor(sqrt(2R-v\u00b2-1))-v. This handles the edge case precisely. 55my9b just states the requirement, original sets up the analysis."}}
+{"10667-10802": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10802-10906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10906-10942": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10942-10953": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10953-10965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10965-10986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10986-11011": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11011-11032": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11032-11062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11062-11110": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11110-11254": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11254-11264": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11295-11658": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11658-11671": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11755-11759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11759-11781": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11781-11849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11849-11894": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11894-11918": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11918-12200": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12200-12229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12377-12381": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12381-12406": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12487-12509": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12509-12583": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12628-12668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12668-12706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12775-12813": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12853-12915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12915-12950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12950-13038": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13038-13178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13178-13216": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13216-13241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13241-13271": {"better": [], "neutral": ["original", "plahxp", "loxlon"], "worse": [], "reason": "All completions correctly compute max_r % 99991 to get the final answer. The code is essentially identical across all alternatives."}}
+{"13296-13333": {"better": ["thrp6p"], "neutral": ["original"], "worse": ["itsaat"], "reason": "thrp6p verifies the parity constraint correctly (u odd ensures m,n opposite parity) which is a crucial check. itsaat is less thorough, just restating the constraint without verification. Original suggests exploring Pell equation which is reasonable but less directly useful at this verification stage."}}
+{"13333-13432": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13432-13456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13456-13504": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13504-13533": {"better": [], "neutral": ["original", "gv740r", "zlawqx"], "worse": [], "reason": "All three compute d = u\u00b2 - 2v\u00b2 to check the Pell equation property. zlawqx explicitly shows the values u=765366155, v=541196602. All equivalent computations."}}
+{"13596-13620": {"better": [], "neutral": ["original", "2txz7l", "49leld"], "worse": [], "reason": "All three compute the relative error (u/v)\u00b2 - 2 to verify how close the ratio is to \u221a2. Equivalent computations with minor syntax variations."}}
+{"13773-14355": {"better": ["original"], "neutral": ["ig1fcd", "rt2k3h"], "worse": [], "reason": "Original provides comprehensive analysis of Pell solutions, computing the exponential growth factor (3+2\u221a2)\u22485.828 and showing that ~12 iterations reach v~5e8. It also verifies parity (u odd) is satisfied. Alternates suggest checking more pairs but without the detailed Pell analysis."}}
+{"14355-14442": {"better": ["original"], "neutral": ["eynz9k", "g05ep5"], "worse": [], "reason": "Original proves the parity condition: u odd implies m=(u+v) has opposite parity to v=n. This is the key constraint verification. eynz9k and g05ep5 suggest checking Pell solutions without verifying the parity condition."}}
+{"14442-14489": {"better": ["a3569d"], "neutral": ["original", "t42bxt"], "worse": [], "reason": "a3569d explicitly verifies that Pell solutions have x odd, y even by checking (3,2) and (17,12), confirming the parity pattern persists. This validates the algorithm. Original asks the question, t42bxt is too brief."}}
+{"14489-14564": {"better": ["mpwjad"], "neutral": ["original", "hlbzkp"], "worse": [], "reason": "mpwjad provides the complete analysis showing Q(u,v) \u2248 (4+2\u221a2)v\u00b2 and deriving v ~ sqrt(R/(2+\u221a2)), explaining how to find the right k in Pell sequence. Original and hlbzkp state the approach without the detailed derivation."}}
+{"14564-14749": {"better": ["original"], "neutral": ["taezqn"], "worse": ["xldscq"], "reason": "Original correctly implements Pell solution generator using recurrence (x,y) \u2192 (3x+4y, 2x+3y) for both +1 and -1 cases. taezqn has similar structure with a comment error in the multiplication formula. xldscq has a broken implementation with a useless while loop."}}
+{"14749-14800": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14870-14933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14933-14954": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14954-15090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15090-15113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15320-15377": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15454-15569": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15569-15589": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15650-15657": {"better": [], "neutral": ["original", "2h4j51", "qpweor"], "worse": [], "reason": "All completions appropriately note that the heuristic search likely found the optimum. They are all reasonable transitional statements that acknowledge the need for further verification."}}
+{"15657-15809": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15809-15912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15912-16009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16009-16099": {"better": ["original"], "neutral": ["0k7ea6"], "worse": ["xwl7u6"], "reason": "Original provides rigorous verification by discussing how to bound the search space. xwl7u6 just says \"accept our answer\" without justification. 0k7ea6 is reasonable but less thorough than original."}}
+{"16099-16111": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16111-16143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16143-16157": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16157-16170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16170-16198": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16198-16217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16250-16305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16476-16528": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16605-16613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16613-16746": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16746-16761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16761-16807": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16807-16906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16906-16998": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16998-17004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17004-17014": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17014-17040": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17040-17125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17125-17154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17154-17170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17170-17187": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17187-17499": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17499-17538": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17578-17587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17587-17637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17637-17671": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17998-18086": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18245-18269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18269-18306": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18399-18416": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18416-18479": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18558-18575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18640-18642": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18642-18723": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18797-18815": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18815-18838": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18838-18904": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18942-18965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19078-19095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19148-19182": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19182-19219": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19219-19253": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19253-19261": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19261-19382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19382-19398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19398-19437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19437-19453": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19453-19521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19521-19532": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 50612 but answer has not been sufficiently repeated."}}

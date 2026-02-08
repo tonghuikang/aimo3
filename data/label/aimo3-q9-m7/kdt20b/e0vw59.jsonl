@@ -1,0 +1,112 @@
+{"53-127": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"127-136": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"136-190": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"190-241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"241-261": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"261-284": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"284-309": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"309-340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"340-382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"382-462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"462-559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"559-613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"613-838": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"838-913": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"913-994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"994-1399": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1399-1501": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1501-1596": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1596-1972": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1972-2149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2149-2345": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2345-2418": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2418-2444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2444-2565": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2565-2914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2914-3014": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3014-3248": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3248-3265": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3265-3835": {"better": ["9s74tm", "d47npf", "7wn0zx", "j42f6f", "56fmre"], "neutral": [], "worse": ["original"], "reason": "The original incorrectly rules out a zero constant term by requiring A(z) to divide z^N+1 as an ordinary polynomial; in the Laurent setting, a monomial factor z^r can be absorbed into G(z), so \u03b1(0)=0 is allowed. The alternates do not make that overly restrictive claim."}}
+{"3835-3851": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3851-3887": {"better": ["013vr0"], "neutral": ["02wgwb", "38esed"], "worse": ["original", "ax2f7b", "rbiuju"], "reason": "Requiring the constant term to be nonzero (or that support must include index 0) is too restrictive: a monomial factor z^r in A can be compensated by negative exponents in G(z), which is allowed because \u03b2 corresponds to a Laurent polynomial. Alternate 013vr0 captures this, while the others incorrectly force a0 \u2260 0."}}
+{"3887-3985": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3985-4328": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4328-4901": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4901-4938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4938-5251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5251-5815": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5815-5965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5965-6011": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6011-6033": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6033-6078": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6078-6744": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6744-6809": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6809-7095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7095-7114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7114-7446": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7446-7495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7495-7584": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7584-7614": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7614-7635": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7635-7651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7651-7790": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7790-7898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7898-7970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7970-7986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7986-8064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8064-8069": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8069-8420": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8420-8518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8518-8557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8718-8754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8754-8777": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8777-8849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8849-8856": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8856-9092": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9092-9191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9191-9283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9283-9718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9718-9760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9760-9939": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9939-10006": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10006-10109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10109-10113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10113-10158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10158-10415": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10415-10517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10517-10602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10602-10643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10643-10649": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10649-10713": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10713-10731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10731-10752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10752-10894": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11104-11473": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11473-11737": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11737-11938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12080-12114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12114-12173": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12173-12246": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12246-12758": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12758-12775": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12775-13183": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13183-13195": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13195-13278": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13278-13284": {"better": ["9lsivf"], "neutral": [], "worse": ["original", "uf6ox6", "u7zol5", "90zgam", "kw748q"], "reason": "The \u201c60\u201d claims are incorrect, and the insistence that a0 must be nonzero is too restrictive once we allow monomial shifts absorbed by a Laurent \u03b2. The support\u2011check in 9lsivf avoids those errors."}}
+{"13284-13477": {"better": ["p48zx8", "e0e48f", "upj54i"], "neutral": [], "worse": ["original", "p79b5p", "szc857"], "reason": "The original and p79b5p/szc857 hard\u2011code a nonzero constant term and the \u201c60\u201d count, which is incorrect. The better completions flag the need to re\u2011check the classification and allow monomial shifts absorbed by a Laurent \u03b2."}}
+{"13668-13733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13733-13788": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13788-13904": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13904-14057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14057-14065": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14097-14103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14103-14406": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14406-14415": {"better": ["bnqknm"], "neutral": [], "worse": ["original", "kyyn6l", "09y3l3", "wkewm8", "zp2ybr"], "reason": "The explicit \u201c60\u201d assertions are wrong (the correct total is 116). The bnqknm line avoids that incorrect count."}}
+{"14415-14716": {"better": ["original", "vqbc7t", "d6jbim", "a8lrv7"], "neutral": [], "worse": ["rix0nx", "k81ur7"], "reason": "The rix0nx/k81ur7 completions assert the incorrect total (60). The others focus on classification nuances without making that wrong numerical claim."}}
+{"14716-14720": {"better": ["original", "4q2aes", "uywwd9", "3f8oa1"], "neutral": [], "worse": ["hy574k"], "reason": "hy574k gives the wrong total (60). The other completions only restate the classification without asserting that incorrect count."}}
+{"14720-14730": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14730-14740": {"better": ["original", "aarioj", "s3ms7g"], "neutral": [], "worse": ["4ltlv2", "amu9j7", "fwhz4l"], "reason": "The \u201c60\u201d answers are wrong, and fwhz4l incorrectly rules out \u03b1 with a0 = 0 even though a monomial factor can be absorbed by a Laurent \u03b2. The other completions avoid those errors."}}
+{"14740-14805": {"better": ["vyxzvt", "3n5to2"], "neutral": [], "worse": ["original", "m0f79q", "ebaj20", "ik5jnw"], "reason": "The \u201c60\u201d answers are incorrect, and the original\u2019s requirement that \u03b1(0) must be \u00b11 is too restrictive because monomial shifts can be absorbed into \u03b2. The other completions avoid asserting those errors."}}
+{"14805-14811": {"better": ["5z8fas", "u38h31", "uqvrjt"], "neutral": [], "worse": ["original", "uaiq5x", "lnues7"], "reason": "The \u201c60\u201d claims are incorrect, and lnues7\u2019s insistence that \u03b1(0) must be nonzero is too restrictive once we allow Laurent \u03b2. The other completions discuss edge cases without asserting those errors."}}
+{"14811-14832": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14832-14841": {"better": ["9sloz3", "10l853", "g1djk1"], "neutral": [], "worse": ["original", "ik5jnw", "18zxkf"], "reason": "Original has wrong boxed answer 60, correct answer is 116. Not boxing the answer provides a chance to move on from the wrong answer."}}

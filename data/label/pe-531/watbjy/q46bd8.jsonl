@@ -1,0 +1,57 @@
+{"116-182": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"182-194": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"194-401": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"401-483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"483-500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"925-1053": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1053-1059": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1133-1207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1229-1237": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1237-1400": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1400-1434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1434-1491": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1491-1634": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1634-1639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1639-1661": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1661-1757": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1757-1770": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1770-1795": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1795-1814": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1814-1832": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1832-1882": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1882-1896": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1896-1949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1949-1954": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1954-2061": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2061-2192": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2192-2208": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2261-2266": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2266-2285": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2285-2298": {"better": [], "neutral": ["original", "11qstr", "a71i9b"], "worse": [], "reason": "Alternate has correct boxed answer 4515432351156203105 but answer has not been sufficiently repeated."}}
+{"2298-2428": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2428-2432": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2432-2436": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2436-2472": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2472-2474": {"better": [], "neutral": ["original", "fw4q2m", "2h8y6g"], "worse": [], "reason": "Alternate has correct boxed answer 4515432351156203105 but answer has not been sufficiently repeated."}}
+{"2474-2495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2495-2642": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2642-2704": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2704-2705": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2894-2898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2916-2920": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2920-2985": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2985-3030": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3030-3073": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3073-3079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3079-3145": {"better": [], "neutral": ["original", "lvx9zf", "k87pka"], "worse": [], "reason": "Alternate has correct boxed answer 4515432351156203105 but answer has not been sufficiently repeated."}}
+{"3145-3157": {"better": [], "neutral": ["original", "2h8y6g", "7orci2"], "worse": [], "reason": "Alternate has correct boxed answer 4515432351156203105 but answer has not been sufficiently repeated."}}
+{"3157-3245": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3245-3457": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3457-3538": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3538-3549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3569-3575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3575-3601": {"better": [], "neutral": ["original", "1j0d5x", "oqzn1e"], "worse": [], "reason": "Alternate has correct boxed answer 4515432351156203105 but answer has not been sufficiently repeated."}}
+{"3601-3604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3604-3656": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3656-3668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3668-3714": {"better": [], "neutral": ["original", "m57xxr", "xdw22z"], "worse": [], "reason": "Original has correct boxed answer 4515432351156203105 but answer has not been sufficiently repeated."}}

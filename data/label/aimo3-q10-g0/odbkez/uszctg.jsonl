@@ -1,0 +1,228 @@
+{"74-185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"185-293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"293-321": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"321-358": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"358-396": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"396-414": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"414-439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"439-476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"476-506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"506-520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"520-539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"539-772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"772-798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"798-915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"915-954": {"better": ["mfz5rc"], "neutral": ["original", "ienmip"], "worse": [], "reason": "Alternate mfz5rc derives the key lcm reformulation early (f(M) = min lcm over triples summing to M), correctly rules out using only power-of-3 divisors of M, and establishes the right framework. The original just restates the goal. ienmip makes vague guesses without substance."}}
+{"954-983": {"better": ["sf4xeq"], "neutral": ["original", "osn6pw"], "worse": [], "reason": "Alternate sf4xeq rigorously shows that 3^P cannot be written as sum of three distinct powers of 3 (by comparing 3^P = 27*3^{P-3} > 13*3^{P-3}) and correctly rules out m=M, which is a useful elimination. The original restates the goal without progress. osn6pw also just restates."}}
+{"983-1038": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1038-1062": {"better": ["6q1fwo"], "neutral": ["original", "glyo56"], "worse": [], "reason": "Alternate 6q1fwo introduces the lcm framework early (m = lcm(x,y) for two divisors x,y summing to M-1 with 1), which is the correct structural approach. The original vaguely suggests \"product of two numbers\" without the lcm insight. glyo56 also explores 1+d2+d3=M but less cleanly."}}
+{"1062-1074": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1074-1114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1114-1132": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1132-1163": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1163-1355": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1355-1391": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1391-1405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1405-1436": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1436-1551": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1551-1616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1616-1691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1691-1714": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1714-1772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1772-1956": {"better": ["original"], "neutral": ["r86yfb"], "worse": ["825t3f"], "reason": "The original gives a rigorous derivation of m \u2265 M/3 (largest divisor is m, other two \u2264 m, so M-m \u2264 2m). Alternate r86yfb also reaches the bound but less rigorously. Alternate 825t3f only speculates \"maybe M-3 is minimal\" without deriving any bound, missing the key structural constraint."}}
+{"1956-1970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1970-2068": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2068-2166": {"better": ["wobuo0"], "neutral": ["original", "e74r3n"], "worse": [], "reason": "Alternate wobuo0 immediately specializes to M/3 = 3^{P-1}, connecting the abstract lower bound to the specific structure of M = 3^P and setting up the concrete test of m = 3^{P-1}. The original and e74r3n make vague statements about m being \"close to M/3\" without leveraging the power-of-3 structure."}}
+{"2166-2186": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2186-2217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2217-2270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2270-2318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2318-2354": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2354-2400": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2400-2516": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2516-2623": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2623-2657": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2657-2675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2675-2700": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2700-2895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2895-2935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2935-3029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3029-3085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3085-3103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3103-3141": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3141-3335": {"better": ["grzdr6"], "neutral": ["original", "glypv7"], "worse": [], "reason": "Alternate grzdr6 proposes testing m=2a=2*3^{P-1}, which is exactly the correct f(M)=2M/3, and starts enumerating divisors of 2*3^{P-1} to find the right triple. The original is stuck analyzing divisors of a+1=3^{P-1}+1, a dead-end path. glypv7 just restates the setup."}}
+{"3335-3345": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3345-3359": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3359-3377": {"better": ["8a76zw"], "neutral": ["original", "7wsqg3"], "worse": [], "reason": "Alternate 8a76zw reaches the key lcm reformulation (f(M) = min lcm(x,y,z) over triples summing to M) much earlier than the trace does, while also recalling the M-3 upper bound. The original and 7wsqg3 just call for a \"systematic approach\" without substance."}}
+{"3377-3409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3409-3435": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3435-3474": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3474-3531": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3531-3554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3554-3568": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3568-3631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3631-3685": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3685-3747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3747-3772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3772-3823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3823-3855": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3855-3947": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3947-3975": {"better": ["8o5fb7"], "neutral": ["original", "fwf3z5"], "worse": [], "reason": "Alternate 8o5fb7 immediately identifies that to maximize u+v with uv=N, set u=3 (minimum), and directly computes m = (2/3)N - 2. The original and fwf3z5 both initially struggle with the optimization direction before reaching the same conclusion, wasting reasoning steps."}}
+{"3975-4168": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4168-4213": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4213-4268": {"better": ["cvfa9n"], "neutral": ["a3zcry"], "worse": ["original"], "reason": "The original hypothesizes \"if 3 divides M+1\" without checking, which is false (3^P+1 \u2261 1 mod 3). Alternate cvfa9n immediately verifies this and correctly determines 3 does not divide M+1, avoiding the dead end. Alternate a3zcry also catches the integrality issue but less cleanly."}}
+{"4268-4280": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4280-4316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4316-4387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4387-4424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4424-4565": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4565-4614": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4614-4645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4645-4655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4655-4772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4772-4907": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4907-4928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4928-5027": {"better": ["fgell7"], "neutral": ["original", "8xpdk1"], "worse": [], "reason": "Alternate fgell7 provides the most thorough analysis: verifies N is even (3^P odd + 1 = even), checks whether factor 2 is valid (it's not because a=1 gives non-distinct triple), and correctly concludes both factors must be \u22653. The original and 8xpdk1 both identify N as even but don't fully work through the a=1 issue."}}
+{"5027-5113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5113-5231": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5231-5238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5238-5280": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5280-5573": {"better": ["396ovm", "2ru3lm"], "neutral": ["original"], "worse": [], "reason": "Alternates 396ovm and 2ru3lm immediately check whether N is divisible by 4 (proposing u=4, a=3 as a viable factorization if N \u2261 0 mod 4), which is a constructive approach to finding valid factorizations. The original takes a long path computing N mod 4 and arrives at the dead-end conclusion that no (a,b,ab) factorization works, without proposing an alternative."}}
+{"5573-5582": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5582-5617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5617-5670": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5670-5752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5752-5782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5782-5797": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5797-5824": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5824-5895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5895-5911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5911-5925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5925-5993": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5993-6139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6139-6151": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6151-6181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6181-6238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6238-6277": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6277-6320": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6320-6497": {"better": [], "neutral": ["original", "sjlivv", "ouclyc"], "worse": [], "reason": "All three completions arrive at the key insight that f(M) = min lcm(a,b,c) over triples summing to M. The original provides the most thorough derivation, ouclyc is equally clear, and sjlivv frames it slightly differently but equivalently. No meaningful differentiation."}}
+{"6497-6522": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6522-6532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6532-6556": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6556-6594": {"better": ["2yaxjx"], "neutral": ["original", "h7sbas"], "worse": [], "reason": "Alternate 2yaxjx makes the key observation that lcm is small when numbers share factors (especially when a|b|c, giving lcm=c), which directly points toward the optimal construction using multiples of a common base. The original and h7sbas merely restate the optimization problem without structural insight."}}
+{"6594-6619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6619-6643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6643-6654": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6654-6827": {"better": ["original"], "neutral": ["c9s008", "3m6843"], "worse": [], "reason": "The original makes the critical observation that choosing a,b,c as multiples of a common base d (e.g., d*1, d*2, d*3) with small reduced coefficients makes the lcm small, and explicitly sets up the key decomposition d*x + d*y + d*z = M. Alternates c9s008 and 3m6843 restate the goal or consider suboptimal triples like 1,2,N-3 without the scaling insight."}}
+{"6827-6864": {"better": ["4dr7ic"], "neutral": ["original", "irqkg6"], "worse": [], "reason": "Alternate 4dr7ic introduces the gcd factoring more precisely (a=g*a', b=g*b', c=g*c' with gcd(a',b',c')=1, and g|M), which sets up the key structural argument. The original and irqkg6 suggest the same idea but more vaguely without the full algebraic setup."}}
+{"6864-6994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6994-7084": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7084-7119": {"better": ["pwf30l"], "neutral": ["original", "iad8md"], "worse": [], "reason": "Alternate pwf30l directly proposes x,y,z = 1,2,3 with L=lcm(1,2,3)=6 and derives d=M/6, immediately identifying the key small-lcm triple that nearly solves the problem (fails only because M is odd). The original sets k=P giving impossible sum=1, a dead end. iad8md also proposes 1,2,3 but is more verbose."}}
+{"7119-7166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7166-7218": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7218-7269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7269-7461": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7461-7580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7580-7726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7726-7779": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7779-7800": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7800-7866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7866-7896": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7896-7989": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7989-8041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8041-8108": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8108-8171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8171-8311": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8311-8412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8412-8450": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8450-8578": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8578-8625": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8625-8701": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8701-8703": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8703-8747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8747-8749": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8749-8762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8762-8798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8798-8917": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8917-8948": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8948-9029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9029-9053": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9053-9069": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9069-9268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9268-9287": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9287-9382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9382-9409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9409-9559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9559-9576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9576-9592": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9592-9602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9602-9813": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9813-9870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9870-9976": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9976-10042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10042-10084": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10084-10086": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10086-10123": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10123-10185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10185-10190": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10190-10254": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10254-10346": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10346-10379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10379-10449": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10449-10592": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10592-10609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10609-10691": {"better": ["2z2wv6", "rhguau"], "neutral": ["original"], "worse": [], "reason": "Alternates 2z2wv6 and rhguau explicitly compute that for t=1 (odd), m = 3^{a+1}*(3^{P-a-1}-1) = 3^P - 3^{a+1}, which is a key simplification that immediately shows this family gives m \u2248 M for small a. The original only approximates m \u2248 tM without computing the exact formula."}}
+{"10691-10828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10828-10949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10949-10992": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10992-11268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11268-11296": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11424-11496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11496-11642": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11642-11682": {"better": ["to5tec"], "neutral": ["original", "5qm02d"], "worse": [], "reason": "Alternate to5tec provides the most detailed verification: explicitly computes d=3^{P-2}, 3d=3^{P-1}, c=M-3d=2*3^{P-1}, identifies the triple as (d,2d,6d) and confirms the pattern for general P. The original and 5qm02d merely state the result m=2*3^{P-1} without the algebraic verification."}}
+{"11682-11694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11694-11711": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11711-11746": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11746-11845": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11845-11904": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11904-11984": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11984-12002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12002-12013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12013-12026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12026-12146": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12146-12178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12422-12526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12526-12573": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12573-12580": {"better": ["8exoub"], "neutral": ["original", "58rve7"], "worse": [], "reason": "Alternate 8exoub gives a complete summary: states the triple (M/9, 2M/9, 6M/9), confirms distinctness and integrality for P\u22652, and computes lcm = (2/3)M all in one step. The original merely states \"d = M/9\" without the full conclusion. 58rve7 also computes the lcm correctly but is slightly less organized."}}
+{"12580-12694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12694-12712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12712-12818": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12818-12967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12967-12983": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13088-13134": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13134-13160": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13211-13264": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13264-13294": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13294-13314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13314-13387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13387-13497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13497-13529": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13529-13631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13631-13804": {"better": ["original"], "neutral": ["zp9bb8"], "worse": ["6414fh"], "reason": "The original attempts a rigorous minimality proof (showing no triple with lcm < 2M/3 can exist due to divisibility constraints). Alternate 6414fh just says \"trust the pattern\" without proof, which is mathematically weaker. Alternate zp9bb8 starts a different approach but doesn't clearly advance."}}
+{"13804-13917": {"better": [], "neutral": ["original", "n8pa4g", "h9ujql"], "worse": [], "reason": "All three completions pursue the same correct approach: factoring out gcd(a,b,c)=3^k and noting the constraint on k. No meaningful differentiation."}}
+{"13917-14199": {"better": [], "neutral": ["original", "im7jrn", "dl6mml"], "worse": [], "reason": "All three completions reach the same correct conclusion that the common factor cannot exceed 3^{P-2} (since three distinct positive integers can't sum to 3). No meaningful differentiation."}}
+{"14199-14240": {"better": ["byglgo"], "neutral": ["original", "16l7xc"], "worse": [], "reason": "Alternate byglgo provides a complete and rigorous minimality argument: shows the common factor is at most 3^{P-2}, the reduced triple sums to 9, brute-forces all triples summing to 9 ((1,2,6) lcm 6; (1,3,5) lcm 15; (2,3,4) lcm 12), and confirms (1,2,6) is optimal. The original just asserts the conclusion. Alternate 16l7xc starts the common-factor argument but doesn't complete it."}}
+{"14240-14245": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14245-14283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14283-14302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14302-14324": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14324-14364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14364-14435": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14435-14437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14437-14458": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14458-14580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14580-14610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14610-14640": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14640-14675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14675-14697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14697-14706": {"better": [], "neutral": ["original", "koyn5j", "8ltl6v"], "worse": [], "reason": "Original has correct boxed answer 5 but answer has not been sufficiently repeated."}}

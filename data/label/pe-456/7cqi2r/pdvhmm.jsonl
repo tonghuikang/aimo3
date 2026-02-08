@@ -1,0 +1,219 @@
+{"60-151": {"better": [], "neutral": ["ga7e6v", "fwxjcy"], "worse": [], "reason": "Original correctly identifies the coordinate ranges and centering. ga7e6v speculates about circles/groups which is reasonable exploration. fwxjcy jumps to counting method prematurely without understanding the point generation. All are valid initial observations."}}
+{"151-195": {"better": [], "neutral": ["31yage", "c695qx"], "worse": [], "reason": "Original is concise and clear. Both alternates explore primality/coprimality which are reasonable next steps. All lead to similar computational exploration."}}
+{"195-255": {"better": [], "neutral": ["l1uh4k"], "worse": ["zu91en"], "reason": "Original clearly explains the independent sequences and period structure. l1uh4k covers similar ground with slightly more explanation. zu91en is too brief and adds no insight."}}
+{"255-329": {"better": ["al25x3"], "neutral": ["xawh5g"], "worse": [], "reason": "Original proceeds to check factorization, a routine step. al25x3 provides extensive insight about the angular ordering method for counting triangles containing origin, which is crucial for the solution. xawh5g states the goal clearly but briefly."}}
+{"461-540": {"better": [], "neutral": ["n74ogg"], "worse": ["zwq4z0"], "reason": "Original correctly factors 32322 to understand the period. n74ogg provides good theoretical explanation with Fermat's little theorem. zwq4z0 is too terse (\"We have generator?\") without meaningful content."}}
+{"628-665": {"better": [], "neutral": ["sw1bg4", "4jamz5"], "worse": [], "reason": "All three are essentially equivalent - computing the factorization of 30102 for the y-sequence. No meaningful difference in approach or insight."}}
+{"708-738": {"better": ["kfcdkd"], "neutral": [], "worse": ["s3zs8l"], "reason": "kfcdkd provides detailed analysis of LCM period calculation with concrete numbers (~972 million), showing good mathematical reasoning. Original is adequate. s3zs8l (\"We might need to compute orders exactly\") is vague and adds minimal value."}}
+{"738-775": {"better": ["03xspe"], "neutral": ["rvi2fu"], "worse": [], "reason": "03xspe provides excellent insight about angular ordering for counting triangles containing origin - this is the key algorithmic approach. rvi2fu correctly explains periodicity. Original is adequate but less insightful."}}
+{"775-816": {"better": [], "neutral": ["5j2dew", "7yguln"], "worse": [], "reason": "All three make reasonable observations. Original notes the centering around zero. 5j2dew states the goal. 7yguln notes N=2M is smaller than period. All are valid intermediate observations."}}
+{"816-860": {"better": [], "neutral": ["tx0c8a", "mfdyd7"], "worse": [], "reason": "All three correctly state the goal of counting triangles containing origin. mfdyd7 provides more detail about half-plane conditions but is not materially better. All are reasonable goal statements."}}
+{"860-1142": {"better": [], "neutral": ["4q5pgf", "w15dm5"], "worse": [], "reason": "Original provides the most complete explanation of the angular sorting method with the explicit formula C(N,3) - sum_i C(k_i,2). w15dm5 covers similar ground. 4q5pgf is more abbreviated. All understand the half-plane approach."}}
+{"1142-1411": {"better": [], "neutral": ["8cgzn6", "j6rzri"], "worse": [], "reason": "Original provides thorough analysis of edge cases (zero coordinates, collinearity). Both alternates are shorter summaries that correctly identify the computational approach. Original's detail about collinear cases is valuable but both alternates are adequate."}}
+{"1411-1536": {"better": [], "neutral": ["z6qipt", "or312n"], "worse": [], "reason": "Original carefully considers edge cases with collinear points and origin on edge. z6qipt mentions the (0,0) vertex case. or312n dismisses it as improbable. All handle edge cases reasonably, though original is most thorough."}}
+{"1536-1596": {"better": ["2r2nqd"], "neutral": ["tt27jw"], "worse": [], "reason": "2r2nqd raises the critical issue of antipodal pairs (angle difference exactly 180\u00b0) which is fundamental to the correct solution. Original tests the algorithm with examples. tt27jw checks for zero coordinates. 2r2nqd's insight about antipodal pairs is the most valuable."}}
+{"1596-1975": {"better": [], "neutral": ["ztc3gy", "bd2i3h"], "worse": [], "reason": "Original provides complete brute-force verification code with clear contains_origin function. Both alternates are abbreviated versions that would accomplish the same task. All lead to verification."}}
+{"1975-1982": {"better": [], "neutral": ["dsb70p", "habg5f"], "worse": [], "reason": "All three are functionally equivalent - calling the brute-force count function. Trivial code execution with no meaningful difference."}}
+{"2003-2234": {"better": [], "neutral": ["3u4t6r"], "worse": ["5m9ppl"], "reason": "Original provides complete working implementation with angle-based sorting and two-pointer technique. 3u4t6r describes the approach conceptually. 5m9ppl is too brief without concrete implementation."}}
+{"2234-2241": {"better": [], "neutral": ["s4atit"], "worse": [], "reason": "Both are identical function calls to test the angle-based counting method. No difference."}}
+{"2259-2362": {"better": [], "neutral": ["efyzqq", "6d1fdf"], "worse": [], "reason": "Original clearly explains the algorithm complexity and approach. efyzqq summarizes concisely. 6d1fdf notes the angle uniqueness assumption. All are reasonable follow-up observations."}}
+{"2362-2482": {"better": [], "neutral": ["kulnd4", "qwxrvv"], "worse": [], "reason": "All three discuss practical implementation concerns (floating point, memory, performance) for N=2M. Original considers using rational slopes. All are valid engineering considerations with similar quality."}}
+{"2482-2576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2576-2580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2580-2615": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2615-2756": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2756-2862": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2862-2899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3013-3120": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3120-3201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3360-3369": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3369-3432": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3432-3497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3497-3609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3609-3754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3754-3771": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3771-4088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4088-4144": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4144-4251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4251-4274": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4274-4296": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4296-4333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4333-4347": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4347-4350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4350-4526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4526-4554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4554-4599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4599-4601": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4601-4697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4697-4728": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4728-4731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4731-4756": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4756-4765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4765-4769": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4769-4897": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4897-4930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4930-4946": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4946-5013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5013-5086": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5086-5100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5100-5143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5143-5151": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5151-5222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5222-5301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5301-5442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5442-5485": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5485-5552": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5552-5577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5577-5613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5613-5652": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5652-5666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5666-5680": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5680-5684": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5684-6006": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6006-6012": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6030-6064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6084-6143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6523-6548": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6548-6667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6667-7024": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7024-7174": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7174-7207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7207-7364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7364-7507": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7507-7991": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7991-8211": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8211-8432": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8432-8534": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8534-8703": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8703-8779": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8779-8784": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8784-8801": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8801-8831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8831-8933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8933-9123": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9123-9234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9234-9549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9549-9909": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9909-9919": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9955-9965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9965-10099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10099-10140": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10140-10368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10368-10428": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10428-10516": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10516-10741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10741-10755": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10755-10788": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10788-10813": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10813-11236": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11236-11243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11265-11288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11308-11348": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11463-11561": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11561-11603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11603-11607": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11607-11717": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11717-11781": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11781-11919": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11919-12059": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12059-12094": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12094-12153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12153-12162": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12162-12217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12217-12456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12456-12467": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12467-12521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12521-12910": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12910-12937": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12937-12944": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12944-13185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13185-13195": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13195-13207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13207-13331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13331-13406": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13406-13416": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13416-13714": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13714-13720": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13720-13891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13891-13908": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13940-14018": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14018-14029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14029-14258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14258-14556": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14556-14630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14630-14697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14697-14758": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14758-14781": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14781-14863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14863-14938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14938-14963": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14963-14993": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14993-15077": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15077-15136": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15136-15462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15462-15791": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15791-15900": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15900-16114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16114-16174": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16174-16222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16222-16236": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16236-16968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16968-16988": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17026-17079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17079-17566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17566-18150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18150-18188": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18406-18715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18715-18746": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19058-19084": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19955-19981": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20139-20197": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20306-20324": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20324-20329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20329-20387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20387-20698": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20698-20712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20712-20762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20762-20846": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20846-21356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21356-21463": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21463-21469": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21469-21528": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21528-21577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21577-21587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21587-21636": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21636-21726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21726-22145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22145-22252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22252-22572": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22572-22584": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22584-22823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22823-22945": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22945-23015": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23015-23103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23103-23273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23273-23316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23316-23381": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23381-23408": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23408-23486": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23486-23507": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23507-23526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23526-23606": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23606-23621": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23621-23707": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23707-23757": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23757-23762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23762-23960": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23960-23984": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23984-24070": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24070-24524": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24524-24554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24554-24582": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24582-24667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24667-24719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24719-25319": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25319-25339": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25374-25393": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25393-25459": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25511-25523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25523-25533": {"better": [], "neutral": ["original", "fsemjn", "yayek0"], "worse": [], "reason": "Original has correct boxed answer 333333208685971546 but answer has not been sufficiently repeated."}}

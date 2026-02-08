@@ -1,0 +1,409 @@
+{"10-44": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44-115": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"115-142": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"142-167": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"167-259": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"259-305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"305-383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"383-412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"412-440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"440-639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"639-694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"694-776": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"776-1258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1258-1295": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1295-1379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1379-1487": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1487-1521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1521-1804": {"better": [], "neutral": ["original", "xdf55v", "75nxzg"], "worse": [], "reason": "All completions derive the same reduction: f(n) = min lcm(d,e) over distinct d,e>1 with d+e=n-1, using the triple {1,d,e}. 75nxzg explicitly verifies the three divisors are distinct. No meaningful differentiation."}}
+{"1804-1827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1827-2012": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2012-2138": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2138-2156": {"better": ["iv4kdt"], "neutral": ["original"], "worse": ["p0ouzy"], "reason": "iv4kdt explores the important optimization that when d|e, N=e (the larger), leading to minimizing the larger element \u2014 this direction is productive. The original correctly flags the need to test whether including 1 is always optimal, but doesn't explore alternatives. p0ouzy just commits to the {1,d,e} framework as definitive without questioning whether non-1 triples could be better."}}
+{"2156-2232": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2232-2480": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2480-2493": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2493-2716": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2716-2838": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2838-2899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2899-2926": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2926-2940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2940-2961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2961-3083": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3083-3091": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3091-3120": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3120-3163": {"better": ["cz4ze5"], "neutral": ["original"], "worse": ["34m5fq"], "reason": "cz4ze5 correctly notes that replacing a divisor by 1 changes the sum, so the optimality of including 1 is not obvious \u2014 this skepticism is valuable since the correct solution uses a non-1 triple {k/p, k/q, k}. The original hedges appropriately (\"should verify\"). 34m5fq is just \"seems plausible\" with no reasoning at all."}}
+{"3163-3297": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3297-3388": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3388-3473": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3473-3508": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3508-3539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3539-3552": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3552-3652": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3652-3817": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3817-3860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3860-3986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3986-4131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4131-4420": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4420-4772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4772-4804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4804-5037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5037-5226": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5226-5427": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5427-5503": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5503-5565": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5565-5776": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5776-5854": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5854-6084": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6084-6153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6153-6398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6398-6511": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6511-6563": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6563-6696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6696-6879": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6879-6971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6971-7116": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7116-7243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7243-7372": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7372-7525": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7525-7640": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7640-7843": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7843-7921": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7921-8317": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8317-8603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8603-8711": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8711-8738": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8738-8759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8759-8787": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8787-8817": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8817-8856": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8856-9011": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9011-9424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9424-9567": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9567-9587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9587-9682": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9682-9872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9872-10033": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10033-10192": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10192-10215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10215-10362": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10362-10412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10412-10440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10521-10531": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10531-10618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10662-10785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10785-10825": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10923-11035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11035-11054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11054-11191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11191-11215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11215-11225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11225-11235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11235-11290": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11290-11360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11360-11379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11379-11405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11405-11434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11434-11507": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11507-11537": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11537-11564": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11564-11787": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11787-12132": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12132-12177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12177-12238": {"better": [], "neutral": ["original", "9ixi2q", "he5dlm"], "worse": [], "reason": "All completions conclude g=10/11 (wrong \u2014 correct is 16/25). This is based on the flawed assumption that including 1 is always optimal (the {1,d,e} framework). Since all make the same error equally, they're all neutral relative to each other."}}
+{"12238-12356": {"better": ["kepkv0"], "neutral": ["original"], "worse": ["qamnl4"], "reason": "kepkv0 carefully verifies all assumptions and checks that 1+d+e=n, which is good rigor. The original verifies 11 is the smallest odd divisor. qamnl4 just declares \"answer is 21\" without any verification \u2014 premature conclusion on a wrong answer."}}
+{"12356-12366": {"better": [], "neutral": ["original", "ey6w1x", "y5xhr2"], "worse": [], "reason": "All completions state f=(10/11)*S (wrong, but the same error equally). y5xhr2 jumps to the final answer 21 which is premature, but the conclusion flows from the shared wrong premise. No meaningful differentiation."}}
+{"12366-12497": {"better": ["original"], "neutral": ["xk9s71"], "worse": ["ifnnc3"], "reason": "The original correctly questions whether a non-1 triple could yield smaller N, which is exactly the right concern (the correct answer uses {k/p, k/q, k} without 1). xk9s71 at least double-checks correctness. ifnnc3 just verifies divisibility without questioning the approach."}}
+{"12497-12666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12666-12725": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12725-12782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12782-12802": {"better": ["j3t59c"], "neutral": ["original", "cih4hn"], "worse": [], "reason": "j3t59c identifies the key insight: \"lcm = max if the other numbers divide the max\" and derives that the optimal triple has the form {a, b, N} where a|N and b|N. This is exactly the correct framework \u2014 the true answer uses {K/16, K/2, K} where all three divide K and lcm = K. Others don't reach this productive formulation."}}
+{"12802-13371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13371-13848": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13848-13852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13852-13866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13866-13994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13994-14111": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14111-14182": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14182-14220": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14220-14603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14603-14802": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14802-14872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14872-14885": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15628-15718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15718-15864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15864-16068": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16068-16348": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16553-16639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16639-16935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16935-16957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16957-16982": {"better": ["a3du3o"], "neutral": ["original", "ihpsco"], "worse": [], "reason": "a3du3o gives a concrete counterexample: for n=11, the triple {2,3,6} with N=6 beats the {1,d,e} family which gives N=8. This directly demonstrates the flaw in the \"include 1 is always best\" assumption. The original just says \"need to more comprehensively compute\" without specifics. ihpsco hedges but still leans toward \"likely the solution with 1 will be minimal for such large n.\""}}
+{"16982-17013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17013-17156": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17156-17172": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17172-17195": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17195-17210": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17210-17286": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17286-17331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17331-17417": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17417-17551": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17551-17599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17599-17921": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17921-17988": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17988-18004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18366-18761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18761-18781": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18781-18814": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18814-18898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19486-19545": {"better": ["p8f2t0"], "neutral": ["original", "0yup7p"], "worse": [], "reason": "p8f2t0 discovers that for n=22 with S=21, the smallest odd divisor formula gives f=14 but brute force gives f=12, explicitly identifying a contradiction in the {1,d,e} framework (\"So not matching\"). This is the critical observation that leads to the correct answer \u2014 the {1,d,e} approach is not always optimal. The original and 0yup7p just catalog ratios without noticing the discrepancy."}}
+{"19545-19669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19669-19792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19792-19999": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19999-20101": {"better": ["51ti1r"], "neutral": ["original"], "worse": ["qbiehe"], "reason": "51ti1r concretely tests the formula on n=21, computing f=16 predicted vs actual f=12, providing definitive evidence that the {1,d,e} construction is suboptimal. The original vaguely acknowledges \"alternative constructions\" which is fair. qbiehe gets lost in confused case analysis (n odd vs even, O=(n-1)/2=6.5 \"not integer\") without reaching any concrete conclusion or counterexample."}}
+{"20101-20251": {"better": ["2oo8uy"], "neutral": ["xls7y4"], "worse": ["original"], "reason": "2oo8uy provides the key counterexample f(14)=8 using {2,4,8} (not including 1), directly demonstrating that triples without 1 can achieve much smaller N (8 vs 22 from the {1,d,e} method). This is a crucial insight for the correct solution path where the optimal triple is {K, K/p, K/q} not involving 1. The original stays abstract about power-of-2 divisors without computing the concrete comparison (8 vs 22) that reveals the {1,d,e} approach is fundamentally suboptimal."}}
+{"20251-20379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20379-20419": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20419-20459": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20459-20590": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20590-20601": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20601-20646": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20646-20654": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20654-20662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20662-20666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20666-21162": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21162-21253": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21253-21269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21269-21285": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21285-21353": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21353-21787": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21787-21816": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21816-22096": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22096-22258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22258-22316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22316-22379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22379-22516": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22516-22582": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22582-22684": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22684-22728": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22728-22751": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22751-22785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22785-23143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23143-23167": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23167-23202": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23202-23222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23222-23287": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23287-23486": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23486-23616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23616-23637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23637-23695": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23695-23740": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23740-23819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23819-23842": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23842-23882": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23882-23966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23966-24206": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24206-24321": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24321-24421": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24421-24463": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24541-24949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24949-25041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25041-25180": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25180-25188": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25188-25199": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25199-25212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25212-25228": {"better": [], "neutral": ["original", "qfhsu4", "2hro7b"], "worse": [], "reason": "All completions identify that 5 divides n and begin exploring factored constructions. 2hro7b is slightly more explicit (writing n=5m), but all head the same productive direction. No meaningful differentiation."}}
+{"25228-25246": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25246-25267": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25267-25367": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25367-25404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25404-25639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25797-25843": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25918-25933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25933-25943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25943-25964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25964-25973": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25973-26189": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26230-26278": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26461-26549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26549-26607": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26607-26826": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26826-26837": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26837-26924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26924-27123": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27123-27281": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27331-27477": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27477-27495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27495-27595": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27595-27721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27721-27734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27734-27874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27874-28026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28026-28171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28171-28464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28464-28481": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28481-28687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28687-28767": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28767-28811": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28811-28849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28849-28979": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28979-29102": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29102-29312": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29312-29467": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29467-29482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29482-29512": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29512-29535": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29535-29760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29760-29860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29860-29986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29986-30020": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30020-30075": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30075-30121": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30121-30217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30217-30241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30241-30327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30327-30363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30363-30562": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30562-30613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30613-30738": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30738-30869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30869-31042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31042-31148": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31148-31259": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31259-31327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31327-31523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31523-31684": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31684-31932": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31932-32204": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32204-32244": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32244-32293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32293-32336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32336-32456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32456-32474": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32474-32766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32766-32869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32917-32940": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"32940-32958": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"32958-32967": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"32967-32976": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"32976-33018": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33053-33061": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33061-33106": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33106-33207": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33207-33267": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33267-33361": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33361-33466": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33466-33629": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33629-33716": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33751-33758": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33758-33792": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33792-33802": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33802-33844": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33844-33856": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33856-33967": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33967-33994": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33994-34019": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34019-34081": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34081-34314": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34314-34378": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34378-34411": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34411-34422": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34422-34542": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34542-34585": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34585-34619": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34619-34975": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34975-35027": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35027-35038": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35038-35044": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35044-35050": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35050-35055": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35055-35061": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35061-35066": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35066-35072": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35072-35083": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35083-35104": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35104-35118": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35118-35288": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35288-35338": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35338-35411": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35411-35420": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35420-35432": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35432-35494": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35494-35609": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35609-35623": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35623-35674": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35674-35681": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35681-35684": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35684-35734": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35734-35740": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35740-35869": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"35869-36006": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36006-36023": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36091-36165": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36165-36196": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36196-36209": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36209-36231": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36231-36252": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36252-36258": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36258-36296": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36296-36321": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36321-36440": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36440-36543": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36543-36704": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36704-36767": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36767-36897": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36897-36913": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36913-36923": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36923-36992": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"36992-37015": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37015-37030": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37030-37033": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37033-37049": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37049-37086": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37086-37120": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37120-37166": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37166-37262": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37262-37363": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37363-37529": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37529-37545": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37545-37556": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37556-37570": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37570-37587": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37587-37602": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37602-37608": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37608-37722": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37722-37803": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37803-37807": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37807-37866": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"37866-38109": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38109-38114": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38114-38173": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38173-38200": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38200-38220": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38220-38372": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38372-38419": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38419-38422": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38422-38462": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38462-38597": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38597-38649": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38649-38655": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38655-38731": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38731-38856": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38856-38899": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38899-38905": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38905-38991": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"38991-39004": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39004-39011": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39011-39036": {"better": [], "neutral": ["original", "q5qla4", "mw6xbo"], "worse": [], "reason": "Alternate has correct boxed answer 41 but answer has not been sufficiently repeated."}}
+{"39036-39053": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39053-39059": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39059-39064": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39064-39096": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39096-39145": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39145-39235": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39235-39254": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39254-39256": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39256-39354": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39354-39385": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39385-39416": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"39416-39437": {"better": [], "neutral": ["original", "1fsxbn", "0kx6ux"], "worse": [], "reason": "Alternate has correct boxed answer 41 but answer has not been sufficiently repeated."}}
+{"39437-39444": {"better": [], "neutral": ["original", "1w59io"], "worse": [], "reason": "Original has correct boxed answer 41. Correct answer has been sufficiently repeated in history."}}

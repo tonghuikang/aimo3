@@ -1,0 +1,136 @@
+{"33-85": {"better": [], "neutral": [], "worse": [], "reason": "All completions establish the tournament structure and scoring system. yjdm3x provides most detailed analysis of binary representation structure. All equivalent in setting up the problem."}}
+{"85-172": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the scoring as binary representation. e1vy1d provides more detailed round-by-round analysis. All equivalent."}}
+{"172-285": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe binary representation structure. original is most explicit. All equivalent observations."}}
+{"285-419": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss Swiss-system tournament structure. bff7f4 provides clearest explanation of prefix/bit structure. All equivalent."}}
+{"419-479": {"better": [], "neutral": [], "worse": [], "reason": "All completions trace round 1 mechanics. fdnw4q extends to round 2 with detailed analysis. All equivalent observations."}}
+{"479-631": {"better": [], "neutral": [], "worse": [], "reason": "All completions trace round 2 mechanics showing score group splitting. All equivalent observations about binary structure."}}
+{"631-660": {"better": [], "neutral": [], "worse": [], "reason": "All completions generalize the binary splitting pattern. All equivalent brief observations."}}
+{"660-710": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss determinism vs pairing flexibility. All equivalent observations."}}
+{"710-777": {"better": [], "neutral": [], "worse": [], "reason": "All completions list the two factors determining outcomes: pairing and speed. Brief equivalent observations."}}
+{"777-895": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss determinism given speed ordering and pairing. All equivalent observations."}}
+{"895-965": {"better": [], "neutral": [], "worse": [], "reason": "All completions ask about possible orderings and explore whether ties are possible. 4xjmwn and c2vlqk explore ties question thoroughly. All equivalent exploration."}}
+{"965-1024": {"better": [], "neutral": [], "worse": [], "reason": "All completions continue exploring whether scores are distinct. ua35ls observes that 2^20 participants equals 2^20 possible scores. All equivalent exploration."}}
+{"1024-1112": {"better": [], "neutral": [], "worse": [], "reason": "j6ouoh makes key observation that wins form a prefix - runner must win all previous rounds to be in winning group. This is a crucial structural insight. Others explore ties without recognizing this constraint."}}
+{"1112-1272": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss losers continuing to compete. original correctly surmises 2^20 distinct scores. All explore similar aspects."}}
+{"1272-1328": {"better": [], "neutral": [], "worse": [], "reason": "All completions test small n=2 case and find distinct scores. Equivalent verification approaches."}}
+{"1328-1407": {"better": [], "neutral": [], "worse": [], "reason": "All completions test n=4 case. jburfs provides clearest summary showing final scores {3,2,1,0}. All equivalent."}}
+{"1407-1478": {"better": [], "neutral": [], "worse": [], "reason": "All completions trace round 2 resulting in {3,2,1,0}. Equivalent mechanical descriptions."}}
+{"1478-1533": {"better": [], "neutral": [], "worse": [], "reason": "All completions generalize that scores are permutation of 0..2^n-1. v45n53 provides clearest explanation. All equivalent."}}
+{"1533-1668": {"better": [], "neutral": [], "worse": [], "reason": "fmjv8x correctly shows that C can outrank B (C slower but higher score), demonstrating ranking differs from speed. 7rjdxu incorrectly claims ranking always matches speeds."}}
+{"1668-1697": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss that final scores are 0..2^n-1 but assignments vary. All equivalent brief observations."}}
+{"1697-1801": {"better": [], "neutral": [], "worse": [], "reason": "a78blc correctly identifies that D (slowest) cannot achieve score 3 since D cannot win any match - key constraint on achievable orderings. 0zlj5y also recognizes constraints exist."}}
+{"1801-1850": {"better": [], "neutral": [], "worse": [], "reason": "All completions frame N as counting possible bijections/assignments. All equivalent problem setup."}}
+{"1850-1990": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe N as counting permutations/assignments. Equivalent problem reformulation."}}
+{"1990-2098": {"better": [], "neutral": [], "worse": [], "reason": "All completions draw analogies to binary trees, sorting networks, or heaps. All equivalent conceptual framing."}}
+{"2098-2220": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe binary tree model with each node containing 2^(n-depth) players. All equivalent structural description."}}
+{"2220-2278": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe recursive binary tree partitioning. 49l11r notes constraint that pairing affects assignments. All equivalent descriptions."}}
+{"2278-2412": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze what constraints exist on winner sets. All recognize that not any half can be winners. Equivalent exploration."}}
+{"2412-2818": {"better": [], "neutral": [], "worse": [], "reason": "All completions apply Hall's marriage theorem to characterize achievable winner sets. All reach same key constraint that matching must pair each winner with slower loser."}}
+{"2818-2863": {"better": [], "neutral": [], "worse": [], "reason": "All completions work through the matching condition. vycaou provides concrete n=2 test case. All reaching same understanding."}}
+{"2863-3259": {"better": [], "neutral": [], "worse": [], "reason": "1d76zg provides clearest formulation: scanning sorted list, #winners must never exceed #losers (Dyck path condition). Others reach similar but 1d76zg is most explicit about parentheses analogy."}}
+{"3259-3426": {"better": [], "neutral": [], "worse": [], "reason": "b6bf0k explicitly connects to Catalan numbers and identifies the count of valid winner sets. All completions correctly identify the ballot/Dyck condition."}}
+{"3426-3443": {"better": [], "neutral": [], "worse": [], "reason": "kxbjdi explicitly states that the number of possible winner sets equals Catalan number C_m. This is the key insight for counting N. Others summarize condition without counting."}}
+{"3443-3475": {"better": [], "neutral": [], "worse": [], "reason": "nx4ibc explicitly derives the Catalan number formula C_m = (1/(m+1))*binom(2m,m) and explains the bijection to Dyck words. Key quantitative insight."}}
+{"3475-3600": {"better": [], "neutral": [], "worse": [], "reason": "All completions work through the ballot condition mechanically. Equivalent explanations of the Dyck path condition."}}
+{"3600-3952": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude that winner sets correspond to Catalan number C_m. original provides additional insight that specific pairings don't affect downstream outcomes."}}
+{"3952-4044": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive N = product of Catalan numbers over all internal nodes. This is the key formula. Equivalent derivations."}}
+{"4044-4082": {"better": [], "neutral": [], "worse": [], "reason": "pu6mvj provides detailed derivation of which nodes contribute which Catalan number, giving explicit formula in terms of node sizes. More comprehensive than others."}}
+{"4082-4113": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the Catalan formula for each node. 725egg begins computing the total product. Equivalent."}}
+{"4113-4322": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute the product formula for N. All correctly identify node structure and Catalan contributions. Equivalent derivations."}}
+{"4322-4470": {"better": [], "neutral": [], "worse": [], "reason": "All completions trace the tree structure round by round. Equivalent mechanical descriptions."}}
+{"4470-4559": {"better": [], "neutral": [], "worse": [], "reason": "f027ct and hmbc0g provide explicit closed-form formulas for N as product of Catalan numbers with exponents. f027ct gives N = product_{k=1}^{20} (C_{2^{k-1}})^{2^{20-k}}. Key quantitative result."}}
+{"4559-4679": {"better": [], "neutral": [], "worse": [], "reason": "All completions define level structure with 2^l nodes at level l. Equivalent descriptions of tree structure."}}
+{"4679-4754": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive that each node at level l contributes factor C_{2^{19-l}}. Equivalent derivations of the Catalan contribution per node."}}
+{"4754-4785": {"better": [], "neutral": [], "worse": [], "reason": "All completions state identical product formula N = product_{l=0}^{19} (C_{2^{19-l}})^{2^l}. Only formatting differences."}}
+{"4785-4883": {"better": [], "neutral": [], "worse": [], "reason": "All completions re-index the product formula. All arrive at equivalent expression N = product_{j=0}^{19} (C_{2^j})^{2^{19-j}}. Mechanical algebra."}}
+{"4883-4931": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the goal: find exponent of 10 dividing N, which is min(v2(N), v5(N)). Equivalent problem setup."}}
+{"4931-4991": {"better": [], "neutral": [], "worse": [], "reason": "All completions explain k = min(v2(N), v5(N)) since 10=2*5. Equivalent explanations of the exponent computation."}}
+{"4991-5027": {"better": [], "neutral": [], "worse": [], "reason": "All completions state need to compute v2(N) and v5(N). xepswg introduces Legendre's formula. Equivalent setup steps."}}
+{"5027-5261": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly argue v2(N) >> v5(N) so k = v5(N). original provides most detailed justification. All equivalent conclusions."}}
+{"5261-5338": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up the computation of v5(N). original correctly notes the mod 10^5 step is needed (though later forgets). All equivalent setup."}}
+{"5338-5341": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up the v5(N) computation. Equivalent transition statements."}}
+{"5341-5379": {"better": [], "neutral": [], "worse": [], "reason": "All completions write the same formula for v5(N) as weighted sum of v5(C_{2^j}). Equivalent."}}
+{"5379-5412": {"better": [], "neutral": [], "worse": [], "reason": "All completions restate the same weighted sum formula. Equivalent."}}
+{"5412-5451": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up computation of v5(C_{2^b}) using Catalan formula. Equivalent."}}
+{"5451-5498": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive v5(C_n) = v5(binom(2n,n)) - v5(n+1). Equivalent formula derivation."}}
+{"5498-5511": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up computation for m=2^b. Equivalent."}}
+{"5511-5535": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss computing v5(binom(2N,N)) using Legendre's formula. Equivalent setup."}}
+{"5535-5625": {"better": [], "neutral": [], "worse": [], "reason": "All completions apply Legendre's formula. Equivalent."}}
+{"5625-5662": {"better": [], "neutral": [], "worse": [], "reason": "All completions write Legendre's formula for v5 of factorials. Equivalent computation."}}
+{"5662-5739": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive v5(binom(2m,m)) = (2 s_5(m) - s_5(2m))/4. Same algebra, equivalent."}}
+{"5739-5769": {"better": [], "neutral": [], "worse": [], "reason": "All completions state v5(C_m) formula. Equivalent."}}
+{"5769-5781": {"better": [], "neutral": [], "worse": [], "reason": "All completions set m = 2^b. Equivalent transition."}}
+{"5781-5852": {"better": [], "neutral": [], "worse": [], "reason": "All completions identify need for s_5(2^b) and s_5(2^{b+1}). Equivalent setup."}}
+{"5852-6007": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss computing v5(C_{2^b}) via Python. Equivalent approach."}}
+{"6007-6108": {"better": [], "neutral": [], "worse": [], "reason": "All completions plan to compute v5(N) exactly then mod. Equivalent."}}
+{"6108-6146": {"better": [], "neutral": [], "worse": [], "reason": "All completions estimate magnitude of v5(N). Equivalent observations about manageability."}}
+{"6146-6248": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss computing v5 of Catalan numbers via Kummer's theorem / digit sums. Equivalent analysis of magnitude."}}
+{"6248-6379": {"better": [], "neutral": [], "worse": [], "reason": "All completions estimate v5(N) magnitude and plan computation. Equivalent."}}
+{"6379-6416": {"better": [], "neutral": [], "worse": [], "reason": "All completions plan Python computation. j0vafz starts code. Equivalent approach."}}
+{"6416-6484": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify the product formula for N. dlisfa provides clearest verification via change of variable. All equivalent."}}
+{"6484-6490": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss magnitude estimates for v5(C_{2^b}). Equivalent observations."}}
+{"6490-6543": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify the Catalan number combinatorial reasoning. Equivalent verification steps."}}
+{"6543-6597": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify m=1 case (C_1=1). Equivalent small case check."}}
+{"6597-6657": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify m=2 case (C_2=2) with manual enumeration. Equivalent verification."}}
+{"6657-6813": {"better": [], "neutral": [], "worse": [], "reason": "All completions enumerate winner subsets for m=2. Equivalent verification approach."}}
+{"6813-6878": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the matching condition for winner subsets. Equivalent formalization."}}
+{"6878-6933": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the ballot/prefix condition. Equivalent."}}
+{"6933-7011": {"better": [], "neutral": [], "worse": [], "reason": "All completions check {b,c} fails ballot condition. Same computation, equivalent."}}
+{"7011-7032": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify {b,d} satisfies ballot condition. Equivalent check."}}
+{"7032-7081": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify prefix counts for {b,d}. Same check, equivalent."}}
+{"7081-7084": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude {b,d} is valid. Brief identical conclusions."}}
+{"7084-7138": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify {c,d} is valid. Equivalent check."}}
+{"7138-7161": {"better": [], "neutral": [], "worse": [], "reason": "All completions confirm 2 valid winner sets = C_2. Equivalent conclusion."}}
+{"7161-7171": {"better": [], "neutral": [], "worse": [], "reason": "All completions confirm Catalan number formula is correct. Equivalent conclusion."}}
+{"7171-7183": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude N = product of Catalan numbers. notk9u provides more careful verification that pairing order doesn't matter. All equivalent."}}
+{"7183-7302": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify the exponent representation for N. ku3gqm provides extra verification that pairing doesn't affect outcome. All equivalent."}}
+{"7302-7333": {"better": [], "neutral": [], "worse": [], "reason": "All completions write the same product formula for N. Equivalent."}}
+{"7333-7361": {"better": [], "neutral": [], "worse": [], "reason": "All completions restate the product formula for N. Equivalent."}}
+{"7361-7394": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the v5(N) formula. Brief equivalent statements."}}
+{"7394-7419": {"better": [], "neutral": [], "worse": [], "reason": "All completions begin Python computation. Mechanical code setup."}}
+{"7419-7463": {"better": [], "neutral": [], "worse": [], "reason": "All completions implement Legendre's formula for v_p(n!). Identical logic."}}
+{"7463-7502": {"better": [], "neutral": [], "worse": [], "reason": "All completions implement v_p(binom(2m,m)). Identical logic."}}
+{"7502-7535": {"better": [], "neutral": [], "worse": [], "reason": "All completions implement v5(Catalan(m)). Minor differences in approach but all equivalent."}}
+{"7535-7690": {"better": [], "neutral": [], "worse": [], "reason": "The original has a bug in v5_catalan: uses v_p_factorial(m+1,5) instead of the correct v5(m+1), leading to wrong intermediate computation. The alternates correctly compute v5(m+1) by trial division."}}
+{"7690-7818": {"better": [], "neutral": [], "worse": [], "reason": "9k4bk7 and lu22jz implement cleaner v5_catalan using digit sum formula correctly. Original has confused computation and falls back to buggy function. hhogvo uses v_p_factorial for denominator which may be wrong."}}
+{"7818-7854": {"better": [], "neutral": [], "worse": [], "reason": "All completions test small values or define computation function. Mechanical verification code."}}
+{"7854-7880": {"better": [], "neutral": [], "worse": [], "reason": "All completions test v5 computation. Mechanical verification code."}}
+{"7932-7978": {"better": [], "neutral": [], "worse": [], "reason": "All completions reimplement v_p_factorial. Identical logic."}}
+{"7978-8019": {"better": [], "neutral": [], "worse": [], "reason": "All completions implement v_p(binom(2m,m)). Identical logic."}}
+{"8019-8057": {"better": [], "neutral": [], "worse": [], "reason": "All completions implement v5(Catalan(m)). All use v_p_factorial(m+1,5) for denominator (which may be incorrect but all share same approach)."}}
+{"8057-8078": {"better": [], "neutral": [], "worse": [], "reason": "All completions test v5_catalan for small m. Mechanical verification code."}}
+{"8369-8549": {"better": [], "neutral": [], "worse": [], "reason": "All completions debug the v5 computation error. All identify the issue with v_p_factorial vs v5 of integer. Equivalent debugging."}}
+{"8549-8595": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute v5_binomial directly. Identical code."}}
+{"8859-8923": {"better": [], "neutral": [], "worse": [], "reason": "xeen7g identifies the root cause of the bug: \"we need to subtract v5(m+1) (the exponent of 5 in the integer m+1), not v5_fact(m+1)\" and calls to fix it. Others are still debugging or computing without this clear insight."}}
+{"8923-8950": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute Catalan values directly. Mechanical verification code."}}
+{"8950-8967": {"better": [], "neutral": [], "worse": [], "reason": "Both completions print test values. Identical code."}}
+{"9433-9516": {"better": [], "neutral": [], "worse": [], "reason": "All completions identify the bug: need v5(m+1) not v5((m+1)!). Same correction in all."}}
+{"9516-9559": {"better": [], "neutral": [], "worse": [], "reason": "All completions implement v5_int. Identical code."}}
+{"9559-9584": {"better": [], "neutral": [], "worse": [], "reason": "Both define the same corrected v5_catalan function identically. Mechanical code."}}
+{"9584-9608": {"better": [], "neutral": [], "worse": [], "reason": "Both run the same test loop. Mechanical code."}}
+{"9807-9935": {"better": [], "neutral": [], "worse": [], "reason": "All restate the same formula v5(C_m) = v5(binom(2m,m)) - v5(m+1). Original is more verbose but the mathematical content is identical."}}
+{"9935-9952": {"better": [], "neutral": [], "worse": [], "reason": "All transition to computing v5(C_{2^b}). smil95 jumps to code but computes the same thing. No meaningful difference."}}
+{"9952-9966": {"better": [], "neutral": [], "worse": [], "reason": "All continue toward computing v5(C_{2^b}) values. Mechanical transition."}}
+{"9966-10099": {"better": [], "neutral": [], "worse": [], "reason": "All implement the same v5_catalan_pow2 function using digit sums and v5_int. Functionally identical code."}}
+{"10099-10131": {"better": [], "neutral": [], "worse": [], "reason": "All compute v5_catalan_pow2 for b=0..19 with trivial variation. Mechanical code."}}
+{"10288-10333": {"better": [], "neutral": [], "worse": [], "reason": "All define the same digitsum_base helper function. Trivial naming difference only."}}
+{"10333-10366": {"better": [], "neutral": [], "worse": [], "reason": "Identical v5_int function definition. Mechanical code."}}
+{"10366-10440": {"better": [], "neutral": [], "worse": [], "reason": "All define identical v5_catalan_pow2 function. sc62fn inlines return but logic is the same."}}
+{"10440-10462": {"better": [], "neutral": [], "worse": [], "reason": "Identical list comprehension computing vals. Mechanical code."}}
+{"10555-10877": {"better": [], "neutral": [], "worse": [], "reason": "All list the same v5(C_{2^b}) values for b=0..19. Formatting differs but data is identical."}}
+{"10877-10911": {"better": [], "neutral": [], "worse": [], "reason": "All set up the weighted sum v5(N) = \u03a3 2^{19-b} * v5(C_{2^b}). 37l66l double-checks the indexing but reaches the same conclusion. No meaningful difference."}}
+{"10911-10925": {"better": [], "neutral": [], "worse": [], "reason": "All transition to computing the sum via code. Equivalent approaches."}}
+{"10925-10928": {"better": [], "neutral": [], "worse": [], "reason": "All compute v5(N) via the same weighted sum. Mechanical code with trivial variation."}}
+{"10928-10973": {"better": [], "neutral": [], "worse": [], "reason": "All implement the same v5(N) summation loop. Trivial style differences only."}}
+{"11038-11129": {"better": [], "neutral": [], "worse": [], "reason": "All start computing v2(N) using the Legendre formula approach. p0wubp is more verbose exploring carries but arrives at the same method. No meaningful difference in outcome."}}
+{"11129-11323": {"better": [], "neutral": [], "worse": [], "reason": "All derive v2(C_m) = 2*s2(m) - s2(2m) - v2(m+1) via Legendre's formula. lcc07j explores Kummer's theorem but reaches the same result. All equivalent."}}
+{"11323-11474": {"better": [], "neutral": [], "worse": [], "reason": "Original derives v2(C_{2^b}) = 1 - v2(2^b+1) analytically. Alternates either compute numerically or note the known property. All arrive at the same result."}}
+{"11474-11660": {"better": [], "neutral": [], "worse": [], "reason": "All correctly observe that 2^b+1 is odd for b>=1 (so v2=0) and even for b=0 (so v2=1), yielding v2(C_{2^b})=1 for b>=1, 0 for b=0. No difference in reasoning quality."}}
+{"11660-11692": {"better": [], "neutral": [], "worse": [], "reason": "All correctly state v2(C_{2^b})=1 for b>=1 and verify with small examples. zxiob0 adds code verification but the conclusion is the same."}}
+{"11692-11718": {"better": [], "neutral": [], "worse": [], "reason": "All confirm v2(C_{2^b})=1 for b>=1, verifying with small Catalan numbers. Equivalent reasoning."}}
+{"11718-11827": {"better": [], "neutral": [], "worse": [], "reason": "Original and ntonko correctly compute v2(N) = 2^19 - 1 = 524287. x9u8h1 is short but proceeds to the same result. x9snrk verifies with examples first. All reach the same conclusion."}}
+{"11827-11838": {"better": [], "neutral": [], "worse": [], "reason": "All state v2(N)=524287. o0voct also computes k=121818 in the same span but all reach the same result. No differentiation yet - the mod error hasn't happened."}}
+{"11838-11868": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly compute k=121818. No differentiation at this point - the mod error hasn't happened yet."}}
+{"11868-11897": {"better": ["77rr7g", "zfetu9"], "neutral": ["xy6pdx"], "worse": ["original"], "reason": "Original incorrectly computes 121,818 mod 100,000 = 121,818. Alternates 77rr7g and zfetu9 correctly compute the remainder as 21,818. Alternate xy6pdx doesn't compute the modulo."}}
+{"11897-11901": {"better": ["bneicm", "kjba7c"], "neutral": [], "worse": ["original", "2zp0bb"], "reason": "The original says \"121,818\" (not taking mod). 2zp0bb also says \"121,818\". j28dfx incorrectly claims 100000 > 121818. Nearly all alternates correctly compute 21818 as the remainder."}}
+{"11901-11910": {"better": ["20fuyb", "s9l14f", "fozxap", "6vfyb3", "w0adhg"], "neutral": ["c4jalb", "mszmdq", "t469pj", "agfuab", "vuac71", "ciofjg", "8q1cfy", "l7eesh", "g3tpzb", "z1mtlu", "tsrboc", "chd89g"], "worse": ["original", "al2jeg", "7teguo", "hgowlz", "4haufa", "wnof97", "qrhy3x", "cmxuan", "izht64", "7d81w2", "9rcauh", "6zay6o", "ckxunp", "gqkbj6"], "reason": "Original has wrong boxed answer 121818, correct answer is 21818. Not boxing the answer provides a chance to move on from the wrong answer."}}

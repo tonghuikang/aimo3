@@ -1,0 +1,213 @@
+{"37-68": {"better": [], "neutral": ["original", "6ao8kx", "opn7st"], "worse": [], "reason": "All completions correctly describe the problem. opn7st has slightly more exploration about possible closed forms but doesn't lead anywhere concrete - all are equivalent starting points."}}
+{"68-190": {"better": [], "neutral": ["original", "is13qt", "f17fty"], "worse": [], "reason": "All completions correctly interpret D(n) as the number of terms in the greedy cube representation. They provide equivalent understanding of the problem."}}
+{"190-259": {"better": [], "neutral": ["original", "5bdyun", "u77u1r"], "worse": [], "reason": "All completions recognize the need to sum D(n) for large N. The original adds context about canonical coin systems which is informative but doesn't affect the solution approach."}}
+{"259-274": {"better": [], "neutral": ["original", "md27u4", "qpvrdy"], "worse": [], "reason": "All completions state the goal of summing D(n) for large N. qpvrdy mentions combinatorial counting which is correct but all are equivalent transition statements."}}
+{"274-290": {"better": [], "neutral": ["original", "cpu7fn", "98bew7"], "worse": [], "reason": "All completions suggest finding a pattern/formula/recurrence. These are equivalent high-level strategy statements."}}
+{"290-323": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"323-350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"350-449": {"better": ["pwxgk4"], "neutral": ["original", "5qa22c"], "worse": [], "reason": "pwxgk4 explicitly computes the remainder range [0, 3t(t+1)] after subtracting t^3, which is the key insight for the block decomposition. The original and 5qa22c state the recurrence but don't compute the remainder range precisely."}}
+{"449-464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"464-584": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"584-1438": {"better": ["i10elh"], "neutral": ["original", "ha4a42"], "worse": [], "reason": "i10elh concisely captures the key mapping: n -> n - k^3 maps interval [k^3, (k+1)^3 - 1] to [0, B_k - 1] where B_k = 3k^2+3k+1. This is cleaner than the original's lengthy exploration."}}
+{"1438-1500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1500-1816": {"better": ["d5wx8o"], "neutral": ["original", "52xj4r"], "worse": [], "reason": "d5wx8o provides a rigorous analysis showing that remainder reduces by factor (2/3) in exponent each step, deriving D(n) ~ O(log log n). It correctly traces exponents: n^1 -> n^{2/3} -> n^{4/9} -> n^{8/27}, etc. The original is more exploratory and less precise."}}
+{"1816-1844": {"better": ["6lk9tr"], "neutral": ["original", "1c7lsl"], "worse": [], "reason": "6lk9tr provides concrete computational insight: N^{1/3} ~ 466,000, so O(N^{1/3}) operations is feasible. It also suggests DP with intervals and mentions modulo computation. The original and 1c7lsl are more vague about the approach."}}
+{"1844-1882": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1882-2001": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2001-2697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2697-2729": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2729-3088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3088-3263": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3263-3378": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3378-3647": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3647-3808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3808-3989": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3989-4808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4808-4886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4886-4925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4925-4971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4971-5134": {"better": ["hpqjcy"], "neutral": ["original", "0vlh4q"], "worse": [], "reason": "hpqjcy provides the most complete setup by defining intervals I_k, explaining the shift by k^3, and computing the size d_k = 3k^2 + 3k + 1. The original and 0vlh4q are less complete in their explanations."}}
+{"5134-5246": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5246-5286": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5286-5350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5350-5475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5475-5523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5523-5585": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5585-5610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5610-5645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5645-5647": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5647-5672": {"better": [], "neutral": ["original", "2zvfkg"], "worse": [], "reason": "Both completions state the same recurrence F(U_k) = F(U_{k-1}) + (V_k + 1) + F(V_k), which is the correct relationship for computing cumulative sums over cube intervals."}}
+{"5672-5732": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5732-5738": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5738-5782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5782-5836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5836-5843": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5843-6016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6016-6181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6181-6240": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6240-6275": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6275-6314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6314-6369": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6369-6405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6405-6467": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6467-6472": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6472-6513": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6513-6558": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6558-6615": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6615-6644": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6644-6678": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6678-6681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6681-6733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6733-6757": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6757-6762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6762-6794": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6794-6830": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6830-6893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6893-6934": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6934-6977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6977-6996": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6996-7084": {"better": [], "neutral": ["original", "hf11cu", "18pvdf"], "worse": [], "reason": "All completions correctly recognize that sum of interval sizes equals k^3, which is a telescoping sum. This is an important simplification that all completions identify."}}
+{"7084-7107": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7107-7109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7109-7161": {"better": ["ck6wrh"], "neutral": ["original", "2jkifh"], "worse": [], "reason": "ck6wrh provides the most complete picture by defining B(k) and stating the full recurrence F(M) = k^3 + B(k) + (M - k^3 + 1) + F(M - k^3) in one statement. The original and 2jkifh just introduce B(k) without the full context."}}
+{"7161-7166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7166-7184": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7184-7214": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7214-7241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7241-7261": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7261-7267": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7267-7301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7301-8106": {"better": [], "neutral": ["original", "4fy8du", "wl7yrr"], "worse": [], "reason": "All completions correctly identify the need for base case handling when M=0. The original is more verbose in its analysis but all arrive at the same understanding that F(0)=0 needs special handling."}}
+{"8106-8196": {"better": ["havyjs"], "neutral": ["original", "rqvahq"], "worse": [], "reason": "havyjs tests the formula with M=1 and correctly identifies that the formula gives F(1)=2 when it should be 1, catching an off-by-one error in the derivation. The original just states that recurrence works for M>=1 without verification."}}
+{"8196-8238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8238-8282": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8282-8417": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8417-8559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8559-8826": {"better": [], "neutral": ["original", "n6xi8b"], "worse": [], "reason": "Both completions correctly analyze the computational complexity: recursion depth ~10, prefix sums for B(k) with k up to 5e5, and feasibility of computation. They reach the same conclusion about algorithm tractability."}}
+{"8826-8972": {"better": [], "neutral": ["original", "4hx465", "1cufqa"], "worse": [], "reason": "All completions correctly establish that S(N) = F(N-1) modulo 99991. 1cufqa checks if 99991 is prime (which it is), but this doesn't affect the solution approach."}}
+{"8972-9066": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9066-9224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9224-9272": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9272-9286": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9286-9289": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9289-9300": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9300-9332": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9332-9339": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9339-9405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9405-9450": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9450-9580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9580-9694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9694-9997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9997-10002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10002-10009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10009-10060": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10060-10062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10062-10065": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10065-10092": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10092-10149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10149-10160": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10160-10220": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10220-10238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10238-10333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10333-10913": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10913-10928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10928-11010": {"better": [], "neutral": ["original", "hav65b", "3mv990"], "worse": [], "reason": "All completions correctly establish that S(N) = F(N-1) since D(0)=0. 3mv990 provides more explicit detail about the recurrence but all arrive at the same correct relationship."}}
+{"11010-11033": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11033-11106": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11106-11113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11113-11155": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11155-11296": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11296-11300": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11300-11318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11318-11404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11404-11407": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11407-11472": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11472-11488": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11488-11498": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11498-11500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11500-11782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11782-11848": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11848-11865": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11865-11893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11893-12017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12017-12278": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12278-12455": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12493-12601": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12601-12613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12613-12616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12616-12768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12768-12790": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12790-12821": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12821-12863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12863-12913": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12913-12920": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12920-13039": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13039-13046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13046-13052": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13052-13074": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13074-13097": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13097-13131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13131-13151": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13151-13191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13191-13251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13251-13316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13316-13349": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13349-13410": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13410-13471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13471-13489": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13489-13546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13546-13713": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13713-13741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13741-13771": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13771-13782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13782-13807": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13807-13963": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13963-13970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13970-14356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14356-14367": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14367-14488": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14488-14551": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14551-14724": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14724-14755": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14755-14776": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14776-15033": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15033-15172": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15172-15178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15178-15203": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15203-15215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15215-15320": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15320-15355": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15355-15403": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15403-15532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15532-15538": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15538-15609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15609-15645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15645-15657": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15657-15938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15938-15963": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15987-16005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16005-16044": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16044-16087": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16087-16155": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16155-16174": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16174-16263": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16335-16345": {"better": ["43ybgu"], "neutral": ["original", "fp0ff5"], "worse": [], "reason": "43ybgu suggests verifying correctness by comparing with brute-force sums for small N, which is a good practice. The original and fp0ff5 are simple transition statements without substantive verification suggestions."}}
+{"16345-16442": {"better": [], "neutral": ["original", "474vyf", "1iyhen"], "worse": [], "reason": "All completions arrive at the correct final answer of 56395. The original presents the full solution, while the alternates suggest additional verification which is good practice but not strictly necessary since the solution is correct."}}
+{"16442-16455": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16455-16462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16462-16472": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16472-16477": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16477-16511": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16511-16553": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16553-16610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16610-16786": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16786-16795": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16795-16844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16844-16891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16891-17014": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17014-17026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17026-17044": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17044-17053": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17053-17124": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17124-17129": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17129-17153": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 56395 but answer has not been sufficiently repeated."}}

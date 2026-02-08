@@ -1,0 +1,253 @@
+{"182-188": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"188-286": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"286-313": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"313-332": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"332-378": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"378-394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"394-680": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"680-743": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"743-782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"782-831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"831-869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"869-889": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"889-911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"911-1094": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1094-1118": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1118-1165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1165-1212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1212-1327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1327-1457": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1457-1490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1490-1535": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1535-1672": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1672-1717": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1717-1752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1752-1765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1765-1904": {"better": ["original"], "neutral": ["6gfno1", "l1xvst"], "worse": ["a5snle", "ly9go6", "sonu8d"], "reason": "The original makes the key step of setting up the generating function product A(x)B(x)=x^k+x^l, which is the correct algebraic framework. 6gfno1 and l1xvst make some useful observations but don't reach the generating function formulation. a5snle, ly9go6, and sonu8d are vague or make no substantive progress."}}
+{"1904-2123": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2123-2449": {"better": [], "neutral": ["original", "7ovrv3", "318d0k", "9m72ci", "5ocpms", "mrpha7"], "worse": [], "reason": "All completions correctly identify the condition as A dividing x^k+x^l in the Laurent ring. The original goes further by factoring out x^k and reducing to A|1+x^d, but then incorrectly collapses Laurent divisibility to ordinary polynomial divisibility. 318d0k mentions \"up to shift\" which is closer to preserving the shift freedom, but doesn't develop it. All are roughly equivalent at this stage \u2014 the critical error happens later."}}
+{"2449-2489": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2489-2572": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2572-2885": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2885-2924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2924-3130": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3130-3137": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3137-3310": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3310-3427": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3427-3478": {"better": [], "neutral": ["original", "rsklwu", "m39xmk", "zar94e", "qpawnv", "mp9xn1"], "worse": [], "reason": "All completions state the same correct intermediate result: the condition reduces to A dividing 1+x^d. They all treat this as polynomial divisibility in Z[x] without considering the Laurent framework (A=x^r*P with P|1+x^d). qpawnv mentions \"x^s(1+x^d)\" and notes the monomial doesn't affect divisibility, which is close to the shift insight but then dismisses it. No meaningful differentiation at this stage."}}
+{"3478-4235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4235-4268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4268-4293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4293-4357": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4357-4645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4645-4675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4675-4680": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4680-4996": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4996-5103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5103-5239": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5239-5691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5691-5735": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5735-5787": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5787-5908": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5908-5947": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5947-6023": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6023-6353": {"better": ["upslk6"], "neutral": ["original", "7evs0o", "z712x4", "lnlo3p", "na6k0t"], "worse": [], "reason": "upslk6 introduces the key same-v2 compatibility constraint early: \"all factors share the same 2-adic exponent\" \u2014 this is a crucial insight that the trace doesn't reach until much later. It correctly derives that factors of a common 1+x^d must share the same 2-power. The original spends the paragraph verifying the trivial constant polynomial case. lnlo3p correctly establishes that \u00b1\u03b1 are both shifty (important for counting). The others are generic counting setup statements. upslk6 is better for its early structural insight."}}
+{"6353-6419": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6419-6560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6560-6610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6610-6770": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6770-6823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6823-6869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6869-6902": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6902-6960": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6960-7045": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7045-7111": {"better": [], "neutral": ["original", "m0valn", "4t5svq", "zvo8fh", "mlut2w", "8yhamn"], "worse": [], "reason": "All completions set up the counting as 2\u00d7(number of monic primitive divisors), which is the correct formula for the unshifted case but misses the shift multiplicity (each primitive of degree e should contribute 2\u00d7(5-e) rather than just 2). 8yhamn provides useful detail about why odd-index cyclotomics cannot appear, but this doesn't address the core shift error. All are within the same framework. All neutral."}}
+{"7111-7128": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7128-7181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7181-7368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7368-7456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7456-7703": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7703-7823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7823-8064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8064-8236": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8236-8686": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8686-8853": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8853-8949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8949-9026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9026-9185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9185-9415": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9415-9442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9442-9497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9497-9530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9530-9575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9575-9864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9864-9920": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9920-10076": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10076-10086": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10086-10093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10093-10107": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10107-10127": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10127-10151": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10151-10163": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10163-10348": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10348-10426": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10426-10498": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10498-10529": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10529-10652": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10652-10672": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10672-10722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10722-10968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10968-10995": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10995-11045": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11045-11050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11050-11346": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11346-11371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11371-11411": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11411-11427": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11427-11531": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11531-11603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11603-11636": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11636-11694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11694-11741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11741-11785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11785-11968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11968-11975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11975-12011": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12011-12074": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12074-12084": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12084-12208": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12208-12269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12269-12297": {"better": [], "neutral": ["original", "0u7z69", "lmy2qa", "9lsmik", "66oatq"], "worse": [], "reason": "All completions arrive at 2\u00d78=16 using the same counting. 66oatq raises a mild question about whether constant 1 is \"monic\" but resolves it without impact. None question the missing shift multiplicity. All neutral."}}
+{"12297-12342": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12342-12349": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12349-12373": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12373-12384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12384-12391": {"better": [], "neutral": ["original", "3b7anu", "pggopa", "w9taur", "unvhya", "5s6vkw"], "worse": [], "reason": "All completions operate within the same wrong framework (missing shift multiplicity). Most assert 16; 5s6vkw checks a primitive divisor constraint but doesn't address the core shift error. All neutral."}}
+{"12391-12467": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12467-12493": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12493-12505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12505-12576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12576-12752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12752-12757": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12757-12836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12836-12896": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12896-12929": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12929-13023": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13023-13202": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13202-13243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13243-13251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13251-13442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13442-13454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13454-13925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13925-13936": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13936-13949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13949-13963": {"better": [], "neutral": ["original", "a1vgo9", "awzovo", "gvxvf5", "uqwkim", "42eg2x"], "worse": [], "reason": "All completions are within the same wrong framework. Some assert 16; others verify cyclotomic lists. None question the shift multiplicity. All neutral."}}
+{"13963-14016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14016-14204": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14204-14212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14212-14217": {"better": [], "neutral": ["original", "6xzfxw", "ua1f05", "v77kkx", "h025p6", "qxff1r"], "worse": [], "reason": "All completions are within the same wrong framework. Some assert 16; others check validity constraints but don't question the shift error. All neutral."}}
+{"14217-14358": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14358-14937": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14937-14941": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14941-14962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14962-14969": {"better": [], "neutral": ["original", "5c7g88", "6xzfxw", "ikzhnt", "w6dw20", "oncwsf"], "worse": [], "reason": "All completions are within the same wrong framework. oncwsf actually reinforces the wrong conclusion by arguing a_0 must be \u00b11 (same error as the original). All neutral."}}
+{"14969-15172": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15172-15180": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15180-15184": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15184-15248": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15248-15288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15288-15317": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15317-15355": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15355-15372": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15372-15383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15383-15394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15394-15439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15439-15442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15442-15683": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15683-15722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15722-15755": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15755-15870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15870-15925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15925-15929": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15929-15935": {"better": [], "neutral": ["original", "cnakbb", "6roq90", "o0t7fa", "fpd9fy", "5ihp3y"], "worse": [], "reason": "All within the same wrong framework. Some assert 16; others do routine checks. None question shifts. All neutral."}}
+{"15935-15968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15968-16077": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16077-16081": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16081-16087": {"better": [], "neutral": ["original", "d2d3wn", "ikzhnt", "pggopa", "c5dzqd", "5obj63"], "worse": [], "reason": "All within the same wrong framework. c5dzqd discusses divisibility of x^k+x^l which is relevant context but doesn't question the a_0 constraint. 5obj63 checks uniqueness. None question shifts. All neutral."}}
+{"16087-16136": {"better": ["oxv7i8"], "neutral": ["mscwoo", "rg0j1s", "w1zlil", "20vf08"], "worse": ["original"], "reason": "oxv7i8 asks the critical question: \"what about A = x^2 (monomial)?\" which probes the missing shifted-polynomial family. Although it incorrectly dismisses the possibility (reasoning x^2 can't divide 1+x^d in Z[x]), raising this question is valuable. The original just makes a routine assertion about the answer count without questioning alternatives. The other completions do routine checks."}}
+{"16136-16159": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16159-16173": {"better": [], "neutral": ["original", "pggopa", "6xzfxw", "hfsmrr", "8ii8gz", "gz3isj"], "worse": [], "reason": "All within the same wrong framework. Some assert 16; others do routine nuance checks. None question the shift error. All neutral."}}
+{"16173-16190": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16190-16234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16234-16315": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16315-16370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16370-16437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16437-16504": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16577-16587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16587-16631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16631-16664": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16664-16701": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16701-16734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16734-16747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16747-16767": {"better": [], "neutral": ["original", "3tulqj", "ap691r", "qu4qy9", "xieoor", "qvmg0g"], "worse": [], "reason": "All within same wrong framework. Some assert 16; xieoor checks distinctness. None question shifts. All neutral."}}
+{"16767-16922": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16922-16949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16949-16975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16975-17036": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17036-17203": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17203-17370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17370-17557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17557-17663": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17663-17767": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17767-17772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17772-17964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17964-17968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17968-18020": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18020-18048": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18048-18054": {"better": ["l2cexb"], "neutral": ["n39mxb", "d2d3wn", "6xzfxw", "bb59ju"], "worse": ["original"], "reason": "l2cexb asks the key question: \"Is there any possible \u03b1 with \u03b1(0) = 0 that still yields correlation values?\" \u2014 this directly probes the missing shifted-polynomial family. The original asserts 16 without questioning. bb59ju checks sign consistency, which is routine. The others just assert 16."}}
+{"18054-18159": {"better": [], "neutral": ["original", "gc42d8", "cl0c14", "r2yh6k", "q62568", "7itc5d"], "worse": [], "reason": "The original confirms a_0=\u00b11 (the core error). r2yh6k considers whether A could divide a shift of 1+x^d but then incorrectly dismisses the possibility by treating x^k as the only monomial factor (missing that A itself could have an x^r factor). All completions operate within the same wrong framework."}}
+{"18159-18195": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18195-18270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18270-18273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18273-18293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18293-18410": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18410-18504": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18546-18708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18708-18791": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18791-18878": {"better": [], "neutral": ["original", "gs7jfg", "l6x1cs", "9jnhhp", "dzvkpc", "50uojh"], "worse": [], "reason": "All completions implement the same verification approach \u2014 testing whether A divides 1+x^d for small d using polynomial division in Z[x]. All operate within the same restricted (unshifted) model. No alternate questions whether shifted polynomials should also be tested. All neutral."}}
+{"18878-18901": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19024-19060": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19060-19157": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19157-19315": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19315-19578": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19578-19774": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20082-20092": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20092-20131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20131-20285": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20285-20288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20288-20294": {"better": [], "neutral": ["original", "1krkd1", "d2d3wn", "52wy31", "cu3qkw", "1urupf"], "worse": [], "reason": "All within same wrong framework. Some assert 16; cu3qkw checks a boundary case. None question shifts. All neutral."}}
+{"20294-20658": {"better": ["5ae8bh"], "neutral": ["rhc8gg", "g36yrb", "f7g7zz"], "worse": ["original", "y1gl69"], "reason": "5ae8bh asks the crucial question: \"Could there be \u03b1 with a0=0?\" and correctly identifies that x^k+x^l can have constant term 0 when k,l>0. Although it eventually circles back to the wrong conclusion (asserting A must have constant term \u00b11 from polynomial divisibility), it explores the right direction far more thoroughly than any other completion. The original continues routine verification; y1gl69 jumps to the wrong boxed answer."}}
+{"20658-20664": {"better": [], "neutral": ["original", "l0d1fi", "cnakbb", "6xzfxw", "nll86c", "atycwy"], "worse": [], "reason": "All within same wrong framework. Most assert 16; atycwy checks factorization completeness. None question shifts. All neutral."}}
+{"20664-20712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20712-20719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20719-20747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20747-20789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20789-21014": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21014-21020": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21020-21056": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21056-21083": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21083-21088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21088-21096": {"better": [], "neutral": ["original", "rx2e55", "oimm9i", "mu0w30", "bat72r", "4o0sps"], "worse": [], "reason": "All completions are near the final answer within the same wrong framework. The original is a transition statement. rx2e55 asserts 16. oimm9i and mu0w30 check sign variants (already counted). bat72r correctly notes multiple \u03b2 for same \u03b1 is fine. 4o0sps considers whether 16 vs 8. None question the shift multiplicity error. All neutral."}}
+{"21096-21107": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21107-21114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21114-21230": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21230-21290": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21290-21398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21398-21404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21404-21488": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21488-21496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21496-21502": {"better": [], "neutral": ["original", "q5km9n", "nvkd47", "klecen", "nxvc5i", "3ztogj"], "worse": [], "reason": "All within same wrong framework. Some assert 16; others check constructions. None question shifts. All neutral."}}
+{"21502-21509": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21509-21581": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21581-21587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21587-21596": {"better": ["ssl79v", "qyj6pe", "anoh6f", "e17i2g"], "neutral": [], "worse": ["original", "m0zqbp"], "reason": "Original has wrong boxed answer 16, correct answer is 40. Not boxing the answer provides a chance to move on from the wrong answer."}}

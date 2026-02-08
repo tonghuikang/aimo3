@@ -1,0 +1,398 @@
+{"111-151": {"better": [], "neutral": [], "worse": [], "reason": "All completions define f(n) as smallest n-Norwegian positive integer - equivalent formulations"}}
+{"151-168": {"better": [], "neutral": [], "worse": [], "reason": "All completions introduce M = 3^{2025!} correctly"}}
+{"168-194": {"better": [], "neutral": [], "worse": [], "reason": "All completions state g(c) formula equivalently"}}
+{"194-228": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly interpret g(c) formula or state goal"}}
+{"228-313": {"better": [], "neutral": [], "worse": [], "reason": "All completions provide reasonable interpretations or goals"}}
+{"313-396": {"better": [], "neutral": [], "worse": [], "reason": "All completions restate goal or simplify g(c) correctly"}}
+{"396-435": {"better": [], "neutral": [], "worse": [], "reason": "All completions recognize need to compute f(M+c) for huge M"}}
+{"435-468": {"better": [], "neutral": [], "worse": [], "reason": "All completions approach understanding f(n) from divisor perspective"}}
+{"468-544": {"better": [], "neutral": [], "worse": [], "reason": "All completions reason about divisor constraints and LCM relationship"}}
+{"544-549": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly reason about LCM as minimal k for given divisors"}}
+{"549-924": {"better": [], "neutral": ["original", "n8b2s0", "847kqa", "jpezjc", "5jzi98", "orsgkt"], "worse": [], "reason": "All completions converge on the same key insight: f(n) = min lcm(a,b,c) over distinct triples summing to n. The original and orsgkt give thorough derivations; jpezjc and 5jzi98 are concise versions. n8b2s0 and 847kqa are less developed but head the same direction. No meaningful differentiation."}}
+{"924-966": {"better": [], "neutral": ["original", "gec1vb", "h3jcug", "lf1szm", "l7r7ok", "mxaakj"], "worse": [], "reason": "All completions state the same reduction: f(n) = min lcm over distinct triples summing to n. No differentiation."}}
+{"966-1035": {"better": [], "neutral": ["original", "wrsagk", "hz1lwl", "l6i0id", "2c7fmp", "zprhv5"], "worse": [], "reason": "All completions note the need to compute f(M+c) for huge M. 2c7fmp adds that M+c is just above a pure power of 3 and zprhv5 double-checks the LCM formulation, but no completion introduces a substantively different direction."}}
+{"1035-1270": {"better": ["t0ox9g"], "neutral": ["original", "zyogld", "mm3kx6", "gu52ht", "huobu9"], "worse": [], "reason": "t0ox9g identifies the key optimization principle: minimize lcm by making numbers share prime factors. This is the structural insight that leads to the correct (k/p, k/q, k) construction. Others either jump to brute force (original) or make general observations about M's size."}}
+{"1270-1321": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1724-1759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1759-1778": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1778-1796": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1796-1814": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1814-1832": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1832-1850": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1850-1868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1868-1886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1886-1904": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1904-1922": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1922-1940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1940-1958": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1958-1976": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1976-1994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1994-2012": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2012-2030": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2030-2048": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2048-2066": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2066-2084": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2084-2100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2100-2118": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2118-2134": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2134-2150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2150-2166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2166-2224": {"better": [], "neutral": [], "worse": [], "reason": "cqn1hn correctly identifies the key pattern that triples often include divisibility relationships where LCM equals the largest element, while 12mj04 stays vague"}}
+{"2224-2250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2250-2288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2288-2319": {"better": [], "neutral": [], "worse": [], "reason": "mswldl correctly shifts focus to the actual problem structure - large n of form M + c where M is huge power of 3, while 2xpjom just repeats an example"}}
+{"2319-2336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2336-2353": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2353-2370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2370-2387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2387-2404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2404-2421": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2421-2438": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2438-2455": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2455-2472": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2472-2489": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2489-2506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2506-2523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2523-2540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2540-2557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2557-2574": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2574-2618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2618-2641": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2641-2654": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2654-2668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2668-2680": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2680-2693": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2693-2714": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2714-2726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2726-2738": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2738-2760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2760-2772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2772-2784": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2784-2796": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2796-2808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2808-2820": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2820-2832": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2832-2863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2863-2875": {"better": [], "neutral": [], "worse": [], "reason": "72u0fr provides rigorous analysis of the (a,b,2b) pattern and correctly derives that LCM = lcm(a,2b), while hh5pa4 is only repetition"}}
+{"2875-2888": {"better": [], "neutral": [], "worse": [], "reason": "26bb39 identifies that (4,8,12) follows (n/6, n/3, n/2) pattern and explores general structure more thoroughly, while bhga3i is a mistaken aside"}}
+{"2888-3057": {"better": [], "neutral": [], "worse": [], "reason": "u0t9ga correctly derives that LCM = 2b when third divisor divides 2b, providing optimal strategy, while fh2fru adds almost no reasoning"}}
+{"3057-3221": {"better": [], "neutral": [], "worse": [], "reason": "o1568c provides clearest formulation: minimal LCM is smallest c where a,b divide c and a+b+c=n, while uxvefv is less precise"}}
+{"3221-3356": {"better": [], "neutral": [], "worse": [], "reason": "rqm5v3 correctly identifies divisibility as key constraint - need a|c and b|c for optimal LCM = c, while hnax8j remains too generic"}}
+{"3356-3483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3483-3517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3517-3644": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3644-3768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3768-3778": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3778-3821": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3821-3877": {"better": [], "neutral": [], "worse": [], "reason": "xizogm correctly shifts focus to the actual problem - M=3^{2025!} is power of 3 with only powers of 3 as divisors, while alyzhd diverts into unnecessary brute force"}}
+{"3877-3879": {"better": [], "neutral": [], "worse": [], "reason": "fkp22x provides thorough systematic analysis showing why f(8)=10 - exhaustively checking all smaller LCM candidates, while 2jpp0o is too shallow"}}
+{"3879-3915": {"better": [], "neutral": [], "worse": [], "reason": "g77c7w correctly shows n=6 case fails - triple (1,2,3) needs LCM=6 since 2 does not divide 3, while fmf1i9 only repeats a basic example"}}
+{"3915-4457": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4457-4470": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4470-4497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4497-4762": {"better": [], "neutral": [], "worse": [], "reason": "zjjktb provides most thorough explanation that M is prime power with divisors all being powers of 3, while nzhgl3 is too generic"}}
+{"4762-5129": {"better": ["3pzlza"], "neutral": ["original", "zf4dc0", "wk8w6j", "nowaeo"], "worse": ["g8l1ch"], "reason": "3pzlza makes the critical observation that N could be smaller than M (\"Could there be a number N smaller than M that has three divisors summing to M+c? Possibly yes\") and identifies the key framework: N + a + b = M+c where a,b are divisors of N, so a+b = c + (M-N). This is the correct direction since the true answer has f(N) = (16/25)N < M. g8l1ch is too vague to be useful, adding no concrete reasoning."}}
+{"5129-5224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5224-5262": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5455-5517": {"better": ["7wpqbf"], "neutral": ["2qoez4", "yp6dw0"], "worse": ["original", "6dk27t", "h251ei"], "reason": "The original incorrectly states \"the minimal N will be larger than M\" \u2014 this is wrong since the correct answer has f(N) = (16/25)N < M. 6dk27t and h251ei similarly assert \"minimal N > M\" definitively. 7wpqbf correctly observes \"the minimal L will possibly be close to M\" without committing to N > M, keeping the search space open."}}
+{"5517-5555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5555-5587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5587-5630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5630-5712": {"better": [], "neutral": [], "worse": [], "reason": "hjs5uw proposes the key construction \"N = M + t (t small)... set largest divisor = N itself... a+b = c - t\" where N need not be a multiple of M. This is essentially the correct framework \u2014 the true answer uses K itself as one divisor plus K/p, K/q for small p,q, with K < M. Other alternates all assume N must be a multiple of M, which leads to the wrong M*e framework."}}
+{"5712-5773": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5773-5961": {"better": [], "neutral": ["original", "sufx9m", "wt6qq9", "jryvxh", "egg60k", "xtf2tu"], "worse": [], "reason": "All completions explore the N=M*t construction and reason about what divisors are available. wt6qq9 and xtf2tu formalize via LCM which is slightly cleaner, but all are within the same M*t framework. No completion questions whether non-M-multiple constructions might be better."}}
+{"5961-6031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6031-6154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6154-6181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6181-6537": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6537-6544": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6544-6779": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6779-6828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6828-7106": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7106-7441": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7441-7516": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7516-7619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7619-8029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8029-8372": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8372-8513": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8513-9197": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9197-9260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9260-9416": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9416-9462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9462-9496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9496-9517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9517-9610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9610-9895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9895-10114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10114-10192": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10192-10322": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10322-10483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10483-10599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10599-10727": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10727-10812": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10812-10832": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10832-10916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10916-11207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11207-11263": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11263-11295": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11295-11378": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11378-11401": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11401-11426": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11426-11436": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11436-11453": {"better": ["thhi92"], "neutral": ["original", "v7z47n", "7tttol", "su2a3e", "0gnd7o"], "worse": [], "reason": "thhi92 explicitly flags the need to verify whether a non-M-divisor solution could be better (\"we also need check if there is any better solution not involving using M as a divisor\"). This is the key question the trace fails to answer \u2014 the correct answer uses f(N)=(16/25)N which doesn't have M as one of the three divisors. Others just focus on implementing the M*t search."}}
+{"11453-11455": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11455-11521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11521-11631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11631-11651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11651-11657": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11657-11677": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11677-11694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11694-12087": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12087-12095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12221-12249": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12249-12296": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12296-12338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12399-12560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12560-12576": {"better": ["zm62u6"], "neutral": ["2fwv7v", "ok8d3u", "lgfw2s"], "worse": ["original", "mj02lf"], "reason": "zm62u6 uniquely questions \"unless there is a possibility that we can achieve lower K with some other arrangement where the largest divisor is not M\" \u2014 the correct answer indeed has f(N) = (16/25)N < M, not M*254051. The original and mj02lf commit to K = M*L without any reservation, foreclosing the correct solution path."}}
+{"12576-12687": {"better": ["rw0xj8", "kw7ntt"], "neutral": ["q1xyei", "x5ejxg", "65to2p"], "worse": ["original"], "reason": "rw0xj8 directly asks \"is there any possibility that we could also have K < M * L perhaps if we choose other set of three divisors not including M\" \u2014 exactly the right question since f(N) = (16/25)N < M. kw7ntt also questions whether K is truly minimal. The original asserts \"f(M+c) = M * L = M * 254051\" without reservation, committing to the wrong answer."}}
+{"12687-12763": {"better": [], "neutral": [], "worse": [], "reason": "yk4de1 arrives at a key insight: \"sum of three distinct divisors of K could reach up to K + (K/p) + (K/q) for some small p,q\" \u2014 this is essentially the correct framework (the true answer uses K, K/2, K/16 as divisors). It also correctly considers K < M as feasible. bbdulr merely verifies the wrong M*254051 construction without questioning whether smaller K exists. The original and middle alternates explore the question but don't reach as productive a formulation as yk4de1."}}
+{"12763-12986": {"better": ["bhpglf"], "neutral": ["original", "so8756", "es1x79", "ffzp51"], "worse": ["b6glb7"], "reason": "bhpglf explores the critical idea that K < M is possible, computing K \u2248 0.55M as lower bound \u2014 close to the correct answer K = (16/25)N \u2248 0.64M. b6glb7 just summarizes the wrong M*254051 approach without questioning it, making no progress toward the correct solution."}}
+{"12986-13004": {"better": [], "neutral": ["original", "wrysdx", "3lg5o9", "rdzhgf", "qkvel8", "5zon7o"], "worse": [], "reason": "All completions accept K = M * 254051 as the answer \u2014 all equally wrong since f(N) = (16/25)N < M. No meaningful differentiation."}}
+{"13004-13125": {"better": ["t7dwdb"], "neutral": ["original", "12a65u", "3tpv1p", "ia52g2"], "worse": ["ow8tvm"], "reason": "t7dwdb correctly computes that d3 \u2265 (M+c)/3 \u2248 M/3 is sufficient and notes \"K could be orders of magnitude smaller\" than M*254051 \u2014 this is the right direction (correct answer K \u2248 0.64M). ow8tvm spends excessive effort on the N = M+c dead end (showing N \u2264 sum fails), wasting analysis on an irrelevant case without reaching the productive K < M framework."}}
+{"13125-13178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13178-13317": {"better": ["oogjoj", "7eadgd"], "neutral": ["nd2fch", "9vih1n"], "worse": ["original", "uzwb8t"], "reason": "oogjoj clearly concludes K \u2248 M is achievable (D \u2248 M, far smaller than M*254051), which is the correct direction since the true answer has f(N) = (16/25)N \u2248 0.64M. 7eadgd similarly reaches \"minimal K could be M*2 or M*3\" \u2014 correct that K \u226a M*254051. The original and uzwb8t methodically explore the case without questioning the M*254051 framework or reaching the key insight that K can be much smaller."}}
+{"13317-13521": {"better": ["9axmuc"], "neutral": ["asyxk9", "66wloc", "3zytn0"], "worse": ["original", "exr5qg"], "reason": "9axmuc clearly articulates that \"minimal K is likely not M*254051\" and that K \u2248 M + small d is achievable. This is the correct direction since f(N) = (16/25)N \u2248 0.64M. The original and exr5qg set up the case mechanically without reaching this key conclusion \u2014 the original just parameterizes without drawing conclusions about optimality."}}
+{"13521-13619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13619-13660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13660-13736": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13736-13853": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13853-13965": {"better": ["7qeaad"], "neutral": ["original", "wja17w", "uewxib"], "worse": ["sdiziy", "u3ct37"], "reason": "7qeaad correctly suspects f(M+c) \u2248 M, not M*254051, which is close to the true answer f(N) = (16/25)N \u2248 0.64M. sdiziy and u3ct37 wrongly dismiss the K < M*254051 possibility based on contest intuition (\"problem likely designed that...\"), reinforcing the wrong framework. The original hedges but leans toward M*254051."}}
+{"13965-14007": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14007-14191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14191-14291": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14291-14321": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14321-14411": {"better": [], "neutral": [], "worse": [], "reason": "pv7b06 prematurely gives up the exploration by asserting \"problem likely expects that minimal f(n) is M * 254051\", which is wrong (the correct answer has f(N) = (16/25)N, vastly smaller than M*254051). This discourages further exploration of the K < M*254051 possibility. Other alternates continue the productive search for small d."}}
+{"14411-14469": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14469-14518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14518-15008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15008-15288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15288-15389": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15389-15470": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15470-15504": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15504-15517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15517-15610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15610-15653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15653-15927": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15927-15953": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15953-15975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15975-16008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16008-16039": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16039-16041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16041-16103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16103-16214": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16214-16340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16340-16364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16364-16580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16580-16734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16734-16823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16823-16938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16938-16963": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16963-17015": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17015-17229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17229-17416": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17416-17523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17523-17621": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17621-17725": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18106-18177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18177-18197": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18197-18218": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18218-18315": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18315-18411": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18411-18691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18691-19398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19398-19483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19587-19598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19598-19622": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19622-19782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19782-19852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19852-19887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19887-20007": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20007-20105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20105-20150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20150-20255": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20255-20333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20333-20383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20483-20621": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20621-20661": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20661-20779": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20807-20966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21037-21066": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21066-21270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21270-21292": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21292-21408": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21408-21466": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21466-21475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21475-21527": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21527-21607": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21607-21619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21619-21675": {"better": [], "neutral": ["original", "q1oe9o", "j0i6e3", "r032d2", "q4dq88", "y8rko1"], "worse": [], "reason": "The original and q4dq88/y8rko1 all derive the same key condition b|c correctly. j0i6e3 is slightly confused about the direction but arrives at the same place. r032d2 focuses on minimizing D rather than the divisibility condition. All reach or approach the same conclusion."}}
+{"21675-21766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21766-21804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21804-21841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21841-21899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21899-21971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21971-22223": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22402-22514": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22514-22529": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22529-22598": {"better": ["original"], "neutral": ["5caby6", "gpr5xb", "jsgdqa"], "worse": ["6vteiu", "idr9gs"], "reason": "The original correctly notes M-1 is a candidate but immediately asks whether smaller exists with different b, showing healthy skepticism. 5caby6, gpr5xb, jsgdqa verify the construction carefully. 6vteiu and idr9gs just state the bound f(M+c)\u2264M-1 without questioning minimality, which is worse because this construction is not optimal (correct answer uses f(N)=(16/25)N \u226a M-1)."}}
+{"22598-22706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22706-22756": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22756-22853": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22853-23033": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23033-23042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23042-23403": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23403-23436": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23436-23453": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23453-23604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23604-23695": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23695-23722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23722-23753": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23753-23773": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23773-23800": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23800-23802": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23802-23836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23836-24117": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24117-24271": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24271-24701": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24701-24844": {"better": [], "neutral": ["original", "nwqj3c", "y6rvj7"], "worse": [], "reason": "All completions explore whether the sum of two proper divisors can equal M+c-K, reaching the same conclusion that K must be close to M. None open the crucial alternative direction (non-{1,b,D} constructions with ratio < 1). The missed opportunity is shared equally."}}
+{"24844-25108": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25216-25329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25329-25393": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25393-25436": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25436-25482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25482-25559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25559-25570": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25570-25586": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25586-25603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25603-25717": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25717-25830": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25830-25875": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25875-25970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25970-26013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26013-26180": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26180-26224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26224-26305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26305-26328": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26328-26518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26518-26567": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26567-26718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26718-26754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26801-26812": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26812-26891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26891-26922": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26922-26970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26970-27114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27114-27489": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27489-27600": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27600-27892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27892-27925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27925-27945": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27945-28251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28251-28313": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28313-28326": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28326-28379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28379-28569": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28569-28603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28603-28669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28669-28742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28742-28757": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28757-28837": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28837-28888": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28888-29007": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29007-29121": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29121-29190": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29190-29240": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29240-29275": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29275-29293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29293-29343": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29343-29506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29506-29531": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29531-29730": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29730-29780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29780-29842": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29842-29881": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29881-29963": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29963-30024": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30024-30097": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30097-30136": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30136-30154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30154-30200": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30200-30235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30235-30251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30251-30420": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30420-30447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30447-30495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30495-30646": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30646-30668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30668-30846": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30846-30853": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30948-30968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30968-31103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31103-31130": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31130-31213": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31213-31313": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31313-31391": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31391-31439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31439-31512": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31512-31599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31599-31877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31877-31889": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31944-31966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31991-32023": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32050-32082": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32261-32265": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32265-32290": {"better": [], "neutral": ["original", "vd7upl", "p20ald", "ub4lga", "ir9xg2", "gb9tbe"], "worse": [], "reason": "All completions conclude from the bounded search that M-1 is likely minimal. The reasoning is flawed (bounded search up to 10k doesn't rule out all alternatives, and the correct solution uses a completely different construction family), but all make the same error equally. None question whether a fundamentally different approach (not of form {1,b,D}) could yield smaller results."}}
+{"32290-32325": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32325-32414": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32414-32535": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32535-32616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32616-32687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32687-32702": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32702-32766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32766-32811": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32811-32830": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"32830-32916": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"32916-32970": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"32970-33044": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33044-33074": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33074-33147": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33147-33196": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33196-33286": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33286-33296": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33296-33308": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33308-33431": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33431-33472": {"better": ["sgiws3", "hbd8r7"], "neutral": [], "worse": ["original"], "reason": "The original asserts \"no smaller possible integer exists\" and concludes f(M+c) = M-1 (equality), which is wrong \u2014 the correct answer is f(N)=(16/25)N \u226a M-1. sgiws3 and hbd8r7 only state f(n) \u2264 M-1, correctly maintaining the upper-bound status without prematurely claiming optimality."}}
+{"33472-33484": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33484-33499": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33499-33522": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33522-33550": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33550-33604": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33604-33852": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33852-33863": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33863-33893": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33893-33911": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33911-33932": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33932-33992": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"33992-34022": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34022-34034": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34034-34052": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34052-34073": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34073-34108": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34130-34230": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34230-34244": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34244-34301": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34332-34347": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34347-34374": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34398-34414": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34414-34435": {"better": [], "neutral": [], "worse": [], "reason": "No alternate completions to compare in this span."}}
+{"34435-34445": {"better": ["39gw4r"], "neutral": [], "worse": ["original", "oorz1u"], "reason": "Original has wrong boxed answer 14486, correct answer is 41. Not boxing the answer provides a chance to move on from the wrong answer."}}

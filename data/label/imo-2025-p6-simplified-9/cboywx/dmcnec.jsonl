@@ -1,0 +1,239 @@
+{"6-206": {"better": [], "neutral": ["original", "oe1ky7", "ile8ev"], "worse": [], "reason": "All completions correctly describe the problem setup - 9x9 grid with permutation matrix of uncovered squares. All neutral."}}
+{"206-242": {"better": [], "neutral": ["original", "fn3xa5", "7wvyfq"], "worse": [], "reason": "All completions correctly state the goal - cover 72 squares with minimum rectangles. All neutral."}}
+{"242-491": {"better": [], "neutral": ["original", "6m1iz2", "ltbdh6"], "worse": [], "reason": "All completions correctly describe the tiling constraint. All neutral."}}
+{"491-556": {"better": [], "neutral": ["original", "6aifc5", "gcr78p"], "worse": [], "reason": "All completions correctly restate the problem - choose permutation and tile to minimize rectangles. All neutral."}}
+{"556-620": {"better": [], "neutral": ["original", "ok3uvl", "x3smji"], "worse": [], "reason": "All completions correctly describe the partition problem. All neutral."}}
+{"620-634": {"better": [], "neutral": ["original", "lmtki4", "1wcvy6"], "worse": [], "reason": "All completions correctly summarize the goal. All neutral."}}
+{"634-656": {"better": [], "neutral": ["original", "t63it7", "zxlulr"], "worse": [], "reason": "All completions recognize need for lower bound and construction. All neutral."}}
+{"656-682": {"better": [], "neutral": ["original", "wej6i4", "vqu1pn"], "worse": [], "reason": "All completions explore possible answers. All neutral."}}
+{"682-953": {"better": [], "neutral": ["original", "xcmv3h", "a686mc"], "worse": [], "reason": "All completions analyze the structure with diagonal holes. All neutral."}}
+{"953-1050": {"better": [], "neutral": ["original", "zge6ru", "bz8m1r"], "worse": [], "reason": "All completions explore permutation constraints. All neutral."}}
+{"1050-1092": {"better": [], "neutral": ["original", "qzglze", "ufugw7"], "worse": [], "reason": "All completions explore patterns. All neutral."}}
+{"1092-1115": {"better": [], "neutral": ["original", "fltr0w", "829aqi"], "worse": [], "reason": "All completions describe the goal. All neutral."}}
+{"1115-1344": {"better": [], "neutral": ["original", "np387g", "702ees"], "worse": [], "reason": "All completions explore simple arrangements and lower bounds. All neutral."}}
+{"1344-1366": {"better": [], "neutral": ["original", "sb8xpm", "sznycp"], "worse": [], "reason": "All completions correctly describe the permutation constraint. All neutral."}}
+{"1366-1390": {"better": [], "neutral": ["original", "5pid5o", "vazos0"], "worse": [], "reason": "All completions analyze row segmentation. All neutral."}}
+{"1390-1590": {"better": [], "neutral": ["original", "up9elh", "fyalr5"], "worse": [], "reason": "All completions explore covering strategies. All neutral."}}
+{"1590-1862": {"better": [], "neutral": ["original", "5s1qed", "svvkvf"], "worse": [], "reason": "All completions continue analysis. All neutral."}}
+{"1862-1883": {"better": [], "neutral": ["original", "j41g8r", "oqp85h"], "worse": [], "reason": "All completions suggest mixed tiling strategies. All neutral."}}
+{"1883-1898": {"better": [], "neutral": ["original", "zm4igo", "y1d4lx"], "worse": [], "reason": "All completions state the minimization goal. All neutral."}}
+{"1898-1959": {"better": [], "neutral": ["original", "57xdwr", "ibl2qh"], "worse": [], "reason": "All completions explore grid graph representation. All neutral."}}
+{"1959-2008": {"better": [], "neutral": ["original", "da39gr", "q4vxz8"], "worse": [], "reason": "All completions explore rectangle partition problem. All neutral."}}
+{"2008-2029": {"better": [], "neutral": ["original", "rh81so", "x5s4t4"], "worse": [], "reason": "All completions describe the partition constraint. All neutral."}}
+{"2029-2088": {"better": [], "neutral": ["original", "wnrft3", "ep2y0f"], "worse": [], "reason": "All completions analyze the structure. The alternate ep2y0f provides detailed analysis. All neutral."}}
+{"2088-2119": {"better": [], "neutral": ["original", "wqqgvg", "ho1wpc"], "worse": [], "reason": "All completions explore possible bounds. All neutral."}}
+{"2119-2180": {"better": [], "neutral": ["original", "6v9tzp", "zlr9cb"], "worse": [], "reason": "All completions explore possible formulas like 2n-2. This is early exploration before committing to a formula. All neutral."}}
+{"2180-2292": {"better": [], "neutral": ["original", "itos92", "a958d9"], "worse": [], "reason": "All completions analyze small cases. All neutral."}}
+{"2292-2436": {"better": [], "neutral": ["original", "hdjhaq", "liqdu1"], "worse": [], "reason": "All completions analyze n=3 case. All neutral."}}
+{"2436-2876": {"better": [], "neutral": ["original", "rgpvfg", "79tgcp"], "worse": [], "reason": "All completions implement equivalent DP solvers for minimal rectangle partition. Minor implementation differences (frozenset vs bitmask) but functionally equivalent. All neutral."}}
+{"2876-2943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2943-2972": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3043-3101": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3101-3153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3153-3241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3241-3258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3293-3372": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3409-3491": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3491-3509": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3509-3578": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3578-3594": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3594-3766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3766-3794": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3794-3795": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4040-4050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4127-4153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4153-4201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4201-4285": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4285-4361": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4361-4837": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4837-4918": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4918-4962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4962-4969": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4969-5026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5026-5064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5064-5096": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5096-5197": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5197-5208": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5208-5240": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5240-5358": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5358-5371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5371-5383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5383-5464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5464-5490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5490-5834": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5834-5904": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5904-5994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5994-6041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6041-6328": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6328-6383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6383-6409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6409-6416": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6416-6437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6437-6447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6447-6473": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7289-7300": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7661-7813": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7813-7852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7852-7905": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8208-8554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8554-8917": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8917-9115": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9115-9329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9329-9428": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9428-9462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9462-9543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9543-9596": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9596-9768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9768-9784": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9784-9848": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9848-10272": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10272-10371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10371-10650": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10650-11043": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11043-11135": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11135-11261": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11261-11277": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11277-11295": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11295-11307": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11307-11354": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11354-11366": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11366-11378": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11378-11500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11500-11512": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11512-11653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11653-11842": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11842-11917": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11917-12256": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12256-12309": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12309-12429": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12429-12444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12444-12528": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12528-12536": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12536-12624": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12624-12765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12765-12919": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12919-13037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13037-13167": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13167-13272": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13272-13366": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13366-13370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13370-13442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13442-13727": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13727-13736": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13736-13766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13766-13807": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13807-13847": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13847-13887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13887-13927": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13927-13967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13967-14147": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14147-14199": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14199-14234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14234-14249": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14249-14286": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14286-14314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14314-14340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14340-15546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15546-15690": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15690-15737": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15737-16057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16057-16168": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16168-16226": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16226-16348": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16348-16409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16409-16447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16447-16726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16726-16791": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16791-16839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16839-16874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16874-16919": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16919-16940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16940-16964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16964-16970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16970-16988": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16988-17225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17225-17283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17283-17425": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17425-17492": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17492-17545": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17545-17577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17577-17683": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17683-17896": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17896-18139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18139-18530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18530-18605": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18605-18672": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18672-18687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18687-18751": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18751-18771": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18771-19079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19079-19108": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19108-19183": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19183-19416": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19416-19457": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19457-19468": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19468-19670": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19670-19703": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19703-19745": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19745-19860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19860-19921": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19921-19928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19928-19970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19970-20056": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20095-20131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20185-20228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20298-20343": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20343-20360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20360-20449": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20449-20476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20544-20563": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20643-20850": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20850-20973": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20973-21096": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21096-21201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21201-21212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21212-21439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21439-21454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21454-21482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21482-21557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21557-21569": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21569-21595": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21595-21884": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21884-21901": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21901-21920": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21968-22111": {"better": [], "neutral": ["original", "xnsad0"], "worse": [], "reason": "Both completions analyze DP results. All neutral."}}
+{"22111-22205": {"better": [], "neutral": ["original", "plqd1k", "3j8c2p"], "worse": [], "reason": "All completions analyze overlap constraint. All neutral."}}
+{"22205-22238": {"better": [], "neutral": ["original", "nilltz", "dto4bs"], "worse": [], "reason": "All completions explore n=4 case. All neutral."}}
+{"22238-22251": {"better": [], "neutral": ["original", "6k4rek", "g2rg7m"], "worse": [], "reason": "All completions describe shape. All neutral."}}
+{"22251-22400": {"better": [], "neutral": ["original", "65r2k7", "8atvm8"], "worse": [], "reason": "All completions analyze upper triangle. All neutral."}}
+{"22400-22471": {"better": [], "neutral": ["original", "u43lic", "d0ky77"], "worse": [], "reason": "All completions analyze partition options. All neutral."}}
+{"22471-22510": {"better": [], "neutral": ["original", "ih9bhp", "yd4ve5"], "worse": [], "reason": "All completions analyze minimum for upper region. All neutral."}}
+{"22510-22559": {"better": [], "neutral": ["original", "36rkn7", "9jl11m"], "worse": [], "reason": "All completions analyze the 2(n-1) pattern. The trace is converging on the wrong formula, but all completions are equivalent at this point. All neutral."}}
+{"22559-22719": {"better": [], "neutral": ["original", "ogfuod", "wncdfo"], "worse": [], "reason": "All completions derive the 2n-2 formula. All neutral."}}
+{"22719-22746": {"better": ["zx2ymz"], "neutral": [], "worse": ["original", "dyinvg"], "reason": "The alternate zx2ymz questions whether there is a way to partition using fewer than 2*(n-1), which is the right direction (correct answer is 12, not 16). The original and dyinvg accept 2n-2 without questioning if better is possible."}}
+{"22746-22764": {"better": [], "neutral": ["original", "eehgdy", "2ng6v3"], "worse": [], "reason": "All completions run DP for n=7. All neutral."}}
+{"22807-22912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22912-23070": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23070-23088": {"better": [], "neutral": ["original", "mt2m3y", "6zjw7x"], "worse": [], "reason": "All completions commit to the wrong answer of 16 (correct is 12). Since all commit to the same error with the same formula, they are neutral relative to each other."}}
+{"23088-23094": {"better": ["3vwha5"], "neutral": [], "worse": ["original", "ccibfn"], "reason": "The alternate 3vwha5 correctly questions whether 2*(n-1) is indeed minimal, which is the right skepticism (the correct answer is 12, not 16). The original and ccibfn accept 16 without questioning."}}
+{"23094-23177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23177-23196": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23196-23325": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23325-23399": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23399-23785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23785-23822": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23822-23831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23831-23848": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23848-23872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23872-23898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23898-24252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24252-24263": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24263-24271": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24271-24534": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24534-24552": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24552-24559": {"better": [], "neutral": ["original", "1tw7le", "pggopa"], "worse": [], "reason": "All completions give the wrong answer of 16 (correct is 12). Since all commit to the same error, they are neutral relative to each other."}}
+{"24559-24771": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24771-24805": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24805-24810": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24810-24819": {"better": [], "neutral": ["original", "cnakbb", "pggopa"], "worse": [], "reason": "All completions give the wrong final answer of 16 (correct is 12). Since all commit to the same error, they are neutral relative to each other."}}
+{"24819-24827": {"better": ["cadhr0"], "neutral": ["3fnlro"], "worse": ["original"], "reason": "Original has wrong boxed answer 16, correct answer is 12. Not boxing the answer provides a chance to move on from the wrong answer."}}

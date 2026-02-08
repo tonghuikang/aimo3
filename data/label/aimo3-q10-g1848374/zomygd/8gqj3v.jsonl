@@ -1,0 +1,669 @@
+{"19-59": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly explain n-Norwegian definition"}}
+{"59-167": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly define f(n) as smallest n-Norwegian integer"}}
+{"167-203": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly explain f(n) definition"}}
+{"203-221": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly state M=3^{2025!}"}}
+{"221-248": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly express g(c) formula"}}
+{"248-273": {"better": [], "neutral": [], "worse": [], "reason": "All completions appropriately state problem goal"}}
+{"273-306": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly identify computation needs"}}
+{"306-350": {"better": [], "neutral": [], "worse": [], "reason": "All completions appropriately analyze M as huge power of 3"}}
+{"350-557": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly analyze f(n) structure"}}
+{"557-612": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly derive divisibility condition"}}
+{"612-787": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly explore the (1, a, k) divisor approach using a dividing n-1"}}
+{"787-1001": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly derive k = n-1-a for divisors a of n-1"}}
+{"1001-1057": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly identify k = n-a-1 construction for finding n-Norwegian integers"}}
+{"1057-1072": {"better": [], "neutral": [], "worse": [], "reason": "2xibj6 and gccggk correctly note that other triples not of form (1,a,k) could yield smaller k. Others don't question this assumption."}}
+{"1072-1277": {"better": [], "neutral": [], "worse": [], "reason": "323msj correctly suggests considering triples not of form (1,a,k). Others commit to optimizing within (1,a,k) without exploring alternatives."}}
+{"1277-1465": {"better": [], "neutral": [], "worse": [], "reason": "All completions appropriately consider that other triples not containing 1 could yield smaller k"}}
+{"1465-1600": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore bounds and alternative approaches for minimal k"}}
+{"1600-1908": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly analyze the general triple divisor problem"}}
+{"1908-1913": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly reformulate the problem in terms of finding two proper divisors summing to n-k"}}
+{"1913-2102": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly analyze the constraint on proper divisors summing to n-k"}}
+{"2102-2186": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly recognize the equivalence to the (1,a,k) triple formulation"}}
+{"2186-2272": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly analyze the (1,d,k) triple approach and divisibility conditions"}}
+{"2272-2312": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly identify the need to minimize k across all divisor triples"}}
+{"2312-2356": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly formulate f(n) as minimal k with divisors summing to n-k"}}
+{"2356-2413": {"better": [], "neutral": [], "worse": [], "reason": "All completions correctly analyze the problem structure for huge n near M"}}
+{"2413-2461": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"2461-2806": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"2806-2819": {"better": [], "neutral": [], "worse": [], "reason": "Completions that challenge the {1,a,k}-only assumption are better; the others prematurely optimize within that restricted setup."}}
+{"2819-2976": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"2976-3019": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"3019-3065": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"3065-3330": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"3330-3698": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"3698-3926": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"3926-4324": {"better": [], "neutral": [], "worse": [], "reason": "Handling the p_min=2 edge case is necessary; completions that ignore it overgeneralize the formula."}}
+{"4324-4341": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"4341-4414": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"4414-4668": {"better": [], "neutral": [], "worse": [], "reason": "The better completions correctly flag that prime n-1 breaks the a>1 construction; cuf3m5 is internally inconsistent about allowing a=1."}}
+{"4668-4719": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"4719-4745": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"4745-4777": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"4777-4850": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"4850-4920": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"4920-4942": {"better": [], "neutral": [], "worse": [], "reason": "Explicitly reopening the non-1 divisor case is stronger; digressions or assuming the prior construction is likely optimal are weaker."}}
+{"4942-5121": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5121-5192": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5192-5216": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5216-5253": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5253-5351": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5351-5415": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5415-5581": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5581-5703": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5703-5767": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5767-5797": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5797-5806": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"5960-6031": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"6480-6543": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"6826-7004": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7043-7166": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7166-7178": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7178-7208": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7208-7413": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7413-7433": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7433-7541": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7541-7553": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7553-7645": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7645-7686": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7686-7693": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7693-7717": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7717-7785": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7785-7820": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7820-7970": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"7970-8357": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"8357-8661": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"8661-8871": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"8871-9018": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"9018-9586": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"9586-9622": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"9622-9725": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"9725-9757": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"9757-9784": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"9784-9838": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"9838-9852": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"9852-9922": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"9922-10015": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10015-10038": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10038-10072": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10072-10130": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10130-10309": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10309-10371": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10371-10405": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10405-10542": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10542-10594": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10594-10783": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10783-10883": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"10883-11006": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"11006-11129": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"11129-11290": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"11290-11620": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"11620-11677": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"11677-11685": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"11685-11844": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"11844-11867": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"11867-11926": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"11926-11952": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"11952-12030": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12030-12079": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12079-12102": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12102-12177": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12177-12233": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12233-12264": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12264-12525": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12525-12612": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12612-12671": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12671-12712": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12712-12770": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12770-12954": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12954-12975": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"12975-13038": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"13038-13095": {"better": [], "neutral": [], "worse": [], "reason": "Deriving z >= 6N/11 from S <= 5z/6 is the key step; short restatements without the inequality chain add less reasoning value."}}
+{"13095-13128": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"13128-13290": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"13290-13389": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"13389-13435": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"13435-13540": {"better": [], "neutral": [], "worse": [], "reason": "9p30ia makes a clear arithmetic error: correctly identifies M is odd, but then incorrectly concludes \"M+c is even (since 1848374 is even)\". This is wrong - odd + even = odd, not even. N is actually odd. The other completions avoid this error by not making false claims about N's parity."}}
+{"13540-13710": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"13710-13743": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"13743-13757": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"13757-13850": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"13850-14245": {"better": [], "neutral": [], "worse": [], "reason": "The better completions connect z=6N/11 to the divisibility condition 11|N; rvocv5 is unclear about the required divisibility."}}
+{"14245-14292": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"14292-14313": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"14313-14338": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"14338-14412": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"14494-14509": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"14509-14610": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"14610-14714": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"14714-14732": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"14841-14845": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"14845-14902": {"better": [], "neutral": [], "worse": [], "reason": "jtagt1/2i574b correctly summarize the two-path comparison; qurgrc is muddled about which divisor is being optimized."}}
+{"14902-15058": {"better": [], "neutral": [], "worse": [], "reason": "n92ckt keeps the crucial 11-divisibility context in view; oq0e18 is too content-free to advance the argument."}}
+{"15058-15090": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15090-15171": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15171-15227": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15227-15258": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15258-15381": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15463-15560": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15560-15616": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15616-15696": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15696-15727": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15727-15750": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15750-15788": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15788-15821": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"15821-15847": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16038-16058": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16058-16086": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16086-16124": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16124-16163": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16163-16178": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16178-16193": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16193-16295": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16295-16325": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16325-16422": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16422-16565": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16565-16698": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16698-16716": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16716-16746": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16746-16787": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16787-16797": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16797-16859": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16859-16887": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16887-16912": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16912-16967": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"16967-17083": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17166-17186": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17186-17240": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17240-17296": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17296-17354": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17447-17481": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17481-17500": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17500-17659": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17659-17858": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17951-17967": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17967-17983": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"17983-18053": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18053-18095": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18130-18154": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18154-18175": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18175-18203": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18203-18231": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18231-18280": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18280-18298": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18298-18312": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18312-18344": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18344-18495": {"better": [], "neutral": [], "worse": [], "reason": "Original correctly identifies that k0 is odd (6Q even + 1008205 odd = odd), so k0/2 cannot be an integer. Alternates discuss generic divisor structures but miss this key parity constraint that eliminates the k0/2 option."}}
+{"18495-18519": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18519-18572": {"better": [], "neutral": [], "worse": [], "reason": "wig67q provides complete analysis: k0 is odd (no factor 2) AND k0 \u2261 1 mod 3 (no factor 3), concluding \"k0 lacks both 2 and 3 divisibility; thus can't use large divisors.\" Original and uj4v17 correctly note k0 is odd. rkwdsu and zqy4ky explore k0/3 without first acknowledging k0 is odd."}}
+{"18572-18630": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18630-18685": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18685-18784": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18784-18824": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18824-18839": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18839-18917": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"18917-19092": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19092-19148": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19148-19246": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19246-19267": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19267-19279": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19279-19291": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19291-19303": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19303-19313": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19313-19374": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19374-19470": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19470-19519": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19519-19542": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19542-19811": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19811-19856": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19912-19927": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19927-19938": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"19938-20048": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"20048-20147": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"20147-20174": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"20174-20285": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"20285-20364": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"20364-20370": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"20370-20544": {"better": [], "neutral": [], "worse": [], "reason": "xlvmob correctly identifies the key constraint: \"k must be odd currently because computed we found k0 odd (since 6Q even + 1008205 odd). To have even k, we need to choose k with factor 2.\" This connects k0's oddness to the need for an even k. Original and others miss this specific connection."}}
+{"20544-20603": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"20603-20681": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"20681-20731": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"20731-20796": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"20796-21105": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"21105-21141": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"21141-21261": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"21261-21372": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"21372-21425": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"21425-21555": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"21555-21627": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"21627-21807": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"21807-22091": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22091-22125": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22125-22156": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22156-22220": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22220-22267": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22267-22303": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22303-22371": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22371-22431": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22431-22468": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22468-22506": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22506-22601": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22601-22647": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22647-22664": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22664-22699": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22699-22799": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22799-22811": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22811-22823": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22823-22839": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22839-22886": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22886-22909": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"22909-23052": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23052-23212": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23212-23418": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23418-23432": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23432-23486": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23486-23556": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23556-23590": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23590-23697": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23697-23788": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23788-23794": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23794-23808": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23808-23883": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23883-23978": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"23978-24000": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24000-24039": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24039-24070": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24070-24119": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24119-24149": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24149-24212": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24212-24240": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24240-24249": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24249-24415": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24415-24434": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24493-24655": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24655-24722": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24722-24798": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24798-24813": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"24813-24843": {"better": [], "neutral": [], "worse": [], "reason": "un72jw correctly identifies that N is odd (M odd + c even = odd), which means p=2 cannot work as a factor of N. Original and others miss this crucial parity insight."}}
+{"24843-24901": {"better": [], "neutral": [], "worse": [], "reason": "x6icvd correctly identifies N is odd and concludes p,q should be odd. Original and others miss this key constraint."}}
+{"24901-24998": {"better": [], "neutral": [], "worse": [], "reason": "54eid1 correctly identifies the crucial constraint that k must be divisible by p and q. Others miss this requirement."}}
+{"24998-25037": {"better": [], "neutral": [], "worse": [], "reason": "v7qexg and i93ec8 correctly identify that k may not be divisible by p after the division, which is the error the trace makes with (2,6). Others miss this."}}
+{"25037-25082": {"better": [], "neutral": [], "worse": [], "reason": "The better completions note D|N is not necessary and use the broader D|Npq condition; the worse ones over-restrict to D|N only."}}
+{"25082-25111": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"25111-25193": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"25193-25256": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"25256-25288": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"25288-25297": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"25297-25556": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"25556-25661": {"better": ["5n3r9r", "z73ngl", "e9vuwj"], "neutral": ["original", "y19n4c"], "worse": ["hgki8l"], "reason": "5n3r9r, z73ngl, and e9vuwj correctly identify that (2,3) requires 11|N and immediately check that N\u22611 mod 11 so it fails, which is accurate. hgki8l states the (2,3) pair gives ratio 6/11 without checking the divisibility constraint, which is misleading."}}
+{"25661-25895": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"25895-25917": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"25917-25940": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"25940-25972": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"25972-26142": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"26192-26325": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"26375-26465": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"26509-26525": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"26525-26601": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"26668-26735": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"26786-26840": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"26891-26949": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27006-27058": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27058-27114": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27223-27227": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27227-27242": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27242-27290": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27290-27306": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27306-27606": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27606-27692": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27692-27717": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27717-27748": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27748-27797": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27797-27983": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"27983-28006": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28006-28053": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28053-28122": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28122-28148": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28148-28166": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28166-28210": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28210-28236": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28236-28288": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28288-28795": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28795-28817": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28817-28953": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"28953-29156": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29156-29232": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29232-29300": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29300-29401": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29401-29402": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29540-29555": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29555-29562": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29587-29595": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29595-29650": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29650-29759": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29759-29900": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"29900-30010": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30010-30045": {"better": [], "neutral": [], "worse": [], "reason": "The better completions articulate the exact divisibility test D|Npq and its implications; the others remain vague."}}
+{"30045-30055": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30055-30090": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30090-30148": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30148-30258": {"better": [], "neutral": [], "worse": [], "reason": "7r19u6/je4t8w correctly allow non-coprime composite pairs; the worse completions incorrectly infer gcd(p,q)=1 from p!=q."}}
+{"30258-30376": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30376-30586": {"better": [], "neutral": [], "worse": [], "reason": "The better completions correctly handle shared-factor cases (for example p=2,q=6); dtcy72 overstates coprimality and misses this path."}}
+{"30586-30619": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30619-30653": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30653-30697": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30697-30759": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30759-30804": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30804-30816": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30816-30835": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30835-30844": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30844-30879": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30879-30907": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30907-30931": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30931-30971": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"30971-31003": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31003-31022": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31022-31096": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31096-31115": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31115-31174": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31174-31210": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31210-31227": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31227-31268": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31268-31325": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31325-31345": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31345-31381": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31381-31403": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31403-31510": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31510-31527": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31527-31534": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31534-31619": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31619-31773": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31773-31790": {"better": [], "neutral": [], "worse": [], "reason": "Alternates are equivalent exploratory reasoning for this span; no clear quality advantage appears among them."}}
+{"31956-32038": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss ratio 3/5 from (2,6) pair. None catch that k=3N/5 is odd (since N odd) and thus not divisible by p=2, making a=k/2 non-integer. Since all miss this, all neutral."}}
+{"32038-32097": {"better": [], "neutral": [], "worse": [], "reason": "All completions accept f(N) <= 3N/5 without verifying that k=3N/5 is divisible by p=2. Since all make the same oversight, all neutral."}}
+{"32097-32110": {"better": [], "neutral": [], "worse": [], "reason": "All completions confirm k=3N/5. None verify that k must be divisible by p=2 for the (2,6) pair. Since all miss this, all neutral."}}
+{"32110-32162": {"better": [], "neutral": [], "worse": [], "reason": "All completions accept ratio 3/5 from (2,6) as best found. None verify the divisibility constraint k|p. All neutral."}}
+{"32396-32449": {"better": [], "neutral": [], "worse": [], "reason": "j79fl3 adds a useful Dprime-pruning idea; jlrbzv mostly rehashes the (2,6) construction without new progress."}}
+{"32449-32482": {"better": [], "neutral": [], "worse": [], "reason": "nxwa81/4cdd7s deepen feasibility checks below 3/5; ybvgzx and 3p0itt are too hand-wavy or contain shaky monotonic claims."}}
+{"32482-32687": {"better": [], "neutral": [], "worse": [], "reason": "j1dyod/h9s5e4 cleanly apply Dprime divisibility to reject 4/7; rxzer5/pu6jv6 trail off into incomplete checks."}}
+{"32687-32829": {"better": [], "neutral": [], "worse": [], "reason": "The better completions tie ratio ordering to Dprime feasibility for concrete q values; tr0n1w is mostly loose ratio comparison."}}
+{"32829-32899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32899-32923": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32923-32971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32971-32995": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32995-33018": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33018-33112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33112-33199": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33199-33258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33258-33294": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33294-33331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33331-33390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33390-33507": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33507-33594": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33594-33657": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33657-33713": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33713-33743": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33743-33752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33752-33856": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33856-33895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33895-33920": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33920-33952": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33952-33978": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33978-34002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34002-34150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34150-34166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34166-34181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34181-34198": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34198-34216": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34216-34250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34250-34414": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34414-34439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34777-34844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34844-34874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34874-34925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35106-35150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35193-35235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35280-35334": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35334-35347": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35347-35447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35447-35496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35496-35514": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35514-35530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35530-35584": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35584-35606": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35606-35629": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35629-35660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35660-35693": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35693-35719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35719-35741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35741-35777": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35777-35839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35839-35866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35866-35916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35916-35942": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35942-35977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35977-36001": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36001-36063": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36495-36523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36523-36540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36540-36602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36602-36630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36630-36650": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36650-36798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36798-36829": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36982-37029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37029-37045": {"better": ["ysevdj"], "neutral": [], "worse": ["original", "2bzis5"], "reason": "ysevdj immediately identifies the critical integrality failure: k=(3/5)N is odd (since N is odd), so k/2 is not an integer, meaning the (2,6) construction is invalid. This is exactly the error the original commits \u2014 it proceeds to \"confirm all conditions\" without catching that p=2 requires k even. 2bzis5 similarly computes k without checking divisibility by p=2."}}
+{"37045-37127": {"better": [], "neutral": ["original", "bjhozq", "zx320u"], "worse": [], "reason": "All completions compute D=20, gcd=4, D'=5 for the (2,6) pair. The reduced condition D'|N is checked but the critical integrality condition (p|k, q|k) is not. All make the same oversight."}}
+{"37127-37165": {"better": [], "neutral": ["original", "2yna8s", "e53i8j"], "worse": [], "reason": "All completions compute k=(3/5)N and verify it's an integer. None check whether k is divisible by p=2 (it's not, since N is odd). Same oversight across all."}}
+{"37165-37296": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37296-37384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37384-37630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37630-37635": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37635-37673": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37673-37990": {"better": ["9ed0gz", "2vq4qk"], "neutral": [], "worse": ["original"], "reason": "Both 9ed0gz and 2vq4qk immediately identify the critical integrality failure: m is odd (since N=5m and N is odd), so k=3m is odd, and k/2 is not an integer. This catches the (2,6) error directly. The original spends effort computing M mod 10 via Python without reaching the key conclusion in this span."}}
+{"38027-38139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38139-38178": {"better": ["e7a507"], "neutral": ["original", "nygw74"], "worse": [], "reason": "e7a507 concisely identifies \"k is odd; thus k is not divisible by 2... the construction fails because p=2 does not divide k\" \u2014 a clear, direct conclusion. The original and nygw74 reach the same conclusion but more verbosely and tentatively. Since e7a507 is clearest and most decisive, it's better for training signal."}}
+{"38178-38382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38382-38435": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38435-38616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38616-38735": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38735-38891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38891-39031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39031-39077": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39077-39079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39079-39092": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39092-39104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39104-39122": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39122-39138": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39138-39234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39234-39411": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39411-39461": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39461-39488": {"better": ["original"], "neutral": ["8ef23v"], "worse": ["hpk70h"], "reason": "The original precisely identifies the stronger necessary conditions: D must divide N*q and N*p. This is the key fix that leads to the correct answer. 8ef23v states the requirement more briefly (p|k and q|k) which is equivalent but less explicit about derivation. hpk70h is just a fragment (\"the correct condition is:\") that says nothing."}}
+{"39488-39496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39496-39516": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39516-39521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39521-39543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39543-39554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39554-39566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39566-39606": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39606-39653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39653-39733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39733-39827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39827-39878": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39878-39910": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39910-39937": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39937-39945": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39945-40032": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40032-40110": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40110-40193": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40193-40206": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40206-40212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40212-40220": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40220-40275": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40275-40297": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40297-40334": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40334-40341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40341-40379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40379-40438": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40438-40487": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40487-40506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40506-40523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40523-40557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40557-40785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40785-40811": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40908-40945": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40945-41021": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41088-41111": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41111-41121": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41121-41216": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41216-41247": {"better": [], "neutral": ["original", "p99g23", "3oq6j8"], "worse": [], "reason": "All completions correctly push for a broader search to find smaller ratios. No meaningful differentiation \u2014 all are heading toward the correct solution."}}
+{"41247-41276": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41322-41391": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41391-41407": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41407-41490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41490-41530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41530-41548": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41600-41617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41617-41635": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41668-41688": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41688-41706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41748-41790": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41790-41808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41867-41885": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41908-41914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41914-41927": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41927-42004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42004-42031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42031-42049": {"better": [], "neutral": ["original", "533khq"], "worse": [], "reason": "Both completions run the same check_pair(2,16) call. No differentiation."}}
+{"42115-42146": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42146-42178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42178-42272": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42404-42530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42530-42609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42609-42660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42660-42673": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42673-42732": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42732-42766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42766-42817": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42817-42830": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42830-42869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42869-43034": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43058-43100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43100-43118": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43142-43182": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43182-43200": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43224-43268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43268-43327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43327-43376": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43376-43467": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43467-43557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43557-43591": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43591-43606": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43606-43668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43668-43702": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43702-43717": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43717-43862": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43908-43927": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43927-44141": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44141-44171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44354-44365": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44365-44410": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45084-45104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45104-45297": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45297-45339": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45339-45620": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45620-45662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45662-45710": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45710-45725": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45725-45866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45866-45884": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45918-45971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45971-45997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45997-46130": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46155-46166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46166-46210": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46210-46235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46235-46288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46288-46347": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46347-46359": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46359-46379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46379-46502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46502-46589": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46589-46604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46604-46675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46675-46688": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46688-46724": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46724-46742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46742-46775": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46775-46838": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46838-46859": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46859-46884": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46884-46889": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46889-46933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46933-46976": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46976-47023": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47023-47085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47085-47111": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47111-47196": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47196-47236": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47236-47275": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47275-47288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47288-47317": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47317-47338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47338-47344": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47344-47530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47530-47564": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47564-47606": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47606-47643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47643-47687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47687-47770": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47770-47831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47831-47862": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47862-48070": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48070-48093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48093-48116": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48116-48165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48165-48543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48543-48554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48554-48625": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48625-48693": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48693-48715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48715-48724": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48724-48792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48792-48843": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48843-48931": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48931-48940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48940-48955": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48955-48982": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48982-49075": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49075-49106": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49106-49139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49139-49150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49150-49166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49166-49172": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49172-49231": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49231-49236": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49236-49243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49243-49342": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49342-49482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49482-49532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49532-49583": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49583-49606": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49606-49618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49618-49662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49662-49679": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49679-49778": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49778-49812": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49921-49938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50078-50121": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50260-50298": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50522-50540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50540-50558": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50558-50719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50719-50754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50805-50818": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50818-50859": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50859-50865": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50865-50878": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50878-50885": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50885-50902": {"better": ["original"], "neutral": [], "worse": ["a4unpc", "8yqycz"], "reason": "Original has correct boxed answer 41. Correct answer has been sufficiently repeated in history."}}

@@ -1,0 +1,113 @@
+{"140-203": {"better": [], "neutral": [], "worse": [], "reason": "All completions introduce the tournament structure and discuss binary score representation. Similar setup and observations."}}
+{"203-347": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe binary encoding of scores and pairing mechanics. Similar explanations."}}
+{"347-563": {"better": [], "neutral": [], "worse": [], "reason": "All completions compare to single-elimination tournaments and discuss scoring structure. Equivalent observations."}}
+{"563-723": {"better": [], "neutral": [], "worse": [], "reason": "All completions define score as sum of 2^{20-i} for wins. Equivalent formalization."}}
+{"723-790": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss pairing within same-prefix groups and group size evolution. Similar reasoning."}}
+{"790-837": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe how groups split into winners/losers each round. Equivalent mechanics."}}
+{"837-943": {"better": [], "neutral": [], "worse": [], "reason": "All completions question score uniqueness and discuss binary tree structure. Similar exploratory reasoning."}}
+{"943-1207": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude each runner gets distinct score and describe sorting network analogy. Equivalent reasoning."}}
+{"1207-1533": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude scores are distinct permutation of 0 to 2^20-1. Similar verification and reasoning."}}
+{"1533-2093": {"better": ["vetele"], "neutral": [], "worse": ["original", "x7qy1n", "3kxn2s"], "reason": "vetele correctly identifies that final ranking depends on pairings (a > c > b > d not matching speed order a>b>c>d) with a concrete worked example. The original and other alternates incorrectly conclude the ranking always matches speed order, delaying recognition of the counting problem."}}
+{"2093-2489": {"better": [], "neutral": [], "worse": [], "reason": "All completions reason about N being (2^20)! and discuss whether all permutations achievable. Similar reasoning with same flaw."}}
+{"2489-2509": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify scores are distinct and reason about N = (2^20)!. Same flawed conclusion in all."}}
+{"2509-2568": {"better": [], "neutral": [], "worse": [], "reason": "All completions propose simulating with small n to verify. Equivalent setup for verification."}}
+{"2568-2592": {"better": [], "neutral": [], "worse": [], "reason": "All completions begin Python simulation code. Equivalent mechanical transition."}}
+{"2592-2894": {"better": [], "neutral": [], "worse": [], "reason": "All completions write Python tournament simulation code. Equivalent mechanical code."}}
+{"2894-3100": {"better": [], "neutral": [], "worse": [], "reason": "All completions write test/verification code for tournament. Equivalent mechanical code."}}
+{"3100-3272": {"better": [], "neutral": [], "worse": [], "reason": "All completions write test functions for simulation. Equivalent mechanical verification code."}}
+{"3315-3457": {"better": [], "neutral": [], "worse": [], "reason": "All completions begin debugging simulation for pairing effects. Equivalent exploration."}}
+{"3589-3794": {"better": [], "neutral": [], "worse": [], "reason": "All completions write simulation code with seed support. Equivalent mechanical code."}}
+{"3794-3942": {"better": [], "neutral": [], "worse": [], "reason": "All completions write test code with random trials. Equivalent verification setup."}}
+{"3942-3949": {"better": [], "neutral": [], "worse": [], "reason": "Equivalent test invocation."}}
+{"4079-4109": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the speed assignment for the example. Equivalent output."}}
+{"4109-4229": {"better": [], "neutral": [], "worse": [], "reason": "All completions observe the mismatch between score order and speed order. Same observation."}}
+{"4229-4243": {"better": [], "neutral": [], "worse": [], "reason": "All completions propose capturing pairings for debugging. Equivalent debugging approach."}}
+{"4243-4470": {"better": [], "neutral": [], "worse": [], "reason": "All completions show code execution setup. Mechanical code with no substantive differences."}}
+{"4470-4505": {"better": [], "neutral": [], "worse": [], "reason": "All completions run debug function with similar seeds. Mechanical execution, no substantive differences."}}
+{"4712-5069": {"better": [], "neutral": [], "worse": [], "reason": "All completions work through round 2 mechanics and arrive at same scores. Similar detailed analysis with equivalent conclusions."}}
+{"5069-5164": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up search for mismatch cases. Similar approach with equivalent code structures."}}
+{"5164-5275": {"better": [], "neutral": [], "worse": [], "reason": "All completions define find_mismatch function with nearly identical logic. Mechanical code."}}
+{"5275-5299": {"better": [], "neutral": [], "worse": [], "reason": "All completions call find_mismatch with same input. Equivalent function calls."}}
+{"5391-5400": {"better": [], "neutral": [], "worse": [], "reason": "All completions transition to examining seed=1 pairings. Brief equivalent statements."}}
+{"5400-5431": {"better": [], "neutral": [], "worse": [], "reason": "All completions execute same debug function call. Identical code."}}
+{"5616-5837": {"better": ["original"], "neutral": [], "worse": ["wjss4z", "5ml5zq", "j2y79p"], "reason": "Original draws the important conclusion that ranking by final scores can differ from speed ranking, and the tournament doesn't necessarily rank by speed. Alternates just trace round mechanics without drawing this key insight."}}
+{"5837-6339": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude many permutations are possible and discuss counting. Similar reasoning about N possibilities."}}
+{"6339-6539": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss binary tree structure and question whether all permutations possible. Similar exploration of constraints."}}
+{"6539-6655": {"better": [], "neutral": [], "worse": [], "reason": "All completions draw analogy to binary search tree or sorting network. Similar conceptual framing."}}
+{"6655-6911": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss assignment of binary strings and speed ordering constraints. Similar reasoning about constraints."}}
+{"6911-7188": {"better": ["0aehdn"], "neutral": ["9g2l9w", "voou6b"], "worse": ["original"], "reason": "0aehdn identifies the crucial Hall's matching condition: the set of 1-bit (winner) participants must be \"dominant\" over the 0-bit (loser) participants, requiring a perfect matching where each winner is faster than the matched loser. This is exactly the Catalan/ballot constraint that leads to the correct answer. The original discusses counting tournament trees without recognizing this feasibility constraint. Other alternates similarly miss it."}}
+{"7188-7427": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss binary tree structure and counting possible trees. Similar exploratory reasoning."}}
+{"7427-7973": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss linear extensions and need to compute v_5(N). Similar reasoning about partial order constraints."}}
+{"7973-8213": {"better": ["mll7mu"], "neutral": ["egg63o", "o6bbzd"], "worse": ["original"], "reason": "mll7mu formalizes the key constraint that participants with higher binary number must be faster (the one with 1 at the most significant differing bit must be faster), AND discovers a potential contradiction with the earlier simulation (runner0 has higher score but slower speed), questioning the assumption. The original discusses prefix structure but doesn't derive this constraint clearly. Other alternates discuss mechanics without this insight."}}
+{"8213-8478": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss binary tree constraints and speed ordering. Similar reasoning about tournament structure."}}
+{"8478-8639": {"better": ["br4v12"], "neutral": ["original", "il9vpm", "y0gsuf"], "worse": [], "reason": "br4v12 makes the clearest formulation: lexicographic ordering matches numeric ordering, and greater binary number corresponds to faster runner. This is a precise and clean statement of the key constraint. The original and il9vpm state similar ideas less precisely. y0gsuf also derives the total order but less concisely."}}
+{"8639-8809": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss testing small cases and counting reachable permutations. Similar approach to verifying constraints."}}
+{"8809-8890": {"better": [], "neutral": [], "worse": [], "reason": "All completions restate the problem setup. Brief equivalent descriptions of what N represents."}}
+{"8890-9027": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss interpretation of N as permutations achievable via pairings and speeds. Similar reasoning."}}
+{"9027-9209": {"better": [], "neutral": [], "worse": [], "reason": "All completions restate goal of counting permutations. Brief equivalent transition statements."}}
+{"9209-9335": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss verifying if all permutations achievable. Similar approach to testing small cases."}}
+{"9335-9395": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up brute force enumeration for n=2. Similar approach to testing small cases."}}
+{"9395-9579": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze pairing possibilities for n=2. Similar observations about (4-1)!! = 3 matchings."}}
+{"9579-9604": {"better": [], "neutral": [], "worse": [], "reason": "All completions note 3 pairings and 4! speed permutations. Brief equivalent statements."}}
+{"9604-9695": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe brute force setup. Equivalent mechanical descriptions."}}
+{"9695-9708": {"better": [], "neutral": [], "worse": [], "reason": "All completions import itertools. Identical mechanical code."}}
+{"9708-9982": {"better": [], "neutral": [], "worse": [], "reason": "All completions define helper functions for tournament simulation. Equivalent code with minor stylistic differences."}}
+{"9982-10118": {"better": [], "neutral": [], "worse": [], "reason": "All completions write deduplication code for matchings. Equivalent mechanical code."}}
+{"10163-10201": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe generating matchings. Mechanical code setup, no substantive difference."}}
+{"10201-10350": {"better": [], "neutral": [], "worse": [], "reason": "All completions implement matching generation with identical logic. Mechanical code."}}
+{"10350-10426": {"better": [], "neutral": [], "worse": [], "reason": "All completions generate matchings for 4 participants. Mechanical code."}}
+{"10426-10444": {"better": [], "neutral": [], "worse": [], "reason": "All completions convert matchings to list format. Mechanical code."}}
+{"10504-10519": {"better": [], "neutral": [], "worse": [], "reason": "All completions start code for brute-force permutation enumeration. Mechanical code setup."}}
+{"10519-10625": {"better": [], "neutral": [], "worse": [], "reason": "All completions define reachable_permutations function. Mechanical code."}}
+{"10625-10641": {"better": [], "neutral": [], "worse": [], "reason": "All completions call reachable_permutations(2). Identical code invocation."}}
+{"11029-11111": {"better": [], "neutral": [], "worse": [], "reason": "All completions argue any permutation is achievable by choosing speeds and pairings appropriately. All miss the key point that with fixed speeds, not every subset of half a group can be winners (Hall's condition / Catalan constraint). Since all share the same error, all are neutral."}}
+{"11111-11674": {"better": [], "neutral": [], "worse": [], "reason": "All completions continue the constructive argument that any permutation is achievable. All share the same flawed reasoning about assigning speeds to match binary numbers. No differentiation."}}
+{"11674-11935": {"better": [], "neutral": [], "worse": [], "reason": "All completions argue speed ordering must match score ordering and that any permutation is achievable. All share the same fundamental error (ignoring Hall's matching condition with fixed speeds). No differentiation."}}
+{"11935-12307": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify that pairings can be scheduled for any binary string assignment. All use the same constructive argument. Same error in all."}}
+{"12307-12346": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude any ordering is realizable, missing Hall's condition constraint. All make the same error."}}
+{"12346-12480": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude N = (2^20)!. All make the same error."}}
+{"12480-12498": {"better": [], "neutral": [], "worse": [], "reason": "All completions state N = (2^20)!. All make the same error (correct is product of Catalan numbers)."}}
+{"12498-12705": {"better": [], "neutral": [], "worse": [], "reason": "All completions continue with N = (2^20)! and compute v_5. All make the same error."}}
+{"12705-12744": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute v_5((2^20)!). Same wrong formula in all."}}
+{"12744-12796": {"better": [], "neutral": [], "worse": [], "reason": "All completions define v_p_factorial function. Identical mechanical code for computing p-adic valuation of factorial."}}
+{"12796-12817": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute v5 of (2^20)!. Identical code invocations."}}
+{"12866-12892": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute v2 of (2^20)!. Identical code."}}
+{"12988-13006": {"better": [], "neutral": [], "worse": [], "reason": "Both completions compute 262140 % 100000. Identical code."}}
+{"13031-13156": {"better": [], "neutral": [], "worse": [], "reason": "All completions consider whether N=(2^20)! needs further verification. All stay on the same wrong track of testing via brute force for small n. No substantive differentiation."}}
+{"13156-13176": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss verifying the N=(2^20)! claim. All remain on the same wrong track."}}
+{"13176-13234": {"better": ["9di54q"], "neutral": ["original", "obmcux", "grd0ya"], "worse": [], "reason": "9di54q discovers a potential contradiction: runner0 outranks runner2 despite being slower, which violates the derived constraint that higher binary number = faster. This questioning could lead to recognizing that not all permutations are achievable. The original and other alternates just continue the constructive proof without questioning."}}
+{"13234-13529": {"better": [], "neutral": [], "worse": [], "reason": "All completions continue constructive proof with binary number assignments. Same reasoning in all."}}
+{"13529-13586": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify pairing schedule exists for binary string assignments. Same reasoning."}}
+{"13586-13633": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude pairings can always be found. Same reasoning throughout."}}
+{"13633-13715": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude any ordering is realizable. Same flawed conclusion in all."}}
+{"13715-13750": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude N = (2^20)!. Same wrong answer in all."}}
+{"13750-13812": {"better": [], "neutral": [], "worse": [], "reason": "All completions confirm N=(2^20)! or proceed to compute k. Same wrong approach in all."}}
+{"13812-13871": {"better": [], "neutral": [], "worse": [], "reason": "All completions state N = (2^20)!. Same wrong conclusion. f47jtw jumps directly to answer 62140 but same error."}}
+{"13871-13889": {"better": [], "neutral": [], "worse": [], "reason": "All completions state k = v5((2^20)!). Same wrong formula in all."}}
+{"13889-13989": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute k=262140 and/or take mod 10^5. Same wrong answer in all."}}
+{"13989-14005": {"better": [], "neutral": [], "worse": [], "reason": "All completions state answer is 62140. Same wrong answer."}}
+{"14005-14026": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute v5 terms. Mechanical computation."}}
+{"14026-14103": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute floor(N/5) = 209715. Same mechanical computation."}}
+{"14103-14148": {"better": [], "neutral": [], "worse": [], "reason": "The original computes floor(1048576/125)=8380 which is arithmetically wrong (correct is 8388). All three alternates correctly compute 8388."}}
+{"14148-14194": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute floor(1048576/625)=1677. Same result, mechanical computation."}}
+{"14194-14282": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute floor(1048576/3125)=335. Same result."}}
+{"14282-14329": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute floor(1048576/15625)=67. Same result."}}
+{"14329-14337": {"better": [], "neutral": [], "worse": [], "reason": "All completions trust Python sum of 262140 and decide to verify. Equivalent transition."}}
+{"14337-14384": {"better": [], "neutral": [], "worse": [], "reason": "All completions define v5 function. Identical mechanical code."}}
+{"14384-14393": {"better": [], "neutral": [], "worse": [], "reason": "All completions call v5(2**20). Identical code invocations."}}
+{"14420-14463": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute term-by-term v5 values. Identical code."}}
+{"14715-14799": {"better": [], "neutral": [], "worse": [], "reason": "All completions list v5 terms. Same computation with minor formatting differences."}}
+{"14829-14870": {"better": [], "neutral": [], "worse": [], "reason": "All completions list remaining v5 terms. Same computation."}}
+{"14870-14903": {"better": [], "neutral": [], "worse": [], "reason": "All completions sum to 262140. Same result."}}
+{"14903-14936": {"better": [], "neutral": [], "worse": [], "reason": "All completions sum the v5 terms via code. Identical computation."}}
+{"14957-14999": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute k=262140 mod 100000 = 62140. Same wrong answer."}}
+{"14999-15012": {"better": ["u4tu9y", "c59t2d"], "neutral": ["u3eac6"], "worse": ["original"], "reason": "u4tu9y asks \"is the interpretation of N correct?\" and c59t2d raises \"N could be fewer than (2^20)!\" \u2014 both question the critical wrong assumption. The original just says \"provide final answer\" without any questioning. Although neither alternate discovers the Catalan constraint, questioning the assumption is significantly better reasoning than blindly committing to the wrong answer."}}
+{"15012-15126": {"better": [], "neutral": [], "worse": [], "reason": "All completions confirm N=(2^20)! and discuss score uniqueness. Same wrong conclusion in all."}}
+{"15126-15189": {"better": [], "neutral": [], "worse": [], "reason": "All completions confirm score uniqueness. Same reasoning with no new insights."}}
+{"15189-15196": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude with the same wrong answer. 0zmpz5 raises the interesting question of whether speeds are fixed vs assignable but still arrives at the same wrong conclusion."}}
+{"15196-15444": {"better": [], "neutral": ["original", "aujgog", "awnpjg", "qv4j2m"], "worse": [], "reason": "All completions confirm score uniqueness and continue with the same wrong N=(2^20)! assumption. No substantive differentiation."}}
+{"15444-15529": {"better": [], "neutral": [], "worse": [], "reason": "Both completions confirm distinct scores via group-splitting argument. Equivalent mechanical observation."}}
+{"15529-15536": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the final ranking is a permutation. Brief transition statements, no substantive difference."}}
+{"15536-15552": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude N = (2^20)! based on the same flawed assumption that any permutation is reachable. All share the same error, so none is better or worse."}}
+{"15552-15570": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute or restate the mod result from the same wrong k=262,140. No substantive difference."}}
+{"15570-15579": {"better": [], "neutral": ["uzeoq7"], "worse": ["original", "i4pwk5"], "reason": "Original has wrong boxed answer 62140, correct answer is 21818. Not boxing the answer provides a chance to move on from the wrong answer."}}

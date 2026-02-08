@@ -1,0 +1,283 @@
+{"61-249": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"249-303": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"303-550": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"550-633": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"633-980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"980-1074": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1074-1255": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1255-1361": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1361-1616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1616-1676": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1676-1721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1721-1828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1828-1975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1975-2012": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2012-2308": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2308-2783": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2783-2818": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2818-3016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3016-3026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3026-3070": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3070-3095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3095-3103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3103-3180": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3180-3235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3235-3311": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3311-3603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3603-3617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3617-3981": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3981-4056": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4056-4235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4235-4258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4258-4371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4371-4582": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4582-4651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4651-4748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4748-4817": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4817-4882": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4882-4932": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4932-4946": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4946-5219": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5219-5447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5447-5528": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5528-5573": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5573-5648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5648-5659": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5659-5701": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5701-5726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5726-5768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5768-5774": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5774-5814": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5814-5874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5874-5911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5911-6120": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6120-6142": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6455-6626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6626-6648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6908-6941": {"better": ["w3ijsz"], "neutral": ["original", "kqglnk"], "worse": [], "reason": "The alternate w3ijsz correctly identifies and verifies the key formula f_i = (i-1)/2^i through systematic testing of multiple values. This is a crucial insight for the solution. The original is just noting a pattern exists without deriving it, and kqglnk attempts an incorrect formula approach."}}
+{"6941-7174": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7174-7221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7221-7260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7260-7301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7301-7347": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7347-7397": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7397-7609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7609-7669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7669-7676": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7676-7872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7872-7915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7915-8546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8546-8587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8587-8647": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8647-8777": {"better": [], "neutral": ["ofmgh4", "uqo84r"], "worse": [], "reason": "All completions correctly verify the formula f_i = (i-1)/2^i against computed values. The original tests multiple values (i=2,3,4,5), while alternates verify fewer but still correctly. All confirm the formula is correct."}}
+{"8777-8796": {"better": [], "neutral": ["original", "6xyyaz", "4kmdcs"], "worse": [], "reason": "All completions correctly state the key formula f_i = (i-1)/2^i for i\u22652. This is the critical probability distribution that enables solving the problem. No meaningful difference between them."}}
+{"8796-8817": {"better": ["el3exk"], "neutral": ["zbw7ah"], "worse": [], "reason": "The alternate el3exk correctly moves to the next step of aggregating probabilities by i modulo n, which is the key insight for computing P_n(k). The original and zbw7ah just restate the formula. el3exk advances the solution more directly."}}
+{"8817-9171": {"better": [], "neutral": ["jtsm12", "hid40h"], "worse": [], "reason": "All completions correctly set up P_n(k) as a sum over i \u2261 k (mod n) with i \u2265 2. The original provides more detail about the player labeling, while jtsm12 is more concise and hid40h verifies the modular arithmetic. All are correct approaches."}}
+{"9171-9249": {"better": [], "neutral": ["ypzl10", "o0m0dx"], "worse": [], "reason": "All completions correctly derive that player k corresponds to i \u2261 k (mod n). The original shows the derivation through (i-1) mod n = k-1, while o0m0dx provides a concrete example with n=3. All are correct and equivalent."}}
+{"9249-9315": {"better": ["nj91vd"], "neutral": ["ybqdrj"], "worse": [], "reason": "The alternate nj91vd correctly handles both cases (k\u22652 and k=1) explicitly, noting that for k=1 the smallest valid i is n+1. This completeness is important for correctness. The original handles k=1 but ybqdrj only addresses k\u22652."}}
+{"9315-9341": {"better": [], "neutral": ["zh730g", "ctbcg1"], "worse": [], "reason": "All completions correctly identify that for k\u22652, the smallest valid i is k. The original and alternates all state this correctly. ctbcg1 also correctly notes the k=1 case with i_start = n+1. All are equivalent and correct."}}
+{"9341-9378": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9378-9661": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9661-9691": {"better": [], "neutral": ["ejjcmp", "d3dr2a"], "worse": [], "reason": "All completions correctly express P_n(k) as a sum over i \u2261 k (mod n). The original provides the full formula, while d3dr2a notes the appropriate start for k=1. ejjcmp is just a transition. All approaches are equivalent and correct."}}
+{"9691-9718": {"better": ["apg3mk"], "neutral": ["3ej4hd"], "worse": [], "reason": "The alternate apg3mk provides the clearest mathematical formulation with explicit index substitution i = k + mn and notes the different starting m values for k\u22652 and k=1. This is more complete than the original which just states the ranges. 3ej4hd is also correct but more verbose."}}
+{"9718-9804": {"better": [], "neutral": ["8lf705", "h5hb6i"], "worse": [], "reason": "All completions correctly set up the sum. The original notes that j=0 for k=1 gives zero contribution. 8lf705 transitions to computing the reduced fraction. h5hb6i gives the explicit formula for k=1 case. All are correct approaches."}}
+{"9804-10078": {"better": [], "neutral": ["ipidqa", "5c0lgp"], "worse": [], "reason": "All completions correctly observe that the j=0 term for k=1 contributes zero (since (1-1)/2=0). This key insight allows using a uniform formula for all k. The original provides the most thorough justification, while alternates are more concise. All are correct."}}
+{"10078-10111": {"better": [], "neutral": ["b986im", "0whxgl"], "worse": [], "reason": "The original and 0whxgl state the same formula correctly. b986im is just a transition noting the series expression. All lead to the same correct mathematical formulation."}}
+{"10111-10147": {"better": ["zbl4ii"], "neutral": ["tersv9"], "worse": [], "reason": "The alternate zbl4ii correctly factors out 2^{-k} to simplify the sum, which is the key step for deriving the closed form. The original rewrites as (k-1)+jn which is also valid. tersv9 just describes the series type. zbl4ii advances the computation more directly."}}
+{"10147-10188": {"better": [], "neutral": ["kyd6a2", "g3j3ll"], "worse": [], "reason": "All completions correctly factor 2^{-k} from the sum. The original and g3j3ll show the same factoring. kyd6a2 introduces notation A=k-1, B=n which is useful but not essential. All are equivalent correct steps."}}
+{"10188-10237": {"better": [], "neutral": ["d3c9aa", "2apwoy"], "worse": [], "reason": "All completions correctly substitute a = 2^{-n} (or r = 2^{-n}) to convert the sum into a standard form. This is a key simplification step. All are equivalent and correct."}}
+{"10237-10245": {"better": ["tryydi"], "neutral": ["lprjtt"], "worse": [], "reason": "The alternate tryydi provides the complete closed-form formulas for both \u03a3a^j and \u03a3ja^j, which is exactly what's needed. The original just labels it as arithmetic-geometric series without giving the formulas. lprjtt splits the sum but doesn't provide closed forms. tryydi is most complete."}}
+{"10245-10283": {"better": [], "neutral": ["cboc6u", "g5jlvi"], "worse": [], "reason": "All completions correctly split the sum into two parts: constant term times \u03a3a^j plus linear coefficient times \u03a3ja^j. The formulations are equivalent with minor notation differences. All are correct."}}
+{"10283-10289": {"better": ["o5pqj3"], "neutral": ["uns3tp"], "worse": [], "reason": "The alternate o5pqj3 provides the closed-form \u03a3a^j = 1/(1-a) with the crucial condition |a|<1. The original just says \"We can compute closed form\" without showing it. uns3tp just reminds a = 2^{-n}. o5pqj3 advances the derivation."}}
+{"10289-10357": {"better": [], "neutral": ["6qevyd", "s4anre"], "worse": [], "reason": "All completions correctly state the closed-form formulas for the geometric series. The original provides both formulas in one statement. The alternates focus on the first sum. All are correct and lead to the same result."}}
+{"10357-10383": {"better": [], "neutral": ["zzh98l", "nsezpb"], "worse": [], "reason": "All completions correctly combine the two sums to get sum = (k-1)/(1-a) + na/(1-a)^2. The formulations are identical with minor notation/spacing differences. All are correct and equivalent."}}
+{"10383-10414": {"better": [], "neutral": ["edg5c7", "ha11dd"], "worse": [], "reason": "All completions correctly state P_n(k) = 2^{-k}*[(k-1)/(1-a) + na/(1-a)^2]. The formulations are identical with minor spacing. All are correct and equivalent."}}
+{"10414-10423": {"better": [], "neutral": ["96obko", "86dzeb"], "worse": [], "reason": "All completions correctly state to plug in a = 2^{-n}. These are equivalent transition statements. All are correct."}}
+{"10423-10469": {"better": [], "neutral": ["6vh1g4", "aa0nlm"], "worse": [], "reason": "The original provides the explicit formula with a substituted. The alternates are just transition phrases. All lead to the same formula derivation."}}
+{"10469-10472": {"better": [], "neutral": ["ot3fd0", "0li69f"], "worse": [], "reason": "All completions begin simplification. The original is a transition word. ot3fd0 and 0li69f introduce notation for the denominator. All are valid approaches to continuing the derivation."}}
+{"10472-10484": {"better": [], "neutral": ["25amsq", "jzvhi7"], "worse": [], "reason": "All completions define D = 1 - 2^{-n} and express P in terms of D. The alternates include the formula explicitly while the original just defines D. All are correct and lead to the same result."}}
+{"10484-10513": {"better": [], "neutral": ["x3lra9", "3k2ol5"], "worse": [], "reason": "All completions state the same formula P = 2^{-k}[(k-1)/D + n*2^{-n}/D^2]. The formulations are identical with minor notation differences. All are correct."}}
+{"10513-10517": {"better": [], "neutral": ["7xdrbd", "v5t9o4"], "worse": [], "reason": "All completions transition to combining the terms. The original just says \"combine\". 7xdrbd notes the need for a reduced fraction. v5t9o4 begins the combination. All are valid transition steps."}}
+{"10517-10588": {"better": [], "neutral": ["76r7nn", "8pak9w"], "worse": [], "reason": "All completions correctly combine the two terms over common denominator D^2. The original and alternates show the same algebraic manipulation with minor differences in presentation. All arrive at the correct combined form."}}
+{"10588-10618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10618-10633": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10633-10655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10655-10668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10668-10677": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10677-10680": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10680-10708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10708-10723": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10723-10742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10742-10767": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10767-10794": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10794-10847": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10847-10899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10899-10921": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10921-10965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10965-10967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10967-11008": {"better": [], "neutral": ["5n8m56", "dh0akx"], "worse": [], "reason": "All completions state the same closed-form formula for P_n(k). The expressions are equivalent with minor notation differences. All are correct and represent the key formula."}}
+{"11008-11013": {"better": ["wckpcn"], "neutral": ["gs14k0"], "worse": [], "reason": "The alternate wckpcn correctly suggests testing against examples, which is an important verification step. The original just says to rewrite numerator. gs14k0 acknowledges the closed form but doesn't advance. wckpcn's suggestion to verify is more valuable."}}
+{"11013-11040": {"better": ["tpjhh4"], "neutral": ["3faenw"], "worse": [], "reason": "The alternate tpjhh4 expands A = (k-1)*(2^n-1)+n and simplifies to (k-1)*2^n + (n-(k-1)), which is useful algebraically. The original and 3faenw just state the numerator. tpjhh4's expansion helps verify the formula structure."}}
+{"11040-11053": {"better": [], "neutral": ["np4y5b", "h9tc8v"], "worse": [], "reason": "All completions state Denominator = (2^n-1)^2. The formulations are identical with minor abbreviation differences. All are correct."}}
+{"11053-11086": {"better": ["yyymo8"], "neutral": ["ethc73"], "worse": [], "reason": "The alternate yyymo8 provides crucial verification by testing n=3, k=1 and confirming P=12/49 matches the given example. This validation is very important. The original just restates the formula. ethc73 is generic. yyymo8's verification is valuable."}}
+{"11086-11099": {"better": [], "neutral": ["7269sa"], "worse": [], "reason": "Both completions state Denominator = (2^n-1)^2 identically. No meaningful difference."}}
+{"11099-11248": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11248-11266": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11266-11278": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11278-11402": {"better": ["hac8la"], "neutral": ["2hw6jt"], "worse": [], "reason": "The alternate hac8la provides the most thorough analysis by explicitly computing test cases (n=2,3,4,5,6,9) and explaining the condition for when gcd(n, 2^n-1) > 1. The original is correct but less complete, and 2hw6jt correctly states the result but without verification. hac8la's analysis helps understand the exceptional cases."}}
+{"11402-11460": {"better": [], "neutral": ["4o15wc", "ixtpin"], "worse": [], "reason": "All completions correctly analyze how the gcd between numerator and denominator affects reduction. The original notes that reduction happens at most once per factor, while ixtpin provides a cleaner proof that gcd(A, (2^n-1)^2) = gcd(A, 2^n-1). All lead to the same correct conclusion."}}
+{"11460-11997": {"better": ["0o2os4"], "neutral": ["mg4ylu"], "worse": [], "reason": "The alternate 0o2os4 provides the most rigorous proof that g = gcd(A, 2^n-1) without squared factors, using prime exponent analysis. The original is thorough but gets to the verification example, while mg4ylu correctly extracts the key point but without proof. 0o2os4's argument is cleaner and more complete."}}
+{"11997-12185": {"better": [], "neutral": ["tsdqq8", "yy9ro0"], "worse": [], "reason": "All completions correctly verify the formula against the given example P_6(2) = 368/1323, computing numerator=1104, denominator=3969, and checking the gcd. The approaches differ slightly in code organization but all produce the same correct verification. This is an important validation step."}}
+{"12185-12194": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12235-12279": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12279-12364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12364-12466": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12466-12486": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12486-12529": {"better": [], "neutral": ["4b9hrm", "rzs2tg"], "worse": [], "reason": "All completions correctly identify that we need to compute M for the specific values n=10^8+7 and k=10^4+7. The original states the problem explicitly, 4b9hrm focuses on the formula structure, and rzs2tg provides a concise statement. All are valid and lead to the same computation."}}
+{"12529-12542": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12542-12555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12555-12561": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12561-12587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12587-12594": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12594-12696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12696-12721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12721-12739": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12739-12765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12765-12798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12798-12814": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12814-12828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12828-12870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12870-12895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12895-12983": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12983-13387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13387-13571": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13628-13701": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13701-13760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13885-13968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13968-14048": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14091-14134": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14134-14147": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14147-14162": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14162-14202": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14202-14256": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14256-14277": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14277-14279": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14279-14293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14293-14329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14329-14349": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14349-14380": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14380-14750": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14750-15030": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15030-15114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15114-15214": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15214-15241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15241-15349": {"better": [], "neutral": ["original", "yqczpz", "87cj8m"], "worse": [], "reason": "All completions correctly identify that checking if n=100,000,007 is prime is crucial. The primality of n determines whether gcd=1 (no reduction needed). All propose testing, though with slightly different approaches. The original uses sympy, others use custom or similar tests."}}
+{"15821-15842": {"better": ["1fb6k8"], "neutral": ["original", "4rf0uj"], "worse": [], "reason": "The alternate 1fb6k8 correctly explains WHY the formula holds: for prime n, n doesn't divide 2^n-1 (by Fermat's Little Theorem), so gcd=1 and the fraction is already reduced. This provides important justification that the original just assumes."}}
+{"15842-16036": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16036-16046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16046-16076": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16076-16122": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16122-16190": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16190-16265": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16265-16270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16270-16279": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16279-16318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16318-16341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16341-16602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16602-16858": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16858-16870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16870-16900": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16900-16936": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16936-16962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16962-16971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16971-17010": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17010-17072": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17072-17089": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17089-17114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17114-17129": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17129-17138": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17138-17166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17166-17270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17270-17296": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17296-17306": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17306-17327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17327-17333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17333-17340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17340-17363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17363-17404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17404-17421": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17421-17452": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17452-17521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17521-17680": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17751-17877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17877-17898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17898-18104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18104-18114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18381-18387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18387-18458": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18458-18530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18530-18646": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18646-18676": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18676-18726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18726-18741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18741-18821": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18821-18842": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18842-18868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18868-18945": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18945-18955": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18955-19015": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19015-19038": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19038-19164": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19164-19235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19235-19285": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19510-19580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19580-19831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19831-20055": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20055-20143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20360-20369": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20369-20386": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20386-20475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20475-20709": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20709-20724": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20745-20759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20759-20786": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20786-20809": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20809-20841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20841-20921": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20921-21037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21037-21103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21159-21169": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21169-21333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21360-21395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21395-21505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21505-21510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21510-21644": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21644-21681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21681-21690": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21690-21719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21719-21726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21726-21790": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21790-21798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21798-21836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21836-21857": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21857-21869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21869-21962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21962-22059": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22059-22063": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22063-22073": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22073-22096": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22096-22105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22105-22170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22170-22198": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22198-22239": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22239-22413": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22413-22621": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22621-22639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22639-22666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22666-22695": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22695-22768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22768-22773": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22773-22805": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22805-22877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22877-22885": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22885-22895": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 59992576. Correct answer has been sufficiently repeated in history."}}

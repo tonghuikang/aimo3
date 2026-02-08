@@ -1,0 +1,183 @@
+{"45-164": {"better": [], "neutral": ["original", "zre4nb", "bfgysg", "e9wagx", "bxuqoi"], "worse": [], "reason": "All completions correctly identify the need for formulas to compute S(k) for large k. Minor differences in reasoning depth but all are on the right track."}}
+{"164-300": {"better": [], "neutral": ["original", "ruc1kp", "0gl2xc", "f01wm4", "c6pk3x"], "worse": [], "reason": "All completions correctly explain the construction of s(n) - minimize digits, then minimize leading digit. Alternate 0gl2xc provides clearest explanation but all reach the same insight."}}
+{"300-664": {"better": [], "neutral": ["original", "j1ygre", "claq9w", "a28dik"], "worse": ["o0vgu8"], "reason": "o0vgu8 is dismissive (\"Eh\") and suggests an unrelated approach (base 9) without development. Others correctly derive s(n) formula with examples."}}
+{"664-775": {"better": [], "neutral": ["original", "jvormg", "7e74ur", "7qzdn2", "5960bs"], "worse": [], "reason": "All completions correctly derive s(n) = (r+1)*10^{d-1} - 1 and verify edge cases like n divisible by 9. Minor notational differences."}}
+{"775-877": {"better": [], "neutral": ["original", "wk5t7p", "b4hhna", "ubel8z", "9g3j0e"], "worse": [], "reason": "All completions correctly verify that r is always in [1,9] (never 0) by checking the case when n is divisible by 9. All reach the same correct conclusion."}}
+{"877-931": {"better": ["nj2oj1"], "neutral": ["original", "1wejnm", "xm6ho4", "1w8nvp"], "worse": [], "reason": "Alternate nj2oj1 introduces the cleaner parameterization t = floor((n-1)/9) which directly gives s(n) = (r+1)*10^t - 1 without needing d. This simplification aids subsequent derivations."}}
+{"931-1028": {"better": ["lxo3rz"], "neutral": ["original", "wf0pkl", "g0ze3s", "utfv6w"], "worse": [], "reason": "Alternate lxo3rz provides clearest statement: \"n = 9q + r, with r from 1 to 9\" using Euclidean division, leading directly to s(n) = (r+1)*10^q - 1. This parameterization avoids confusion about indexing."}}
+{"1028-1177": {"better": ["07nfmh"], "neutral": ["original", "ntmiga", "7nl91t", "p8ogl5"], "worse": [], "reason": "Alternate 07nfmh directly identifies the key constraint: \"all computations modulo M\" - this is essential for handling the exponentially large values in S(k) for huge Fibonacci arguments."}}
+{"1177-1439": {"better": ["rd5y67"], "neutral": ["original", "eu9amb", "fqcad8", "ryp32s"], "worse": [], "reason": "Alternate rd5y67 explicitly lists s(n) values for a block: (2*10^{d-1}-1), (3*10^{d-1}-1), ..., (10*10^{d-1}-1) and verifies s(9d) = 10^d - 1. This concrete enumeration helps verify the pattern."}}
+{"1439-1485": {"better": ["96r2ge"], "neutral": ["original", "dbsnx0", "6k77pm", "zaok0r"], "worse": [], "reason": "Alternate 96r2ge clearly defines blocks with \"n = 9*(d-1)+j for j=1..9\" and states \"s(n) = (j+1)*10^{d-1} - 1\", making the block summation structure explicit."}}
+{"1485-1631": {"better": ["24go3z"], "neutral": ["original", "ebteir", "ydbz2m", "7vw0e4"], "worse": [], "reason": "Alternate 24go3z computes sum_{r=1}^{9}(r+1) = 54 explicitly, showing the calculation: \"sum_{s=1}^{10}s - 1 = 55-1=54\". This key constant (54) is essential for the closed form."}}
+{"1631-1747": {"better": [], "neutral": ["original", "gzlufa", "8jf2kf", "xq9kgk", "hcpgm7"], "worse": [], "reason": "All completions correctly verify sum_{r=1}^9 (r+1) = 54 using multiple approaches (arithmetic series, direct summation). No significant quality differences."}}
+{"1747-1930": {"better": ["9uijgg"], "neutral": ["original", "58q3vo", "b42nga", "occbgf"], "worse": [], "reason": "Alternate 9uijgg derives the formula sum_{r=1}^t (r+1) = t(t+3)/2 explicitly with verification: \"t=1: sum=2, formula 1*4/2=2; t=9: sum=54, formula 9*12/2=54\". This closed form is essential for partial blocks."}}
+{"1930-1971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1971-2000": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2000-2064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2064-2247": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2247-2321": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2321-2335": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2335-2381": {"better": ["h8wwm8", "zrgdl9"], "neutral": ["original", "bkzbad", "qvrvzb"], "worse": [], "reason": "Alternates h8wwm8 and zrgdl9 provide explicit verification with concrete calculations: h8wwm8 verifies S(9)=45 and zrgdl9 verifies S(10)=64 step by step, confirming formula correctness."}}
+{"2381-2387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2387-2578": {"better": [], "neutral": ["original", "bxh8it", "8cfzz8", "49qynl", "ie3xgw"], "worse": [], "reason": "Original verifies formula with S(20)=1074, confirming correctness of the derived closed form. Alternates transition to next steps. All are reasonable continuations."}}
+{"2578-2582": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2582-2609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2609-2622": {"better": ["xfcwly"], "neutral": ["original", "kozn8v", "93qvod", "md7428"], "worse": [], "reason": "Alternate xfcwly derives the key simplification: \"sum_{d=1}^B 54*10^{d-1} = 6*(10^B -1)\" (since 54/9=6), reducing full block sum to \"6*10^B - 6 - 9B\". This is the essential closed form."}}
+{"2622-2665": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2665-2712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2712-2742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2742-2754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2754-2804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2804-2852": {"better": [], "neutral": ["original", "hgodl8", "ek15r1", "gciisu", "wegtw1"], "worse": [], "reason": "All completions correctly identify the geometric series formula for sum of powers of 10 and the need for modular inverse of 9. Alternate ek15r1 directly simplifies to the final form 6*(10^B -1) -9B."}}
+{"2852-2932": {"better": [], "neutral": ["original", "w1sans", "mu64v6", "54opy2"], "worse": [], "reason": "All completions correctly derive the closed form for full block sum = 6*10^B - 6 - 9B using the simplification 54/9 = 6. This is the key formula derivation."}}
+{"2932-2945": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2945-2963": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2963-3022": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3022-3033": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3033-3070": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3070-3112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3112-3295": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3295-3299": {"better": ["j710o5"], "neutral": ["original", "hlqd4v", "u6roiz", "gnq477"], "worse": [], "reason": "Alternate j710o5 explicitly states the complete unified formula S(k) = (6 + C(r))*10^B - 6 - 9B - r with parameter definitions, which is clearer than the others."}}
+{"3299-3317": {"better": ["3gxsqn"], "neutral": ["original", "edj0xn", "t78ozt"], "worse": [], "reason": "Alternate 3gxsqn is most explicit, stating \"k be any integer >=1\" and defining B and r with constraints \"0 <= r <=8\". This clarity helps prevent off-by-one errors."}}
+{"3317-3341": {"better": ["95lk62"], "neutral": ["original", "e6njzk", "7t8mc6", "80h3au"], "worse": [], "reason": "Alternate 95lk62 presents the formula in cleanest form: S(k) = (6 + C(r)) * 10^B - (6 + 9B + r), grouping constant terms clearly."}}
+{"3341-3377": {"better": ["d8z2p8"], "neutral": ["original", "avo2tr", "ws2914", "r2su09"], "worse": [], "reason": "Alternate d8z2p8 simplifies A(r) = 5 + ((r+1)*(r+2)/2), a cleaner form than 6 + C(r) - 1. This algebraic simplification aids implementation."}}
+{"3377-3441": {"better": [], "neutral": ["original", "7r50lm", "velzav", "rj8h90", "rpnd61"], "worse": [], "reason": "Original verifies formula with S(20)=1074 which matches the given example. All alternates also proceed with verification or formula computation. All are equivalent in reasoning quality."}}
+{"3441-3528": {"better": [], "neutral": ["original", "1fafrp", "krs4ku", "aichj8", "y3kr78"], "worse": [], "reason": "All completions verify S(9)=45 correctly (sum 1+2+...+9=45). This is important verification of the formula for a boundary case. All equivalent."}}
+{"3528-3634": {"better": [], "neutral": ["original", "i0ij4d", "h3he2a", "esohcj", "ablnh3"], "worse": [], "reason": "All completions verify the formula for small values (k=1 or k=10). Original verifies S(1)=1. Alternates h3he2a and ablnh3 verify S(10)=64. All correct verifications."}}
+{"3634-3639": {"better": ["qws8dc", "pjfoyu"], "neutral": ["original", "vwcxop", "9p6qh9"], "worse": [], "reason": "Alternates qws8dc and pjfoyu provide additional verification: qws8dc checks S(8)=36, pjfoyu verifies S(0)=0 using the formula. More edge case verification improves confidence."}}
+{"3639-3709": {"better": ["b9gcl6"], "neutral": ["original", "dzdk9l", "umdiuc", "eyxucw"], "worse": [], "reason": "Alternate b9gcl6 provides the most complete algorithm statement: \"compute B_i, r_i, then S(f_i) = A(r_i) * 10^{B_i} - 6 - 9*B_i - r_i (mod M). Sum these up for i=2..90.\""}}
+{"3709-3758": {"better": ["irkj43"], "neutral": ["original", "u6t4mq", "heq5tq", "qymv96"], "worse": [], "reason": "Alternate irkj43 explicitly addresses complexity: \"pow(10, B_i, M) may take O(log B_i) ~ O(60) modular multiplications\" - showing the algorithm is computationally feasible."}}
+{"3758-3798": {"better": ["px9kjf"], "neutral": ["original", "1ie05q", "dhcwzi", "2abo3e"], "worse": [], "reason": "Alternate px9kjf clearly states \"total sum = sum_i A(r_i) * 10^{B_i} - sum_i (6 + 9*B_i + r_i)\" which shows the separation of terms for efficient computation."}}
+{"3798-3935": {"better": ["7dzgn4"], "neutral": ["original", "mk36k0", "7abv8n", "jtrpn0"], "worse": [], "reason": "Alternate 7dzgn4 explicitly computes \"sum_i 6 = 6*89 = 534\" - showing attention to the count of terms (89 terms from i=2..90 inclusive). This is a useful sanity check."}}
+{"3935-4252": {"better": ["1o9np4"], "neutral": ["original", "chsq2u", "sk6w13", "c45uh8"], "worse": [], "reason": "Alternate 1o9np4 provides the clearest analysis: verifies f_90 fits in 64-bit, explains pow works in O(log exponent) ~ 59 steps, and confirms the computation is feasible. This practical analysis is valuable."}}
+{"4252-4319": {"better": ["z4eqer"], "neutral": ["original", "r2t649", "6nrk2c", "2sojhd"], "worse": [], "reason": "Alternate z4eqer concisely explains: \"pow with exponent up to ~3e17 uses O(log exponent) multiplications (like 60 multiplications)... that's fine for 89 terms.\" Clear complexity analysis."}}
+{"4319-4335": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4335-4381": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4381-4407": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4407-4443": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4443-4456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4456-4466": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4466-4486": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4486-4509": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4509-4529": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4529-4592": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4592-4666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4666-4681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4681-4712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4712-4726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4726-4729": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4729-4742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4742-4752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4752-4761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4761-4784": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4784-4795": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4795-4808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4808-4823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4823-4841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4841-4852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4852-4868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4868-4949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4949-5027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5027-5113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5113-5196": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5196-5285": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5285-5403": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5403-5423": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5423-5427": {"better": ["kz30xn", "1ujp4h"], "neutral": ["original", "k32v3t", "bfmo2z"], "worse": [], "reason": "Alternates kz30xn and 1ujp4h explicitly verify s(n) values for n=9..13 and confirm S(13)=181, providing concrete verification. Original just says \"trust\" without showing the check."}}
+{"5427-5447": {"better": [], "neutral": ["original", "d2fg1w", "g90fy2", "ctcsa9", "yn8zjq"], "worse": [], "reason": "All completions transition to computing the final sum. Alternate g90fy2 includes a manual verification, others are similar transition statements."}}
+{"5447-5450": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5450-5454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5454-5550": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5550-5599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5599-5690": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5690-5749": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5775-5792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5792-5847": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5847-5865": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5865-5965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5965-6005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6005-6008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6047-6095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6095-6127": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6127-6180": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6180-6259": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6384-6406": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6406-6425": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6425-6464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6464-6472": {"better": [], "neutral": ["original", "f1b5uc", "nf93jy", "l8ozfg", "y1utts"], "worse": [], "reason": "All completions arrive at or are verifying the correct answer 922058210. The original states it directly; alternates suggest verification methods which is also good practice."}}
+{"6472-6506": {"better": [], "neutral": ["original", "m3dx5h", "yhvyk0", "yjif5j", "4ouyfr"], "worse": [], "reason": "All completions appropriately suggest verification methods for the answer. Original checks for negative modulo issues. All are good verification approaches."}}
+{"6506-6546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6546-6581": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6581-6632": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6632-6708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6813-6818": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6818-6853": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6853-6864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6864-6874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6874-6888": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6888-6942": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6942-6950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6950-6957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6957-6999": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6999-7032": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7032-7051": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7051-7077": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7077-7112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7112-7160": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7160-7178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7178-7201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7201-7240": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7240-7316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7316-7323": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7323-7330": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7330-7376": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7376-7389": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7389-7410": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7475-7483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7483-7520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7567-7655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7694-7707": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7707-7715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7715-7741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7741-7746": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7746-7769": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7769-7800": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7800-7814": {"better": [], "neutral": ["original", "rbvdmt", "muhyiu", "szlc8p", "erh4a3"], "worse": [], "reason": "Alternate has correct boxed answer 922058210 but answer has not been sufficiently repeated."}}
+{"7814-7855": {"better": [], "neutral": ["original", "0p5wi7", "qmg5dt", "16u5s8", "rk0ns5"], "worse": [], "reason": "Alternate has correct boxed answer 922058210 but answer has not been sufficiently repeated."}}
+{"7855-7869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7869-7892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7892-7909": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7909-7935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7935-7972": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7972-8029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8029-8041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8041-8043": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8043-8085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8085-8105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8105-8135": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8135-8152": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8152-8160": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8160-8226": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8226-8243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8243-8293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8293-8311": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8311-8365": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8365-8368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8368-8402": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8402-8425": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8425-8498": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8498-8505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8505-8561": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8561-8603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8603-8611": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8611-8678": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8678-8682": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8682-8710": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8710-8760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8760-8831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8831-8873": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8873-8903": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8903-9013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9013-9026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9026-9031": {"better": [], "neutral": ["original", "0757vd", "yryjgl", "u5esbq", "kk0tjl"], "worse": [], "reason": "Alternate has correct boxed answer 922058210 but answer has not been sufficiently repeated."}}
+{"9031-9040": {"better": [], "neutral": ["original", "l3m95p"], "worse": [], "reason": "Original has correct boxed answer 922058210 but answer has not been sufficiently repeated."}}

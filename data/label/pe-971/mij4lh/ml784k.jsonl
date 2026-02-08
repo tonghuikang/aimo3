@@ -1,0 +1,236 @@
+{"11-162": {"better": ["qld5nf"], "neutral": ["original", "bupss3"], "worse": [], "reason": "qld5nf provides the most thorough initial setup: identifies f_p, defines C(p) as the set of periodic points, and distinguishes periodic from preperiodic points. The original and bupss3 both correctly establish p equiv 1 mod 5 but qld5nf adds more context about the problem structure."}}
+{"162-508": {"better": [], "neutral": ["original", "n4uor6", "cyib4m"], "worse": [], "reason": "All three correctly define f_p(x) = x^k + x mod p. The original provides the most thorough analysis of periodic vs preperiodic points (clarifying that C(p) counts only cycle elements). The alternates are more concise but lose that detail. cyib4m notes the factorization x(x^{k-1}+1) which is useful but not critical here. Overall equivalent."}}
+{"508-556": {"better": [], "neutral": ["original", "a6ph03", "xpbx8b"], "worse": [], "reason": "All three correctly summarize the task: compute periodic points of f(x) = x^k + x mod p for primes p equiv 1 mod 5. xpbx8b additionally mentions summing for all primes up to 1e8 which is slightly more complete, but the key content is the same across all three."}}
+{"556-581": {"better": [], "neutral": ["original", "cpr3xr", "tw57hi"], "worse": [], "reason": "All three state the goal of summing C(p) over primes up to 1e8. Minimal differences in wording. Purely transitional token."}}
+{"581-596": {"better": ["abvffs"], "neutral": ["original", "4vcnqa"], "worse": [], "reason": "abvffs begins exploring the connection to Fermat's theorem and the exponent k = (p+4)/5, which is mathematically productive. The original and 4vcnqa just state the need for a formula without beginning exploration."}}
+{"596-664": {"better": ["5idsw5"], "neutral": ["original", "f76nhj"], "worse": [], "reason": "5idsw5 cleanly derives that the only fixed point is x=0 (since f(x)=x => x^k=0 => x=0 in a field). This is an important early result. The original and f76nhj both set up analysis but don't reach this conclusion."}}
+{"664-723": {"better": ["09rhi2"], "neutral": ["original", "gyw2vc"], "worse": [], "reason": "09rhi2 immediately identifies f(0)=0 as a fixed point, which is a concrete useful result. The original sets up primitive root notation which is standard but doesn't yet yield results. gyw2vc is minimal."}}
+{"723-851": {"better": ["19h2uz"], "neutral": ["original", "m61g5u"], "worse": [], "reason": "19h2uz cleanly derives the key identity k = (p-1)/5 + 1, equivalently k-1 = (p-1)/5, which is the crucial exponent for later analysis. The original gets the right relationship but is more roundabout. m61g5u just restates the problem without advancing."}}
+{"851-873": {"better": ["eoq27t", "1ils4e"], "neutral": [], "worse": ["original"], "reason": "The original incorrectly computes k-1 = (p-5)/5 and gets confused (\"Eh.\"). Both alternates correctly derive k-1 = (p-1)/5, which is the key exponent for the coset decomposition. eoq27t additionally identifies it as (order of group)/5."}}
+{"873-898": {"better": ["05yobm"], "neutral": ["sg581y"], "worse": ["original"], "reason": "The original repeats the incorrect calculation k-1 = (p-5)/5. 05yobm takes concrete action by factoring f(x) = x*(x^{k-1}+1), identifying 0 as a fixed point, and writing code to verify C(11)=7. sg581y is vague but at least doesn't repeat the error."}}
+{"898-945": {"better": [], "neutral": ["original", "8z4q8x", "b9cw97"], "worse": [], "reason": "The original continues with the (p-5)/5 computation which is technically correct (just a different form of (p-1)/5). 8z4q8x factors f(x)=x(x^{k-1}+1) which is useful. b9cw97 defines t=k-1. All are reasonable steps forward with no errors. Neutral across the board."}}
+{"945-998": {"better": [], "neutral": ["original", "y4s4xe", "bc2xih"], "worse": [], "reason": "All three present the factorization f(x) = x*(x^{k-1}+1) and note f(0)=0. The original is most complete by explicitly stating 0 is always counted. y4s4xe restates the factorization. bc2xih notes the exponent value. No substantive differences."}}
+{"998-1065": {"better": [], "neutral": ["original", "lpe5t2", "l6nvh8"], "worse": [], "reason": "All three define the T(x)=x^{k-1} mapping for nonzero x. l6nvh8 goes into extensive computation to reconcile (p-5)/5 vs (p-1)/5 but ultimately both are correct forms. The original and lpe5t2 are more concise. No alternate provides a clearly superior insight."}}
+{"1065-1102": {"better": [], "neutral": ["original", "59oayo", "y0feve"], "worse": [], "reason": "All three state the goal of finding periodic points. The original notes this is tricky. 59oayo is terse. y0feve is brief. Purely transitional statement with no mathematical content differences."}}
+{"1102-1145": {"better": [], "neutral": ["original", "8ei18y", "a9dq11"], "worse": [], "reason": "All three explore whether there is a known result or closed form for iterates of f(x)=x^k+x. The original tries direct computation. 8ei18y and a9dq11 consider known results about polynomial maps over finite fields. All are reasonable exploratory steps that don't yet reach conclusions. Neutral."}}
+{"1145-1171": {"better": ["kbre5w"], "neutral": ["original", "18kv72"], "worse": [], "reason": "kbre5w defines g(x)=f(x)/x = x^{k-1}+1 and observes x_{n+1} = x_n * g(x_n), which is a clean factorization that directly leads to the product condition for periodicity. The original tries a vague substitution. 18kv72 does extensive but ultimately circular computations about exponents modulo p-1."}}
+{"1171-1218": {"better": ["nnjjgj"], "neutral": ["original", "ltcupl"], "worse": [], "reason": "nnjjgj correctly derives k-1 = (p-1)/5 by checking the identity p-1 = 5(k-1), establishing the exponent as exactly the group order divided by 5. This is a key structural insight. The original mentions the set of roots of unity but less clearly. ltcupl proposes a substitution approach without reaching conclusions."}}
+{"1218-1261": {"better": ["778ixc"], "neutral": ["original", "93lr1u"], "worse": [], "reason": "778ixc explicitly verifies (k-1) = (p-1)/5 from p-1 = 5(k-1), resolving the earlier ambiguity between (p-5)/5 and (p-1)/5. This is a clean correction. The original continues with r=(p-5)/5 notation which is not wrong but confusing. 93lr1u works with discrete logs which is a reasonable but less direct approach."}}
+{"1261-1312": {"better": [], "neutral": ["original", "lcxaos", "3zcp7k"], "worse": [], "reason": "The original identifies that T(x)=x^r is a group homomorphism, which is correct and useful. lcxaos is terse. 3zcp7k moves to concrete computation with p=11 and writes verification code, which is a reasonable approach. All advance the analysis without errors."}}
+{"1312-1319": {"better": [], "neutral": ["original", "y5kiiu", "jyni1d"], "worse": [], "reason": "All three are transitional statements moving toward analyzing the map. jyni1d sets up y = x^r and attempts to solve the cycle condition, which is slightly more directed. But no substantive differences."}}
+{"1319-1399": {"better": ["original"], "neutral": ["oydydq", "ba0sg5"], "worse": [], "reason": "The original derives T(f(x)) = u*(u+1)^r, which is the key recurrence for the u-sequence. This is the critical step enabling the 5-element functional graph analysis. oydydq and ba0sg5 restate definitions without computing this next-step formula."}}
+{"1399-1409": {"better": [], "neutral": ["original", "xv4jd1", "qlfpp9"], "worse": [], "reason": "All three propose studying the iteration in terms of u. qlfpp9 is slightly more structured in defining u_n explicitly, but the content is essentially the same transitional idea across all three."}}
+{"1409-1443": {"better": ["noqs2v"], "neutral": ["original", "ks4ro7"], "worse": [], "reason": "noqs2v provides the most thorough analysis: derives that the r-th power map has kernel size r and image size 5 (the 5th roots of unity), meaning each u has exactly r preimages. This is a key structural insight for counting periodic points. The original defines phi but doesn't develop it. ks4ro7 considers projective line which is a tangent."}}
+{"1443-1507": {"better": ["bjtaul"], "neutral": ["original", "8cik44"], "worse": [], "reason": "bjtaul most clearly derives that the map x->x^r has image of size exactly 5 (the subgroup of 5th roots of unity), and each u in the image has exactly r preimages. It also identifies that raising to power r maps onto elements whose order divides 5, i.e., the 5-th roots of unity. 8cik44 gets the same result but less cleanly. The original starts the analysis but is less complete."}}
+{"1507-2065": {"better": ["original"], "neutral": ["ug55oa"], "worse": ["dxxrwn"], "reason": "The original correctly resolves the earlier miscalculation: r = (p-1)/5 (not (p-5)/5), and provides detailed derivation that the image of x^r is the set of 5th roots of unity. ug55oa reaches the same conclusion with clear exposition. dxxrwn gets confused between r = (p-5)/5 and r = (p-1)/5, leading to contradictions before correcting."}}
+{"2065-2086": {"better": [], "neutral": ["original", "ip9x0k", "8odklj"], "worse": [], "reason": "All three correctly state that T(x)=x^r maps each nonzero x to a 5th root of unity, with u taking only 5 possible values. Standard conclusion from the previous analysis. No differences."}}
+{"2086-2136": {"better": [], "neutral": ["original", "qgdg2n", "n8umun"], "worse": [], "reason": "All three restate that u = x^r lies in the group of 5th roots of unity. n8umun writes out the explicit form f(x) = x(T(x)+1) with T(x) in the set of roots. The original notes that dynamics can be studied in terms of u. All equivalent transitional statements."}}
+{"2136-2202": {"better": ["original"], "neutral": ["60gazi", "95jz8j"], "worse": [], "reason": "The original derives the key recurrence: u' = f(x)^r = u*(u+1)^r, showing that the iteration on u-values is governed by the map g(u) = u*(u+1)^r. This is the crucial step that reduces the problem to a 5-element functional graph. 60gazi and 95jz8j start the same computation but are less complete."}}
+{"2202-2215": {"better": ["hnf5lu"], "neutral": ["original", "n52mg4"], "worse": [], "reason": "hnf5lu explicitly proves that (u+1)^r is also a 5th root of unity (since (a^{(p-1)/5})^5 = a^{p-1} = 1), and therefore the map phi: U_5 -> U_5 is well-defined. The original and n52mg4 reach the same conclusion but hnf5lu's proof is cleaner and more explicit."}}
+{"2215-2312": {"better": ["w3u637"], "neutral": ["original", "06eig1"], "worse": [], "reason": "w3u637 makes the key observation that since u takes only 5 values, the map g maps the 5-element set to itself, so iterating f on x yields iterating g on u. This clean summary is important for framing the rest of the analysis. The original discusses r mod 5 for root of unity exponent. 06eig1 handles the u=0 edge case."}}
+{"2312-2635": {"better": [], "neutral": ["original", "pvs7v1", "dlp3to"], "worse": [], "reason": "All three explore r mod 5. The original discovers r is NOT always divisible by 5 (self-corrects). pvs7v1 and dlp3to compute r mod 5 from p mod 25. All reach the same understanding."}}
+{"2635-2671": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2671-2709": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2709-2819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2819-2900": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2900-2929": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2929-2998": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2998-3020": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3020-3057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3057-3079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3079-3099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3099-3139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3139-3145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3145-3157": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3157-3234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3234-3418": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3418-3465": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3465-3503": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3503-3583": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3583-3603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3603-3628": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3628-3827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3827-3947": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3947-3992": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3992-4030": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4030-4083": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4083-4109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4109-4193": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4193-4267": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4267-4269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4269-4370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4370-4402": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4402-4447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4447-4500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4500-4582": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4582-4627": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4627-5166": {"better": ["original"], "neutral": ["yem1qa"], "worse": ["jsbgle"], "reason": "The original provides the most thorough derivation: proves a^r is a 5th root of unity for any a via (a^r)^5 = a^{p-1} = 1, checks that u+1 \u2260 0 (since -1 is not a 5th root), and concludes g maps U to U. yem1qa reaches the same conclusion but less rigorously. jsbgle tries binomial theorem which is a dead end."}}
+{"5166-5234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5234-5352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5352-5505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5505-5576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5576-5748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5748-5892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5892-5930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5930-5942": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5942-5976": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5976-6032": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6032-6112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6112-6205": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6205-6222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6366-6467": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6467-6483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6555-6870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6870-6877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6877-6925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6925-6983": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6983-7232": {"better": [], "neutral": ["original", "jll79f", "orgy9w"], "worse": [], "reason": "All three completions correctly identify the contradiction: product condition predicts C(11)=1, but actual C(11)=7. All proceed to verify by brute force. This is the critical error-discovery point, and all completions handle it equivalently."}}
+{"7232-7238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7283-7390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7390-7397": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7714-7858": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7858-7911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7957-8014": {"better": ["tbr1yt"], "neutral": ["original", "y0jysa"], "worse": [], "reason": "tbr1yt makes the key insight: for u=9 with product P=-1, after 2 steps P^2=(-1)^2=1, so x returns after 2 steps. It correctly identifies that the period can be a multiple of the u-cycle length. This directly explains why the product condition was too restrictive. The original and y0jysa just compute more examples without this insight."}}
+{"8234-8467": {"better": ["214w7d"], "neutral": ["original", "xzrgqu"], "worse": [], "reason": "214w7d most clearly articulates the key correction: even if P\u22601, after t cycles of length \u2113 the factor becomes P^t, so x returns when P^t=1 with period \u2113*ord(P). This is cleaner than the original's presentation. xzrgqu also gets there but is more verbose and slightly confused about \"root of unity\" vs finite order."}}
+{"8467-8664": {"better": ["2r4afs"], "neutral": ["original", "kyzzwt"], "worse": [], "reason": "2r4afs provides the most thorough analysis: explicitly computes Q^t=1 for specific example (u=9, P=10=-1, period 4=2*2), connecting abstract theory to observed data. The original and kyzzwt both note that P has finite order but don't verify with the concrete example."}}
+{"8664-8911": {"better": ["original"], "neutral": ["4uqc38"], "worse": ["zyq4yu"], "reason": "The original makes the critical realization: since any nonzero element of F_p* has finite multiplicative order dividing p-1, P^m=1 always has a solution, so ANY u-cycle yields periodic points. This is the key insight for the correct formula. 4uqc38 also gets there but more slowly. zyq4yu states the conclusion (\"product condition is not necessary\") without fully proving it."}}
+{"8911-9025": {"better": ["o2odh0"], "neutral": ["original", "yebot8"], "worse": [], "reason": "o2odh0 provides the most thorough verification: derives P^d=1 for d=ord(P), confirms with the p=11 example (u=9, P=-1, ord=2, period=2*1=2 matching observed), and carefully checks the fiber consistency. The original and yebot8 both state the correct conclusion but without the concrete verification."}}
+{"9025-9237": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9237-9360": {"better": ["kzyfti"], "neutral": ["original", "0sh59k"], "worse": [], "reason": "kzyfti provides the most complete summary: derives the formula C(p) = 1 + r * (#periodic u), verifies with p=11 (3 periodic u, r=2, C=7), and explicitly notes that the earlier product=1 condition was \"too restrictive.\" This clean wrap-up is more thorough than the original or 0sh59k."}}
+{"9360-9389": {"better": [], "neutral": ["original", "hbox2w", "guppwn"], "worse": [], "reason": "All three completions verify the formula with p=11. hbox2w and guppwn both provide concrete confirmation (3 cycle nodes * r=2 + 1 = 7), similar to the original's content. No substantive difference."}}
+{"9389-9456": {"better": ["3mwzhw"], "neutral": ["original", "vazbc5"], "worse": [], "reason": "3mwzhw makes a key forward-looking observation: since r varies with p (~p/5), the sum is dominated by r*count, and frames the computational problem for S(N). The original just verifies the p=11 example. vazbc5 defines notation but doesn't advance to the computational problem."}}
+{"9456-9476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9476-9615": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9615-10163": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10163-10189": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10189-10270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10270-10342": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10342-10353": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10353-10445": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10445-10456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10456-10505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10505-10550": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10550-10586": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10586-10596": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10596-10637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10637-10662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10662-10702": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10702-10734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10734-10915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10915-11205": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11205-11398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11398-11533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11533-11756": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11756-11977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11977-12020": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12020-12049": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12049-12079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12079-12097": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12097-12140": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12140-12530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12530-12539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12539-12607": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12607-12680": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12680-12726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12726-12743": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12743-12822": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12822-12969": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12969-13079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13079-13184": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13184-13304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13304-13708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13708-13738": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13738-13854": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13854-13906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13906-13912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14379-14390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14531-14541": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14585-14616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14616-14766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14766-14796": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14796-14832": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14832-14838": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14838-14874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14874-14899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14899-14914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14914-14961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14961-15021": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15021-15057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15057-15141": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15141-15152": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15152-15242": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15242-15346": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15346-15377": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15377-15421": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15421-15479": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15479-15496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15496-15520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15520-15583": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15583-15609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15609-15617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15617-15693": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15693-15711": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15711-15740": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15740-15812": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15812-15878": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15878-15937": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15937-16017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16017-16140": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16140-16226": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16226-16230": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16230-16257": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16257-16303": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16303-16329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16329-16355": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16355-16416": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16416-16481": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16481-16540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16540-16547": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16547-16558": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16558-16593": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16593-16631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16631-16658": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16658-16701": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16701-16729": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16729-16803": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16803-16807": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16807-16811": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16811-16839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16839-16857": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16857-16877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16877-17091": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17091-17099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17124-17171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17171-17227": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17227-17676": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17676-17695": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17885-17893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17914-17991": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18155-18224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18345-18399": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18399-18415": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18415-18603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18603-18660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18660-18759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18823-18916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18916-18979": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18979-19208": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19208-19235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19235-19311": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19381-19403": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19403-19464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19464-19483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19483-19616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19616-19677": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19677-19722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19722-19771": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19832-19911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19938-19945": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19945-19972": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19972-20294": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20294-20337": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20370-20380": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20380-20476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20476-20535": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20535-20551": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20551-20565": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 33626723890930 but answer has not been sufficiently repeated."}}

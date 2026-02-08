@@ -1,0 +1,151 @@
+{"79-199": {"better": [], "neutral": ["original", "0vv46j", "847apx"], "worse": [], "reason": "All correctly describe the counting problem for uphill paths."}}
+{"199-209": {"better": ["do5nwa"], "neutral": ["original", "4gn99c"], "worse": [], "reason": "do5nwa provides more context (few valleys, few increasing routes) about what minimization strategy entails."}}
+{"209-308": {"better": ["ickid6"], "neutral": ["original", "9kh6vq"], "worse": [], "reason": "ickid6 correctly clarifies that valleys have indegree 0 in the DAG structure and paths must start at such sources."}}
+{"308-406": {"better": ["original", "0dsq4x"], "neutral": [], "worse": ["l7ewa9"], "reason": "Original and 0dsq4x correctly formulate the DAG structure. l7ewa9 just guesses \"12?\" without justification."}}
+{"406-418": {"better": [], "neutral": ["original", "77ow7r", "663eqg"], "worse": [], "reason": "All correctly state the goal of minimizing directed paths from sources."}}
+{"418-586": {"better": ["original"], "neutral": ["0fis6g", "f7vm9o"], "worse": [], "reason": "Original provides the key DP formulation: p(v) = 1 + sum of p(w) for outgoing edges. This is fundamental to counting paths."}}
+{"586-614": {"better": [], "neutral": ["original", "wpmgc6", "zphstx"], "worse": [], "reason": "All correctly state the goal of minimizing sum of p(s) over sources."}}
+{"614-649": {"better": [], "neutral": ["original", "yfzxnq", "5sbetg"], "worse": [], "reason": "All make reasonable observations about minimizing sources and path length."}}
+{"649-696": {"better": [], "neutral": ["original", "qrwpyg", "bw1fvr"], "worse": [], "reason": "All explore the single-valley hypothesis reasonably."}}
+{"696-780": {"better": ["7tpetk"], "neutral": ["original", "smb581"], "worse": [], "reason": "7tpetk correctly proves that at least one valley must exist (the cell containing 1) and explores whether other valleys are possible. This is a key insight."}}
+{"780-1034": {"better": [], "neutral": ["original", "sqw6yw", "gij91m"], "worse": [], "reason": "All explore the tradeoffs between number of sources and DAG structure reasonably."}}
+{"1034-1075": {"better": [], "neutral": ["original", "334nb4", "qf1xg2"], "worse": [], "reason": "All discuss computational approaches reasonably."}}
+{"1075-1239": {"better": ["83w6cx"], "neutral": ["original", "kex67z"], "worse": [], "reason": "83w6cx correctly identifies that the cell with number 1 is always a valley and explores how to avoid additional local minima. This is the key structural insight."}}
+{"1239-1302": {"better": ["sdxr87"], "neutral": ["original", "upasri"], "worse": [], "reason": "sdxr87 correctly analyzes the monotonic matrix case showing there is exactly one valley (top-left) when numbers increase right and down."}}
+{"1302-1566": {"better": ["s04ygj"], "neutral": ["original", "w03umv"], "worse": [], "reason": "s04ygj correctly articulates the spanning tree construction: for only one valley, each non-global-min cell must have at least one adjacent smaller number."}}
+{"1566-1595": {"better": ["g1065g"], "neutral": ["original", "42h8oc"], "worse": [], "reason": "g1065g correctly notes that with one source, total paths = p(source), and analyzes that the count depends on DAG structure."}}
+{"1595-1694": {"better": ["38blo5"], "neutral": ["original", "monve9"], "worse": [], "reason": "38blo5 provides key insight: if DAG is a tree (each node has exactly one incoming edge), then total paths = 16. This sets up the crucial question of whether this is achievable."}}
+{"1694-2490": {"better": ["ljiyb1"], "neutral": ["original", "5q7tii"], "worse": [], "reason": "ljiyb1 correctly identifies that outdegree branching increases paths, so we want outdegree \u22641 at each node. Also questions if this is achievable with adjacency constraints."}}
+{"2490-2511": {"better": ["ez000k"], "neutral": ["original", "p7oxj2"], "worse": [], "reason": "ez000k correctly identifies the key issue: if a node has multiple incoming edges (indegree>1), that increases path count. To minimize, need indegree=1 for all non-sources."}}
+{"2511-2577": {"better": ["lg07gk"], "neutral": ["original", "4wkttd"], "worse": [], "reason": "lg07gk provides crucial analysis: for indegree=1, need each node to have exactly one smaller neighbor. It correctly notes that extra adjacency edges will create extra incoming edges, questioning whether this is possible."}}
+{"2577-2790": {"better": ["acu0zd"], "neutral": ["original", "fb7ebc"], "worse": [], "reason": "acu0zd provides detailed analysis showing that any adjacency edge not in the spanning tree will cause one node to receive an extra incoming edge, potentially making indegree>1 unavoidable. This is the key insight leading to the correct answer of 25."}}
+{"2790-2856": {"better": ["q42gz6"], "neutral": ["original"], "worse": ["u70h0z"], "reason": "q42gz6 correctly questions whether 16 is achievable and proves at least 1 valley exists. u70h0z commits too strongly to 16 being the answer. Original says \"likely 16\" which is also premature but less committed."}}
+{"2856-3060": {"better": ["3wz7l2"], "neutral": ["original", "5xlkmz"], "worse": [], "reason": "3wz7l2 provides the crucial insight that any non-tree adjacency edge will create an extra incoming edge for one of the nodes, which will \"enhance indegree >1\". This is the key observation showing 16 is unachievable."}}
+{"3060-3129": {"better": ["abrs04"], "neutral": ["original", "ibwim2"], "worse": [], "reason": "abrs04 correctly identifies that cross-edges between nodes at same depth could create extra incoming edges, adding to indegree>1 problem."}}
+{"3129-3506": {"better": [], "neutral": ["original", "bf5vt3", "o5674k"], "worse": [], "reason": "All discuss the possibility of achieving the tree structure. o5674k is most careful about the labeling constraints."}}
+{"3506-3829": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3829-3933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3933-4240": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4240-4333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4333-4342": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4342-4756": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4756-5435": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5435-5747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5747-5835": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5835-5880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5880-5893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5893-6485": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6485-6494": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6555-6565": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6565-6594": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6594-6785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6785-6836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6836-6882": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6882-6941": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6941-7042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7042-7105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7105-7117": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7117-7155": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7155-7187": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7187-7236": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7236-7295": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7295-7302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7302-7367": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7367-7597": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7597-7760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7760-7801": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7801-7874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7874-7884": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7884-8135": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8135-8421": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8421-8469": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8469-8483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8483-8512": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8512-8557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8557-8603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8603-8629": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8629-8960": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8960-9073": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9073-9090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9383-9602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9602-9718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9718-9734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9823-9846": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9846-9891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9891-10137": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10137-10234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10234-10506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10506-10524": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10524-10533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10533-10565": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10565-10594": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10594-10671": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10671-10692": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10692-10741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10741-10774": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10774-10799": {"better": [], "neutral": ["original", "wgjcfd", "45ebmu"], "worse": [], "reason": "All explore the indegree constraints reasonably, setting up for the lower bound derivation."}}
+{"10799-10855": {"better": ["original"], "neutral": ["xq8x7o"], "worse": ["qy38qc"], "reason": "Original correctly identifies 25 as the answer (16+9). qy38qc guesses \"30 something\" which is wrong. xq8x7o is neutral, continuing to explore."}}
+{"10855-10874": {"better": ["da32v6"], "neutral": ["original", "0i3afb"], "worse": [], "reason": "da32v6 correctly states the conjecture that minimal is 25. Original and 0i3afb continue exploring without yet committing to the answer."}}
+{"10874-10976": {"better": ["1s8j3z"], "neutral": ["original", "k41ej6"], "worse": [], "reason": "1s8j3z provides the crucial insight: sum of indegrees = 24 (total edges). This is the key observation for proving S \u2265 25."}}
+{"10976-11024": {"better": [], "neutral": ["original", "pjowjx", "mex2iy"], "worse": [], "reason": "All set up the notation for valleys and indegree analysis appropriately."}}
+{"11024-11054": {"better": ["immac9"], "neutral": ["original", "z7zk3k"], "worse": [], "reason": "immac9 derives the key formula: extra indegree e = 8 + b where b is number of valleys. This leads to the lower bound."}}
+{"11054-11380": {"better": ["2s3lo9"], "neutral": ["original", "qd6426"], "worse": [], "reason": "2s3lo9 most clearly derives the lower bound: S >= (#valleys) + 24. This is the key insight proving S >= 25."}}
+{"11380-11388": {"better": [], "neutral": ["original", "v1xsq9", "uq50kl"], "worse": [], "reason": "All correctly state the lower bound S >= 24 + b."}}
+{"11388-11425": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11425-11471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11471-11479": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11479-11488": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11488-11548": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11548-11699": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11699-11805": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11805-11974": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11974-12133": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12133-12201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12201-12220": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12220-12524": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12524-12593": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12593-12694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12694-13047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13047-13146": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13146-13524": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13524-13615": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13615-13745": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13745-13805": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13805-13869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13869-14136": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14136-14211": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14321-14350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14350-14427": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14427-14508": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14508-14615": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14663-14715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14715-14753": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14753-14789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14789-14810": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14810-14836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14836-14842": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14842-14856": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14856-14859": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14859-14923": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14923-14970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14970-15111": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15111-15141": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15141-15251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15251-15272": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15272-15317": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15317-15412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15412-15438": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15438-15448": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15448-15501": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15501-15534": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15534-15559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15559-15640": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15715-15721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15721-15735": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15735-15871": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15871-15920": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15920-15932": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15932-15961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15961-16017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16017-16023": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16023-16033": {"better": [], "neutral": ["original", "k898zg", "g30l13"], "worse": [], "reason": "Original has correct boxed answer 25 but answer has not been sufficiently repeated."}}

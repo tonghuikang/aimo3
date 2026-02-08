@@ -1,0 +1,293 @@
+{"47-155": {"better": ["original"], "neutral": ["uoaqh1"], "worse": ["pxysnm"], "reason": "Original provides the key insight that S(n,m) = N - cycles and explains the permutation theory. uoaqh1 correctly states the known value. pxysnm only describes the arrangement without insight."}}
+{"155-192": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"192-209": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"209-252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"252-414": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"414-499": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"499-517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"517-547": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"547-576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"576-645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"645-680": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"680-685": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"685-690": {"better": ["u96g8p"], "neutral": ["8v81e3"], "worse": [], "reason": "u96g8p recognizes the connection to matrix transpose permutation and mentions the key insight that p -> (p*n) mod (nm-1). 8v81e3 just defines coordinates. Original is minimal."}}
+{"690-765": {"better": ["tuychr"], "neutral": ["urdvwr"], "worse": [], "reason": "tuychr correctly switches to 0-indexing which simplifies the derivation: p0 = (i-1)*m + (j-1), q0 = (j-1)*n + (i-1). urdvwr is too brief. Original is correct but verbose."}}
+{"765-773": {"better": [], "neutral": ["oo1zd3", "stnp6c"], "worse": [], "reason": "Both alternates correctly derive the coordinate recovery formulas i = floor((p-1)/m)+1, j = ((p-1) mod m)+1 and then q = (j-1)*n + i. These are equivalent and both correct."}}
+{"773-854": {"better": ["8bbh86"], "neutral": ["9iyt5s"], "worse": [], "reason": "8bbh86 directly states the key formula p -> (p*n) mod (nm-1) and mentions the connection to gcd. 9iyt5s suggests computing cycles manually which is less efficient. Original just describes coordinate conversion."}}
+{"854-910": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"910-964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"964-986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"986-1084": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1084-1107": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1107-1164": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1164-1175": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1175-1459": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1459-1550": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1550-1567": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1567-1605": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1605-1761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1761-1811": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1811-1828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2013-2025": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2314-2398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2398-2419": {"better": ["t4xx0g"], "neutral": ["rezfne"], "worse": ["original"], "reason": "t4xx0g provides the key insight that the mapping is p -> (p*n) mod (N-1), which is the crucial formula for counting cycles. rezfne starts testing but doesn't state the formula clearly. Original just restates coordinates."}}
+{"2419-2438": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2438-2460": {"better": [], "neutral": ["original", "lo5fkt", "ms51pa"], "worse": [], "reason": "All completions move toward expressing q as (p*n) mod (N-1). lo5fkt and ms51pa suggest testing this formula. Original derives a related expression. All equivalent."}}
+{"2460-2489": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2489-2493": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2493-2544": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2544-2696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2696-2731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2973-2980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3221-3264": {"better": ["uu2949"], "neutral": ["ahvgxv"], "worse": [], "reason": "uu2949 clearly states that gcd(n,N-1) = 1 and derives the cycle structure including the proof that any common divisor of n and nm-1 divides -1. ahvgxv is correct but less complete."}}
+{"3264-3516": {"better": ["g2ewtb"], "neutral": ["cmxn3l"], "worse": [], "reason": "g2ewtb provides the complete proof that gcd(n,N-1) = 1, deriving it from nm \u2261 0 (mod n) so nm-1 \u2261 -1 (mod n), hence gcd(n,nm-1) = gcd(n,-1) = 1. cmxn3l just counts fixed points. Original is verbose."}}
+{"3516-3722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3722-3871": {"better": ["cqx4lv"], "neutral": ["35kdt0"], "worse": [], "reason": "cqx4lv provides the elegant proof that gcd(n, nm-1) = 1 always because any common divisor d divides 1. 35kdt0 tests examples without proving it generally. Original also tests examples."}}
+{"3871-3982": {"better": ["zp0v7c"], "neutral": ["colx18"], "worse": [], "reason": "zp0v7c provides the cleanest derivation: nm-1 \u2261 -1 (mod n), so gcd(n, nm-1) = 1, and same for m. Concludes n is invertible mod N-1. colx18 states same result but less clearly. Original tests with code."}}
+{"4022-4222": {"better": ["5bervk"], "neutral": ["rabijv"], "worse": [], "reason": "5bervk provides the most concise proof: gcd(n, nm-1) = gcd(n, -1) = 1 because (nm-1) - m*n = -1. rabijv states same result but less elegantly. Original is verbose but correct."}}
+{"4222-4555": {"better": [], "neutral": ["oc8v6k", "x56oua"], "worse": [], "reason": "All completions correctly describe the multiplication-by-n permutation structure. x56oua notes that cycles depend on the element's position, and oc8v6k discusses the automorphism structure. Both are reasonable approaches."}}
+{"4555-4650": {"better": [], "neutral": ["i7mt60", "biel1o"], "worse": [], "reason": "All completions express the formula S = N - (cycles + 1) or equivalent forms. i7mt60 gives S = N - (cycles_of_multiplication + 1). biel1o introduces notation C0. All are equivalent formulations."}}
+{"4650-4711": {"better": ["d76wzo"], "neutral": ["35stup"], "worse": [], "reason": "d76wzo correctly simplifies to S = N-1 - cycles_mult which is the final formula. 35stup is equivalent but keeps the intermediate form. Original is correct."}}
+{"4711-4729": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4729-4816": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4816-4886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4886-4951": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4951-5258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5258-5359": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5359-5742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5742-5762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5762-5870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5870-6003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6003-6076": {"better": ["b12aab"], "neutral": ["original", "8fdgfm"], "worse": [], "reason": "b12aab provides a complete derivation showing how cycles partition elements of same additive order and that number of cycles = \u03c6(d)/ord_d(n). Original and 8fdgfm state the result but with less detail."}}
+{"6076-6136": {"better": [], "neutral": ["original", "vy0w0n", "byh1mr"], "worse": [], "reason": "All completions correctly derive that cycles contributed = \u03c6(d)/ord_d(n). vy0w0n explicitly handles the d=1 case for zero. All are equivalent and correct."}}
+{"6136-6319": {"better": [], "neutral": ["original", "uo0051", "yhiz8u"], "worse": [], "reason": "All completions correctly state the formula C_mul = \u03a3_{d|M} \u03c6(d)/ord_d(n) and verify that d=1 accounts for the zero fixed point. All equivalent."}}
+{"6319-6362": {"better": [], "neutral": ["original", "zg7rw2", "2raghg"], "worse": [], "reason": "All completions correctly add 1 for the N-1 fixed point to get total cycles. All state the same formula equivalently."}}
+{"6362-6414": {"better": [], "neutral": ["original", "1tqy9g", "y8tiqy"], "worse": [], "reason": "All completions correctly derive S(n,m) = N - 1 - \u03a3_{d|M} \u03c6(d)/ord_d(n). All are equivalent statements of the final formula."}}
+{"6414-6427": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6427-6459": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6459-6766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6766-6807": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6807-6866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6866-6929": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6929-6935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7145-7394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7394-7458": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7458-7464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7488-7550": {"better": [], "neutral": ["original", "84a0lw", "ltzevj"], "worse": [], "reason": "All completions correctly state the final formula S(n,m) = nm - 1 - \u03a3_{d|nm-1} \u03c6(d)/ord_d(n). ltzevj adds clarification about ord_1(n)=1 convention. All equivalent."}}
+{"7550-7618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7618-7625": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7650-7658": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7658-7686": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7686-7794": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7794-7798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7798-7811": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7811-7860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7860-7888": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7888-7922": {"better": [], "neutral": ["dnalt4", "pmf56t"], "worse": [], "reason": "All completions correctly state the formula S(A,B) = A*B - 1 - \u03a3_{d|M} \u03c6(d)/ord_d(A) with A=n^4. The alternates add verification that gcd(A,M)=1 which is good but not essential at this point since it was established earlier."}}
+{"7922-8148": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8243-8250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8270-8490": {"better": ["10ha3k"], "neutral": ["m1r684"], "worse": [], "reason": "10ha3k is more concise and directly states the key insight that ord_d(n) = ord_d(m) because m \u2261 n^{-1}. The original and m1r684 are more verbose with similar reasoning but take longer to reach the conclusion."}}
+{"8490-8567": {"better": [], "neutral": ["m1e7n9", "9mhdud"], "worse": [], "reason": "All completions correctly state that ord(m) = ord(n) because they are inverses. The original is slightly more detailed with explicit variable naming, alternates are more concise but equivalent in quality."}}
+{"8567-8622": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8622-8735": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8735-8741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8741-8757": {"better": [], "neutral": ["6qcdpa", "6ls909"], "worse": [], "reason": "All completions correctly transition to computing S(n^4,m^4). The original is concise, 6qcdpa expands the formula slightly, and 6ls909 sets up the sum over n,m. All are reasonable ways to proceed."}}
+{"8757-8788": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8788-8831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8831-8981": {"better": ["dibayj"], "neutral": [], "worse": ["ahh6do"], "reason": "dibayj directly and correctly establishes ord_d(n^4) = ord_d(m^4) using the inverse argument. The original is verbose with unnecessary questioning. ahh6do diverges into computational concerns about factoring large numbers, which is premature and not focused on the mathematical insight."}}
+{"8981-9143": {"better": [], "neutral": ["3vrevv", "3zrigj"], "worse": [], "reason": "All completions correctly conclude that n^4 and m^4 are inverses mod d since n^4*m^4 \u2261 1 (mod d). 3vrevv is slightly more direct but all reach the same conclusion with similar reasoning quality."}}
+{"9143-9293": {"better": ["hz0np5"], "neutral": [], "worse": ["qv8ehx"], "reason": "hz0np5 concisely states the key result that ord_d(n^4) = ord_d(m^4) with clear justification. qv8ehx introduces doubt (\"may differ\") before backtracking, showing less confident reasoning. Original is verbose but correct."}}
+{"9293-9299": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9299-9305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9305-9343": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9343-9390": {"better": [], "neutral": ["0ncbhj", "urubsz"], "worse": [], "reason": "All completions correctly identify the computational challenge of factoring M up to 10^16 for each of the ~4950 pairs. The original mentions Pollard Rho and sympy's factorint, as do the alternates. They all reach similar conclusions about feasibility."}}
+{"9390-9753": {"better": [], "neutral": ["nfnxgl", "jb0j0o"], "worse": [], "reason": "All completions correctly set up the computational task and recognize that M can be up to 10^16. jb0j0o correctly recalculates (10000)^4 = 10^16. The original provides more detail about factorization approaches."}}
+{"9753-9779": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9779-9855": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9855-10004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10004-10138": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10138-10176": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10176-10229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10229-10231": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10231-10291": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10291-10341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10341-10529": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10529-10608": {"better": [], "neutral": ["eqw6i5"], "worse": ["tzzv3l"], "reason": "Original and eqw6i5 correctly compute the formula verification for S(2,2). tzzv3l makes an error: computes ord_3(16)=1 since 16\u22611 (mod 3), leading to confusion about getting S=0 instead of S=1. The original correctly computes ord_3(2)=2."}}
+{"10608-10631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10631-10637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10637-10839": {"better": [], "neutral": ["1imkcc", "emempj"], "worse": [], "reason": "The original provides a thorough derivation of ord_d(n^4) = ord_d(n) / gcd(ord_d(n), 4). 1imkcc is too terse. emempj provides an equivalent but slightly more verbose derivation that reaches the same conclusion."}}
+{"10839-10932": {"better": [], "neutral": ["wd1hcl", "kct4gh"], "worse": [], "reason": "The original derives the key formula \u03c6(d)/ord_d(n^4) = \u03c6(d)/ord_d(n) * gcd(ord_d(n),4). The alternates are too brief and don't show this transformation explicitly."}}
+{"10932-10968": {"better": [], "neutral": ["h0ak5p", "slrm4v"], "worse": [], "reason": "The original correctly states the final formula S(n^4,m^4) = N - 1 - \u03a3 \u03c6(d)/ord_d(n) * gcd(ord_d(n),4). The alternates explore possible simplifications using S(n,m) but note correctly that M differs between the two cases."}}
+{"10968-11156": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11156-11187": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11187-11214": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11214-11363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11363-11371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11371-11588": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11588-11638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11638-11719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11719-11885": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11885-11926": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11926-11965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11965-12079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12079-12122": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12122-12151": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12151-12164": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12164-12195": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12195-12341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12341-12357": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12357-12361": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12361-12394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12394-12410": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12410-12483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12483-12517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12517-12541": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12541-12605": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12605-12691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12691-12721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12721-12863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12863-12895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12895-13005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13005-13035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13035-13051": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13051-13063": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13063-13076": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13076-13085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13085-13126": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13126-13148": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13148-13158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13158-13174": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13174-13185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13185-13259": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13259-13408": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13408-13573": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13573-13606": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13606-13679": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13679-13768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13768-13788": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13788-13804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13804-13824": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13824-13929": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13929-14003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14003-14035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14035-14079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14079-14105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14105-14211": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14211-14230": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14230-14317": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14317-14381": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14381-14452": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14452-14519": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14519-14620": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14620-14646": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14646-14655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14655-14658": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14658-14678": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14678-14703": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14703-14729": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14729-14780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14780-14806": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14806-14866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14866-14894": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14894-14897": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14897-14994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14994-14998": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14998-15034": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15034-15192": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15192-15219": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15219-15229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15229-15388": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15388-15522": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15522-15588": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15588-15719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15719-15736": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15736-15871": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15871-15883": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15883-15990": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15990-16013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16013-16036": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16036-16107": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16107-16132": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16132-16176": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16176-16191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16191-16341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16341-16539": {"better": [], "neutral": ["6odkme", "tqf4e6"], "worse": [], "reason": "All completions discuss computing ord_{p^k}(n). 6odkme explains factoring \u03c6(p^k) = p^{k-1}(p-1). tqf4e6 describes lifting orders from p to p^k iteratively. Both are valid approaches to the same computational problem."}}
+{"16539-16632": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16632-16646": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16646-16649": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16649-16663": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16663-16681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16681-16787": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16787-16829": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16829-17033": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17033-17052": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17052-17087": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17087-17264": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17264-17288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17288-17356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17356-17383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17383-17397": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17397-17409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17409-17496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17496-17566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17566-17597": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17597-17629": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17629-17634": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17634-17769": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17769-17908": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17908-17967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17967-18076": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18076-18088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18088-18112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18112-18227": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18227-18237": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18237-18331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18331-18372": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18372-18444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18444-18608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18608-18688": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18688-19130": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19130-19238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19238-19329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19616-19653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19653-19710": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19710-19877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19877-19955": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19955-19961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20044-20063": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20063-20145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20145-20153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20236-20370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20370-20372": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20372-20408": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20408-20531": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20531-20681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20681-20697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20697-20737": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20737-20742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20742-20785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20785-20815": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20815-20855": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20855-20890": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20890-20936": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20936-21016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21016-21131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21131-21136": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21157-21181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21181-21404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21404-21436": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21436-21473": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21473-21541": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21541-21590": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21590-21637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21680-21734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21734-21780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21809-21814": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21814-21827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21827-21850": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21850-21867": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21867-21923": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21923-21933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21980-22026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22026-22036": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22036-22066": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 81340 but answer has not been sufficiently repeated."}}

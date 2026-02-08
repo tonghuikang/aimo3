@@ -1,0 +1,295 @@
+{"326-427": {"better": [], "neutral": [], "worse": [], "reason": "All completions introduce the tournament structure with deterministic outcomes. Some are more detailed (xuy43i, 3r8fe9) but all make similar observations about binary score representation."}}
+{"427-587": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss counting N and computing valuations. All recognize the need for v_2(N) and v_5(N). Similar analysis depth."}}
+{"587-614": {"better": [], "neutral": [], "worse": [], "reason": "All completions note need for k mod 10^5. Transition statements with no substantive difference."}}
+{"614-688": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the task of counting orderings or computing valuations. Transition statements with similar content."}}
+{"688-744": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the binary tree structure and score representation. vntbhc provides detailed uniqueness argument, but all arrive at same observations."}}
+{"744-1207": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze round-by-round score evolution and group sizes. All arrive at similar binary representation insight."}}
+{"1207-1246": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss that each participant plays all 20 rounds and gets a 20-bit score. Similar analysis of tournament structure."}}
+{"1246-1715": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze whether scores are distinct and discuss pairing constraints. cuabw1 explores tie possibilities, but all conclude similarly."}}
+{"1715-1788": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss how final ranking relates to speed ordering and how pairings determine outcomes. All similar observations."}}
+{"1788-1808": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the slowest runner loses all matches and gets score 0. Trivial identical observation."}}
+{"1808-1878": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss how intermediate speeds' final binary vectors depend on pairings. nxebyn explores whether slower can outrank faster - good exploration but all similar depth."}}
+{"1878-1982": {"better": [], "neutral": [], "worse": [], "reason": "All completions formulate the counting problem as bijections from participants to binary strings. irpfr5 gives good counterexample showing rankings may not match speeds, but all explore similar ideas."}}
+{"1982-2163": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up notation for participants by speed and describe the tree structure. Similar level of formalization."}}
+{"2163-2231": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the binary decision tree structure where each group splits into winners and losers. Same insight across all."}}
+{"2231-2291": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the pairing constraint that each winner must be paired with a slower loser. All approach the Hall condition similarly."}}
+{"2291-2364": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the matching condition for winners - each must be paired with a distinct slower loser. hk9i8a provides detailed Hall condition analysis, but all similar."}}
+{"2364-2444": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore whether any subset of size M/2 can be winners. All approach the Hall/majorization condition similarly."}}
+{"2444-2542": {"better": [], "neutral": [], "worse": [], "reason": "2i5qqa provides a concrete example (M=4) showing that winners must be the faster half, and proves impossibility clearly. Other completions discuss abstractly but don't reach the definitive conclusion as clearly."}}
+{"2542-2608": {"better": [], "neutral": [], "worse": [], "reason": "All completions work through the bipartite matching condition and Hall's theorem. s22yw1 provides good example reasoning, but all reach similar conclusions."}}
+{"2608-2737": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive Hall's condition for the matching. jzuouv gives clear prefix-based analysis, but all arrive at similar Hall condition formulation."}}
+{"2737-2825": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up the matching problem with sorted participants. Similar formalization across all."}}
+{"2825-3167": {"better": [], "neutral": [], "worse": [], "reason": "All completions work through Hall's condition and neighbor sets. qzt9yk notes slowest cannot win, but all similar analysis depth."}}
+{"3167-3360": {"better": [], "neutral": [], "worse": [], "reason": "All completions state Hall's condition |N(S)| >= |S|. Transition statements with identical content."}}
+{"3360-3651": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze the neighbor set N(S) as losers slower than fastest winner in S. Similar analysis."}}
+{"3651-3693": {"better": [], "neutral": [], "worse": [], "reason": "hzbjmm provides the clearest formulation: for each a, number of winners with rank >= a must be <= number of losers with rank > a. Others just restate N(S) definition."}}
+{"3693-3793": {"better": [], "neutral": [], "worse": [], "reason": "All completions work through the Hall condition for prefixes. 8lzkcw notes potential issue when a > M/2, but all similar analysis."}}
+{"3793-3981": {"better": [], "neutral": [], "worse": [], "reason": "All completions continue analyzing Hall's condition. 8mj267 notes fastest always wins, which is correct observation shared by all."}}
+{"3981-4140": {"better": [], "neutral": [], "worse": [], "reason": "All completions check Hall's condition. a3xqzb notes L_1 = M/2 suffices, but all working through same verification."}}
+{"4140-4209": {"better": [], "neutral": [], "worse": [], "reason": "xui6wq provides a concrete counterexample showing winners are NOT necessarily the top half - pairing (A,B),(C,D) gives winners {A,C} not {A,B}. This is crucial insight that others miss."}}
+{"4209-4306": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the tournament as a sorting network structure. elvyi3 notes each binary string appears exactly once, same insight across all."}}
+{"4306-4423": {"better": [], "neutral": [], "worse": [], "reason": "All completions compare the tournament to sorting networks. Similar level of analysis across all."}}
+{"4423-4470": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss how the tournament defines a deterministic output given pairings. Similar observations."}}
+{"4470-4532": {"better": [], "neutral": [], "worse": [], "reason": "0reyzw provides key insight: for faster i < j, the first differing bit must have i=1, j=0, so faster always has larger binary number. This is the critical observation that constrains valid assignments."}}
+{"4532-4622": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss what permutations are achievable. z0n29n questions if all N! are achievable - good exploration shared by all."}}
+{"4622-4927": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore whether assignment can be arbitrary or must respect speed. xxkopy notes ranking must respect comparison graph - same insight across all."}}
+{"4927-5109": {"better": [], "neutral": [], "worse": [], "reason": "l7lpzp provides detailed small case analysis (4 participants, 2 rounds) showing how different pairings lead to different rankings. Concrete example that others discuss more abstractly."}}
+{"5109-5175": {"better": [], "neutral": [], "worse": [], "reason": "9a699x provides complete concrete example showing C outranks B despite being slower. Clear demonstration that final rankings can differ from speed order. Others discuss more abstractly."}}
+{"5175-5223": {"better": [], "neutral": [], "worse": [], "reason": "All completions walk through round 1 example with 4 participants. Same concrete example across all."}}
+{"5223-5244": {"better": [], "neutral": [], "worse": [], "reason": "All completions continue the round 2 example. e3apmr notes C outranks B, suyrl9 has minor confusion but all similar."}}
+{"5244-5330": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe round 2 pairings and outcomes. Identical analysis."}}
+{"5330-5405": {"better": [], "neutral": [], "worse": [], "reason": "07e0rp, 91l2yb, guvahh correctly identify that C outranks B despite being slower - key insight. sstqqp incorrectly claims ranking matches speed order. lh4jq8 tries another pairing but doesn't challenge the key insight."}}
+{"5405-5452": {"better": [], "neutral": [], "worse": [], "reason": "All completions conclude that final ordering is not forced by speed. Similar observations about constraints."}}
+{"5452-5552": {"better": [], "neutral": [], "worse": [], "reason": "All completions frame the counting problem correctly - count possible permutations consistent with constraints. Similar formalization."}}
+{"5552-5737": {"better": [], "neutral": [], "worse": [], "reason": "nlkmd5 provides the clearest formulation: for faster X and slower Y, at the first differing bit, X must have 1 and Y must have 0. This is the key constraint that determines valid assignments."}}
+{"5737-5745": {"better": [], "neutral": [], "worse": [], "reason": "All are brief transition statements concluding the analysis. No significant differences."}}
+{"5745-5914": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the binary tree representation of the tournament. gn0txf provides detailed tree structure, but all similar level of analysis."}}
+{"5914-6051": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the tree structure with matching constraints. Similar analysis of the recursive partitioning."}}
+{"6051-6121": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the matching constraint at each node. a4e9tu provides good analysis of leaf labelings, but all similar depth."}}
+{"6121-6222": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the matching constraint and possible partitions. r146qf provides good recursive formulation, but all similar."}}
+{"6222-6249": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore the matching condition for valid partitions. s1zq5a provides detailed analysis but all working through same condition."}}
+{"6249-6409": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the structure of valid binary bracketings. Similar observations about the combinatorial structure."}}
+{"6409-6575": {"better": [], "neutral": [], "worse": [], "reason": "All completions compare the tournament to bitonic sorting networks. Similar level of analysis connecting to sorting networks."}}
+{"6575-6617": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the sorting network connection. ss5nyy provides good bit-by-bit analysis, but all similar depth."}}
+{"6617-6678": {"better": [], "neutral": [], "worse": [], "reason": "pt1228 provides crucial counterexample showing winners need NOT be the fastest half - pairs (1,2),(3,4) give winners {1,3} which includes 3 slower than loser 2. This is the key insight for Catalan numbers."}}
+{"6678-6734": {"better": [], "neutral": [], "worse": [], "reason": "oxpvfz makes the connection to Boolean lattice linear extensions - this is related to the correct Catalan number approach. Others discuss tournament trees but don't make this key connection."}}
+{"6734-6774": {"better": [], "neutral": [], "worse": [], "reason": "All completions frame the counting problem correctly - count valid partitions with matching constraints. Similar level of analysis."}}
+{"6774-6862": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the linear extension counting problem. 6n2r85 provides good formalization but all similar depth."}}
+{"6862-6869": {"better": [], "neutral": [], "worse": [], "reason": "hmlo3i provides a concrete example for n=1 (2 participants) showing only 1 possible ordering, which helps establish the base case. Others discuss constraints more abstractly."}}
+{"6869-7185": {"better": [], "neutral": [], "worse": [], "reason": "0sfnls provides the key insight that all participants in left subtree have larger overall score than all participants in right subtree - this is crucial for understanding the structure."}}
+{"7185-7477": {"better": [], "neutral": [], "worse": [], "reason": "Original provides the clearest formulation of the matching condition: L_i > R_i for all i when L sorted descending and R sorted ascending. This is the key insight for counting."}}
+{"7477-7550": {"better": [], "neutral": [], "worse": [], "reason": "m20e7x provides crucial insight with concrete example: shows that winners MUST be exactly the top half of participants, proving via counterexample that swapping gives L_i > R_i failure."}}
+{"7550-7760": {"better": [], "neutral": [], "worse": [], "reason": "All completions work through the Hall condition formalization. pf0wp1 notes the possibility of losers being faster than some winners - important nuance, but all similar."}}
+{"7760-7970": {"better": [], "neutral": [], "worse": [], "reason": "frtyc0 and 9ntsyk provide rigorous proofs of the L_i > R_i condition being necessary and sufficient for perfect matching existence. loiw3z provides good counterexample."}}
+{"7970-8004": {"better": [], "neutral": [], "worse": [], "reason": "All completions summarize the L_i > R_i condition. Brief transition statements with similar content."}}
+{"8004-8123": {"better": [], "neutral": [], "worse": [], "reason": "9wtoho and 21d99y provide crucial counterexamples proving the condition fails when winners are not exactly top half."}}
+{"8123-8156": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the dominance constraint and its implications. Similar level of analysis."}}
+{"8156-8242": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up the recursive counting problem. Similar formalization of the hierarchical dominance constraints."}}
+{"8242-8288": {"better": [], "neutral": [], "worse": [], "reason": "All completions summarize the recursive partition structure. 3sc6az notes we can construct appropriate perfect matching, similar insight across all."}}
+{"8288-8354": {"better": [], "neutral": [], "worse": [], "reason": "All completions frame the goal of counting valid labelings. i9rse2 mentions binary decreasing trees - relevant concept, but all similar depth."}}
+{"8354-8442": {"better": [], "neutral": [], "worse": [], "reason": "igws55 connects to standard Young tableaux - this is closely related to the Catalan number solution. Others discuss constraints but miss this key connection."}}
+{"8442-8680": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the binary code interpretation. Similar level of analysis."}}
+{"8680-8686": {"better": [], "neutral": [], "worse": [], "reason": "f5ovs4 provides detailed analysis of the interleaving condition: in sorted list descending, each winner must appear before at most one loser. This leads toward Catalan number insight."}}
+{"8686-8794": {"better": [], "neutral": [], "worse": [], "reason": "rize20 proposes to enumerate all possible rankings for N=4, which is a good approach to discover the pattern. Others discuss more abstractly."}}
+{"8794-8810": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8810-8830": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8830-8933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8933-9001": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9001-9092": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9092-9399": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9399-9464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9464-9476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9476-9521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9521-9532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9532-9577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9577-9587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9587-9787": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9787-9798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9798-9838": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9838-9912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9912-9940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9940-10207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10207-10225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10225-10276": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10276-10282": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10282-10452": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10452-10555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10555-10911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10911-11008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11008-11141": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11141-11168": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11168-11191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11191-11276": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11276-11341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11341-11488": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11488-11637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11637-11804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11804-11951": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11951-12113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12113-12319": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12319-12422": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12422-12670": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12670-12684": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12684-12840": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12840-12892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12892-12961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12961-13039": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13039-13064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13064-13097": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13097-13153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13153-14040": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14040-14057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14145-14149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14149-14153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14153-14171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14171-14185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14185-14205": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14205-14232": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14232-14269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14269-14291": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14291-14305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14305-14327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14327-14346": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14346-14375": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14375-14430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14430-14463": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14463-14520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14520-14599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14599-14667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14667-14727": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14727-14753": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14753-14799": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14799-14826": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14826-14840": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14840-14863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14863-14901": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14901-14954": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14954-14986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14986-14997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14997-15012": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15012-15290": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15290-15317": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15317-15336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15336-15444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15444-15446": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15446-15481": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15481-15492": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15492-15502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15502-15546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15546-15614": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15614-15655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15655-15678": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15678-15797": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15797-15804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15804-16117": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16117-16188": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16188-16209": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16209-16251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16251-16268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16268-16336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16336-16374": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16374-16414": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16414-16485": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16485-16512": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16512-16539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16539-16613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16613-16704": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16704-16721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16721-16778": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16778-16855": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16855-16934": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16934-17270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17270-17306": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17306-17328": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17328-17336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17336-17346": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17346-17365": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17365-17426": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17426-17490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17490-17577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17577-17582": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17877-17924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17924-17983": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17983-17990": {"better": [], "neutral": ["original", "ai0wd9", "szw4ox", "fygc4u"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"17990-18042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18042-18072": {"better": [], "neutral": ["original", "4z82l8", "zmzxld", "rsbrdd", "ot84od", "1vky7y"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"18072-18083": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18083-18111": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18111-18117": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18117-18161": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18161-18225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18225-18262": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18398-18409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18409-18432": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18432-18478": {"better": [], "neutral": ["original", "4rkibd", "1opej8", "fpvy7l", "fygc4u", "z9cg8l"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"18478-18537": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18537-18653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18653-18703": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18703-18795": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18795-18850": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18850-18854": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18854-18886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18886-18910": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18910-18973": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18973-19143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19143-19196": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19196-19275": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19294-19306": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19306-19352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19371-19401": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19401-19408": {"better": [], "neutral": ["original", "fygc4u", "vql6oc", "n97gze", "398lti"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"19408-19545": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19545-19675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19675-19696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19696-19823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19823-19827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19827-19898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19898-20051": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20051-20351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20351-20844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20844-20859": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20892-20899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20899-20967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20967-21026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21026-21059": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21059-21092": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21123-21222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21222-21236": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21236-21259": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21259-21277": {"better": [], "neutral": ["original", "vtowzw", "0y14rr", "rsbrdd", "w3310r", "yqb7gw"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"21277-21510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21510-21533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21533-21561": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21561-21572": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21572-21651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21651-21687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21687-21718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21736-21822": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21822-21848": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21848-21864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21864-21869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21869-21887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21916-21946": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21946-21980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21980-22139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22139-22146": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22146-22201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22201-22472": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22472-22618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22618-22640": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22640-22662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22662-22669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22669-22715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22715-22751": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22751-22799": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22799-22827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22827-22864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22864-22881": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22881-22944": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22944-23008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23008-23016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23016-23029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23029-23046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23046-23050": {"better": [], "neutral": ["original", "pl2l0x", "2chbc9", "8yuy1r", "yisy8j", "m8clvs"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"23050-23111": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23111-23150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23150-23252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23252-23280": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23280-23282": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23282-23289": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23289-23388": {"better": [], "neutral": ["original", "nn7epz", "ndv8f4", "s4tz8q", "goka5y", "hr7hft"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"23388-23394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23394-23408": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23408-23453": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23453-23482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23482-23590": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23590-23645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23645-23708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23708-23772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23772-23856": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24064-24071": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24071-24077": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24077-24118": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24118-24159": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24159-24177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24177-24185": {"better": ["original", "vql6oc"], "neutral": [], "worse": ["d8mkr8", "s5nx6l", "q1o1s1", "zmzxld"], "reason": "Original has correct boxed answer 21818. Correct answer has been sufficiently repeated in history."}}

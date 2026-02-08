@@ -1,0 +1,71 @@
+{"124-141": {"better": ["rvfgok"], "neutral": ["original", "5j816f"], "worse": [], "reason": "rvfgok provides a clearer algorithmic framing (count numbers <= X, find X such that count = N) which directly leads to the solution approach."}}
+{"141-189": {"better": ["c8n9b0"], "neutral": ["original", "oooxo0"], "worse": [], "reason": "c8n9b0 provides detailed analysis of pattern lengths and density considerations, which informs the algorithmic approach better than the generic statements."}}
+{"189-213": {"better": ["auoizp"], "neutral": ["original", "yo6v8a"], "worse": [], "reason": "auoizp discusses the key insight that infinite forbidden patterns reduce to finite set for bounded length, which is crucial for the algorithm."}}
+{"213-340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"340-423": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"423-464": {"better": ["l9iotz"], "neutral": ["original", "diis7j"], "worse": [], "reason": "l9iotz more clearly articulates the key insight that infinite patterns reduce to finite set for bounded length D. diis7j is similar but slightly more verbose."}}
+{"464-497": {"better": ["qej6hd"], "neutral": ["original", "m60vc4"], "worse": [], "reason": "qej6hd explicitly names Aho-Corasick and provides complete algorithm outline (build automaton, count, binary search). Original is more vague about approach."}}
+{"497-550": {"better": ["3q9umw"], "neutral": ["original"], "worse": ["9m67kf"], "reason": "3q9umw correctly identifies Aho-Corasick + DP approach. 9m67kf incorrectly suggests \"analytic formula or generating function\" which isn't the right method for this problem."}}
+{"550-646": {"better": ["original"], "neutral": ["2cmqfm"], "worse": ["jxqdvn"], "reason": "Original describes the complete algorithm (find length, build digit by digit). jxqdvn vaguely suggests \"closed form\" which isn't the right approach."}}
+{"646-742": {"better": ["original"], "neutral": ["7n07cn"], "worse": ["jrc9c4"], "reason": "Original provides concrete estimate (N=10^18 needs ~19 digits) and bounds. jrc9c4 is vague about \"the difficulty\" without concrete analysis."}}
+{"742-811": {"better": ["original"], "neutral": ["c2455m"], "worse": ["yctrjg"], "reason": "Original clearly describes the automaton approach. c2455m provides useful length calculations. yctrjg is less specific about the algorithm."}}
+{"811-825": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"825-988": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"988-996": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1127-1317": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1317-1325": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1325-1546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1546-1585": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1585-1651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1651-1694": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1694-2594": {"better": ["original"], "neutral": ["xjx7t0"], "worse": ["16t92t"], "reason": "Original provides rigorous eigenvalue analysis deriving growth factor ~9.9 and concluding L~19 digits. 16t92t just says \"we can compute\" with no substance."}}
+{"2594-2608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2608-2623": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2623-2635": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2635-2653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2653-2682": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2682-2693": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2693-2773": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2773-2782": {"better": ["dsrh1d"], "neutral": ["original", "yw9lp0"], "worse": [], "reason": "dsrh1d provides a clearer step-by-step algorithm for constructing the N-th number digit by digit with state transitions."}}
+{"2782-2845": {"better": ["original"], "neutral": ["lk3v8h"], "worse": ["olfyuv"], "reason": "Original provides concrete complexity analysis (states ~400, length ~30). olfyuv just says \"compute output modulo\" without substance. lk3v8h is brief but reasonable."}}
+{"2845-3346": {"better": ["original"], "neutral": ["3svb0t"], "worse": ["ykbok9"], "reason": "Original provides complete implementation of Aho-Corasick automaton. 3svb0t describes the approach well. ykbok9 just says \"So implement\" with no content."}}
+{"3346-3364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3450-3542": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3542-3673": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3673-3700": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3700-3752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3752-4057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4057-4090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4287-4300": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4300-4364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4691-4728": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4728-4735": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4735-4766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4766-4868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4868-4935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4935-4948": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4948-4967": {"better": [], "neutral": ["original", "5h10jz", "avchca"], "worse": [], "reason": "All correctly identify the next step - computing the K-th string of length 19. Minor phrasing differences."}}
+{"4967-5150": {"better": [], "neutral": ["original", "wr3uu4", "b38idj"], "worse": [], "reason": "All three implement the same kth_string_of_length function with essentially identical logic and correct implementation."}}
+{"5150-5185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5312-5320": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5338-5349": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5349-5404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5428-5559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5559-5574": {"better": ["uhp6o0"], "neutral": ["original", "87egxx"], "worse": [], "reason": "uhp6o0 immediately suggests testing against known examples (E(3)=3, E(200)=213, E(500000)=531563) which is the right verification approach. Original's \"Check pattern 0\" is trivial."}}
+{"5574-5598": {"better": ["wcnnvo"], "neutral": ["original", "gzl39h"], "worse": [], "reason": "wcnnvo provides concrete verification (90 numbers - 1 for \"11\" = 89 = count_len[2]) which validates the DP correctness. Original just states the constraint."}}
+{"5598-5614": {"better": ["vzew2s"], "neutral": ["original", "4o8dwt"], "worse": [], "reason": "vzew2s proposes and implements brute force verification for small lengths, which is rigorous testing. Original just notes edge cases are handled."}}
+{"5614-5628": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5628-5751": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5751-5784": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5858-5877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5877-5889": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5889-5932": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5932-5939": {"better": [], "neutral": ["original", "k4m148"], "worse": [], "reason": "Both state the correct answer 79026."}}
+{"5939-6005": {"better": ["k7jgl0"], "neutral": ["original", "qh2jtb"], "worse": [], "reason": "k7jgl0 explicitly traces through the indexing logic (cum18 counts up to length 18, K = N - cum18) to verify correctness, which is more rigorous."}}
+{"6005-6150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6150-6173": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6200-6217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6217-6260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6285-6325": {"better": [], "neutral": ["original", "wedyig", "5da8nv"], "worse": [], "reason": "Alternate has correct boxed answer 79026 but answer has not been sufficiently repeated."}}
+{"6325-6358": {"better": [], "neutral": ["original", "fbnfa7", "83kwej"], "worse": [], "reason": "Alternate has correct boxed answer 79026 but answer has not been sufficiently repeated."}}
+{"6358-6367": {"better": [], "neutral": ["original", "zadrcm", "mmpaml"], "worse": [], "reason": "Original has correct boxed answer 79026 but answer has not been sufficiently repeated."}}

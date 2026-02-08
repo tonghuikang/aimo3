@@ -1,0 +1,172 @@
+{"476-555": {"better": ["x7siw0"], "neutral": ["original"], "worse": ["dix5gy"], "reason": "x7siw0 directly establishes the key quadratic relation for a^2 and b^2 (sum=2(p+q), product=(q-p)^2), which is the most useful setup for proving a^{2n}+b^{2n} is integer via recurrence. The original verifies roots by substitution, which is correct but less strategically useful. dix5gy merely states the quartic without deriving useful structure."}}
+{"555-1101": {"better": ["ax96s6"], "neutral": ["cnhknk"], "worse": ["original"], "reason": "ax96s6 concisely states the key algebraic identities (a+b=2sqrt(q), a-b=2sqrt(p), ab=q-p) and begins setting up the sequence, which is a clean approach. The original is extremely verbose and confused, getting bogged down in Galois theory and recurrence issues involving sqrt(q) coefficients without reaching a clean conclusion. cnhknk notes ab=q-p but pivots to checking b<1 prematurely."}}
+{"1101-1265": {"better": ["j8ve1d"], "neutral": ["original"], "worse": ["7b8xrp"], "reason": "j8ve1d provides the cleanest proof: it identifies a^2 and b^2 as conjugates in Q(sqrt(pq)), establishes the minimal polynomial t^2-2(p+q)t+(q-p)^2=0, and derives the integer recurrence u_{n+2}=2(p+q)u_{n+1}-(q-p)^2 u_n with integer initial values u_0=2, u_1=2(p+q). The original uses the correct Galois conjugate argument but is less explicit about the recurrence. 7b8xrp gets confused about which automorphism to use and resorts to numerical verification."}}
+{"1265-1270": {"better": ["50nmcz"], "neutral": ["os005r"], "worse": ["original"], "reason": "50nmcz provides a thorough analysis of when b<1 vs b>1, correctly concluding that fractional part approaches 1 only when d<1, and carefully analyzing the fractional part algebra. os005r also explores this but is somewhat less complete. The original is just the transitional phrase \"Thus we can write:\" with no substantive content."}}
+{"1270-1308": {"better": [], "neutral": ["original", "5t8chz", "m9a4xx"], "worse": [], "reason": "All three express the same key equation a^{2n} = integer - b^{2n} with minor notational differences. The original uses I_n, m9a4xx uses k_n and adds some b<1 discussion, 5t8chz is briefer. The substantive content is equivalent across all three."}}
+{"1308-1662": {"better": ["2gb33f"], "neutral": ["original", "6czxhy"], "worse": [], "reason": "2gb33f correctly identifies that b<1 is needed for d^{2n}->0, carefully derives the fractional part formula (floor(x) = I_n - 1, frac = 1 - b^{2n}), and verifies the algebra. The original also explores whether b<1 holds with examples and considers both cases, reaching the same conclusions but more verbosely. 6czxhy analyzes b = (q-p)/a and considers when b<1 vs b>1, which is valid but somewhat roundabout."}}
+{"1662-1696": {"better": ["rste75"], "neutral": ["original", "zumznq"], "worse": [], "reason": "rste75 goes further than just stating the equation: it derives that fractional part = 1 - frac(d^{2n}) and handles the edge case where d^{2n} is integer (fractional part = 0). This is more complete analysis. The original and zumznq both just state the equation a^{2n} = integer - d^{2n} with slightly different notation (S_n vs I_n vs M_n), which are equivalent."}}
+{"1696-1811": {"better": ["we32mh"], "neutral": ["original", "t3azn7"], "worse": [], "reason": "we32mh carefully works through the fractional part algebra: if 0 < d^{2n} < 1 then X = S_n - d^{2n}, floor(X) = S_n - 1, fractional part = 1 - d^{2n}, and concludes that if d^{2n} -> 0 then fractional part approaches 1 giving many leading nines. This is the clearest derivation. The original states the same conclusion correctly but more briefly. t3azn7 also derives the fractional part formula but is more verbose and less organized."}}
+{"1811-2530": {"better": [], "neutral": ["original", "lk392y", "y6bljg"], "worse": [], "reason": "All three analyze the d>1 case. The original provides detailed analysis showing that even when d>1, a^{2n} dominates d^{2n}, and the fractional part is 1-{d^{2n}} which does not tend to 0 when d>1. lk392y reaches similar conclusions more briefly. y6bljg also considers the case and notes that for perfect square p,q the difference is integer and fractional part is 0. All reach the correct conclusion that d>1 does not yield fractional part approaching 1."}}
+{"2530-2685": {"better": [], "neutral": ["original", "bf10ca", "23m22p"], "worse": [], "reason": "All three correctly conclude that fractional part approaching 1 requires d<1 (i.e., sqrt(q)-sqrt(p)<1). The original is concise and clear. bf10ca is very brief. 23m22p is much more detailed, analyzing the perfect square case and beginning to derive the integer bound on q (though it starts making the floor error here). The core conclusion is the same across all three."}}
+{"2685-2710": {"better": [], "neutral": ["original", "em0eg4", "hdcz4b"], "worse": [], "reason": "All three state the condition sqrt(q)-sqrt(p)<1. The original and em0eg4 state it simply. hdcz4b begins trying to convert to an integer bound on q but starts making errors with floor(2*sqrt(p)) vs the correct bound. However at this token they all share the same correct core statement, so they are neutral relative to each other."}}
+{"2710-2732": {"better": ["5fvoaa"], "neutral": ["original", "y4fjti"], "worse": [], "reason": "5fvoaa immediately squares both sides to get q < p + 2*sqrt(p) + 1 and notes \"since q is integer, we can bound\" -- this is the most forward-looking and sets up the next step. The original and y4fjti just restate the condition without beginning the algebraic manipulation. 5fvoaa makes better progress toward the formula."}}
+{"2732-2780": {"better": [], "neutral": ["original", "uyi8tw", "34mxyo"], "worse": [], "reason": "The original squares both sides correctly to get q < p + 2*sqrt(p) + 1. uyi8tw squares (sqrt(q)-sqrt(p))^2 < 1 which is equivalent but a different algebraic route. 34mxyo jumps ahead to defining C(p,q,n) as the leading nines count, which is a valid detour but changes the topic. All are making correct progress, just in different directions."}}
+{"2780-2975": {"better": [], "neutral": ["original", "rl6yhk", "i5app4"], "worse": [], "reason": "All three make the same error: deriving q <= floor(p + 2*sqrt(p)) from the condition q < p + 2*sqrt(p) + 1. The original erroneously claims floor(p + 2*sqrt(p)) = p + floor(2*sqrt(p)), which is correct, but the key mistake is that q < p + 2*sqrt(p) + 1 does NOT reduce to q <= p + floor(2*sqrt(p)). For non-square p, the correct bound is q <= p + floor(2*sqrt(p)) + 1. All alternates also make this same error or are vague enough to not correct it."}}
+{"2975-2985": {"better": [], "neutral": ["original", "rt0fxa", "xqvxbj"], "worse": [], "reason": "All three state the same wrong bound q <= p + floor(2*sqrt(p)). The original and rt0fxa state it identically. xqvxbj adds that q > p so allowed values are p+1 through p+floor(2*sqrt(p)), which is a reasonable elaboration but still propagates the same error. Since all share the same mistake, they are neutral relative to each other."}}
+{"2985-3007": {"better": ["0jjkz5"], "neutral": ["original"], "worse": ["nmreyl"], "reason": "0jjkz5 is significantly better because it carefully examines the boundary case d=1, correctly identifies that equality only occurs for perfect square p, and starts questioning whether the bound q <= p + floor(2*sqrt(p)) might be too restrictive. This critical thinking leads toward discovering the error that the trace later finds. The original simply states the wrong enumeration. nmreyl blindly accepts the wrong bound and counts m=floor(2*sqrt(p)) values without questioning."}}
+{"3007-3073": {"better": [], "neutral": ["original", "r4yq94", "6no0e2"], "worse": [], "reason": "The original propagates the wrong count (floor(2*sqrt(p)) values per p) but the arithmetic is internally consistent with its wrong premise. r4yq94 and 6no0e2 are brief and don't add or correct anything substantive. All operate under the same wrong bound, making them neutral relative to each other."}}
+{"3073-3252": {"better": [], "neutral": ["original", "7vtc52", "j3u6nv"], "worse": [], "reason": "All three continue with the wrong bound. The original verifies with p=2 example (q in {3,4}), which happens to be correct for that specific p since p=2 is not a case where the +1 matters (floor(2*sqrt(2))=2, and q=5 with sqrt(5)-sqrt(2)=0.82<1 is missed). Both alternates restate the condition without catching the error. All are equally flawed."}}
+{"3252-3294": {"better": [], "neutral": ["original", "o8892f", "qgkrtb"], "worse": [], "reason": "All three confirm that d = sqrt(q)-sqrt(p) is in (0,1) and hence d^{2n} decays exponentially. The original is brief and correct. o8892f transitions to computing N(p,q). qgkrtb restates the condition more verbosely. All are making the same correct observation."}}
+{"3294-3379": {"better": [], "neutral": ["original", "3xy0r6", "rc6ds4"], "worse": [], "reason": "All three correctly define C(p,q,n) as the number of consecutive leading nines in the fractional part, and relate it to the leading zeros of d^{2n}. The original is clear and direct. 3xy0r6 adds the formal definition with max k such that epsilon < 10^{-k}. rc6ds4 also correctly derives {a^{2n}} = 1 - d^{2n}. All are substantively equivalent."}}
+{"3379-4018": {"better": [], "neutral": ["original", "uvpq2r", "g06zbt"], "worse": [], "reason": "The original provides a detailed derivation relating leading nines to leading zeros of d^{2n} and arrives at C = floor(-log10(d^{2n})). g06zbt works through specific examples (epsilon=10^{-k}, epsilon=0.001) to verify the formula, which is pedagogically useful. uvpq2r is very brief. All reach the same correct conclusion about the floor(-log10) formula."}}
+{"4018-4075": {"better": [], "neutral": ["original", "d1ey2l", "da8try"], "worse": [], "reason": "All three express the same formula C(p,q,n) = floor(-2n*log10(d)) with d in (0,1). d1ey2l rewrites it as floor(2n*log10(1/d)) which is equivalent. da8try uses LaTeX notation. The content is identical across all three."}}
+{"4075-4095": {"better": ["ji1bd3"], "neutral": ["original", "zdq4br"], "worse": [], "reason": "ji1bd3 provides the most complete derivation: it states the condition, derives the equivalence, arrives at N = ceil(2011/(-2*log10(d))), and also expresses it in multiple equivalent forms. zdq4br reaches the same formula but more briefly. The original just sets up \"we need minimal n such that...\" without completing the derivation. ji1bd3 is slightly better for completeness."}}
+{"4095-4153": {"better": [], "neutral": ["original", "8zz8jl", "rh09cv"], "worse": [], "reason": "All three express the inequality floor(-2n*log10(d)) >= 2011 and begin deriving n >= 2011/(-2*log10(d)). The original states the full chain of inequalities. 8zz8jl just states the condition. rh09cv works through the derivation and raises the question of whether the condition should be strict or not. All are making the same correct progress."}}
+{"4153-4227": {"better": [], "neutral": ["original", "9ejgym", "awwxet"], "worse": [], "reason": "All three work toward expressing N as ceil(2011/(-2*log10(d))). The original is somewhat verbose and hedging. 9ejgym notes a potential epsilon issue with the ceil. awwxet states the formula directly. All arrive at or are approaching the same correct formula."}}
+{"4227-4380": {"better": ["undznf"], "neutral": ["original", "d6fxzw"], "worse": [], "reason": "undznf provides the most careful and rigorous justification of why floor(x) >= 2011 is equivalent to x >= 2011, explicitly working through the logic with examples. The original states the equivalence correctly but more briefly. d6fxzw is also correct and concise. undznf's extra rigor is slightly better for avoiding subtle errors in the floor/ceil reasoning."}}
+{"4380-4415": {"better": [], "neutral": ["original", "tb3phu", "0i2bbj"], "worse": [], "reason": "All three state the same formula N(p,q) = ceil(2011/(2*log10(1/d))) with d = sqrt(q)-sqrt(p) in (0,1). The expressions are identical in substance with only minor notational differences."}}
+{"4415-4568": {"better": [], "neutral": ["original", "zflnzv", "ovw5fv"], "worse": [], "reason": "All three describe summing N(p,q) over valid pairs. The original and ovw5fv both reference the wrong bound q <= p + floor(2*sqrt(p)). zflnzv simplifies notation but does not specify the bound explicitly. Since all are operating under the same wrong assumption about the valid pair set, they are equally flawed in this regard and neutral relative to each other."}}
+{"4568-4638": {"better": ["euqp4w"], "neutral": ["original"], "worse": ["nonkr7"], "reason": "euqp4w explicitly writes out the double sum formula and correctly notes the constraint q <= min(p+floor(2*sqrt(p)), 2011-p), making the computation structure clear even though it uses the wrong bound. The original states the task in prose. nonkr7 vaguely says \"to compute sum efficiently modulo 99991, we need closed form\" which is misleading since no closed form exists and brute force is needed."}}
+{"4638-4649": {"better": ["q3o5a2"], "neutral": ["original", "9tvqds"], "worse": [], "reason": "q3o5a2 provides substantial analysis: estimates the total number of pairs (~120k), discusses potential floating point precision issues, and considers using high-precision arithmetic or integer inequality approaches. This shows good foresight about computational challenges. The original and 9tvqds simply state the need to compute modulo 99991 without addressing implementation concerns."}}
+{"4649-4721": {"better": ["rq1mn7"], "neutral": ["original", "lz8yqa"], "worse": [], "reason": "rq1mn7 provides a useful estimate of the number of pairs (~20000) and the range of p (up to 1005), showing this is computationally manageable. The original suggests testing with small p first, which is reasonable. lz8yqa vaguely suggests approximation or transformation without concrete steps. rq1mn7 is most informative about the computational feasibility."}}
+{"4721-4734": {"better": [], "neutral": ["original", "vsk21c"], "worse": [], "reason": "Both are identical: they import math to begin the Python computation. No difference at all."}}
+{"4734-4786": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4786-4805": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4805-4910": {"better": [], "neutral": ["original", "hqekbs", "1soxye"], "worse": [], "reason": "All three implement the main computation loop using the wrong bound q <= p + floor(2*sqrt(p)). The original iterates p from 1 to 2010 with max_q = p + int(2*math.sqrt(p)). hqekbs does a smaller test with same bound. 1soxye wraps it in a function with the same bound. All use the erroneous floor(2*sqrt(p)) limit, so they will all produce the wrong initial sum (which the trace later corrects)."}}
+{"4955-4973": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5125-5210": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5210-5422": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5422-5477": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5477-5506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5506-5572": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5572-5599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5599-5719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5719-5768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5768-5786": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5786-6002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6067-6084": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6084-6152": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6152-6262": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6262-6331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6622-6633": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6633-6651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6651-6821": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6821-6832": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6882-6966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6966-7037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7037-7872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7872-7970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7970-8825": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8825-9122": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9122-9195": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9195-9329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9329-9360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9360-9442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9442-9684": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9684-9924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9924-10084": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10084-10210": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10210-10258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10258-10273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10273-10281": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10281-10341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10341-10350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10350-10413": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10413-10459": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10459-10471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10471-10616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10616-10637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10679-10686": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10686-10771": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10771-11076": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11076-11108": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11108-11165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11165-11301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11301-11360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11360-11374": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11374-11502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11502-11523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11523-11597": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11597-11685": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11685-12096": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12096-12119": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12119-12144": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12144-12162": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12162-12230": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12230-12305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12305-12326": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12354-12392": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12392-12424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12424-12494": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12494-12505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12531-12554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12554-12662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12662-12687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12813-12922": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12973-13041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13272-13296": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13296-13343": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13343-13370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13370-13440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13440-13507": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13507-13555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13658-13696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13780-13841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13881-13886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13886-13901": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13901-14062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14062-14152": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14152-14234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14234-14240": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14240-14309": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14309-14320": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14320-14348": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14348-14366": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14366-14599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14599-14605": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14605-14652": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14652-14660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14660-14754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14754-14759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14759-14783": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14783-14802": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15075-15125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15166-15186": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15210-15246": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15246-15412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15412-15444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15515-15603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15603-15618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15665-15818": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15818-15848": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15890-15898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15898-15957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15957-15983": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15983-15994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15994-16006": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16006-16091": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16091-16187": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16187-16233": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16233-16350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16350-16367": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16367-16488": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16488-16575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16575-16585": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16585-16608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16608-16722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16722-16880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16880-16887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16887-16940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16940-16956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16956-17062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17088-17095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17095-17100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17100-17115": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17115-17149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17177-17267": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17267-17466": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17466-17475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17475-17482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17482-17518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17518-17523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17523-17537": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 77726. Correct answer has been sufficiently repeated in history."}}

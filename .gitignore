@@ -29,5 +29,4 @@ training/sample/*
 training/sample/*/*
 !training/sample/*/index.jsonl
 model/
-data/label
 data/problems.py

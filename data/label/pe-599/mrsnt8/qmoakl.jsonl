@@ -1,0 +1,90 @@
+{"57-196": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"196-255": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"255-380": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"380-456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"456-487": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"487-532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"532-970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1225-1334": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2159-2455": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2455-2745": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2745-2791": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2791-3217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3217-3345": {"better": [], "neutral": ["original", "j04i2c", "8z20ou"], "worse": [], "reason": "All completions correctly identify group size as 8! * 3^7 = 88,179,840 and explain the factor of 24 for whole-cube rotations"}}
+{"3345-4005": {"better": ["original", "mfx1aq"], "neutral": ["36kx9v"], "worse": [], "reason": "original and mfx1aq correctly reason that the group is 8! * 3^7 with note to verify against n=2 example"}}
+{"4005-4137": {"better": ["original", "foc1sk"], "neutral": ["0pycdp"], "worse": [], "reason": "original and foc1sk correctly state that group of face-turn moves has size 8! * 3^7 = 88,179,840"}}
+{"4137-4236": {"better": ["lywpyd"], "neutral": ["original", "osysq1"], "worse": [], "reason": "lywpyd correctly identifies need to verify using n=2 example to determine which group size is correct"}}
+{"4236-4415": {"better": [], "neutral": ["original", "iint2y", "nv83jj"], "worse": [], "reason": "All completions correctly propose to verify the Burnside approach by computing for n=2 and comparing to the given answer of 183"}}
+{"4415-4518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4518-4539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4539-4563": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4563-4655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4655-4732": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4732-4880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4880-4940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4940-5269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5269-5284": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5284-5430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5430-5447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5447-5499": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5499-5549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5549-5566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5566-5662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5662-5731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5731-5796": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5796-5849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5849-5857": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5857-5934": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5934-5982": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5982-6002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6002-6064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6064-6156": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6156-6710": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6710-6754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6754-6760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6760-6804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6804-6851": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6851-6888": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6888-7035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7035-7079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7079-7173": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7173-7331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7331-7513": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7513-7536": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7536-7599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7599-7825": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7825-7877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7877-7893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7893-7910": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7910-7957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7957-7983": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7983-8017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8017-8033": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8033-8066": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8066-8131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8131-8136": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8136-8211": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8211-8322": {"better": ["original", "g95igd"], "neutral": ["3o3c1t"], "worse": [], "reason": "original and g95igd correctly derive that weight = n^{m+2z} where z is number of zeros in the twist vector"}}
+{"8322-8333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8333-8378": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8378-8408": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8408-8526": {"better": ["xpqvtf"], "neutral": ["original", "4ulx1o"], "worse": [], "reason": "xpqvtf correctly derives that sum \u2261 a - b mod 3 where a=#ones and b=#twos, leading to condition a \u2261 b mod 3"}}
+{"8526-8638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8638-8674": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8674-8748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8748-8835": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8835-8918": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8918-8989": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8989-9041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9041-9090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9090-9165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9165-9244": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9244-9289": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9289-9433": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9463-9478": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9478-9513": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9513-9534": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9534-10234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10234-10242": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10291-10316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10352-10361": {"better": [], "neutral": ["original", "ptz55d", "iay0wp"], "worse": [], "reason": "Original has correct boxed answer 6292 but answer has not been sufficiently repeated."}}

@@ -1,0 +1,583 @@
+{"132-149": {"better": [], "neutral": ["original", "8yw8j0", "p2cdci"], "worse": [], "reason": "All completions state the goal correctly - computing \u039b(2000) mod 10^9+7. No substantive difference."}}
+{"149-196": {"better": [], "neutral": ["original", "00w69i", "rjgspw"], "worse": [], "reason": "All completions note the problem involves large growth and counting. The original provides slightly more context, but all are functionally equivalent observations."}}
+{"196-213": {"better": [], "neutral": ["original", "l8yhzo", "iw690d"], "worse": [], "reason": "All completions correctly identify this as a counting problem for closed \u03bb-terms with size bound. Equivalent observations."}}
+{"213-290": {"better": [], "neutral": ["original", "gyqjc1", "62u7qu"], "worse": [], "reason": "All completions recognize this is a known combinatorial problem requiring DP/generating functions. No significant difference in insight."}}
+{"290-422": {"better": ["j490dn"], "neutral": ["original", "nhxp18"], "worse": [], "reason": "Alternate j490dn provides the most detailed and accurate explanation of de Bruijn indices, explicitly noting that variable leaf choices equal the current depth (d possibilities). The original covers the same idea but with less detail. nhxp18 mentions the problem may be contest-style but provides less technical depth."}}
+{"422-442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"442-527": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"527-647": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"647-869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"869-1032": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1032-1073": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1073-1116": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1116-1154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1154-1156": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1156-1235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1235-1250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1250-1326": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1326-1367": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1367-1475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1475-1575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1575-1604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1604-1641": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1641-1691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1691-1699": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1699-1911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1911-1932": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1932-1952": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1952-1956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1956-1999": {"better": [], "neutral": ["tjaxek", "fdpj72"], "worse": [], "reason": "All three describe the abstraction construction using size=4+|M| (the initial error). fdpj72 gives the most detail about depth handling but all perpetuate the same size error. Neutral since they're at the same stage of reasoning."}}
+{"1999-2088": {"better": [], "neutral": ["4fyjm0", "m2fgdq"], "worse": [], "reason": "All use B[d+1][s-4] formula consistently with the initial error. The original and m2fgdq note the s-4>=1 constraint. All are at the same stage of reasoning before the correction."}}
+{"2088-2217": {"better": [], "neutral": ["hugl43"], "worse": ["9gok7o"], "reason": "Original and hugl43 correctly move to application (M N) with size=2+|M|+|N|. 9gok7o continues discussing abstraction with s=4+s_body (the error), failing to advance the reasoning to application."}}
+{"2217-2220": {"better": ["zjyx39"], "neutral": ["msn3qq"], "worse": [], "reason": "zjyx39 discovers the size error by checking (\u03bbx.x): \"6 characters... our formula gives 4+1=5? Missing one symbol.\" This is the critical discovery moment. msn3qq just says \"Thus recurrence\" without catching the error."}}
+{"2220-2294": {"better": [], "neutral": ["fvq2ry", "r6uiv5"], "worse": [], "reason": "All present the recurrence with s-4 (the initial error). r6uiv5 is most explicit with full formula. Original uses s>=5 threshold, r6uiv5 uses same. All are at the same stage before correction."}}
+{"2294-2352": {"better": ["offl00"], "neutral": [], "worse": ["n5ecwz"], "reason": "offl00 correctly adds the base case \"if s==1: B[d][1]=d\". n5ecwz incorrectly worries about double-counting for application (M N) vs (N M), but these ARE distinct terms so no double-counting issue exists."}}
+{"2352-2370": {"better": ["9ttaq4"], "neutral": [], "worse": ["8pgvtc"], "reason": "9ttaq4 correctly calculates the maximum depth bound: d <= (s-1)/4 and d_max=499 for s=2000 (using their s-4 formula). 8pgvtc just mentions potential double-counting/infinite recursion concerns without making progress."}}
+{"2370-2512": {"better": ["4f3mma"], "neutral": ["nkphhn"], "worse": [], "reason": "4f3mma clearly states answer formula \u039b(n)=sum_{s<=n} B[0][s]. nkphhn is brief and correct. Original is verbose with unnecessary discussion about trivial terms."}}
+{"2512-2569": {"better": ["he7ete"], "neutral": [], "worse": ["jadywx"], "reason": "he7ete correctly proposes verification using known values \u039b(6)=1, checking that B[0][6]=1 with DP. jadywx skips verification and just writes the final answer formula without checking against known values."}}
+{"2569-3042": {"better": ["yvg7qo"], "neutral": [], "worse": ["2lzsm5"], "reason": "yvg7qo catches the size issue: \"Is (\u03bbx.x) size 6? Yes: '(' \u03bb x '.' x ')': 6. So B[0][6] should be 1.\" This is crucial verification. 2lzsm5 just says \"Implement DP for small n\" without the verification insight. Original discovers the same discrepancy through verbose counting."}}
+{"3042-3055": {"better": ["1nssl6"], "neutral": ["original", "0c689s"], "worse": [], "reason": "Alternate 1nssl6 explicitly notes the earlier error (missing closing parenthesis) and confirms both the abstraction size (5) and application size (2). This self-correction is more thorough than the original which simply states the result."}}
+{"3055-3106": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3106-3109": {"better": ["1xmdtp"], "neutral": ["original", "pmsyrb"], "worse": [], "reason": "Alternate 1xmdtp explicitly states the corrected recurrence B[d+1][s-5] for s>=6, noting the earlier undercount. The original just says \"Thus correct\" which is less informative."}}
+{"3109-3226": {"better": [], "neutral": ["original", "yhfbvj", "8kw1a8"], "worse": [], "reason": "All three completions correctly state the recurrence with s-5 and confirm it matches the (\u03bbx.x) size of 6. Equivalent correctness."}}
+{"3226-3283": {"better": ["original"], "neutral": [], "worse": ["xajsbh", "lr59xf"], "reason": "The original correctly verifies B[0][6]=B[1][1]=1, matching the known \u039b(6)=1. xajsbh makes an error (writing i * B[d][i]*B[d][s-2-i] instead of just B[d][i]*B[d][s-2-i]). lr59xf spends time on an unnecessary tangent about spaces in the syntax representation."}}
+{"3283-3312": {"better": [], "neutral": ["original", "n6jeou", "397fiw"], "worse": [], "reason": "All completions correctly state B[0][6]=B[1][1]=1, verifying the recurrence matches the given value \u039b(6)=1."}}
+{"3312-3317": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3317-3344": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3344-3356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3356-3414": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3414-3443": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3443-3482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3482-3486": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3486-3546": {"better": [], "neutral": ["original", "golnuw", "7sf6c6"], "worse": [], "reason": "All completions present the correct final recurrence with B[d+1][s-5] for abstraction. The original is more explicit about edge cases (s>=6), while 7sf6c6 has the same formula."}}
+{"3546-3620": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3620-3668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3668-3726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3726-3897": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3897-4139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4139-4147": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4147-4272": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4272-4284": {"better": [], "neutral": ["b1dgdd", "00n8ui"], "worse": [], "reason": "All three state the same base case B[d][1]=d. b1dgdd and 00n8ui are more concise, original is slightly more verbose but conveys the same information. No substantive difference."}}
+{"4284-4294": {"better": ["g27cjt"], "neutral": [], "worse": ["1imkcc"], "reason": "g27cjt proposes concrete verification: \"compute B[0][s] for small s and sum to verify.\" 1imkcc just says \"Alright\" - completely non-informative. Original proposes verification which is good."}}
+{"4294-4590": {"better": ["r7boh5"], "neutral": ["jp0tl5"], "worse": [], "reason": "r7boh5 provides the most thorough implementation with explicit derivation of max_depth formula (d_max = (N-1)//5) and clear comments. jp0tl5 is complete but with less detailed comments. Original is incomplete (has 'pass' instead of full implementation)."}}
+{"4646-4667": {"better": ["0k0yfc"], "neutral": ["ts9wpl"], "worse": [], "reason": "0k0yfc provides detailed complexity analysis: \"max_d approx N/5 = 400. DP for each s... O(max_d * N^2) = 400 * 4e6 = 1.6e9, large but maybe borderline if optimized in C but not Python.\" ts9wpl mentions optimization need but is less specific. Original is brief."}}
+{"4667-4671": {"better": ["k110gd"], "neutral": ["uboj4d"], "worse": [], "reason": "k110gd provides detailed explanation of the convolution structure: defines A_d[t]=B[d][t] and shows the application term is (A_d * A_d)[s-2]. uboj4d just formats \"Recurrence:\" without substance. Original is brief \"We have recurrence:\"."}}
+{"4671-4725": {"better": ["3i4cfd"], "neutral": ["jox3um"], "worse": [], "reason": "3i4cfd uses clear code-like notation (s == 1 ? d : 0) making the formula unambiguous and implementable. jox3um uses placeholder \"(leaf) + (abstraction) + ...\" which is less explicit. Original uses mathematical delta notation which is also clear but less code-like."}}
+{"4725-4740": {"better": ["fv1r5w"], "neutral": ["original", "ge3adh"], "worse": [], "reason": "Alternate fv1r5w provides a thorough analysis showing that conv[s-2] equals exactly the needed sum because B[d][0]=0 automatically excludes zero-index terms. This verification that the convolution formula works correctly is more insightful than the original's brief statement."}}
+{"4740-4786": {"better": [], "neutral": ["7lqzni", "gnnn3a"], "worse": [], "reason": "All three describe the convolution of A_d with itself offset by 2. gnnn3a defines C_d(s) notation. 7lqzni defines sequence A_d(s). Original explains the convolution index. All equivalent in content."}}
+{"4786-4867": {"better": ["eiv29o"], "neutral": ["hdyizq"], "worse": [], "reason": "eiv29o gives detailed complexity assessment: \"N=2000, small enough for O(N^2) per d maybe. But d up to 400 => 400*2e6 = 800 million ~ borderline but maybe okay in Python with optimization? Not likely.\" This practical assessment guides implementation decisions. hdyizq and original are more theoretical."}}
+{"4867-4926": {"better": ["xb6eff"], "neutral": ["original", "lfo6ob"], "worse": [], "reason": "Alternate xb6eff provides a concrete complexity analysis (O(400*N*logN) ~8.8M operations with FFT) and mentions NTT as an implementation option. This is more actionable than the original's general observation about Catalan number generation."}}
+{"4926-4932": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4932-4953": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4953-4964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4964-4984": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4984-5017": {"better": [], "neutral": ["original", "awqkht", "ytepyi"], "worse": [], "reason": "All completions state the same generating function equation T_d(x) = d*x + x^5*T_{d+1}(x) + x^2*(T_d(x))^2. No significant difference."}}
+{"5017-5059": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5059-5091": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5091-5158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5158-5177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5177-5194": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5194-5225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5225-5248": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5248-5862": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5862-5874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5874-5920": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5920-6110": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6110-6192": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6192-6225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6225-6268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6268-6299": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6299-6367": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6367-6500": {"better": [], "neutral": ["ooyhb2", "ovdlfu"], "worse": [], "reason": "All three correctly recognize that iterative coefficient computation A_d = d*x + x^5*A_{d+1} + x^2*A_d^2 is better than computing sqrt of series. Both alternates explicitly state this insight about avoiding sqrt."}}
+{"6500-6685": {"better": [], "neutral": ["vvan2u", "cx40du"], "worse": [], "reason": "All three analyze computational complexity. Original derives 1.6B operations (400*2000^2) which is too heavy. Both alternates reach similar conclusions about O(N^2) per sqrt/depth being potentially too expensive."}}
+{"6685-6756": {"better": ["ohoju5"], "neutral": ["n5zxk0"], "worse": [], "reason": "ohoju5 explicitly describes coefficient-by-coefficient computation: \"compute B_d term by term using coefficient recursion\" which is the key insight for efficient implementation. n5zxk0 mentions convolution but doesn't give the concrete approach. Original discusses generating functions but is less specific about implementation."}}
+{"6756-6792": {"better": ["n6w6rg"], "neutral": ["bgtyqe"], "worse": [], "reason": "n6w6rg gives concrete complexity estimate: \"O(N log N) with Dmax ~400, total O(Dmax * N log N) about 8.8 million operations; with Python maybe okay.\" This practical assessment guides implementation. bgtyqe just mentions convolution truncated at N. Original discusses Catalan trees but is less concrete about complexity."}}
+{"6792-6852": {"better": [], "neutral": ["104b86", "6cbshc"], "worse": [], "reason": "All explore algebraic transformations for computing the series. 104b86 tries substitution B_d(x) = x A_d(x), 6cbshc uses the sqrt formula F_d(x) = G(F_d(x)). Original directly sets up coefficient iteration. All are valid approaches exploring different directions."}}
+{"6852-6867": {"better": [], "neutral": ["oktjnz", "v3mh8z"], "worse": [], "reason": "All three define the coefficient notation similarly: a_s^d or a_s = coefficient of x^s in A_d. Equivalent notation choices."}}
+{"6867-7002": {"better": ["qy1mdv"], "neutral": ["tzyczn"], "worse": [], "reason": "qy1mdv gives the most complete breakdown with all three components (leaf, abstraction, application) clearly labeled and the correct formula a_{s-5}^{d+1} for s>=6. Original is more verbose reaching the same conclusion. tzyczn is too brief."}}
+{"7002-7049": {"better": [], "neutral": ["0cx4bc", "ha75m9"], "worse": [], "reason": "All three correctly describe the convolution term sum_{i+j=s-2} a_i^d * a_j^d from the x^2*(A_d)^2 term. Equivalent formulations."}}
+{"7049-7061": {"better": ["3kuhg5"], "neutral": ["2gexng"], "worse": [], "reason": "3kuhg5 explicitly writes the full corrected recurrence B[d][s] = (d if s==1 else 0) + (s>=6 ? B[d+1][s-5] : 0) + sum formula, which is the key formula with the correct s-5 (not s-4). 2gexng and original just confirm \"same recurrence as before\" without restating it."}}
+{"7061-7151": {"better": ["96khmp"], "neutral": ["3r4l5j"], "worse": [], "reason": "96khmp provides detailed complexity analysis and acceleration strategies: \"O(N^2) per depth... 800 million operations... using FFT per depth O(N log N)... 8.8 million operations... which is fine.\" This practical analysis is crucial for implementation. 3r4l5j is brief but correct. Original just states the DP ordering."}}
+{"7151-7227": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7227-7431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7431-7609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7609-7633": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7633-7722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7722-7840": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7840-7885": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7885-8045": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8045-8090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8090-8112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8112-8221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8221-8461": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8461-8785": {"better": ["58g4ll"], "neutral": [], "worse": ["67unfa"], "reason": "58g4ll gives a concrete recursive formula for sqrt coefficients: \"2 s_0 s_n = t_n - sum_{i=1}^{n-1} s_i s_{n-i}\" which is implementable. 67unfa explores 2D generating function G(t,x) which is overly complex and \"likely too complex\" as stated. Original discusses alternative approaches without concrete formulas."}}
+{"8785-8820": {"better": ["4nh0ti"], "neutral": ["7735fo"], "worse": [], "reason": "4nh0ti suggests practical approach: \"compute B[d] using naive O(N^2) for each d but take advantage that many d are high and B[d][s] values become simple? Let's test sample N small.\" This testing approach is pragmatic. 7735fo discusses sqrt computation which is reasonable. Original is more theoretical."}}
+{"8820-8860": {"better": ["7ebgkj"], "neutral": ["126dna"], "worse": [], "reason": "7ebgkj restates the key recurrence formula B[d][s] = d*\u03b4_{s=1} + B[d+1][s-5] + sum_{i=1}^{s-3} B[d][i]*B[d][s-2-i], keeping focus on the core computation. 126dna and original both note there's probably no known sequence for \u039b(n), but don't advance the solution."}}
+{"8860-8868": {"better": ["ys6jlj"], "neutral": ["aenfqw"], "worse": [], "reason": "ys6jlj mentions both FFT and NTT as optimization options: \"implement DP more efficiently perhaps using generating functions with polynomial multiplications via FFT or NTT.\" aenfqw just says \"FFT is the way\" without NTT. Original is very brief."}}
+{"8868-8999": {"better": ["dmqrkt"], "neutral": ["5o6178"], "worse": [], "reason": "dmqrkt describes an incremental convolution approach: \"maintain an array appConv[s] that accumulates... as we compute B[d][i] sequentially we can update contributions to later indices.\" This algorithmic insight is practical. 5o6178 just suggests using free variables count instead of depth (same thing). Original lists potential improvements but is general."}}
+{"8999-9031": {"better": ["t2b4py"], "neutral": ["mfwmcz"], "worse": [], "reason": "t2b4py gives detailed complexity analysis with Python timing estimates: \"Python ~ 10-50 million simple integer ops per second... 800 million modular multiplications may be too slow (~ tens of seconds or minutes). Not feasible.\" mfwmcz discusses series structure but doesn't give timing. Original is brief about C++ vs Python."}}
+{"9031-9158": {"better": [], "neutral": ["6jpzfo", "mvbg61"], "worse": [], "reason": "All three reach similar conclusions about complexity being heavy for Python. 6jpzfo mentions list comprehensions as optimization. mvbg61 and original both note 1.6e9 operations is too slow. No significant differentiation."}}
+{"9158-9221": {"better": ["n30ko2"], "neutral": ["aqndb4"], "worse": [], "reason": "n30ko2 explores an alternative approach: \"compute B[0][s] without computing all B[d] for d>0\" and considers combinatorial class counting. This is a novel direction worth exploring. aqndb4 just notes depth-dependence prevents sharing. Original is less specific about alternatives."}}
+{"9221-9335": {"better": ["ku2q42"], "neutral": ["yc5e2w"], "worse": [], "reason": "ku2q42 suggests treating d as a variable parameter and solving the infinite system as a continued fraction or functional equation - a sophisticated approach. yc5e2w considers using derivative with respect to leaf count but admits \"Not exactly.\" Original discusses generating functions with depth variable but is less specific."}}
+{"9335-9417": {"better": ["o43aby"], "neutral": ["61jbhq"], "worse": [], "reason": "o43aby suggests looking up OEIS A095277 and verifying using DP against given values: \"compute small values using DP and compare to given values for verification.\" This empirical verification approach is practical. 61jbhq gives the explicit sqrt formula T_d = (1-sqrt(...))/2x^2 which is mathematically correct. Original describes substitution method."}}
+{"9417-9436": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9436-9464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9464-9545": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9545-9605": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9605-9692": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9692-9714": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9714-9731": {"better": [], "neutral": ["original", "g4f1f1", "wq8aer"], "worse": [], "reason": "All completions correctly identify the complexity issue (O(D*N^2) ~1.6B operations) and note this is heavy. All show similar concern about optimization needs."}}
+{"9731-9761": {"better": ["fa0sdh"], "neutral": ["original", "5d8v0x"], "worse": [], "reason": "Alternate fa0sdh provides the most concrete plan (FFT convolution with O(D*N*logN) complexity ~8.8M operations), which leads directly to a feasible implementation. The original is vague about needing known results."}}
+{"9761-9901": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9901-9957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9957-10053": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10053-10192": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10192-10297": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10297-10362": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10362-10431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10431-10590": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10590-10690": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10690-10721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10721-10859": {"better": [], "neutral": ["original", "jnktr1", "m2umgh"], "worse": [], "reason": "All completions correctly analyze the complexity challenge: using naive O(N^2) multiplication for sqrt via Newton iteration would require O(D*N^2*logN) operations, which is too heavy (~17.6 billion for D=400). Similar level of detail across all."}}
+{"10859-10924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10924-10951": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10951-10955": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10955-11131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11131-11159": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11159-11187": {"better": ["2wa00d"], "neutral": ["original", "w7y42d"], "worse": [], "reason": "Alternate 2wa00d provides the complete derivation showing how to rearrange the recurrence into a quadratic equation and derive the sqrt formula S = 1 - 4d*x^3 - 4x^7*A_{d+1}. This full derivation is more useful than the original's terse statement."}}
+{"11187-11222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11222-11238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11238-11324": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11324-11568": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11568-11870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11870-11905": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11905-11945": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11945-12171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12171-12177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12177-12252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12252-12392": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12392-12473": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12473-12516": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12516-12570": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12570-12580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12580-12621": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12621-12634": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12634-12681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12681-12687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12687-13090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13090-13135": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13135-13323": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13323-13462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13462-13555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13555-13591": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13591-13604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13604-13639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13639-13726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13726-13879": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13879-13886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13886-13992": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13992-14181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14181-14246": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14246-14266": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14266-14269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14269-14281": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14281-14457": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14457-14496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14496-14509": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14509-14526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14526-14549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14549-14564": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14564-14592": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14592-14610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14610-14864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14864-15003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15003-15385": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15385-15421": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15421-15433": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15433-15562": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15562-15733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15733-15768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15768-16308": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16308-16699": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16699-16813": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16813-16820": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16820-16836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16836-17116": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17116-17194": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17194-17481": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17481-17795": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17795-18000": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18000-18015": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18015-18085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18085-18418": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18418-18479": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18479-18494": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18494-18580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18580-18697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18697-18730": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18730-18765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18765-18799": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18799-18868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18868-18946": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18946-18973": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18973-18979": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18979-19013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19013-19097": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19097-19135": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19135-19141": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19141-19308": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19308-19475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19475-19519": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19519-19598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19598-19655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19655-19660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19660-19674": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19674-19718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19718-20026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20101-20154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20154-20238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20238-20348": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20348-20792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20792-20797": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20797-20847": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20847-20864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20864-20966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20966-21165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21165-21170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21170-21266": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21266-21355": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21355-21429": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21429-21540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21540-21547": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21547-21577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21577-21719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21719-22085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22085-22359": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22455-22507": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22507-22611": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22611-22733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22772-22785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22785-22789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22789-22839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22839-22880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22880-22961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22961-22975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22975-23043": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23043-23208": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23208-23253": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23253-23273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23273-23572": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23572-23712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23712-24009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24009-24038": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24038-24364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24364-24519": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24519-24602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24602-24627": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24627-24630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24630-24723": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24723-24769": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24769-24794": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24794-24807": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24807-24955": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24955-25173": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25173-25256": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25256-25269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25269-25273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25273-25299": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25299-25302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25302-25325": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25325-25350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25350-25354": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25354-25373": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25373-25400": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25400-25474": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25474-25477": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25477-25497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25497-25547": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25547-25594": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25594-25664": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25664-26019": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26019-26056": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26056-26066": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26066-26105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26105-26167": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26167-26288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26288-26312": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26312-26344": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26344-26376": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26376-26414": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26414-26537": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26537-26654": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26654-26914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26914-27043": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27043-27091": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27091-27123": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27123-27175": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27175-27243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27243-27281": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27281-27340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27340-27396": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27396-27446": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27446-27461": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27461-27490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27490-27520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27520-27844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27844-27891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27891-27904": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27904-27915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27915-27933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27933-27937": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27937-27949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27949-27964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27964-27992": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27992-27996": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27996-28127": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28127-28199": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28199-28215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28215-28241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28241-28253": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28253-28336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28336-28529": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28529-28548": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28548-28641": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28641-28646": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28646-28732": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28732-28781": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28781-28792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28792-28839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28839-28849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28849-28940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28940-28950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28950-28958": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28958-28977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28977-29007": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29007-29078": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29078-29093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29093-29125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29125-29143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29143-29201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29201-29311": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29311-29316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29316-29328": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29328-29392": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29392-29395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29395-29624": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29624-29626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29626-29629": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29629-29794": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29794-29856": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29856-30050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30050-30090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30090-30120": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30120-30238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30238-30286": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30286-30313": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30313-30338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30338-30360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30360-30497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30497-30502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30502-30516": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30516-30519": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30519-30556": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30556-30739": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30739-30742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30742-30935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30935-30938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30938-31225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31225-31241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31241-31273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31273-31277": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31277-31283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31283-31369": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31369-31406": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31406-31439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31439-31452": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31452-31658": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31658-31682": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31682-31785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31785-31977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31977-31980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31980-32107": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32107-32142": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32142-32153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32153-32230": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32230-32239": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32239-32252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32252-32293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32293-32307": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32307-32329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32329-32425": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32425-32437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32437-32476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32476-32486": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32486-32498": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32498-32504": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32504-32662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32662-32664": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32664-32667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32667-32873": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32873-32878": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32878-32896": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32896-32919": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32919-32943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32943-32959": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32959-32980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32980-33015": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33304-33846": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33846-33870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33870-34030": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34030-34218": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34218-34788": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34788-34815": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35099-35119": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35119-35140": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35140-35303": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35303-35306": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35306-35386": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35386-35543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35543-35671": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35671-35675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35675-36002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36002-36012": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36329-36336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36336-36358": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36358-36363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36363-36417": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36417-36431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36431-36509": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36558-36603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36603-36612": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36612-36663": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36663-36687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36687-36819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36819-36963": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36963-37228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37228-37243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37606-37692": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37692-37725": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37725-37765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37807-37865": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38087-38157": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38157-38175": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38175-38207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38207-38253": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38253-38384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38384-38415": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38437-38477": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38477-38567": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38567-38702": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38702-38712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38712-38729": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38729-38946": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38946-38962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39184-39256": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39256-39309": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39309-39374": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39374-39382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39382-39398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39398-39432": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39432-39487": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39487-39532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39532-39556": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39556-39617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39642-39716": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39716-39737": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39759-39793": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39793-39840": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39840-39849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40190-40277": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40277-40486": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40486-40539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40539-40551": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40551-40566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40566-40631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40631-40653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40653-40658": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40658-40890": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40890-41078": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41078-41373": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41373-41383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41522-41823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41823-41839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42048-42324": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42324-42335": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42368-42678": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42678-42684": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42906-43026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43026-43054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43054-43409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43409-43418": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43810-43953": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43953-44169": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44169-44241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44241-44268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44268-44310": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44310-44328": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44328-44370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44370-44397": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44397-44517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44517-44562": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44562-44566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44566-44581": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44581-44586": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44586-44980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44980-45013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45048-45067": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45067-45240": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45240-45246": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45246-45258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45258-45577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45577-45647": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45647-45667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45667-45934": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45934-45968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46238-46302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46302-46363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46363-46437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46437-46500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46500-46712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46712-46782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46782-46808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46808-46815": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46815-46978": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46978-47142": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47304-47533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47533-47539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47539-47605": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47605-47675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47675-47712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47927-48200": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48200-48371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48371-49186": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49186-49270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49270-49324": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49324-49328": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49328-49332": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49332-49669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49669-49702": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49740-49760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49799-49844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49844-49945": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49945-49975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49975-50269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50269-50288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50644-50663": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50845-50849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50849-51093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51093-51112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51132-51150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51150-51179": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51203-51231": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51231-51250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51297-51318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51340-51351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51351-51370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51399-51420": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51441-51446": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51446-51462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51462-51484": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51484-51490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51490-51510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51532-51543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51543-51557": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 3679796 but answer has not been sufficiently repeated."}}

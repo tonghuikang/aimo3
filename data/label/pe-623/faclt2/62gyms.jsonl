@@ -1,0 +1,305 @@
+{"208-343": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"343-382": {"better": ["suny9z"], "neutral": ["original", "f6e6bn"], "worse": [], "reason": "Alternate suny9z provides a thorough verification of the size measure by explicitly counting symbols for (\u03bbx.x) and (\u03bbx.(x x)), confirming they match \u039b(6)=1 and \u039b(9)=2. This detailed verification is more valuable than the original's brief statement."}}
+{"382-422": {"better": ["0dahld"], "neutral": ["original", "jywa4z"], "worse": [], "reason": "Alternate 0dahld provides a comprehensive analysis of the symbol counting, methodically verifying sizes for (\u03bbx.x)=6 and (\u03bbx.(x x))=9, and even checking that ((\u03bbx.x)(\u03bbx.x))=14 is outside the \u22649 bound. This thorough verification is more insightful."}}
+{"422-489": {"better": [], "neutral": ["original", "lcjqaa", "ifpg5d"], "worse": [], "reason": "All completions correctly identify de Bruijn indices as the tool to eliminate \u03b1-equivalence. All provide similar level of explanation about how indices work."}}
+{"489-528": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"528-557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"557-641": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"641-659": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"659-721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"721-937": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"937-1027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1027-1179": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1179-1215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1215-1242": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1242-1362": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1362-1456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1456-1500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1500-1506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1506-1682": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1682-1688": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1688-1708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1708-1747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1747-1773": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1773-1810": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1810-1819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1819-1914": {"better": [], "neutral": ["original", "kpccqu", "m8yhco"], "worse": [], "reason": "All completions correctly explain de Bruijn indices and how they eliminate \u03b1-equivalence. All note that indices must be bounded by current depth. No significant difference."}}
+{"1914-1943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1943-1991": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1991-2000": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2000-2015": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2015-2041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2041-2171": {"better": ["p6gxbr"], "neutral": ["original", "19men9"], "worse": [], "reason": "Alternate p6gxbr provides the clearest statement that variable leaf at depth d yields d distinct options each costing 1 - directly stating the key recurrence factor. The original is more verbose while covering the same idea."}}
+{"2171-2203": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2203-2287": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2287-2290": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2290-2309": {"better": ["z3edmf"], "neutral": ["original", "q3k0mj"], "worse": [], "reason": "Alternate z3edmf explicitly states T(d,1) = d, giving the precise base case formula. The original is a correct statement but less explicit about the formula."}}
+{"2309-2433": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2433-2474": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2474-2613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2613-2622": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2622-2644": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2644-2668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2668-2705": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2705-2738": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2738-2780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2780-2837": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2837-2883": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2883-2888": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2888-2901": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2901-2923": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2923-2950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2950-2953": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2953-2984": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2984-3019": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3019-3055": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3055-3057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3057-3088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3088-3095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3095-3134": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3134-3173": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3173-3202": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3202-3222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3222-3246": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3246-3251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3251-3275": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3275-3290": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3290-3334": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3334-3399": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3399-3630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3630-3762": {"better": ["4jdfgu"], "neutral": ["5d15py"], "worse": [], "reason": "4jdfgu precisely derives max depth D_max=floor((n-1)/5)=399 for n=2000 with clear reasoning about minimal term size 5d+1. 5d15py gives D=400 (slight rounding difference) but same logic. Original is more verbose without reaching the explicit bound."}}
+{"3762-3836": {"better": ["5632tm"], "neutral": ["j4igmr"], "worse": [], "reason": "5632tm clearly explains how depth propagates via abstraction recurrence: T(0,s) -> T(1,s-5) -> ... and leaf index corresponds to depth. j4igmr reaches similar conclusions about depth bound. Original is less clear about the propagation mechanism."}}
+{"3836-4035": {"better": ["kx3wi5"], "neutral": [], "worse": ["u1hf6w"], "reason": "kx3wi5 correctly derives max depth bound floor((n-1)/5)=399 for n=2000 and explains why deeper terms can't contribute to size<=n closed terms. u1hf6w incorrectly suggests infinite recursion without recognizing the natural truncation from size bounds."}}
+{"4035-4046": {"better": ["0u7ne6"], "neutral": ["ocauyr"], "worse": [], "reason": "0u7ne6 provides comprehensive reasoning about why F_d=0 for d>Dmax (terms at depth d cannot appear in closed term of size<=n since they'd require d abstractions costing 5d+1>n). ocauyr just says \"compute from D down to 0\" without justification. Original is brief."}}
+{"4046-4088": {"better": ["m422u7"], "neutral": [], "worse": ["ysruxk"], "reason": "m422u7 provides thorough analysis of base case d=D+1, proving F_{D+1}=0 for size<=n by showing minimal size 5d+1>n. ysruxk just says \"compute via series using recursion and convolution\" without addressing the base case or termination condition."}}
+{"4088-4128": {"better": ["cw1hyx"], "neutral": [], "worse": ["dqovmi"], "reason": "cw1hyx correctly states F_{D+1}=0 because minimal size 5*(D+1)+1>n. dqovmi gets confused about whether leaf variable of size 1 at depth D+1 counts, missing the key point that such a term needs D+1 abstractions to be closed, exceeding size bound."}}
+{"4128-4166": {"better": ["oexy6n"], "neutral": ["0ynq5j"], "worse": [], "reason": "oexy6n describes concrete implementation: \"let max_depth = floor((n-1)/5). We'll allocate list of arrays series F_d[0..max_depth+1]\" with clear data structure. 0ynq5j just says \"Now the recurrence is:\" without implementation details. Original gives the functional equation without implementation."}}
+{"4166-4218": {"better": ["xc3whp"], "neutral": ["s4gv3p"], "worse": [], "reason": "xc3whp explicitly writes the quadratic equation: \"z^2 F_d^2 - F_d + (d*z + z^5 F_{d+1}) = 0\" which is useful for the solution approach. s4gv3p just gives general context about generating functions. Original describes the structure but doesn't explicitly write the equation."}}
+{"4218-4234": {"better": [], "neutral": ["d2u7sz", "cp6gl1"], "worse": [], "reason": "Both alternates and original correctly set up the quadratic equation to solve. d2u7sz uses abstract notation C=A+B, cp6gl1 explicitly defines C and states we need series up to degree n. Both are clear and correct approaches."}}
+{"4234-4595": {"better": ["y9pw0y"], "neutral": [], "worse": ["91vkjy"], "reason": "y9pw0y gives the cleaner form \"G = C + z^2 G^2\" which directly enables iterative coefficient extraction. 91vkjy and original go into the square root formula F=(1-sqrt(...))/2z^2 which is more complex and harder to compute iteratively."}}
+{"4595-4638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4638-4666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4666-4748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4748-4815": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4815-4825": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4825-4989": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4989-5004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5004-5037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5037-5097": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5097-5171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5171-5250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5250-5278": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5278-5349": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5349-5363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5363-5426": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5426-5471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5471-5523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5523-5544": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5544-5583": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5583-5644": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5644-5673": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5673-5882": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5882-5942": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5942-5989": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5989-5994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5994-6005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6005-6017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6017-6022": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6022-6027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6027-6058": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6058-6104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6104-6178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6178-6349": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6349-6579": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6579-6622": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6622-6644": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6644-6650": {"better": ["obufjq"], "neutral": ["original", "vksj4s"], "worse": [], "reason": "Alternate obufjq provides the key insight that we can prune the computation: for depth d, the minimum size is 5*d+1, so the size range decreases for larger depths. This optimization insight is valuable for making the O(D*N^2) algorithm more efficient."}}
+{"6650-6692": {"better": [], "neutral": ["whka7j"], "worse": [], "reason": "whka7j correctly states practical constraints: \"no external search... must implement algorithm in Python. Complexity: D <= 400; for each depth we need to compute series up to n = 2000.\" Original not shown but context suggests similar assessment."}}
+{"6692-6718": {"better": ["fxjab8"], "neutral": ["cvjdu4"], "worse": [], "reason": "fxjab8 proposes verification: \"for n=35, the value given 3166438 is moderate. Let's attempt to write a small program to compute for n up to 35 and see if numbers match known sequences.\" This validation approach is crucial. cvjdu4 just notes modular arithmetic needs."}}
+{"6718-6726": {"better": ["uahyiq"], "neutral": ["szm5o7"], "worse": [], "reason": "uahyiq explicitly computes max depth: \"Dmax = floor((2000-1)/5) = 399 (max depth). Dmax+1 = 400. Use efficient convolution for each depth.\" szm5o7 reaches similar conclusions. Original is brief about algorithm design."}}
+{"6726-6779": {"better": ["l5uzkr"], "neutral": ["kzo0oc"], "worse": [], "reason": "l5uzkr gives conceptual insight: \"DP over size and number of free variables (number of bound variables currently available). This is akin to counting \u03bb-terms with de Bruijn indices.\" This explains the state space clearly. kzo0oc just mentions polynomial multiplication. Original is less clear about the DP state definition."}}
+{"6779-6849": {"better": [], "neutral": ["sq9eal", "56akdg"], "worse": [], "reason": "All three compute the same max depth bound: floor((n-1)/5) = floor(1999/5) = 399. 56akdg provides the clearest derivation relating leaf depth d to size 5d+1. sq9eal and original reach same conclusion with slightly different exposition."}}
+{"6849-6926": {"better": ["u5pyha"], "neutral": ["1x91i3"], "worse": [], "reason": "u5pyha gives concrete implementation direction: \"solve for F_d using classical formula for series satisfying F = G + H*F^2: using power series composition, you can compute F coefficients using loops with O(n^2).\" 1x91i3 discusses tree structure conceptually but doesn't give implementation details. Original tries unhelpful algebraic transformation."}}
+{"6926-7063": {"better": [], "neutral": ["cnol1d"], "worse": ["9gajgo"], "reason": "cnol1d suggests computing closed term generating function C(z) directly using bijection to planar binary trees. 9gajgo goes in wrong direction considering binder occurrence allocation which complicates things unnecessarily. Original discusses combinatorial species but is verbose."}}
+{"7063-7095": {"better": ["le8w6x"], "neutral": [], "worse": ["zkoei9"], "reason": "le8w6x correctly recalls the size measure interpretation: \"leaf weight z, \u03bb abstraction weight z^5, application weight z^2\" explaining the problem's symbol counting. zkoei9 gives pessimistic complexity estimate (\"800 million... >60 seconds in Python\") but doesn't advance the solution."}}
+{"7095-7122": {"better": ["j49f4f"], "neutral": ["original", "lvvm4h"], "worse": [], "reason": "Alternate j49f4f provides the clearest and most compact statement of the key recurrence: Term(d) = d*z + z^5*Term(d+1) + z^2*(Term(d))^2. This is the core formula needed for the solution."}}
+{"7122-7150": {"better": [], "neutral": ["qk9ahq", "b8qvth"], "worse": [], "reason": "All three express the same combinatorial class equation C_d = leaf + abstraction + application with correct size weights. qk9ahq uses combinatorial notation Var_d, Abs, App. b8qvth uses set-theoretic notation. Original uses generating function notation. All equivalent."}}
+{"7150-7176": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7176-7183": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7183-7221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7221-7265": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7265-7274": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7274-7298": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7298-7310": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7310-7374": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7374-7378": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7378-7450": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7450-7500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7500-7503": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7503-7544": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7544-7566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7566-7582": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7582-7599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7599-7648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7648-7683": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7683-7699": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7699-7792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7792-7868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7868-7921": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7921-8113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8113-8178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8178-8211": {"better": [], "neutral": ["82v1wv"], "worse": ["qg6gph"], "reason": "82v1wv explores G_d = F_d - F_{d+1} as a simplifying substitution, worth exploring. qg6gph tries F_d = F_{d-1} + ... but gets confused and admits \"Not helpful.\" Original not shown but context suggests similar exploration."}}
+{"8211-8259": {"better": ["vmr2og"], "neutral": ["max6cm"], "worse": [], "reason": "vmr2og provides insightful analysis: \"(z + z^5*F_{d+1}) is exactly the generating function for terms where the variable bound by the innermost abstraction appears as leaf\" and notes need to \"account for arbitrary usage, not just leaf.\" max6cm is less certain \"Not certain.\" Original is brief."}}
+{"8259-8301": {"better": ["7lnc1a"], "neutral": ["qsv948"], "worse": [], "reason": "7lnc1a provides insight: \"H_d = F_d - (d-1)*z... the (d-1)*z term corresponds to leaf variables bound to any of the outer d-1 binders. When we move deeper, these contributions persist across depths.\" qsv948 just says \"still includes dependency\" without advancing. Original defines H_d but doesn't interpret it."}}
+{"8301-8324": {"better": ["abcum6"], "neutral": ["whm3td"], "worse": [], "reason": "abcum6 expands (d-1)*z as sum and rewrites F_d = (sum_{i=1}^{d-1} z) + G_d + z^2 F_d^2, noting \"This recurrence is similar to F_{d-1} except for something\" - useful algebraic insight. whm3td just rewrites (d-1)*z. Original is brief."}}
+{"8324-8383": {"better": ["jgjkah"], "neutral": ["cop2gx"], "worse": [], "reason": "jgjkah proposes concrete algorithm: \"compute F_d up to n for all d using BFS-like algorithm that iterates over size increments and depth, but using dynamic programming.\" cop2gx suggests solving quadratic after substitution. Original asks about closed-form which is less practical."}}
+{"8383-8410": {"better": ["4ehyza"], "neutral": ["ly0mem"], "worse": [], "reason": "4ehyza proposes ansatz F_d(z) = A(z)*d + B(z) to test if F_d has linear dependence on d - a useful structural hypothesis. ly0mem defines G_d = F_d - F_{d+1} which is the same as original. Original proposes K_d = F_d - F_{d-1}."}}
+{"8410-8426": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8426-8492": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8492-8494": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8494-8627": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8627-8721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8721-8730": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8730-8733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8733-8827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8827-8951": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8951-8973": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8973-9009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9009-9094": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9094-9207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9207-9280": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9280-9285": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9285-9299": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9299-9373": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9373-9395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9395-9502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9502-9556": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9556-9580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9580-9601": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9601-9661": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9661-9705": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9705-9880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9880-9940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9940-10035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10035-10060": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10060-10088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10088-10149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10149-10161": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10161-10186": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10186-10195": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10195-10221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10221-10330": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10330-10609": {"better": [], "neutral": ["original", "sc639r", "w1uunr"], "worse": [], "reason": "All completions explore how the leaf choices produce a polynomial in d. The original provides the most detailed analysis showing that the number of terms is d^{#leaves} because each leaf independently picks from d binders. w1uunr explores ignoring the quadratic term which is also a valid exploration."}}
+{"10609-10660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10660-10879": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10879-10925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10925-10947": {"better": ["2bpg0r"], "neutral": ["original", "ylqxdr"], "worse": [], "reason": "Alternate 2bpg0r provides a key insight: the number of terms with a given skeleton shape is d^{#leaves}, which means F_d(z) = \u03a3_{s,k} t_{s,k} d^k z^s. This polynomial structure understanding is deeper than the original's suggestion of inclusion-exclusion."}}
+{"10947-11080": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11080-11114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11114-11144": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11144-11165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11165-11239": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11239-11304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11304-11358": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11358-11404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11404-11479": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11479-11513": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11513-11517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11517-11549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11549-11593": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11593-11628": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11628-11634": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11634-11660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11660-11696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11696-11733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11733-11761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11761-11765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11765-11804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11804-11852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11852-11936": {"better": [], "neutral": ["1rhw4g", "y9wgl6"], "worse": [], "reason": "Both alternates explore possible OEIS sequences or known results without success. 1rhw4g guesses A123987, y9wgl6 tries (2n-1)!!. Neither is productive but reasonable exploration when stuck. Original not shown but likely similar."}}
+{"11936-11976": {"better": ["wz8ysz"], "neutral": [], "worse": ["q4waou"], "reason": "wz8ysz proposes to verify: \"Let's compute enumeration via DP for small n to verify and find pattern.\" This is the right approach. q4waou doesn't use the given values for verification and instead discusses implementation complexity. Original lists the known values but doesn't propose verification."}}
+{"11976-12027": {"better": ["cm9vfl"], "neutral": [], "worse": ["9xryil"], "reason": "cm9vfl immediately implements Python code to compute and verify: \"Let's attempt compute a few initial values using DP brute force for small n\" and provides working code. 9xryil searches for OEIS sequences but doesn't implement verification. Original discusses the arithmetic but doesn't provide code."}}
+{"12027-12084": {"better": ["exhaha"], "neutral": ["47ment"], "worse": [], "reason": "exhaha provides detailed size verification: counts (\u03bbx.(\u03bby.y)) size step by step (outer 5 + inner 6 = 11) and confirms it matches the table. This careful verification catches potential errors. 47ment is brief. Original does basic arithmetic without detailed examples."}}
+{"12084-12099": {"better": [], "neutral": ["66nhcs"], "worse": ["xlhq3q"], "reason": "Original and 66nhcs propose computing DP to verify. xlhq3q just notes the size 35 total is huge without advancing the solution or proposing verification approach."}}
+{"12099-12141": {"better": ["b9e0vr"], "neutral": ["807v26"], "worse": [], "reason": "b9e0vr gives concrete plan: \"implement naive DP up to size maybe 30 to see if we get those numbers\" with reasonable complexity analysis. 807v26 jumps straight to n=2000 without verification step. Original mentions verification but is less specific about approach."}}
+{"12141-12165": {"better": ["5awmoh"], "neutral": ["9rvpjo"], "worse": [], "reason": "5awmoh provides the most concrete implementation plan: \"implement DP using python to compute exact counts for n up to maybe 70 via recursion (maybe with caching). Use loops for each depth and each size.\" 9rvpjo mentions checking against 3166438 but is less specific about implementation. Original is brief about handling modulo."}}
+{"12165-12757": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12757-12785": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12843-12944": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12944-13075": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13075-13170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13170-13182": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13182-13334": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13334-13406": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13406-13460": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13460-13527": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13527-13567": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13567-13591": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13591-13603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13603-13643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13643-13729": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13729-13775": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13775-13780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13780-13864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13864-13894": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13894-13972": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13972-14038": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14038-14221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14221-14251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14251-14311": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14311-14338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14338-14402": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14402-14430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14430-14469": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14469-14534": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14534-14585": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14585-14618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14618-14687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14687-14849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14849-14942": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14942-15047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15047-15087": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15087-15103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15103-15249": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15249-15265": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15265-15360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15360-15386": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15386-15417": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15417-15435": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15435-15439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15439-15474": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15474-15477": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15477-15515": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15515-15522": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15522-15531": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15531-15539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15539-15570": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15570-15617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15617-15639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15639-15725": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15725-15730": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15730-15739": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15739-15829": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15829-15879": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15879-15883": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15883-15961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15961-15988": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15988-16028": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16028-16132": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16132-16165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16165-16253": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16253-16344": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16344-17875": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17875-18026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18026-18051": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18051-18080": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18080-18101": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18101-18172": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18172-18180": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18180-18456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19077-19390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19390-19405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19875-19935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19935-19950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19950-20008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20008-20023": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 3679796 but answer has not been sufficiently repeated."}}

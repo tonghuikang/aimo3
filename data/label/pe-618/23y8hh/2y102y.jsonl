@@ -1,0 +1,137 @@
+{"201-226": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"226-378": {"better": [], "neutral": ["original", "lioggz"], "worse": [], "reason": "Both completions correctly list Fibonacci numbers. Original uses multi-line format; lioggz is single-line. No significant quality difference."}}
+{"378-524": {"better": ["redh8g"], "neutral": ["original", "hipsy5", "wadrjd", "ezaibm"], "worse": [], "reason": "redh8g provides the clearest summary: \"we need S(2)+S(3)+S(5)+S(8)+...+S(46368)\" and includes concrete verification with given examples S(2)=2, S(3)=3, S(5)=11, S(8)=49. This confirms understanding of the problem."}}
+{"524-716": {"better": [], "neutral": ["original", "0ysy3r", "x0klgd"], "worse": [], "reason": "All completions correctly identify that we need S(k) for specific Fibonacci numbers and note S(1)=0 contributes nothing. No significant difference."}}
+{"716-735": {"better": ["s0905t"], "neutral": ["original", "p21tqw", "xxpai2"], "worse": ["18az7q"], "reason": "s0905t provides rigorous proof that S(k) is finite: since each prime factor >=2 and sum is bounded, there are finitely many combinations. 18az7q goes on lengthy tangent about maximizing products but doesn't stay focused on the key point."}}
+{"735-766": {"better": ["6vet30"], "neutral": ["original", "eocxp5"], "worse": [], "reason": "6vet30 correctly suggests \"a dynamic programming method\" which foreshadows the correct solution approach. This strategic insight is valuable early in the solution."}}
+{"766-775": {"better": ["gw95fv"], "neutral": ["original", "h6rwph", "mw95rg", "e0c1vl"], "worse": [], "reason": "gw95fv provides rigorous proof of finiteness: fixed sum k with each factor >=2 means finite multisets, each multiset determines unique n (product), therefore finite S(k). This mathematical foundation is important."}}
+{"775-801": {"better": [], "neutral": ["original", "2c8ca5", "lnqry5"], "worse": [], "reason": ""}}
+{"801-807": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"807-889": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"889-932": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"932-971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"971-1551": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1551-1601": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1601-1638": {"better": ["bix02f"], "neutral": ["original", "le6aep", "1lop4h"], "worse": ["qvoxrd"], "reason": "bix02f proves finiteness of S(k) rigorously: for fixed k, primes >=2 means max parts is k/2, hence finite multisets, hence finite n. qvoxrd is verbose and somewhat confused about whether enumeration is feasible."}}
+{"1638-1852": {"better": ["vv6468"], "neutral": ["original", "0jmahi"], "worse": [], "reason": "vv6468 correctly identifies that f is completely additive (f(nm)=f(n)+f(m) for ALL n,m, not just coprime). This is stronger than just additive and is essential for the generating function product structure."}}
+{"1852-1867": {"better": ["apg8gw"], "neutral": ["original", "nheujo"], "worse": [], "reason": "apg8gw provides concrete worked example for k=8: partitions 2+2+2+2->16, 2+3+3->18, 3+5->15, sum=49. This verification against the known S(8)=49 is valuable and confirms understanding."}}
+{"1867-1874": {"better": ["ffy5l8"], "neutral": ["original", "c0f1cx", "xw6mqt", "afbysi"], "worse": [], "reason": "ffy5l8 includes the crucial insight S(0)=1 (for n=1, f(1)=0) and correctly establishes G(x) structure. This boundary case is important for DP initialization."}}
+{"1874-1916": {"better": ["ile0cx"], "neutral": ["original", "1246bu", "o602lb", "upq2p4"], "worse": [], "reason": "ile0cx provides the complete product formula with explanation: factor p^e contributes sum e*p and factor n part p^e. This directly shows the generating function structure. Original is more compact but less explanatory."}}
+{"1916-1949": {"better": ["f6d4v3"], "neutral": ["original", "ifp77l", "j21k0z", "qx3dew"], "worse": [], "reason": "f6d4v3 directly derives 1/(1-p*x^p) as the closed form factor, which is the key formula. Other completions explain without reaching the closed form as concisely."}}
+{"1949-1951": {"better": [], "neutral": ["original", "czq6zs", "v39beo", "lgxqgu", "y6sk4q"], "worse": [], "reason": "All completions correctly derive G(x) = product of 1/(1-p*x^p). czq6zs and y6sk4q are most complete with verification. All reach the same correct formula."}}
+{"1951-2004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2004-2051": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2051-2053": {"better": ["c52vu5"], "neutral": ["original", "ei0rnn", "ne106a", "h4r6j3"], "worse": [], "reason": "c52vu5 explicitly states \"The coefficient of x^k in G(x) is S(k)\" which makes the connection between generating function and desired quantity clear. More complete than others."}}
+{"2053-2072": {"better": [], "neutral": ["original", "wyb1x1", "kevmll"], "worse": [], "reason": "All completions state the same formula G(x) = \u220f_p 1/(1-px^p) in equivalent notation. No quality difference."}}
+{"2072-2151": {"better": ["cowff2"], "neutral": ["original", "5moigr", "e5na0x", "t7777t"], "worse": [], "reason": "cowff2 provides comprehensive analysis: addresses n=1 edge case (contributes to x^0 term), identifies that only primes p<=N matter for coefficients up to N, and outlines the DP approach for computing truncated series."}}
+{"2151-2204": {"better": [], "neutral": ["original", "62iq09", "bnwtdo", "wp55zc", "jj7gms"], "worse": [], "reason": "All completions correctly identify that we need sum of coefficients at Fibonacci exponents. jj7gms mentions polynomial tricks but concludes \"not directly\" helpful. No significant winner."}}
+{"2204-2274": {"better": ["q3uzzl"], "neutral": ["original", "ynisvi", "eo42ky"], "worse": ["ujtiuz"], "reason": "q3uzzl provides the clearest algorithmic approach: \"compute G(x) mod x^{N+1} then sum coefficients at Fibonacci exponents\". ujtiuz goes into unhelpful tangent about contour integrals."}}
+{"2274-2284": {"better": ["tqewq0"], "neutral": ["original", "w6lbgz", "pd12q3", "2oeq8m"], "worse": [], "reason": "tqewq0 clearly explains why only primes p<=N matter: if p>N then even e=1 gives exponent >N. This key insight bounds the problem scope and enables efficient computation."}}
+{"2284-2319": {"better": ["q5ek89"], "neutral": ["original", "m6f1vd", "95qbo4", "891xc9"], "worse": [], "reason": "q5ek89 provides clear explanation: primes>max can't appear because e>=1 yields sum>=p>max, so product can be restricted to primes<=max. This is the key bounding insight for efficient computation."}}
+{"2319-2409": {"better": ["6x6i39"], "neutral": ["original", "1vqqyq", "85vn2g", "lr8f8j"], "worse": [], "reason": "6x6i39 directly states the key insight about bounded primes and connects to DP, all concisely. Others reach the same conclusion but more verbosely."}}
+{"2409-2605": {"better": ["legcyj"], "neutral": ["original", "wdicmp", "h4rsnx", "dhyo5m"], "worse": [], "reason": "legcyj correctly identifies DP[0]=1 (empty product yields n=1, f(1)=0) and connects this to the generating function including 1. This boundary case analysis is important for correct DP initialization."}}
+{"2605-2659": {"better": ["4625bm"], "neutral": ["original", "9m9fvo", "agdyhq"], "worse": ["s9xyc7"], "reason": "4625bm provides worked verification: tests DP for s=2,3,5 and shows A[2]=2, A[3]=3, A[5]=11 matches examples. This concrete testing is excellent methodology. s9xyc7 gets stuck in complexity analysis without reaching the simple DP formulation."}}
+{"2659-2805": {"better": ["bfn1mx"], "neutral": ["original", "bsxski", "di429y", "xxjrxs"], "worse": [], "reason": "bfn1mx provides clear algorithmic structure: initialize dp[0]=1, dp[i>0]=0, then process primes <=N. Also correctly explains why primes>N are irrelevant. Good setup for implementation."}}
+{"2805-2962": {"better": ["89s764"], "neutral": ["original", "tf50bm", "1aqfol", "fsh8fb"], "worse": [], "reason": "89s764 provides the clearest pseudocode for the DP algorithm with proper initialization and loop structure. The format is easy to translate to working code."}}
+{"2962-3029": {"better": ["qcnihy"], "neutral": ["original", "7scnoc", "9ggq5z"], "worse": ["no7f82"], "reason": "qcnihy provides concrete verification: for single prime p, DP gives A[p]=p, A[2p]=p^2, A[3p]=p^3 - exactly matching the geometric series 1/(1-px^p). no7f82 has the same idea but is slightly less clear in presentation."}}
+{"3029-3245": {"better": ["78kcu1"], "neutral": ["original", "ht920e", "utejaz", "ouy0ex"], "worse": [], "reason": "78kcu1 wisely suggests testing DP for small N to ensure correctness before full computation. Verification before running expensive computation is good practice."}}
+{"3245-3454": {"better": ["b9dmex"], "neutral": ["original", "azr560", "z629gv", "82loos"], "worse": [], "reason": "b9dmex provides the clearest reasoning about modular arithmetic: computing A[k] mod 10^9 then summing also mod 10^9 gives correct last nine digits. Also addresses potential concerns about leading zeros."}}
+{"3454-3537": {"better": [], "neutral": ["original", "z67x1p", "1v7gm5", "n8z4hg", "iwpb2w"], "worse": [], "reason": "All completions correctly identify that primes > N cannot contribute (weight would exceed N) and that DP is O(N) per prime. No clear winner among these optimization discussions."}}
+{"3537-3631": {"better": [], "neutral": ["original", "g0b7x5", "5bvfit", "01wbfy", "w7e4b6"], "worse": [], "reason": "All completions either compute pi(46368) or discuss that ~4300-5000 primes is manageable. No significant difference in quality."}}
+{"3805-3818": {"better": [], "neutral": ["original", "ujqznp", "k6tnqj", "c0akm1"], "worse": [], "reason": ""}}
+{"3956-4011": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4011-4145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4145-4149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4149-4154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4154-4338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4338-4371": {"better": [], "neutral": ["original", "872tx8", "uvge95", "836uon", "ko8tzo"], "worse": [], "reason": "All completions correctly describe the DP update: dp[i] = (dp[i] + p*dp[i-p]) % MOD. ko8tzo provides clearest pseudocode format. All are equivalent in correctness."}}
+{"4371-4462": {"better": ["eid35u"], "neutral": ["original", "9148o7", "cenmte", "vlvkf9"], "worse": [], "reason": "eid35u provides clearest explanation of why unbounded knapsack works: dp[i-p] after update may already include p factors from earlier iterations, so iterating i from p to N in increasing order correctly accounts for arbitrary copies. This is the key insight for correctness."}}
+{"4462-4497": {"better": ["zjrk66"], "neutral": ["original", "oipdin", "69hj34", "2glml6"], "worse": [], "reason": "zjrk66 correctly states result and importantly proposes verification: test for small N, expecting dp[2]=2, dp[3]=3, dp[5]=11, etc. This verification approach validates the algorithm."}}
+{"4497-4640": {"better": [], "neutral": ["original", "jqean8", "smy5a8", "f35zrp", "pgnpsm"], "worse": [], "reason": "All completions correctly note dp[k] = S(k) mod MOD. Original explains why DP counts each multiset once (commutativity). smy5a8 and pgnpsm suggest testing for verification. All are valid."}}
+{"4640-4674": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4674-4868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4868-4895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4995-5026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5026-5043": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5043-5108": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5108-5120": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5120-5196": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5196-5356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5356-5488": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5488-5616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5616-5620": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5620-5833": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5833-5906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5906-5938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5938-6019": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6019-6144": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6144-6224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6224-6237": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6237-6341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6341-6384": {"better": ["v92g9t"], "neutral": ["original", "3cf8zx", "jlqmkf", "kpwmd5"], "worse": [], "reason": "v92g9t provides cleaner, more efficient code using bytearray for sieve and clear DP structure. The code is well-organized and includes proper modular arithmetic handling."}}
+{"6384-6407": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6407-6501": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6501-6555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6555-7105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7214-7234": {"better": [], "neutral": ["original", "gaq8hy", "9sviv7", "4mfndg", "u2x3r3"], "worse": [], "reason": "All completions correctly note that we need dp values for Fibonacci indices. No significant quality difference."}}
+{"7234-7322": {"better": ["sp4xax"], "neutral": ["original", "2ngqw8", "990pt0", "wijnhc"], "worse": [], "reason": "sp4xax provides complete working code that computes the final answer, including proper Fibonacci generation and sum computation. Having ready-to-run code is more valuable than prose descriptions."}}
+{"7322-7343": {"better": ["dsgs32"], "neutral": ["original", "8wgu0n", "ycsk84", "3f7z23"], "worse": [], "reason": "dsgs32 correctly notes potential indexing issue with fibs list (F1=1, F2=1...) and suggests being careful about the index bounds. This attention to off-by-one errors is valuable."}}
+{"7343-7346": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7346-7370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7370-7383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7383-7560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7560-7580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7667-7743": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8056-8085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8124-8140": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8140-8215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8215-8271": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8318-8337": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8337-8420": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8420-8437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8575-8633": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8742-8818": {"better": [], "neutral": ["original", "f4s4ad", "xv9vkr"], "worse": [], "reason": "All completions correctly explain that computing mod 10^9 gives last nine digits. xv9vkr provides clearest explanation about leading zeros and digit count. All reach correct conclusion."}}
+{"8818-8826": {"better": ["exdcj9"], "neutral": ["original", "h0frp7", "8f5aer", "1d7rvj"], "worse": [], "reason": "exdcj9 provides concrete verification: F6=8 gives dp[8]=49 matches known, F5=5 gives dp[5]=11 matches, etc. This verification against known values is more valuable than just stating the answer."}}
+{"8826-8909": {"better": ["yqlhgp"], "neutral": ["original", "0n5hm8", "ul1tbg", "vjctuo"], "worse": [], "reason": "yqlhgp suggests comprehensive verification approach: testing partial sums and comparing DP against enumeration for small bounds. This thorough validation strategy is more rigorous than just checking digit count."}}
+{"8909-8929": {"better": [], "neutral": ["original", "ja2mz6", "blelxx", "p8k951", "ty9kjh"], "worse": [], "reason": "All completions correctly verify edge cases: dp[1]=0 matching S(1)=0. ty9kjh explicitly cross-checks against known examples. All are valid verification steps."}}
+{"8929-8973": {"better": [], "neutral": ["original", "t5edo9", "0s9zdf", "6p3w7c", "hiqrvl"], "worse": [], "reason": "All completions verify known examples (S(8)=49, S(2)=2, etc.). 0s9zdf computes partial sum 2+3+11+49=65 manually. All provide valid verification of the algorithm."}}
+{"8973-9000": {"better": [], "neutral": ["original", "msquxf", "3w9iwt", "djbbnn", "64lvxi"], "worse": [], "reason": "All completions state the correct answer 634212216. 3w9iwt considers exact computation with big ints but correctly concludes it's infeasible. All reach the correct conclusion."}}
+{"9000-9283": {"better": [], "neutral": ["original", "cj6rnl", "zr95i8", "eitht1", "9l1yqp"], "worse": [], "reason": "All completions correctly address verification or format. Original proposes brute-force enumeration for small N to validate DP. 9l1yqp confirms S(F_2)=dp[1]=0 is handled. All are valid."}}
+{"9283-9387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9387-9510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9510-9552": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9814-9819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9819-9933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9933-9941": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9941-9978": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9978-10104": {"better": [], "neutral": ["original", "q3bfu2", "w6hahy", "1r6btx", "gvsi0h"], "worse": [], "reason": "Alternate has correct boxed answer 634212216 but answer has not been sufficiently repeated."}}
+{"10104-10154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10154-10188": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10188-10236": {"better": [], "neutral": ["original", "eokjkt", "b4ed3c", "338c41", "l6hwbn"], "worse": [], "reason": "Alternate has correct boxed answer 634212216 but answer has not been sufficiently repeated."}}
+{"10236-10409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10409-10598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10598-10651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10889-10895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10895-11103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11103-11112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11132-11140": {"better": [], "neutral": ["original", "bzllot", "myif67", "fsyjrf", "2ol0i7"], "worse": [], "reason": "Alternate has correct boxed answer 634212216 but answer has not been sufficiently repeated."}}
+{"11140-11223": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11223-11241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11241-11264": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11264-11271": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11271-11413": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11413-11417": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11417-11471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11471-11478": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11478-11528": {"better": [], "neutral": ["original", "nj9s4s", "fsyjrf", "86bja8", "yew9q1"], "worse": [], "reason": "Alternate has correct boxed answer 634212216 but answer has not been sufficiently repeated."}}
+{"11571-11639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11919-11956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11976-11994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11994-12003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12003-12023": {"better": [], "neutral": ["original", "7jhhrk", "k02gkc", "g1ua4p", "ve2aw8"], "worse": [], "reason": "Alternate has correct boxed answer 634212216 but answer has not been sufficiently repeated."}}
+{"12023-12117": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12117-12398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12398-12431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12490-12496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12496-12501": {"better": [], "neutral": ["original", "qqnv5u", "22xb4q", "6n1gav", "694mjk"], "worse": [], "reason": "Alternate has correct boxed answer 634212216 but answer has not been sufficiently repeated."}}
+{"12501-12520": {"better": ["original"], "neutral": [], "worse": ["splilf", "1r9p1k", "jobmax", "ivzvuz"], "reason": "Original has correct boxed answer 634212216. Correct answer has been sufficiently repeated in history."}}

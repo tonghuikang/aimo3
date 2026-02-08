@@ -1,0 +1,82 @@
+{"55-77": {"better": [], "neutral": ["original", "jsji1y", "9svfzp", "2qevry", "4t3i7b"], "worse": [], "reason": "All completions correctly define streak(n) as the smallest k such that n+k is not divisible by k+1"}}
+{"77-124": {"better": [], "neutral": ["original", "19hsr2", "7nosm3", "jbbm2x", "w8gn83"], "worse": [], "reason": "All completions express equivalent reasoning about testing divisibility sequentially"}}
+{"124-152": {"better": [], "neutral": ["original", "1pszpw", "fystdi", "7h1m0v", "967wmv"], "worse": [], "reason": "All completions express equivalent reasoning about the streak condition"}}
+{"152-176": {"better": [], "neutral": ["original", "j1anfe", "agvdp3", "h7067l", "yzohfo"], "worse": [], "reason": "All completions correctly state the divisibility conditions for streak(n) = s"}}
+{"176-197": {"better": [], "neutral": ["original", "3eij2x"], "worse": [], "reason": "All completions express equivalent statement about the failure condition at k = s"}}
+{"197-217": {"better": ["qj0rkr", "lx6t3y"], "neutral": ["original", "aoqd6b"], "worse": ["6vh1g4"], "reason": "qj0rkr and lx6t3y provide detailed derivations showing n \u2261 1 mod (k+1); 6vh1g4 is incomplete (just \"Thus:\")"}}
+{"217-336": {"better": ["oiifin"], "neutral": ["original", "hatktu", "f76az5"], "worse": ["7t9tfb"], "reason": "oiifin provides complete derivation; 7t9tfb is incomplete (just states congruence without showing equivalence to n \u2261 1)"}}
+{"336-386": {"better": [], "neutral": ["original", "6hzchx", "ri08c3", "dy4fae", "4ovlcx"], "worse": [], "reason": "All completions correctly derive n \u2261 1 (mod M_s) where M_s = lcm(2,...,s)"}}
+{"386-666": {"better": ["7xnxi8"], "neutral": ["original", "7guq88", "wl308l"], "worse": ["0o3d3w"], "reason": "7xnxi8 clearly shows -s \u2261 1 (mod s+1) derivation; 0o3d3w is incomplete (just \"i.e.:\")"}}
+{"666-674": {"better": [], "neutral": ["original", "5pfa3f", "trfcec", "17ngt4", "jazw88"], "worse": [], "reason": "All completions correctly characterize streak(n) = s conditions"}}
+{"674-698": {"better": ["endj8j"], "neutral": ["original", "2pgomr", "ge9fkr", "7dydpa"], "worse": [], "reason": "endj8j thoroughly works through the s=1 edge case with examples, showing consistency of the formula"}}
+{"698-712": {"better": ["3qsjvq"], "neutral": ["original", "v2t6bb", "zfbvpy"], "worse": [], "reason": "3qsjvq adds important insight about when s+1 divides M_s making failure impossible"}}
+{"712-958": {"better": ["original", "3c5n99"], "neutral": ["rfqnaq", "n8o86i", "j0mg4y"], "worse": [], "reason": "original and 3c5n99 verify the formula with concrete example n=3 and explain when streak=s is possible"}}
+{"958-963": {"better": ["j7qe4t", "23jfpa", "xuhtxi", "6no0bc"], "neutral": [], "worse": ["original"], "reason": "Alternates explicitly verify streak=1 corresponds to n even; original (\"Thus our description works\") is vague"}}
+{"963-994": {"better": ["pnxmpt"], "neutral": ["original", "3bxysh", "ef8qtd", "4ljy7w"], "worse": [], "reason": "pnxmpt provides detailed analysis of gcd and counting conditions"}}
+{"994-1027": {"better": ["lljymw", "q4t538"], "neutral": ["original", "06cmxr", "31zck4"], "worse": [], "reason": "lljymw and q4t538 explain why conditions are sufficient and derive the exclusion via lcm"}}
+{"1027-1079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1079-1160": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1160-1213": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1213-1351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1351-1395": {"better": [], "neutral": ["original", "z2s8tf", "7iitll", "fgq0m3", "2eu3s9"], "worse": [], "reason": "All completions correctly use inclusion-exclusion for counting"}}
+{"1395-1441": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1441-1628": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1628-2046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2046-2117": {"better": [], "neutral": ["original", "fskk0t", "p02znl", "gnq477", "1ywhh6"], "worse": [], "reason": "All completions correctly derive P(s,N) = floor((N-2)/M_s) - floor((N-2)/L_s)"}}
+{"2117-2266": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2266-2293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2293-2320": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2320-2329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2329-2369": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2369-2415": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2415-2558": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2558-2588": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2588-2620": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2620-2701": {"better": [], "neutral": ["original", "trfia2", "fxykxw", "jvyyt8", "4sc5iw"], "worse": [], "reason": "All completions correctly show L_i = lcm(M_i, i+1) = M_{i+1}"}}
+{"2701-2712": {"better": [], "neutral": ["original", "kie9pe", "en6zhz", "alxebg", "vfrcmg"], "worse": [], "reason": "All completions correctly establish L_i = M_{i+1}"}}
+{"2712-2741": {"better": [], "neutral": ["original", "4hobax", "mcphto", "o9bgn8"], "worse": [], "reason": "All completions correctly derive P(i,N) = floor((N-2)/M_i) - floor((N-2)/M_{i+1})"}}
+{"2741-2745": {"better": ["nlzb69", "bjr1o2"], "neutral": ["original", "4b2e7u", "bpkrdz"], "worse": [], "reason": "nlzb69 and bjr1o2 explain why the simplification works; others just note it simplifies"}}
+{"2745-2795": {"better": [], "neutral": ["original", "05o0rl", "q5htbk", "bwe6h9", "thqms9"], "worse": [], "reason": "All completions correctly express the sum formula"}}
+{"2795-2803": {"better": ["8n8pa4", "jtxpbp"], "neutral": ["original", "jsvpih", "188h56"], "worse": [], "reason": "8n8pa4 and jtxpbp note important details about M_{32} and why telescoping doesn't work"}}
+{"2803-2839": {"better": ["hp3pcd", "2ds45w"], "neutral": ["original", "ekq1f7", "u30g60"], "worse": [], "reason": "hp3pcd and 2ds45w note that M_i may exceed 4^i causing floor=0, useful insight for understanding behavior"}}
+{"2839-2895": {"better": ["17cacz"], "neutral": ["original", "n5tq58", "l2puaj"], "worse": ["u10kx9"], "reason": "17cacz provides clear approach; u10kx9 is too brief (\"Thus we need to compute each term\")"}}
+{"2895-2910": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2910-2966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3443-3457": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3457-3507": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3507-3614": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3614-3629": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3662-3664": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3664-3728": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3728-3772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3954-3979": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3979-3981": {"better": ["4j2ly5", "gb2aq9"], "neutral": ["axkli4"], "worse": ["original", "vk7f55"], "reason": "4j2ly5 and gb2aq9 state the computed sum explicitly; original (\"Anyway\") and vk7f55 (\"Ok\") are uninformative"}}
+{"3981-4010": {"better": [], "neutral": ["original", "ir8atm", "yqgbfk", "k75rt3", "3yh8ag"], "worse": [], "reason": "All completions correctly proceed to compute sum modulo 99991"}}
+{"4010-4036": {"better": [], "neutral": ["original", "jos9rb"], "worse": [], "reason": "Both completions correctly compute sum_val % 99991"}}
+{"4159-4225": {"better": ["0qajdy", "p9x8di"], "neutral": ["original", "nidd9f", "9rumpz"], "worse": [], "reason": "0qajdy and p9x8di verify formula with explicit given examples (P(6,10^6)=14286 and P(3,14)=1)"}}
+{"4225-4270": {"better": ["6p9qxf", "3eq438"], "neutral": ["original", "v664g3", "yyyu92"], "worse": [], "reason": "6p9qxf and 3eq438 define both streak() and P_brute() in one code block, more complete implementation"}}
+{"4270-4315": {"better": ["original"], "neutral": ["kticmb", "ybwt3e", "s9q8be", "m1ysco"], "worse": [], "reason": "Original includes helpful comment \"# 1<n<N (strict)\" clarifying the range"}}
+{"4315-4325": {"better": ["z8gzkl", "bqlgwl"], "neutral": ["original", "dsd8nb"], "worse": [], "reason": "z8gzkl and bqlgwl also test the formula alongside brute force for comparison"}}
+{"4344-4361": {"better": ["vvkjac", "8o3n6e"], "neutral": ["original", "5t3c24", "p5n192"], "worse": [], "reason": "vvkjac and 8o3n6e show explicit calculation steps verifying P(3,14)=1"}}
+{"4361-4383": {"better": [], "neutral": ["original", "szxufa"], "worse": [], "reason": "Both completions correctly test P_brute(6,10**6)"}}
+{"4402-4409": {"better": [], "neutral": ["original", "nihckk", "hltn7m", "e2vagc", "mjgmxf"], "worse": [], "reason": "All completions correctly confirm the formula is verified"}}
+{"4409-4438": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4438-4483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4483-4533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4533-4580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4652-4728": {"better": [], "neutral": ["original", "rbk9d4", "2mzw24", "2ypvhc", "e03v63"], "worse": [], "reason": "All completions correctly confirm the sum 1617243 and answer 17387"}}
+{"4728-4754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4754-4766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4766-4794": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4949-4970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4970-5007": {"better": [], "neutral": ["original", "xy8myy", "zdokwp", "yfhyyh", "fcxbpc"], "worse": [], "reason": "All completions correctly compute or verify sum modulo 99991 = 17387"}}
+{"5007-5027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5093-5146": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5146-5228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5228-5250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5268-5308": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5308-5330": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5348-5353": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5353-5362": {"better": [], "neutral": ["original", "j3obd9", "vw90eb", "9n1ppn", "cclxx0"], "worse": [], "reason": "All completions correctly state or compute the final answer 17387"}}
+{"5362-5378": {"better": [], "neutral": ["original", "c0q8uk", "c4b47n", "cjt5g8", "v6ylrt"], "worse": [], "reason": "All completions correctly discuss the modulo 99991 operation yielding 17387"}}
+{"5378-5387": {"better": [], "neutral": ["original", "ft819j", "b46fz9", "19tak5"], "worse": [], "reason": "Original has correct boxed answer 17387 but answer has not been sufficiently repeated."}}

@@ -1,0 +1,142 @@
+{"120-145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"145-189": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"189-253": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"253-283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"283-431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"431-484": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"484-497": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"497-518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"518-583": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"583-649": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"649-840": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"840-992": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"992-1050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1050-1100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1100-1229": {"better": ["original", "wz98l9"], "neutral": ["0a15fd", "1bru7f", "jfyin2"], "worse": ["wrqgch"], "reason": "Original and wz98l9 explicitly set up the polynomial product A(X)G(X)=X^k+X^l, which is the key reformulation. wrqgch merely restates the problem (\"existence of an integer sequence\") without making progress."}}
+{"1229-1351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1351-1527": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1527-1624": {"better": ["pknty6"], "neutral": ["i8wh3p", "8vds5g", "bktfgp", "ylab4v"], "worse": ["original"], "reason": "The alternate pknty6 makes the monomial-shift reduction explicit, while the original is a broad restatement without that key step."}}
+{"1624-1695": {"better": ["vz2xhj"], "neutral": ["22qfl6", "uosuqr", "be14ni", "tdj2z6"], "worse": ["original"], "reason": "The alternate vz2xhj correctly states the divisor form $A=\\\\pm X^m D$ (allowing shifts), while the original stays vague."}}
+{"1695-1837": {"better": ["v82h7t"], "neutral": ["haj9mo"], "worse": ["original"], "reason": "The alternate v82h7t explicitly reduces to divisibility of $(1+X^d)$ in the Laurent ring with shifts; the original omits that reduction."}}
+{"1837-2052": {"better": ["wruovb"], "neutral": ["0qllx5", "c5h9m6"], "worse": ["original"], "reason": "The alternate wruovb clearly handles the shift $t^{-k}$ and the $A=t^rA_0$ decomposition; the original is less explicit."}}
+{"2052-2345": {"better": ["245jcf"], "neutral": ["a13cvl", "gpepou", "ln0kb1", "m28odd"], "worse": ["original"], "reason": "The original incorrectly derives 1+X^d = \u220f_{f|d} \u03a6_{2f}(X), which is only valid for odd d. For even d (e.g., d=6), the factors of x^6+1 are \u03a6_4\u00b7\u03a6_12, not \u03a6_2\u00b7\u03a6_4\u00b7\u03a6_6\u00b7\u03a6_12. 245jcf usefully discusses the primitivity and unit structure of divisors without committing to the wrong factorization. The other alternates address unrelated concerns."}}
+{"2345-2382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2382-2564": {"better": ["zize6j"], "neutral": ["dd4eda", "qkpzyr", "i8z9zy", "e3rdl1"], "worse": ["original"], "reason": "The alternate zize6j explicitly incorporates the unit/shift factor $\\\\pm X^r$, which the original only alludes to vaguely."}}
+{"2564-2611": {"better": ["smncvw"], "neutral": ["6z1gwh", "93vnds", "bv4rc8", "10sqgr"], "worse": ["original"], "reason": "The alternate smncvw notes how shifting by $X^r$ changes the constant term, clarifying when $a_0=0$ is allowed; the original is too terse."}}
+{"2611-2631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2631-2888": {"better": ["i6gil3"], "neutral": [], "worse": ["original"], "reason": "The alternate i6gil3 cleanly states the shift range $0\\\\le r\\\\le 10-\\\\deg(D)$, while the original is less explicit."}}
+{"2888-2915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2915-3013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3013-3055": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3055-3120": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3120-3288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3288-3424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3424-3453": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3453-3465": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3465-3488": {"better": ["re583g"], "neutral": ["naez6q", "5qwu6p", "gwjvpj", "kwczxu"], "worse": ["original"], "reason": "The alternate re583g explicitly includes the monomial shift and its effect on the constant term; the original is just a generic counting prompt."}}
+{"3488-3569": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3569-3587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3587-3617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3617-3656": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3656-3958": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3958-4002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4002-4054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4054-4218": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4218-4232": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4232-4270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4270-4319": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4319-4337": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4337-4439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4439-4475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4475-4637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4637-4665": {"better": [], "neutral": ["original", "a4h23j", "k2q2wq", "bth12g", "hg9um1", "pxo3ie"], "worse": [], "reason": "All completions conclude any \u03a6_{2m} can be forced by choosing d=m, building on the earlier incorrect factorization. None questions the v_2 constraint. All neutral relative to each other."}}
+{"4665-4683": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4683-4697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4697-4718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4718-4730": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4730-4783": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4910-4936": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4936-4958": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4958-4999": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4999-5021": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5021-5059": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5059-5086": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5086-5105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5105-5124": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5124-5143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5143-5162": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5162-5181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5181-5200": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5200-5227": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5227-5342": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5473-5494": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5494-5510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5510-5566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5566-5658": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5658-5672": {"better": ["v2u42s"], "neutral": ["dv5cqb", "p760d2", "h1eugl", "2m9c7m"], "worse": ["original"], "reason": "The alternate v2u42s explicitly accounts for the empty product case (monomials), while the original is a bare definition line."}}
+{"5672-5772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5772-5827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5827-5841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5841-5982": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5982-5987": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5987-6017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6017-6029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6029-6146": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6146-6189": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6189-6291": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6291-6308": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6308-6333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6333-6383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6383-6431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6468-6564": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6655-6745": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6745-6792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6833-6861": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6861-6911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7022-7032": {"better": [], "neutral": ["original", "myie1q", "ytx8zd", "c9697l", "7pa5h5", "pvos8j"], "worse": [], "reason": "All completions arrive at 544 based on the same flawed cyclotomic factorization. 7pa5h5 and pvos8j attempt verification but their check (d=lcm of m_i's) relies on the same incorrect formula. None questions the underlying error."}}
+{"7032-7046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7046-7049": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7049-7102": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7102-7297": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7297-7367": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7367-7375": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7375-7489": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7489-7545": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7545-7551": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7551-7856": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7856-7862": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7862-7868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7868-8387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8387-8396": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8396-8515": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8515-8520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8520-8566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8566-8571": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8571-8898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8898-9070": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9070-9121": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9121-9212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9212-9301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9623-9916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9916-9927": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9950-9953": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9953-10132": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10132-10178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10178-10740": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10740-10745": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10745-10750": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10750-10756": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10756-10770": {"better": ["coqtf9"], "neutral": ["5up82n", "q3hdji", "vo0x30", "ie3u29"], "worse": ["original"], "reason": "The alternate coqtf9 adds a concrete uniqueness check on the $(D,r)$ representation, whereas the original is just a transition to boxing the answer."}}
+{"10770-10843": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10843-10849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10849-10882": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10882-10889": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10889-10914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10914-11135": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11135-11139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11139-11505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11505-11510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11510-11539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11539-11546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11546-11560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11560-11567": {"better": ["1pebaf", "fi6lsa", "3ub6hl"], "neutral": [], "worse": ["original", "o99qch"], "reason": "Original has wrong boxed answer 544, correct answer is 270. Not boxing the answer provides a chance to move on from the wrong answer."}}

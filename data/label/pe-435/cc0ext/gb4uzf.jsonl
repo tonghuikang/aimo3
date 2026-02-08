@@ -1,0 +1,218 @@
+{"109-154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"154-229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"229-255": {"better": ["f18wog", "51a8aq"], "neutral": ["original", "9ax450", "95yuxz"], "worse": [], "reason": "f18wog and 51a8aq introduce the generating function G(t) = t/(1-t-t^2) for Fibonacci numbers, which is the key mathematical tool used to derive the closed form. The original and 9ax450 just define S_n(x) without connecting to the generating function insight."}}
+{"255-263": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"263-376": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"376-419": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"419-573": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"573-641": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"641-766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"766-887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"887-892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"892-894": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"894-952": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"952-956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"956-979": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"979-1021": {"better": ["uhdl3t"], "neutral": ["original", "2j2t5r", "lwh29b", "n2wcyn"], "worse": [], "reason": "uhdl3t identifies that S_n(x) is integer for integer x, so the irrational expression with sqrt(5) must simplify to rational/integer, and suggests finding a recurrence for S_n(x) via the linear recurrence structure. This is the key insight leading to the closed form derivation. The original just notes x=0 gives 0."}}
+{"1021-1039": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1039-1107": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1107-1287": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1287-1334": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1334-1365": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1365-1432": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1432-1526": {"better": ["original"], "neutral": ["vo37es", "lj9v93", "heiuim", "wnsg5d"], "worse": [], "reason": "The original proposes a specific formula sum_{i=0}^n f_i x^i = (f_n x^{n+2} - f_{n+1} x^{n+1} + x)/(1-x-x^2) and suggests testing it by multiplying. The alternates are vague (\"There's formula\", \"We might find formula\") without stating what the formula is."}}
+{"1526-1558": {"better": ["0d4knr"], "neutral": ["original", "uakojb", "95dm5z"], "worse": [], "reason": "0d4knr expands (1-x-x^2)S_n(x) as the difference of three sums, which is the key step for the telescoping derivation. The original and 95dm5z just restate the factorization without computing the sum differences."}}
+{"1558-1582": {"better": ["rqot9p", "cowsvx"], "neutral": ["original", "xumq44", "htc09t"], "worse": [], "reason": "rqot9p and cowsvx begin explicitly computing S_n(x) - x S_n(x) by aligning indices and identifying what terms survive. This detailed calculation is needed for the derivation. The original just says \"we can write\" without computing."}}
+{"1582-1625": {"better": ["jt9zuz"], "neutral": ["original", "1rawbg", "lj0zs9"], "worse": [], "reason": "jt9zuz provides a more detailed calculation of S_n - x S_n, explicitly showing the index re-alignment and the resulting form with f_j - f_{j-1}. The others just state the index shift without computing the subtraction."}}
+{"1625-1670": {"better": [], "neutral": ["original", "k7o36m", "r34bt9"], "worse": [], "reason": "All correctly state that x^2 S_n(x) = sum_{i=2}^{n+2} f_{i-2} x^i. This is a straightforward index shift. No meaningful difference between completions."}}
+{"1670-1739": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1739-1763": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1763-1788": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1788-1835": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1835-1898": {"better": ["xgls7o"], "neutral": ["original", "qdoab6", "cgtvco", "i271ta"], "worse": [], "reason": "xgls7o most concisely states the key insight: for 2 \u2264 i \u2264 n the terms cancel because f_i = f_{i-1}+f_{i-2}. This is the core of the telescoping derivation. All others express the same idea with similar clarity, but xgls7o is more compact while being equally rigorous."}}
+{"1898-1992": {"better": [], "neutral": ["original", "j3fz1q", "r3o4ra", "cdph9h", "fcpktm"], "worse": [], "reason": "All correctly analyze the i=n+1 term, finding that the coefficient is -f_{n+1} = -(f_n + f_{n-1}). All provide similar levels of detail in the derivation."}}
+{"1992-2025": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2025-2029": {"better": ["fix6qv"], "neutral": ["original"], "worse": [], "reason": "fix6qv directly states the derived formula (1 - x - x^2) S_n(x) = x - f_{n+1} x^{n+1} - f_n x^{n+2}, while the original just says \"Thus we have:\" without the formula. The formula is the key result."}}
+{"2029-2067": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2067-2108": {"better": [], "neutral": ["original", "0bkibn", "e76vbp", "oq6hjb", "9wl9fc"], "worse": [], "reason": "All correctly state the key closed-form formula S_n(x) = (x - f_{n+1} x^{n+1} - f_n x^{n+2})/(1 - x - x^2). This is the crucial result that enables efficient computation. oq6hjb and 9wl9fc are just transition words. All are equally correct."}}
+{"2108-2122": {"better": ["gt6f0n", "71vzti"], "neutral": ["original", "c1scpy", "zr900w"], "worse": [], "reason": "gt6f0n and 71vzti actually verify the formula by substituting n=0 and checking that S_0(x) = 0. The original just suggests checking, while c1scpy and zr900w are less concrete in their verification."}}
+{"2122-2288": {"better": ["0512bv"], "neutral": ["original", "dxk2cj", "hneytg", "rko7ir"], "worse": [], "reason": "0512bv provides the most complete verification: it computes S_1(x), shows the formula gives the same numerator x - x^2 - x^3, and verifies that the denominator (1-x-x^2) times x equals the numerator. This is a thorough algebraic check. The original does similar work but 0512bv is more explicit."}}
+{"2288-2395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2395-2401": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2401-2494": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2538-2549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2549-2603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2603-2645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2645-2662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2662-2682": {"better": ["91tq99", "az8w4i"], "neutral": ["original", "1keoyk", "p7qwgo"], "worse": [], "reason": "91tq99 and az8w4i identify the key challenge: denominator d(x) may not be invertible modulo M (since M=15! contains many small prime factors that could divide d(x)), but because S_n(x) is an integer (sum of integer terms f_i x^i), the fraction must yield an integer. They both recognize the need to compute numerator modulo M*|d(x)| to handle the non-invertible denominator issue. The original just states the goal without addressing the modular arithmetic challenge."}}
+{"2682-2791": {"better": ["on4dcf"], "neutral": ["original", "oah5en", "95t3ye", "jmufpl"], "worse": [], "reason": "on4dcf concisely identifies the key insight: denominator may not be invertible mod M, but we're evaluating an actual integer S_n(x), and the denominator divides the numerator exactly. The original just verifies the denominator is nonzero for x in [0,100] without addressing the modular arithmetic implications."}}
+{"2791-2827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2827-2835": {"better": ["3p78hg"], "neutral": ["original", "l34ieo", "kleivx", "n7yedv"], "worse": [], "reason": "3p78hg provides the complete algorithmic insight: compute numerator modulo M*|d|, and since d divides the numerator exactly, we can compute N mod (M*|d|) and then divide by d using integer division to get S_n(x) mod M. It also verifies the product M*|d| fits in 64-bit. The original just states \"we can compute integer values\" without the algorithm."}}
+{"2835-2875": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2875-2948": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2948-3037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3037-3072": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3072-3110": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3110-3153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3153-3197": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3197-3221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3221-3305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3305-3382": {"better": ["hnif29"], "neutral": ["original", "rc9h3p", "ci4wpu", "c619em"], "worse": [], "reason": "hnif29 explicitly calculates the magnitude of d(x) (up to ~10101) and verifies that M * |d(x)| \u2248 1.32e16 fits within 64-bit (2^63 ~ 9.22e18). This concrete bound verification is important for ensuring the algorithm doesn't overflow. The others are more vague about computational feasibility."}}
+{"3382-3468": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3468-3639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3639-3691": {"better": ["rser8q", "qvcw9t"], "neutral": ["original", "xqyroo", "qxjt3u"], "worse": [], "reason": "rser8q and qvcw9t provide rigorous proofs that computing N(x) mod (M*|d|) and then dividing by d yields the correct S_n(x) mod M. They show why the division works: if N \u2261 N_mod (mod M*d) and d divides both, then N/d \u2261 N_mod/d (mod M). The original just states the approach without proof."}}
+{"3691-4128": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4128-4152": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4152-4813": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4813-4907": {"better": ["original"], "neutral": ["9mvf3l", "ix04p1", "g1vsyn", "73apn3"], "worse": [], "reason": "The original provides the complete algorithm: for each x in 0..100, compute d, L = M*abs(d), N_mod via modular exponentiation, then q = N_mod // d, and sum q mod M. The alternates are less specific about the algorithm details."}}
+{"4907-5028": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5028-5158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5158-5184": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5184-5246": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5246-5276": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5276-5303": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5303-5320": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5320-5451": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5451-5517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5517-5553": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5553-5556": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5556-5567": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5567-5823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5823-6313": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6313-6484": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6484-6506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6506-6515": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6553-6571": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6571-6608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6608-6630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6630-6647": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6647-6984": {"better": ["3rfviw"], "neutral": ["original", "3v49ol", "nmr4oy", "4ht5bq"], "worse": [], "reason": "3rfviw provides the most complete edge case analysis: it computes d=-1, verifies sum_{i=0}^n f_i = f_{n+2} - 1 with a base case check (n=0), and shows the formula derivation. The original is similar but 3rfviw is more organized with bullet points."}}
+{"6984-7162": {"better": ["e7nqw5"], "neutral": ["original", "r95b0l", "nk54pf", "sgsdwl"], "worse": [], "reason": "e7nqw5 provides the most complete proof that the modular arithmetic works correctly for x=1, showing that q \u2261 S_n(1) (mod M) even though the intermediate computation involves negative numbers. This is more rigorous than the others which just assert the algorithm works."}}
+{"7162-7259": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7259-7290": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7290-7320": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7320-7371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7371-7374": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7374-7431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7431-7447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7447-7564": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7564-7569": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7569-7588": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7588-7602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7602-7627": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7627-7668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7668-7674": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7674-7915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7915-8216": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8216-8222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8294-8487": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8487-8642": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8642-8739": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8817-8930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8930-8949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8949-9085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9085-9169": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9169-9242": {"better": ["original"], "neutral": ["eqnk7b", "z4al2z", "t83lkv", "pwrrz5"], "worse": [], "reason": "The original tests wider ranges (n up to 20, x up to 10) and returns a boolean result. The alternates test smaller ranges. More thorough testing is slightly better but all are valid verification approaches."}}
+{"9242-9246": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9274-9501": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9501-9546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9546-9781": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9781-9839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9839-9858": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9858-9995": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9995-10013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10013-10055": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10055-10126": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10126-10331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10331-10366": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10366-10448": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10448-10475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10475-10495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10495-10664": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10664-10831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10831-10919": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10986-11080": {"better": [], "neutral": ["original", "ekaarc", "4uk7wk", "f5m713", "s4im3a"], "worse": [], "reason": "All correctly state that the computed result is 252541322550. s4im3a provides the most detailed verification considerations (checking d values, modulus sizes) but all arrive at the same correct answer. The variations are in the level of verification suggested."}}
+{"11080-11198": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11198-11326": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11326-11409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11409-11446": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11446-11481": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11481-11523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11523-11584": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11584-11634": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11634-11747": {"better": ["jebqo2"], "neutral": ["original", "jjtdfr", "y1onmd", "hxl9cr"], "worse": [], "reason": "jebqo2 provides the clearest explanation of why Python's floor division works correctly for exact division with negative divisors, citing Python's definition that floor(a/b) = integer when a is exactly divisible by b. The original makes the same point but jebqo2 is more precise."}}
+{"11747-11773": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11773-11778": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11778-11829": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11829-11860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11860-11956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11956-12047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12047-12063": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12063-12178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12178-12185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12185-12200": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12200-12244": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12244-12341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12341-12463": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12463-12546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12546-12555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12555-12568": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12568-12826": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12826-12957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12957-13091": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13091-13126": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13189-13198": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13198-13270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13270-13341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13341-13417": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13417-13546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13546-13595": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13595-13713": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13713-13724": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13751-13761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13761-13805": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13805-13910": {"better": [], "neutral": ["original", "ihve8e", "i9qgfm", "lliw2u", "9zv874"], "worse": [], "reason": "Alternate has correct boxed answer 252541322550 but answer has not been sufficiently repeated."}}
+{"13910-13933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13933-13947": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13947-14062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14062-14080": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14080-14123": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14123-14150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14150-14200": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14200-14235": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14235-14260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14260-14285": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14285-14316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14316-14364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14364-14408": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14408-14533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14533-14564": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14564-14643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14643-14707": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14707-14751": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14751-14821": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14821-14853": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14853-14905": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14905-14928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14928-14956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14956-15005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15005-15031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15031-15090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15090-15150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15150-15189": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15189-15195": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15195-15258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15258-15563": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15563-15665": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15665-15670": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15670-15678": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15678-15748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15748-15750": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15750-15759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15759-15792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15792-15888": {"better": [], "neutral": ["original", "rcy596", "jk9nxb", "xosvc7", "yok9tb"], "worse": [], "reason": "Alternate has correct boxed answer 252541322550 but answer has not been sufficiently repeated."}}
+{"15888-15898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15898-15900": {"better": [], "neutral": ["original", "femcri", "1mzylx", "1ejwml", "tbfgf2"], "worse": [], "reason": "Alternate has correct boxed answer 252541322550 but answer has not been sufficiently repeated."}}
+{"15900-15935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15935-15967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15967-15980": {"better": [], "neutral": ["original", "cawafm", "yh7yfo", "o5x5qg", "kl9v7w"], "worse": [], "reason": "Original has correct boxed answer 252541322550 but answer has not been sufficiently repeated."}}

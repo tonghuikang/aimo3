@@ -1,0 +1,144 @@
+{"55-77": {"better": [], "neutral": ["original", "1hh329", "buk7p0", "994q7c", "h53kzf"], "worse": [], "reason": "All completions appropriately set up the problem and recognize the need for efficient computation. h53kzf goes deeper into analyzing the mod composition issue, but it explores a path that turns out to be a distraction (the conclusion it reaches about mod composition is actually correct but the analysis is convoluted). The original is concise and appropriate for this stage."}}
+{"77-116": {"better": [], "neutral": ["original", "p3wo5t", "5o0jtb", "8l5o8b", "o0iium"], "worse": [], "reason": "All completions are transitional statements setting up for analysis. None provides substantive insight over the others."}}
+{"116-235": {"better": ["original"], "neutral": ["1p2f4e"], "worse": ["0d0u2q", "lou0qf", "qhasye"], "reason": "The original provides a complete derivation of the key formula g(p) = ((X - r) / p) mod p. 1p2f4e attempts similar analysis. 0d0u2q, lou0qf, and qhasye are incomplete fragments that just restate definitions without advancing the reasoning."}}
+{"235-267": {"better": [], "neutral": ["original", "xp2ujo", "pc625m", "znaae5", "6sh3sg"], "worse": [], "reason": "All completions correctly express the target formula g(p) = ((X - r) / p) mod p with similar reasoning. pc625m correctly notes that p is not invertible mod p, which is a useful observation. All are substantively equivalent."}}
+{"267-347": {"better": ["pwa222"], "neutral": ["original", "d92i5p", "pkhlpl", "wxgurj"], "worse": [], "reason": "pwa222 provides the key insight that g(p) = ((X mod p^2) - (X mod p)) / p, which directly leads to the efficient computation method. It explicitly shows how X modulo p^2 determines q mod p. The other completions restate the floor division relationship without this crucial reduction."}}
+{"347-360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"360-570": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"570-737": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"737-758": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"758-788": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"788-808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"808-1108": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1108-1527": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1527-1593": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1593-1665": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1665-2344": {"better": ["kbnmdq"], "neutral": ["original", "2b2fil", "1s49xb", "s4otvy"], "worse": [], "reason": "kbnmdq most clearly identifies the key insight: g(p) = (floor(X/p) mod 2^p) mod p is NOT the same as q mod p because the intermediate mod 2^p step changes the result. It explicitly shows: \"So g(p) is not q mod p, but (q mod 2^p) mod p... So we need to compute q mod 2^p first, then reduce mod p.\" All completions eventually reach this insight, but kbnmdq states it most explicitly and concisely."}}
+{"2344-2389": {"better": ["5b7ydl"], "neutral": ["original", "p2q1c5", "sbis3p", "wwt29x"], "worse": [], "reason": "5b7ydl provides the most useful algebraic expansion: g(p) = t mod p = (q mod p) - s*(2^p mod p) mod p, which directly leads to the formula g(p) = q - 2*t (mod p) used in the solution. The other completions just restate the definition without this algebraic insight."}}
+{"2389-2651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2651-2706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2706-2783": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2783-2829": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2829-2898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2898-3058": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3058-3213": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3213-3271": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3271-3316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3316-3388": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3388-3568": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3568-3585": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3585-3609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3609-3722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3722-3780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3780-3812": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3812-3857": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3857-3884": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3884-4013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4013-4100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4100-4125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4125-4676": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4676-4693": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4693-4715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4715-4751": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4751-4891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4891-4962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4962-4996": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4996-5095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5095-5163": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5163-5191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5191-5280": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5280-5326": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5326-5351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5351-5359": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5359-5374": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5374-5449": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5449-5480": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5480-5539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5539-5545": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5545-5959": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5959-6029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6029-6074": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6074-6339": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6339-6366": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6366-6440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6440-6522": {"better": [], "neutral": ["original", "mxb1wi", "7okkx8", "kgygpt", "rz5mk6"], "worse": [], "reason": "All completions correctly state the key formula g(p) = (Q * r + \u03b4) mod p with Q being the Fermat quotient. They all capture the same essential insight. rz5mk6 provides additional detail about computing \u03b4 but is more verbose without being more correct."}}
+{"6522-6549": {"better": [], "neutral": ["original", "0be6v0", "dhp8v9", "jv8wry", "89yivt"], "worse": [], "reason": "All completions correctly identify the need to compute \u03b4 = (2k - r)/p. 89yivt provides the most thorough analysis of possible \u03b4 values (-1, 0, or 1). All are substantively equivalent in advancing the computation."}}
+{"6549-7035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7035-7406": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7406-7448": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7448-7486": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7486-7886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7886-7967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7967-7991": {"better": [], "neutral": ["original", "gpfnwu", "u2x1fr", "g6224a", "r3zy3c"], "worse": [], "reason": "All completions correctly conclude that \u03b4 \u2208 {0, 1}. u2x1fr and r3zy3c attempt to derive a closed-form condition for when \u03b4=0 vs \u03b4=1 but don't fully succeed. The exploration is valuable but inconclusive at this stage."}}
+{"7991-8026": {"better": [], "neutral": ["original", "5gl0up", "xrj0nv", "09pvsx", "msk3c5"], "worse": [], "reason": "All completions correctly state the formula g(p) = (Q * r + \u03b4) mod p with \u03b4 \u2208 {0,1}. They are substantively equivalent."}}
+{"8026-8053": {"better": ["uryzl6"], "neutral": ["original", "ik7oam", "xoamtp", "8iwyzr"], "worse": [], "reason": "uryzl6 provides the most complete computational formula: it explicitly shows how to compute Q, r, and \u03b4 using the given expressions, making it most actionable. 8iwyzr provides useful complexity analysis (O(log p) per prime, ~15 million multiplications total) which is valuable context."}}
+{"8053-8090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8090-8117": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8117-8171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8171-8260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8260-8427": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8427-8431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8431-8559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8559-8780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8780-8964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8964-9052": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9052-9108": {"better": ["6zoz6f"], "neutral": ["original", "apt17o", "072cfz"], "worse": ["jq76fk"], "reason": "6zoz6f provides the most complete derivation - it shows \u03b4 = r mod 2 AND verifies with multiple examples (p=3, p=5) that it matches earlier observations. jq76fk is incomplete, just stating \"a = floor(r/2)\" without deriving the parity conclusion."}}
+{"9108-9135": {"better": [], "neutral": ["original", "4a812j", "4x5mh5", "r5i092", "35bdqf"], "worse": [], "reason": "All completions correctly conclude \u03b4 = parity of r = r mod 2. 35bdqf provides interesting additional analysis about when r is odd/even modulo p, which is informative but not critical to the solution. All are substantively equivalent."}}
+{"9135-9154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9154-9158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9158-9167": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9167-9231": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9231-9259": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9259-9287": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9287-9316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9316-9331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9331-9394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9394-9519": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9519-9598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9598-9689": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9689-9692": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9692-9709": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9709-9718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9718-9811": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9811-9836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9836-9867": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9867-10068": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10068-10165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10165-10216": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10216-10279": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10279-10283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10283-10298": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10298-10309": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10309-10338": {"better": ["akx713"], "neutral": ["original", "9y2a65"], "worse": ["erosqt", "fvc2zc"], "reason": "akx713 provides the most useful verification approach by checking g(31)=17 which is a specific given value. original and 9y2a65 mention verifying G(100) and G(10^4). erosqt and fvc2zc are tangential - erosqt just mentions excluding p=2 (obvious), fvc2zc restates the goal without verification strategy."}}
+{"10338-10361": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10361-10376": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10376-10673": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10673-10681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10705-10732": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10758-10764": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10764-10863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10863-10882": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10882-10886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10886-10968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10968-11032": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11032-11278": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11278-11294": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11330-11370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11520-11535": {"better": [], "neutral": ["original", "ry0lhy", "mzrty9", "csl5yi"], "worse": [], "reason": "All completions correctly state the final answer G(10^7) = 1603036763131. ry0lhy suggests verification which is good practice; mzrty9 explains the computational efficiency; original and csl5yi are concise. All are substantively equivalent."}}
+{"11535-11701": {"better": ["original"], "neutral": ["twwahc", "gkad2b", "ucgses"], "worse": ["fskuuc"], "reason": "The original provides a useful sanity check on the answer magnitude (~1.6e12 is plausible given the expected sum of primes). twwahc and ucgses note Python's integer handling is fine. fskuuc just says \"return answer boxed\" without any verification thinking, which is less thorough."}}
+{"11701-11745": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11745-11796": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11796-11834": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11896-11955": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11955-12000": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12104-12115": {"better": [], "neutral": ["original", "c7ztmo", "mkw5vf", "wltpel", "na47ze"], "worse": [], "reason": "Alternate has correct boxed answer 1603036763131 but answer has not been sufficiently repeated."}}
+{"12115-12141": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12141-12356": {"better": [], "neutral": ["original", "g08mj8", "hfti7a", "7dnzoh", "csl5yi"], "worse": [], "reason": "Alternate has correct boxed answer 1603036763131 but answer has not been sufficiently repeated."}}
+{"12356-12431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12431-12461": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12576-12592": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12592-12602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12602-12655": {"better": [], "neutral": ["original", "21woe1", "x2ax71", "7agy72", "zetbi7"], "worse": [], "reason": "Alternate has correct boxed answer 1603036763131 but answer has not been sufficiently repeated."}}
+{"12655-12666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12666-12683": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12683-12696": {"better": [], "neutral": ["original", "jhurhb", "3ub6hl", "21woe1", "zetbi7"], "worse": [], "reason": "Original has correct boxed answer 1603036763131 but answer has not been sufficiently repeated."}}

@@ -1,0 +1,52 @@
+{"14-74": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"74-139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"139-202": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"202-223": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"223-345": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"345-384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"384-434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"434-493": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"493-582": {"better": ["original"], "neutral": [], "worse": ["8ub6um"], "reason": "The original reduces the problem to integer values of a, while 8ub6um is just a vague restatement of the goal."}}
+{"582-688": {"better": ["3m62k6"], "neutral": [], "worse": ["020ooo"], "reason": "3m62k6 correctly computes the shifted delta form; 020ooo is speculative about an infinite count."}}
+{"688-777": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"777-860": {"better": ["wv1rt0"], "neutral": [], "worse": ["9wl9fc"], "reason": "wv1rt0 derives the integer divisibility constraint a=\u00b11; 9wl9fc provides no content."}}
+{"860-917": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"917-951": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"951-1090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1090-1175": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1175-1244": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1244-1303": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1303-1342": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1342-1427": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1427-1669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1669-1692": {"better": ["original"], "neutral": [], "worse": ["cbm8qw"], "reason": "The original explains the two shifty functions; cbm8qw only states the answer without justification."}}
+{"1692-1833": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1833-1847": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1847-1924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1924-2062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2062-2093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2093-2107": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2107-2158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2158-2228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2228-2250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2250-2256": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2256-2397": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2397-2450": {"better": ["3k6bg1"], "neutral": [], "worse": ["9vkq4a"], "reason": "3k6bg1 gives the key integer-valued argument excluding |a|>1; 9vkq4a is a bare guess."}}
+{"2450-2455": {"better": [], "neutral": ["original", "kf0o1a", "pr6mfc", "xnhirn", "3f61qx", "a4gvbo"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2455-2487": {"better": ["ym8jer"], "neutral": [], "worse": ["le4gql"], "reason": "ym8jer focuses on the integer-valued \u03b2 requirement; le4gql digresses into countability and suggests uncertainty."}}
+{"2487-2514": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2514-2520": {"better": [], "neutral": ["original", "t6jbdi", "ippfec", "9vkq4a", "0bk6ro", "ootx65"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2520-2636": {"better": ["original"], "neutral": [], "worse": ["sdkjrx"], "reason": "The original correctly rewrites the sum and notes the support simplification; sdkjrx speculates about infinity without analysis."}}
+{"2636-2646": {"better": [], "neutral": ["original", "0bk6ro", "kf0o1a", "mvt465", "18yavq", "ngydxk"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2646-2704": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2704-2798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2798-2836": {"better": [], "neutral": ["original", "8uknwd", "kf0o1a", "csonyu", "654dn6", "0bk6ro"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2836-2841": {"better": [], "neutral": ["original", "02y5l2", "rfekk8", "csonyu", "1rr6rk", "83fqdz"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2841-2914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2914-2928": {"better": [], "neutral": ["original", "mblvur", "ivhsxj", "9ia8wl", "2ug8f8", "aq2ngj"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"2928-2956": {"better": ["x3hvjc"], "neutral": [], "worse": ["oyxyrc"], "reason": "x3hvjc correctly notes \u03b2(-n) is forced when \u03b1 is a point mass; oyxyrc incorrectly claims extra \u03b2 values can be nonzero."}}
+{"2956-3191": {"better": [], "neutral": ["original", "xs4v3z", "0bk6ro", "oo4nb8", "oq245u", "039yzi"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"3191-3215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3215-3221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3221-3295": {"better": [], "neutral": ["original", "kj6t1z", "9pe3w2", "diw4rr", "5f0wew", "8f4bss"], "worse": [], "reason": "Alternate has correct boxed answer 2 but answer has not been sufficiently repeated."}}
+{"3295-3303": {"better": ["original"], "neutral": [], "worse": ["csonyu", "kf0o1a", "5ovyk1", "dl0vmd"], "reason": "Original has correct boxed answer 2. Correct answer has been sufficiently repeated in history."}}

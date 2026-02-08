@@ -1,0 +1,401 @@
+{"97-138": {"better": [], "neutral": [], "worse": [], "reason": "All completions define f(n) as smallest n-Norwegian integer. Equivalent definitions."}}
+{"138-156": {"better": [], "neutral": [], "worse": [], "reason": "All completions define M = 3^{2025!}. Standard setup."}}
+{"156-181": {"better": [], "neutral": [], "worse": [], "reason": "All completions give formula for g(c). Notational variants only."}}
+{"181-184": {"better": [], "neutral": [], "worse": [], "reason": "The original is a filler; these alternates clarify the structure of g(c)."}}
+{"184-301": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore algebraic manipulations of g(c) formula. Similar reasoning."}}
+{"301-332": {"better": [], "neutral": [], "worse": [], "reason": "All completions state goal: compute g(10162574) = p/q, find (p+q) mod 99991. Equivalent."}}
+{"332-347": {"better": [], "neutral": [], "worse": [], "reason": "All completions note need to find f(M+c). Brief transition statements."}}
+{"347-409": {"better": [], "neutral": [], "worse": [], "reason": "All completions observe M is huge and discuss structure of the problem. Similar setup."}}
+{"409-461": {"better": [], "neutral": [], "worse": [], "reason": "These alternates correctly state the divisor structure of M; the original is vague."}}
+{"461-554": {"better": [], "neutral": [], "worse": [], "reason": "All completions begin exploring how to compute f(M+c). Similar exploratory reasoning."}}
+{"554-572": {"better": ["txpzew"], "neutral": ["el9t0p", "qfe97a"], "worse": ["original"], "reason": "txpzew derives the key formulation f(n) = min lcm(a,b,c) over distinct positive integers summing to n, keeping the search general. The original just restates the problem. el9t0p immediately narrows to using 1 in the triple. qfe97a considers N as a divisor but notes sum would exceed n, missing that the correct approach includes N itself."}}
+{"572-615": {"better": [], "neutral": [], "worse": [], "reason": "These alternates formalize the LCM argument; the original is too generic."}}
+{"615-669": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore bounds on N. k8hrmb derives N >= ceil(n/3) bound explicitly."}}
+{"669-790": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore using 1 as one divisor and LCM minimization. Similar reasoning."}}
+{"790-887": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up minimizing LCM(a,b) with a+b = n-1. Equivalent approach."}}
+{"887-934": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss f(n) as minimum LCM. s7k3qv and 5w23i3 note divisibility chains help."}}
+{"934-1163": {"better": ["u0wbb6"], "neutral": ["m3t3yr", "kh8biw"], "worse": ["original"], "reason": "u0wbb6 derives a clean formula: for d|n-1, N=n-d-1 with divisors {1,d,N}, and identifies the divisibility condition d|(n-1). This is a concrete construction. The original explores using N as a divisor but gets confused by the algebra. m3t3yr and kh8biw explore the 1-based approach similarly without key progress."}}
+{"1163-1199": {"better": [], "neutral": [], "worse": [], "reason": "All completions observe N < n and explore optimization. Similar exploratory reasoning."}}
+{"1199-1330": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore computing f(n) via brute force or pattern analysis. Similar approaches."}}
+{"1330-1415": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up brute force computation for f(n). Equivalent approach."}}
+{"1415-1530": {"better": [], "neutral": [], "worse": [], "reason": "All completions implement is_norwegian function. Equivalent brute force approaches."}}
+{"1530-1585": {"better": [], "neutral": [], "worse": [], "reason": "All completions implement find_f function. Equivalent search approaches."}}
+{"1585-1635": {"better": [], "neutral": [], "worse": [], "reason": "All completions test f(n) for small n values. Equivalent verification approach."}}
+{"1961-2011": {"better": [], "neutral": [], "worse": [], "reason": "All completions hypothesize f(n) = min LCM pattern. Similar theoretical reasoning."}}
+{"2011-2069": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up LCM minimization computation. Equivalent approaches."}}
+{"2069-2225": {"better": [], "neutral": [], "worse": [], "reason": "All completions test LCM vs f(n) comparison. Equivalent verification approach."}}
+{"2225-2228": {"better": [], "neutral": [], "worse": [], "reason": "All completions import math and set up estimation. Equivalent setup."}}
+{"2228-2308": {"better": [], "neutral": [], "worse": [], "reason": "All completions implement comparison function. Equivalent implementations."}}
+{"2308-2326": {"better": [], "neutral": [], "worse": [], "reason": "All completions call the comparison function. Equivalent test invocations."}}
+{"2613-2772": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze f(7)=4 example and explore patterns. Similar observations."}}
+{"2772-2967": {"better": [], "neutral": [], "worse": [], "reason": "q39ctw derives the key pattern that f(n) can use powers of primes with various divisor choices. Original explores similarly but less systematically."}}
+{"2967-3096": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify f(13)=8 via divisor triple 1+4+8=13. Equivalent observations."}}
+{"3096-3327": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive condition d = n-N-1 must divide N. Similar key insight."}}
+{"3327-3390": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the (1,d,N) triple setup. yphdl5 adds N >= (n-1)/2 bound."}}
+{"3390-3441": {"better": [], "neutral": [], "worse": [], "reason": "qkxo1l derives the key algebraic form (k+1)d = n-1 which leads to the formula. Others state conditions less explicitly."}}
+{"3441-3558": {"better": [], "neutral": [], "worse": [], "reason": "The original fully derives n-1=d(k+1); uy8sp2 is a fragment with less structure."}}
+{"3558-3618": {"better": [], "neutral": [], "worse": [], "reason": "These alternates explicitly check distinctness conditions; the original is briefer."}}
+{"3618-3704": {"better": [], "neutral": [], "worse": [], "reason": "All completions state f(n) <= min (m-1)d over factorizations of n-1. Equivalent formula."}}
+{"3704-3807": {"better": [], "neutral": [], "worse": [], "reason": "xfi5ee gives the clean divisor form; the original is wordy and less precise."}}
+{"3807-3858": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify distinctness condition. epkzd5 implements test code."}}
+{"3858-3991": {"better": [], "neutral": [], "worse": [], "reason": "The original derives N = n-1-d; s8t4bs is vague."}}
+{"3991-4045": {"better": [], "neutral": [], "worse": [], "reason": "These alternates simplify to the \u201clargest divisor\u201d rule; the original is less explicit."}}
+{"4045-4240": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify f(13)=8 via the formula. 9i15f9 states maximize d to minimize N."}}
+{"4240-4363": {"better": [], "neutral": [], "worse": [], "reason": "The alternates provide a concrete check; the original just states the formula."}}
+{"4363-4568": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4568-4618": {"better": [], "neutral": [], "worse": [], "reason": "od9xdh distinguishes the N-in-triple case and proper-divisor case; the original is speculative."}}
+{"4618-4660": {"better": [], "neutral": [], "worse": [], "reason": "eu7h7n applies the derived formula cleanly; the original asserts it without conditions."}}
+{"4660-4724": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4724-5004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5275-5462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5462-5645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5645-5653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5653-5865": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5865-5956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5956-6081": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6081-6266": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6266-6325": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6325-6598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6598-6731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6731-6809": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6809-6830": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7305-7316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7316-7354": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7354-7463": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7463-7560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7560-7572": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7572-7601": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7601-7720": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7720-7808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7808-7860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7860-7902": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7902-8040": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8040-8203": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8203-8289": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8289-8480": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8480-8567": {"better": [], "neutral": ["original", "cgblmi", "gdwn5s", "gku3ea"], "worse": [], "reason": "All develop the g,x,y parameterization. Original derives N = g*x*y. gku3ea focuses on g=1 coprime case. All reach similar algebraic frameworks without decisive differentiation."}}
+{"8567-8675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8675-8912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8912-9013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9013-9101": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9101-9119": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9119-9152": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9152-9287": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9287-9338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9338-9394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9394-9463": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9463-9801": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9801-9930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10006-10016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10087-10177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10177-10196": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10196-10304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10304-10314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10831-10890": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10890-10914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10914-10986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10986-10999": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10999-11029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11281-11356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11356-11443": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11443-11450": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11536-11543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11543-11625": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11625-11779": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11779-11782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11782-11912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11912-12119": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12184-12200": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12200-12238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12238-12349": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12349-12655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12655-12741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12741-12749": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12786-13325": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13325-13338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13338-13540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13540-13751": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13751-13766": {"better": ["p3uh5n", "kr4kei"], "neutral": ["qwhbqn"], "worse": ["original"], "reason": "p3uh5n concretely demonstrates type C beats type A for n=11 (N=6 vs N=8), proving the 1-based model is incomplete \u2014 this is exactly the insight needed to find the correct (2,15) pair. kr4kei explicitly suggests analyzing type C as potentially optimal. The original just says \"check whether that yields N smaller\" without doing so, missing the opportunity to discover the better construction family."}}
+{"13766-13867": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13867-14113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14292-14311": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14311-14419": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14419-14445": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14445-15604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15604-15866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15866-15912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15912-16075": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16075-16695": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16695-16797": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16797-16950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16950-17027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17027-17082": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17082-17143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17143-17273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17273-17803": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17803-17878": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17878-17966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17966-18031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18031-18128": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18128-18366": {"better": [], "neutral": ["original", "3snakx", "flz6kd", "yq4i2u"], "worse": [], "reason": "All completions work within the same (k-1)/k formula from the n-1 approach, computing f/M \u2248 (k-1)/k. No alternate questions the underlying model. All neutral."}}
+{"18366-18411": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18411-18413": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18413-18431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18431-18484": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18484-18518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18518-18568": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18568-18615": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18615-18644": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18644-18689": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18689-18715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18715-18767": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18767-18792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18792-18856": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18856-18913": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18913-18923": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18923-18953": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18953-18955": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18955-19001": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19001-19009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19009-19026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19026-19242": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19242-19375": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19375-19539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19582-19718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19752-19849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19879-19959": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19989-20271": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20271-20673": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20673-20767": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21034-21149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21149-21163": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21163-21314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21314-21375": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21375-21385": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21385-21482": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21482-21554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21554-21578": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21950-21995": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22185-22313": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22313-22430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22430-22648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22648-22663": {"better": [], "neutral": ["original", "b26kti", "ad2hgs", "0rhe3n"], "worse": [], "reason": "All completions pursue the same approach of finding the smallest odd prime dividing N=n-1 within the wrong 1-based model. b26kti notes K could be smaller than 5081287, but this doesn't question the fundamental approach. All neutral."}}
+{"22663-22790": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22790-22803": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22803-22849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22849-22877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22877-22893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22893-22917": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22917-23016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23016-23022": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23022-23164": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23164-23179": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23420-23428": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23428-23467": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23467-23523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23523-24003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24003-24110": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24110-24152": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24152-24180": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24180-24223": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24223-24272": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24272-24299": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24299-24318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24318-24324": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24324-24353": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24353-24395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24395-24485": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24485-24615": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24615-24662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24662-24820": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24820-24913": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24913-24935": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24935-24966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24966-25099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25099-25293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25293-25485": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25485-25550": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25550-25575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25575-25613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25613-25654": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25654-25671": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25671-25699": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25699-25756": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25787-25855": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25881-25921": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25941-25990": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26108-26144": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26302-26322": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26322-26353": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26353-26373": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26373-26411": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26435-26523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26585-26592": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26592-26618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26618-26691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26724-26881": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26881-26952": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26952-27013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27013-27027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27027-27085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27085-27152": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27152-27178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27178-27237": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27237-27463": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27463-27555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27555-27826": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27826-27991": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27991-28066": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28066-28084": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28084-28109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28109-28324": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28324-28349": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28349-28404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28423-28478": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28500-28507": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28507-28615": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28615-28627": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28627-29079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29079-29172": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29172-29176": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29176-29211": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29211-29534": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29534-29634": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29634-29651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29651-29690": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29690-29883": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29883-29915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29915-29931": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29931-30042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30042-30047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30047-30055": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30055-30082": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30082-30150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30150-30230": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30230-30247": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30247-30264": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30264-30293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30293-30365": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30396-30414": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30414-30542": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30542-30571": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30571-30753": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30753-31184": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31184-31200": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31200-31270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31552-31906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31906-31982": {"better": ["mrspm5"], "neutral": ["original", "4dhcdg"], "worse": ["3j3mah"], "reason": "mrspm5 explores type C (n = d+e+lcm(d,e)) and derives the g*(x+y+xy) parameterization, which is the correct framework leading to the optimal solution. The original considers type B but doesn't pursue type C. 3j3mah simply asserts \"type A yields minimal\" without analysis, prematurely committing to the wrong approach."}}
+{"31982-32443": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32443-32836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32836-32980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32980-33016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33016-33030": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33030-33304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33304-33662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33662-33778": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33778-33893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33893-34217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34217-34287": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34287-34519": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34519-34742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34742-34791": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34791-35019": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35019-35183": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35183-35715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35715-35721": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35721-35756": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35756-35768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35768-35976": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35976-36088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36088-36229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36229-36265": {"better": [], "neutral": ["original", "xm8yar", "1bc4j9", "75aomr"], "worse": [], "reason": "All explore factoring n+1 and the type C construction. The original computes n+1 = M+c+1. 75aomr derives N = n - x - y and the x=1 case giving N=(n-1)/2. 1bc4j9 explores similarly. All reach the same ideas without decisive differentiation."}}
+{"36265-36734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36734-37037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37037-37123": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37123-37619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37619-37697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37697-38215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38215-38265": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38265-38327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38327-38368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38368-38403": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38403-38487": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38487-38508": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38508-38542": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38542-38619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38619-38650": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38650-38766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38766-38830": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38830-38872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38872-38956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39184-39362": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39362-39456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39456-39842": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39842-39888": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39888-40043": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40043-40081": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40081-40100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40100-40109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40109-40143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40143-40178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40178-40244": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40244-40421": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40421-40515": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40515-40569": {"better": ["2bfco0"], "neutral": ["umpi9x", "gcxeh8"], "worse": ["original"], "reason": "2bfco0 immediately catches that A=2 leads to d=1 and e=N (duplicate divisors), identifying the critical invalidity of this construction. The original and umpi9x/gcxeh8 accept N_C=(n-1)/2 as valid without checking the distinctness constraint, leading the trace to commit to the wrong construction before eventually discovering the issue later."}}
+{"40569-40656": {"better": ["81gwui", "odwz28", "wwtvfv"], "neutral": [], "worse": ["original"], "reason": "All three alternates (81gwui, odwz28, wwtvfv) correctly identify the A=2 duplication problem \u2014 that d=1, e=N gives only two distinct values. The original proceeds to compare N_A vs N_C without checking the validity of N_C, delaying the discovery of this critical flaw."}}
+{"40656-40913": {"better": ["bjo6b1"], "neutral": ["psn6nb", "897x3y"], "worse": ["original"], "reason": "bjo6b1 carefully checks the distinctness of the triple and discovers N_C = e (duplicate), correctly invalidating the A=2 case. psn6nb and 897x3y compare N_C to other factorizations but don't check validity first. The original continues assuming the A=2 case is valid, leading to the wrong f(n)=(n-1)/2 conclusion before belatedly discovering the issue."}}
+{"40913-40946": {"better": [], "neutral": ["original", "9qwjih", "fj0p8s", "8bbldn"], "worse": [], "reason": "All correctly identify that A=2 case is invalid (yields duplicate divisors). 9qwjih and fj0p8s state A>2 is needed. 8bbldn gives more detailed analysis. All reach the same conclusion, no meaningful differentiation."}}
+{"40946-40975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40975-41075": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41075-41154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41154-41390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41390-41424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41424-41552": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41552-41576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41576-41608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41608-41657": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41657-41803": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41803-41881": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41881-42242": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42242-42385": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42385-42423": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42423-42514": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42514-42570": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42570-42931": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42931-43145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43145-43263": {"better": ["exs0d2"], "neutral": ["4spnb8", "z7tegl"], "worse": ["original"], "reason": "The original commits to f(n)=2(n-2)/3 as optimal without verifying. This is wrong \u2014 the correct answer uses ratio 30/47 \u2248 0.638 < 2/3 \u2248 0.667, meaning smaller constructions exist. exs0d2 proposes brute-force testing for small n which would reveal counterexamples (e.g. n where (\u03b1,\u03b2)=(2,15) beats (2,k,2k)). 4spnb8 asks to verify minimality. z7tegl asserts \"maybe\" minimal without checking."}}
+{"43263-43338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43338-43384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43384-43489": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43521-43539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43539-43622": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43622-43678": {"better": [], "neutral": [], "worse": [], "reason": "All completions recognize type C yields smaller f(n) than type A. All correct conclusion."}}
+{"43678-43714": {"better": [], "neutral": [], "worse": [], "reason": "All completions adopt f(n) = 2(n-2)/3 for n \u2261 2 mod 3. 6vwpeb verifies with small n."}}
+{"43714-43744": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute f(M+c) = 2(M+c-2)/3. ndumup sets up verification code."}}
+{"43744-43783": {"better": [], "neutral": [], "worse": [], "reason": "All completions compute g(c) formula. 2yh8dh verifies formula, 307unk estimates f/M ratio."}}
+{"43783-43824": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43824-43859": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43859-43943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43943-44028": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44028-44076": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44076-44242": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44242-44253": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44253-44283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44283-44304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44304-44310": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44310-44471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44471-44501": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44501-44545": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44545-44770": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44770-44798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44798-44823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44823-44867": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44867-44916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44916-45028": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45028-45081": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45081-45156": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45156-45166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45166-45180": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45180-45204": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45204-45217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45217-45225": {"better": ["j5hwzd"], "neutral": ["lv7iso", "7vld09"], "worse": ["original"], "reason": "Original has wrong boxed answer 5, correct answer is 77. Not boxing the answer provides a chance to move on from the wrong answer."}}

@@ -1,0 +1,385 @@
+{"56-167": {"better": [], "neutral": ["original", "1b5kzk", "ha28ux"], "worse": [], "reason": "All are correct problem restatements. The original is more verbose. All neutral."}}
+{"167-214": {"better": [], "neutral": ["original", "s1afr6", "l270nm"], "worse": [], "reason": "All correct observations about the problem. The original considers whether divisors could include the integer itself (relevant). All neutral."}}
+{"214-248": {"better": [], "neutral": ["original", "qvjgqk", "jl9bk6"], "worse": [], "reason": "All establish the goal correctly. jl9bk6 computes approximate values which is helpful for intuition. All neutral."}}
+{"248-270": {"better": [], "neutral": ["original", "q0gzak", "ogkbhb"], "worse": [], "reason": "All correctly restate the goal. All neutral."}}
+{"270-303": {"better": [], "neutral": ["original", "fufsi9", "xrmvw7"], "worse": [], "reason": "All correctly identify the problem. fufsi9 and xrmvw7 explore the structure of p, which is useful context. All neutral."}}
+{"303-310": {"better": [], "neutral": ["original", "02qk2j", "r3gsfy"], "worse": [], "reason": "All are transition statements or setup. r3gsfy computes approximations of p and 6p. All neutral."}}
+{"310-478": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"478-490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"490-500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"500-575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"575-766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"766-803": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"803-836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"836-887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"887-960": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"960-1036": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1036-1085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1085-1157": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1157-1206": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1206-1700": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1700-1759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1759-2452": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2452-2733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2733-2762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2762-2806": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2806-2863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2863-3250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3250-3258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3258-3715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3715-3743": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3743-3782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3782-3812": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3812-3849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3849-3871": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3871-3992": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3992-4034": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4034-4140": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4140-4158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4158-4229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4229-4260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4260-4279": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4279-4540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4540-4562": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4562-4642": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4642-4783": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4783-4928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4928-4998": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4998-5046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5046-5148": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5148-5161": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5161-5260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5260-5342": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5342-5379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5379-5450": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5450-5512": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5512-5519": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5519-5555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5555-5582": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5582-5604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5604-5620": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5620-5628": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5628-5655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5655-5666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5666-5681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5681-5695": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5695-5709": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5709-5716": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5716-5821": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5821-5893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5893-5922": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5922-6004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6004-6057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6057-6064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6064-6099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6099-6166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6166-6169": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6169-6178": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6178-6220": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6220-6319": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6319-6434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6434-6509": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6509-6816": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6816-6908": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6908-7187": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7187-7230": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7230-7354": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7354-7408": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7408-7498": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7498-7541": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7541-7566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7566-7626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7626-7633": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7633-7675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7675-7698": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7698-7738": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7738-7768": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7768-7898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7898-8037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8037-8062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8062-8102": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8102-8119": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8119-8206": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8206-8260": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8260-8276": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8276-8332": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8332-8404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8404-8419": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8419-8434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8434-8453": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8453-8518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8518-8531": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8531-8541": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8541-8561": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8561-8696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8696-8706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8706-8728": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8728-8752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8752-8839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8839-8863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8863-8913": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8913-8988": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8988-8995": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8995-9124": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9124-9265": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9265-9410": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9410-9523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9523-9571": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9571-9607": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9607-9666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9666-9684": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9684-9710": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9710-9907": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9907-9940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9940-10105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10105-10158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10158-10278": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10278-10429": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10429-10548": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10548-10739": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10739-10763": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10763-10837": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10837-10845": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10845-10877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10877-10929": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10929-10948": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10948-10962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10962-11040": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11040-11066": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11066-11085": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11085-11127": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11127-11179": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11179-11229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11229-11280": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11280-11336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11336-11375": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11375-11421": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11421-11486": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11486-11500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11500-11525": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11525-11617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11617-11657": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11657-11684": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11684-11698": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11698-11782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11782-11802": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11802-11808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11808-11839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11839-11888": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11888-11917": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11917-11928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11928-11933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11933-11975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11975-12019": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12019-12112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12112-12123": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12123-12131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12131-12147": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12147-12201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12201-12234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12234-12343": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12343-12376": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12376-12383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12383-12400": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12400-12435": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12435-12573": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12573-12824": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12824-12848": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12848-12860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12860-12893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12893-13019": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13019-13207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13207-13228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13228-13263": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13263-13280": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13280-13381": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13381-13484": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13484-13643": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13643-13659": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13659-13669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13669-13705": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13705-13828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13828-14048": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14048-14080": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14080-14101": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14101-14598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14598-14699": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14699-14803": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14803-14889": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14889-15165": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15165-15264": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15264-15336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15336-15391": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15391-15555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15555-15585": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15585-15648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15648-15793": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15793-15841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15841-15898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15898-16005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16005-16037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16037-16057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16057-16099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16099-16118": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16118-16224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16224-16231": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16231-16369": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16369-16390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16390-16445": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16445-16491": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16491-16574": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16574-16598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16598-16679": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16679-16712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16712-16724": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16724-16746": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16746-16767": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16767-16885": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16885-17101": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17101-17131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17131-17139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17139-17149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17149-17191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17191-17491": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17491-17727": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17727-17740": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17740-17939": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17939-17994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17994-18009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18009-18046": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18046-18159": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18159-18170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18170-18331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18331-18361": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18361-18430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18430-18545": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18545-18586": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18586-18657": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18657-18950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18950-19052": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19052-19090": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19090-19116": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19116-19151": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19151-19163": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19163-19196": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19196-19228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19228-19421": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19421-19471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19471-19506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19506-19667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19667-19731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19731-19778": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19778-19854": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19854-19892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19892-19934": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19934-20002": {"better": [], "neutral": ["original", "yk4gce"], "worse": [], "reason": "Both explore p-related constraints. Neither leads to the correct approach."}}
+{"20002-20116": {"better": [], "neutral": ["original", "mg3rt8", "8utmuc"], "worse": [], "reason": "All three explore different approaches to bounding M. None leads directly to the correct solution."}}
+{"20116-20173": {"better": [], "neutral": ["original", "sf8dse", "xmp5cg"], "worse": [], "reason": "All explore different heuristic approaches to the divisor sum constraint. None directly leads to correct answer."}}
+{"20173-20218": {"better": [], "neutral": ["original", "ktzwc8", "av9h75"], "worse": [], "reason": "All explore different reasoning paths. av9h75 prematurely commits to M_self as the answer, but doesn't explore the g=6 y|z optimization. All neutral."}}
+{"20218-20289": {"better": ["jrh3f7"], "neutral": ["original", "g843rj"], "worse": [], "reason": "jrh3f7 correctly identifies that n = LCM(a,b,c) for minimal n. This is the key insight that eventually leads to minimizing LCM over triples summing to 6p. The original and g843rj explore less productive directions."}}
+{"20289-20346": {"better": [], "neutral": ["original", "7jr4im", "709eau"], "worse": [], "reason": "All explore different reasoning. None leads directly to the correct approach."}}
+{"20346-20393": {"better": [], "neutral": ["original", "s5kary", "mq9gb5"], "worse": [], "reason": "All explore product identities for divisors. None leads to the correct approach."}}
+{"20393-20429": {"better": [], "neutral": ["original", "fvslbh", "y19ic9"], "worse": [], "reason": "All explore product expansion approaches. None leads to the correct solution."}}
+{"20429-20459": {"better": [], "neutral": ["original", "r7rnzf", "bti4qr"], "worse": [], "reason": "Routine exploration. All neutral."}}
+{"20459-20502": {"better": [], "neutral": ["original", "l9kjyz", "xzys4t"], "worse": [], "reason": "Routine algebraic manipulation. All neutral."}}
+{"20502-20523": {"better": [], "neutral": ["original", "gsxjkm", "gev04e"], "worse": [], "reason": "All express uncertainty about the product approach. All neutral."}}
+{"20523-20556": {"better": [], "neutral": ["original", "k934fk", "2elgx6"], "worse": [], "reason": "original mentions LCM approach which is correct direction. k934fk and 2elgx6 explore product identities. All neutral overall."}}
+{"20556-20634": {"better": [], "neutral": ["original", "nmu78g", "521e94"], "worse": [], "reason": "original correctly identifies n >= LCM(a,b,c) and that minimal n is likely LCM itself. Good direction but all are neutral setup."}}
+{"20634-20677": {"better": ["9sgyf4"], "neutral": ["original", "8x41bw"], "worse": [], "reason": "9sgyf4 explicitly states the key insight: \"to minimize n, we should set n = LCM(a,b,c)\" and formulates the problem as \"seek triple of distinct integers summing to 6p such that LCM is minimized.\" This is the correct problem formulation."}}
+{"20677-20687": {"better": [], "neutral": ["original", "jh2un4", "h8fslw"], "worse": [], "reason": "All correctly state that problem is to minimize LCM over triples. All neutral."}}
+{"20687-20714": {"better": [], "neutral": ["original", "1owlvy", "qlgqup"], "worse": [], "reason": "All restate the LCM minimization problem. All neutral."}}
+{"20714-20775": {"better": [], "neutral": ["original", "s9wncg", "k7lot2"], "worse": [], "reason": "All continue problem setup. All neutral."}}
+{"20775-20799": {"better": [], "neutral": ["original", "au3ln3", "ns995l"], "worse": [], "reason": "All explore LCM properties. ns995l correctly notes LCM(p,2p,3p)=6p. All neutral."}}
+{"20799-20819": {"better": [], "neutral": ["original", "h3zldt", "jxbl53"], "worse": [], "reason": "All correctly formulate the problem as minimizing LCM. All neutral."}}
+{"20819-20943": {"better": [], "neutral": ["original", "a0ijda", "w7qn65"], "worse": [], "reason": "original correctly identifies a=A,b=2A,c=3A yields LCM=6A. w7qn65 identifies M_self approach. All neutral exploration."}}
+{"20943-21259": {"better": ["1fopru"], "neutral": ["original", "bip40t"], "worse": [], "reason": "1fopru suggests \"choose a,b,c such that they share a factor more than 1? For example, choose a = d*x, b=d*y, c=d*z\" which is the key approach that leads to the g=6 case and eventually the correct solution. original and bip40t continue standard analysis."}}
+{"21259-21335": {"better": [], "neutral": ["original", "53zs2a", "okcwre"], "worse": [], "reason": "All correctly rule out g=2p case. Routine elimination."}}
+{"21335-21371": {"better": [], "neutral": ["original", "xa6fbo", "owauhq"], "worse": [], "reason": "All correctly rule out g=3p case. Routine elimination."}}
+{"21371-21386": {"better": [], "neutral": ["original", "kwaqw7", "e5louf"], "worse": [], "reason": "All correctly rule out g=6p case. Routine elimination."}}
+{"21386-21906": {"better": [], "neutral": ["original", "vekbov"], "worse": ["7qy4d9"], "reason": "original explores g=6 case but only tries x=1,y=2,z=p-3 giving LCM=6(p-3), missing the y|z optimization. 7qy4d9 pessimistically says \"LCM would be approx product maybe... could be >6p potentially\" which underestimates the g=6 potential - the correct answer IS from g=6 with proper y|z choice."}}
+{"21906-22031": {"better": [], "neutral": ["original", "i0aob9", "cntuur"], "worse": [], "reason": "All explore g=2 case which doesn't lead to optimal. Routine exploration."}}
+{"22031-22112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22112-22139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22139-22183": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22183-22259": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22259-22296": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22296-22327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22327-22481": {"better": [], "neutral": ["original", "7ljopr", "ypgdb9"], "worse": [], "reason": "All completions set up the search for triple with LCM < M_self, which is the right question. The original explores g=5 (not possible). 7ljopr and ypgdb9 are equivalent restatements. All are neutral setup statements."}}
+{"22481-22633": {"better": ["tf00b1"], "neutral": ["original", "s3hkee"], "worse": [], "reason": "tf00b1 suggests exploring g=3 case, which is actually worth exploring. While this doesn't lead to the optimal solution (g=6 does), it shows more thorough exploration. The original dismisses g=6 too quickly by only trying x=1,y=2,z=p-3. s3hkee rules out g=10 which is correct but less insightful."}}
+{"22633-22646": {"better": ["shuh67"], "neutral": ["original", "2dpvuv"], "worse": [], "reason": "shuh67 explicitly asks \"choose different x,y,z for g=6 that lower lcm? Want numbers with small lcm given sum p\" and mentions \"If x divides y and y divides z, then lcm = z. Then LCM = 6*z.\" This is exactly the key insight for the correct solution! While it then continues with x=1,y=2,z=p-3 (which doesn't use divisibility), the insight about divisibility is crucial. The original explores x=1,y=3,z=p-4 which doesn't find the optimal. 2dpvuv also tries specific values but misses divisibility."}}
+{"22646-22670": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22670-22834": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22834-23217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23217-23327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23327-23576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23576-23758": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23758-23763": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23763-23825": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23825-23840": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23840-23864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23864-23990": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23990-24002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24002-24021": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24021-24140": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24140-24167": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24167-24198": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24198-24325": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24325-24500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24500-24515": {"better": ["mp9477"], "neutral": ["original", "4lgae3"], "worse": [], "reason": "mp9477 identifies the key insight: \"numbers being multiples of each other\" which is exactly what leads to the optimal solution (setting y|z so LCM=z). While it then dismisses the approach for x=a, y=2a, z=3a (correctly, since p not divisible by 6), the insight about divisibility is crucial. The original and 4lgae3 are vaguer."}}
+{"24515-24712": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24712-24756": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24756-24788": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24788-24850": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24850-25135": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25135-25146": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25146-25154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25154-25178": {"better": [], "neutral": ["original", "kcuanc", "qtfsyz"], "worse": [], "reason": "All completions make the same error: they conclude that g=6 yields minimal LCM \u2248 6(p-3) > M_self, but fail to explore the y|z optimization. By choosing x=1, y=(p-1)/t, z=(p-1)*(t-1)/t where t divides p-1 and y|z, the correct solution achieves LCM = 6*z = 6*4*3^29 = 8*3^30 < M_self. Since all make the same oversight, they are neutral relative to each other."}}
+{"25178-25186": {"better": [], "neutral": ["original", "4dguzb", "jtkgnw"], "worse": [], "reason": "All completions continue from the incorrect premise that g=6 yields LCM > M_self. The original and 4dguzb commit to \"M_self is best\". jtkgnw tries g=3 but gets LCM=12p-18 which is also not optimal. None explore the correct y|z approach for g=6. All neutral."}}
+{"25186-25328": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25328-25336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25336-25381": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25381-25435": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25435-25575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25575-25594": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25594-25930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25930-25941": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25941-26337": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26337-26348": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26348-26363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26363-26395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26395-26405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26405-26450": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26450-26608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26608-26695": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26695-26702": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26702-26819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26819-27005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27005-27027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27027-27038": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27038-27049": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27049-27055": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27055-27153": {"better": [], "neutral": ["original", "guidr7", "tvbxt7"], "worse": [], "reason": "All three completions consider d=6 with a'+b'+c'=p but only try the naive triple (1,2,p-3), giving LCM\u22486(p-3)\u22486p. None discover the crucial insight: with a'=1, choose b' as a large divisor of p-1=2*3^30 (specifically b'=2*3^29), so c'=4*3^29 and b'|c', giving LCM=c'=4*3^29 and total N=6*4*3^29=8*3^30\u22481.65e15, much smaller than M_self\u22484.8p. All make the same error, so all neutral."}}
+{"27153-27224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27224-27254": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27254-27321": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27321-27353": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27353-27369": {"better": [], "neutral": ["original", "sdsyty", "4y9t2p"], "worse": [], "reason": "All completions incorrectly conclude that M_self is the minimal Norwegian integer. The correct answer is N=8*3^30 (from the g=6, y|z approach), which is smaller than M_self=(48*3^30+8)/5. Since all make the same error based on incomplete exploration of the g=6 case, they are neutral."}}
+{"27369-27380": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27380-27440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27440-27472": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27472-27524": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27524-27529": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27529-27552": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27552-27635": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27635-27638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27638-27654": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27654-27660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27660-27670": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27670-27696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27696-27910": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27910-27936": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27936-28014": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28014-28066": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28095-28142": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28182-28248": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28385-28396": {"better": ["k2l7xm"], "neutral": [], "worse": ["original", "5q7eha"], "reason": "Original has wrong boxed answer 58292, correct answer is 15245. Not boxing the answer provides a chance to move on from the wrong answer."}}

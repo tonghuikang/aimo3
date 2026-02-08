@@ -1,0 +1,299 @@
+{"107-141": {"better": [], "neutral": ["original", "10t9qr", "ahuq7x"], "worse": [], "reason": "All three completions restate the problem requirements - they are essentially equivalent in content."}}
+{"141-334": {"better": ["uzxai7"], "neutral": ["original", "z8d9fy"], "worse": ["6c56w5", "tzqqqe"], "reason": "uzxai7 goes furthest - it not only derives d(i)-1 turns but also works through the modular arithmetic to conclude d(i) \u2261 1 (mod 6). Original and z8d9fy correctly derive the turn count. 6c56w5 gets stuck on notation without deriving the key formula. tzqqqe is too vague (\"understand mathematically\")."}}
+{"334-600": {"better": ["i9ochg"], "neutral": ["original", "9fn6zs", "4xxspg", "jgzy3e"], "worse": [], "reason": "i9ochg is slightly better as it explicitly states the final condition \"d(i) \u2261 1 (mod 6)\" and notes \"That is what f(n) equals\", making the connection clearest. All others arrive at the same conclusion through equivalent reasoning."}}
+{"600-667": {"better": [], "neutral": ["original", "hoycfe", "zm9zzs", "ushto9", "9kovp8"], "worse": [], "reason": "All completions correctly state that d(i) \u2261 1 (mod 6) is the condition for a die to show 1. They are essentially equivalent restatements."}}
+{"667-688": {"better": ["ax4mnb"], "neutral": ["original"], "worse": ["niocj9"], "reason": "ax4mnb provides more explicit notation (f(n) = #{i \u2264 n : d(i) \u2261 1 (mod 6)}). Original is a clear restatement. niocj9 (\"That's core\") is too terse and doesn't add clarity."}}
+{"688-708": {"better": ["wpkmw2"], "neutral": ["original", "dtj318", "c3x703"], "worse": ["h7vwmu"], "reason": "wpkmw2 explicitly notes that i=1 with d(1)=1\u22611 mod 6 is counted, which is a useful detail. h7vwmu (\"Counting such numbers for huge n\") is too vague."}}
+{"708-801": {"better": [], "neutral": ["original", "6zy820", "n0abqm", "xdzryq", "5dgrh5"], "worse": [], "reason": "All completions correctly implement divisor count verification code. Original and all alternates are essentially equivalent in approach."}}
+{"801-828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"828-834": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"903-919": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"919-943": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"943-991": {"better": ["2e98v7"], "neutral": ["original", "jto31k", "v2bf1r", "prbw4w"], "worse": [], "reason": "2e98v7 makes the key observation that d(n) is odd for perfect squares, and notes that d(n)\u22611 mod 6 requires both oddness and mod 3 condition. This is the crucial insight that restricts to squares."}}
+{"991-1083": {"better": [], "neutral": ["original", "rqb67n", "rzbyr5", "jd0cl2", "d3kxcq"], "worse": [], "reason": "All completions note the need for a pattern/formula for large N. Original and rzbyr5 speculate about perfect squares which is on the right track. None makes decisive progress yet."}}
+{"1083-1164": {"better": ["mbwd3f"], "neutral": ["original", "dc8btf", "w3qe1p"], "worse": ["4779po"], "reason": "mbwd3f works through the logic carefully: first recalls (incorrectly) that d(n) odd for \"twice a square\", then self-corrects by deriving that d(n) odd iff all exponents even (perfect square). 4779po states d(i)=1 only for i=1, which is true but misses the broader insight."}}
+{"1164-1259": {"better": [], "neutral": ["original", "7m61fv", "bp118b", "t4m2z9", "738h7l"], "worse": [], "reason": "Original best decomposes mod 6 into mod 2 (d(i) odd) and mod 3 conditions. All others just restate the product condition without this key decomposition insight."}}
+{"1259-1423": {"better": [], "neutral": ["original", "evv6ya", "7erk3x", "lyqzdh", "56lfly"], "worse": [], "reason": "All completions correctly derive that d(i) odd implies all exponents must be even, hence i must be a perfect square. This is a key insight that all paths correctly identify."}}
+{"1423-1574": {"better": ["original"], "neutral": ["t8ilu0", "l9em8j"], "worse": ["9ipdis", "9nrajg"], "reason": "Original correctly computes d(m\u00b2) = \u220f(2b_i+1) and states the mod 3 condition. 9ipdis jumps to \"condition modulo 3\" without showing the computation. 9nrajg doesn't complete the derivation."}}
+{"1574-1723": {"better": ["1ogw01"], "neutral": ["original", "aw0fv7", "oar9jl", "u2xofm"], "worse": [], "reason": "1ogw01 explicitly computes 2b+1 mod 3 using 2\u2261-1 mod 3, showing that 2b+1\u22611-b mod 3. This is the clearest derivation of the residue mapping."}}
+{"1723-1746": {"better": ["i39skr"], "neutral": ["original", "vnhbnv", "418mk2", "o0syb9"], "worse": [], "reason": "i39skr provides the complete mapping and immediately derives the key constraint: b_i\u22621 mod 3, and number of b_i\u22612 mod 3 must be even. This is the most complete single-step derivation."}}
+{"1746-1771": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1771-1796": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1796-1828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1828-1954": {"better": ["9ub9t7"], "neutral": ["original", "sa0hb3", "hwoasv"], "worse": ["vxfkno"], "reason": "9ub9t7 is most complete - correctly derives that no b_i can be \u22611 mod3, and that the number of b_i\u22612 mod3 must be even (since 2\u2261-1 mod3, so (-1)^k\u22611 requires k even). vxfkno states the parity condition but doesn't explain why, making it less rigorous."}}
+{"1954-1991": {"better": ["4hm52x"], "neutral": ["original", "cfebgk", "o67vgo", "lmsu2v"], "worse": [], "reason": "4hm52x provides the most complete statement: explicitly shows 2\u2261-1 mod3, so 2^k\u2261(-1)^k, requiring even k. Also states both conditions clearly (b_i\u22621 mod3, and even count of b_i\u22612)."}}
+{"1991-2132": {"better": ["b5r8ee"], "neutral": ["original", "dbfyua", "wkbxwj"], "worse": ["qp5vx2"], "reason": "b5r8ee provides complete verification: explicitly checks 2^k mod3=1 iff k even. qp5vx2 omits the parity condition entirely, stating only b_i\u22621 mod3 is needed."}}
+{"2132-2177": {"better": ["orpjnf"], "neutral": ["original"], "worse": ["349c69", "m0cg9v", "kb1g8r"], "reason": "orpjnf explicitly lists both conditions (i) and (ii). Original is equivalent. The others are incomplete fragments that don't state the full condition."}}
+{"2177-2220": {"better": [], "neutral": ["original", "y6apx3", "ufjxkh", "7j2xxd", "r1b6wo"], "worse": [], "reason": "All completions correctly state that we count m \u2264 \u221aN = 10^18. Original explicitly computes this value; others restate in different forms."}}
+{"2220-2305": {"better": [], "neutral": ["original", "fm60pk", "v84t5x", "t65264", "p1ldj1"], "worse": [], "reason": "All completions correctly state the counting problem. Original provides the most complete reasoning connecting back to divisor count condition."}}
+{"2305-2330": {"better": ["ho8069", "tt1930"], "neutral": ["original", "br39ek"], "worse": ["8hekt2"], "reason": "ho8069 and tt1930 explicitly list both conditions needed for m. 8hekt2 is vague (\"good squares with property\")."}}
+{"2330-2465": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2465-2551": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2551-2619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2619-2628": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2655-2661": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2661-2689": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2689-2776": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2776-2872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2872-2997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2997-3035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3035-3091": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3091-3153": {"better": ["6ein4q"], "neutral": ["original", "xudbn1", "q4x69m"], "worse": ["3fkyws"], "reason": "6ein4q provides the clearest decomposition: m = t\u00b3\u00b7u where u = (\u220fp_i)\u00b2 is a perfect square of a squarefree integer. This directly shows the counting structure. 3fkyws is vague (\"product of squares of numbers that are 'good'\")."}}
+{"3153-3199": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3199-3299": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3299-3731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3731-3806": {"better": ["tfc4rs"], "neutral": ["original", "vpdj9m", "9vfky1", "n8btra"], "worse": [], "reason": "tfc4rs addresses a subtle point that others don't: whether a and c must be coprime. It correctly shows they can share primes (since exponent becomes 3e+2), which confirms the representation m=a\u00b3c\u00b2 is valid even when they share primes. This is important for ensuring the counting formula is correct."}}
+{"3806-3843": {"better": ["62smfs"], "neutral": ["original", "afwb5l", "quul2f", "mzebr1"], "worse": [], "reason": "62smfs provides the most rigorous analysis: it verifies the uniqueness of the decomposition m=a\u00b3c\u00b2 by showing exactly how to recover e and \u03b4 from any exponent b\u22610,2 (mod 3). This justifies that every valid m has a unique such representation, which is crucial for the counting formula."}}
+{"3843-3889": {"better": ["umjydv"], "neutral": ["original", "pz61pw"], "worse": ["2o3486", "9i1ecg"], "reason": "umjydv works out the concrete bounds (a up to 10^6, c depends on a). 2o3486 (\"That's the counting problem\") adds nothing. 9i1ecg goes off on a tangent about \"powerful numbers\"."}}
+{"3889-3970": {"better": ["7ouw30"], "neutral": ["original", "3a2qlb", "xiu1b6"], "worse": ["5o517g"], "reason": "7ouw30 verifies the decomposition m=a\u00b3c\u00b2 matches the exponent conditions (3e_p+2\u03b4_p). 5o517g (\"If we denote X = X_max\") adds nothing."}}
+{"3970-4106": {"better": [], "neutral": ["original", "dl8hvk", "abt1uf", "ymjp3w", "2e1c1z"], "worse": [], "reason": "All alternatives express the same formula differently. Original correctly derives c \u2264 10^9 bound from the constraint c^2 \u2264 X. The others are equivalent restatements without significant improvement or degradation."}}
+{"4106-4141": {"better": [], "neutral": ["original", "ail6wz", "2bdjkq", "kvvka8"], "worse": [], "reason": "All alternatives state the same counting formula f(N)=\u03a3 floor(10^6/c^{2/3}) with minor wording variations. None provides additional insight over the others."}}
+{"4141-4181": {"better": ["1tcyum"], "neutral": ["original", "qkwp5s", "8qq62t", "sjtwm9"], "worse": [], "reason": "1tcyum provides concrete analysis: it estimates floor values for different ranges of c, shows c=1 contributes 10^6, and explains why many terms contribute 1 for large c. This practical insight helps understand the structure of the sum better than the others."}}
+{"4181-4220": {"better": ["hotoal"], "neutral": ["original", "eyoeo9", "mukr7y", "pmen6y"], "worse": [], "reason": "hotoal concisely suggests the key computational approach: use M\u00f6bius function for squarefree detection and parity condition. This is the correct direction for computing the sum efficiently. Original and others digress into \"6-smooth\" comparisons or lengthy analysis of floor bounds."}}
+{"4220-4283": {"better": ["5l3t3y"], "neutral": ["original", "g21c3d", "d2wbgj", "r2t6jl"], "worse": [], "reason": "5l3t3y goes back to first principles and verifies the decomposition: d(i)\u22611 mod 6 requires both mod 2 and mod 3 conditions, confirming i must be a perfect square with the parity constraint. This verification step adds rigor. Original speculates about S(N)+S'(N)/2 without clear justification."}}
+{"4283-4345": {"better": ["8l38q1"], "neutral": ["original", "d19l6v", "us4nem", "hpljh0"], "worse": [], "reason": "8l38q1 provides a useful empirical check: for N=10^8, only 69 out of 10000 squares satisfy the condition, showing this is far from \"half\". This reality check helps calibrate expectations and confirms the condition is highly restrictive."}}
+{"4345-4427": {"better": ["x2y9t9"], "neutral": ["original", "sqzytw", "vsa40q"], "worse": ["odpudx"], "reason": "x2y9t9 sets up the Dirichlet series approach systematically: for each prime p, exponent b has values in {0,3,6,...} or {2,5,8,...}, and this leads to computing contributions. odpudx dismisses the approach as \"impossible directly\" without exploring the generating function route that actually solves this."}}
+{"4427-4503": {"better": ["m2507o"], "neutral": ["original", "4uy0fu", "3ft93d", "8ifb3h"], "worse": [], "reason": "m2507o identifies the key technique: the parity condition can be expressed as (1+(-1)^{\u03c9(c)})/2, allowing the count to be split into total plus a signed sum. This is the standard inclusion-exclusion approach for parity constraints that leads to the solution."}}
+{"4503-4671": {"better": ["7h5pv3"], "neutral": ["original", "7mh6am", "3r6au1", "nrnnfu"], "worse": [], "reason": "7h5pv3 correctly identifies that for squarefree d, the Liouville function \u03bb(d)=(-1)^{\u03c9(d)} since \u03c9(d)=\u03a9(d). This connects the parity condition to standard number-theoretic functions, enabling the use of known identities for computation."}}
+{"4671-4716": {"better": ["ssjfn0"], "neutral": ["original", "ltfvaf", "qqcy15", "rima28"], "worse": [], "reason": "ssjfn0 gives the cleanest formulation: the cube-free part s of m must be a perfect square (exponents 0 or 2 only), and the number of primes with exponent 2 must be even. This is the most direct characterization of the condition."}}
+{"4716-4942": {"better": ["9f4yh8"], "neutral": ["original", "ey7m4l", "dequgk", "jmvbxw"], "worse": [], "reason": "9f4yh8 concisely restates the counting formula with c=t, confirming the earlier derivation. This is cleaner than the original's lengthy discussion of uniqueness of t and the indicator function formulation."}}
+{"4942-4988": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4988-5023": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5023-5163": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5163-5213": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5213-5343": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5343-5394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5394-5807": {"better": ["vb1hok"], "neutral": ["original", "bzmvg7", "51dp3s", "pjziyc"], "worse": [], "reason": "vb1hok makes a key observation: for squarefree numbers, parity of \u03c9 is captured by \u03bc(n), and g(n)=(|\u03bc(n)|+\u03bc(n))/2 selects squarefree with even \u03c9. This provides a clean characterization using the M\u00f6bius function that aids computation. Original derives the Dirichlet series approach but is more verbose."}}
+{"5807-5866": {"better": [], "neutral": ["original", "l9zqm8", "t7ru9s", "qwrtef", "ywupkg"], "worse": [], "reason": "All completions express the same Dirichlet series formula \u03c7(s) = (1/2)[\u220f_p((1+p^{-2s})/(1-p^{-3s})) + \u220f_p((1-p^{-2s})/(1-p^{-3s}))]. This is a key formula derived from the parity trick (y=1, y=-1) and all are equivalent."}}
+{"5866-6035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6035-6054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6054-6153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6153-6305": {"better": ["wwxavt"], "neutral": ["original", "xjo3fv", "cv9ax9"], "worse": ["kx9ct4"], "reason": "wwxavt interprets the Dirichlet series in terms of counting functions: A(X)=count without parity, B(X)=signed count with (-1)^{\u03c9(b)}. This bridges the abstract Dirichlet series to the concrete counting needed. kx9ct4 (\"Thus we can define:\") adds nothing."}}
+{"6305-6656": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6656-6678": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6678-6719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6719-6722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6722-6791": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6791-6843": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6843-6938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6938-6984": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6984-7014": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7014-7145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7145-7270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7270-7690": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7690-7747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7747-7778": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7778-7861": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7861-7914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7914-7965": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7965-8106": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8106-8191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8191-8228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8228-8287": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8287-8329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8329-8356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8356-8398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8398-8413": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8635-8660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8844-8913": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9041-9070": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9238-9301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9301-9464": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9464-9571": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9571-9633": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9633-9639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9639-9655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9655-9727": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9727-9765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9765-9888": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9888-9926": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9926-10000": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10000-10097": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10097-10179": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10179-10223": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10223-10274": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10274-10322": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10322-10564": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10564-10566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10566-10591": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10591-10615": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10615-10627": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10627-10718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10718-10760": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10760-10861": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10861-10926": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10926-10967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10967-10984": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10984-11039": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11039-11049": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11049-11099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11099-11114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11114-11158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11158-11170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11170-11301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11301-11483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11483-11501": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11501-11611": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11611-11864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11864-11993": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11993-12066": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12066-12109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12109-12156": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12156-12221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12221-12302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12302-12578": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12578-12870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12870-12912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12912-12968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12968-13080": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13080-13122": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13122-13242": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13242-13252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13252-13357": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13357-13442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13442-13522": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13522-13610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13610-13639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13639-14009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14009-14095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14095-14238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14238-14271": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14271-14386": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14386-14441": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14441-14449": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14449-14480": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14480-14561": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14561-14649": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14649-15104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15104-15131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15131-15143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15143-15174": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15174-15279": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15279-15341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15341-15543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15543-15544": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15754-15838": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15838-15959": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15959-16040": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16040-16093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16093-16276": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16276-16754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16754-16911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16911-17048": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17048-17138": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17138-17298": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17298-17444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17444-17559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17559-17604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17604-17717": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17717-17834": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17834-17887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17887-17950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17950-18057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18057-18113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18113-18148": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18148-18292": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18292-18541": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18541-19011": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19011-19139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19139-19148": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19148-19182": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19182-19211": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19211-19243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19243-19350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19350-19473": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19868-19928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20018-20139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20139-20225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20225-20323": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20323-20508": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20508-20533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20533-20688": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20688-20815": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20815-20916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20916-20927": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20927-20947": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20947-21012": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21012-21016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21016-21093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21093-21190": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21190-21213": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21213-21243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21243-21515": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21515-21679": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21679-21844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21844-21849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21849-21978": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21978-22060": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22060-22080": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22080-22213": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22213-22393": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22393-22504": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22504-22545": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22545-22550": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22550-22609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22609-22612": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22612-22678": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22678-22719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22719-22737": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22737-22753": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22753-22772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22772-22854": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22854-22871": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22871-22903": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22903-22986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22986-23000": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23000-23023": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23023-23179": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23179-23189": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23189-23258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23258-23351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23351-23427": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23427-23434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23434-23685": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23685-23713": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23713-23766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23766-23826": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23826-23962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24232-24276": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24276-24370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24370-24373": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24373-24433": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24433-24459": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24459-24504": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24504-24567": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24567-24705": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24705-25288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25288-25297": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25325-25416": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25416-25444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25444-26221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26221-26249": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26284-26333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26626-26701": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26701-26772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26772-26790": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26790-26802": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26802-26824": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26998-27112": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27112-27154": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27154-27179": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27179-27267": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27267-27322": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27322-27394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27535-27553": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27553-27564": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27564-27577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27577-27752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27752-27995": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27995-28253": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28253-28263": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28297-28318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28348-28368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28368-28380": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28380-28508": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28508-28718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28718-28835": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28835-28865": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28865-28869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28869-28881": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 96781 but answer has not been sufficiently repeated."}}

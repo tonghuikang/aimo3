@@ -1,0 +1,257 @@
+{"97-165": {"better": [], "neutral": [], "worse": [], "reason": "All completions introduce the tournament structure. All make similar observations about Swiss-system pairing and binary scoring."}}
+{"165-200": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss pairing rules and binary representation of scores. Similar observations."}}
+{"200-282": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe initial round mechanics and binary score representation. Equivalent observations."}}
+{"282-374": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe round 2 grouping and pairing. All arrive at same binary score insight."}}
+{"374-408": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe group sizes and pairing rules. Equivalent content."}}
+{"408-429": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe round 2 score mechanics. Equivalent content."}}
+{"429-461": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe post-round 2 score distribution. Equivalent content."}}
+{"461-545": {"better": [], "neutral": [], "worse": [], "reason": "All completions list the four possible scores after round 2. Equivalent content."}}
+{"545-566": {"better": [], "neutral": [], "worse": [], "reason": "All completions summarize that there are 4 distinct score groups. Equivalent content."}}
+{"566-599": {"better": [], "neutral": [], "worse": [], "reason": "All completions generalize the tournament structure as binary bits. Equivalent observations."}}
+{"599-684": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe final scores as 20-bit binary numbers. Equivalent content."}}
+{"684-704": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss how speed determines winners and binary score mapping. Equivalent reasoning."}}
+{"704-760": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss pairing constraints and deterministic outcomes. Equivalent reasoning."}}
+{"760-959": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss final ranking and possible orderings. Similar analysis."}}
+{"959-1479": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss counting possible orderings and linear extensions. Similar analysis."}}
+{"1479-1758": {"better": [], "neutral": [], "worse": [], "reason": "All completions begin simulation for small n=4. Similar approach."}}
+{"1758-1974": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss unique final scores and binary tournament structure. Similar analysis."}}
+{"1974-2035": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss tournament process and winner constraints. Similar reasoning."}}
+{"2035-2106": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss sorting network analogy and group splitting. Similar analysis."}}
+{"2106-2205": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss binary insertion sort analogy and counting possible orderings. Similar analysis."}}
+{"2205-2362": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss fastest/slowest runners and small case simulation. Similar analysis."}}
+{"2362-2537": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss fastest/slowest runner constraints. Similar observations."}}
+{"2537-2572": {"better": [], "neutral": [], "worse": [], "reason": "All completions note final ordering depends on pairing choices. Similar observations."}}
+{"2572-2600": {"better": [], "neutral": [], "worse": [], "reason": "All completions note need to count possible orderings. Similar analysis."}}
+{"2600-2735": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze binary tree structure and winner constraints. Similar reasoning."}}
+{"2735-2859": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze which subsets can be winners via Hall's condition. Similar analysis."}}
+{"2859-3483": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze matching constraints for winner subsets with small examples. Similar analysis."}}
+{"3483-3705": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive the Hall's condition for valid winner sets. Similar analysis."}}
+{"3705-3727": {"better": [], "neutral": [], "worse": [], "reason": "All completions note constraint on winner sets. Similar observations."}}
+{"3727-3760": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore possible winner subsets with n=4 examples. Similar analysis."}}
+{"3760-3895": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss counting N via combinatorial structure. Similar reasoning."}}
+{"3895-4077": {"better": [], "neutral": [], "worse": [], "reason": "All completions reformulate problem with labeled speeds. Similar approach."}}
+{"4077-4172": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss binary tree structure and score uniqueness. Similar analysis."}}
+{"4172-4230": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify small case n=2. Similar observations."}}
+{"4230-4244": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze n=4 case. Similar observations."}}
+{"4244-4360": {"better": [], "neutral": [], "worse": [], "reason": "All completions detail round-by-round simulation. Similar analysis."}}
+{"4360-4608": {"better": [], "neutral": [], "worse": [], "reason": "All completions confirm scores are always {3,2,1,0} for n=4. Similar analysis."}}
+{"4608-4676": {"better": [], "neutral": [], "worse": [], "reason": "All completions confirm final scores are unique bijection. Similar observations."}}
+{"4676-4708": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss counting N as bijections to binary tree. Similar reasoning."}}
+{"4708-4823": {"better": [], "neutral": [], "worse": [], "reason": "All completions formulate counting problem. Similar analysis."}}
+{"4823-4960": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss counting N via binary tree labeling. Similar analysis."}}
+{"4960-5026": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe recursive partitioning of groups. Similar reasoning."}}
+{"5026-5107": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe binary string determined by win/loss sequence. Similar analysis."}}
+{"5107-5247": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss sorting network analogy. Similar analysis."}}
+{"5247-5329": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss comparison network structure. Similar analysis."}}
+{"5329-5373": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss counting final permutations. Similar reasoning."}}
+{"5373-5428": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss binary heap/tree analogy. Similar reasoning."}}
+{"5428-5476": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up to compute N for small cases. Similar approach."}}
+{"5476-5626": {"better": [], "neutral": [], "worse": [], "reason": "All completions define binary string representation. Similar analysis."}}
+{"5626-5648": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe binary string as win/loss sequence. Similar analysis."}}
+{"5648-5703": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss pairing control and constraints. Similar reasoning."}}
+{"5703-5742": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss binary tree/decision tree analogy. Similar analysis."}}
+{"5742-5795": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify m=1 case yields N=1. Similar observations."}}
+{"5795-5871": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss computing N and its factorization. Similar approach."}}
+{"5871-5900": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss counting N via combinatorial formula. Similar reasoning."}}
+{"5900-6019": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe pairing constraints within groups. Similar analysis."}}
+{"6019-6162": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe winner/loser partition conditions. Similar analysis."}}
+{"6162-6251": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze matching conditions and perfect matching counts. Similar analysis."}}
+{"6251-6541": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze perfect matching conditions. Similar reasoning."}}
+{"6541-6611": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss winner subsets and matching structure. Similar analysis."}}
+{"6611-6690": {"better": [], "neutral": [], "worse": [], "reason": "All completions count total matchings as product over groups. Similar analysis."}}
+{"6690-6880": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe binary tree structure of matchings. Similar reasoning."}}
+{"6880-7009": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe binary tree pairing structure. Similar analysis."}}
+{"7009-7153": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe bottom-up tree construction. Similar analysis."}}
+{"7153-7193": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe round 2 tree construction. Similar analysis."}}
+{"7193-7284": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe top-down vs bottom-up viewpoints. Similar analysis."}}
+{"7284-7429": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe top-down binary tree representation. Similar analysis."}}
+{"7429-7576": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe binary tree structure by bits. Similar analysis."}}
+{"7576-7614": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe depth 20 tree structure. Similar analysis."}}
+{"7614-7861": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe tree matching constraints. Similar analysis."}}
+{"7861-8013": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe binary tree matching structure. Similar analysis."}}
+{"8013-8088": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe matching constraints. Similar analysis."}}
+{"8088-8287": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe dominance condition. Similar analysis."}}
+{"8287-8352": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe recursive partitioning. Similar analysis."}}
+{"8352-8375": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe assignment condition. Similar analysis."}}
+{"8375-8412": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe counting leaf labelings. Similar analysis."}}
+{"8412-8608": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore the binary tree structure and how participants get assigned to leaves based on win/loss paths. Similar conceptual analysis."}}
+{"8608-8827": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore various aspects of the tournament structure (heap analogies, sorting networks, whether all permutations are reachable). Similar exploratory analysis."}}
+{"8827-8854": {"better": [], "neutral": [], "worse": [], "reason": "All completions propose to test whether all permutations are achievable through small case enumeration. Similar approach to investigation."}}
+{"8854-8987": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the need to enumerate possible final rankings for small cases. Transition statements to brute force exploration."}}
+{"8987-9081": {"better": [], "neutral": [], "worse": [], "reason": "All completions analyze small cases (m=1, m=2) and note that not all permutations are reachable. Similar observations."}}
+{"9081-9152": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss whether any permutation is possible and set up small case analysis. Similar reasoning."}}
+{"9152-9214": {"better": [], "neutral": [], "worse": [], "reason": "All completions establish that for m=1 there's only one ordering (fastest first) and propose code enumeration for m=2. Similar approach."}}
+{"9214-9276": {"better": [], "neutral": [], "worse": [], "reason": "Both completions propose to enumerate all tournament pairings for m=2 (4 participants). Same approach."}}
+{"9276-9340": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up code enumeration for small cases. Transition to implementation."}}
+{"9340-9484": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the recursive enumeration approach for small cases. Equivalent setup for brute force enumeration."}}
+{"9484-9586": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe recursive function structure for generating outcomes. Similar algorithmic approach."}}
+{"9586-9631": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the count of perfect matchings and note that enumeration is feasible for n=4. Similar observations."}}
+{"9631-9711": {"better": [], "neutral": [], "worse": [], "reason": "All completions calculate number of possible matchings at each level and discuss the product structure. Similar analysis."}}
+{"9711-9844": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss how many tournament schedules exist and that N (distinct rankings) may be less. Similar reasoning about the counting structure."}}
+{"9844-9953": {"better": [], "neutral": [], "worse": [], "reason": "All completions note that we need to count distinct final rankings, not tournament schedules. Similar clarification."}}
+{"9953-10096": {"better": [], "neutral": [], "worse": [], "reason": "Alternates q4w33m, ottmrg, and 6cdij3 more clearly explain that the final binary string depends only on the partition into winners/losers, not the specific matching. This is the key insight that enables the Catalan number counting. The original is less clear, and other alternates focus on different aspects."}}
+{"10096-10171": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe how the final mapping depends on selecting winner subsets at each node with dominance condition. Similar reasoning."}}
+{"10171-10196": {"better": [], "neutral": [], "worse": [], "reason": "All completions reformulate the problem as counting recursive partitions with dominance constraints. Similar restatement of the problem."}}
+{"10196-10422": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the dominance condition and propose small case enumeration. Similar approach to the counting problem."}}
+{"10422-10460": {"better": [], "neutral": [], "worse": [], "reason": "Alternate xsz6j2 provides the clearest example showing that {b,d} (not the top half {c,d}) can also be a valid winner set, with explicit pairing analysis. This demonstrates the dominance condition is more flexible than just \"top half\". The original initially claims S1 must be top half, which is incorrect."}}
+{"10460-10704": {"better": [], "neutral": [], "worse": [], "reason": "Alternate w4fcog most clearly states the necessary and sufficient condition: after sorting both sets, w_i > l_i for all i. This is the key characterization that leads to the Catalan number connection."}}
+{"10704-10799": {"better": [], "neutral": [], "worse": [], "reason": "Alternates yn0re5 and v0tbfd clearly identify the dominance condition (a_i > b_i for all i after sorting) and note this is the Hall condition. This is the key characterization needed for Catalan number connection."}}
+{"10799-10825": {"better": [], "neutral": [], "worse": [], "reason": "All completions note that the dominance condition allows more than just \"top half\" as winners. Similar observation verifying the condition."}}
+{"10825-10876": {"better": [], "neutral": [], "worse": [], "reason": "All completions confirm the dominance condition with example A={2,4}, B={1,3}. Same verification."}}
+{"10876-10907": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the dominance/majorization condition between winners and losers. Equivalent analysis."}}
+{"10907-10925": {"better": [], "neutral": [], "worse": [], "reason": "The alternates akwg6t and igp0ax explicitly identify the connection to Catalan numbers and ballot sequences, providing the key insight that f(h) = Catalan number. The original just notes the need to count and multiply, without identifying the closed form. Since this is a correct trace, the early explicit identification of Catalan numbers shows better reasoning."}}
+{"10925-10952": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the recursive structure of the product. Similar content establishing N as product over internal nodes."}}
+{"10952-11096": {"better": [], "neutral": [], "worse": [], "reason": "Alternate fc24ic provides the complete formula N = product_{h=1}^{20} f(2^h)^{2^{20-h}} which is the key formula. Other completions discuss symmetry or structure without arriving at the explicit product formula yet."}}
+{"11096-11186": {"better": [], "neutral": [], "worse": [], "reason": "All completions describe the product formula with node counts. Equivalent observations establishing the structure."}}
+{"11186-11267": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the same product formula N = product_{h=1}^{20} f(h)^{2^{20-h}}. Equivalent content."}}
+{"11267-11288": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss next steps to compute f(h) or exponent of 5. Equivalent transition statements."}}
+{"11288-11617": {"better": [], "neutral": [], "worse": [], "reason": "Alternate or7toc explicitly identifies the Dyck path condition and states \"This is the Catalan number C_n = (1/(n+1)) * binom(2n, n)\" providing the explicit formula. The original and other alternates discuss the ballot/dominance condition but don't provide the closed form as clearly."}}
+{"11617-11745": {"better": [], "neutral": [], "worse": [], "reason": "Alternate or7toc provides the most complete derivation, explicitly stating \"That's exactly the Dyck path condition; the number of such sequences is the Catalan number C_n = (1/(n+1)) * binom(2n, n).\" The original and other alternates discuss the prefix condition but don't state the Catalan formula as explicitly."}}
+{"11745-11986": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive the ballot condition and connect to Catalan numbers. The original and several alternates (plokxe, 4eixga) all arrive at the same Catalan formula. Equivalent analysis."}}
+{"11986-12051": {"better": [], "neutral": [], "worse": [], "reason": "Alternate uobyom provides the explicit formula f(h) = C_{2^{h-1}} = (1/(2^{h-1}+1)) * binom(2^h, 2^{h-1}) and proposes to verify with small cases. This is the most complete and explicit statement of the key result."}}
+{"12051-12103": {"better": [], "neutral": [], "worse": [], "reason": "Alternate ewkmrp provides the most thorough analysis, checking all subsets {3,4}, {2,4}, {2,3}, {1,4} and verifying which satisfy the prefix condition. This shows why exactly 2 subsets work, matching C_2=2."}}
+{"12103-12146": {"better": [], "neutral": [], "worse": [], "reason": "All completions confirm f(2) = C_2 = 2 based on the two valid subsets. Equivalent verification."}}
+{"12146-12254": {"better": [], "neutral": [], "worse": [], "reason": "Alternate g4dk70 explicitly states the general formula f(h) = C_{2^{h-1}} = (1/(2^{h-1}+1)) * binom(2^h, 2^{h-1}), providing the complete closed form. Other completions just verify f(1)=1 without stating the general formula."}}
+{"12254-12303": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the conjecture/formula f(h) = C_{2^{h-1}}. Some propose to verify with h=3, others state the formula directly. Equivalent progress."}}
+{"12303-12406": {"better": [], "neutral": [], "worse": [], "reason": "All completions establish f(h) = Catalan_{2^{h-1}} = (1/(2^{h-1}+1)) * binom(2^h, 2^{h-1}). Some cite the ballot problem proof, others verify computationally. Equivalent conclusions."}}
+{"12406-12436": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the key formula N = product of C_{2^{h-1}}^{2^{20-h}} or equivalently f(h) = Catalan_{2^{h-1}}. Equivalent content."}}
+{"12436-12475": {"better": [], "neutral": [], "worse": [], "reason": "All completions work out the indexing and exponent structure for the product formula. Equivalent algebraic manipulations."}}
+{"12475-12519": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive the exponent re-indexing. Some derive e_n = 2^{19}/n, others use j-indexing. Equivalent manipulations."}}
+{"12519-12544": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the Catalan number formula C_n = (1/(n+1)) * binom(2n,n) and/or transition to computing v_5(N). Similar content."}}
+{"12544-12588": {"better": [], "neutral": [], "worse": [], "reason": "All completions expand N as the product of (1/(n_h+1) * binom(2n_h, n_h))^{e_h}. Equivalent formula statement."}}
+{"12588-12610": {"better": [], "neutral": [], "worse": [], "reason": "All completions continue with formula expansion or transition to computing exponents. Similar content."}}
+{"12610-12630": {"better": [], "neutral": [], "worse": [], "reason": "All completions state binom(2n_h, n_h) = binom(2^h, 2^{h-1}) or equivalent. Same algebraic step."}}
+{"12630-12685": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the full product formula with explicit expressions. Equivalent content."}}
+{"12685-12769": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up the formula for N using B_h notation or transition to computing v_5(N) as the key step. Similar progress."}}
+{"12769-12775": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss the need to compute v_5(N) and v_2(N), with k = min(v_2, v_5). Similar setup for the exponent calculation."}}
+{"12775-12869": {"better": [], "neutral": [], "worse": [], "reason": "Alternate 0h8hal provides the most detailed analysis, noting that 2^{h-1}+1 may be divisible by 5 for some h (e.g., h=3 gives 5, h=7 gives 65=5*13) which affects v_5(N). This is important for the correct computation. Other completions just assume v_5 is limiting without analyzing the denominator."}}
+{"12869-13038": {"better": [], "neutral": [], "worse": [], "reason": "All completions note that v_5(N) is likely less than v_2(N), so k = v_5(N). Similar reasoning about which exponent is limiting."}}
+{"13038-13124": {"better": [], "neutral": [], "worse": [], "reason": "Alternate k1cbk3 carefully analyzes which h values give 2^{h-1}+1 \u2261 0 mod 5, computing the period of 2 mod 5 to find h=3 has factor 5 in denominator. This is important for correct v_5 calculation."}}
+{"13124-13187": {"better": [], "neutral": [], "worse": [], "reason": "All completions state the formula v_5(N) = sum of e_h * (v_5(B_h) - v_5(2^{h-1}+1)). Equivalent expression of the valuation sum."}}
+{"13187-13290": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive v_2(N) formula, noting denominator is odd except for h=1. Similar formula derivation."}}
+{"13290-13330": {"better": [], "neutral": [], "worse": [], "reason": "Alternate wh6isj provides the key insight that v_2(binom(2n,n)) equals the number of 1s in binary representation of n (by Kummer's theorem). This is a crucial formula for efficient v_2 computation."}}
+{"13330-13360": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss computing v_5(N) and note that computation proceeds. Some start Python code. Similar progress."}}
+{"13360-13631": {"better": [], "neutral": [], "worse": [], "reason": "Alternates apztq2 and bvhh5a both cite Kummer's theorem for computing v_p(binom(2n,n)) as number of carries when adding n+n in base p. This provides the efficient approach for valuation computation. The original has a correct discussion but is less clear about the final formula."}}
+{"13631-13990": {"better": [], "neutral": [], "worse": [], "reason": "Alternate 5zrbgg provides the clearest formula: v_p(binom(n,k)) = (s_p(k) + s_p(n-k) - s_p(n))/(p-1), and derives v_5(binom(2^h, 2^{h-1})) = (2*s_5(2^{h-1}) - s_5(2^h))/4. This is the key formula for computation."}}
+{"13990-14040": {"better": [], "neutral": [], "worse": [], "reason": "Alternate bhrtpe derives the explicit formula v_p(binom(2a,a)) = (2*s_p(a) - s_p(2a))/(p-1) using Legendre's formula. This provides the cleanest computational approach."}}
+{"14040-14065": {"better": [], "neutral": [], "worse": [], "reason": "Alternate e4vr76 correctly identifies that v_2(B_h) = 1 for all h >= 1 because 2^{h-1} has exactly one 1-bit in binary. This is an important insight that v_2(B_h) is constant = 1."}}
+{"14065-14925": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss v_2(B_h) computation and arrive at the same conclusion that v_2(B_h)=1 for power of 2 arguments. The original has a very detailed derivation but reaches the same conclusion."}}
+{"14925-15245": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify v_2(B_h) = popcount(2^{h-1}) = 1 with small examples. Same verification."}}
+{"15245-15296": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15296-15496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15496-15510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15510-15550": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15655-15754": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15754-15842": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15842-16056": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16056-16102": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16102-16207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16207-16233": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16233-16251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16251-16306": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16306-16326": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16326-16411": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16411-16431": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16431-16469": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16469-16496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16496-16875": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16875-17255": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17255-17283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17283-17568": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17568-17610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17610-17637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17637-17642": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17642-17655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17655-17895": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17895-17929": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17929-18121": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18121-18127": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18157-18213": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18213-18219": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18219-18338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18338-18352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18841-18925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18925-19093": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19093-19131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19191-19433": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19433-19739": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19739-19745": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19745-19814": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19814-19826": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19826-19853": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19853-19883": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19883-19908": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19908-19916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19916-19976": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19976-19984": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19984-20054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20054-20151": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20151-20188": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20188-20239": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20239-20276": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20276-20341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20341-20426": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20426-20440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20440-20702": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20702-20823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20823-20834": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20834-20864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20864-20989": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20989-21009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21009-21139": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21139-21149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21149-21211": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21211-21264": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21264-21424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21424-21439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21439-21474": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21474-21519": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21519-21539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21539-21795": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21795-21955": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21955-21991": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21991-22025": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22146-22255": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22255-22273": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22327-22337": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22337-22451": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22451-22502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22502-22622": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22622-22631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22651-22671": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22671-22695": {"better": [], "neutral": ["original", "szw4ox", "g053o9", "4ktw2d", "gyijbj", "9ku6aq"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"22695-22769": {"better": [], "neutral": ["original", "4rkibd", "thfvdx", "ae0uqo", "ku5vmo", "36hviw"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"22769-22805": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22805-22915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22915-22949": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22949-22958": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22978-23017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23017-23025": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23025-23044": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23044-23159": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23159-23203": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23203-23362": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23362-23416": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23416-24158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24158-24169": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24169-24182": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24182-24204": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24204-24212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24212-24231": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24231-24321": {"better": [], "neutral": ["original", "k60owb", "pl2l0x", "p53qlw", "n50sxd"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"24321-24434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24434-24500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24566-24584": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24584-24642": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24642-24650": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24650-24656": {"better": [], "neutral": ["original", "glk2xc", "j2lx5d", "uskt1z", "ngpg5k", "oniwdm"], "worse": [], "reason": "Alternate has correct boxed answer 21818 but answer has not been sufficiently repeated."}}
+{"24656-24674": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24674-24718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24718-24746": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24746-24786": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24786-24853": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24853-24974": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24974-24991": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24991-25035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25035-25051": {"better": [], "neutral": [], "worse": [], "reason": "Both completions compute 121818 mod 100000 = 21818 correctly. Same final computation."}}
+{"25051-25060": {"better": [], "neutral": ["original", "vql6oc", "6web07", "pdvv2k"], "worse": [], "reason": "Original has correct boxed answer 21818 but answer has not been sufficiently repeated."}}

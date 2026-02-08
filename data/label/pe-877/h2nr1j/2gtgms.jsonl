@@ -1,0 +1,1040 @@
+{"78-128": {"better": [], "neutral": ["original", "8nv3ce", "4eo5f9", "rs3lw8", "51wjts"], "worse": [], "reason": "All completions correctly describe XOR-product as XOR of shifted copies. The alternate 51wjts provides a concrete example which is helpful but doesn't represent fundamentally better reasoning."}}
+{"128-145": {"better": [], "neutral": ["original", "0sv547", "xynlm7", "vqe945", "hnvpgm"], "worse": [], "reason": "All completions recognize the connection to GF(2) polynomial multiplication. The alternates xynlm7 and hnvpgm provide more detailed explanations but all arrive at the same understanding."}}
+{"145-176": {"better": [], "neutral": ["original", "cmfbpe", "4ibjcp"], "worse": [], "reason": "All completions express the same XOR-sum formula with minor variations in notation."}}
+{"176-289": {"better": [], "neutral": ["original", "qtwxeo", "lv40xk"], "worse": [], "reason": "All completions describe the polynomial multiplication interpretation. The original provides the most complete explanation but all reach the same understanding."}}
+{"289-318": {"better": [], "neutral": ["original", "u60q2m", "iin6nt"], "worse": [], "reason": "All completions correctly identify XOR-product as polynomial multiplication over GF(2)."}}
+{"318-441": {"better": [], "neutral": ["original", "br9umm", "ymvqnu", "fqyorw", "o9gt0w"], "worse": [], "reason": "All completions describe the polynomial representation correctly. The alternate ymvqnu provides a worked example (7*3=9) which is helpful verification."}}
+{"441-476": {"better": [], "neutral": ["original", "quhzb7", "3kh2e6", "u4743y", "p8ixtc"], "worse": [], "reason": "All completions appropriately note the ambiguity in notation and correctly identify that XOR-product is associative."}}
+{"476-614": {"better": [], "neutral": ["original", "we8yqc", "iujh2x", "b0lb3a", "g32yzu"], "worse": [], "reason": "All completions correctly analyze that XOR-product is associative because polynomial multiplication is associative. They also correctly identify that 2 corresponds to the polynomial x."}}
+{"614-643": {"better": [], "neutral": ["original", "efnepp", "od5xa4"], "worse": [], "reason": "All completions express the same associativity conclusion. The alternate efnepp is slightly clearer in noting commutativity as well."}}
+{"643-648": {"better": [], "neutral": ["original", "r1wery", "91g5ba", "aiz5wn", "rfz419"], "worse": [], "reason": "All completions transition to stating the equation. The alternate 91g5ba provides additional insight about 2 being polynomial X and the shift property."}}
+{"648-678": {"better": [], "neutral": ["original", "nj8cyh", "m9k9ce"], "worse": [], "reason": "All completions simply restate the equation with minor notation differences."}}
+{"678-737": {"better": [], "neutral": ["original", "mdvba2", "39nwb6"], "worse": [], "reason": "All completions summarize the problem requirements correctly."}}
+{"737-776": {"better": [], "neutral": ["original", "bfyhja", "15hk4n"], "worse": [], "reason": "All completions describe the need to find patterns in solutions."}}
+{"776-791": {"better": [], "neutral": ["original", "yeiy9n", "fv5chu", "1ok8g3", "h2fs0d"], "worse": [], "reason": "All completions discuss the XOR behavior and potential patterns. The alternate fv5chu provides more detail about how repeated b values cancel in XOR."}}
+{"791-817": {"better": [], "neutral": ["original", "2oslfh", "8f3y9d"], "worse": [], "reason": "All completions state the goal of computing XOR of b values."}}
+{"817-839": {"better": [], "neutral": ["original", "39s7na", "1qkkjt"], "worse": [], "reason": "All completions note the need for a pattern given large N."}}
+{"839-865": {"better": [], "neutral": ["original", "wkydi5", "z6nqyy", "t64id5", "f9dlfv"], "worse": [], "reason": "All completions suggest looking for patterns. The alternate z6nqyy provides more detailed polynomial formulation which is helpful."}}
+{"865-874": {"better": ["0n3wvl"], "neutral": ["original", "ve9eqb", "cjgl3m", "77379z"], "worse": [], "reason": "The alternate 0n3wvl provides detailed derivation of the key fact that squaring in GF(2) yields sum a_i x^{2i} because cross terms vanish. This is a key insight. The original and other alternates just state intent to analyze without providing as much detail."}}
+{"874-898": {"better": [], "neutral": ["original", "y8r60f", "5wxjsu", "in1xrl", "c9v380"], "worse": [], "reason": "All completions define polynomial representation equivalently."}}
+{"898-1057": {"better": [], "neutral": ["original", "ypnsep", "8dldxh", "h6nwym", "q6zlh1"], "worse": [], "reason": "All completions correctly derive that squaring in GF(2) maps a_i to position 2i (no cross terms). The original is most detailed."}}
+{"1057-1076": {"better": [], "neutral": ["original", "ltt4wf", "5eqlm5", "pdm8om", "ni6nr9"], "worse": [], "reason": "All completions state the analogous result for b\u2297b."}}
+{"1076-1186": {"better": [], "neutral": ["original", "l9dj92", "gk5rsq", "89nm1z", "kfx0jo"], "worse": [], "reason": "All completions correctly derive that 2\u2297a\u2297b = x*(a\u2297b), i.e., a left shift of the XOR-product."}}
+{"1186-1193": {"better": [], "neutral": ["original", "0si14q", "lod0gf", "76nua4", "h8a5yz"], "worse": [], "reason": "All completions transition to the polynomial form of the equation."}}
+{"1193-1260": {"better": [], "neutral": ["original", "1hvqfe", "n72mdk", "fazmf6", "wyr3pi"], "worse": [], "reason": "All completions correctly state the polynomial equation and identify 5 = 1 + x^2."}}
+{"1260-1264": {"better": [], "neutral": ["original", "b5h628", "j9cm51", "gh70tr", "yvgytj"], "worse": [], "reason": "All completions are transition statements setting up the polynomial equation."}}
+{"1264-1331": {"better": [], "neutral": ["original", "jrqhej", "4tnljk", "xdgoki", "f037j2"], "worse": [], "reason": "All completions state the polynomial equation equivalently."}}
+{"1331-1333": {"better": [], "neutral": ["original", "89tnsu", "ah05jx", "on7758", "qq3j1h"], "worse": [], "reason": "All completions are transition statements."}}
+{"1333-1358": {"better": [], "neutral": ["original", "ljxmj2", "h2bdeh", "f1igb1"], "worse": [], "reason": "All completions state the same polynomial equation."}}
+{"1358-1368": {"better": [], "neutral": ["original", "qpgwxr", "hwujeq", "fbmrom", "ypwrul"], "worse": [], "reason": "All completions explore potential algebraic simplifications but none makes significant progress."}}
+{"1368-1415": {"better": [], "neutral": ["original", "8b0bnv", "ug0gau", "m7os7o", "5g3cje"], "worse": [], "reason": "All completions restate the problem goal with similar observations about the equation structure."}}
+{"1415-1425": {"better": [], "neutral": ["original", "8lgmia", "o7dqrd", "1gkyuu", "v5n99l"], "worse": [], "reason": "All completions recognize this as a functional equation requiring solution."}}
+{"1425-1476": {"better": [], "neutral": ["original", "4egy8m", "wm8v8x", "wagxen", "8wnk0d"], "worse": [], "reason": "All completions approach the problem as a quadratic equation in b."}}
+{"1476-1511": {"better": [], "neutral": ["original", "wtf1hq", "tz1oat", "oc1o3w", "0gsdir"], "worse": [], "reason": "All completions recognize the quadratic equation structure over GF(2)[x]."}}
+{"1511-1537": {"better": [], "neutral": ["original", "m0babf", "0ev7w3", "sq0yyz", "5pyyfs"], "worse": [], "reason": "All completions state the quadratic equation equivalently."}}
+{"1537-1618": {"better": [], "neutral": ["original", "3csats", "ee1uu0", "8qm6pc", "499g6v"], "worse": [], "reason": "All completions explore completing the square in characteristic 2 without success - this is expected since the standard approach doesn't work directly."}}
+{"1618-1691": {"better": [], "neutral": ["original", "qd8b1r", "244rrq", "6e1oos", "szwd88"], "worse": [], "reason": "All completions attempt substitution b = xa \u2295 d to simplify the equation."}}
+{"1691-1694": {"better": [], "neutral": ["original", "b617px", "izns2m", "k2d14c"], "worse": [], "reason": "All completions are transition statements to compute the substitution."}}
+{"1694-1716": {"better": [], "neutral": ["original", "oerzjd"], "worse": [], "reason": "Both completions restate the equation equivalently."}}
+{"1716-1728": {"better": [], "neutral": ["original", "cx1mfy", "20hf7j", "zyq8h2", "3xqfzc"], "worse": [], "reason": "All completions perform the same substitution."}}
+{"1728-1757": {"better": [], "neutral": ["original", "977eib", "yvrdq1", "iv5l39"], "worse": [], "reason": "All completions compute b^2 correctly using the squaring property in characteristic 2."}}
+{"1757-1802": {"better": [], "neutral": ["original", "wgmjsq", "vdaoyf", "nl3cyn", "gnwg7s"], "worse": [], "reason": "All completions compute xab correctly using distributive property."}}
+{"1802-1805": {"better": [], "neutral": ["original", "ff2cn6", "fmi7d1", "ye6ix4", "j1w9dj"], "worse": [], "reason": "All completions are transition statements to plug into the equation."}}
+{"1805-1900": {"better": [], "neutral": ["original", "z3fj3w", "8q7tl8", "5ww2aq", "ls0561"], "worse": [], "reason": "All completions correctly simplify b^2 + xab showing the x^2a^2 terms cancel."}}
+{"1900-1906": {"better": [], "neutral": ["original", "lod0gf", "hgubbw", "7zjad6"], "worse": [], "reason": "All completions are transition statements."}}
+{"1906-1936": {"better": [], "neutral": ["original", "7mk8vf", "eczkw7", "gzruvt"], "worse": [], "reason": "All completions state the simplified equation equivalently."}}
+{"1936-1948": {"better": [], "neutral": ["original", "4kgff4", "nx3p0h", "2rugjr", "ps292i"], "worse": [], "reason": "All completions observe that the substitution doesn't simplify the problem structure."}}
+{"1948-1959": {"better": [], "neutral": ["original", "zql74p", "wg6ehz", "muainh", "99lo90"], "worse": [], "reason": "All completions recognize the equation has the same form after substitution."}}
+{"1959-2000": {"better": [], "neutral": ["original", "2niyiw", "1styrt", "j8t367", "6bmkq1"], "worse": [], "reason": "All completions explore further simplifications without significant progress."}}
+{"2000-2017": {"better": [], "neutral": ["original", "17r9k9", "py16li", "y3v5am", "kuk2i9"], "worse": [], "reason": "All completions try different substitutions without finding a breakthrough."}}
+{"2017-2078": {"better": [], "neutral": ["original", "b346i6", "t5kpeb", "rh1t81", "qeaywr"], "worse": [], "reason": "All completions observe the symmetry and try various algebraic approaches."}}
+{"2078-2095": {"better": [], "neutral": ["original", "rbyyz8", "40rpg7", "a9kcy9", "ycoolz"], "worse": [], "reason": "All completions explore algebraic transformations; 40rpg7 considers quadratic extension, a9kcy9/ycoolz derive (a\u2295b)^2 = a^2\u2295b^2 correctly."}}
+{"2095-2123": {"better": [], "neutral": ["original", "mr6n0v", "df88yq", "51e0ou", "iye18y"], "worse": [], "reason": "All completions try various algebraic transformations; df88yq analyzes bit positions explicitly which is useful."}}
+{"2123-2150": {"better": [], "neutral": ["original", "tmgn0d", "9ezjku", "tndkqd", "rg30dh"], "worse": [], "reason": "All completions compute (a+bx)^2 or similar and note cross-terms vanish; 9ezjku makes useful simplification that a^2+b^2=(a+b)^2."}}
+{"2150-2211": {"better": [], "neutral": ["original", "hx3vow", "d5omdy", "ecx3eg", "6lkv7v"], "worse": [], "reason": "All completions explore factorization approaches; 6lkv7v usefully frames as quadratic in b with specific coefficient analysis."}}
+{"2211-2230": {"better": [], "neutral": ["original", "8h3bmp"], "worse": [], "reason": "Both completions express the same simplified equation form."}}
+{"2230-2244": {"better": [], "neutral": ["original", "g0ber1", "k63hlk", "6vh1g4"], "worse": [], "reason": "All completions state the simplified equation or note we need to solve it; equivalent reasoning."}}
+{"2244-2261": {"better": [], "neutral": ["original", "8h3bmp", "o4cx1s", "ag0gw0"], "worse": [], "reason": "All completions express identical simplified equation."}}
+{"2261-2279": {"better": [], "neutral": ["original", "r1s5wi", "5vm0gb", "tjcukk", "o19sho"], "worse": [], "reason": "All completions clarify that ab is polynomial product; o19sho most explicitly addresses notation."}}
+{"2279-2335": {"better": [], "neutral": ["original", "744rrk", "gqap69", "a21xj3", "r14ypu"], "worse": [], "reason": "All completions note we have a relation linking sum and product; r14ypu restates the problem clearly."}}
+{"2335-2381": {"better": [], "neutral": ["original", "1o5hxy", "la56md", "cqwnpe", "u9bja6"], "worse": [], "reason": "All completions define s=a\u2295b and derive s^2=a^2\u2295b^2; equivalent reasoning steps."}}
+{"2381-2398": {"better": [], "neutral": ["original", "1e165n", "ejpef0", "6ozj0a"], "worse": [], "reason": "All completions express the same simplified equation s^2\u2295xab=1+x^2."}}
+{"2398-2440": {"better": [], "neutral": ["original", "b5h628", "t8kb0s", "9bk65w", "wyq9hz"], "worse": [], "reason": "All completions express or rearrange the equation linking s^2 and ab; equivalent steps."}}
+{"2440-2614": {"better": [], "neutral": ["original", "vtw1lz", "5o7q2p", "kzuvpg", "lcjr6i"], "worse": [], "reason": "All completions explore whether ab can be expressed via squares/sums; correctly note product is not linear in bits."}}
+{"2614-2621": {"better": [], "neutral": ["original", "q3m2a0", "foejzq", "ef7lrh", "w4et4z"], "worse": [], "reason": "All completions note product ab is different from simple expressions; all equivalent observations."}}
+{"2621-2649": {"better": [], "neutral": ["original", "dlpkkb", "niqq5d", "6wyor3", "zpp6kx"], "worse": [], "reason": "All completions propose alternative approaches (bitwise, quadratic in b, solve for b); equivalent exploration."}}
+{"2649-2661": {"better": [], "neutral": ["original", "avhsp1", "sexu21", "y3g0je", "tmp5cf"], "worse": [], "reason": "All completions define bit notation a_i, b_i for polynomial coefficients; equivalent setup."}}
+{"2661-2679": {"better": [], "neutral": ["original", "g0pyf7", "kn8qrc", "26kp8f", "yh9bhq"], "worse": [], "reason": "All completions express a^2 = sum a_i x^{2i}; equivalent formulations."}}
+{"2679-2693": {"better": [], "neutral": ["original", "brw1vs", "pw88pb", "rb4kj7"], "worse": [], "reason": "All completions express b^2 similarly; equivalent."}}
+{"2693-2711": {"better": [], "neutral": ["original", "1r8lvj", "dgcfvm", "wrdjy4", "456kmv"], "worse": [], "reason": "All completions express product ab and xab in terms of sums over bits; equivalent."}}
+{"2711-2730": {"better": [], "neutral": ["original", "9opy8b", "4vwkxm", "fs2sm0", "xqw7j3"], "worse": [], "reason": "All completions express xab = sum a_i b_j x^{i+j+1}; equivalent."}}
+{"2730-2735": {"better": [], "neutral": ["original", "jhrdwy", "m6tuel", "0si14q", "q2j2k7"], "worse": [], "reason": "All completions write out equation or note coefficient matching requirement; equivalent."}}
+{"2735-2786": {"better": [], "neutral": ["original", "743frh", "2tmhkv", "zo9guu", "attlb4"], "worse": [], "reason": "All completions write out the full equation in summation form; equivalent."}}
+{"2786-2808": {"better": [], "neutral": ["original", "xoo8je", "qf5pk1", "644yyo", "r1kxro"], "worse": [], "reason": "All completions note coefficient matching mod 2; equivalent."}}
+{"2808-2827": {"better": [], "neutral": ["original", "337tyy", "codqtb", "vqr9no", "zvvlg0"], "worse": [], "reason": "All completions specify RHS has coefficient 1 at k=0,2 and 0 elsewhere; equivalent."}}
+{"2827-2830": {"better": [], "neutral": ["original", "mq5924", "04koox", "34vac3", "215jqo"], "worse": [], "reason": "All completions note this gives a system of equations for bits; equivalent."}}
+{"2830-2837": {"better": [], "neutral": ["original", "s80sfa", "4krfme"], "worse": [], "reason": "All completions begin to detail constraints for each k; equivalent setup."}}
+{"2837-2899": {"better": [], "neutral": ["original", "jnoacg", "rlt3fo", "j4s7sa", "7bx7nj"], "worse": [], "reason": "All completions express the coefficient constraint formula; equivalent formulations."}}
+{"2899-2906": {"better": [], "neutral": ["original", "o8w9jr", "uh8c9f", "u2yhcx", "0k2tct"], "worse": [], "reason": "All completions note this is a system of equations for binary bits; equivalent."}}
+{"2906-2923": {"better": [], "neutral": ["original", "z91gku", "81cie1", "2v3c18", "ugpa8q"], "worse": [], "reason": "All completions propose simplification or notation for analyzing bit constraints; equivalent."}}
+{"2923-2936": {"better": [], "neutral": ["original", "pgsyos", "6ezuu6", "9nr4ap", "uvog8y"], "worse": [], "reason": "All completions propose deriving constraints for low-degree bits or define variables; equivalent exploration."}}
+{"2936-2951": {"better": [], "neutral": ["original", "o182qa", "vtqjb2", "dvsxkz", "0c5v1j"], "worse": [], "reason": "All completions define bit arrays or analyze contributions; 0c5v1j provides detailed breakdown of coefficient contributions."}}
+{"2951-2965": {"better": [], "neutral": ["original", "935566", "7jkb7p", "hp0b1e", "d2klkf"], "worse": [], "reason": "All completions define unknowns or contributions for bits; equivalent setup."}}
+{"2965-3061": {"better": ["original"], "neutral": ["x59q3n", "v753a3", "9qdije", "6gld5f"], "worse": [], "reason": "Original derives equation k=0 constraint most thoroughly (a_0\u2295b_0=1); others just set up generically."}}
+{"3061-3073": {"better": ["azgiqj"], "neutral": ["original", "0krgo2", "hpbbjc", "j9iygs"], "worse": [], "reason": "azgiqj most comprehensively derives k=1 equation and combines with k=0 constraint to show exactly one of a0,b0 is 1."}}
+{"3073-3197": {"better": [], "neutral": ["original", "mfbjtf", "l45sqy", "7dg3yr", "ul6rmv"], "worse": [], "reason": "All completions derive k=1 equation correctly and note constraint is satisfied; equivalent."}}
+{"3197-3279": {"better": [], "neutral": ["original", "2rt6l6", "95f2u4", "zudd67", "gcs4sm"], "worse": [], "reason": "All completions derive k=2 equation correctly; equivalent derivations."}}
+{"3279-3312": {"better": [], "neutral": ["original", "gea7ui", "emch1m", "jn5bw2"], "worse": [], "reason": "All completions express the same k=2 equation; equivalent."}}
+{"3312-3317": {"better": [], "neutral": ["original", "yfv0dx", "8ke03d", "t4ysa4", "g97kf2"], "worse": [], "reason": "All completions note equation or move to next k; 8ke03d advances to k=3 equation."}}
+{"3317-3393": {"better": [], "neutral": ["original", "k66wiv", "21rttg", "60w9bu", "86eshr"], "worse": [], "reason": "All completions derive k=3 equation correctly; equivalent."}}
+{"3393-3398": {"better": [], "neutral": ["original", "a9y3l0", "w97lmy", "qw0ggq", "j342oe"], "worse": [], "reason": "All completions label equation or advance to k=4; equivalent progress."}}
+{"3398-3478": {"better": [], "neutral": ["original", "d1wc98", "2j7q9t", "4i4b72", "mwmvhx"], "worse": [], "reason": "All completions derive k=4 equation; equivalent."}}
+{"3478-3521": {"better": [], "neutral": ["original", "wp1iv3", "uhq6rb"], "worse": [], "reason": "All completions express the k=4 equation identically."}}
+{"3521-3526": {"better": [], "neutral": ["original", "89yg8v", "745d3l", "rfebu2", "zr0imr"], "worse": [], "reason": "All completions note generalization to higher k; zr0imr adds useful observation about convolution structure."}}
+{"3526-3532": {"better": [], "neutral": ["original", "spzuys", "lejuqj", "rytngc", "04xrvd"], "worse": [], "reason": "All completions note infinite system; 04xrvd adds useful note about finite solutions due to constraint propagation."}}
+{"3532-3550": {"better": [], "neutral": ["original", "wlxuk2", "54vin2", "9kygjw", "0fminl"], "worse": [], "reason": "All completions note symmetry or goal of finding solutions; equivalent observations."}}
+{"3550-3578": {"better": ["zubjs1"], "neutral": ["original", "1i7dgf", "lgnccg", "kuubnc"], "worse": [], "reason": "zubjs1 proposes brute-force computation to find pattern, which is the productive approach taken in trace."}}
+{"3578-3662": {"better": [], "neutral": ["original", "avrwrt", "haywmi", "zp0bla", "cq1vdv"], "worse": [], "reason": "All completions either verify example or discuss approach; cq1vdv proposes detailed brute-force implementation."}}
+{"3662-3902": {"better": [], "neutral": ["original", "z39dgd", "nu0akm", "6okp1o", "0owrs1"], "worse": [], "reason": "All completions verify a0\u2295b0=1 for example; equivalent verification."}}
+{"3902-3906": {"better": [], "neutral": ["original", "btjs74", "x3zzqp", "m8q1fs", "8jvsi3"], "worse": [], "reason": "All completions note system works for example; equivalent conclusions."}}
+{"3906-3919": {"better": [], "neutral": ["original", "ts6rv9", "3r9ka7", "cmg6pe", "7u9hq2"], "worse": [], "reason": "All completions state goal to find all solutions; 7u9hq2 notes possible bijection structure."}}
+{"3919-3978": {"better": [], "neutral": ["original", "o2u803", "7nhjta", "7cm7zr", "nqz02c"], "worse": [], "reason": "All completions propose brute-force enumeration with code; equivalent approach to finding pattern."}}
+{"3978-3993": {"better": [], "neutral": ["original", "d7e374", "82ad03", "k3v6jr", "fowr73"], "worse": [], "reason": "All completions analyze system structure or note periodicity; fowr73 usefully notes XOR pattern may be periodic in N."}}
+{"3993-4020": {"better": [], "neutral": ["original", "u99t00", "mqifbg", "hwsf4d", "j4dgi9"], "worse": [], "reason": "All completions restate equation in polynomial form; equivalent."}}
+{"4020-4075": {"better": [], "neutral": ["original", "ftan14", "1rswhf", "xmbmb7", "toh4qr"], "worse": [], "reason": "All completions explore substitutions or rewriting the equation; equivalent exploration."}}
+{"4075-4107": {"better": [], "neutral": ["original", "361j2i", "hgb257", "on7758", "jht2ru"], "worse": [], "reason": "All completions derive constraints on p from divisibility or substitution; equivalent analysis."}}
+{"4107-4112": {"better": [], "neutral": ["original", "8fnjx2", "1b2zrd", "zpgvoc", "xs4isw"], "worse": [], "reason": "All completions analyze divisibility by x and mapping between (c,p) and (a,b); equivalent analysis."}}
+{"4112-4128": {"better": [], "neutral": ["original", "19xvcp"], "worse": [], "reason": "Both completions express the same equation c^2 = 1 + x^2 \u2295 xp."}}
+{"4128-4146": {"better": ["vx4hb8"], "neutral": ["original", "e7klkr", "dv517k", "eui8ry"], "worse": [], "reason": "vx4hb8 derives the key insight that c^2 must have only even-degree terms, so RHS must too, which constrains p."}}
+{"4146-4160": {"better": ["qnwcze"], "neutral": ["original", "l5wxv3", "hi8s49", "957abc"], "worse": [], "reason": "qnwcze derives the crucial constraint that a\u2297b must have bits only at odd positions (key insight)."}}
+{"4160-4173": {"better": [], "neutral": ["original", "hozrum", "a4f7jy", "ye6msn", "peahki"], "worse": [], "reason": "All completions note the relationship between c, p, a, b; peahki explores solving for (a,b) from (c,p)."}}
+{"4173-4204": {"better": ["p8pasy"], "neutral": ["original", "ti1u57", "yn4tqg", "l1zps5"], "worse": [], "reason": "p8pasy provides the most complete derivation: c^2 only has even-degree, so xp must have only even-degree, so p must have only odd-degree monomials."}}
+{"4204-4438": {"better": ["6v3c9y"], "neutral": ["original", "kggos8", "25q1tz", "4qi647"], "worse": [], "reason": "6v3c9y makes key connection that a,b are roots of t^2 + ct + p = 0 over GF(2)[x], useful algebraic formulation."}}
+{"4438-4498": {"better": ["2ey0fr"], "neutral": ["original", "gil9p1", "7t7sgb", "22g8iu"], "worse": [], "reason": "2ey0fr provides the most detailed derivation showing p must have only odd-degree monomials."}}
+{"4498-4599": {"better": ["2kxayr"], "neutral": ["original", "48nklr", "mzsuge", "ne1hw0"], "worse": [], "reason": "2kxayr provides clearest derivation that p must have only odd-degree monomials through degree parity analysis."}}
+{"4599-4680": {"better": ["zzsskm"], "neutral": ["original", "ijxvwo", "o86z67", "y4gs2e"], "worse": [], "reason": "The alternate zzsskm most clearly derives that p = a\u2297b must have only odd-degree monomials. It provides the complete chain of reasoning: for xp to have only even exponents, p must have only odd exponents. Other completions reach similar conclusions but less directly."}}
+{"4680-4770": {"better": [], "neutral": ["original", "qiedj8", "wv28c2", "9k3a8g", "qayl3a"], "worse": [], "reason": "All completions correctly derive that a\u2297b must have only odd-degree monomials. They all reach the same key insight through slightly different phrasings."}}
+{"4770-4833": {"better": [], "neutral": ["original", "uff4wj", "l6e8by", "qvxwbw", "qic2jc"], "worse": [], "reason": "All completions correctly state that a\u2297b must consist of monomials only at odd degree positions. This is the key necessary condition."}}
+{"4833-4857": {"better": [], "neutral": ["original", "ooo29t", "nefx2a", "mi65rc", "39fw57"], "worse": [], "reason": "All completions state the condition that a\u2297b must have odd-degree monomials only; equivalent."}}
+{"4857-4921": {"better": [], "neutral": ["original", "ata3eb", "ip1cz4", "gao33r", "v5lesi"], "worse": [], "reason": "All completions derive c via square root; equivalent approaches."}}
+{"4921-4938": {"better": [], "neutral": ["original", "8qx5xd", "i09qol", "lkpjqm", "dd09jj"], "worse": [], "reason": "All completions note solution condition and explore relationship between c, p, a, b; equivalent analysis."}}
+{"4938-4998": {"better": [], "neutral": ["original", "px0tsk", "z5q0c7", "l37zbv", "g3os8w"], "worse": [], "reason": "All completions describe solution set condition; equivalent."}}
+{"4998-5035": {"better": ["drwmfb"], "neutral": ["original", "dtvbp2", "63q1hj", "evco1a"], "worse": [], "reason": "drwmfb verifies the condition with example (a=3,b=6), showing product has only odd-degree monomials (x + x^3)."}}
+{"5035-5060": {"better": ["b1i6sb"], "neutral": ["original", "p4katp", "27uih7", "d6q07e"], "worse": [], "reason": "b1i6sb provides full reasoning chain verifying consistency of the condition with the original equation."}}
+{"5060-5141": {"better": ["sz4l8s"], "neutral": ["original", "0e93ku", "7ajt8n", "358hxi"], "worse": [], "reason": "sz4l8s provides detailed analysis of convolution coefficient constraints for each even k."}}
+{"5141-5155": {"better": [], "neutral": ["original", "ey4084", "7q1402", "aw41dl", "7lezda"], "worse": [], "reason": "All completions express the condition for even k; equivalent."}}
+{"5155-5186": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5186-5212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5212-5216": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5216-5248": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5248-5272": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5272-5283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5283-5298": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5298-5329": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5329-5348": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5348-5379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5379-5383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5383-5398": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5398-5449": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5449-5534": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5534-5572": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5572-5576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5576-5636": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5636-5651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5651-5748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5748-5817": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5817-5836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5836-5844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5844-5923": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5923-6153": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6153-6218": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6218-6247": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6247-6510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6510-6517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6517-6567": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6567-6640": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6640-6702": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6702-6844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6844-6852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6852-6886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6886-7002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7002-7034": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7034-7135": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7135-7270": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7270-7319": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7319-7341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7442-7461": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7461-7471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7471-7495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7495-7537": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7537-7555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7555-7711": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7711-7777": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7777-7843": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7843-7902": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7902-8116": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8116-8150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8150-8197": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8197-8219": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8403-8440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8440-8506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8506-8607": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8607-8669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8669-8690": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8690-8742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8742-8879": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8879-8899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8899-8928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8928-8963": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8963-8983": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8983-9003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9003-9027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9027-9047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9047-9081": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9081-9104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9104-9142": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9142-9175": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9175-9233": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9233-9264": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9264-9323": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9323-9351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9351-9378": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9378-9390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9390-9429": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9429-9454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9454-9483": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9483-9501": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9501-9508": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9508-9518": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9518-9891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9891-10215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10215-10613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10613-10632": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10632-10752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10752-10777": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10777-10786": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10786-10817": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10817-10859": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10859-10897": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10897-10918": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10918-10973": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10973-10982": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10982-11004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11004-11020": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11020-11054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11054-11077": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11077-11109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11109-11135": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11135-11156": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11156-11191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11191-11205": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11205-11223": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11223-11241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11241-11268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11268-11318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11318-11341": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11341-11354": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11354-11393": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11393-11400": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11400-11538": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11538-11552": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11552-11587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11587-11729": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12022-12035": {"better": [], "neutral": ["original", "nc7f9y", "ggwq0h", "d9kgkx", "r85of4"], "worse": [], "reason": "All completions observe the pattern in b values and attempt to find a recurrence. None immediately identifies the exact recurrence but all make similar exploratory observations."}}
+{"12035-12109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12109-12176": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12176-12254": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12254-12356": {"better": [], "neutral": ["original", "0ei27f", "hq2umx", "w12gr5", "kz0fi2"], "worse": [], "reason": "All completions recognize the chain structure where each new a is the previous b. This is the key structural insight that enables efficient computation."}}
+{"12356-12385": {"better": ["a6mgun"], "neutral": ["original", "2xp99r", "b71u9q", "5as68m"], "worse": [], "reason": "The alternate a6mgun goes further by explicitly testing for uniqueness (whether there's exactly one b > a for each a) and suggests verifying this by enumeration. This is a more rigorous approach than just stating the recurrence."}}
+{"12385-12548": {"better": [], "neutral": ["original", "8drlo1", "691tf2", "ghnu3l", "aqkw7k"], "worse": [], "reason": "All completions correctly describe the sequence structure where consecutive pairs (x_n, x_{n+1}) are solutions."}}
+{"12548-12575": {"better": ["97vgx6", "f6vgsd"], "neutral": ["original", "p6iur2", "54c6lv"], "worse": [], "reason": "The alternates 97vgx6 and f6vgsd explicitly question whether all solutions are exactly consecutive terms in the chain (no other solutions exist) and propose testing this hypothesis. This is important for correctness. The original just looks for numeric patterns without verifying completeness."}}
+{"12575-12815": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12815-12831": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13106-13217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13409-13446": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13446-13451": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13451-13461": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13461-13471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13471-13481": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13481-13491": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13491-13501": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13501-13511": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13511-13521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13521-13531": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13531-13532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13532-13562": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13562-13571": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13571-13610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13610-13663": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13663-13681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13681-13696": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13696-13747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13747-13818": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13818-13901": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13901-13924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13924-13948": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13948-14018": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14018-14078": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14078-14099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14099-14121": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14121-14132": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14132-14212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14212-14228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14334-14538": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14538-14563": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14563-14600": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14600-14610": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14610-14674": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14674-14705": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14705-14732": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14732-14769": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14769-14793": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14793-15001": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15001-15027": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15331-15338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15338-15358": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15358-15410": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15410-15425": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15425-15471": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15471-15517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15517-15579": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15579-15626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15626-15640": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15640-15649": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15649-15691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15691-15702": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15702-15737": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15737-16008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16008-16040": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16040-16149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16149-16187": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16187-16244": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16244-16363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16363-16368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16368-16436": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16436-16454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16454-16503": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16503-16514": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16514-16522": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16522-16584": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16584-16805": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16805-16847": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16847-16912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16912-16928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16928-16967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16967-17183": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17183-17251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17251-17281": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17281-17316": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17316-17566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17566-17633": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17633-17703": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17703-17759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17759-17804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17804-17860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17860-17871": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17871-17897": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17897-17919": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17919-18015": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18015-18022": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18022-18103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18103-18149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18149-18286": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18286-18566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18691-18734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18734-18769": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18769-18836": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18836-18870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18870-18887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18887-18903": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18903-18948": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18948-18961": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18961-19035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19035-19088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19088-19186": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19186-19206": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19206-19221": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19221-19351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19351-19364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19364-19392": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19392-19426": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19426-19655": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19655-19691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19691-19720": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19720-19742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19742-19772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19772-19796": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19902-19922": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19922-20097": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20382-20502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20502-20555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20832-20860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20860-20911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20911-20977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20977-21022": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21022-21185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21185-21220": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21220-21259": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21259-21281": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21281-21382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21382-21503": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21503-21517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21517-21626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21626-21646": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21646-21657": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21657-21685": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21685-21776": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21776-21893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21893-21933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21933-21974": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21974-22002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22002-22110": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22110-22116": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22116-22208": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22208-22333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22333-22578": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22578-22827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22827-22886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22886-23140": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23140-23144": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23144-23197": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23197-23320": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23320-23340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23340-23350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23350-23406": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23406-23532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23532-23544": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23544-23833": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23833-23849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23849-23872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23872-23939": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23939-23959": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23959-23968": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23968-23989": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23989-24012": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24012-24060": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24060-24114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24114-24169": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24169-24245": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24245-24280": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24374-24574": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24574-24602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24602-24638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24638-24649": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24649-24691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24691-24741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24741-25008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25008-25025": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25025-25040": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25040-25083": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25083-25103": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25103-25111": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25111-25150": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25150-25220": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25372-25383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25383-25412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25412-25666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25666-25778": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25884-25972": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25972-25988": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25988-26035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26035-26212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26212-26277": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26277-26287": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26287-26346": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26346-26356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26356-26458": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26458-26484": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26484-26548": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26548-26579": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26579-26591": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26591-26602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26602-26625": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26625-26706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26706-26804": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26804-26844": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26844-26997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26997-27045": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27045-27088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27088-27110": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27110-27199": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27199-27243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27243-27373": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27373-27395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27395-27405": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27405-27437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27437-27462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27462-27493": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27493-27520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27520-27556": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27556-27676": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27676-27681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27681-27739": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27739-27880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27880-27989": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27989-27997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27997-28031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28031-28059": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28059-28121": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28121-28176": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28176-28217": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28217-28251": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28251-28303": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28303-28314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28314-28352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28352-28638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28692-28718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28718-28731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28731-28765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28765-28798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28798-28819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28819-28848": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28848-28892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28892-28917": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28917-28967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28967-29009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29009-29119": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29119-29124": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29124-29146": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29146-29169": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29169-29312": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29312-29363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29363-29371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29371-29454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29454-29490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29490-29500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29500-29554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29554-29594": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29594-29664": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29664-29730": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29730-29761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29761-29765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29765-29796": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29796-29847": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29847-29870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29870-29887": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29887-29963": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29963-30072": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30072-30078": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30078-30175": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30175-30187": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30187-30211": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30211-30289": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30289-30520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30520-30535": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30535-30560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30560-30723": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30723-30841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30841-30894": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31272-31293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31293-31318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31318-31366": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31366-31393": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31393-31402": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31402-31435": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31435-31451": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31451-31570": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31570-31586": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31586-31622": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31622-31769": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31769-31802": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31802-31841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31841-31847": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31847-31891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31891-31922": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31922-31990": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31990-31993": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31993-32056": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32056-32140": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32259-32299": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32299-32344": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32344-32470": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32470-32554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32554-32562": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32562-32689": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32689-32727": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32727-32748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32748-32773": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32773-33020": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33020-33049": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33049-33099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33099-33104": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33104-33168": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33168-33400": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33400-33424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33424-33437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33437-33498": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33498-33558": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33558-33560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33560-33572": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33572-33606": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33606-33666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33666-33761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33761-33993": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33993-34005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34005-34031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34031-34145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34145-34155": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34155-34243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34243-34287": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34287-34333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34333-34360": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34360-34390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34390-34408": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34408-34426": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34426-34445": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34445-34457": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34457-34490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34490-34517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34517-34541": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34541-34558": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34558-34591": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34591-34597": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34597-34609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34609-34636": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34636-34704": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34704-34823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34823-34880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34880-34918": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34918-34974": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34974-35030": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35030-35057": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35057-35074": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35074-35147": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35147-35175": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35175-35209": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35209-35233": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35233-35291": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35291-35304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35304-35331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35331-35382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35382-35440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35440-35444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35444-35463": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35463-35473": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35473-35490": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35490-35604": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35770-35883": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35883-35910": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35910-35934": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"35934-36022": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36022-36125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36125-36143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36143-36158": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36158-36207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36207-36258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36258-36283": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36283-36327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36327-36367": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36367-36425": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36425-36495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36495-36598": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36598-36605": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36605-36637": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36637-36648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36648-36658": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36658-36686": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36686-36711": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36711-36805": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36805-36852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36852-36864": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36864-36911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36911-36925": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36925-36957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36957-36981": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36981-37013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37013-37035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37035-37063": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37063-37106": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37106-37215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37298-37340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37340-37406": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37406-37411": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37411-37430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37430-37526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37526-37540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37540-37587": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37587-37607": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37607-37633": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37633-37647": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37647-37688": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37688-37701": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37701-37737": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37737-37766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37766-37801": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37801-37807": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37807-37818": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37818-37838": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37838-37860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37860-37899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"37899-38016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38016-38126": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38126-38167": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38167-38176": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38176-38196": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38196-38219": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38219-38304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38304-38442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38442-38458": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38458-38477": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38477-38538": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38538-38556": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38556-38606": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38606-38635": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38635-38639": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38639-38753": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38753-38759": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38759-38812": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38812-38865": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38865-38922": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38922-38933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38933-38945": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38945-38952": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38952-38975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38975-38987": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"38987-39000": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39000-39042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39042-39118": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39118-39133": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39133-39183": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39183-39233": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39233-39252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39252-39295": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39295-39353": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39353-39418": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39418-39433": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39433-39492": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39492-39512": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39512-39528": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39528-39556": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39556-39630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39630-39681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39681-39791": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39791-39815": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39815-39869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39869-39875": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39875-39886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39886-39986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"39986-40005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40005-40039": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40039-40042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40042-41986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41986-42031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42146-42183": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42183-42297": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42297-42304": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42304-42327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42327-42377": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42377-42391": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42391-42557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42557-42624": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42624-42627": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42627-42744": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42744-42789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42789-42849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42849-42868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42868-42877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42877-43078": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43078-43130": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43130-43160": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43160-43167": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43167-43189": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43189-43211": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43211-43243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43243-43261": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43261-43274": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43274-43333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43333-43351": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43351-43356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43356-43388": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43388-43404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43404-43582": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43582-43606": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43606-43650": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43650-43717": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43717-43852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43946-44050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44050-44074": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44074-44094": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44094-44120": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44120-44163": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44163-44197": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44197-44207": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44207-44268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44268-44315": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44315-44370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44370-44402": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44402-44491": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44491-44511": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44511-44554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44554-44579": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44579-44608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44608-44627": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44627-44669": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44669-44752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"44752-45434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45434-45468": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45645-45685": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45685-45725": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45725-45835": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45835-45872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45872-45941": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"45941-46041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46041-46069": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46069-46083": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46083-46108": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46108-46239": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46239-46286": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46286-46382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46382-46445": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46445-46480": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46480-46513": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46513-46520": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46520-46549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46549-46560": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46560-46581": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46581-46603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46603-46667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"46667-47338": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47338-47377": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47574-47626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47626-47660": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47952-47967": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47967-48166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48316-48533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48533-48550": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48588-48738": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48738-48841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48841-48866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48866-48880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48880-48911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48911-48926": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48926-48951": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48951-48976": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48976-48991": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"48991-49050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49050-49068": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49068-49170": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49170-49250": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49250-49256": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49256-49279": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49279-49327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49327-49355": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49355-49396": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49396-49407": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49407-49480": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49480-49498": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49498-49504": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49504-49534": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49534-49536": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49536-49548": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49548-49579": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49579-49605": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49605-49613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49613-49626": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49626-49656": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49656-49663": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49663-49686": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49686-49704": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49704-49711": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49711-49716": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49716-49849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49849-49915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49915-49977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49977-49982": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"49982-50006": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50006-50020": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50020-50061": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50061-50075": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50075-50083": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50083-50099": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50099-50771": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"50771-52167": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52167-52174": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52174-52327": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52327-52434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52628-52648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52648-52681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52681-53029": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53029-53157": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53157-53215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53215-53275": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53275-53302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53302-53337": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53560-53577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53844-53880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53880-53909": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53909-53924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53924-53951": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53951-54077": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54077-54114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54114-54179": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54179-54185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54185-54214": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54214-54241": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54241-54277": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54277-54302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54302-54393": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54393-54422": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54422-54467": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54467-54480": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54480-54492": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54492-54495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54495-54663": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54663-54693": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54693-54704": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54704-54733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54733-54792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54792-54798": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54798-54817": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54817-54820": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54820-54834": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54834-54908": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54908-54962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54962-54971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"54971-55017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"55017-55037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"55037-55526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"55569-55952": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"55952-56370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"56370-56396": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"56472-56524": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"56524-56576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"56576-56591": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"56591-56603": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"56603-57054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"57054-57658": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"57658-57695": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"57787-57879": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"57879-57980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"57980-58034": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58034-58040": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58040-58058": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58058-58445": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58445-58457": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58510-58532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58532-58543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58543-58568": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58568-58575": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58575-58594": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58594-58608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58608-58648": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58648-58675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58675-58680": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58680-58710": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58710-58718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58718-58773": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58773-58931": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58931-58947": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"58947-59054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59054-59089": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59089-59117": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59117-59162": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59162-59175": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59175-59416": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59416-59423": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59423-59500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59500-59505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59505-59517": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59517-59566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59566-59593": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59593-59907": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59907-59916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59959-59964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"59964-60012": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60012-60051": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60051-60125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60125-60141": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60141-60226": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60226-60314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60314-60326": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60326-60371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60371-60395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60395-60412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60469-60475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60475-60503": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60503-60515": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60515-60549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60549-60619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60619-60646": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60646-60651": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60651-60681": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60681-60750": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60750-60762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60762-60783": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60783-60869": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60869-60974": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"60974-61041": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61041-61067": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61067-61089": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61089-61121": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61121-61161": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61161-61202": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61202-61206": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61206-61222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61222-61257": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61257-61396": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61396-61478": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61478-61553": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61553-61557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61557-61834": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61834-61866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61866-61933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"61933-62005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62005-62024": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62024-62065": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62065-62098": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62098-62143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62143-62151": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62151-62193": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62193-62222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62222-62229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62229-62245": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62245-62296": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62296-62387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62387-62393": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62393-62432": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62432-62465": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62465-62469": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62469-62496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62496-62502": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62502-62530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62530-62539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62539-62547": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62547-62593": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62593-62599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62599-62607": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"62607-63310": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"63310-64742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"64788-64814": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"64814-64872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"64872-64930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"64930-64942": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"64942-64950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"64950-64986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"64986-65020": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65020-65033": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65033-65035": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65035-65619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65619-65677": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65677-65733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65733-65752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65849-65871": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65871-65960": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65960-65980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65980-65997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"65997-66072": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66072-66079": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66098-66134": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66164-66195": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66221-66292": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66292-66420": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66420-66457": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66514-66536": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66536-66602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66663-66672": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66672-66732": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66732-66743": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66743-66762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66762-66770": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"66770-66784": {"better": [], "neutral": ["original"], "worse": [], "reason": "Original has correct boxed answer 17095 but answer has not been sufficiently repeated."}}

@@ -1,0 +1,469 @@
+{"42-61": {"better": [], "neutral": [], "worse": [], "reason": "All completions define the problem setup correctly. 30ck90 is more explicit but all equivalent."}}
+{"61-80": {"better": [], "neutral": [], "worse": [], "reason": "All completions define M = 3^{2025!}. cn97w4 adds more analysis of g(c) being rational. Equivalent setup."}}
+{"80-107": {"better": [], "neutral": [], "worse": [], "reason": "All completions write the g(c) formula correctly. Equivalent notation variants."}}
+{"107-130": {"better": [], "neutral": [], "worse": [], "reason": "All completions note M is huge power of 3 and explore g(c) being rational. bfq3ro most detailed. Equivalent."}}
+{"130-252": {"better": [], "neutral": [], "worse": [], "reason": "All completions state need to compute g(10162574) + g(265710644) = p/q. Original has more detail. Equivalent."}}
+{"252-261": {"better": [], "neutral": [], "worse": [], "reason": "All completions note sum yields rational p/q and need p+q mod 99991. Brief equivalent statements."}}
+{"261-272": {"better": [], "neutral": [], "worse": [], "reason": "All state goal identically: find p+q mod 99991. Trivially equivalent."}}
+{"272-287": {"better": [], "neutral": [], "worse": [], "reason": "All completions note need to evaluate f(M+c). 8q9ofi diverges to check if 99991 is prime. Equivalent setup."}}
+{"287-305": {"better": [], "neutral": [], "worse": [], "reason": "All completions observe M is huge and begin analyzing f(n). lhyhlv most detailed. Equivalent setup."}}
+{"305-421": {"better": [], "neutral": [], "worse": [], "reason": "All completions set up the f(n) definition. Original most detailed about n-Norwegian. Equivalent."}}
+{"421-437": {"better": [], "neutral": [], "worse": [], "reason": "All completions restate goal: find f(n) = smallest N with three distinct divisors summing to n. Equivalent."}}
+{"437-459": {"better": [], "neutral": [], "worse": [], "reason": "All completions note n=M+c where M huge power of 3. pbs22x notes c << M. Equivalent."}}
+{"459-572": {"better": [], "neutral": [], "worse": [], "reason": "Original explores key insight that N can have many divisors, not just a*b*d, and we can use 1. Others just note M is huge."}}
+{"572-596": {"better": [], "neutral": [], "worse": [], "reason": "3wxytw identifies key insight: N must be multiple of lcm(a,b,d). Others just restate goal or make vague observations."}}
+{"596-847": {"better": [], "neutral": [], "worse": [], "reason": "Original identifies key insight: to minimize N, pick N = largest divisor d, then need a,b to divide d. Others explore simpler approaches."}}
+{"847-880": {"better": [], "neutral": [], "worse": [], "reason": "m6ak5w explicitly sets up a=1, b=something, d=N approach with equation b = n-1-N. Key formula derivation."}}
+{"880-893": {"better": [], "neutral": [], "worse": [], "reason": "All completions explore approach with a=1 and finding N. lrdydt develops the equation most explicitly. Equivalent progress."}}
+{"893-904": {"better": [], "neutral": [], "worse": [], "reason": "0l275j makes excellent progress: derives triple (1,2,n-3) with concrete lcm analysis and parity considerations. Most comprehensive reasoning."}}
+{"904-1163": {"better": [], "neutral": [], "worse": [], "reason": "Original derives key formula: f(n) = min lcm(a,b,c) over distinct a,b,c summing to n, and shows minimal N = lcm. Others explore similar ideas less completely."}}
+{"1163-1186": {"better": [], "neutral": [], "worse": [], "reason": "All completions state f(n) = min lcm(a,b,c) formula. Equivalent restatements."}}
+{"1186-1210": {"better": [], "neutral": [], "worse": [], "reason": "All completions note need to compute f(n) for n = M+c. Equivalent restatements."}}
+{"1210-1237": {"better": [], "neutral": [], "worse": [], "reason": "All completions note M huge and c relatively small. Equivalent observations."}}
+{"1237-1278": {"better": [], "neutral": [], "worse": [], "reason": "9x6lyy derives concrete triple (1,2,n-3) with parity analysis showing M+c is odd, n-3 is even, so N=n-3 works. Complete derivation."}}
+{"1278-1478": {"better": [], "neutral": [], "worse": [], "reason": "Original derives lcm formula explicitly: lcm=s-3 when s-3 even. Most concrete analysis."}}
+{"1478-1490": {"better": [], "neutral": [], "worse": [], "reason": "9npr4k states key fact: LCM >= max, so minimal lcm is at least c. Clear lower bound."}}
+{"1490-1526": {"better": [], "neutral": [], "worse": [], "reason": "9vdi18 clearly states key insight: if c is multiple of a,b then lcm=c, reducing problem to finding minimal c with a,b dividing c. Best formulation."}}
+{"1526-1708": {"better": [], "neutral": [], "worse": [], "reason": "Original derives key formula: need s-a-b divisible by a and b, with a,b small. Others just note M is huge."}}
+{"1708-1737": {"better": [], "neutral": [], "worse": [], "reason": "All completions state equivalent conditions: minimize c with a,b dividing c. Equivalent formulations."}}
+{"1737-1772": {"better": [], "neutral": [], "worse": [], "reason": "x9tjyo and y1u52a derive key condition: with a=1, need b|(s-1). Most useful constraint for computation."}}
+{"1772-1795": {"better": [], "neutral": [], "worse": [], "reason": "fhl3d7 derives detailed formula: s = 1 + b(k+1) for a=1 case, giving b = (s-1)/(k+1). Most computational."}}
+{"1795-1820": {"better": [], "neutral": [], "worse": [], "reason": "1xj9u9 derives modular condition: s \u2261 a+b (mod lcm(a,b)). Most explicit constraint."}}
+{"1820-1886": {"better": [], "neutral": [], "worse": [], "reason": "All completions summarize f(s) = s-a-b formula. Equivalent restatements with minor variations."}}
+{"1886-1901": {"better": [], "neutral": [], "worse": [], "reason": "7mqnnj and 5max8x recast problem cleanly: for candidate c, need two proper divisors summing to s-c. With a=1, need b = s-N-1 to divide N."}}
+{"1901-1947": {"better": [], "neutral": [], "worse": [], "reason": "Both completions restate condition: c = s-a-b with a,b dividing c. Equivalent."}}
+{"1947-1983": {"better": [], "neutral": [], "worse": [], "reason": "All completions restate condition: find c with two proper divisors summing to s-c. Equivalent formulations."}}
+{"1983-2017": {"better": [], "neutral": [], "worse": [], "reason": "All completions restate goal: minimize c with a+b = s-c and a,b dividing c. Equivalent."}}
+{"2017-2081": {"better": [], "neutral": [], "worse": [], "reason": "Original and 2nijea note f(s) is close to s (since a,b small). Others just say \"minimize c\" without insight."}}
+{"2081-2230": {"better": [], "neutral": [], "worse": [], "reason": "Original and hn0q6a derive key condition: d | (M + offset - 1) for a=1,b=d. hn0q6a also checks parity showing s is odd. Most useful."}}
+{"2230-2353": {"better": [], "neutral": [], "worse": [], "reason": "xpqgut derives cleanest form: with a=1,b=d, need d|(s-1), then c = (s-1) - d. Simplest statement."}}
+{"2353-2433": {"better": [], "neutral": [], "worse": [], "reason": "au7wxx notes to minimize c, need to maximize d, i.e., find largest divisor of s-1. Key insight for optimization."}}
+{"2433-2547": {"better": [], "neutral": [], "worse": [], "reason": "All completions verify construction: triple (1,d,c) with d|(s-1) works. Equivalent verifications."}}
+{"2547-2729": {"better": [], "neutral": [], "worse": [], "reason": "7qj75k and aqyt70 derive that to minimize c, maximize d, meaning use largest proper divisor of s-1. Key optimization insight."}}
+{"2729-2779": {"better": [], "neutral": [], "worse": [], "reason": "Original derives key formula: largest proper divisor of s-1 is (s-1)/p where p = smallest prime factor. Most direct."}}
+{"2779-2829": {"better": [], "neutral": [], "worse": [], "reason": "All completions derive f(s) = (s-1)*(p-1)/p formula where p = smallest prime factor of s-1. Equivalent."}}
+{"2829-2848": {"better": [], "neutral": [], "worse": [], "reason": "oi9tqd identifies edge case: if s-1 is prime, no suitable d exists. Important for completeness."}}
+{"2848-2925": {"better": [], "neutral": [], "worse": [], "reason": "crutxv identifies p=2 case gives c=d (invalid), needs p>=3. Key case analysis for s-1 even."}}
+{"2925-2998": {"better": [], "neutral": [], "worse": [], "reason": "Original verifies c/d = p-1 >= 2 for p>=3, ensuring c>d. Key validity check."}}
+{"2998-3117": {"better": [], "neutral": [], "worse": [], "reason": "9mx32g and x6abc7 explicitly state need smallest odd prime factor when s-1 even. Most clear resolution of p=2 issue."}}
+{"3117-3275": {"better": [], "neutral": [], "worse": [], "reason": "All completions discuss handling s-1 even case by using odd prime factor. Similar reasoning paths."}}
+{"3275-3403": {"better": [], "neutral": [], "worse": [], "reason": "hebbbl gives concrete example: p=3 gives c = 2d > d. Clear verification of distinctness for odd primes."}}
+{"3403-3456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3456-3479": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3479-3557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3557-3619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3619-3634": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3634-3762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3762-3793": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3793-3884": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3884-3898": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3898-3929": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3929-4009": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4009-4026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4026-4043": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4043-4062": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4062-4101": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4101-4122": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4122-4145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4145-4224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4224-4314": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4314-4344": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4344-4476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4476-4504": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4504-4554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4554-4673": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4673-4708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4755-4857": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4857-4875": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4909-4957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4957-4975": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5009-5051": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5051-5069": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5099-5325": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5325-5373": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5373-5429": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5429-5467": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5467-5678": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5678-5743": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5743-5750": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5750-5788": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5839-5858": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5889-6212": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6212-6311": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6311-6370": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6370-6389": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6513-6577": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6577-6704": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6704-6827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6827-6940": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6940-7052": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7052-7177": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7177-7246": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7246-7731": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7731-7780": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7780-7830": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7830-7859": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7859-7893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7893-7915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7915-7938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7938-7981": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7981-8017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8017-8050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8050-8095": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8095-8198": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8198-8397": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8397-8404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8404-8437": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8437-8441": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8441-8521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8521-8642": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8642-8739": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8739-8766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8766-8806": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8806-8846": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8846-8930": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8930-9018": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9018-9690": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9690-10068": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10068-10244": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10244-10285": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10285-10317": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10317-10357": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10357-10361": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10361-10390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10390-10393": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10393-10445": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10445-10453": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10453-10505": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10505-10546": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10546-10609": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10609-10683": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10683-10772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10772-11052": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11052-11387": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11387-11413": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11413-11576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11576-11675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11675-11947": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11947-11962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11962-12031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12031-12136": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12136-12190": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12190-12245": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12245-12295": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12295-12363": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12363-12424": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12424-12454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12454-12537": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12537-12552": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12552-12599": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12599-12891": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12891-12971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12971-13007": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13007-13031": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13031-13070": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13070-13087": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13087-13182": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13182-13269": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13269-13333": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13333-13357": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13357-13368": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13368-13371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13371-13409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13471-13491": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13491-13498": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13498-13522": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13631-13667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13692-13742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13742-13782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13782-13818": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13818-13874": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13874-13908": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13908-13932": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13969-14000": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14000-14011": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14011-14226": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14226-14242": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14242-14288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14288-14301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14346-14352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14352-14375": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14468-14485": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14521-14538": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14613-14630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14794-14812": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14812-14823": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14823-14906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14906-14915": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14915-14937": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14937-14941": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14941-14998": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15089-15114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15114-15125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15125-15151": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15151-15155": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15155-15185": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15185-15215": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15215-15239": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15239-15245": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15245-15258": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15258-15266": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15266-15281": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15281-15328": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18702-18733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18733-18789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18789-18829": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22825-22850": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22910-22936": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22936-22947": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22947-22957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22957-22972": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22972-22984": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22984-23008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23008-23017": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23017-23044": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23044-23060": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23060-23063": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23063-23100": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23126-23199": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23199-23319": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23319-23336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23375-23412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23412-23449": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23449-23475": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23475-23522": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23522-23617": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23617-23649": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23649-23677": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23677-23706": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23706-23737": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23737-23774": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23774-23795": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23795-23916": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23916-24047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24047-24307": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24307-24331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24331-24378": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24378-24455": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24455-24601": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24601-24840": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24840-25160": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25160-25229": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25229-25249": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25476-25526": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25526-25675": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25733-25832": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26092-26276": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26276-26410": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26410-26543": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26543-26733": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26733-26912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26912-27114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27114-27136": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27136-27290": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27290-27299": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27299-27752": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27752-27797": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27797-27846": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27846-28039": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28039-28620": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28620-28726": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28726-28741": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28741-28862": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28862-28909": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28909-28938": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28938-29037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29037-29194": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29194-29282": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29416-29525": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29899-29926": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29926-30114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30114-30151": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30151-30330": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30330-30355": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30355-30381": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30381-30384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30384-30430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30430-30444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30444-30447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30447-30480": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30480-30555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30555-30638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30638-30667": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30667-30698": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30821-30839": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30839-30863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30910-30992": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30992-31005": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31005-31071": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31071-31076": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31076-31166": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31166-31247": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31247-31305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31305-31477": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31477-31495": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31566-31627": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31627-31645": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31819-31821": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31821-31840": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31840-31872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31872-31956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31956-31970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31970-32054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32054-32065": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32065-32083": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32083-32114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32114-32145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32145-32149": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32149-32169": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32169-32184": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32184-32218": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32218-32278": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32278-32324": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32324-32373": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32373-32407": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32407-32409": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32409-32438": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32438-32462": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32462-32508": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32508-32554": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32554-32664": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32664-32691": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32691-32718": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32718-32735": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32735-32767": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32767-32799": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32799-32870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32870-32888": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32888-33002": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33002-33220": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33220-33295": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33295-33300": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33300-33320": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33320-33444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33444-33456": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33456-33774": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33774-33789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33789-33827": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33827-33906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33906-33910": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33910-33947": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33947-33986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33986-33988": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33988-34007": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34007-34024": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34024-34026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34026-34052": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34052-34098": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34098-34157": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34157-34186": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34186-34228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34228-34262": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34262-34299": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34299-34331": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34331-34339": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34339-34374": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34374-34454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"34518-34540": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"36506-36521": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40441-40473": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40473-40506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40506-40537": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40537-40576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40576-40668": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40731-40826": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40826-40902": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40902-40919": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40919-40946": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"40946-41019": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41019-41043": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41043-41191": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41191-41208": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41208-41301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41301-41384": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41384-41430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41430-41984": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"41984-42023": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42066-42089": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42089-42143": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42143-42147": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42147-42243": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42243-42352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42352-42527": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42527-42532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42532-42553": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42553-42602": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42602-42608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42608-42611": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42611-42674": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42674-42766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42766-42886": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42886-42906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42906-42924": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"42924-43047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43047-43109": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43109-43113": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43113-43125": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43125-43162": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43162-43239": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43239-43288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43288-43318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43318-43324": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43324-43451": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43474-43616": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43616-43638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43638-43647": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43647-43662": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43739-43834": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43834-43849": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"43849-43892": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47276-47303": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47303-47340": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47340-47356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47356-47388": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47388-47397": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"47397-47433": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51437-51446": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51446-51506": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51506-51539": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51563-51674": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51674-51689": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51689-51748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51748-51765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51765-51814": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51814-51819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51819-51880": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51904-51908": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51908-51939": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"51963-52042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52042-52130": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52130-52162": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52239-52256": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52256-52261": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52261-52310": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52310-52371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52371-52465": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52465-52469": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52469-52488": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52488-52510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52510-52532": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52532-52562": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52562-52585": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52585-52592": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52592-52672": {"better": [], "neutral": [], "worse": [], "reason": "96j225 raises the key question about whether using divisors other than 1 could yield smaller LCM - this is the correct insight that leads to the factor d1*d2/D approach. The original just continues with the flawed formula."}}
+{"52672-52693": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52693-52711": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52711-52716": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52716-52719": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52719-52748": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52748-52765": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52765-52799": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52822-52837": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52837-52846": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52846-52877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"52900-53032": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53032-53121": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53121-53164": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53164-53171": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53171-53206": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"53206-53218": {"better": ["qi3kbl", "da1b1e", "l17gll"], "neutral": [], "worse": ["original"], "reason": "Original has wrong boxed answer 9904, correct answer is 10477. Not boxing the answer provides a chance to move on from the wrong answer."}}

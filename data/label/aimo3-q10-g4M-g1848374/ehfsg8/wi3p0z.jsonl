@@ -1,0 +1,388 @@
+{"90-181": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"181-234": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"234-292": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"292-313": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"313-342": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"342-440": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"440-487": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"487-618": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"618-636": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"636-650": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"650-679": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"679-766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"766-899": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"899-927": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"927-974": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"974-1072": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1072-1254": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1254-1303": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1303-1383": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1383-1392": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1392-1536": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1536-1872": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1872-1948": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"1948-2157": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2157-2330": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2330-2454": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2454-2525": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2525-2590": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2590-2674": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2674-2835": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2835-2868": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2868-2914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"2914-3077": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3077-3305": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3305-3326": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3326-3390": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3390-3427": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3427-3557": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3557-3608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3608-3653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3653-3679": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3679-3710": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3710-3782": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3782-3850": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3850-3876": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3876-3933": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3933-3974": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"3974-4004": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4004-4040": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4040-4219": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4219-4311": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4311-4379": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4379-4397": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4397-4434": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4434-4447": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4447-4473": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4473-4513": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4513-4588": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4588-4612": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4612-4722": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4722-4789": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4789-4837": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4837-4959": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4959-4977": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4977-4994": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"4994-5082": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5082-5192": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5192-5356": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5356-5407": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5407-5553": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5553-5576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5576-5670": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5670-5725": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5725-5833": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5833-5858": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5858-5885": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5885-5957": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"5957-6048": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6048-6105": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6105-6162": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6162-6394": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6394-6449": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6449-6529": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6529-6631": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6631-6809": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6809-6852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6852-6900": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6900-6978": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"6978-7003": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7003-7047": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7047-7060": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7060-7077": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7077-7228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7382-7480": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"7480-7485": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8157-8189": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8189-8216": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8216-8228": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8228-8257": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8257-8268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8268-8401": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8573-8688": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8688-8788": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8788-8806": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8806-8903": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"8903-9036": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9036-9252": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9252-9317": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9317-9382": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9382-9457": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9457-9487": {"better": ["rw11z2"], "neutral": ["v8y1du"], "worse": ["original"], "reason": "The original incorrectly suspects r_min = 4/7 as if it's the global minimum. v8y1du correctly notes 4/7 is only an upper bound (r_min \u2264 4/7). rw11z2 explicitly questions whether a better ratio exists and proposes brute-force search to verify \u2014 this is the right approach, and searching reveals the true minimum 6/11 from triple (2,3,6)."}}
+{"9487-9519": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9519-9538": {"better": ["clezqc", "mghet6"], "neutral": [], "worse": ["original"], "reason": "Original incorrectly asserts r_min = 4/7 as definitive. clezqc proposes searching all triples to verify, and mghet6 similarly proposes code-based verification \u2014 both correctly recognize the claim needs checking. The true minimum is 6/11 from (2,3,6), not 4/7."}}
+{"9538-9727": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9727-9728": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9789-9822": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9822-9841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9841-9971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"9971-9992": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10073-10091": {"better": [], "neutral": ["original", "g07l03", "biy31u"], "worse": [], "reason": "All correctly identify that the (2,3,6) triple gives ratio 6/11 \u2248 0.545, beating the earlier 4/7 claim. All reach the same correction; no meaningful differentiation."}}
+{"10091-10108": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10108-10145": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10145-10204": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10358-10613": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10613-10770": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10770-10897": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10897-10962": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"10962-11141": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11141-11157": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11157-11256": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11256-11303": {"better": ["3punti"], "neutral": ["original", "w5vrdz"], "worse": [], "reason": "3punti provides the cleanest proof that 6/11 is the global minimum: it reformulates a/L = 1/p, b/L = 1/q, maximizes 1/p + 1/q with p=2, q=3, and concludes ratio = 6/11 definitively. w5vrdz reaches the same conclusion via a similar argument. The original sets up the framework but is less concise in deriving the result."}}
+{"11303-11444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11444-11549": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11549-11837": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"11837-11912": {"better": [], "neutral": ["original", "oetway", "3huycv"], "worse": [], "reason": "All correctly derive that ratio 6/11 is achievable when n is divisible by 11, using the scaled (2,3,6) triple. oetway verifies distinctness. All reach the same correct conclusion; no meaningful differentiation."}}
+{"11912-12037": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12037-12164": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12164-12225": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12225-12238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12238-12281": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12281-12318": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12318-12512": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12512-12534": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12712-12735": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12735-12762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12908-12941": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"12941-13026": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13026-13160": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13160-13280": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13280-13301": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13301-13350": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13350-13385": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13385-13404": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13404-13430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13430-13533": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13533-13580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13580-13656": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13656-13698": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13698-13776": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13776-13826": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13826-13866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13866-13903": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13903-13971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"13971-14042": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14042-14088": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14088-14160": {"better": ["xbpm5l"], "neutral": ["original", "2j9hgs"], "worse": [], "reason": "xbpm5l immediately checks multiple small primes (7,11,13) using Fermat's theorem and begins computing 1848374 mod 7, which is directly useful for determining n1's divisor structure. Original only checks mod 2. 2j9hgs describes the method but doesn't execute as many checks yet."}}
+{"14160-14208": {"better": ["4gb25p", "75m6ge"], "neutral": ["original"], "worse": [], "reason": "4gb25p and 75m6ge both compute 1848374 mod 3 via digit sum (=35, \u22612 mod 3) and immediately conclude n1 \u2261 2 mod 3, ruling out divisibility by 3 \u2014 this is efficient mental computation. Original uses Python code for the same check, which is less insightful as an analytical step."}}
+{"14252-14413": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14461-14469": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14469-14580": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14616-14635": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14635-14734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14770-14852": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14852-14860": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14963-14997": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"14997-15018": {"better": ["i7egor"], "neutral": ["15jpf3"], "worse": ["original"], "reason": "i7egor checks all primes up to 97 in one pass, which is the most comprehensive and efficient approach. 15jpf3 checks primes up to 47, which is decent but misses 53 (a key divisor). Original only checks 23,29,31,37 \u2014 a narrow range that misses important primes like 5 and 53."}}
+{"15333-15448": {"better": ["trs88m", "zuk4c0"], "neutral": ["original"], "worse": [], "reason": "trs88m immediately notes n1 is odd (not divisible by 2) and checks whether 10=2*5 divides n1 \u2014 correctly ruling it out since n1 is odd. zuk4c0 similarly establishes n1 is odd by checking non-divisibility by 2,4,8. This parity constraint is crucial for later ruling out s-values requiring even factors. Original mentions these divisors but less cleanly."}}
+{"15448-15508": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15508-15742": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15742-15766": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15766-15870": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"15870-16010": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16010-16044": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16044-16075": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16075-16106": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16106-16238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16238-16257": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16257-16453": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16453-16542": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16542-16755": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16755-16841": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16841-16895": {"better": ["16hh4z"], "neutral": ["original", "bcdlg2"], "worse": [], "reason": "16hh4z provides the cleanest derivation of g(c) = r + floor(X*c/M)/2025!, clearly defining X = 2025!*r as integer and showing the decomposition step by step. Original and bcdlg2 reach the same formula but 16hh4z's presentation is more self-contained and explicit."}}
+{"16895-16947": {"better": ["vntv5i"], "neutral": ["original", "gxkuhe"], "worse": [], "reason": "vntv5i immediately identifies that for small c, K*c/M is tiny (since M is exponentially large while K ~ 2025!), so floor(K*c/M) = 0, giving g(c) = r directly. This is the key insight that simplifies the g(1848374) calculation. Original and gxkuhe state the formula but don't yet make this magnitude argument."}}
+{"16947-16966": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16966-16983": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"16983-17117": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17117-17152": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17152-17169": {"better": ["q3osru"], "neutral": ["original", "mtfvvy"], "worse": [], "reason": "q3osru derives the g(4M) = 5r formula explicitly: since c/M = 4, Kc/M = 4K integer, so floor = 4K, giving g(4M) = r + 4r = 5r. This is the critical insight for computing g(4M) and is presented cleanly. Original and mtfvvy only state g(1848374) = r without addressing the c=4M case."}}
+{"17169-17261": {"better": ["7zumw5"], "neutral": ["original", "h5nizp"], "worse": [], "reason": "7zumw5 provides the complete derivation in one step: c=4M, c/M=4, Kc/M=4K integer, floor=4K, A=K+4K=5K, g(4M)=5K/2025!=5r_n. This is the most complete and correct single-step derivation. Original computes the same but less cleanly. h5nizp sets up the formula but defers the calculation."}}
+{"17261-17417": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17417-17439": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17439-17545": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17545-17634": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17634-17665": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17665-17697": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17697-17708": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17708-17734": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17734-17770": {"better": ["4qegnl"], "neutral": ["original", "aoshk7"], "worse": [], "reason": "4qegnl provides a thorough analysis of the ratio landscape: identifies 6/11 as global minimum (requires s divisible by 11), explains that ratio depends only on s not on n, and works out the triple (2d,3d,6d) scaling. This sets up the key question of which s divides n \u2014 the central difficulty. Original and aoshk7 state generalities without this detailed ratio-divisor analysis."}}
+{"17770-17866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17866-17950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17950-17996": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"17996-18050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18050-18114": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18114-18224": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18224-18288": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18288-18435": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18435-18442": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18442-18468": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18468-18476": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18476-18485": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18485-18514": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18514-18585": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18585-18592": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18592-18687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18687-18739": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18739-18792": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18792-18928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"18928-18991": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"19584-19625": {"better": [], "neutral": ["original", "kh1ovw", "pkfogr"], "worse": [], "reason": "All correctly identify that the global minimum ratio is 6/11 (from s=11 and multiples) and that 4/7 from s=7 is not the minimum. All reach the same correct conclusion."}}
+{"19625-19816": {"better": ["yszij0"], "neutral": ["original", "m2ccwy"], "worse": [], "reason": "yszij0 cleanly frames the key insight: if n is divisible by 11, r_min = 6/11; if not, the minimal ratio comes from the next best s among n's divisors. This is the correct high-level framework for the rest of the solution. m2ccwy reaches a similar conclusion. Original runs more code to verify what yszij0 states analytically."}}
+{"20012-20198": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20198-20362": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20362-20420": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20420-20436": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20436-20466": {"better": ["okak37"], "neutral": ["original", "4zxkfy"], "worse": [], "reason": "okak37 immediately tests n1 mod 7 = 1+3 = 4 (not 0), ruling out ratio 4/7 for n1. This is a concrete, useful computation. 4zxkfy discusses divisors generally without computing. Original just states the task without progress."}}
+{"20466-20508": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20508-20638": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20681-20705": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20705-20914": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20946-20971": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20971-20986": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"20986-21008": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21008-21054": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21054-21132": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21132-21293": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21293-21302": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21302-21364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21364-21410": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21410-21503": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21503-21579": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21579-21747": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21747-21761": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21761-21776": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21776-21877": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"21877-22131": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22131-22312": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22312-22576": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22576-22584": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22584-22653": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22653-22670": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22670-22723": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22723-22808": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22808-22856": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22856-22866": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22866-22906": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"22906-23013": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23013-23187": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23187-23238": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23238-23323": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23323-23369": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23369-23386": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23386-23397": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23397-23478": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23478-23496": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23496-23566": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"23867-23909": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24274-24358": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24358-24364": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24364-24391": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24391-24415": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24415-24487": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24487-24510": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24510-24541": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24541-24555": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24555-24578": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24578-24777": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24777-24794": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24794-24893": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24893-24912": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24912-24955": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"24955-25014": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25014-25064": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25064-25670": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25670-25715": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25715-25743": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25743-25806": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"25885-25928": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26061-26101": {"better": ["1jah77"], "neutral": ["original", "r5d3m7"], "worse": [], "reason": "1jah77 lists all divisors found so far (25,31,53,125,155) and extends the search to 1000 using code \u2014 this systematic approach ensures no divisor is missed. Original just notes divisibility by 25. r5d3m7 is minimal."}}
+{"26101-26128": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26128-26222": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26256-26336": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26362-26371": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26371-26431": {"better": [], "neutral": ["original", "gpkxin", "vasblz"], "worse": [], "reason": "All three correctly identify that the smallest eligible s (\u22656) dividing n1 is 25, with other divisors being 31, 53, 125, 155. All reach similar conclusions; no meaningful differentiation."}}
+{"26431-26530": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26591-26619": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"26769-26791": {"better": ["suvf6k"], "neutral": ["original", "0pk0s3"], "worse": [], "reason": "suvf6k correctly identifies s=25 as best (ratio 0.64) and questions whether 34/53 \u2248 0.6415 is actually smaller than 0.64 \u2014 this attention to precision is important since 0.6415 > 0.64, confirming 25 wins. Original just computes L_min(125). 0pk0s3 also just computes."}}
+{"26885-27004": {"better": ["h1yvae"], "neutral": ["original", "jmi7g7"], "worse": [], "reason": "h1yvae goes further by also checking that s=7,6,8,9 don't divide n1 (7 doesn't, 6 requires factor 2/3, 8 requires factor 2, 9 not divisible) \u2014 systematically ruling out all better-ratio candidates. Original and jmi7g7 state the result without this verification of non-divisors."}}
+{"27004-27157": {"better": ["sxlfu1"], "neutral": ["original"], "worse": [], "reason": "sxlfu1 concisely states r_{M+1848374} = 16/25, which is the correct answer. Original provides a thorough verification (checking triple scaling and integrality) but is verbose. Both are correct; sxlfu1 is better for being efficient while the detailed verification is somewhat redundant at this point."}}
+{"27157-27255": {"better": ["le7pmb"], "neutral": ["original", "msl69k"], "worse": [], "reason": "le7pmb provides a nice cross-check by computing ratios for all competing s values: s=31 gives 20/31\u22480.645, s=53 gives 34/53\u22480.6415, s=125 gives 80/125=0.64 (same), s=155 gives \u22480.645. This confirms 16/25 is minimal. msl69k just states the result. Original verifies scaling integrality."}}
+{"27255-27279": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27279-27352": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27352-27365": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27365-27412": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27412-27430": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27430-27500": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27500-27523": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27613-27630": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27630-27687": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27687-27730": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27730-27762": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27762-27828": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27895-27950": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"27993-28018": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28056-28089": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28122-28156": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28193-28221": {"better": [], "neutral": ["original", "76t2io", "jgj2ca"], "worse": [], "reason": "All three correctly conclude r_{n2} = 2/3, the minimal ratio for n2 = 5M. No meaningful differentiation."}}
+{"28221-28291": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28291-28427": {"better": [], "neutral": ["original", "lmok9s", "plmalh"], "worse": [], "reason": "All three correctly derive g(4M) = 5*r_{5M} = 5*(2/3) = 10/3 by showing floor(K*4) = 4K since K integer, giving total 5K/2025! = 5r. No meaningful differentiation."}}
+{"28427-28444": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28444-28470": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28470-28499": {"better": ["iefo8r", "qgbecb"], "neutral": [], "worse": ["original"], "reason": "Original writes \"16/5?\" before correcting to 16/25, showing momentary confusion. iefo8r and qgbecb both correctly state the sum as 10/3 + 16/25 without any error."}}
+{"28499-28551": {"better": ["pr3rpx"], "neutral": ["original", "vpdwpn"], "worse": [], "reason": "pr3rpx computes the sum entirely by hand: 10/3 = 250/75, 16/25 = 48/75, sum = 298/75. Clean and self-contained. vpdwpn uses Python Fraction library. Original does the same manual computation. pr3rpx is slightly cleaner by being more direct."}}
+{"28551-28595": {"better": ["10x5dl"], "neutral": ["original", "vcuxx4"], "worse": [], "reason": "10x5dl verifies gcd(298,75)=1 by checking prime factors: 75=3*5^2, 298 not divisible by 3 (digit sum 19) or 5. This is the most efficient verification. vcuxx4 uses the Euclidean algorithm. Original uses Python. All correct; 10x5dl is cleanest."}}
+{"28651-28657": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"28657-28677": {"better": ["8yd93k"], "neutral": ["original", "kebf7t"], "worse": [], "reason": "8yd93k verifies both claims: that s=9 divides n2 (since M divisible by 9, so 5M divisible by 9) and that L_min(9)=6 gives ratio 2/3. This checks the key assumption. kebf7t focuses on n1 verification (checking up to 1000). Original's verification is less specific."}}
+{"28677-28748": {"better": ["i5bx25"], "neutral": ["original", "ar9jgu"], "worse": [], "reason": "i5bx25 identifies the correct triple as (1,3,6) for s=9 and computes the ratio 6/9 = 2/3 explicitly. Original states (1,2,6) which also sums to 9 and has LCM=6, which is also correct. ar9jgu is minimal. i5bx25 is better for explicitly naming the triple and computing the ratio cleanly."}}
+{"28748-29099": {"better": ["j7hdnu"], "neutral": ["original", "2ojzxh"], "worse": [], "reason": "j7hdnu gives the strongest justification: ratio 2/3 is minimal for n2 because n2 is not divisible by 11 or 7 (so 6/11 and 4/7 impossible), but 9 is a divisor of 5M since M includes 3^2. This concisely explains why 2/3 is the best achievable. Original's long verification of triple integrality is correct but verbose. 2ojzxh just states the conclusion."}}
+{"29099-29188": {"better": ["ss392u"], "neutral": ["original", "uxd36q"], "worse": [], "reason": "ss392u checks whether s=6 divides 5M by computing 5M mod 6 = 3 (since M mod 6 = 3, then 5*3 = 15 mod 6 = 3), confirming s=6 doesn't work. This rules out ratio 1 (trivial case) and shows s=9 is indeed the smallest eligible. Original just restates the n1 ratio calculation. uxd36q only checks s=9 divides 5M (already known)."}}
+{"29188-29267": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29267-29395": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29395-29423": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29552-29607": {"better": ["6nn7co"], "neutral": ["original", "pugr13"], "worse": [], "reason": "6nn7co systematically checks s=13 (ratio \u22480.615 but n1 mod 13 = 9), s=14 (needs factor 2, impossible for odd n1), s=15 (needs factor 3, not available), s=16 (needs factor 2). This thorough elimination confirms no s with ratio below 0.64 divides n1. Original only checks s=7. pugr13 just suggests searching beyond 1000 without executing."}}
+{"29607-29629": {"better": ["3ntysf"], "neutral": ["original", "vj160t"], "worse": [], "reason": "3ntysf explicitly computes L_min(13)=8, ratio 8/13\u22480.615, then checks n1 mod 13 = 9, confirming non-divisibility. This is a concrete numerical check rather than just stating \"not divisor.\" vj160t mentions 6/11 but is brief. Original just states s=13 not divisor."}}
+{"29629-29647": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29647-29699": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29730-29772": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29790-29863": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29901-29912": {"better": ["7tcba7"], "neutral": ["original", "tmynv9"], "worse": [], "reason": "7tcba7 investigates whether the ratio 0.64 is stable across powers of 5: s=25 gives 16/25, s=125 gives 80/125=0.64, and proposes testing s=625 (5^4). This reveals the structural pattern that any s=5^k for k\u22652 gives the same ratio, confirming robustness. tmynv9 explores composite divisors like 155 and 265. Original just verifies the triple is valid."}}
+{"29912-29964": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"29964-30027": {"better": ["z8rkzk"], "neutral": ["original", "4kxv3q"], "worse": [], "reason": "z8rkzk addresses the important question of whether larger s could yield ratio below 16/25 and systematically argues it cannot: s divisible by 7 gives 4/7=0.571 but n1 not divisible by 7, s divisible by 13 gives 0.615 but n1 not divisible by 13, s divisible by 21 requires 3*7. This is the most thorough justification that 16/25 is truly minimal. Original discusses s=125 (same ratio). 4kxv3q just states conclusion."}}
+{"30027-30076": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30076-30169": {"better": ["jkdlky"], "neutral": ["original"], "worse": [], "reason": "jkdlky computes the final answer in one clean step: 5*(2/3) + 16/25 = 10/3 + 16/25 = 250/75 + 48/75 = 298/75, p+q = 373. This is the most efficient path to the answer. Original discusses ratio minimality verification instead."}}
+{"30169-30182": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30182-30226": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30226-30255": {"better": [], "neutral": ["original", "dz9yq6", "29384s"], "worse": [], "reason": "All correctly compute p+q = 298+75 = 373 and note 373 < 99991 so the remainder is 373. dz9yq6 adds an extra gcd verification. All equivalent."}}
+{"30255-30261": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30261-30526": {"better": ["7ygwoh"], "neutral": ["original", "x0u07c"], "worse": [], "reason": "7ygwoh verifies that 2025!*r is integer for both cases: for r=16/25, denominator 25 divides 2025! (since 5^2 \u2264 2025); for r=2/3, denominator 3 divides 2025!. This ensures the floor operation doesn't introduce rounding errors. Important verification step. Original's integrality check is also thorough. x0u07c mentions checking but doesn't execute."}}
+{"30526-30666": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30666-30766": {"better": [], "neutral": ["original", "my3ilv", "1t9e2p"], "worse": [], "reason": "All three correctly verify that floor(K*(1 + offset/M)) = K since K*offset/M < 1 (M astronomically larger than K*offset). All reach the same conclusion g(1848374) = 16/25. No meaningful differentiation."}}
+{"30766-30771": {"better": ["bewxcj"], "neutral": ["original", "47gayw"], "worse": [], "reason": "bewxcj provides a complete verification of g(4M) from first principles: f(5M)=(2/3)*5M=(10/3)M, then (2025!*f)/M = 2025!*(10/3), which is integer since 2025! divisible by 3, so floor is exact, giving g(4M) = 10/3. This is the most thorough direct verification. 47gayw just states the result. Original is minimal."}}
+{"30771-30819": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"30819-30991": {"better": ["9u2y5d"], "neutral": ["original", "cufjxo"], "worse": [], "reason": "9u2y5d explicitly computes (2025!*f)/M = 2025!*(10/3)M/M = 2025!*(10/3) = (2025!*10)/3, confirming it's integer since 2025! divisible by 3, and then g = A/2025! = 10/3. Clean step-by-step verification. Original also verifies but is more verbose. cufjxo sets up the calculation but doesn't finish as cleanly."}}
+{"30991-31017": {"better": [], "neutral": ["original", "burg83", "qimm2u"], "worse": [], "reason": "All correctly compute sum = 10/3 + 16/25 = 298/75. burg83 notes it's already reduced. All reach the correct answer. No meaningful differentiation."}}
+{"31017-31045": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31045-31050": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31050-31265": {"better": ["ut8z85"], "neutral": ["original", "8omppm"], "worse": [], "reason": "ut8z85 proposes a systematic code-based verification for n2 by computing all s dividing n2 up to 10000 and finding the minimal ratio \u2014 this is the most thorough verification approach. Original verifies the N-Norwegian property conceptually. 8omppm checks s\u22656 constraint (already established)."}}
+{"31265-31270": {"better": ["n9cqnq"], "neutral": ["original", "mohtgk"], "worse": [], "reason": "n9cqnq provides the clearest argument for why f(n) = min LCM over triples: any N containing three divisors summing to n must be \u2265 LCM of those three, so the minimal N is the minimal LCM. This addresses a subtle point about correctness. mohtgk is brief. Original reaches the same conclusion but is less clear."}}
+{"31270-31386": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31386-31392": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31392-31507": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31507-31532": {"better": ["t79keg"], "neutral": ["original", "650v3b"], "worse": [], "reason": "t79keg proposes a concrete brute-force test: for n=25, check f(25)=16 using triple (1,8,16) with N=LCM=16. This is a simple, directly verifiable sanity check. 650v3b proposes testing random n values (less targeted). Original discusses 5M property abstractly."}}
+{"31532-31608": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31608-31980": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"31980-32201": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32201-32242": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32242-32268": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32300-32559": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32685-32710": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32710-32717": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32717-32724": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32724-32905": {"better": [], "neutral": [], "worse": [], "reason": "Original has correct boxed answer 373."}}
+{"32905-32911": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32911-32956": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32956-32970": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32970-32983": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"32983-33010": {"better": [], "neutral": ["original", "d825y1", "bwa5p3"], "worse": [], "reason": "Alternate has correct boxed answer 373 but answer has not been sufficiently repeated."}}
+{"33010-33016": {"better": [], "neutral": [], "worse": [], "reason": ""}}
+{"33016-33039": {"better": ["original"], "neutral": [], "worse": ["int3q1", "7rpcp4"], "reason": "Original has correct boxed answer 373. Correct answer has been sufficiently repeated in history."}}

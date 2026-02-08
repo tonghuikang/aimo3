@@ -1,0 +1,289 @@
+{"10-83": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly define n-Norwegian numbers as having three distinct positive divisors summing to n."}}
+{"83-123": {"better": ["yklj8c"], "neutral": ["wmwt52", "t6zong"], "worse": ["original"], "reason": "yklj8c derives the key reduction f(n) = min lcm(a,b,c) over distinct positive integers summing to n, providing the correct mathematical framework from the start. The original and other alternates only restate the definition without the lcm insight."}}
+{"123-143": {"better": [], "neutral": [], "worse": [], "reason": "hkod6x gives the full g(c) definition; the others are incomplete."}}
+{"143-169": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly state the formula for g(c). Minor notation differences only."}}
+{"169-181": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly parse g(c) formula. No meaningful difference."}}
+{"181-210": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly state the goal. No meaningful difference."}}
+{"210-260": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly note c is small relative to M. No meaningful difference."}}
+{"260-392": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore what f(M+c) means. No meaningful difference in exploration quality."}}
+{"392-544": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly formulate f(n) as minimum m with three divisors summing to n."}}
+{"544-600": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly reason about divisor constraints. Similar exploration quality."}}
+{"600-681": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore divisor configurations. Similar reasoning quality."}}
+{"681-698": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly deduce divisors must be less than n. Similar conclusions."}}
+{"698-1145": {"better": [], "neutral": [], "worse": [], "reason": "The original explicitly reduces f(n) to a min-LCM problem; the alternates are speculative and add less progress."}}
+{"1145-1178": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly reduce to minimizing LCM over triples. Same key insight."}}
+{"1178-1339": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly compute N mod 3 = 2. Correct basic analysis."}}
+{"1339-1370": {"better": [], "neutral": [], "worse": [], "reason": "All versions note N not divisible by 3. Correct observation."}}
+{"1370-1402": {"better": [], "neutral": [], "worse": [], "reason": "All versions consider how to minimize LCM. Similar exploratory reasoning."}}
+{"1402-1450": {"better": [], "neutral": [], "worse": [], "reason": "pnvsq2 provides a concrete valid upper bound (1,2,N-3) and a correct parity check; the others are only vague speculation."}}
+{"1450-1928": {"better": [], "neutral": [], "worse": [], "reason": "The original and 33ru9c give concrete candidate triples/LCM computations; the others are vague without actionable progress."}}
+{"1928-2251": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly observe candidate f(N) \u2264 M*(C-1) and consider smaller LCM possible."}}
+{"2251-2611": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore LCM bounds. Correct that minimal m \u2265 N/2 approximately."}}
+{"2611-2645": {"better": [], "neutral": [], "worse": [], "reason": "All versions consider common factor approach. Good exploration of optimization strategies."}}
+{"2645-2873": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze g(c) structure correctly. Similar reasoning quality."}}
+{"2873-2965": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly note g(c) will be rational with denominator dividing 2025!."}}
+{"2965-3040": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore f(N) relative to M. Similar exploration quality."}}
+{"3040-3665": {"better": [], "neutral": [], "worse": [], "reason": "All versions consider powers of 3 summing to C. Key exploration step before discovering it won't work."}}
+{"3665-3832": {"better": [], "neutral": [], "worse": [], "reason": "All versions implement power-of-3 pair search. Correct code implementation."}}
+{"3832-3847": {"better": [], "neutral": [], "worse": [], "reason": "All versions execute power-of-3 pair search. Code invocation with same purpose."}}
+{"4258-4490": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly analyze LCM = M * lcm(a', b'). Key insight for the framework."}}
+{"4490-4510": {"better": [], "neutral": [], "worse": [], "reason": "Alternate zl7lkx considers triples not including M, exploring a potentially better approach. Original only minimizes co-factor assuming M must be included."}}
+{"4510-4600": {"better": ["vrs8cl"], "neutral": ["v7k1yl", "6lm56o"], "worse": ["original"], "reason": "The original commits to f(N) = M * L_min assuming M must be in the triple, which is a restrictive assumption. vrs8cl extensively analyzes whether excluding M could yield smaller LCM, noting m could be as low as N/3. v7k1yl and 6lm56o also question the assumption but less thoroughly."}}
+{"4600-4633": {"better": ["3y9cu6"], "neutral": ["6fjyyi", "3tufej"], "worse": ["original"], "reason": "The original asserts f(N) = M * L_min without further investigation. 3y9cu6 thoroughly explores whether excluding M from the triple could yield smaller LCM, which is the correct direction - the optimal solution uses a triple (k, k/\u03b1, k/\u03b2) where k \u2248 (30/47)N, not involving M directly."}}
+{"4633-5461": {"better": [], "neutral": [], "worse": [], "reason": "All versions consider whether M must be included. Similar level of exploration quality."}}
+{"5461-5470": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore whether m could be less than M. Alternate vcn9rl gives concrete example which is helpful."}}
+{"5470-5660": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore LCM bounds. Similar quality of analysis."}}
+{"5660-5765": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze minimum possible max divisor. Correct bounds analysis."}}
+{"5765-5835": {"better": [], "neutral": [], "worse": [], "reason": "All versions estimate minimal LCM around M/3. Reasonable analysis within framework."}}
+{"5835-5861": {"better": [], "neutral": [], "worse": [], "reason": "All versions acknowledge need to search for minimal LCM triple. Similar observations."}}
+{"5861-6063": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore using powers of 3. Similar exploratory quality."}}
+{"6063-6150": {"better": [], "neutral": [], "worse": [], "reason": "All versions consider triple configurations. Alternate mg1i9l correctly identifies (M, a, b) approach."}}
+{"6150-6187": {"better": [], "neutral": [], "worse": [], "reason": "All versions try to construct specific triples. Similar exploration quality."}}
+{"6187-6248": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore triple sum constraints. Similar reasoning."}}
+{"6248-6296": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze LCM structure. Similar prime factorization analysis."}}
+{"6296-6330": {"better": [], "neutral": [], "worse": [], "reason": "All versions reason about minimizing LCM. Similar goal-oriented analysis."}}
+{"6330-6426": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore reducing LCM below M. Similar feasibility analysis."}}
+{"6426-6549": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze constraint that one number must exceed M/3. Correct observation."}}
+{"6549-6604": {"better": [], "neutral": [], "worse": [], "reason": "All versions construct candidate triples. Similar exploration."}}
+{"6604-6664": {"better": ["gbde37"], "neutral": ["pfvk3t", "1wt8gw"], "worse": ["original"], "reason": "gbde37 discovers the concrete triple (M/3, 2M/3, C) with sum M+C = N, giving LCM = lcm(M/3, 2M/3, C) = 2M/3 * lcm_cofactor. This is a useful construction toward the correct approach. The original just makes a general observation about divisors. pfvk3t and 1wt8gw don't produce concrete candidates."}}
+{"6664-6696": {"better": [], "neutral": [], "worse": [], "reason": "All versions state LCM minimization goal. Similar problem framing."}}
+{"6696-6798": {"better": [], "neutral": [], "worse": [], "reason": "All versions discuss general LCM minimization. Similar observations."}}
+{"6798-6883": {"better": [], "neutral": [], "worse": [], "reason": "All versions note N not divisible by 3 but close to M. Correct observation."}}
+{"6883-6960": {"better": [], "neutral": [], "worse": [], "reason": "Token 6960 original: Thus N is not a multiple of 3 (since C \u2261 2 mod 3). So N is not divisible by 3. So the numbers summing to N need not be divisible by 3."}}
+{"6960-7004": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore N's divisibility by 3. Original and alternates reach similar conclusions about N not being divisible by 3."}}
+{"7004-7077": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore candidate triples and LCM calculations. No major insight advantage in any version."}}
+{"7077-7105": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore numbers around M/3 and N/3 approximations. Similar reasoning quality."}}
+{"7105-7202": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore factoring with common divisor d. The alternate nzak1v mentions maximizing d as key insight, similar to others."}}
+{"7202-7422": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore triples with M/3 terms and small offsets. Similar approaches with no significant advantage."}}
+{"7422-7526": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze LCM with 3-power factors. Similar reasoning about how including M vs M/3 affects LCM."}}
+{"7526-7608": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly note LCM considerations with distinct numbers and 3-power components. Similar analysis depth."}}
+{"7608-7760": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore triple variations with M/3-related terms. Similar exploration without breakthrough insight."}}
+{"7760-7889": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze LCM becoming large with 3-free parts of B and C. Correct recognition that lcm(B,C) could be huge."}}
+{"7889-7899": {"better": [], "neutral": [], "worse": [], "reason": "All versions compare candidates, recognizing M*C approach may be better. Similar comparative reasoning."}}
+{"7899-7904": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore systematic optimization and divisor structures. Similar exploration of the problem space."}}
+{"7904-8184": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore minimizing 3-exponent in LCM and general problem setup. Similar analytical approaches."}}
+{"8184-8814": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore 3-free numbers and factor avoidance. Similar insight about potential for smaller LCM without 3 factor."}}
+{"8814-9012": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze f(N)=N scenario and divisor conditions. Similar exploration of divisibility constraints."}}
+{"9012-9044": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore N's divisors and primality considerations. Similar analysis of divisor combinations."}}
+{"9044-9101": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore prime power factorization and divisor properties. Similar reasoning quality."}}
+{"9101-9118": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore minimal LCM bounds and realize numbers need not be N. Similar conceptual exploration."}}
+{"9118-9166": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore minimal LCM function h(N). Similar systematic approach to bounds."}}
+{"9166-9245": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore D-scaling approach where numbers share common divisor. Similar key insight about D dividing N."}}
+{"9245-9279": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore LCM minimization with shared factors. Similar intuition about common divisors reducing LCM."}}
+{"9279-9375": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore D-scaling with sum constraints. Similar analysis of potential approaches."}}
+{"9375-9479": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore LCM with d,2d,N-3d patterns. Similar exploration of factor relationships."}}
+{"9479-9653": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore LCM = t * lcm(1,u,v) formula and divisibility constraints. Similar approaches."}}
+{"9653-9789": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore ratio LCM(u,v)/m optimization. Alternate skukic gives clear formulation similar to original."}}
+{"9789-10059": {"better": [], "neutral": [], "worse": [], "reason": "5c2j3j incorrectly claims N is even; original and pf0y36 correctly note N is odd and the u=2,v=3 case is invalid."}}
+{"10059-10119": {"better": [], "neutral": [], "worse": [], "reason": "All versions test u=3,v=6 getting ratio 0.6N. Similar systematic testing of alternatives."}}
+{"10119-10164": {"better": [], "neutral": [], "worse": [], "reason": "All versions test various u,v combinations. Similar systematic exploration of ratio minimization."}}
+{"10164-10203": {"better": [], "neutral": [], "worse": [], "reason": "All versions test u=3,v=9 getting ratio ~0.692N. Similar computation of alternatives."}}
+{"10203-10254": {"better": [], "neutral": [], "worse": [], "reason": "All versions test various u,v combinations. Alternate w7931w gives good theoretical analysis like original."}}
+{"10254-10318": {"better": [], "neutral": [], "worse": [], "reason": "All versions identify 4/7N as good ratio. Similar conclusion about u=2,v=4 being optimal small values."}}
+{"10318-10404": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze ratio v/(1+u+v) minimization. pk3w14 correctly notes ratio >1/2 bound."}}
+{"10404-10718": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze ratio with k=v/u parameterization. Similar algebraic analysis of ratio bounds."}}
+{"10718-10894": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly compute ratio formula k*u/(1+u(1+k)). Similar analysis showing u=2,k=2 gives 4/7."}}
+{"10894-10941": {"better": [], "neutral": [], "worse": [], "reason": "original/6yl5jk incorrectly equate LCM with uv without stating coprime assumptions; z5z31t and dydyul correctly emphasize minimizing LCM by divisibility."}}
+{"10941-11066": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze minimizing uv/(1+u+v). Similar brute search approach suggested by multiple versions."}}
+{"11066-11078": {"better": [], "neutral": [], "worse": [], "reason": "All versions note small u,v minimize ratio. Similar conclusions about keeping parameters small."}}
+{"11078-11217": {"better": [], "neutral": [], "worse": [], "reason": "All versions set up ratio = lcm(1,u,v)/(1+u+v) formula with D dividing N condition. Similar setup."}}
+{"11217-11235": {"better": [], "neutral": [], "worse": [], "reason": "All versions recognize ratio depends on N's divisibility by small D. 2y7uz6 mentions computing N mod small primes."}}
+{"11235-11254": {"better": [], "neutral": [], "worse": [], "reason": "All versions formulate f(N) = N * r_min with D dividing N constraint. Similar understanding of problem structure."}}
+{"11254-11326": {"better": [], "neutral": [], "worse": [], "reason": "All versions specify D=1+u+v with u,v>=2 distinct conditions. Similar constraint formulation."}}
+{"11326-11353": {"better": [], "neutral": [], "worse": [], "reason": "All versions discuss scaling triples vs general triples. Similar reasoning about common factor optimality."}}
+{"11353-11433": {"better": [], "neutral": [], "worse": [], "reason": "All versions note common factor reduces LCM. Similar reasoning about gcd>1 being beneficial."}}
+{"11433-11609": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore t=1 case and scaling approaches. Similar analysis of different approaches."}}
+{"11609-11620": {"better": [], "neutral": [], "worse": [], "reason": "All versions confirm scaling method is plausible optimum. gbhgmw gives equivalent formulation."}}
+{"11620-11626": {"better": [], "neutral": [], "worse": [], "reason": "All versions focus on scaling approach. Similar conclusions about finding D dividing N."}}
+{"11626-11730": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze N=M+C divisibility properties. Similar reasoning about N mod small D."}}
+{"11730-11889": {"better": [], "neutral": [], "worse": [], "reason": "odffqj incorrectly claims N is even; the others correctly treat M mod d and parity."}}
+{"11889-11917": {"better": [], "neutral": [], "worse": [], "reason": "All versions discuss N's divisibility by small D. Similar analysis of divisibility constraints."}}
+{"11917-12017": {"better": [], "neutral": [], "worse": [], "reason": "All versions note D=1+u+v must divide N. Similar probability reasoning for small D dividing N."}}
+{"12017-12027": {"better": [], "neutral": ["original", "6eo6bp", "k8p1ac", "7o9xkz"], "worse": [], "reason": "All work within the restricted D=1+u+v model. k8p1ac explicitly states D must be \u2265 6 with D=1+u+v. This restriction excludes the optimal construction where the three divisors are (k, k/\u03b1, k/\u03b2), not involving 1. No alternate questions the model, so all neutral."}}
+{"12027-12109": {"better": [], "neutral": [], "worse": [], "reason": "All versions set up modular arithmetic approach for computing N mod D. Similar methodology."}}
+{"12109-12319": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze ratio behavior with large u,v. Similar conclusion that small D is better."}}
+{"12319-12546": {"better": [], "neutral": [], "worse": [], "reason": "All versions set up brute search for minimal ratio. 2dqvgk correctly notes ratio independent of N."}}
+{"12546-12560": {"better": [], "neutral": [], "worse": [], "reason": "All versions execute the min_ratio function. Similar code execution approach."}}
+{"13474-13603": {"better": [], "neutral": [], "worse": [], "reason": "All versions identify 4/7 ratio requires N divisible by 7. Similar formulation of divisibility condition."}}
+{"13603-13775": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute M mod 7 = 1 using Fermat's little theorem. Similar modular arithmetic approach."}}
+{"13775-13812": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute C mod 7. Similar calculation approach."}}
+{"13864-13874": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude 4/7 ratio not attainable since N \u2262 0 mod 7. Similar conclusion."}}
+{"13874-13897": {"better": [], "neutral": [], "worse": [], "reason": "All versions look for next minimal ratio. jgwfm2 considers generalization with u_i=1, similar exploration."}}
+{"13897-13978": {"better": [], "neutral": [], "worse": [], "reason": "w12rlr keeps the general triple search; the others assume the restricted form (t,tu,tv), which is not fully general and can miss the true minimum."}}
+{"13978-14056": {"better": [], "neutral": [], "worse": [], "reason": "All versions note problem reduces to minimizing L/D for D dividing N. Similar formulation."}}
+{"14056-14158": {"better": [], "neutral": [], "worse": [], "reason": "All versions discuss finding D dividing N and partitioning D-1. Similar combinatorial search approach."}}
+{"14158-14209": {"better": [], "neutral": [], "worse": [], "reason": "All versions discuss minimal ratio among D dividing N. acl99v correctly notes N is odd."}}
+{"14209-14241": {"better": [], "neutral": [], "worse": [], "reason": "All versions focus on finding divisors and minimal ratio. Similar computational approach."}}
+{"14241-14285": {"better": [], "neutral": [], "worse": [], "reason": "All versions set up formula r = min over D|N of lcm(u,v)/D. 9x1jco mentions Euler's theorem approach."}}
+{"14285-14490": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze floor(2025! * r_min). Correctly note C/M term is negligible."}}
+{"14490-14520": {"better": [], "neutral": [], "worse": [], "reason": "All versions derive g(c) = floor(2025! * r_min)/2025!. Similar derivation of formula."}}
+{"14520-14563": {"better": [], "neutral": [], "worse": [], "reason": "All versions note r_min = min over D|N of lcm(u,v)/D. Similar rational number analysis."}}
+{"14563-14600": {"better": [], "neutral": [], "worse": [], "reason": "All versions reduce to finding smallest L/D with D dividing N. Similar problem reduction."}}
+{"14600-14631": {"better": [], "neutral": [], "worse": [], "reason": "All versions note we can compute N mod small D. 7egfxk notes maximal common factor gives minimal LCM."}}
+{"14631-14667": {"better": [], "neutral": [], "worse": [], "reason": "All versions focus on finding D dividing N with smallest L/D. Similar optimization approach."}}
+{"14667-14690": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze constraints on u,v. 21vhlo gives good analysis of minimal lcm when one divides other."}}
+{"14690-14751": {"better": [], "neutral": [], "worse": [], "reason": "All versions list constraints: u>=2, v>=2, u\u2260v, u\u2264D-3. Similar constraint enumeration."}}
+{"14751-14786": {"better": [], "neutral": [], "worse": [], "reason": "All versions state goal: minimize L = lcm(u, D-1-u). Similar optimization objective."}}
+{"14786-14796": {"better": [], "neutral": [], "worse": [], "reason": "All versions note need to find minimal ratio across D dividing N. Similar overall structure."}}
+{"14796-14842": {"better": [], "neutral": [], "worse": [], "reason": "All versions set up modular computation approach. 9wdue1 importantly notes D cannot have factor 3 since N \u2261 2 mod 3."}}
+{"14842-14967": {"better": [], "neutral": [], "worse": [], "reason": "All versions note need to search for small D dividing N. bqproa mentions lower bound >0.5."}}
+{"14967-14992": {"better": [], "neutral": [], "worse": [], "reason": "All versions note need to compute M mod D. 5kto8t correctly notes D=6 gives ratio=1 (not optimal). z2rb8b discusses Python pow efficiency."}}
+{"14992-15143": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute M mod 6, 3^n\u22613 mod 6. Correct modular arithmetic within wrong framework."}}
+{"15178-15196": {"better": [], "neutral": [], "worse": [], "reason": "All versions check D=7,8. Original references earlier calculation. Alternates compute M mod 8. Equivalent."}}
+{"15196-15314": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly compute 3^even\u22611 mod 8, M\u22611 mod 8. Correct modular arithmetic."}}
+{"15346-15438": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly compute 3^K\u22610 mod 9 for K\u22652, M\u22610 mod 9. Correct modular arithmetic."}}
+{"15466-15581": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute M\u22611 mod 10, N\u22615 mod 10. Original and alternates correctly conclude D=10 not divisor."}}
+{"15608-15694": {"better": [], "neutral": [], "worse": [], "reason": "All versions set up search for D up to 2000. Original sets up loop, alternates check D=11. Equivalent approaches."}}
+{"15694-15979": {"better": [], "neutral": [], "worse": [], "reason": "All versions explain computing 3^K mod D via Euler/Carmichael. Correct approach for modular arithmetic."}}
+{"15979-16704": {"better": [], "neutral": [], "worse": [], "reason": "Both original and alternate s0h3mw implement CRT-based algorithm for computing 3^K mod D. Both correctly handle 3-divisibility and use Carmichael function."}}
+{"16704-16965": {"better": [], "neutral": [], "worse": [], "reason": "Original has full search loop find_best_D, alternates define helper N_mod_D. Both functionally equivalent for computing N mod D."}}
+{"16965-16985": {"better": [], "neutral": [], "worse": [], "reason": "All versions call find_best_D with different bounds (500-5000). All search for best D within wrong ratio framework."}}
+{"17108-17400": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze ratio for different D values. Original correctly rules out D=10, but all are within wrong framework."}}
+{"17400-17482": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute ratio for D=11. Mechanical calculation within wrong framework."}}
+{"17482-17583": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute ratio for D=12. Mechanical calculation within wrong framework."}}
+{"17583-17723": {"better": [], "neutral": [], "worse": [], "reason": "Alternates o5410n and 85pvus identify D=13 could give lower ratio 8/13\u22480.615 and want to check N mod 13, showing more thorough exploration. Original is less systematic."}}
+{"17723-17933": {"better": [], "neutral": [], "worse": [], "reason": "Alternates a2ks9i and p7e2k1 appropriately want to extend search to larger D bounds, showing better epistemic caution. Original is overconfident."}}
+{"17933-17942": {"better": [], "neutral": [], "worse": [], "reason": "All versions discuss M_mod_D computation. Technical verification within wrong framework."}}
+{"17942-18089": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze ratio bounds and divisor constraints. Detailed analysis but within wrong framework."}}
+{"18089-18167": {"better": [], "neutral": [], "worse": [], "reason": "All versions derive the ratio formula. Mathematically correct derivation within wrong framework."}}
+{"18167-18434": {"better": [], "neutral": [], "worse": [], "reason": "All versions derive ratio = (k/(k+1))*(1-1/D). Mathematically correct within wrong framework."}}
+{"18434-19006": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze ratio as function of D for k=2. Correct analysis within wrong framework."}}
+{"19006-19106": {"better": [], "neutral": ["original", "slvk4k", "xeizkq"], "worse": [], "reason": "All versions analyze finding smallest D\u22611 mod 3 dividing N, restricting to the D=1+u+v pattern. The underlying model is too restrictive (misses the optimal (\u03b1,\u03b2)=(2,15) giving D=47 with ratio 30/47). No alternate questions this restriction, so all neutral."}}
+{"19106-19144": {"better": [], "neutral": [], "worse": [], "reason": "All versions consider fallback patterns if no small D\u22611 mod 3. No alternate suggests a fundamentally different approach."}}
+{"19144-19262": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify D=25 with u=8. Mechanical verification within wrong framework."}}
+{"19262-19384": {"better": [], "neutral": [], "worse": [], "reason": "Original lists candidates D\u22611 mod 3 that could divide N. Mechanical enumeration."}}
+{"19384-19401": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify which D values divide N. Mechanical divisibility checks within wrong framework."}}
+{"19401-19522": {"better": [], "neutral": [], "worse": [], "reason": "All versions check N mod D for various D candidates. Alternates list divisors similarly."}}
+{"19522-19564": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute N mod D for list of D values. Equivalent loop structures."}}
+{"19907-19926": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute min_L for D=25,31. Mechanical calculation within wrong framework."}}
+{"19985-20213": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude D=25 is smallest divisor giving ratio 0.64. Within wrong framework but consistent logic."}}
+{"20213-20358": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze whether other patterns could yield smaller ratio. Thorough but within wrong framework."}}
+{"20358-20692": {"better": [], "neutral": [], "worse": [], "reason": "All versions derive v/D ratio formulas for divisor constraints. Correct math within wrong framework."}}
+{"20692-20715": {"better": [], "neutral": [], "worse": [], "reason": "All versions discuss minimizing ratio through u|v patterns. Consistent analysis within wrong framework."}}
+{"20715-20750": {"better": [], "neutral": [], "worse": [], "reason": "All versions search for D dividing N. Alternate szt7da is more systematic but all within wrong framework."}}
+{"20750-21321": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify ratio increases with D and D=25 is best among divisors. Consistent within wrong framework."}}
+{"21321-21371": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude D=25 is the smallest such divisor. Within wrong framework but consistent."}}
+{"21371-21385": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude r_min = 16/25 = 0.64. Some alternates want to verify other patterns but all within wrong framework."}}
+{"21385-21487": {"better": [], "neutral": [], "worse": [], "reason": "All versions want to verify no other pattern gives ratio <0.64. Alternates explore ratio ~0.5 possibility but all within wrong framework."}}
+{"21487-21587": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore triples without common factor or other patterns. Reasonable exploration but all within wrong framework."}}
+{"21587-21726": {"better": [], "neutral": [], "worse": [], "reason": "All versions reason about LCM bounds (~1/3). Alternates provide scaling analysis. All within wrong framework."}}
+{"21726-21775": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore if ratio <0.64 possible. Alternate v85281 writes brute search code. All within wrong framework."}}
+{"21775-21800": {"better": [], "neutral": [], "worse": [], "reason": "All versions reason about ratio bounds. Alternate a45jjm explores different triple structure but none find correct approach."}}
+{"21800-22122": {"better": [], "neutral": [], "worse": [], "reason": "Original writes search code up to 50000, alternates want to verify. All computing min ratio systematically within wrong framework."}}
+{"22122-22156": {"better": [], "neutral": [], "worse": [], "reason": "All versions call compute_min_ratio with different bounds (5000-50000). Equivalent searches within wrong framework."}}
+{"22209-22220": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude ratio is likely 16/25. Alternates want to verify but all within wrong framework."}}
+{"22220-22239": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze if D>50000 could give lower ratio. Correct analysis that ratio increases with D within wrong framework."}}
+{"22239-22283": {"better": [], "neutral": [], "worse": [], "reason": "All versions derive ratio formula for D with divisibility constraint. Mathematically correct within wrong framework."}}
+{"22283-22384": {"better": [], "neutral": [], "worse": [], "reason": "All versions derive v=k*u, D-1=(k+1)u formula. Correct derivation within wrong framework."}}
+{"22384-22571": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze ratio as function of k and D. Correct that k=2 gives minimum ratio within wrong framework."}}
+{"22571-22580": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude smallest D\u22611 mod 3 dividing N gives best ratio. Correct logic within wrong framework."}}
+{"22580-22605": {"better": [], "neutral": [], "worse": [], "reason": "All versions list ratio formulas for D\u22611 mod 3,4,5. Correct enumeration within wrong framework."}}
+{"22605-22672": {"better": [], "neutral": [], "worse": [], "reason": "All versions derive ratio for D\u22611 mod 4. Identical formulation."}}
+{"22672-22709": {"better": [], "neutral": [], "worse": [], "reason": "All versions derive ratio for D-1 divisible by 5. Identical formulation."}}
+{"22709-22774": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude smallest D\u22611 mod 3 yields smallest ratio. Correct logic within wrong framework."}}
+{"22774-22926": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze D\u22611 mod 3 candidates. Original verifies 25 is smallest such divisor. Correct within wrong framework."}}
+{"22926-22970": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify ratio=(2/3)*(24/25)=16/25. Correct calculation within wrong framework."}}
+{"22970-23128": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute f(N)=16N/25. Alternate 7sgm5m checks other u,v pairs. All within wrong framework."}}
+{"23128-23140": {"better": [], "neutral": [], "worse": [], "reason": "All versions state f(N)=16N/25=(16/25)(M+C). Equivalent formulation within wrong framework."}}
+{"23140-23147": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify N=M+C and divisibility. Alternate fvf1ut verifies triple works. All within wrong framework."}}
+{"23147-23176": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute f(N)=(16/25)*(M+C). Alternate pqwwb6 verifies N divisible by 25. All within wrong framework."}}
+{"23176-23284": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify M\u22611 mod 25. Original and alternates check divisibility. All within wrong framework."}}
+{"23284-23293": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify (16/25)*M not integer but f(N) is. Correct reasoning about divisibility within wrong framework."}}
+{"23293-23403": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify f(N)=(16/25)N is integer because N divisible by 25. Correct reasoning within wrong framework."}}
+{"23403-23417": {"better": [], "neutral": [], "worse": [], "reason": "All versions confirm f(N)=16*(N/25). Alternate 8tqqzz wants to verify C mod 25. All within wrong framework."}}
+{"23417-23441": {"better": [], "neutral": [], "worse": [], "reason": "All versions set up g(c) calculation. Original and alternates proceed with ratio 16/25. All within wrong framework."}}
+{"23441-23483": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute f(N)/M=(16/25)*(1+C/M). Correct expansion within wrong framework."}}
+{"23483-23773": {"better": [], "neutral": [], "worse": [], "reason": "All versions correctly analyze epsilon term is negligible. Correct magnitude reasoning within wrong framework."}}
+{"23773-24019": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude floor(2025!*16/25)=2025!*16/25 since 25|2025!. Correct within wrong framework."}}
+{"24019-24030": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude g(c)=16/25 (WRONG - correct is 30/47). None question the underlying formula."}}
+{"24030-24071": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude g(c)=16/25, p+q=41, which is WRONG (correct answer is 77 from g(c)=30/47). The error stems from using the wrong framework for minimizing f(n)."}}
+{"24071-24078": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude answer=41 (WRONG). Alternate t6tap4 at least verifies divisibility by 25, but doesn't question the wrong framework."}}
+{"24078-24177": {"better": [], "neutral": [], "worse": [], "reason": "Original confidently justifies wrong result. Alternates dcu3vk and hj2qpo appropriately express doubt and want to double-check different configurations, though none find the correct approach (D=x+y+xy dividing N)."}}
+{"24177-24674": {"better": [], "neutral": [], "worse": [], "reason": "Original and alternates analyze bounds on ratio. All stay within the wrong framework. Alternate ag0kj7 considers non-factored triples but doesn't find correct approach."}}
+{"24674-24829": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze ratio formula for k=2 pattern. While mathematically correct within the framework, the fundamental model is wrong."}}
+{"24829-24982": {"better": [], "neutral": [], "worse": [], "reason": "All versions explore k=3 pattern and correctly show it yields ratio >2/3. Analysis is correct but within wrong framework."}}
+{"24982-25000": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute ratio for k=3 with u=3. Mechanical calculation within wrong framework."}}
+{"25000-25018": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute k=3 ratio examples. Mechanical calculations within wrong framework."}}
+{"25018-25045": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude k=3 cannot beat 0.64. Correct within framework but framework is wrong."}}
+{"25045-25104": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze k=4 pattern giving ratio \u22480.8. Correct calculations within wrong framework."}}
+{"25104-25119": {"better": [], "neutral": [], "worse": [], "reason": "All versions reason about k=2 pattern giving smallest ratio. While computationally correct within the wrong framework, the underlying model is flawed."}}
+{"25119-25144": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude minimal ratio from D\u22611 mod 3. Alternate 02qrjp correctly analyzes lcm but still within wrong framework."}}
+{"25144-25151": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude D=25 with ratio 16/25 (WRONG). The error is in the underlying formula for f(N), not the D search."}}
+{"25151-25163": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude f(N)=(16/25)N (WRONG). None question the formula. Alternate gxjn9t at least verifies D=28 gives higher ratio."}}
+{"25163-25177": {"better": [], "neutral": ["original", "0ku7jr", "392kt5", "5c43b1"], "worse": [], "reason": "All conclude g=16/25 and answer 41 (wrong; correct is 77). No alternate questions the result. All neutral."}}
+{"25177-25200": {"better": [], "neutral": [], "worse": [], "reason": "All versions state p+q=41 (WRONG). No alternate suggests reconsidering the approach."}}
+{"25200-25205": {"better": [], "neutral": [], "worse": [], "reason": "Original states wrong answer 41 without verification. Alternate au5i45 appropriately wants to double-check divisibility, showing better epistemic caution even though still on wrong track."}}
+{"25205-25588": {"better": [], "neutral": [], "worse": [], "reason": "Original focuses on verifying technical details of an already wrong approach. Alternates ymlaks and dulm3y more usefully question whether different triple configurations could yield lower ratio, which could lead to finding the correct approach."}}
+{"25588-26709": {"better": [], "neutral": [], "worse": [], "reason": "All versions discuss phi function and modular arithmetic. Technical verification tangential to main error."}}
+{"26709-27312": {"better": [], "neutral": [], "worse": [], "reason": "All versions analyze edge case where phi(D) may have prime factor >2025. Good edge case analysis but within wrong framework."}}
+{"27312-27396": {"better": [], "neutral": [], "worse": [], "reason": "All versions acknowledge M_mod_D may be incorrect for some D but verify D=25,31 are correct. Good verification."}}
+{"27396-27493": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify D=25 via phi(25)=20 divides K. Correct verification within wrong framework."}}
+{"27541-27548": {"better": [], "neutral": [], "worse": [], "reason": "All versions confirm D=25 divides N. Simple confirmation."}}
+{"27548-27566": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify D=31. Original and alternates compute C mod 31. Equivalent verification."}}
+{"27566-27605": {"better": [], "neutral": [], "worse": [], "reason": "All versions check D=13,14. Original and alternates verify non-divisibility. Equivalent analysis."}}
+{"27605-27685": {"better": [], "neutral": [], "worse": [], "reason": "All versions verify D=13 via phi(13)=12 divides K. Correct modular arithmetic verification."}}
+{"27717-27725": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude D=13 doesn't divide N. Simple verification."}}
+{"27725-27832": {"better": [], "neutral": [], "worse": [], "reason": "All versions check various D values for divisibility. Systematic verification within wrong framework."}}
+{"27832-27898": {"better": [], "neutral": [], "worse": [], "reason": "All versions check D=14,8,9,15 for divisibility. Systematic checking within wrong framework."}}
+{"27898-27941": {"better": [], "neutral": [], "worse": [], "reason": "All versions conclude D=25 is minimal. Consistent conclusion within wrong framework."}}
+{"27941-28003": {"better": [], "neutral": [], "worse": [], "reason": "All versions set up g(c) computation. Original and alternates use r_min=16/25. Within wrong framework."}}
+{"28003-28069": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute floor expression for g(c). Correct algebra within wrong framework."}}
+{"28069-28134": {"better": [], "neutral": [], "worse": [], "reason": "All verify that 2025!*16/25 is integer; all proceeding with the wrong ratio 16/25 (correct is 30/47)."}}
+{"28134-28148": {"better": [], "neutral": [], "worse": [], "reason": "All state the same floor calculation with wrong ratio 16/25."}}
+{"28148-28164": {"better": [], "neutral": [], "worse": [], "reason": "All compute g(c) = 16/25 (wrong; correct is 30/47)."}}
+{"28164-28180": {"better": [], "neutral": [], "worse": [], "reason": "All arrive at p+q = 41 (wrong; correct is 77)."}}
+{"28180-28185": {"better": [], "neutral": [], "worse": [], "reason": "All state final answer 41 (wrong; correct is 77)."}}
+{"28185-28348": {"better": [], "neutral": [], "worse": [], "reason": "original, hluxq8, ws8tk9 attempt to verify the answer by checking other D values; q1z6ov just accepts answer without verification. However, all operate within wrong constraint (D=1+u+v form) that misses D=47."}}
+{"28348-28526": {"better": [], "neutral": [], "worse": [], "reason": "All discuss computing 3^K mod D using Carmichael function; technical details for verifying D values."}}
+{"28526-28633": {"better": [], "neutral": [], "worse": [], "reason": "All implement or discuss factorial_mod computation for verifying divisors; equivalent approaches."}}
+{"28633-29355": {"better": [], "neutral": [], "worse": [], "reason": "All define compute_M_mod_D function for verification."}}
+{"29355-29461": {"better": [], "neutral": [], "worse": [], "reason": "All define test/helper functions for checking D values."}}
+{"29461-29469": {"better": [], "neutral": [], "worse": [], "reason": "All call test functions to verify M mod D computations."}}
+{"29529-29724": {"better": [], "neutral": [], "worse": [], "reason": "All define find_best_ratio functions searching within wrong constraint."}}
+{"29724-29751": {"better": [], "neutral": [], "worse": [], "reason": "All call find_best_ratio with various maxD bounds."}}
+{"29797-29846": {"better": [], "neutral": [], "worse": [], "reason": "All search for larger D values but still within wrong constraint (D=1+u+v form)."}}
+{"29880-29895": {"better": [], "neutral": [], "worse": [], "reason": "All completions restate the same (incorrect) minimum ratio/answer, so they are equivalent."}}
+{"29895-29902": {"better": [], "neutral": [], "worse": [], "reason": "01mote adds needed caution about checking non-scaling triples; the original prematurely closes."}}
+{"29902-29915": {"better": [], "neutral": [], "worse": [], "reason": "fububd bakes in the incorrect D=25 conclusion; the others are neutral planning statements."}}
+{"29915-29978": {"better": [], "neutral": [], "worse": [], "reason": "The original asserts an incorrect reduction to D=1+u+v; the alternates avoid that claim."}}
+{"29978-30071": {"better": [], "neutral": [], "worse": [], "reason": "These versions incorrectly claim the u|v, v=2u pattern is globally optimal; j51g1l stays noncommittal."}}
+{"30071-30200": {"better": [], "neutral": [], "worse": [], "reason": "All versions commit to the incorrect D=25 minimum; the true minimum uses D=47."}}
+{"30200-30227": {"better": [], "neutral": [], "worse": [], "reason": "All versions repeat the same incorrect f(N)=16/25\u00b7N conclusion."}}
+{"30227-30247": {"better": [], "neutral": [], "worse": [], "reason": "These all propagate the wrong f(N) value, so they are equivalent."}}
+{"30247-30307": {"better": [], "neutral": [], "worse": [], "reason": "All versions compute g(c) from the same incorrect f(N), so they are equivalent."}}
+{"30307-30359": {"better": [], "neutral": [], "worse": [], "reason": "All versions share the incorrect g(c)=16/25 conclusion."}}
+{"30359-30388": {"better": [], "neutral": [], "worse": [], "reason": "All versions state the same wrong final answer (41)."}}
+{"30388-30416": {"better": [], "neutral": [], "worse": [], "reason": "All accept or restate wrong answer 41."}}
+{"30416-30421": {"better": [], "neutral": ["original", "h55f1k", "o0u02f"], "worse": [], "reason": "All state wrong answer 41. No alternate offers a different answer. All neutral."}}
+{"30421-30426": {"better": [], "neutral": [], "worse": [], "reason": "All present final answer derivation with wrong conclusion."}}
+{"30426-30517": {"better": [], "neutral": [], "worse": [], "reason": "All present formula summary with wrong parameters."}}
+{"30517-30559": {"better": [], "neutral": [], "worse": [], "reason": "All describe parameterization a=t, b=tu, c=tv (the wrong constraint)."}}
+{"30559-30593": {"better": [], "neutral": [], "worse": [], "reason": "All state equation n=t(1+u+v) which is the wrong constraint (misses general case)."}}
+{"30593-30595": {"better": [], "neutral": [], "worse": [], "reason": "All state f(n)/n formula with wrong constraint."}}
+{"30595-30646": {"better": [], "neutral": [], "worse": [], "reason": "All continue with wrong formula."}}
+{"30646-30693": {"better": [], "neutral": [], "worse": [], "reason": "All discuss same wrong approach."}}
+{"30693-30744": {"better": [], "neutral": [], "worse": [], "reason": "All continue deriving within wrong constraint."}}
+{"30744-30747": {"better": [], "neutral": [], "worse": [], "reason": "All continue with equivalent statements."}}
+{"30747-30780": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"30780-30808": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation within wrong framework."}}
+{"30808-30856": {"better": [], "neutral": [], "worse": [], "reason": "All continue with same approach."}}
+{"30856-30900": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"30900-30917": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"30917-30938": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"30938-30951": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"30951-31000": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31000-31029": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31029-31106": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31106-31113": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31113-31154": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31154-31157": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31157-31184": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31184-31187": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31187-31217": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31217-31219": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31219-31311": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31311-31385": {"better": [], "neutral": [], "worse": [], "reason": "All continue with same wrong approach."}}
+{"31385-31402": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31402-31421": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31421-31442": {"better": [], "neutral": [], "worse": [], "reason": "All continue derivation."}}
+{"31442-31449": {"better": [], "neutral": ["original", "1w59io"], "worse": [], "reason": "Original has wrong boxed answer 41, correct answer is 77. Not boxing the answer provides a chance to move on from the wrong answer."}}
