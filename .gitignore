@@ -24,9 +24,10 @@ code.diff
 logs.log
 merged-*/
 *.ipynb
-training/sample/*
-!training/sample/*/
-training/sample/*/*
+training/sample/**
+!training/sample/**/*/
 !training/sample/*/index.jsonl
+!training/sample/*/**/initial.jsonl
+!training/sample/*/**/tuned.jsonl
 model/
 data/problems.py
