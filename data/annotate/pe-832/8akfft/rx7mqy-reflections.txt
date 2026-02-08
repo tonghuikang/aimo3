@@ -1,0 +1,23 @@
+## Answer: correct (552839586)
+
+## Key moments
+- Token 243 [insight]: Starts with simulation to expose recurring structure instead of attempting direct large-`n` algebra.
+- Token 489 [questionable statement]: Initial simulator searches for `b` before writing `a`, producing invalid early tuples like `(1,1,0)`.
+- Token 730 [mistake]: Uses the wrong round order (searches `b` before writing `a`), which generates invalid early triples.
+- Token 982 [verification]: Re-run now matches the prompt’s early rounds (`(1,2,3)`, `(4,8,12)`, ...).
+- Token 4503 [insight]: Observes full-coverage round counts `1,5,21,85,...` when checking powers.
+- Token 4765 [breakthrough]: Derives boundary formula: rounds to fill through `2^{2k}-1` equals `(4^k-1)/3`.
+- Token 6476 [insight]: Identifies stage partition into three equal contiguous value blocks (`a`-block, `b`-block, `c`-block).
+- Token 12501-14935 [wasted]: Spends a long detour testing Gray-code/rotation/mod-multiplier hypotheses for the offset permutation.
+- Token 12818 [insight]: Blockwise offset behavior hints that the permutation acts on 2-bit/base-4 chunks.
+- Token 16259 [breakthrough]: Finds `b`-offset map as digitwise base-4 permutation `p(0,1,2,3)=(0,2,3,1)`.
+- Token 16901 [insight]: Computes digitwise XOR relation between original and permuted digits.
+- Token 17104 [breakthrough]: Gets `c = 3L + Q(offset)` with `q(d)=d xor p(d)`, making `b/c` sums separable by digits.
+- Token 18856 [questionable statement]: Applies a full-range transformed-sum formula with the wrong digit index, causing a stage-1 contradiction.
+- Token 19480 [mistake]: Applies the stage digit index incorrectly (`d=t` instead of `d=t-1`), producing the observed contradiction.
+- Token 26457 [insight]: Collapses `P+Q` into a single digit map `f=[0,5,4,3]` for the partial-stage term.
+- Token 26803 [breakthrough]: Implements O(log L) digit-count DP for `sum_{x<r}(P(x)+Q(x))` and finalizes the partial-stage formula.
+- Token 28411 [verification]: Matches given checks `M(10)=642` and `M(1000)=5432148`.
+- Token 28821 [verification]: Random brute-force cross-checks up to `n=5000` all agree.
+- Token 29384 [verification]: Boundary test at `n=(4^t-1)/3` confirms full-stage behavior.
+- Token 29747 [final answer]: Commits to `\boxed{552839586}`.

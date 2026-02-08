@@ -1,0 +1,19 @@
+Correct answer: 166666666689036288
+
+Correct approach
+- The game outcome depends only on whether each digit is zero or nonzero, not on the exact nonzero value.
+- Encode a number as a binary pattern (`1` = nonzero digit, `0` = zero digit), with first bit always `1`.
+- Move rule on patterns: delete one bit, then strip leading `0`s. Empty string is terminal and losing (P-position).
+- Compute winning/losing status with memoized DP on patterns up to length 18:
+  - `win("") = False`
+  - `win(s) = True` iff there exists a deletion move to a losing state.
+- Count actual integers via weighting: a pattern with `k` ones corresponds to `9^k` decimal numbers.
+- Therefore:
+  - `W(10^18) = sum_{L=1..18} sum_{patterns s of length L, s[0]=1, win(s)} 9^{ones(s)}`
+- This reproduces the anchors `W(100)=18` and `W(10^4)=1656`, then gives `W(10^18)=166666666689036288`.
+
+Wrong approaches and why they fail
+- Small-range extrapolation (e.g., inferring global rules from 2/3/4-digit behavior) fails because longer lengths introduce additional winning and losing pattern families.
+- “Second digit zero is sufficient” style rules for even lengths are incomplete: second-digit-zero is often necessary for certain winning families but not sufficient by itself.
+- Manual case-by-case zero-position pattern cataloging (length-by-length) is brittle and non-general; it leads to missed patterns and no scalable count to length 18.
+- Parity-only heuristics (length parity or nonzero-count parity alone) are not sufficient; counterexamples appear quickly (e.g., same parity can yield different outcomes).

@@ -1,0 +1,25 @@
+## Answer: wrong (94303)
+
+## Key moments
+- Token 121 [insight]: Sets up the core geometric identity `IA^2 = r^2 + (s-a)^2` (and cyclic forms).
+- Token 1767 [breakthrough]: Reparameterizes sides with `u,v,w` (`a=v+w`, `b=w+u`, `c=u+v`), turning geometry into Diophantine constraints.
+- Token 6957 [insight]: Rewrites integrality as square conditions on rational expressions in `u,v,w,s`.
+- Token 8068-12335 [wasted]: Long symbolic factorization/hyperbola detour without a practical enumeration path.
+- Token 14626 [questionable statement]: Infers from small brute force that odd-perimeter/non-integer-`r` branches can be ignored.
+- Token 15433 [mistake]: Commits to integer-`r`/integer-`u,v,w` branch as complete without a full proof.
+- Token 15521 [insight]: Reframes each vertex condition as a shared-leg Pythagorean relation `u_i^2 + r^2 = x_i^2`.
+- Token 17415 [insight]: Identifies the need to enumerate `r` values that admit multiple compatible `u` legs.
+- Token 21988 [insight]: Derives tighter compatibility/divisibility expressions linking candidate triples to a single valid triangle.
+- Token 27722 [breakthrough]: Consolidates to a concrete `(x,y,z,w)` framework and explicit reconstruction formulas.
+- Token 36880 [breakthrough]: First executable divisor-based pipeline over per-`w` candidate sets.
+- Token 40523 [verification]: Reproduces the known checkpoint `S(1000)=3619`.
+- Token 47185 [verification]: Limit sweeps show totals are sensitive to search frontier choices.
+- Token 51346-58083 [wasted]: Extended algorithm-swapping/profiling phase (divisor vs Euclid generation) without establishing rigorous completeness bounds.
+- Token 59633 [questionable statement]: Assumes any triple drawn from per-`r` candidate items is valid before enforcing the full compatibility equation.
+- Token 65260 [mistake]: This assumption causes massive overcount (`S(1000)` far above 3619).
+- Token 67584 [breakthrough]: Restores the missing cubic compatibility constraint and fixes the overcounting mechanism.
+- Token 70969 [questionable statement]: Uses a smallest-prime-factor-based minimal-weight estimate as a hard pruning bound.
+- Token 73616 [mistake]: Final solver applies that prune, which can skip valid divisor configurations of `m^2`.
+- Token 74988 [verification]: Updated constrained solver again matches `S(1000)=3619`.
+- Token 75655 [verification]: Additional brute-force checks at intermediate `P` values agree with the revised implementation.
+- Token 77111 [final answer]: Commits `\boxed{94303}`, which is incorrect.

@@ -1,0 +1,21 @@
+## Answer: wrong (2371)
+
+## Key moments
+- Token 42 [insight]: Correctly frames the object as 24 sticker positions on 8 corners.
+- Token 1034 [questionable statement]: Treats the commonly cited `3,674,160` pocket-cube position count as the direct move-group size for this sticker-action Burnside setup.
+- Token 3048 [mistake]: Commits to `|G|=3,674,160`, locking in a normalization that is not the right one for the equivalence used later.
+- Token 4142-13028 [wasted]: Long detour into BFS/sticker-permutation implementation planning instead of resolving the group-action definition first.
+- Token 13001-19984 [wasted]: Additional geometry/sign-convention derivations for move tables without progress on the core counting reduction.
+- Token 19984-24859 [wasted]: Continues low-level move-orientation and mapping mechanics rather than validating the counting framework assumptions.
+- Token 24859-31295 [wasted]: Repeated attempts to make brute-force enumeration feasible (state encoding, memory/runtime tradeoffs) that do not yield the final computation path.
+- Token 34398-40328 [wasted]: More implementation-focused BFS/state-encoding churn before converging on a workable symbolic direction.
+- Token 40328-46357 [wasted]: Keeps revisiting enumeration mechanics after the symbolic route is available, delaying the final derivation.
+- Token 46357 [insight]: Moves to a corner-permutation/orientation analytic model for cycle counting on stickers.
+- Token 49111 [breakthrough]: Derives the key per-corner-cycle rule: cycle contribution is 3 when cycle twist-sum is 0 mod 3, otherwise 1.
+- Token 49851 [questionable statement]: Assumes a global `/12` quotient transfer from the lifted corner model to the target move group preserves the required Burnside normalization.
+- Token 51836 [questionable statement]: Assumes only even corner permutations should be counted in the summation index (`A8` restriction).
+- Token 52516 [mistake]: Sets `N_k=s(8,k)` only for even `k`, excluding odd-cycle-count permutations and distorting the Burnside sum.
+- Token 54008 [mistake]: Applies an additional `/12` normalization (`sum_G = sum_H // 12`) and then divides by `|G|=3,674,160`, producing a mis-scaled average.
+- Token 55068 [missed opportunity]: Uses only the `n=2 -> 183` check as validation; this does not expose the parity/normalization mismatch in the general formula.
+- Token 55099 [missed opportunity]: Continues with the flawed normalization after the single calibration test instead of cross-checking against alternative group-size conventions.
+- Token 55665 [final answer]: Commits to `\boxed{2371}`.

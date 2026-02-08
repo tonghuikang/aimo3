@@ -1,0 +1,26 @@
+# Findings: aimo3-q10-g1848374-g10162574
+
+## Correct answer
+- `(p+q) mod 99991 = 2677`
+
+## Correct approach
+- Reformulate `f(n)` as minimizing a feasible divisor-construction ratio, not just a `1+d+k` family.
+- For `n=M+c` with `M=3^{2025!}`, use constructions of the form `k + k/u + k/v = n`, i.e.
+  - `k = n * uv / (uv+u+v)` when integrality/divisibility conditions are satisfied.
+- For `c=1848374`, the minimizing feasible ratio is `16/25`, so:
+  - `g(1848374)=16/25`.
+- For `c=10162574`, the minimizing feasible ratio is `30/47`, so:
+  - `g(10162574)=30/47`.
+- Then:
+  - `g(1848374)+g(10162574)=16/25+30/47=1502/1175`.
+  - So `p+q=1502+1175=2677`.
+
+## Wrong approaches and why they fail
+- **Restricted `1+d+k` / smallest-divisor model**:
+  - Assume optimal triples must effectively reduce to choosing a divisor of `n-1` and minimizing via the smallest odd divisor.
+  - This misses better `(u,v)` constructions and overestimates `f(n)`.
+- **Derived wrong `g(c)` formulas from that model**:
+  - Forms like `g(c)=1-\lceil 2025!/m\rceil/2025!` (with `m` from the wrong divisor model) can be algebraically consistent internally but are based on a non-optimal `f(n)`.
+  - This path leads to the incorrect final remainder `97881`.
+- **Insufficient global minimization check**:
+  - Verifying arithmetic/floor details without checking broader feasible ratio families validates only the wrong subfamily, not the true minimum.

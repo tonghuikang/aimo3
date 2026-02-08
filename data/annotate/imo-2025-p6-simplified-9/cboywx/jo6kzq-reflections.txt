@@ -1,0 +1,22 @@
+## Answer: correct (12)
+
+## Key moments
+- Token 3192 [verification]: Builds brute-force tooling for small \(n\), grounding the search in executable checks instead of pure guessing.
+- Token 6664 [verification]: Extends small-\(n\) computation and uses those outputs to constrain plausible formula families.
+- Token 9048 [insight]: Identifies the left/right decomposition induced by one hole per row as a key structural handle.
+- Token 12387 [questionable statement]: Leans on recalled biclique-partition facts without yet resolving the partition-vs-covering subtlety cleanly.
+- Token 16776 [insight]: Spots that \(n+\lceil\log_2 n\rceil-1\) matches computed small-\(n\) values.
+- Token 20357 [verification]: Computes interval structure for concrete permutations to test whether the hypothesized formula is behaviorally plausible.
+- Token 25221 [insight]: Applies the hypothesized formula directly to \(n=9\), yielding 12 as target.
+- Token 27200 [insight]: Reasserts the known partition result as \(n+\lceil\log_2 n\rceil-1\), reinforcing 12.
+- Token 30414-32633 [wasted]: Spends many tokens on ad hoc constructive variants despite already having a strong theorem-driven direction.
+- Token 32765 [questionable statement]: Treats a clearly suspicious DP outcome too seriously before validating implementation correctness.
+- Token 33850-37095 [mistake]: Follows the buggy DP path, generating invalid intermediate conclusions.
+- Token 37203 [breakthrough]: Diagnoses and fixes the DP bug, restoring trustworthy computational feedback.
+- Token 39023 [insight]: Returns to the theorem-based bound \(n+\lceil\log_2 n\rceil-1\), re-centering the argument on 12.
+- Token 43685 [questionable statement]: Assumes mirrored power-of-two diagonal grouping will complete coverage with very few tiles.
+- Token 44494 [mistake]: Tentatively treats the 8-tile grouped diagonal attempt as sufficient before full coverage validation.
+- Token 45313 [verification]: Explicitly checks uncovered cells and falsifies the incomplete 8-tile construction.
+- Token 47016 [breakthrough]: Recognizes diagonal-focused grouping is insufficient and pivots back to the stronger global framework.
+- Token 49943 [verification]: Aligns final reasoning with the known biclique-partition theorem for \(K_{n,n}\setminus M\).
+- Token 49997 [final answer]: Commits to \(\boxed{12}\), which is correct.

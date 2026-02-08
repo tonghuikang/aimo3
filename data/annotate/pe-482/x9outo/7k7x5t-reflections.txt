@@ -1,0 +1,28 @@
+## Answer: correct (64728)
+
+## Key moments
+- Token 377 [insight]: Starts converting the geometry into algebra with `IA = r/sin(A/2)`, setting up integer-square constraints.
+- Token 570 [questionable statement]: Briefly mixes up tangency geometry (`AD`/touchpoint reasoning), risking a wrong distance formula.
+- Token 1364 [breakthrough]: Resolves the geometry via right triangles at tangency points and locks in `IA^2 = r^2 + (s-a)^2` (and cyclic variants).
+- Token 2270 [insight]: Rewrites in tangency variables `u,v,w` and `t = uvw/(u+v+w)`, reducing the condition to `u^2+t`, `v^2+t`, `w^2+t` being squares.
+- Token 4852-11680 [wasted]: Long exploratory detour (pattern-guessing/family speculation) before committing to a scalable search formulation.
+- Token 9102 [insight]: Recognizes scaling orbits (`k`-multiples) and that counting should be organized by base families plus scale factors.
+- Token 15305 [insight]: Establishes rough `r`/`t` bounds from `uvw = r^2(u+v+w)`, motivating an `r`-indexed enumeration.
+- Token 20185 [breakthrough]: Reframes the problem as choosing `u,v,w` from `U(r)` with `uvw = r^2(u+v+w)`, giving a concrete constructive algorithm.
+- Token 21426 [insight]: Connects `U(r)` generation to factor pairs of `r^2`, making candidate construction practical.
+- Token 27081 [verification]: Small-bound runs are used to classify primitive vs scaled behavior and validate family structure.
+- Token 33337 [verification]: First full-method check reproduces `S(1000)=3619`, confirming core equations and counting logic.
+- Token 40442 [questionable statement]: Introduces an aggressive lower-bound heuristic for `u_min` from smallest-prime-factor reasoning.
+- Token 42157 [mistake]: Implements pruning based on that heuristic in the solver; this later excludes valid `r` cases.
+- Token 44798 [verification]: Uses partial timing/profiling to estimate whole-range runtime and chunking feasibility.
+- Token 52542 [insight]: Moves to range/chunk computation to keep long evaluations executable and inspectable.
+- Token 53550-62968 [wasted]: Significant optimization effort is spent around the flawed prune assumption, producing inconsistent totals.
+- Token 61438 [verification]: Rechecks small-`P` behavior before the large run and confirms the need for stronger consistency testing.
+- Token 70012 [verification]: Cross-check between primitive-sum logic and direct enumeration at smaller `P` exposes a discrepancy.
+- Token 73487 [breakthrough]: Starts systematic reconciliation (set-level comparison and family tracing) rather than ad hoc tuning.
+- Token 81568 [verification]: Isolates discrepancy to specific missing/extra families in generated triangle sets.
+- Token 87522 [insight]: Identifies that the disagreement comes from pruning omissions in direct enumeration, not the scaling-series arithmetic.
+- Token 96021 [breakthrough]: Finds a concrete counterexample (`r=7735`) and removes invalid pruning, restoring correctness.
+- Token 100064 [verification]: No-prune exact method matches the trusted `P=100000` check.
+- Token 101140 [verification]: Chunked modulo computation reproduces the known intermediate mod check (`18402`).
+- Token 101530 [final answer]: Commits `\boxed{64728}` as the final result.

@@ -1,0 +1,11 @@
+## Answer: wrong (0)
+
+## Key moments
+- Token 556 [insight]: Expresses reachability through iterative factoring/combining in an exponentiation-tree view.
+- Token 2950 [questionable statement]: Assumes creativity would require all relevant primes to be present from the initial decomposition structure.
+- Token 3873 [mistake]: Asserts reachable primes are exactly those from that finite tree, over-restricting the dynamics.
+- Token 6200-7800 [wasted]: Repeats invariant arguments without adding a new decisive step.
+- Token 8631 [questionable statement]: Moves from heuristic “likely impossible” language to a near-final impossibility framing.
+- Token 9800 [mistake]: Finalizes the global “no creative integers” conclusion from the unproven prime-invariance claim.
+- Token 10800 [missed opportunity]: Does not run a direct constructive stress test before committing.
+- Token 11432 [final answer]: Commits to `\\boxed{0}`.

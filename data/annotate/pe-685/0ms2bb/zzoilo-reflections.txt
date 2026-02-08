@@ -1,0 +1,31 @@
+## Answer: wrong (6579)
+
+## Key moments
+- Token 81 [insight]: States the right top-level target `S(10000) mod 1e9+7`.
+- Token 5026 [insight]: Identifies the hard residue classes (`D=0` / `D=1`) where minimal length is not enough.
+- Token 10075 [breakthrough]: Locks in correct zero-index rank update semantics (`rank<count` pick, else subtract and continue).
+- Token 15079 [breakthrough]: Models the number via deficit composition with the first-digit cap (`e1<=8`).
+- Token 20080 [insight]: Correctly characterizes the `D0=0` transition to `D=9` at `L0+1`.
+- Token 25089 [missed opportunity]: Focuses on cap-magnitude tuning instead of resolving the core ranking inconsistency.
+- Token 30268 [breakthrough]: Moves to per-position modular construction to avoid iterating full huge digit strings.
+- Token 35345 [breakthrough]: First full constructor (`construct_mod`) integrating length selection and deficit unranking.
+- Token 41730 [mistake]: Uses incorrect capped accumulation logic in `count_len_deficit`, corrupting length/rank decisions.
+- Token 46825-62339 [wasted]: Long instrumentation/debug cycle around counting and skip behavior without a stable invariant.
+- Token 52158 [insight]: Attempts an acceleration path, but it still depends on unresolved skip/cumulative-rank correctness.
+- Token 57164 [questionable statement]: Proposes a binary-search predicate for `p_target` without a consistent rank-consumption proof.
+- Token 62339 [verification]: Adds focused `ways_cap` testing to isolate counting behavior, but it does not yet close the ranking gap.
+- Token 67372 [mistake]: Treats zero-skipping as a local `rank < ways(p-1,d)` condition, missing cumulative block subtraction.
+- Token 72376 [questionable statement]: Continues stepwise zero-assignment logic while still omitting global rank offset across skipped zeros.
+- Token 77507 [wasted]: Runtime timing checks are run before correctness is established.
+- Token 82942 [insight]: Separates combination-unranking as an independent subproblem.
+- Token 87965 [breakthrough]: Applies the stars-and-bars to combinations mapping (`M=N+k-1`) for direct unranking.
+- Token 93011 [verification]: Adds constructor debug tests, exposing persistent mismatches.
+- Token 95263 [mistake]: `test_compare(200)` still fails, confirming the constructor is not equivalent to the reference path.
+- Token 96665 [insight]: Correctly realizes skipped-zero blocks must decrement rank by their full block counts.
+- Token 96868 [breakthrough]: Writes the cumulative subtraction formula for multi-zero skips (`Σ ways(...)`) and starts patching around it.
+- Token 98869 [missed opportunity]: Abandons the nearly-fixed path due to time pressure and restarts with another strategy.
+- Token 100711 [mistake]: New combination-based rewrite still fails validation (`test_compare_new(200)` unresolved).
+- Token 101643 [questionable statement]: Introduces another branch-specific capacity pivot (`Drem>9`) instead of consolidating one proven unranking pipeline.
+- Token 105055 [verification]: Builds `test_compare_final`, but no successful pass is established.
+- Token 105430 [missed opportunity]: Explicitly notes `skip_zeros` miscomputes `n=3`, but the correction is not completed.
+- Token 106115 [final answer]: Trace ends at `debug_f_mod_final(3)`; last produced value is 6579, and no valid `S(10000)` answer is delivered.

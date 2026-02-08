@@ -1,0 +1,19 @@
+## Answer: correct (13310)
+
+## Key moments
+- Token 121 [insight]: Clarifies that all five odd digits (1,3,5,7,9) must each appear an odd number of times, setting the core parity constraints.
+- Token 2707 [questionable statement]: Assumes permutation residues modulo 7 may be effectively uniform, motivating a divide-by-7 counting shortcut.
+- Token 3243 [mistake]: Treats multiset contributions as exactly `(L-1)!/(...) / 7`, which is not generally exact.
+- Token 5782 [insight]: Brute-force checks small multisets and sees 17 vs 18 hits out of 120 permutations, showing the exact 1/7 split is false.
+- Token 6659 [breakthrough]: Switches to exact DP counting over explicit states instead of relying on the 1/7 heuristic.
+- Token 12545 [missed opportunity]: After already deriving divisibility-by-3 structure, proceeds without encoding that condition in the DP state.
+- Token 12711 [questionable statement]: Defines completion DP with state `(steps_left, parity, rem)` only, omitting the digit-sum modulo-3 condition.
+- Token 13477 [mistake]: Detects the model failure when DP predicts 121 length-7 candidates versus brute-force 35.
+- Token 14105 [insight]: Derives the missing constraint `sum_prefix ≡ 1 (mod 3)` before appending the forced final digit 5.
+- Token 14339 [breakthrough]: Extends the state to `(steps_left, parity, rem, sum_mod3)`, fixing the counting model.
+- Token 14858-16220 [wasted]: Spends a long debugging loop re-checking earlier vector-enumeration code after the core omission is already identified.
+- Token 16373 [insight]: Uses corrected per-length totals to pivot to cumulative bucket search for locating the index.
+- Token 16535 [breakthrough]: Uses corrected counts to place `10^16` in the length-29 block and computes the within-length offset.
+- Token 18606 [verification]: Validates unranking by matching brute-force ranks on smaller lengths, reducing ordering/off-by-one risk.
+- Token 19277 [verification]: Recomputes `Θ(1)` and `Θ(10^3)` from the same pipeline and matches both provided anchors.
+- Token 19636 [final answer]: Commits to `\boxed{13310}`.

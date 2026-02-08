@@ -1,0 +1,29 @@
+## Answer: wrong (no final answer)
+
+## Key moments
+- Token 98 [insight]: Reframes `S(b)` as a total-distance computation over Kaprekar iterations with repdigits and `C_b` treated specially.
+- Token 2452-39565 [wasted]: Long exploratory derivation around constant patterns and algebraic forms before a stable computational pipeline is in place.
+- Token 10249 [insight]: Starts a concrete structural route using `b=6t+3` parameterization and digit-difference invariants.
+- Token 17118 [breakthrough]: Establishes a transition view on reduced difference variables, enabling a state-space DP perspective.
+- Token 24713 [insight]: Uses explicit range/case decomposition for transition behavior, narrowing the combinatorial counting problem.
+- Token 32270 [verification]: Runs hand/programmable checks on transition cases to validate the derived mapping logic.
+- Token 41579 [breakthrough]: Formalizes the direct transition `T(Δ1,Δ2)` independent of full digit ordering.
+- Token 46198 [insight]: Switches to weighted counting over sorted tuples with multiplicity factors.
+- Token 55226 [wasted]: Extensive combinatorial case splitting for weights before integrating with an end-to-end `S(b)` check.
+- Token 63595 [breakthrough]: Derives a closed-form `f(a,d)` multiplicity expression that makes `O(b^2)` aggregation feasible.
+- Token 71558 [verification]: Validates special-case formulas (`d=0`, `a=d`, interior cases) against brute-force checks.
+- Token 72943 [breakthrough]: Consolidates the final piecewise weight formulas for all `(a,d)` regimes.
+- Token 79370 [verification]: Re-validates the finalized `f(a,d)` formulas with programmatic spot checks.
+- Token 84792 [questionable statement]: Uses an oversimplified second-min extraction rule in successor construction.
+- Token 88947 [verification]: Executes the debug `compute_S` path for `b=15` to isolate where aggregated totals diverge from expected anchors.
+- Token 95611 [mistake]: Encounters a spurious extra fixed point (`(8,7)`), showing the successor logic is mathematically wrong.
+- Token 96368 [insight]: Identifies the root cause as incorrect handling of duplicate digits when computing second minimum.
+- Token 96406 [breakthrough]: Corrects second-min logic and rebuilds successor/depth computation with proper sorting semantics.
+- Token 98347 [verification]: Compares computed `S(15)` against the provided value and confirms a large discrepancy remains.
+- Token 99196 [questionable statement]: Treats the whole target `(a,d)` state as if every member behaves like the unique constant integer.
+- Token 101292 [mistake]: Conflates the single numeric `C_b` with its non-constant permutations, causing systematic undercounting.
+- Token 104353 [verification]: Cross-checks state-depth outputs against brute-force per-number `sb(i)` samples and confirms local consistency.
+- Token 104747 [insight]: Notices the missing global `+1` effect over non-repdigit starts needed to reconcile with the problem’s `S(15)` example.
+- Token 104988 [breakthrough]: Introduces corrected scoring relation `S_given(b) = S_our(b) + (b^5 - b) - 1`, resolving the sample mismatch.
+- Token 105123 [verification]: Plans validation against the second anchor (`S(111)`), indicating the correction is being tested on another base.
+- Token 105647 [final answer]: Trace stops mid-verification code (`print("Computing S(15)...")`) without producing the required final 18-digit sum.

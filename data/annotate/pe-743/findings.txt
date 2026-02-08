@@ -1,0 +1,29 @@
+# PE 743 Findings
+
+## Correct Answer
+- `259158998`
+
+## Correct Approach
+- Let `s_i = a_i + b_i ∈ {0,1,2}`. The condition
+  `sum_{j=i}^{i+k-1} s_j = k` for all windows implies `s_{i+k} = s_i`.
+- So `s` is `k`-periodic: choose `c_1,...,c_k ∈ {0,1,2}` with `sum c_i = k`.
+- If `n = qk + r`, each residue class has multiplicity `q` or `q+1`; only `c_i=1` contributes nontrivial weight (`2^{multiplicity}`).
+- Here `n = k^2`, so all multiplicities are exactly `k`, and with `w = 2^k`:
+  `A(k,k^2) = [t^k](1 + w t + t^2)^k`.
+- Equivalent exact sum:
+  `A = sum_{c=0}^{⌊k/2⌋} C(k,2c) C(2c,c) w^{k-2c}` (mod `M`, `M=10^9+7`).
+- Equivalent recurrence (Legendre-derived) for
+  `A_n = [t^n](1 + w t + t^2)^n`:
+  `(n+1)A_{n+1} = (2n+1)w A_n - n(w^2-4)A_{n-1}`.
+- Scale by factorial to remove division:
+  `B_n = n! A_n`, then
+  `B_{n+1} = (2n+1)w B_n - n^2(w^2-4)B_{n-1}` with `B_0=1, B_1=w`.
+  Final value: `A_k = B_k * (k!)^{-1} mod M`.
+- Evaluated at `k=10^8` gives `259158998`.
+
+## Wrong Approaches And Why They Fail
+- Dropping all correction terms (`c>=1`) and keeping only the leading term gives
+  `A ≈ w^k = 2^{k^2} mod M = 271283348`, which is not exact.
+- Assuming the correction factor
+  `S = sum_{c} C(k,2c)C(2c,c)w^{-2c}` is `1`, negligible, or `0` without proof leads to wrong outputs (notably `271283348`, and sometimes `0`).
+- Replacing Legendre expressions with Chebyshev-style closed forms directly (without a valid identity for this case) produces invalid simplifications and wrong final values.

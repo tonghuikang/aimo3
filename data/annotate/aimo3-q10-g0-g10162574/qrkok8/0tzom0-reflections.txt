@@ -1,0 +1,14 @@
+## Answer: wrong (65684)
+
+## Key moments
+- Token 466 [breakthrough]: Reframes the task as minimizing `lcm(a,b,c)` over triples summing to `n`.
+- Token 1490 [breakthrough]: Gets the useful `1+d+X=n` reduction and the idea of maximizing a divisor-derived `d` to lower `X`.
+- Token 1568 [mistake]: Treats the `1,d,X` family as effectively exhaustive, which excludes lower-ratio non-equivalent constructions.
+- Token 2031 [missed opportunity]: Briefly notes concern about missing non-`1,d,X` triples but does not pivot to a broader global search.
+- Token 2469 [breakthrough]: Correctly analyzes `M-1=2S` structure and the need for a divisor strictly below half.
+- Token 8116 [mistake]: Commits to `f(M)=3(M-1)/4`, an incorrect baseline that propagates through `g(0)`.
+- Token 8302-13070 [wasted]: Long defensive derivation and edge-case discussion around the same flawed `n-1`-driven model.
+- Token 39905 [verification]: Performs consistent modular/gcd arithmetic checks inside the chosen branch.
+- Token 41048 [verification]: Carefully checks floor perturbation size (`epsilon`) for the selected formula.
+- Token 41313 [mistake]: Reaffirms the wrong branch result after all arithmetic checks, without reopening the model.
+- Token 41418 [final answer]: Commits to `65684`.

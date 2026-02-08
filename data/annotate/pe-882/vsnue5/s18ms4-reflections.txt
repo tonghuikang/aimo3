@@ -1,0 +1,21 @@
+## Answer: wrong (0)
+
+## Key moments
+- Token 617 [insight]: Establishes deletion-based game mechanics and starts searching for a closed-form skip formula.
+- Token 2972 [questionable statement]: Collapses the game to a simple Left/Right token-race model, ignoring structural zero-loss effects from leading-bit changes.
+- Token 5783 [mistake]: Uses that simplified model to predict `S(2)=0`, directly conflicting with the sample `S(2)=2`.
+- Token 15471 [missed opportunity]: Notes that One-moves can erase multiple zeros indirectly, but does not immediately abandon the oversimplified counting framework.
+- Token 22447 [verification]: Brute-force small-`n` solver matches provided checkpoints, indicating the need for a more faithful structural model.
+- Token 28797 [insight]: Recognizes empirical behavior (e.g., pass counts exceeding naive zero-based expectations) that invalidates earlier heuristics.
+- Token 33023 [questionable statement]: Returns to unproven capture-order heuristics instead of consolidating the validated brute-force signal.
+- Token 42596 [insight]: Recasts the game as active block-chains per copy, a better structural abstraction.
+- Token 52011 [breakthrough]: Attempts an aggregated block-type simulation to scale beyond brute force.
+- Token 58979 [verification]: Tests deadline/EDF-style abstractions; results fail to produce a stable correct rule.
+- Token 65643 [questionable statement]: Assumes each positive block contributes at most one capture.
+- Token 75344 [questionable statement]: Treats a local greedy deletion policy as globally optimal without proof.
+- Token 84209 [mistake]: Derives incorrect capture formulas from the one-capture-per-block assumption.
+- Token 87714 [questionable statement]: Substitutes another heuristic (`~P/2`) after contradictions appear.
+- Token 88392 [mistake]: Admits size>1 blocks violate prior assumptions but continues on heuristic extrapolation anyway.
+- Token 90982-92052 [wasted]: Long stretch of speculative formula guessing and ad hoc tests that do not resolve the model.
+- Token 91959 [missed opportunity]: Explicitly stops due complexity instead of switching to the already-validated value-DP method used by correct traces.
+- Token 92122 [final answer]: Commits to `\boxed{0}`, which is incorrect.

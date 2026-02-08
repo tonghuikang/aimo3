@@ -1,0 +1,14 @@
+## Answer: correct (1165)
+
+## Key moments
+- Token 1370 [breakthrough]: Sets up the divisor-quotient parameterization that links candidate triples to ratio minimization.
+- Token 6004 [breakthrough]: Confirms `2/3`-type construction behavior for power-of-3-compatible sums.
+- Token 9415 [breakthrough]: Clarifies scale-invariant ratio logic (`LCM/sum`) for comparing branches.
+- Token 19303 [missed opportunity]: Spends time on generic next-best-ratio sequencing before applying concrete divisibility of `M+c`.
+- Token 20432 [breakthrough]: Uses modular checks to eliminate `7`- and `11`-driven better ratios for `M+c`.
+- Token 30131 [breakthrough]: Moves to explicit divisor candidates derived from `c+1` structure.
+- Token 33592 [breakthrough]: Consolidates branch ranking logic (`6/11`, `4/7`, `2/3`, others) under divisibility constraints.
+- Token 43031 [breakthrough]: Gets concrete prime-sum branch quality (`68/103`) as a stepping stone.
+- Token 47753 [breakthrough]: Identifies `110/167` as the best feasible ratio among the decisive candidates.
+- Token 53908 [verification]: Verifies floor exactness and computes `g(0)+g(c)=664/501`.
+- Token 56744 [final answer]: Commits to `\boxed{1165}`.

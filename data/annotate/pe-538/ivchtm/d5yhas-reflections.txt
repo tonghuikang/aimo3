@@ -1,0 +1,16 @@
+## Answer: correct (83039)
+
+## Key moments
+- Token 191 [insight]: The trace identifies Brahmagupta/cyclic-quadrilateral area as the optimization target for each 4-tuple.
+- Token 3718 [questionable statement]: It hypothesizes that the top feasible largest sides should usually maximize area.
+- Token 5288 [mistake]: Brute-force checks (around the n=63 regime) show the top-four heuristic fails when a large outlier reduces area.
+- Token 6281 [breakthrough]: It pivots to a candidate-set approach that allows skipping outliers and searching within a larger top slice.
+- Token 6656-15800 [wasted]: Extended popcount-group modeling and asymptotic speculation does not materially contribute to the final computation path.
+- Token 16022 [insight]: The trace notices f(U_n) only changes when a new entry can improve the current optimum.
+- Token 17305 [breakthrough]: It formalizes incremental recomputation only when top-L membership changes, making the 3,000,000 run feasible.
+- Token 19523 [verification]: It cross-checks bounded top-L behavior against brute-force prefixes in small ranges to validate the truncation idea.
+- Token 28117 [verification]: Additional sampled-prefix comparisons reinforce that the truncated candidate set matches exact values before full-scale execution.
+- Token 29859 [verification]: It matches the provided 4..150 checksum modulo 99991 (34779), confirming implementation correctness on the benchmark.
+- Token 30627 [missed opportunity]: It acknowledges the lack of a formal proof that fixed L is always sufficient and relies on empirical stability tests instead.
+- Token 31497 [verification]: It confirms the final modulo sum is stable across multiple L settings on N=3,000,000.
+- Token 31632 [final answer]: It commits to `\boxed{83039}`.

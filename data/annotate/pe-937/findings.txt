@@ -1,0 +1,48 @@
+## Problem: PE 937
+
+**Correct Answer**: 792169346
+
+**Problem Summary**:
+- Define \(T=\{a+b\sqrt{-2}: a,b\in\mathbb Z,\ a>0\ \text{or}\ (a=0,b>0)\}\).
+- Partition \(T\) into \(A,B\) with \(1\in A\), \(A\cap B=\emptyset\), \(A\cup B=T\), and \(p(A,z)=p(B,z)\) for all \(z\in T\).
+- \(G(n)\) is the sum of factorials in \(\{1!,2!,\dots,n!\}\cap A\).
+- Compute \(G(10^8)\bmod(10^9+7)\).
+
+**Key Mathematical Structure**:
+- The balancing condition induces a sign function on ring elements; for factorial inputs, the sign is controlled by inert-prime exponent bit-parities.
+- In \(\mathbb Z[\sqrt{-2}]\):
+  - \(2\) ramifies.
+  - \(p\equiv 5,7\pmod 8\) are inert.
+  - \(p\equiv 1,3\pmod 8\) split.
+- For factorial membership, split-prime effects cancel; inert primes determine the final sign.
+
+**Correct Rule for Factorials**:
+- Let \(e_p(n)=\nu_p(n!)\).
+- Let inert primes be \(\{2\}\cup\{p\equiv 5,7\pmod 8\}\).
+- Define
+  \[
+  s(n)=(-1)^{\sum_{p\ \text{inert}} \operatorname{popcount}(e_p(n))}.
+  \]
+- Then \(n!\in A\iff s(n)=+1\).
+- Hence
+  \[
+  G(N)=\sum_{1\le n\le N,\ s(n)=+1} n!\pmod{10^9+7}.
+  \]
+
+**Efficient Computation**:
+1. Sieve smallest prime factors up to \(N=10^8\).
+2. Sweep \(n=1\dots N\), factor \(n\) via SPF, and increment cumulative inert-prime exponents \(e_p\).
+3. Maintain the parity of \(\sum \operatorname{popcount}(e_p)\) incrementally when exponents change.
+4. Update factorial modulo \(10^9+7\): \(fact\leftarrow fact\cdot n\bmod M\).
+5. If current sign is \(+1\), add \(fact\) into \(G\).
+
+**Wrong Approaches and Why They Fail**:
+- Assuming a fully multiplicative integer character \(\chi(ab)=\chi(a)\chi(b)\) with simple prime-level signs. This conflicts with prime-square constraints and sample memberships.
+- Reducing the balance condition to integer-only factor pairs (ignoring non-integer divisors in \(\mathbb Z[\sqrt{-2}]\)). This gives inconsistent labels.
+- Using heuristic parity/periodicity shortcuts (e.g., overly simplified \(v_2\)/prime-count parity formulas) without full structural derivation. These produce wrong outputs such as **191321845**.
+- Failing to derive a membership rule and returning a placeholder guess (e.g., **0**).
+
+**Verification Checkpoints**:
+- \(G(4)=25\) (\(1!+4!=1+24\)).
+- \(G(7)=745\) (\(1!+4!+6!=1+24+720\)).
+- \(G(100)\equiv 709772949\pmod{10^9+7}\).

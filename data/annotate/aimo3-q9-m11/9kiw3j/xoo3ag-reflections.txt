@@ -1,0 +1,12 @@
+## Answer: correct (338)
+
+## Key moments
+- Token 2234 [missed opportunity]: Spends time in an abstract infinite-matrix viewpoint that adds complexity before moving to a cleaner algebraic formulation.
+- Token 3734 [insight]: Switches to generating functions/polynomials, making the correlation condition equivalent to coefficient constraints of a product.
+- Token 7121 [breakthrough]: Establishes the structural classification \(\alpha(x)=\pm x^i\delta(x)\) with \(\delta\mid(1+x^d)\), which captures the real search space.
+- Token 14903 [insight]: Identifies that the empty-subset divisor appears in multiple \(v_2\)-group tallies and must be deduplicated.
+- Token 14979 [questionable statement]: Flags empty-subset duplication across \(v_2\)-groups as a potential counting pitfall that must be handled carefully.
+- Token 15744 [breakthrough]: Correctly resolves that pitfall and gets 34 distinct primitive \(\delta\)-polynomials.
+- Token 15851 [verification]: Applies the shift/sign contribution formula \(2(12-\deg\delta)\) and sums to the target count.
+- Token 20208-20772 [wasted]: Performs extra coefficient-behavior experiments and side checks after the core counting argument is already sufficient.
+- Token 22048 [final answer]: Commits to 338, which matches the reference answer.

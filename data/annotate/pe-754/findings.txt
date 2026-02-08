@@ -1,0 +1,42 @@
+# Project Euler 754 - Product of Gauss Factorials
+
+## Correct Answer
+785845900
+
+## Problem Summary
+For
+- `g(n) = ∏_{1 ≤ j ≤ n, gcd(j,n)=1} j`
+- `G(N) = ∏_{i=1}^N g(i)`
+
+compute `G(10^8) mod 1,000,000,007`.
+
+## Correct Approach
+1. Reorder by base value:
+   - `G(N) = ∏_{a=1}^N a^{f(a)}`
+   - `f(a) = #{i ∈ [a,N] : gcd(i,a)=1}`.
+2. Express `f(a)` by Möbius inversion:
+   - `f(a) = Σ_{d|a} μ(d) * floor((N-a)/d)` (with the `a=1` edge adjustment in equivalent forms).
+3. Swap sums with `a = d*m`, `q = floor(N/d)` and get:
+   - `G(N) = ∏_{d=1}^N ( d^{q(q-1)/2} * B(q) )^{μ(d)}`
+   - `B(q) = ∏_{m=1}^q m^{q-m} = ∏_{k=1}^{q-1} k!`.
+4. Group by distinct quotient values `q = floor(N/d)` (only `O(sqrt(N))` blocks):
+   - per block `d ∈ (N/(q+1), N/q]`, need
+   - `S(q) = Σ μ(d)` and `P(q) = ∏ d^{μ(d)}`.
+5. Compute efficiently:
+   - linear sieve for `μ(d)` up to `N`;
+   - prefix Mertens sums and prefix products split by `μ=+1` and `μ=-1` to answer each block;
+   - one forward pass for factorial/superfactorial values to get `B(q)` at needed `q`.
+6. Combine all block contributions modulo `1,000,000,007` (exponents modulo `MOD-1`).
+
+## Wrong Approaches Observed
+1. Incorrect closed form for `g(n)`:
+   - Claims like `g(n)=n^{φ(n)/2}∏_{p|n}p^{-φ(n)/(p-1)}` were used; this is not the integer Gauss factorial formula and leads to wrong derivations.
+2. Over-simplified exponent identities:
+   - Several attempts collapsed divisor-dependent Möbius sums into simpler formulas that do not preserve constraints, producing inconsistent prime exponents.
+3. Unresolved prime-exponent detours:
+   - Long transformations on `v_p(G(N))` failed small-case consistency checks and never yielded a correct executable pipeline.
+4. Wrong final value from fallback guess:
+   - `331358692` was output in one failed attempt; this is `G(10) mod 1,000,000,007`, not `G(10^8)`.
+
+## Sanity Check Value
+- `G(10) = 23044331520000`, so `G(10) mod 1,000,000,007 = 331358692`.

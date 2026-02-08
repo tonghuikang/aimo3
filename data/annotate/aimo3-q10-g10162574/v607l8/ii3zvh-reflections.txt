@@ -1,0 +1,18 @@
+## Answer: wrong (5)
+
+## Key moments
+- Token 97 [insight]: Starts from the correct objective of minimizing an integer that supports a 3-divisor sum representation.
+- Token 8480 [breakthrough]: Builds a useful parameterized framework (`g,x,y` style) that could support a full global comparison.
+- Token 11451 [wasted]: Long structural detour on power/branch decomposition without narrowing decisive candidates.
+- Token 13751 [wasted]: Continues type-A/B/C branching rather than pruning with one consistent optimality criterion.
+- Token 18128 [questionable statement]: Elevates the "smallest odd prime divisor of `n-1`" route as the main minimization principle.
+- Token 22648 [mistake]: Treats that `n-1` route as globally optimal and carries the wrong branch deep into arithmetic verification.
+- Token 27152 [wasted]: Extended modular/gcd computations validate only the wrong branch.
+- Token 30042 [missed opportunity]: Small-case sanity tension appears but the branch is not dropped immediately.
+- Token 31906 [insight]: Reopens alternative constructions instead of defending the earlier model.
+- Token 36229 [breakthrough]: Moves to an `n+1` factorization family and finds a materially smaller-ratio construction path.
+- Token 40515 [questionable statement]: Considers the degenerate `A=2` subcase that causes divisor duplication.
+- Token 40913 [mistake]: Commits to the corrected `A=3` track but still overgeneralizes it to `f(n)=2(n-2)/3` for this instance.
+- Token 43145 [breakthrough]: Propagates the `2/3`-based formula to the final `g(c)` computation pipeline.
+- Token 43943 [verification]: Checks floor behavior (`epsilon << 1`) and confirms internal consistency of the chosen branch.
+- Token 45217 [final answer]: Commits to `5`.

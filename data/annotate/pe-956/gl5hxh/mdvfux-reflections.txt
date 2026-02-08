@@ -1,0 +1,15 @@
+## Answer: correct (882086212)
+
+## Key moments
+- Token 190 [insight]: Rewrites `1000⋆` into weighted factorial factors, which makes prime-exponent computation tractable.
+- Token 804 [breakthrough]: Applies the roots-of-unity filter for `Ω(d) mod 1000`, reducing the target sum to evaluable product terms.
+- Token 2350 [insight]: Notices `1000 | (999,999,001-1)`, so a primitive 1000th root exists modulo `999,999,001`.
+- Token 3433 [verification]: Checks whether any `pζ^j = 1` denominator singularities occur for primes `p ≤ 1000`; finds none.
+- Token 5927 [questionable statement]: Sets `inv_m = pow(1000, M-2, M)` before defining a function intended to accept general `m`.
+- Token 6328 [mistake]: Uses that version to test `(n,m)=(6,6)`, creating a mismatch because the scaling factor is for `1000`, not `6`.
+- Token 6657-7363 [wasted]: Spends a long detour recomputing `N6`, factorization, and brute-force divisor sums before auditing the normalization factor.
+- Token 7974 [missed opportunity]: Continues doubting the field/root-of-unity derivation after the mismatch instead of first checking the parameterized inverse.
+- Token 8683 [breakthrough]: Rewrites `compute_D_superduper` with `inv_m = pow(m, M-2, M)`, fixing the normalization bug.
+- Token 8999 [verification]: Re-runs the `D(6⋆,6)` modular check and now matches the expected residue.
+- Token 10518 [verification]: Confirms `D(1000⋆,1000)` with a second independent implementation (`res1 == res2`).
+- Token 10604 [final answer]: Commits to `\boxed{882086212}`.

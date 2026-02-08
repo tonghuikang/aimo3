@@ -1,0 +1,41 @@
+# PE 558 - Problem Findings
+
+## Problem Summary
+Let r be the real root of x^3 = x^2 + 1 (~1.465571...).  
+Each positive integer has a unique representation as a finite sum of powers of r with digit values in {0,1} and spacing constraint b_k + b_{k+1} + b_{k+2} <= 1.  
+w(n) is the number of selected terms.  
+We need S(5,000,000) = sum_{j=1..5,000,000} w(j^2), modulo 99991.  
+Given checks: S(10)=61 and S(1000)=19403.
+
+## Correct Answer
+75292
+
+## Confirmed Correct Approach
+1. Compute r with high-precision Decimal arithmetic.
+2. Precompute powers r^k over a sufficiently deep exponent window that includes both large positive and sufficiently negative exponents.
+3. For negative exponents, generate powers via r^k = r^(k+3) - r^(k+2), derived from r^3 = r^2 + 1.
+4. For each n=j^2, run greedy selection in descending exponent order:
+   - pick a term when r^k <= current remainder (with stable high-precision comparison),
+   - subtract it,
+   - skip the next two exponents to enforce the spacing constraint.
+5. Sum all w(j^2), then reduce modulo 99991.
+
+Critical implementation point: the lower exponent bound must be deep enough; shallow truncation gives a stable but wrong large-m result.
+
+With a correct exponent window, the full sum is:
+- S(5,000,000) = 226,754,889
+- S(5,000,000) mod 99991 = 75292
+
+## Wrong Approach: Exponent Window Too Shallow
+- Using a cutoff like min_exp = -120 truncates needed small-power tail terms for some large squares.
+- This can still pass S(10)=61 and S(1000)=19403, so small checks alone are insufficient.
+- It yields the wrong full result:
+  - S(5,000,000) = 192,694,008
+  - mod 99991 = 11351 (wrong)
+
+## Wrong Approach: Precision-Only Revalidation
+- Re-running with higher Decimal precision while keeping the same shallow exponent cutoff reproduces the same wrong value.
+- The failure is not numeric precision; it is model truncation (insufficient negative exponent depth).
+
+## Wrong Approach: Non-convergent Strategy Switching
+- Repeatedly switching to speculative formulations (closed forms/recurrence fitting/new state models) without carrying one validated method through the full run can result in no final numeric answer.

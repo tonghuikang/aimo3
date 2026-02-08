@@ -1,0 +1,13 @@
+## Answer: correct (25079)
+
+## Key moments
+- Token 273 [insight]: Identifies primorial-style divisibility and the prime-factor partition pressure created by `gcd(A,B)=1`.
+- Token 3101-4058 [wasted]: Takes a long detour through `q_max`/"first missing prime" logic before settling on a simpler direct condition used later.
+- Token 4778 [breakthrough]: Reduces validity to `AB` being divisible by the product of primes up to `floor(sqrt(p))` (equivalently using the minimal admissible `q`).
+- Token 5912 [insight]: Rewrites both sum and difference checks as direct constraints on `A` with `B=p-A` or `B=A-p`.
+- Token 15179 [breakthrough]: Recasts difference-case feasibility as binary congruence choices per small prime (`A ≡ 0` or `A ≡ p mod r`).
+- Token 17285 [breakthrough]: Chooses incremental CRT recursion to enumerate the `2^k` residue classes efficiently instead of naive unbounded `A` search.
+- Token 19506 [verification]: Final algorithm plan explicitly checks sum-case scan and difference-case CRT enumeration with divisibility and gcd filters.
+- Token 21510 [verification]: Implements and validates against `V(2)=1`, `V(37)=22`, `V(151)=165`, plus `S(10)=10` and `S(200)=7177`.
+- Token 22436 [verification]: Computes `S(3800)` and the modulo result, with runtime sanity noted.
+- Token 22633 [final answer]: Commits to `\boxed{25079}`.

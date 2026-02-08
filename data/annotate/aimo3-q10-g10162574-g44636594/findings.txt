@@ -1,0 +1,59 @@
+# Problem: aimo3-q10-g10162574-g44636594
+
+## Correct Answer
+18029
+
+## Problem Statement
+Compute g(10162574) + g(44636594) = p/q in lowest terms, find (p+q) mod 99991.
+
+Where:
+- M = 3^{2025!}
+- g(c) = (1/2025!) * floor((2025! * f(M+c)) / M)
+- f(n) = smallest n-Norwegian integer (has 3 distinct divisors summing to n)
+
+## Key Insights
+
+### 1. CORRECT Formula for f(n)
+Use divisors of the form \{X, X/u, X/v\} with \(u,v>1\):
+- \(X + X/u + X/v = N\)
+- \(X = N \cdot uv/(uv+u+v)\), so minimize \(uv/(uv+u+v)\) under integrality constraints.
+- For \(N_1=M+10162574\), optimal is \(u=2,v=15\), giving \(X/N_1=30/47\).
+- For \(N_2=M+44636594\), optimal is \(u=2,v=55\), giving \(X/N_2=110/167\).
+
+### 2. Finding optimal u,v for each N
+- \(f(N_1)=(30/47)N_1\)
+- \(f(N_2)=(110/167)N_2\)
+
+### 3. Computing g(c)
+Because \(M\) is enormous, \(\lfloor 2025! \cdot f(N)/M \rfloor\) equals the exact integer part from the main ratio:
+- \(g(10162574)=30/47\)
+- \(g(44636594)=110/167\)
+
+### 4. Final Computation
+- Sum = 30/47 + 110/167 = (30*167 + 110*47)/(47*167) = (5010 + 5170)/7849 = 10180/7849
+- gcd(10180, 7849) = 1, so p = 10180, q = 7849
+- p + q = 18029
+- Answer: 18029 mod 99991 = 18029
+
+## WRONG Approach (leads to 54832)
+Assuming optimal triples are always \(\{1,d,X\}\):
+- Derives \(f(n)=(n-1)(t-1)/t\), with \(t\) from \(n-1\)-divisor logic.
+- This overestimates \(f(M+c)\) and gives wrong outputs (notably 54832).
+
+## WRONG Approach Variants (lead to 87193 / 10978 / 32170)
+Same wrong \(\{1,d,X\}\) model plus floor/reduction inconsistencies:
+- Treating \(g(c)\) as exactly \((s-1)/s\) when \(s\nmid 2025!\)
+- Mixing unreduced and reduced fractions for final \(p,q\)
+- Produces wrong remainders 87193, 10978, 32170
+
+## WRONG Approach (leads to 7361)
+Optimizing a restricted \(p\equiv1\pmod3\) divisor family on \(N\):
+- Uses \(p_1=31,p_2=103\), giving \(g_1=20/31,\ g_2=68/103\)
+- Produces 7361
+- Fails because this family is not globally minimal; true minima are from \(D=47,167\)
+
+## Common Pitfalls
+1. Using triple {1, d, X} instead of {X, X/u, X/v} - the latter gives smaller X
+2. Not exploring divisor structures where 1 is NOT included
+3. Assuming a lower-bound pattern (e.g. 6/11 or closest rounding) is automatically achievable without checking divisor/integrality constraints
+4. Missing that the optimal approach uses three proper divisors, not {1, d, X}

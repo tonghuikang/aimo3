@@ -1,0 +1,27 @@
+# Problem pe-866
+
+## Correct answer
+- Expected product for \(N=100\), modulo \(987654319\): **492401720**.
+
+## Correct approach
+- Let \(E(n)\) be the expected product for a line of length \(n\), with \(E(0)=1\).
+- Represent insertion order as a random permutation of positions (equivalently, placement times on indices \(1..n\)).
+- Condition on the last placed position (root of the Cartesian-tree decomposition):
+- Root contributes \(h(n)=n(2n-1)\).
+- If root splits into left size \(L\) and right size \(n-1-L\), left/right relative orders are independent random permutations.
+- Therefore
+- \[
+  E(n)=\frac{h(n)}{n}\sum_{L=0}^{n-1}E(L)E(n-1-L)
+      =(2n-1)\sum_{L=0}^{n-1}E(L)E(n-1-L).
+  \]
+- Compute this recurrence with dynamic programming up to \(n=100\) modulo \(987654319\).
+- Checkpoint: \(E(4)=994\) (matches statement).
+
+## Wrong approaches and why they fail
+- Wrong local model: assuming the segment length formed at insertion always equals the current empty-interval length.
+- Failure: interior insertions inside an empty interval create an isolated segment of length 1 unless adjacent occupied blocks exist; this assumption gives incorrect dynamics.
+- Wrong expectation factorization: \(E\!\left[\prod H(k_t)\right]=E\!\left[\prod k_t\right]\cdot E\!\left[\prod (2k_t-1)\right]\).
+- Failure: products are correlated across the same random history, so expectations do not separate.
+- Concrete contradiction: at \(N=3\), this gives \(5\cdot\frac{35}{3}=\frac{175}{3}\neq 65\).
+- Recurring inefficiency: long generating-function/closed-form detours after deriving the exact recurrence.
+- Failure: does not improve correctness or runtime for \(N=100\); the \(O(n^2)\) recurrence is already sufficient.

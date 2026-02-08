@@ -1,0 +1,10 @@
+## Answer: wrong (23)
+
+## Key moments
+- Token 138 [breakthrough]: Correctly rewrites `g(c)` as a scaled floor of `f(M+c)/M`.
+- Token 7408 [mistake]: Starts locking onto a simplified residue pattern that is not sufficient to characterize the `M+c` optimum.
+- Token 15056-23031 [wasted]: Long empirical/formula detour on generic `f(n)` behavior that does not test the decisive divisor branch for this `c`.
+- Token 23031 [missed opportunity]: Could pivot to factoring `c+1` and checking the `167`-based feasible ratio, but does not.
+- Token 28041 [mistake]: Treats a `6/11`-type asymptotic branch as effectively universal for this instance.
+- Token 37933 [verification]: Performs floor checks carefully, but only for the incorrect `f(M+c)` model.
+- Token 38002 [final answer]: Commits to `\boxed{23}`.

@@ -1,0 +1,16 @@
+## Answer: correct (150893234438294408)
+
+## Key moments
+- Token 768 [insight]: Reframes total moves as total rightward bean travel, enabling a prefix/potential-based counting strategy.
+- Token 8215 [questionable statement]: Suggests greedy per-index maximization should always satisfy final equality without future conflicts.
+- Token 8363 [mistake]: Acknowledges that greedy choices can violate future monotonic feasibility, so local-max assignment is invalid.
+- Token 9953 [insight]: Formalizes the lower convex-hull view for prefix sums with the `(-1, 0)` anchor, aligning with monotone-slope constraints.
+- Token 12198 [missed opportunity]: Spends time searching for a generic discrete isotonic formulation instead of directly implementing the hull-segment integer construction.
+- Token 15623 [insight]: Gives the correct integerization rule for each hull segment (`base` plus rightmost `+1` remainders).
+- Token 22120 [verification]: Confirms computed values match provided checks (`B(5)=0`, `B(6)=14263289`, `B(100)=3284417556`).
+- Token 23541-32924 [wasted]: Extended detour trying to compute `sum Q_i` by direct interpolation formulas, including multiple re-derivations.
+- Token 24346 [questionable statement]: Assumes segment interpolation-based `sum Q_i` can be used directly despite integerized step behavior.
+- Token 30547 [mistake]: Finds the `sum Q_i` method is off (difference of 2 in the test case), proving that interpolation shortcut is unreliable here.
+- Token 33171 [breakthrough]: Switches to the weighted-`B` identity (`sum_{i=0}^{N-2} Q_i = sum (N-1-i)B_i`), avoiding fragile interpolation arithmetic.
+- Token 33691 [verification]: Recomputes with `compute_B_fast(10_000_000)` and confirms the same result.
+- Token 34096 [final answer]: Commits to `\boxed{150893234438294408}`; this final answer is correct.

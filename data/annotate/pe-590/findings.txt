@@ -1,0 +1,58 @@
+# Problem PE 590 - Sets with a Given Least Common Multiple
+
+## Problem Summary
+Define:
+- `H(n)`: number of sets of positive integers whose LCM is `n`
+- `L(N) = lcm(1,2,...,N)`
+
+Target: `HL(50000) = H(L(50000)) mod 10^9`.
+
+## Correct Answer
+`834171904`
+
+## Correct Approach
+Let
+`n = L(50000) = product_{p<=50000} p^{e_p}`, where `e_p = floor(log_p 50000)`.
+
+For a set to have LCM `n`, every chosen element must divide `n`, and for each prime `p|n`, at least one chosen divisor must attain exponent `e_p`.
+
+This gives inclusion-exclusion:
+
+`H(n) = sum_{I subseteq P} (-1)^{|I|} * 2^{ M(I) }`
+
+with
+`M(I) = product_{i in I} e_i * product_{i not in I} (e_i+1)`.
+
+Equivalent Möbius form:
+
+`H(n) = sum_{d|n} mu(d) * 2^{tau(n/d)}`.
+
+### Structure for `N=50000`
+- `pi(50000) = 5133` primes in total.
+- `48` primes have `e_p >= 2` (exactly `p <= 223`).
+- `5085` primes have `e_p = 1`.
+
+Key reduction:
+- Separate the `e=1` primes analytically into a binomial layer.
+- Enumerate only the `e>=2` block.
+- Group by repeated exponent type (`e=2` appears 37 times, etc.), reducing subset enumeration to `10944` grouped combinations.
+
+### Modulus handling
+Use CRT on `10^9 = 2^9 * 5^9`.
+
+- Mod `2^9 = 512`: result is `0` (all relevant exponents are large enough that `2^{M(I)}` is divisible by `512`).
+- Mod `5^9 = 1953125`: compute the inclusion-exclusion/binomial sum efficiently (with exponent reduction mod `phi(5^9)=1562500` valid here because base `2` is coprime to `5^9`).
+- Correct residue pair:
+  - `H mod 512 = 0`
+  - `H mod 1953125 = 187529`
+- CRT gives `834171904`.
+
+## Wrong Approach Observed
+Wrong output seen: `325878784`.
+
+Root cause:
+- The trace used the right high-level formula but generated binomial coefficients incorrectly in the `e=1` inner sum.
+- It updated `C(r,s)` via exact recurrence `C <- C*(r-s)//(s+1)` while also reducing `C` modulo `5^9` between steps.
+- Reducing modulo before the next exact division breaks the recurrence (composite-mod arithmetic does not preserve the needed divisibility step), so large-`s` coefficients become wrong.
+- This corrupts the `mod 5^9` residue (`1660034` instead of `187529`), producing the final wrong CRT output `325878784`.
+

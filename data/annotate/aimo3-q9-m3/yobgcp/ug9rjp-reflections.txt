@@ -1,0 +1,15 @@
+## Answer: correct (24)
+
+## Key moments
+- Token 1209 [insight]: Recasts the shift-inner-product constraints into a polynomial product `A(x)B(x)` viewpoint, enabling algebraic classification instead of raw linear-equation chasing.
+- Token 1834 [breakthrough]: States the core criterion that shifty `\alpha` correspond to `A(x)` dividing a two-monomial binomial in `\mathbb{Z}[x,x^{-1}]`.
+- Token 6505 [questionable statement]: Temporarily treats both degree-3 products `(x+1)(x^2+1)` and `(x+1)(x^2-x+1)` as potentially admissible `x^d+1` divisors without resolving parity compatibility.
+- Token 7444 [verification]: Performs the parity check and rejects `(x+1)(x^2+1)`, keeping only the valid degree-3 option `x^3+1`.
+- Token 15393 [questionable statement]: Implements the first brute-force `is_shifty` checker using divisibility logic that does not yet enforce integer-coefficient quotients.
+- Token 16153 [mistake]: Uses the buggy checker output as evidence, producing an inflated candidate count (the temporary overcount branch).
+- Token 16787 [mistake]: Diagnoses concrete false positives (e.g., scaled forms like `-2-2x`) that were incorrectly accepted by the flawed test.
+- Token 17472 [breakthrough]: Restores the missing integrality condition (leading/constant divisibility by 1), aligning computation with the algebraic criterion.
+- Token 18187 [verification]: Re-runs the corrected enumeration and recovers the expected finite set size consistent with the theoretical count.
+- Token 18600-20332 [wasted]: Extended debugging of helper classification/labeling details after the main counting logic was already settled.
+- Token 20692 [verification]: Consolidates the corrected classification and confirms the stable total `24`.
+- Token 21520 [final answer]: Commits to `\boxed{24}`.

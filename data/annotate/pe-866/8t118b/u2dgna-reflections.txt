@@ -1,0 +1,16 @@
+## Answer: correct (492401720)
+
+## Key moments
+- Token 315 [insight]: Formalizes the random-permutation insertion process and the per-step factor \(H(k)=k(2k-1)\), setting up the right random variable.
+- Token 5371 [questionable statement]: Claims the inserted piece’s segment length equals the enclosing empty-interval length \(L\), which ignores interior placements that remain isolated.
+- Token 5653 [mistake]: Explicitly recognizes the previous \(k=L\) claim is wrong and reopens the local segment-length analysis.
+- Token 5719 [verification]: Re-derives boundary/interior cases for an insertion inside an empty interval to repair the local model of segment growth.
+- Token 7554 [missed opportunity]: Notes that conditioning on the final step does not immediately simplify, but still spends substantial time before switching to a stronger structural view.
+- Token 7654 [insight]: Reframes each piece’s contribution via maximal intervals where its placement time is the local maximum.
+- Token 8153 [insight]: Maps those maximal intervals to Cartesian-tree subtrees, turning the process into a recursive tree decomposition.
+- Token 8756 [breakthrough]: Conditions on the root (last-placed piece), yielding independent left/right subproblems and a clean expectation recurrence.
+- Token 9271 [verification]: Implements and validates the recurrence against small \(N\), matching known values including \(N=4\to 994\).
+- Token 12878 [insight]: Simplifies recurrence to \(E(n)=(2n-1)\sum_{k=0}^{n-1}E(k)E(n-1-k)\), removing division and enabling stable modular DP.
+- Token 13339 [verification]: Re-checks recurrence numerically at small \(N\) modulo arithmetic to confirm implementation correctness.
+- Token 13658 [verification]: Computes \(E(100)\bmod 987654319=492401720\) directly from the DP.
+- Token 14209 [final answer]: Commits to the final boxed result \(492401720\).

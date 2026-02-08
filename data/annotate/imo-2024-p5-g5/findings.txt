@@ -1,0 +1,39 @@
+Correct answer: g(5) = 6.
+
+Key lemma for this family:
+- For k >= 4, f(k) = 3.
+
+Proof of lemma (complete):
+
+Lower bound f(k) >= 3:
+- Assume a strategy claims guaranteed success in at most 2 attempts.
+- In attempt 1, let c be the first column where Turbo enters row 2.
+  - Put the row-2 monster at (row 2, c), so attempt 1 fails there.
+- In attempt 2, Turbo must enter row 3 at some column d to have any chance to reach the bottom.
+  - Since row 2, column c is blocked, d != c.
+  - Put the row-3 monster at (row 3, d), so attempt 2 fails when entering row 3.
+- Assign monsters in all remaining interior rows to distinct unused columns (possible because remaining rows = k-2, remaining columns = k-1).
+- So no strategy can guarantee success in 2 attempts.
+
+Upper bound f(k) <= 3:
+- Attempt 1: go straight down any column A.
+  - If no monster, win.
+  - Else discover (rA, A).
+- Attempt 2: go straight down a different column B.
+  - If no monster, win.
+  - Else discover (rB, B), with rA != rB and A != B.
+- Then A is safe in all interior rows except rA, and B is safe in all interior rows except rB.
+- Attempt 3 route:
+  - If |rA-rB| >= 2, switch between A and B on an intermediate row where both are safe.
+  - If |rA-rB| = 1, use a bridge column C not in {A, B}; this exists because k+1 >= 5.
+  - In both cases, route from top to bottom while avoiding A at row rA and avoiding B at row rB.
+- Therefore 3 attempts always suffice.
+
+Hence f(k) = 3 for k >= 4.
+
+Now compute:
+- g(5) = f(4) + f(5) = 3 + 3 = 6.
+
+Wrong approach to reject:
+- "Turbo must discover every monster column before a guaranteed win, so f(k)=k+1."
+- Why wrong: after two discovered monster columns, a guaranteed third-attempt route already exists.

@@ -1,0 +1,22 @@
+## Answer: wrong (0)
+
+## Key moments
+- Token 1385 [insight]: Sets up the exact DP state recursion on `(a,b,c)` with YES/NO transitions, giving a reliable oracle for small totals.
+- Token 6039 [questionable statement]: Switches to a static codeword-capacity model (`sum 2^{d_i}-2`) as if it were equivalent to the adaptive decision-tree process.
+- Token 14519 [verification]: Confirms the DP reproduces provided examples, anchoring later hypotheses against brute-force results.
+- Token 17079 [verification]: Identifies the first extra-depth totals (`8`, `14-16`, `26-32`) from computation, motivating an `extra` classification.
+- Token 18499 [mistake]: Tries to elevate the code-capacity condition into a governing formula, which later conflicts with DP behavior.
+- Token 27818 [breakthrough]: Reframes the goal as `h = ceil(log2 S) + extra` and therefore `H(N) = base_sum(N) + E(N)`.
+- Token 31714 [verification]: Validates a key hard example by reducing `(2,3,11)` to `(2,3,3)` after the first forced removal.
+- Token 38195 [questionable statement]: Treats threshold-style per-step removals as nearly deterministic, underestimating strategies that remove more than the minimum deficit.
+- Token 43820 [missed opportunity]: Correctly notices larger first removals can salvage depth (e.g., `(2,3,4)`), but does not fully rebuild the global counting framework from this.
+- Token 53175 [insight]: Narrows the remaining challenge to counting extra triples `E(N)` only.
+- Token 60300 [verification]: Formalizes a recursive feasibility check over `(total, bound, deficit)` and tests it against DP outputs.
+- Token 65765 [questionable statement]: Claims a unified deficit-recursion characterization should handle both non-power and power-of-two totals.
+- Token 73725 [mistake]: Commits to a two-case counting decomposition (case A/case B) as if it were complete.
+- Token 80699 [questionable statement]: Asserts the two-step condition is "exact" despite prior mismatch signals.
+- Token 82094 [mistake]: Assumes case-B contribution is constant in `r` across each block and scales it uniformly, causing systematic undercount.
+- Token 83190-85268 [wasted]: Continues algebraic case-A/case-B counting and patching even after repeated discrepancies against brute-force totals.
+- Token 85877 [missed opportunity]: Recognizes deeper recursive failure modes beyond case A/B but does not pivot to a new model.
+- Token 86569 [verification]: Explicitly concludes the current counting model is insufficient after checking counterexamples.
+- Token 86694 [final answer]: Commits to boxed `0`, which is incorrect.

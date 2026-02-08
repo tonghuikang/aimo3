@@ -1,0 +1,13 @@
+## Answer: wrong (97881)
+
+## Key moments
+- Token 542 [breakthrough]: It cleanly reduces the task to minimizing an LCM-based construction instead of raw divisor guessing.
+- Token 6037 [breakthrough]: It parameterizes pairs with `x+y` divisibility and starts optimizing a ratio form for candidate `f(n)` values.
+- Token 12335 [mistake]: It incorrectly concludes the optimum is always controlled by the smallest divisor `m>=3` of `n-1`, restricting to a non-global family.
+- Token 15013 [mistake]: It propagates that model into `g(c)=1-\lceil K/m\rceil/K`, yielding `10/11`-style values that are too large here.
+- Token 20072 [verification]: It performs modular and reduction arithmetic checks, but only inside the mistaken model.
+- Token 24090 [mistake]: It anchors on the huge odd-prime divisor path for `c2`, reinforcing the wrong branch instead of testing better ratio families.
+- Token 30413 [missed opportunity]: It briefly questions whether triples beyond the `1+a+b` route could be better, but dismisses that without a real minimization check.
+- Token 30597-31037 [wasted]: Additional precision and coprimeness checks are spent validating numbers produced by the incorrect structure.
+- Token 31037 [verification]: It rechecks gcd/reduction consistency, again internally consistent but still on the wrong objective.
+- Token 31356 [final answer]: It commits to `\boxed{97881}`, which is incorrect.

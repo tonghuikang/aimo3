@@ -1,0 +1,24 @@
+Correct answer: 44511058204
+
+Correct approach:
+- Use prime-power decomposition: for `n = \prod p_i^{e_i}`, `\pi(n) = \mathrm{lcm}(\pi(p_i^{e_i}))`.
+- Prime-power periods needed here:
+  - `\pi(2^e) = 3\cdot 2^{e-1}`
+  - `\pi(5^e) = 20\cdot 5^{e-1}`
+  - `\pi(p^e) = p^{e-1}\pi(p)` for odd primes `p \neq 5`
+- To classify odd primes with `\pi(p) \mid 120`, use rank of apparition `r(p)`:
+  - `r(p) \mid \pi(p)` and for odd `p`, this forces `r(p) \mid 60`
+  - hence `p \mid F_{60}`
+  - factorization: `F_{60}=2^4\cdot 3^2\cdot 5\cdot 11\cdot 31\cdot 41\cdot 61\cdot 2521`
+  - so the only relevant prime bases are `2,3,5,11,31,41,61,2521`
+- Exponent limits from `\pi(p^e) \mid 120`:
+  - `2^e`: `e=0..4`
+  - `3^e`: `e=0..2`
+  - `5,11,31,41,61,2521`: exponent `0` or `1`
+- Enumerate all exponent choices, keep `n<10^9` and `\mathrm{lcm}` exactly `120`.
+- This yields 757 valid values and total sum `44511058204`.
+
+Wrong approaches and why they fail:
+- Incomplete prime set from small-range prime scan (e.g., up to 200): misses `p=2521` with `\pi(2521)=120`, causing undercount and wrong sum `2415690119`.
+- Treating the prime search as potentially open-ended/infinite and attempting broad brute-force scans: unnecessary for this problem, because `\pi(p)\mid 120` reduces to a finite prime set via `F_{60}` factorization.
+- Allowing high powers of 2 like `2^5,2^6` as if compatible with period 120: `\pi(32)=48` and `\pi(64)=96`, which do not divide 120, so they cannot participate in any valid `\mathrm{lcm}=120` construction.

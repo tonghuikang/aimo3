@@ -1,0 +1,15 @@
+## Answer: correct (44511058204)
+
+## Key moments
+- Token 898 [insight]: Sets the right global strategy: enumerate prime powers compatible with period 120, then combine them via LCM to build valid `n`.
+- Token 4614 [missed opportunity]: Already has the computed prime list but does not immediately formalize completeness with a fixed-`N` matrix/Fibonacci divisibility argument.
+- Token 5432 [questionable statement]: Launches a density/congruence argument suggesting there may be infinitely many primes with period dividing 120.
+- Token 5432-9383 [wasted]: Spends a long span on speculative prime-density reasoning instead of using the direct finite characterization from fixed-index Fibonacci congruences.
+- Token 6112 [mistake]: Commits to the “infinitely many such primes” framing, which is wrong for fixed `N=120` once `M^N \equiv I` constraints are applied.
+- Token 9383 [insight]: Re-centers on the exact condition for `\pi(p) \mid 120`: `M^{120} \equiv I`, i.e. `F_{120} \equiv 0` and `F_{121} \equiv 1 \pmod p`.
+- Token 9956 [breakthrough]: Computes and factors `gcd(F120, F121-1)`, recovering the finite prime set `{2,3,5,11,31,41,61,2521}` and closing the completeness gap.
+- Token 11259 [breakthrough]: Converts the remaining work into a finite 1344-case exponent-combination enumeration filtered by `\mathrm{lcm}=120` and `n<10^9`.
+- Token 12093 [verification]: Explicitly checks that the LCM construction gives exact period 120 under the coprime-factor multiplicativity rule.
+- Token 13696-14907 [wasted]: Performs extra heavy brute-force style validation attempts (including slow/time-out paths) after the constructive enumeration is already sufficient.
+- Token 16288 [verification]: Runs an independent all-candidate check via factorization-based `\pi(n)` reconstruction and confirms every generated `n` has period 120.
+- Token 16704 [final answer]: Commits to `\boxed{44511058204}`.

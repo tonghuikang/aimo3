@@ -1,0 +1,27 @@
+# Problem pe-663 Findings
+
+## Correct Answer
+1884138010064752
+
+## Problem Summary
+- Tribonacci sequence updates an array A_n of length n
+- At each step i, add d_i = 2*(t_{2i-1} mod n) - n + 1 to position p_i = t_{2i-2} mod n
+- After each step, compute M_n(i) = max contiguous subarray sum of A_n
+- Compute S(10000003, 10200000) - S(10000003, 10000000) = sum of M_n(i) for i=10,000,001 to 10,200,000
+
+## Key Insights
+1. The problem reduces to maintaining maximum subarray sum (Kadane's algorithm) after each point update
+2. This requires a segment tree storing (sum, max_prefix, max_suffix, max_subarray) for each node
+3. Point updates take O(log n) time per step
+4. Total complexity: O(l * log n) where l ≈ 10.2 million
+
+## Correct Approach
+- Use a segment tree that maintains maximum subarray sum information
+- Each node stores: sum, max_prefix, max_suffix, max_subarray
+- For point update at position p, update the leaf and propagate up
+- Total time: ~80-100 seconds in Python
+
+## Common Mistakes
+1. Trying to use max(prefix_sums) - min(prefix_sums) directly doesn't work when max occurs before min
+2. Must use the full Kadane segment tree structure, not just tracking global max/min
+3. Memory considerations: must use typed arrays (array('q')) instead of Python lists for large n

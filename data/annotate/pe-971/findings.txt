@@ -1,0 +1,31 @@
+Correct answer: 33626723890930
+
+Problem summary:
+For primes \(p\equiv 1\pmod 5\), with \(k=(p+4)/5\), define
+\(f(x)=x^k+x\pmod p\).
+Let \(C(p)\) be the number of periodic points of \(f\) on \(\mathbb F_p\).
+Need \(\sum_{p\le 10^8,\ p\equiv 1\ (5)} C(p)\).
+
+Correct approach:
+1. Set \(r=(p-1)/5\), so \(k-1=r\) and for nonzero \(x\):
+   \(f(x)=x(1+x^r)\).
+2. \(x^r\) always lies in the subgroup \(\mu_5\) of 5th roots of unity. Partition \(\mathbb F_p^*\) into 5 cosets by \(x^r=\omega^i\), each of size \((p-1)/5\).
+3. For coset index \(i\), dynamics on indices are
+   \(T(i)=i+a_i\pmod 5\), where
+   \(\omega^{a_i}=(1+\omega^i)^r\).
+4. If an index lies on a cycle of \(T\), then every \(x\) in that coset is periodic under \(f\): after one index-cycle, the multiplier is some \(P\in\mathbb F_p^*\), and \(P\) has finite order, so some repeat returns to \(x\).
+5. Therefore
+   \(C(p)=1+c(p)\cdot (p-1)/5\),
+   where \(c(p)\) is the number of cycle nodes in the 5-node functional graph of \(T\).
+6. Compute \(c(p)\) per prime by:
+   - finding any primitive 5th root \(\omega\) via trial bases \(a^{(p-1)/5}\),
+   - evaluating the 5 values \((1+\omega^i)^r\),
+   - building \(T\) and counting cycle nodes.
+
+Wrong approaches and why they fail:
+- Wrong exponent identity: using \(k-1=(p-5)/5\) is incorrect. The correct relation is
+  \(k-1=(p+4)/5-1=(p-1)/5\).
+- Wrong periodicity criterion: requiring \(\prod (u_i+1)=1\) over one index-cycle is too strict.
+  Even if that product is not 1, periodicity still holds after multiple cycle traversals because every nonzero field element has finite multiplicative order.
+- Wrong subgroup identification: treating \(1+\omega^i\) itself as a 5th root of unity (\(1+\omega^i=\omega^{a_i}\)) is invalid in general.
+  The correct object in \(\mu_5\) is \((1+\omega^i)^{(p-1)/5}\).

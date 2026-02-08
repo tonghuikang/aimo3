@@ -1,0 +1,13 @@
+## Answer: wrong (10)
+
+## Key moments
+- Token 2474 [insight]: Recasts the condition as a convolution equation and moves to generating functions.
+- Token 2721 [breakthrough]: Correctly states the Laurent-ring criterion `A(z)G(z)=z^k+z^l`.
+- Token 3999 [questionable statement]: Starts collapsing Laurent divisibility to ordinary polynomial divisibility by `1+z^b`, without preserving monomial-shift factors in `A(z)`.
+- Token 4350 [mistake]: Infers `a0=\pm1` as necessary and excludes zero-constant-term `A(z)`, which incorrectly removes shifted monomials.
+- Token 9550-11790 [wasted]: Long cyclotomic filtering is carried out under the bad constant-term restriction, so it cannot recover all valid `\alpha`.
+- Token 12993 [missed opportunity]: After narrowing to a small list, a direct sanity check on shifted deltas (`\pm\delta_1,\pm\delta_2,\pm\delta_3`) would have exposed the missing family.
+- Token 15287 [questionable statement]: Reasserts that shifts are disallowed because of the constant-term argument.
+- Token 15349 [mistake]: Explicitly classifies `\alpha=(0,1,0,0)` as non-shifty, even though a straightforward shifted-delta construction works.
+- Token 15827 [verification]: Verifies several constructed candidates carefully, but only within the already-truncated candidate set.
+- Token 17304 [final answer]: Commits to `10`.

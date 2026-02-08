@@ -1,0 +1,72 @@
+# Problem pe-512 Findings
+
+## Correct Answer
+50660591862310323
+
+## Problem Summary
+Given:
+- φ(n) = Euler's totient function
+- f(n) = (Σ_{i=1}^{n} φ(n^i)) mod (n+1)
+- g(n) = Σ_{i=1}^{n} f(i)
+- g(100) = 2007 (verification)
+
+Find: g(5 × 10^8)
+
+## Key Insights
+
+### 1. Key Identity for φ(n^i)
+φ(n^i) = φ(n) × n^{i-1}
+
+This follows from:
+- φ(n^i) = n^i × Π_{p|n}(1 - 1/p)
+- Since φ(n) = n × Π_{p|n}(1 - 1/p), we have Π_{p|n}(1 - 1/p) = φ(n)/n
+- Therefore φ(n^i) = n^i × φ(n)/n = φ(n) × n^{i-1}
+
+### 2. Sum Formula
+Σ_{i=1}^{n} φ(n^i) = φ(n) × Σ_{i=0}^{n-1} n^i = φ(n) × (n^n - 1)/(n - 1)
+
+### 3. Modular Reduction (Key Insight)
+Since n ≡ -1 (mod n+1):
+- n^k ≡ (-1)^k (mod n+1)
+- The sum S_n = Σ_{i=0}^{n-1} n^i ≡ Σ_{i=0}^{n-1} (-1)^i (mod n+1)
+
+For even n: sum of alternating ±1 with even terms = 0
+For odd n: sum of alternating ±1 with odd terms = 1
+
+### 4. Pattern for f(n)
+- f(n) = 0 for even n (because S_n ≡ 0)
+- f(n) = φ(n) for odd n (because S_n ≡ 1 and φ(n) < n+1)
+
+### 5. Reduction of g(N)
+g(N) = Σ_{odd i ≤ N} φ(i)
+
+This is the sum of Euler's totient function over odd numbers only.
+
+### 6. Recursion for Computing Sum Over Odd Numbers
+Define:
+- S(N) = Σ_{i=1}^{N} φ(i) (totient summatory function)
+- O(N) = Σ_{odd i ≤ N} φ(i)
+
+Key recursion:
+O(2M) = O(M) + S(2M) - 2×S(M)
+
+This allows efficient computation via:
+1. Computing S(N) using known O(√N) algorithm with floor groupings
+2. Recursively halving N (about log₂(N) ≈ 29 steps for N = 5×10^8)
+
+### 7. Efficient Computation of S(n)
+S(n) = n(n+1)/2 - Σ_{i=2}^{n} S(⌊n/i⌋)
+
+Using floor grouping: floor(n/i) takes O(√n) distinct values, allowing O(√n) time per S computation.
+
+## Verification
+g(100) = sum of φ(i) for odd i ≤ 100 = 2007 ✓
+
+## Both Traces
+Both traces (t9txgz and olstrt) arrive at the correct answer using the same approach:
+1. Derive φ(n^i) = φ(n) × n^{i-1}
+2. Use n ≡ -1 (mod n+1) to reduce the sum
+3. Conclude f(n) = φ(n) for odd n, 0 for even n
+4. Reduce to computing sum of φ over odds
+5. Use recursion O(2M) = O(M) + S(2M) - 2S(M)
+6. Implement efficient totient sum computation

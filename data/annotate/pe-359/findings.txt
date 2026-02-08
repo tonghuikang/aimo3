@@ -1,0 +1,29 @@
+Correct answer: 40632119
+
+Correct approach
+- Model each floor as a chain of occupants where consecutive occupants sum to perfect squares.
+- For floor 1: `P(1,r) = r(r+1)/2` (triangular numbers).
+- For floor `f >= 2`, the first occupant is `a_f = floor(f^2/2)`.
+- For floor `f >= 2`, a closed form that matches all checks is:
+  - `base = r(r-1)/2`
+  - If `f` is even: `P(f,r) = floor(f^2/2) + base + floor(r/2) * (2f)`
+  - If `f` is odd: `P(f,r) = floor(f^2/2) + base + floor((r-1)/2) * (2f-2)`
+- This formula reproduces the prompt examples:
+  - `P(10,20)=440`
+  - `P(25,75)=4863`
+  - `P(99,100)=19454`
+- Let `N = 71328803586048 = 2^27 * 3^12`.  
+  Sum over all ordered factor pairs by iterating divisors `f | N`, with `r = N/f`:
+  - `S = sum_{f|N} P(f, N/f)`
+  - Number of terms: `(27+1)(12+1)=364`
+  - Last 8 digits: `S mod 10^8 = 40632119`.
+
+Wrong approaches and why they fail
+- Wrong first-occupant formula from miscounted parity sums:
+  - Tried `a_f = f(f+1)/2 - ceil(f/2) + 1`
+  - Immediately fails (`a_2=3`, `a_3=5` instead of `2,4`).
+- Wrong parity-offset correction in summed increments:
+  - Used correction factors `(2f-1)` / `(2f-3)` directly against a `(k-1)` base.
+  - Produces wrong values, e.g. predicts `P(2,5)=18` instead of `20`.
+  - Correct correction terms are `2f` (even-floor matched parity) and `2f-2` (odd-floor matched parity).
+- Overly heuristic pattern-guessing (`ratio fits`, ad hoc quadratic guesses, OEIS-name hunting) is unproductive here; direct recurrence + parity counting gives the stable derivation.

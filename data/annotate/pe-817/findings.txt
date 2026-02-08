@@ -1,0 +1,33 @@
+# PE 817 - Digits in Squares
+
+## Correct answer
+- \(\sum_{d=1}^{10^5} M(p, p-d)\) with \(p=10^9+7\) equals `93158936107011`.
+- Modulo `99991`, the required answer is `65910`.
+
+## Correct approach
+For each `d` in `1..100000`, let target digit be `D = p-d`.
+
+1. Least-significant-digit branch:
+- If `x^2 ≡ -d (mod p)` is solvable, then `D` appears as the units base-`p` digit.
+- Candidate is `m0 = min(x, p-x)`.
+- Since `p ≡ 3 (mod 4)`, roots for residues can be computed with exponent `(p+1)/4`.
+
+2. Higher-digit (carry) branch for non-residue cases:
+- When `-d` is not a quadratic residue, units-digit matching is impossible, so `D` must appear in a higher digit.
+- For the second digit, require:
+  `floor(m^2 / p) ≡ D (mod p)`,
+  i.e. `floor(m^2 / p) = k*p + D` for some integer `k >= 0`.
+- This is equivalent to interval search:
+  `m^2 ∈ [ p*(k*p + D), p*(k*p + D + 1) )`.
+- Scan `k = 0,1,2,...`; the first interval containing a perfect square gives the minimal `m` for this branch.
+
+3. Take the minimal valid candidate per `d`, sum all `M(p, p-d)`, then reduce modulo `99991`.
+
+## Wrong approaches and why they fail
+- Wrong approach producing `30986`:
+  only checks the `k=0` interval in the higher-digit branch, then moves on.
+  This misses many valid minima where the first hit is at `k>0` (notably many odd-residue cases).
+
+- Wrong approach producing `95967`:
+  replaces the carry/interval condition with an alternative transformed minimization (using `a/u`-style constraints and `u<=sqrt(p)` scanning).
+  That optimization is not equivalent to the full interval criterion, so it can exclude true minimal constructions and return the wrong total.

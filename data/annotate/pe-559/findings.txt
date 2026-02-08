@@ -1,0 +1,38 @@
+# PE 559 - Permuted Matrices
+
+## Correct answer
+- `Q(50000) mod 1000000123 = 684724920`
+
+## Correct approach
+- For fixed `k`, let `D = {k,2k,..., floor((n-1)/k)*k}`.
+- Use inclusion-exclusion on `D` (columns that must be non-ascents globally): for each subset, force ascents on some multiples and count row permutations consistent with forced ascent positions.
+- Per-row count with forced ascents is
+  - `g = n! / (prod block_len!)`,
+  where block lengths come from runs induced by forced ascent cuts.
+- This gives
+  - `P(k,n,n) = (n!)^n * s(k)`,
+  with `s(k)` computed from a composition/DP or generating-function inversion.
+- A stable recurrence form is:
+  - `c[0]=1`,
+  - `c[m] = -sum_{i=1..m} a_i * c[m-i]`,
+  - where `a_i = ((i*k)!)^{-n} (mod M)`,
+  and the final combination with remainder block terms must include the `ell=0` case.
+- Then
+  - `Q(n) = sum_{k=1..n} P(k,n,n) (mod M)`.
+
+## Wrong approaches and failure modes
+- **Wrong sign in inclusion-exclusion**
+  - Using `(-1)^{|U|}` in the wrong transformed expression (instead of the equivalent correct sign bookkeeping, e.g. `(-1)^{|D|-|U|}` under that parameterization) flips contributions.
+  - Symptom: small-case contradiction such as getting `-99999` where count must be `+99999`.
+
+- **Dropping the `ell=0` remainder-only terminal case**
+  - In the `delta=1`/remainder handling, omitting the `ell=0` term loses valid configurations.
+  - This breaks small checks and propagates to wrong large-`n` totals.
+
+- **CRT on normalized rational-like intermediate `s(k)`**
+  - Reconstructing `s(k)` across auxiliary primes and then multiplying by `(n!)^n` is invalid in this workflow, because modular inverse behavior is modulus-dependent for that normalization.
+  - This led to a wrong final output: `Q(50000)=407478975`.
+
+- **Insufficient CRT modulus product for arbitrary-mod convolution**
+  - Two-prime CRT convolution is not enough when intermediate coefficient magnitude exceeds the prime-product bound.
+  - This caused bad sample behavior (`Q(50)=992935855` in one failed path) and no valid final `Q(50000)` from that path.

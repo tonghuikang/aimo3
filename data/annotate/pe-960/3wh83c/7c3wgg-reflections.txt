@@ -1,0 +1,35 @@
+## Answer: wrong (no final answer)
+
+## Key moments
+- Token 486 [insight]: Identifies the key invariant that any successful run must use exactly `n-1` moves because each move removes exactly `n` stones.
+- Token 1794 [questionable statement]: Jumps from average pile appearances (`2(n-1)/n`) to a rigid degree pattern, setting up an over-restrictive structural model.
+- Token 2049 [mistake]: Concludes exactly two piles appear once and all others twice, which is false in general and forces an incorrect path-only viewpoint.
+- Token 2763 [breakthrough]: Correctly derives that successful move-graphs must be connected with `n-1` edges, i.e., spanning trees.
+- Token 6312 [mistake]: Reasserts that the only valid underlying tree is a path, contradicting the provided `n=4` successful star-like behavior.
+- Token 7440 [insight]: Notices the earlier “max degree 2/path-only” claim conflicts with concrete examples.
+- Token 7528 [breakthrough]: Explicitly retracts the path-only claim and reopens the tree-structured formulation.
+- Token 16839 [insight]: Finds that each fixed tree induces a unique half-edge amount solution from the linear constraints.
+- Token 23821 [breakthrough]: Recognizes the rooted edge-orientation rule that reconstructs that unique solution and gives a usable scoring form.
+- Token 30144 [questionable statement]: Introduces extra root-dependent linear-extension constraints that are not the right global counting model.
+- Token 32331 [verification]: Checks against `F(3)=12` and catches a doubling/overcount issue in the rooted counting interpretation.
+- Token 35936 [breakthrough]: Correctly identifies rooted overcounting as a core issue and revises the mapping between roots and realizable sequences.
+- Token 37633 [verification]: Confirms a revised decomposition matches `F(4)=360` for the tested split.
+- Token 45224 [insight]: Tests the conjecture `sum_{non-leaf roots} L(T,r) = (n-1)!` as a possible normalization shortcut.
+- Token 50133 [verification]: Finds explicit `n=5` counterexamples where that identity fails, invalidating the shortcut.
+- Token 54643 [questionable statement]: Suggests prior ordering logic is incomplete and pivots to “any permutation” reasoning based on local feasibility.
+- Token 57270 [mistake]: Globalizes that claim to “any permutation works for any spanning tree,” which later drives incorrect global formulas.
+- Token 59610 [verification]: Verifies permutation behavior on tested cases, but the check is too narrow to justify the universal counting step.
+- Token 63389 [mistake]: Commits to a closed form with an extra multiplicative factor; immediate small-`n` checks fail (`36` vs `12`, `1584` vs `360`).
+- Token 63568 [verification]: Directly evaluates the formula on `n=3..8` and observes systematic mismatch.
+- Token 64052 [missed opportunity]: After the mismatch, continues patching algebra instead of resetting to the last fully validated combinatorial correspondence.
+- Token 67814 [breakthrough]: Finds a concrete counterexample showing `min` is not purely `min(deg(u),deg(v))`, correcting one faulty simplification.
+- Token 69339 [verification]: Re-tests a revised formula and still gets contradictions with given anchors.
+- Token 76920 [missed opportunity]: Acknowledges approach failure but shifts into broad speculation instead of locking onto a minimal validated recurrence.
+- Token 82418 [verification]: Computes `Σ_T M(T)` values that do match known anchors when multiplied by `(n-1)!`, giving a stable empirical target.
+- Token 86115 [questionable statement]: Posits root behavior (“root is always vertex `n-1`”) as if it determines `M(T)` directly, without proving equivalence to the scoring functional.
+- Token 86754 [mistake]: Uses that root assumption to propose a closed form that is immediately falsified by computed values.
+- Token 92023 [insight]: Refocuses on Prüfer/leaf-removal dynamics and tracks evolving `need` values as the right local state.
+- Token 97254 [questionable statement]: Moves to symmetry/expectation heuristics for recursive trees without a closed derivation that preserves exact counting.
+- Token 99545 [missed opportunity]: Transitions into a large DP-design brainstorm instead of finalizing a concrete computable recurrence.
+- Token 104895-114007 [wasted]: Long unfinished generating-function/DP planning segment that never produces an implemented computation or final numeric result.
+- Token 114007 [final answer]: The trace terminates mid-derivation without emitting a boxed value, so this completion is wrong by non-submission.

@@ -1,0 +1,14 @@
+## Answer: wrong (173)
+
+## Key moments
+- Token 261 [breakthrough]: Sets up the right minimization target via LCM over divisor triples.
+- Token 724 [breakthrough]: Uses the practical `1+a+b=n` framing to generate concrete candidate families.
+- Token 13028 [verification]: Correctly tracks parity/mod constraints for `M+c` and admissible divisor structure.
+- Token 36161 [breakthrough]: Derives a coherent `g(10162574)=16/25` branch from the `25`-sum construction.
+- Token 36527 [missed opportunity]: Recognizes the need to compare all feasible divisors but does not complete that comparison correctly.
+- Token 36527 [mistake]: Notes that `47` gives `30/47` (smaller than `16/25`) yet fails to adopt it as the minimum.
+- Token 37151 [mistake]: Incorrectly asserts the minimum is controlled by `s=25` monotonic reasoning, despite the `47` counterexample.
+- Token 37525-38473 [wasted]: Repeatedly re-derives and defends the `16/25` path instead of switching to the better `30/47` branch.
+- Token 38659 [verification]: Floor-epsilon analysis is internally correct for the chosen branch.
+- Token 38928 [verification]: Rechecks `g(0)` and fraction reduction consistently within the wrong model.
+- Token 39081 [final answer]: Commits to `173`.

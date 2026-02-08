@@ -1,0 +1,12 @@
+## Answer: correct (84)
+
+## Key moments
+- Token 1870 [insight]: Introduces the generating-function translation so the correlation constraint becomes polynomial multiplication.
+- Token 1984 [breakthrough]: States the key target equation `A(x)C(x)=x^k+x^l`, unlocking divisor-based reasoning.
+- Token 3071-4131 [wasted]: Long support-sumset argument is explored but ultimately not needed for the final cyclotomic counting path.
+- Token 12028 [insight]: Switches to explicit cyclotomic-family grouping by 2-adic class and degree cap.
+- Token 18532 [breakthrough]: Consolidates valid base polynomials and reaches the `13` normalized `Q` cases.
+- Token 19956 [verification]: Applies shift multiplicity and sign symmetry to get `2*42=84`.
+- Token 22766 [verification]: Builds explicit constructed candidates and checks the algebraic condition computationally.
+- Token 32029 [verification]: Confirms the full generated set size matches `84` and satisfies the shifty criterion.
+- Token 36456 [final answer]: Commits to `\boxed{84}`, which is correct.

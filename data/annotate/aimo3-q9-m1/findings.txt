@@ -1,0 +1,32 @@
+# Findings for aimo3-q9-m1
+
+## Correct Answer
+- `6`
+
+## Correct Approach
+- Let
+  - `a = alpha(0)`
+  - `b = alpha(1)`
+  - `alpha(n)=0` for `n notin {0,1}`.
+- Then
+  - `S_n(alpha) * beta = a*beta(-n) + b*beta(1-n)`.
+- With `y_m = beta(m)` and two-spike target `g_m` (value `1` at two distinct indices, else `0`), this is
+  - `a*y_m + b*y_{m+1} = g_m`.
+- Solve by cases:
+  - `a=0`: need `b*y_{m+1}=g_m`, so `b` must divide `1` at spike locations, hence `b=±1`.
+  - `b=0`: symmetrically `a=±1`.
+  - `a,b != 0`: finite-support boundary/extremal-index analysis (equivalently Laurent/polynomial divisibility) forces `a,b` to be units and excludes mixed signs; only `a=b=1` or `a=b=-1` work.
+- Therefore valid `alpha` pairs are exactly:
+  - `(1,0), (-1,0), (0,1), (0,-1), (1,1), (-1,-1)`.
+- Count = `6`.
+
+## Wrong Approaches and Why They Fail
+- Wrong approach A: only enforce unit constraints `a|1` and `b|1` in the nonzero-nonzero branch, but skip the finite-support compatibility check.
+  - This incorrectly keeps mixed-sign pairs `(1,-1),(-1,1)`.
+  - Wrong count: `8`.
+- Wrong approach B: over-prune by assuming both-nonzero pairs cannot terminate with finite support (or forgetting the valid same-sign construction).
+  - This drops `(1,1)` and `(-1,-1)`.
+  - Wrong count: `4`.
+- Wrong approach C: assume cancellations allow non-unit pairs (e.g., `(2,1)`, `(2,-2)`) without checking boundary equations at extremal support indices.
+  - Boundary/source equations force divisibility by `1`, so non-units fail.
+  - This can lead to claiming extra solutions (sometimes even infinitely many), which is false.

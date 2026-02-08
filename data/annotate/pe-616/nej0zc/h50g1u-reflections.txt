@@ -1,0 +1,11 @@
+## Answer: wrong (0)
+
+## Key moments
+- Token 975 [insight]: Builds a decomposition-tree interpretation for reachable numbers.
+- Token 2129 [questionable statement]: States that exponentiation/splitting cannot introduce genuinely new prime labels.
+- Token 5500-9000 [wasted]: Long exploratory discussion over small examples without tightening into a proof.
+- Token 12000 [questionable statement]: Assumes exponent-combination behavior is closed under the currently visible prime set.
+- Token 14856 [mistake]: Uses finite-prime semigroup reasoning to claim universal non-creativity.
+- Token 17442 [mistake]: Reasserts the impossibility conclusion without resolving earlier gaps.
+- Token 18500 [missed opportunity]: Ends with edge-case checks (`n>1`, modulo) instead of validating the core reachability claim.
+- Token 19178 [final answer]: Commits to `\\boxed{0}`.

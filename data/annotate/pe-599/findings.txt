@@ -1,0 +1,30 @@
+# PE 599 - 2x2x2 Rubik's Cube Colorings
+# Problem: Count essentially distinct colorings of 24 stickers under mechanically possible cube transformations
+
+## Correct Answer
+- For `n=10`, the required value modulo `99991` is **6292**.
+
+## Correct Approach
+- Use Burnside's lemma on sticker colorings:
+  - Count is `(1/|G|) * sum_{g in G} n^{c(g)}` where `c(g)` is the number of cycles of `g` on the 24 sticker positions.
+- The normalization must match the sample `n=2 -> 183`:
+  - The effective divisor is `|G| = 8! * 3^7 = 88,179,840` (equivalently, a missing factor of 24 must be accounted for if starting from `3,674,160`).
+- Model each element by corner permutation plus corner twists:
+  - For a corner-permutation cycle, if twist-sum on that cycle is `0 mod 3`, it contributes 3 sticker-cycles; otherwise it contributes 1.
+- Aggregate by corner permutation cycle count `k` (unsigned Stirling numbers `c(8,k)`):
+  - For fixed `k`, orientation-sum contributions reduce to
+    - `T(k) = ((n^2 + 2)^k + 2*(n^2 - 1)^k)/3`.
+  - Then sum over `k=1..8` and divide once by the correct group size.
+- Always verify against the provided calibration `n=2 -> 183` before finalizing.
+
+## Known Wrong Values
+- `4392` for `n=2` (exactly `24 * 183`): caused by missing the extra factor of 24.
+- `2371` modulo `99991` for `n=10`: produced by incorrect parity/normalization assumptions.
+
+## Wrong Approaches And Why They Fail
+- Dividing by `3,674,160` directly as the final normalization:
+  - Overcounts by a factor of 24 relative to the problem's intended equivalence (detected by failing `n=2 -> 183`).
+- Restricting the corner permutation summation to even permutations plus adding an extra `/12` correction:
+  - Distorts the Burnside average and can still pass a narrow calibration check while failing at `n=10`.
+- Heavy BFS/state-enumeration implementation detours:
+  - Consumes effort and introduces bookkeeping risk; the cycle-sum analytic reduction is the robust path.

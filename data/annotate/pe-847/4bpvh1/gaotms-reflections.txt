@@ -1,0 +1,23 @@
+## Answer: correct (381868244)
+
+## Key moments
+- Token 7014 [insight]: Builds a corrected state-DP for `h(a,b,c)` that handles full-plate queries and YES/NO branch updates properly.
+- Token 13919 [verification]: Confirms the DP is stable and reproduces the expected small-case behavior.
+- Token 15128 [insight]: Extracts the key simplification `h = ceil(log2 T) or ceil(log2 T)+1`.
+- Token 18875 [verification]: Empirically finds that `+1` appears only on specific total-sum bands near powers of two.
+- Token 20391 [breakthrough]: Identifies the interval start pattern `3*2^{k-2}+2`, giving the critical-total windows.
+- Token 21500 [missed opportunity]: Notes that total-level criticality is insufficient, but does not yet have a clean per-triple criterion.
+- Token 24034 [breakthrough]: Derives the balanced-split requirement and the recursive condition that the NO branch must also remain optimal.
+- Token 25722 [breakthrough]: Recasts the task as counting bad triples `B_T` and summing them.
+- Token 26681-43677 [wasted]: Extended exploratory phase over threshold heuristics and partial counting rules before a stable recurrence is established.
+- Token 30062 [verification]: Uses explicit checks at `T=14` and related totals to test candidate bad-triple conditions.
+- Token 36925 [insight]: Moves to recurrence-based counting for `B_T` rather than direct structural guessing.
+- Token 42209 [verification]: Validates decomposition on `T=16` (`type-A` plus propagated bad cases), grounding the counting model.
+- Token 51998 [questionable statement]: Proposes an interval-sum formula with special endpoint handling that later reveals indexing inconsistencies.
+- Token 54282 [mistake]: Finds a contradiction in the interval-length/index mapping (`D_end`), invalidating that version of the aggregation.
+- Token 60879 [breakthrough]: Lands on the clean recurrence `B(T)=A(T)+3*B(T-S)` with `S=2^{ceil(log2 T)-1}`.
+- Token 62004 [breakthrough]: Lifts pointwise recurrence to interval-sum recurrence, enabling `O(log N)` accumulation.
+- Token 70588 [verification]: Implements and validates per-level sum recurrence (`SumB_L = SA(L) + 3*SumB_{L-1}`).
+- Token 72181 [verification]: Checks the full pipeline against `H(6)=203`, `H(20)=7718`, and `H(111)=1634144`.
+- Token 74090 [breakthrough]: Finalizes the formal closed-form recurrence presentation for `B(t)` and interval sums.
+- Token 74970 [final answer]: Commits to boxed `381868244`.

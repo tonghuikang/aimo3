@@ -1,0 +1,26 @@
+## Answer: wrong (96607)
+
+## Key moments
+- Token 51 [insight]: Frames the exact target as `\sum_{k=1}^{18} Q(10^k) \bmod 99991`.
+- Token 6112 [insight]: Switches to sparse-support multiplication over `GF(2)` using exponent sets.
+- Token 10727 [breakthrough]: Correctly identifies that `f(x)^{2^m}` always has 5 terms, making bitwise exponent decomposition viable.
+- Token 11787 [verification]: Runs the power-of-10 computation pipeline and gets reliable values through `k=14`.
+- Token 13105 [questionable statement]: Abandons the working computational path too early and pivots to speculative closed-form hunting.
+- Token 17324-24534 [wasted]: Long theory-heavy re-derivation of parity/generating-function views without improving computability.
+- Token 24534 [insight]: Recasts coefficients via no-carry multinomial-bit assignments, a structurally useful interpretation.
+- Token 31988 [insight]: Proposes residue/mask compression to avoid storing huge supports explicitly.
+- Token 35040 [questionable statement]: Uses a modulus-inconsistent power-of-two base case (`{0:31}`-style collapse) during recursion design.
+- Token 36015 [mistake]: Debugging shows the recursion is wrong because residues must be lifted across moduli correctly.
+- Token 44425 [breakthrough]: Introduces explicit modulus-lifting conversion, partially repairing the recursive framework.
+- Token 47238 [questionable statement]: Claims residues can be dropped and only mask counts tracked.
+- Token 52517-57911 [wasted]: Repeated data-structure rewrites (set/list/merge variants) without landing a complete method for `k>=15`.
+- Token 57911-63720 [wasted]: Further merge-engine optimization attempts consume effort but still do not produce missing values.
+- Token 63720 [questionable statement]: Tries to extrapolate high-`k` behavior from too few terms via recurrence guessing.
+- Token 68869-76753 [wasted]: Multiple timed runs for `5^15` stall; no successful end-to-end computation is finished.
+- Token 75353 [insight]: Adds descending-order/progress instrumentation to localize the exact runtime bottleneck in the `5^15` attempt.
+- Token 83599 [questionable statement]: Suggests the partial-sum residue `96607` might already be final.
+- Token 87697 [questionable statement]: Reasserts mask-only counting by assuming residue uniqueness is enough.
+- Token 93731 [mistake]: Finds counterexample (`n=5`) showing mask-only aggregation loses essential residue identity.
+- Token 93990 [missed opportunity]: After disproving the compressed DP, no rigorous fallback is completed before answering.
+- Token 94473 [mistake]: Assumes missing high-`k` contributions could cancel modulo `99991` without proof.
+- Token 94553 [final answer]: Commits to `\boxed{96607}`.

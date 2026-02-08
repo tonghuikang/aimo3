@@ -1,0 +1,16 @@
+## Answer: correct (6292)
+
+## Key moments
+- Token 126 [insight]: Starts from the correct Burnside framing on sticker permutations.
+- Token 3066-4389 [wasted]: Long exploration of brute-force/group-library options before committing to a clean analytic counting route.
+- Token 3800 [questionable statement]: Fixes the equivalence interpretation to a `|G|=3,674,160` move-group model without reconciling the given `n=2` calibration.
+- Token 6707 [breakthrough]: Derives the key cycle rule per corner-cycle: twist-sum `0` gives 3 sticker cycles, nonzero gives 1.
+- Token 9215 [breakthrough]: Obtains the closed form `T(k)=((n^2+2)^k+2(n^2-1)^k)/3` for the constrained residue sum.
+- Token 9834 [mistake]: Uses `Sum / 3,674,160` as the final orbit count normalization, leading to the wrong calibration value (`4392` at `n=2`).
+- Token 12794 [breakthrough]: Detects the exact factor-24 discrepancy (`4392 = 24 * 183`) and traces it to missing whole-cube rotational equivalence.
+- Token 13377 [breakthrough]: Corrects the denominator to the full `8! * 3^7 = 88,179,840`, aligning with the problem’s sample.
+- Token 13827 [verification]: Recomputes with the corrected normalization and confirms the `n=2` and `n=10` values are consistent.
+- Token 14155 [verification]: Performs additional sanity checks (including small-`n` behavior) before finalizing.
+- Token 14358-15133 [wasted]: Extra algebraic re-derivation after the numeric result is already established, including a misleading termwise-division attempt.
+- Token 15242 [verification]: Returns to the robust “sum first, divide once” computation path and reconfirms consistency.
+- Token 15307 [final answer]: Commits to `\boxed{6292}`.

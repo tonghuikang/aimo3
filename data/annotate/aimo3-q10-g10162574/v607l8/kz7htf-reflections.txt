@@ -1,0 +1,15 @@
+## Answer: wrong (41)
+
+## Key moments
+- Token 10 [insight]: Correctly starts from minimizing `lcm(a,b,c)` subject to `a+b+c=N`.
+- Token 5461 [breakthrough]: Commits to an explicit optimization setup instead of ad-hoc construction.
+- Token 7904 [missed opportunity]: Lengthy 3-adic magnitude discussion delays direct feasible-ratio screening.
+- Token 10059 [insight]: Begins concrete ratio testing over small structured templates.
+- Token 12017 [questionable statement]: Restricts the denominator family to `D=1+u+v` (a narrowed model tied to a specific triple form).
+- Token 15979-16704 [wasted]: Debugging/mod-helper span that refines computations inside the already narrowed model.
+- Token 19006 [mistake]: Treats that restricted family as effectively complete and locks onto `D=25`, excluding better valid branches.
+- Token 22122 [verification]: Large brute-force sweep confirms `16/25` only within the same restricted search space.
+- Token 25163 [mistake]: Propagates the restricted-model optimum to `g(c)=16/25`, yielding the wrong residue.
+- Token 26709 [questionable statement]: Notices modular-assumption fragility but still does not reopen the underlying model restriction.
+- Token 28348 [verification]: Rechecks arithmetic with improved modular logic; branch remains self-consistent but still wrong.
+- Token 30416 [final answer]: Commits to `41`.

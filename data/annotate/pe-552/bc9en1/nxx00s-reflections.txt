@@ -1,0 +1,16 @@
+## Answer: correct (326227335)
+
+## Key moments
+- Token 837 [insight]: Establishes that a prime can only divide `A_n` while it is not yet in the modulus set (`q > p_n`), so each prime must be detected before its own index.
+- Token 1548 [breakthrough]: Reframes the task as tracking `A_n mod q` for all primes up to the bound, with `n` only needed up to `π(300000)`.
+- Token 9475-10444 [wasted]: Long algebraic attempt to derive a closed-form divisibility condition, without yielding a usable computational shortcut.
+- Token 9500 [questionable statement]: Treats the transformed sum `Σ i * inv(p_i) * t_i` as if it were independent of `q`.
+- Token 9941 [mistake]: Pushes that claim into an invalid criterion (`q | K_n`) that does not correctly characterize `q | A_n`.
+- Token 10185 [insight]: Identifies the core flaw: `inv(p_i)` is taken modulo `q`, so the expression is inherently `q`-dependent.
+- Token 10294 [breakthrough]: Abandons the invalid simplification and returns to residue-tracking recurrence.
+- Token 19283 [questionable statement]: Implements an optimization that removes primes from active tracking immediately after first hit.
+- Token 20324 [mistake]: Realizes this removal loses residues needed later to compute correct `t_n` when those primes become current moduli.
+- Token 20584 [insight]: Derives why future `k_n/t_n` updates require the full residue history modulo each upcoming prime.
+- Token 20803 [breakthrough]: Restores the correct invariant: keep tracking all relevant primes until their modulus index is reached.
+- Token 22776 [verification]: Confirms correctness by matching `S(50)=69` and cross-checking against a brute-force small-bound computation.
+- Token 23511 [final answer]: Commits `\boxed{326227335}`.

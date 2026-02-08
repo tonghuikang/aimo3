@@ -1,0 +1,32 @@
+Correct answer: 40
+
+Correct approach
+- Write A(x) = sum_{i=0}^4 alpha(i) x^i.
+- The condition S_n(alpha) ⋆ beta = 1 on exactly two shifts is equivalent to existence of a finite Laurent polynomial C(x) with integer coefficients such that
+  A(x) C(x) = x^k + x^l = x^k(1 + x^d), d = |k-l| > 0.
+- Factor A(x) = x^r P(x), where P(0) != 0. Then P must divide 1 + x^d in Z[x]. Conversely, any such x^r P with r + deg(P) <= 4 is valid.
+- Divisors of 1 + x^d are products of cyclotomic factors Phi_n with n even and all factors sharing the same 2-adic exponent v2(n).
+- With degree <= 4, primitive possibilities for P are exactly:
+  1,
+  Phi_2 = x+1,
+  Phi_4 = x^2+1,
+  Phi_6 = x^2-x+1,
+  Phi_8 = x^4+1,
+  Phi_10 = x^4-x^3+x^2-x+1,
+  Phi_12 = x^4-x^2+1,
+  Phi_2*Phi_6 = x^3+1.
+- For primitive P of degree e, shifts r = 0..(4-e) give (5-e) valid alphas; sign ± both valid.
+- Total:
+  sum (5-e) over the 8 primitive P = 20,
+  then multiply by 2 for ± sign => 40.
+
+Wrong approach 1 (gives 16)
+- Treating the condition as plain polynomial divisibility only, forcing a0 = ±1 and disallowing x^r shifts.
+- This counts only signed primitive divisors (8*2=16) and misses all shifted variants x^r P with r>0.
+
+Wrong approach 2 (often gives 20)
+- Counting subsets of low-degree even cyclotomics by degree alone, without enforcing same-v2 compatibility for factors in one 1+x^d.
+- This admits invalid mixed-factor products and still ignores shift multiplicity, leading to incorrect totals.
+
+Wrong verification pattern
+- Brute checks restricted to the unshifted-divisor candidate set can "confirm" 16, but that verification is incomplete because shifted valid families were excluded before testing.

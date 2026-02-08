@@ -1,0 +1,25 @@
+## Answer: wrong (1877)
+
+## Key moments
+- Token 233 [insight]: Correctly reduces the geometry to `c^2 = a^2 + b^2 + ab`, giving the right Diophantine target.
+- Token 7237 [questionable statement]: Treats unordered absolute-value pair formulas as a near-complete representation, which blurs required sign/orientation constraints.
+- Token 12745 [mistake]: The generated count is about half of `T(1000)=235`, showing the parameterization/counting pipeline is incomplete.
+- Token 12981 [verification]: Direct brute-force check is used to confirm the mismatch and force a redesign.
+- Token 20635-27571 [wasted]: Long asymptotic-density and analytic-counting detour that is not used in the final constructive method.
+- Token 25910 [missed opportunity]: Empirical growth diagnostics already suggest continuing families, but this evidence is not used decisively.
+- Token 30545 [questionable statement]: Misreads primitive-growth behavior and starts drifting toward a finite-total narrative.
+- Token 31453 [questionable statement]: Explicitly suggests primitive solutions with `b-a<=100` may be finite for each fixed difference.
+- Token 32066 [mistake]: Upgrades that suggestion into a finite-primitive conclusion.
+- Token 32630 [mistake]: Infers `T(N)` should stabilize to a finite limit from the finite-primitive claim.
+- Token 36830 [insight]: Increases search window in `(m,n)` to test whether primitive counts actually saturate.
+- Token 37390 [breakthrough]: New primitives keep appearing as bounds increase, overturning the stabilization hypothesis.
+- Token 43070 [insight]: Recognizes multiple difference forms and the need to separate Pell-type families.
+- Token 50186 [breakthrough]: Reframes infinite-family generation around Pell equations with RHS `-d` and `2d`.
+- Token 57540 [insight]: Builds a concrete generation plan (finite families + Pell families + dedup) instead of pure asymptotic reasoning.
+- Token 63574 [questionable statement]: Uses bounded seed searches and assumes they are sufficiently complete for all active families.
+- Token 69728 [mistake]: Even after revisions, counting remains internally inconsistent (over/undercount behavior unresolved).
+- Token 73946 [questionable statement]: Restricts to a narrow family interpretation without fully proving completeness.
+- Token 75194 [mistake]: Collapses active differences to a finite discovered set from bounded search, producing systematic undercount.
+- Token 79756 [missed opportunity]: Continues patching sign/RHS cases instead of re-validating end-to-end against the provided `T(10^8)=1245` benchmark.
+- Token 81205 [verification]: Performs only a small-`N` check immediately before finalization.
+- Token 81341 [final answer]: Commits to `\boxed{1877}`, which is wrong.

@@ -1,0 +1,25 @@
+Correct answer (mod 10^9+7): 343557869.
+
+Correct approach:
+- Let n = m(m+1)/2 and T_k = k(k+1)/2.
+- sigma decomposes into disjoint cycles on blocks B_k = {T_{k-1}+1, ..., T_k} of lengths k (k=1..m), so ord(sigma) = L = lcm(1,...,m).
+- pi = tau^{-1} sigma tau, so pi has the same cycle lengths and order L.
+- Since L | m!, write
+  P(m) = (m!/L) * S, where S = sum_{t=1}^{L} rank(pi^t).
+- Use weighted inversion form of lex rank:
+  rank(p) = 1 + sum_{1 <= i < j <= n} (n-i)! * 1[p(i) > p(j)].
+- For fixed i,j, the indicator over t is periodic with period lcm(a,b), where a,b are the block sizes of tau(i), tau(j). Counts can be precomputed by (a,b) and delta = (offset_j - offset_i) mod gcd(a,b).
+- Summing these precomputed pair counts gives S efficiently for m=100 (n=5050) without iterating over L.
+- Final modular computation: P(m) mod M = (m! mod M) * inv(L) * (S mod M) mod M, with M = 10^9+7.
+
+Wrong approaches and why they fail:
+- Treating rank-sum as conjugacy-invariant (cycle-type only) is wrong: lexicographic rank changes under relabeling by tau.
+- Using the wrong 1-index inverse for tau, namely tau^{-1}(y)=((c^{-1}(y-1) mod n)+1), mishandles residue 0 and breaks small checks (e.g., m=2 can incorrectly produce 7 instead of 4).
+- Comparing only within-block rank labels across different blocks (instead of actual global values after inverse mapping) overcounts inversion events.
+- Carrying remainder terms for block-size periods as if they matter here is unnecessary noise: every block size 1..m divides m!, so those remainders vanish in this problem.
+
+Verification targets matched:
+- P(2) = 4
+- P(3) = 780
+- P(4) = 38810300
+- P(100) = 343557869

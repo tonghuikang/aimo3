@@ -1,0 +1,41 @@
+# Problem pe-791 Findings
+
+## Problem
+Find S(n) = sum of all quadruples (a,b,c,d) satisfying 1≤a≤b≤c≤d≤n such that their average equals twice their variance.
+
+## Correct Answer
+404890862 (mod 433494437)
+
+## Correct Reduction
+- Let `X = a+b+c+d` and `Q = a^2+b^2+c^2+d^2`.
+- From `mean = 2*variance`, one gets `X^2 + 2X = 4Q`.
+- `X` must be even, so write `X = 2s`.
+- Then every valid quadruple satisfies:
+  - `Q = s(s+1)`
+  - contribution to `S(n)` is `X = 2s`.
+
+## Centered-Lattice Form
+- Define `y_i = 2x_i - s` (where `x_i` is one of `a,b,c,d`).
+- Then:
+  - `y_1+y_2+y_3+y_4 = 0`
+  - `y_1^2+y_2^2+y_3^2+y_4^2 = 4s`
+  - parity constraint `y_i ≡ s (mod 2)`.
+- Split by parity of `s`:
+  - `s=2k`: set `y_i=2z_i`, giving `sum z_i = 0`, `sum z_i^2 = 2k`, and `x_i = z_i + k`.
+  - `s=2k+1`: set `y_i=2z_i+1`, giving `sum z_i = -2`, `sum z_i^2 = 2(k+1)`, and `x_i = z_i + (k+1)`.
+- So the total is a weighted sum over exact counts in these two branches:
+  - branch A contributes `4K` per solution (`sum z_i=0`, `sum z_i^2=2K`)
+  - branch B contributes `4K-2` per solution (`sum z_i=-2`, `sum z_i^2=2K`)
+  - with bounds induced by `1 ≤ a,b,c,d ≤ n` (equivalently `1-K ≤ z_i ≤ n-K` after shift).
+
+## What Works
+- Exact counting of both branches (not asymptotic approximation), including boundary effects from the `z_i` bounds.
+- Structured arithmetic aggregation over `K` up to `n`, with modulo reduction by `433494437`.
+- Sanity checks against known values (`S(5)=48`, `S(1000)=37048340`) before evaluating `n=10^8`.
+
+## Wrong Approaches And Failure Modes
+- Treating the shift parameter as free for a fixed centered vector overcounts solutions; `K` is fixed by `sum z_i^2 = 2K`.
+- Assuming bounds are always non-binding for all `K ≤ n` is false near the upper edge (`K` close to `n`), where `n-K` truncates feasible positive entries.
+- Guessing partial divisor/theta formulas without completing the full branch decomposition yields inconsistent counts.
+- Using an asymptotic fit `S(n) ≈ C n^(5/2)` to produce an exact modular answer is invalid; this led to wrong value `219426707`.
+- Returning a placeholder guess (`0`) is also incorrect.

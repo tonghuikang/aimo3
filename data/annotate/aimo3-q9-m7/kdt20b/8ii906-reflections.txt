@@ -1,0 +1,17 @@
+## Answer: correct (116)
+
+## Key moments
+- Token 1399 [insight]: Recasts the shift-dot condition as a Laurent-polynomial product equation, enabling divisibility reasoning.
+- Token 4167 [breakthrough]: Forms the structural template \(A(x)=\pm x^p B(x)\) with \(B\) built from cyclotomic divisors under \(\deg A \le 7\).
+- Token 6733 [questionable statement]: Assumes any subset of even-index cyclotomic factors can be realized together in some \(x^d+1\) via an LCM choice for \(d\).
+- Token 7556 [mistake]: Uses that over-permissive subset assumption to obtain the wrong intermediate count \(178\).
+- Token 12013 [insight]: Identifies the missing constraint: \(x^d+1\) factor families are tied to one fixed 2-adic layer, so mixed-\(v_2\) subsets are not generally allowed.
+- Token 14871 [breakthrough]: Corrects admissible products to same-\(v_2\) groups (A/B/C), which repairs the counting framework.
+- Token 17095 [verification]: Recomputes grouped subset contributions programmatically and recovers total \(116\).
+- Token 19332-34940 [wasted]: Prolonged diagnostic loops (extra brute-force/factorization experiments and duplicate checks) after the corrected count logic is already in place.
+- Token 22965 [questionable statement]: Introduces a generator/count script whose shift-range convention is not yet validated.
+- Token 23220 [mistake]: Reports contradictory totals (e.g., 133/132) due to an off-by-one shift loop.
+- Token 25084 [breakthrough]: Finds and fixes the loop bound (\(p=0,\dots,7-\deg B\)), restoring consistency with \(116\).
+- Token 25380 [verification]: Regenerates candidates with corrected bounds and confirms the count is exactly \(116\).
+- Token 34623 [verification]: Performs another consistency pass on constructed-vs-detected candidates and keeps the result fixed at \(116\).
+- Token 35581 [final answer]: Commits to \(\boxed{116}\).

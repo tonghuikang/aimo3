@@ -1,0 +1,50 @@
+# PE 929: Odd-Length Run Compositions Findings
+
+## Problem Summary
+Count compositions of `n` such that every maximal run of equal terms has odd length.  
+Required output: `F(10^5) mod 1111124111`.
+
+## Correct Answer
+- `F(10^5) mod 1111124111 = 57322484`
+
+## Correct Approach
+- Encode a composition as a sequence of runs `(v, l)` where:
+  - `v >= 1` is the run value,
+  - `l` is odd,
+  - adjacent runs have different `v`.
+- For fixed value `v`, run generating function is:
+  - `B_v(x) = x^v / (1 - x^(2v))`.
+- Let `F_v(x)` be the generating function for non-empty valid sequences starting with value `v`, and `S(x) = Σ_v F_v(x)`.
+- Recurrence:
+  - `F_v = B_v * (1 + Σ_{w != v} F_w) = B_v * (1 + S - F_v)`,
+  - so `F_v = B_v(1+S)/(1+B_v)`.
+- Therefore:
+  - `S = (1+S) * T`, where `T(x) = Σ_v B_v/(1+B_v)`,
+  - total `G(x) = 1 + S = 1/(1 - T(x))`.
+- Simplify `T`:
+  - `B_v/(1+B_v) = x^v/(1 + x^v - x^(2v))`,
+  - with `y = x^v`, `y/(1+y-y^2) = Σ_{k>=1} (-1)^(k+1) Fib(k) y^k`,
+  - hence `T(x) = Σ_{n>=1} t_n x^n` where
+  - `t_n = Σ_{d|n} (-1)^(d+1) Fib(d)`.
+- Coefficient recurrence (`f_n = [x^n]G(x)`):
+  - `f_0 = 1`,
+  - `f_n = Σ_{i=1}^n t_i * f_{n-i}`.
+- Compute efficiently:
+  - Precompute Fibonacci and `t_n` by divisor sieve in `O(N log N)`.
+  - Build `U(x) = 1 - T(x)`.
+  - Compute `G(x) = U(x)^(-1) mod x^(N+1)` via Newton series inversion.
+  - For polynomial multiplication under modulus `1111124111` (not NTT-friendly), use 3 NTT-friendly primes plus CRT/Garner per convolution.
+
+## Wrong Approaches And Failure Modes
+- **Notation confusion (`F_d`)**:
+  - Mixing target sequence values with Fibonacci values leads to incorrect implicit recurrences (especially odd/even “underdetermined” detours).
+- **End-only CRT reconstruction**:
+  - Computing full series separately modulo NTT primes and only combining final residues can produce wrong `mod M` values for huge integers.
+- **Two-prime arbitrary-mod convolution**:
+  - Coefficient-sum bounds can exceed two-prime product, so reconstruction is not exact; this causes wrong modulo-`M` multiplication.
+- Typical wrong outputs from these failures were inconsistent values such as `92021297` and `414905573`.
+
+## Practical Validation Criteria
+- Must satisfy the sample checkpoint `F(5)=10`.
+- Fast method should match a slower direct recurrence implementation on small/medium `N` (e.g., `N=200`, `N=1000`).
+- Final reported value must be `57322484` modulo `1111124111`.

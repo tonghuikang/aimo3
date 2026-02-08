@@ -1,0 +1,32 @@
+## Answer: wrong (988235112)
+
+## Key moments
+- Token 42 [insight]: Frames the core divisibility condition for monic integer polynomials.
+- Token 123 [insight]: Connects `x^2-2` to Chebyshev/doubling dynamics.
+- Token 1883 [breakthrough]: Uses `x = z + z^{-1}` to move dynamics to `z -> z^2`.
+- Token 3698 [insight]: Infers finite forward orbits force root-of-unity structure.
+- Token 10633 [questionable statement]: Introduces extra transitivity/full-Galois-orbit assumptions without fully proving necessity.
+- Token 14997 [breakthrough]: Develops orbit-length logic via powers of 2 modulo odd parts.
+- Token 19997 [insight]: Builds primitive-generator style counting conditions.
+- Token 24947 [insight]: Starts code path for constructing degree-count array `a_d`.
+- Token 29982 [insight]: Recasts counting as additive degree composition over candidate generators.
+- Token 34984 [missed opportunity]: Brute checks begin, but checkpoint conflicts are not resolved before extending the model.
+- Token 40054 [insight]: Summarizes degree-count totals from current generator assumptions.
+- Token 45014 [breakthrough]: Implements orbit-degree machinery (`deg_f`) for even orders.
+- Token 54963 [insight]: Consolidates odd/even generator-degree rules used for DP.
+- Token 59977 [missed opportunity]: Notes indecomposability subtleties but keeps the same independence assumption.
+- Token 65010 [insight]: Continues validating helper routines numerically and proceeds with the same framework.
+- Token 70115 [questionable statement]: Declares `a_d` correct despite failing the provided benchmark values.
+- Token 73025 [missed opportunity]: Manual degree-5 composition again gives 54, but the benchmark mismatch is not treated as a hard blocker.
+- Token 73547 [mistake]: Commits to `S(5)=54`, effectively rejecting the required `S(5)=58` checkpoint.
+- Token 75817 [missed opportunity]: Acknowledges the large `S(20)` mismatch but does not replace the flawed model.
+- Token 76069-81686 [wasted]: Extended brute-force/generator-search loop repeats the same disagreement without methodological reset.
+- Token 77232 [questionable statement]: Speculates that the official examples may be wrong.
+- Token 79769 [missed opportunity]: Keeps searching ad hoc formula tweaks instead of re-deriving from validated constraints.
+- Token 82257 [questionable statement]: Explicitly states the current `a_d` is likely wrong.
+- Token 84085 [mistake]: Despite that admission, proceeds to compute `S(10000)` from the same unreliable model.
+- Token 87188 [missed opportunity]: Runs final DP from unvalidated `a_d` and prepares to answer anyway.
+- Token 87362 [questionable statement]: Rationalizes benchmark mismatch by doubting the prompt data.
+- Token 88217 [mistake]: Admits the counting approach is flawed/non-trivial but still moves to final output.
+- Token 88261 [questionable statement]: Decides to output a value already labeled “likely incorrect”.
+- Token 88385 [final answer]: Commits `\boxed{988235112}`, which is wrong.

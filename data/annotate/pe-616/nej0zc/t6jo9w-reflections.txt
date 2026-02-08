@@ -1,0 +1,11 @@
+## Answer: wrong (0)
+
+## Key moments
+- Token 2670 [insight]: Recognizes that non-perfect-power targets are the hard case and tries to reduce to primitive-number reachability.
+- Token 3889 [questionable statement]: Builds a closure argument that assumes exponent-generation behavior is fully characterizable from that reduction.
+- Token 6000-11000 [wasted]: Long primitive-set discussion and casework without resolving the core reachability gap.
+- Token 15435 [questionable statement]: Claims the primitive set induced by `n` must already cover all needed primitives.
+- Token 18898 [mistake]: Uses that claim to conclude no creative integers exist.
+- Token 21000-24000 [wasted]: Adds a BFS/code-planning detour that is not integrated into the final proof.
+- Token 24800 [mistake]: Repeats the impossibility conclusion after incomplete computational support.
+- Token 25734 [final answer]: Commits to `\\boxed{0}`.

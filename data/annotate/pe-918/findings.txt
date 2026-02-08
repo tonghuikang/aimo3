@@ -1,0 +1,20 @@
+Correct answer (mod 99991): 67703.
+
+Correct approach:
+- Derive prefix-sum identities by splitting odd/even indices:
+  - S(2k) = 4 - a_k
+  - S(2k+1) = 4 - 3a_{k+1}
+- For N = 10^12 (even), S(N) = 4 - a_{5*10^11}.
+- Compute a_n modulo 99991 with divide-and-conquer recursion:
+  - a_1 = 1
+  - a_{2m} = 2a_m
+  - a_{2m+1} = a_m - 3a_{m+1}
+- This gives a_{5*10^11} ≡ 32292 (mod 99991), so
+  S(10^12) ≡ 4 - 32292 ≡ 67703 (mod 99991).
+
+Wrong approaches and why they fail:
+- Forward one-pass DP over increasing n is invalid for odd updates, because a_{2n+1} depends on a_{n+1}, which is not guaranteed to be available yet.
+- Using derived closed forms outside their valid domain (especially base-case boundaries such as m=0) causes contradictions and can corrupt recurrences.
+- Overcomplicated matrix detours are unnecessary for this task and can introduce avoidable implementation/order errors; the direct sum identities above are sufficient.
+
+Note: In the available traces, final submitted answers are correct; the “wrong approaches” above are observed pitfalls/intermediate failure modes.

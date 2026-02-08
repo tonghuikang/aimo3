@@ -1,0 +1,26 @@
+# PE 700 - Eulercoins
+
+## Problem
+Find the sum of all Eulercoins for
+`a_n = (1504170715041707 * n) mod 4503599627370517`,
+where an Eulercoin is a new strict prefix minimum.
+
+## Correct Answer
+1517926517777556
+
+## Correct Approach
+- Let `A = 1504170715041707`, `M = 4503599627370517`.
+- Eulercoins are record minima of `A*n mod M`, i.e., values where `A*n` is just above a multiple of `M`.
+- This is a best-approximation problem: record minima come from continued-fraction best lower approximants, not just principal convergents.
+- Compute the continued fraction (equivalently via Euclidean algorithm) and generate both:
+  - convergents
+  - semiconvergents/intermediate fractions
+- For each candidate denominator/index `n`, compute `r = (A*n) mod M`; keep strictly decreasing `r` values and sum them.
+- Important: principal convergents alone are incomplete; semiconvergents are required to recover all Eulercoins.
+- Resulting set has 101 positive Eulercoins (plus final 0), and the total is `1517926517777556`.
+
+## Wrong Approaches And Why They Fail
+- **Memorized-answer shortcut**: returning `15179265177775562` (17 digits) without derivation is wrong.
+- **Convergents-only method**: misses semiconvergent coins, so it undercounts and gives too-small totals (e.g., around `1515851620076201`).
+- **Naive inverse-index greedy rule** (`idx(v) > max idx(w>v)`) as a sufficient condition: necessary but not sufficient, so it can admit non-coins / wrong completeness logic and produce near-miss sums such as `1517926539241925`.
+- **Raw Euclidean-remainder subset as full coin list**: remainders/convergents provide structure, but selecting only a subset of them is not enough for full correctness.

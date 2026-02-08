@@ -1,0 +1,39 @@
+# PE 565 - Problem Findings
+
+## Correct Answer
+- `S(10^11, 2017) mod 99991 = 63696`
+
+## Correct Approach
+- Use multiplicativity:
+  - `sigma(n) = Π sigma(q^e)` over prime powers in `n`.
+  - Since `2017` is prime, `2017 | sigma(n)` iff at least one prime-power factor has `2017 | sigma(q^e)`.
+- Local condition for a prime `q`:
+  - If `q = 2017`: `sigma(q^e) ≡ 1 (mod 2017)`, never a witness.
+  - If `q ≡ 1 (mod 2017)`: special denominator case gives `sigma(q^e) ≡ e+1 (mod 2017)`, so witness exponents are `e ≡ 2016 (mod 2017)` (irrelevant for `N=10^11`).
+  - Otherwise (`q != 2017` and `q !≡ 1 (mod 2017)`): with `d = ord_2017(q)`, witness exponents satisfy `e+1 ≡ 0 (mod d)`.
+- For `N=10^11`, only low-order cases contribute in practice (order-2, order-3, order-4 minimal exponents). Higher-order/higher-exponent witness powers exceed `N`.
+- Compute the weighted union (sum of `n`) by inclusion-exclusion over witness events:
+  - Singleton witness contributions.
+  - Required pair-overlap corrections (notably order-2/order-2, plus the relevant order-2/order-3 interaction).
+  - Higher intersections are excluded by size bounds (`product > N`).
+- Validate the implementation against both checkpoints:
+  - `S(10^6, 2017) = 150850429`
+  - `S(10^9, 2017) = 249652238344557`
+- Then evaluate at `N=10^11` and reduce modulo `99991`.
+
+## Wrong Approaches
+- **Using exponent threshold instead of exponent congruence**
+  - Treating `v_q(n) >= ord_2017(q)-1` as sufficient is wrong.
+  - Correct condition is congruence on the exact exponent (`v_q(n)+1` multiple of order), not just a lower bound.
+
+- **Singleton-only counting without overlap correction**
+  - Summing per-prime witness contributions can match smaller checks but overcounts at larger `N`.
+  - Pair intersections are necessary; otherwise results drift (this caused major mismatch before pair IE was added).
+
+- **Product/density model treated as exact modular identity**
+  - Replacing exact inclusion-exclusion by heuristic/product calibration from known data points leads to wrong modular conclusions.
+  - One trace produced wrong final value `28482` from this.
+
+- **Main-term-only guess**
+  - Using only `N(N+1)/(2*2017)` modulo `99991` ignores a nontrivial correction term.
+  - This produced wrong final value `25891`.

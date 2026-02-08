@@ -1,0 +1,14 @@
+## Answer: correct (2677)
+
+## Key moments
+- Token 7050 [mistake]: It initially commits to a smallest-odd-divisor-of-`n-1` route, which overestimates `f(n)` for this problem.
+- Token 14071 [verification]: It checks modular behavior around small primes (like 11), but still inside that restricted model.
+- Token 21049 [mistake]: It derives floor/ceil expressions from the same wrong structural assumption, reinforcing the `~10/11`-style branch.
+- Token 28088 [missed opportunity]: It keeps extending the `1+d+k` analysis instead of testing broader two-proper-divisor parameterizations.
+- Token 36642 [breakthrough]: A concrete counterexample (`n=21`) exposes that the earlier model is not globally minimal.
+- Token 42065 [breakthrough]: It switches to maximizing `D=1+1/u+1/v` (equivalently minimizing ratio `uv/(uv+u+v)`) under divisibility constraints.
+- Token 47042 [verification]: It runs targeted pair searches for feasible `(u,v)` and denominator conditions, comparing against prior candidates.
+- Token 56007 [breakthrough]: It settles on `g(1848374)=16/25` and `g(10162574)=30/47` as the best feasible values.
+- Token 57735 [verification]: It confirms the floor step preserves these exact rationals (denominators divide `2025!`, perturbation is negligible).
+- Token 58317 [verification]: It explicitly checks excluded edge families (such as `u` or `v` equal to 1) are not better.
+- Token 58504 [final answer]: It commits to `\boxed{2677}`, which is correct.

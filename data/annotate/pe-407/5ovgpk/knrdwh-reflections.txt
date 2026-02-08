@@ -1,0 +1,15 @@
+## Answer: correct (39782849136421)
+
+## Key moments
+- Token 258 [insight]: Identifies that solutions to \(a^2 \equiv a \pmod n\) are CRT idempotents from independent 0/1 choices on each prime-power factor.
+- Token 2347 [breakthrough]: Derives the complementary-pair structure \(a_S + a_{S^c} = n+1\) (for nontrivial subsets), which reframes the target as maximizing one side / minimizing the other.
+- Token 6102 [missed opportunity]: Keeps searching for a closed-form per factor pattern instead of switching earlier to subset-enumeration, despite already noting small \(\omega(n)\) in practice.
+- Token 10109 [questionable statement]: Hypothesizes that the minimal nontrivial idempotent should always come from a single primitive idempotent.
+- Token 15963 [mistake]: Concludes \(d(n)=n+1-\max_i e_i\) as if universally valid; this overgeneralizes from limited examples.
+- Token 16334 [breakthrough]: Catches a contradiction at \(n=30\) and reopens the derivation instead of forcing the invalid formula.
+- Token 22119 [questionable statement]: Introduces a second over-strong claim, \(d(n)=\min_i\min(a_i,n+1-a_i)\), still restricting to one primitive component at a time.
+- Token 23152 [mistake]: Counterexample \(n=210\) shows predicted \(d=70\) vs true \(d=15\), proving multi-term subset sums are necessary.
+- Token 23787-23911 [wasted]: Long detour repeatedly trying to collapse \(d(n)\) to primitive-only expressions before fully committing to subset DP.
+- Token 24058 [breakthrough]: Settles on the correct scalable method: factor \(n\), build primitive idempotents, enumerate subset sums via bitmask DP, and compute \(M(n)=n+1-d(n)\).
+- Token 28897 [verification]: Verifies fast computation against brute-force totals on multiple small \(N\) values (100, 500, 1000, 2000), plus earlier spot checks.
+- Token 29025 [final answer]: Commits to \(\boxed{39782849136421}\), matching the correct answer.

@@ -1,0 +1,18 @@
+## Answer: correct (40)
+
+## Key moments
+- Token 228 [insight]: Rewrites the shifted inner product as `\sum_{i=0}^4 \alpha(i)\beta(i-n)`, exposing the correlation/convolution structure.
+- Token 1461-3658 [wasted]: Spends a long linear-equation/support analysis before switching to the cleaner generating-function factorization framework.
+- Token 3666 [breakthrough]: Introduces generating functions `A(x),G(x)` and the equation `A(x)G(x)=x^k+x^l`.
+- Token 4094 [breakthrough]: Reduces to divisibility by `x^d+1` (up to Laurent monomial units), which is the key algebraic criterion.
+- Token 4613 [questionable statement]: Starts treating the criterion as if `A` must directly divide `x^d+1` as an ordinary polynomial, risking exclusion of shifted forms.
+- Token 5330 [mistake]: Briefly infers that `a_0=0` cases fail (i.e., `A` must have nonzero constant term), which would wrongly drop valid shifted solutions.
+- Token 5573 [breakthrough]: Corrects this by factoring `A=x^sB` and showing only `B \mid (x^d+1)` is needed, restoring monomial-shift families.
+- Token 6699 [insight]: Converts the structure into counting `x^sB` with `s+\deg(B)\le 4`, making shift multiplicity explicit.
+- Token 16017 [insight]: Enumerates the relevant even-index cyclotomic factors of degree `\le 4`.
+- Token 17410 [breakthrough]: Organizes admissible products by common `v_2` class, preventing illegal mixed-factor combinations.
+- Token 17784 [breakthrough]: Writes the final counting formula over shifts and admissible subsets, leading to the target total.
+- Token 23471 [verification]: Performs explicit per-shift tally (`16+10+8+4+2`) and obtains `40`.
+- Token 24562 [verification]: Uses programmatic enumeration of shapes/signs to cross-check the combinatorial count.
+- Token 29074 [missed opportunity]: Re-checks many already settled shape cases after computational confirmation, adding little new information.
+- Token 29581 [final answer]: Commits to total shifty functions `40`.

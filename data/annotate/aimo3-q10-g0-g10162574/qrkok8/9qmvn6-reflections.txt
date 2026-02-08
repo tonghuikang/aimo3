@@ -1,0 +1,14 @@
+## Answer: correct (325)
+
+## Key moments
+- Token 724 [breakthrough]: Establishes the workable optimization form with `f(n)` as a minimum LCM over divisor-sum triples.
+- Token 1861 [breakthrough]: Uses `a=d x, b=d y` decomposition and derives the `N-d` style candidate structure.
+- Token 3088-3941 [wasted]: Extended case-splitting on prime/composite edge behavior that does not directly drive the target huge-`M` instances.
+- Token 12072 [breakthrough]: Shifts to ratio/divisor-sum scaling (`T|S`) instead of narrow local formulas.
+- Token 13684 [mistake]: Temporarily proposes a `4/5`-type branch for `f(M)` from `n-1` odd-prime logic.
+- Token 14760 [breakthrough]: Recovers by testing power-of-3 sum structures and identifies the `2/3` route for `g(0)`.
+- Token 40484 [breakthrough]: For `M+10162574`, narrows to concrete divisor candidates and identifies the winning `30/47` branch.
+- Token 40633 [verification]: Confirms `25` and `31` candidates are worse than the `47` branch.
+- Token 40676 [verification]: Computes `g(0)=2/3`, `g(10162574)=30/47`, then `184/141`.
+- Token 40728 [verification]: Checks reduction (`gcd(184,141)=1`) before modular finish.
+- Token 40894 [final answer]: Commits to `325`.

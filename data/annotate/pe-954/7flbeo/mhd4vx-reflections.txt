@@ -1,0 +1,19 @@
+## Answer: correct (30108)
+
+## Key moments
+- Token 222 [insight]: Establishes the exact interpretation of valid swaps (including leading-zero exclusion) and the `< 10^13` range as lengths up to 13.
+- Token 2222-6975 [wasted]: Spends a long exploratory stretch on inclusion-exclusion/graph/complement viewpoints without an implementable counting method.
+- Token 3168 [questionable statement]: Temporarily concludes a wrong 2-digit shortcut (`a+b ≡ 0 (mod 7)`) for dangerous swaps.
+- Token 3500 [mistake]: Uses `68 ↔ 86` as a contradiction and recognizes the previous algebraic reduction is incorrect.
+- Token 4333 [insight]: Re-derives swap residues directly from `n' = 3b + a` form to reconcile sign/orientation issues.
+- Token 4422 [breakthrough]: Lands on the correct 2-digit condition (`a+3b ≡ 0`, equivalently `b ≡ 2a (mod 7)`), repairing the derivation chain.
+- Token 6975 [insight]: Clarifies how zeros interact with legality: swaps that move `0` into the MSD are invalid and must be excluded.
+- Token 12292 [breakthrough]: Moves to class-mask DP over residue classes (mod-6 weight classes), enabling scalable state compression.
+- Token 20950 [breakthrough]: Identifies a sufficient compact state structure for exact counting with final-residue filtering.
+- Token 25484 [insight]: Catches the MSD-class aggregation pitfall and preserves MSD-specific handling needed for leading-zero legality.
+- Token 32668-34686 [wasted]: Long optimization discussion on state blow-up before introducing the decisive pruning criterion.
+- Token 36775 [breakthrough]: Adds `mask == 63` pruning (all non-zero products seen), which makes high-length computation tractable.
+- Token 38619 [verification]: Aggregates per-length counts to get `C(10^13) = 736463823`.
+- Token 38838 [verification]: Confirms the method reproduces the provided checks `C(100)=74` and `C(10^4)=3737`.
+- Token 39425 [verification]: Runs additional random brute-force sanity checks for 13-digit proportion consistency.
+- Token 40147 [final answer]: Outputs `\boxed{30108}`, which is correct.

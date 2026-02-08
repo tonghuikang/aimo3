@@ -1,0 +1,20 @@
+## Answer: wrong (13277)
+
+## Key moments
+- Token 670 [insight]: Correctly frames XOR-product as GF(2) polynomial convolution, enabling coefficient-level constraints.
+- Token 8862 [questionable statement]: Introduces a strict small-bit bound argument that does not fully account for cancellation/orbit growth.
+- Token 10886 [mistake]: Commits to the incorrect truncation `a,b < 1024` for `m=10^6`, discarding valid large-representative solutions.
+- Token 12121 [verification]: Checks the sample `G(1000,100)=398`, but this only validates low-range behavior and not the global bound assumption.
+- Token 19348 [insight]: Re-expresses the core equation in coefficient form, which could have supported a corrected bound argument.
+- Token 28128-35002 [wasted]: Large detour through broad-range brute-force/planning heuristics without fixing the truncation flaw.
+- Token 35002 [verification]: Runs `max_i_solutions` probing, confirming empirical patterns but not proving correctness of the model.
+- Token 41938 [questionable statement]: Continues concretizing constraints under the same incomplete bounding assumptions.
+- Token 46181 [insight]: Notices near-halving behavior in per-a counts, a useful empirical signal about tail structure.
+- Token 54885 [missed opportunity]: Recognizes naive enumeration is infeasible but does not pivot to the already-emerging orbit/unit structure.
+- Token 56808 [insight]: States the high-bit constraint template (`c_{2i}=0`, odd/even relations) that could have anchored a sound full derivation.
+- Token 58292-61939 [wasted]: Prolonged system-construction effort accumulates complexity while still depending on unproven truncations.
+- Token 61939 [questionable statement]: Assumes `b` bits above index 19 can be forced to zero with incomplete justification.
+- Token 62443 [mistake]: Fixes the linear system to a 20-bit `b` space, hard-coding a truncation that omits valid solutions.
+- Token 65596 [verification]: Internal computation returns 5,512,782 within that truncated model; arithmetic is self-consistent but model-incomplete.
+- Token 65836 [missed opportunity]: Performs only nearby model-variation checks instead of stress-testing against orbit/unit behavior from successful traces.
+- Token 66875 [final answer]: Finalizes `\boxed{13277}`, which is wrong for the target problem.

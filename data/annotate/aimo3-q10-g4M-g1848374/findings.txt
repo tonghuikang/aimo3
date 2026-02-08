@@ -1,0 +1,37 @@
+# Findings for aimo3-q10-g4M-g1848374
+
+## Correct Answer
+- Final value: `373`
+- From
+  - `g(4M) = 10/3`
+  - `g(1848374) = 16/25`
+  - Sum `= 10/3 + 16/25 = 298/75`, so `p+q = 298+75 = 373`.
+
+## Correct Approach
+- Use
+  - `f(n) = min lcm(a,b,c)` over distinct positive integers `a+b+c=n`.
+- View candidate families via scaled base triples; for base triple `(x,y,z)`, ratio is
+  - `f(n)/n = lcm(x,y,z)/(x+y+z)`
+  - when `(x+y+z)` divides `n`.
+- For `n = 5M`:
+  - Best feasible ratio is `2/3`, realized by base `(1,2,6)` with sum `9`.
+  - `9 | 5M`, so `f(5M) = (2/3)(5M) = (10/3)M`.
+  - Hence `g(4M) = 10/3` (floor is exact since `2025!` is divisible by `3`).
+- For `n = M+1848374`:
+  - Better low ratios like `4/7`, `8/13`, `12/19` are not feasible because their required sums do not divide this `n`.
+  - `25 | (M+1848374)` (using `M = 3^{2025!} \equiv 1 \pmod{25}`), and base `(1,8,16)` gives ratio `16/25`.
+  - So `f(M+1848374) = (16/25)(M+1848374)`.
+  - In `g(1848374)`, floor contributes exactly `16/25` (the extra term from `1848374/M` is tiny and does not change the floor).
+
+## Wrong Approaches and Why They Fail
+- Wrong family A: force `f(M+1848374)` to be of form `kM`.
+  - This artificial restriction excludes valid smaller constructions where `f(M+1848374)` is not an integer multiple of `M`.
+  - It leads to a much larger value (e.g., using `k=254051`) and wrong final answer `62229`.
+- Wrong family B: require `D = mn+m+n` itself to divide `M+1848374` (or equivalently reduce only to divisors of `1848375`).
+  - This is too strict for the scaled divisor construction.
+  - The true integrality conditions depend on reduced divisibility constraints (via cancellation with `mn`), not only `D | n`.
+  - This misses feasible better candidates and can select suboptimal ratio `34/53`, yielding wrong final answer `791`.
+- Wrong family C: assume the `(m,n)=(2,6)` ratio `3/5` is feasible for `M+1848374` just because `5` divides the target.
+  - Feasibility needs both reduced divisibility conditions simultaneously (equivalently both induced denominator constraints), not a single prime-factor check.
+  - Here the required reduced denominator includes a factor `2`, but `M+1848374` is odd, so the construction is invalid.
+  - This detour delays finding the true best feasible ratio `16/25`.

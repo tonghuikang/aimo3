@@ -1,0 +1,21 @@
+## Answer: correct (13)
+
+## Key moments
+- Token 188 [insight]: Reduces the target to evaluating `f(5M)` inside `g(4M)`.
+- Token 333 [breakthrough]: Commits to the `f(5M)`-first decomposition of the problem.
+- Token 7400 [insight]: Starts a ratio-style parameterization intended to lower the candidate LCM.
+- Token 8467 [questionable statement]: Proposes the heuristic `f(n) ≈ S-d_max` from a restricted two-divisor template.
+- Token 11121 [mistake]: Treats that heuristic as a general formula and builds the main branch on it.
+- Token 11148 [questionable statement]: Propagates the same unproven formula into a closed-form expression for `f(5M)`.
+- Token 16958 [mistake]: Produces a wrong provisional answer (`86308`) from the flawed model.
+- Token 17012-21653 [wasted]: Long algebraic reduction of the wrong expression before rechecking core assumptions.
+- Token 21653 [missed opportunity]: Notes a potentially better `~(2/3)n` scale but does not immediately pivot to rebuild the derivation.
+- Token 29108 [verification]: Compares base triples and ratios (`6/11` vs `2/3`) to test feasible lower bounds.
+- Token 30316 [verification]: Correctly rejects the `6/11` candidate for this `n` because it requires divisibility by `11`.
+- Token 32425 [insight]: Constructs the admissible scaled `(1,2,6)` family for `5*3^K`.
+- Token 32467 [breakthrough]: Recovers the correct core value `f(5M)=10*3^{K-1}=(10/3)M`.
+- Token 32601 [verification]: Checks the floor input is integral using `3 | 2025!`.
+- Token 34919-35772 [verification]: Stress-tests with `n=90` and explains why the better `3/5` ratio relies on a forbidden factor-2 base sum for this problem.
+- Token 35909 [verification]: Reaffirms that the minimal allowed ratio here is `2/3`.
+- Token 36105 [verification]: Computes `g(4M)=10/3`, hence `p+q=13`.
+- Token 36448 [final answer]: Commits to boxed `13`.

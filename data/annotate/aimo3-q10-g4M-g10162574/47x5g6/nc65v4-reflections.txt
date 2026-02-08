@@ -1,0 +1,11 @@
+## Answer: correct (701)
+
+## Key moments
+- Token 1231 [breakthrough]: Establishes the key optimization view `f(n)=min lcm(a,b,c)` over distinct triples summing to `n`.
+- Token 8107 [breakthrough]: Identifies useful low-ratio base sums (notably multiples of 9) for scaling arguments.
+- Token 16407 [missed opportunity]: Briefly drifts into alternative structural parameterizations before returning to ratio-based minimization.
+- Token 24010 [breakthrough]: Re-anchors on divisor-constrained ratio minimization for the target `M+c` values instead of local heuristic splits.
+- Token 28859-37078 [wasted]: Long exploration over prime-sum ratio heuristics and many hypothetical divisors; informative but mostly unnecessary once the relevant factors are fixed.
+- Token 40063 [breakthrough]: Confirms no better prime-ratio candidate beats the `47`-based construction for the second term in this instance.
+- Token 48055 [verification]: Correctly handles the floor argument to get `g(10162574)=30/47` exactly.
+- Token 48637 [final answer]: Commits to `\boxed{701}`.

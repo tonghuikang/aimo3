@@ -1,0 +1,33 @@
+## Problem: PE 839 - Bean Bowl Sorting
+
+### Correct Answer
+150893234438294408
+
+### Problem Description
+Given bowls with initial bean counts from a pseudorandom sequence `S_n = S_{n-1}^2 mod 50515093` (`S_0 = 290797`), repeatedly find the smallest index `n` where `bowl[n] > bowl[n+1]` and move one bean from bowl `n` to bowl `n+1`. Count total steps `B(N)` until the array is non-decreasing.
+
+### Correct Approach
+- Let `a_i = S_i` and define prefix sums `P_k = sum_{i=0}^k a_i`.
+- Each move shifts one bean right by one index, so the moment `M = sum(i * a_i)` increases by exactly 1 per move.
+- Therefore `B(N) = M_final - M_initial` once the final sorted distribution `b` is known.
+- The final `b` is the maximal non-decreasing integer sequence satisfying prefix constraints:
+  - `sum_{i=0}^k b_i <= P_k` for all `k`
+  - `sum_{i=0}^{N-1} b_i = P_{N-1}`
+- Equivalently, with `D_k = sum_{i=0}^k b_i`, `D` is the greatest integer convex minorant under `P` (with anchor `D_{-1}=0`).
+- Compute the lower convex hull of points `(-1,0), (0,P_0), ..., (N-1,P_{N-1})`.
+- For each hull segment with horizontal length `L` and vertical change `Delta`:
+  - `base = Delta // L`, `rem = Delta % L`
+  - segment values are `base` for first `L-rem` positions, then `base+1` for last `rem` positions
+- Merge adjacent rounded segments when needed so boundary monotonicity is preserved, then compute `M_final` (or equivalently weighted sum of `b`) and subtract `M_initial`.
+
+### Wrong Approaches and Why They Fail
+- Assuming the final state is just the sorted multiset of initial bowl counts is wrong: rightward-only unit moves impose prefix constraints, so the fixed point is a constrained monotone redistribution.
+- Flooring pointwise values of the real convex envelope/interpolation can break integer monotonicity (`b_i` can decrease locally), so naive floor interpolation is invalid.
+- Greedy per-index assignment using only local caps (e.g., maximizing each `b_i` immediately) can violate future monotonic feasibility.
+- Directly summing `Q_i` by naive linear interpolation across hull segments can be off because integerized segments form a staircase, not exact line values at every integer index.
+
+### Verification Values
+- `B(5) = 0`
+- `B(6) = 14263289`
+- `B(100) = 3284417556`
+- `B(10^7) = 150893234438294408`

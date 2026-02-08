@@ -1,0 +1,12 @@
+## Answer: correct (86774)
+
+## Key moments
+- Token 97 [insight]: Sets the objective as forcing the shift-response to be exactly two unit hits.
+- Token 659 [breakthrough]: Converts the condition to convolution form `α * γ = δ_k + δ_l`, enabling Laurent/polynomial divisibility.
+- Token 3457 [insight]: Uses the primitive/gcd requirement to rule out impossible scaled factors and sharpen admissible `α`.
+- Token 13174 [breakthrough]: Establishes the correct weighted count by degree and shift multiplicity (`51 - deg`) plus monomial base case.
+- Token 13297 [verification]: Verifies admissible cyclotomic products stay primitive, so they can produce unit outputs.
+- Token 13949-22752 [wasted]: Spends a long middle-late block exploring brute-force variants after the structural DP path is already enough.
+- Token 22752 [verification]: Fixes empty-subset overcount across 2-adic families before computing totals.
+- Token 23059 [verification]: Applies and checks the global sign doubling (`±`) in the final tally.
+- Token 23084 [final answer]: Outputs `\boxed{86774}`.

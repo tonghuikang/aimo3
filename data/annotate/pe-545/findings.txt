@@ -1,0 +1,33 @@
+# Problem pe-545: Faulhaber denominator sequence
+
+## Correct Answer
+90471
+
+## Correct approach (problem-level)
+- In Faulhaber form, the linear coefficient is the Bernoulli term: `a_1 = B_k` (with the compatible `B_1=+1/2` convention for the `1..n` sum form).
+- Therefore `D(k)` is the denominator of `B_k` in lowest terms.
+- By von Staudt-Clausen (for even indices),  
+  `D(k) = product of primes p such that (p-1) | k`.
+- Target denominator:
+  `20010 = 2 * 3 * 5 * 23 * 29`, so the prime set must be exactly `{2,3,5,23,29}`.
+- Required divisibilities: `1,2,4,22,28` all divide `k`, hence `k` must be a multiple of
+  `lcm(1,2,4,22,28)=308`.
+- Write `k=308*m`. Extra primes must be excluded:
+  for every prime `q` not in `{2,3,5,23,29}`, require `(q-1) ∤ 308*m`.
+  Equivalently, forbid divisibility of `m` by
+  `t_q = (q-1)/gcd(q-1,308)`.
+- Sieve `m` by all such forbidden `t_q`; the `100000`-th valid `m` is `2,990,609`.
+- So:
+  `F(10^5)=308*2,990,609=921,107,572`,
+  and `921,107,572 mod 99991 = 90471`.
+
+## Wrong approaches (and why they fail)
+- Treating all multiples of `308` as valid:
+  this ignores exclusion of extra primes `q` with `(q-1)|k`.
+  It is immediately inconsistent with the given `F(10)=96404` (not `3080`).
+- Reducing constraints to “forbidden prime factors only” in `m`:
+  the true condition is divisibility by full forbidden values
+  `(q-1)/gcd(q-1,308)`, often composite.
+  Prime-factor-only filtering over-prunes or misclassifies valid `m`.
+- Mixing Bernoulli sign conventions (`B_1=-1/2` vs `+1/2`) with the wrong Faulhaber variant:
+  this creates false contradictions at small `k` and can derail the denominator mapping.

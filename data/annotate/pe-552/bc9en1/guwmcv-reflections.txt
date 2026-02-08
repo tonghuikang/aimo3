@@ -1,0 +1,17 @@
+## Answer: correct (326227335)
+
+## Key moments
+- Token 473 [insight]: Realizes a prime `p_i` can only divide `A_n` before index `i`; once `p_i` is a modulus, `A_n ≡ i (mod p_i)` and cannot be zero.
+- Token 2186 [insight]: Derives the two-congruence CRT update `A_n = A_{n-1} + M_{n-1} t_n`, which provides the update rule needed for per-prime residue tracking.
+- Token 2440 [breakthrough]: Switches to the right computational model: track `A_n mod p` and `M_n mod p` for all candidate primes and update by CRT recurrence.
+- Token 7392-9181 [wasted]: Spends a long span on runtime speculation and micro-optimization ideas without moving the implementation forward.
+- Token 17262 [questionable statement]: First `compute_S_brutal` code uses `M` in recurrence steps but does not update `M *= p_n`, which makes later updates inconsistent.
+- Token 18419 [insight]: A manual step-by-step sanity check at small `n` exposes that the state transition should carry the running product `M`.
+- Token 18683 [mistake]: Explicitly finds the bug that `M` stayed at `1`, so previously computed `t_n` and derived residues were wrong.
+- Token 18903 [breakthrough]: Fixes the recurrence implementation and continues with a correct modular simulation.
+- Token 20987 [missed opportunity]: Proposes removing primes from active tracking immediately after first hit, overlooking that future `t_n` computations still need those residues.
+- Token 23098-24738 [wasted]: Long OEIS/pattern-hunting and stop-early speculation detour before returning to the proven modular approach.
+- Token 29332 [insight]: Recognizes that big-int `A % p_n` is unnecessary because the required value is already present in tracked residues.
+- Token 29991 [breakthrough]: Final efficient formulation removes big-int `A`/`M` and runs only on residue arrays `r` and `m`.
+- Token 33353 [verification]: Verifies against `S(50)=69` and rechecks the large-run computation for consistency.
+- Token 33479 [final answer]: Commits `S(300000) = 326227335`.

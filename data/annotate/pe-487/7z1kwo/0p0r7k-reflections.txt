@@ -1,0 +1,17 @@
+## Answer: correct (106650212746)
+
+## Key moments
+- Token 289 [insight]: Derives the core identity \(S_k(n)=(n+1)f_k(n)-f_{k+1}(n)\), which enables modular decomposition.
+- Token 1346 [breakthrough]: Recognizes that \(p-1\) is much larger than 10000 and 10001, so complete length-\(p\) blocks contribute 0 modulo \(p\).
+- Token 1702 [insight]: Observes \(n+1\equiv r+1\pmod p\), setting up the final reduction entirely in terms of \(r=n\bmod p\).
+- Token 3325 [breakthrough]: Simplifies the target to \(S_k(n)\equiv S_k(r)\pmod p\) with \(r=n\bmod p\), eliminating dependence on trillion-scale \(n\).
+- Token 7443 [insight]: Pivots from Bernoulli-heavy formulas to polynomial/Lagrange evaluation of power sums as an \(O(k)\)-per-prime method.
+- Token 8470 [breakthrough]: Finalizes a workable algorithm: compute values on \(0..k+2\), then evaluate at \(r\) via factorial-based Lagrange interpolation.
+- Token 13844 [questionable statement]: Tries to validate the interpolation routine on very small primes without first enforcing the required condition \(p>d=k+2\).
+- Token 14492 [mistake]: Small-prime checks conflict because factorial denominators are non-invertible when \(p\le d\); this is a domain-of-validity error in the test setup.
+- Token 14742 [insight]: Correctly isolates the validity condition \(p>10002\), which exactly matches the target prime interval.
+- Token 14758 [missed opportunity]: Could have switched immediately to a validation prime with \(p>d\) and avoided this detour.
+- Token 15635-16006 [wasted]: Spends a long segment reconsidering Bernoulli-based cross-checks that do not materially improve confidence after identifying the small-prime issue.
+- Token 16290 [breakthrough]: Runs direct-vs-interpolation agreement checks for \(k=100\) on primes near \(2\cdot 10^9\), resolving earlier validation ambiguity in the correct regime.
+- Token 16684 [verification]: Verifies interval inclusivity and confirms exactly 100 primes are used.
+- Token 17156 [final answer]: Commits to \(\boxed{106650212746}\), which is correct.

@@ -1,0 +1,23 @@
+Correct answer
+- `f(10^7, 10^{12}) mod 987654321 = 328104836`.
+
+Correct approach
+- Treat the game as an impartial game and use Sprague-Grundy theory.
+- A pile of size `m` has moves to `(a,b)` where `a,b` are proper divisors of `m` and `a,b>1`; equal divisors are allowed.
+- For a single pile, `g(m) = mex({g(a) xor g(b)})` over legal `(a,b)`.
+- The key reduction is that `g(m)` depends only on `Omega(m)` (total prime factors with multiplicity), not on the exact factorization shape.
+- Define `F(t)` for `t=Omega(m)`:
+- `F(1)=0` (primes), and for `t>=2`, `F(t)=mex({F(i) xor F(j) : 1<=i,j<=t-1})`.
+- For `n=10^7`, `max Omega = floor(log2(10^7)) = 23`, so only small `F(t)` values are needed.
+- Count how many integers `m in [2,n]` have each `Omega(m)=t` via sieve.
+- Convert to Grundy frequencies `C[x]` by summing counts of `t` with `F(t)=x`.
+- Number of losing `k`-pile positions is XOR-convolution power coefficient at zero:
+- `lose = (C XOR-conv)^k [0]`, computed with FWHT.
+- Number of winning positions is `f(n,k) = (n-1)^k - lose (mod M)`.
+- Piles are counted as ordered choices (this is forced by `f(10,5)=40085`).
+
+Wrong approaches and why they fail
+- Counting pile configurations as unordered multisets is wrong; for `n=10,k=5`, unordered total is only `C(13,5)=1287`, incompatible with the given `40085`.
+- Guessing `g(m)` from ad hoc features (only `v2(m)`, odd part, or naive formulas like `g=Omega`) fails on small counterexamples.
+- Doing full divisor-pair DP for every `m` without the `Omega` reduction is much heavier and unnecessary.
+- Using modular inverse as `pow(x, M-2, M)` is invalid because `M=987654321` is composite; use true inverse (e.g., extended Euclid or `pow(x,-1,M)` when coprime).

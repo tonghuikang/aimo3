@@ -1,0 +1,18 @@
+## Answer: correct (316558047002627270)
+
+## Key moments
+- Token 54 [insight]: Starts from the right scalability concern (periodicity/structure) rather than brute-force coefficient search per block.
+- Token 3709 [insight]: Uses the provided `sum_{n=1}^{10} S(n)` checkpoint as a hard diagnostic to reject naive `min(||V||_1,||W||_1)` behavior.
+- Token 9071 [questionable statement]: Commits to a 1D method centered on fixing the third coordinate via gcd/extended-Euclid as if it captures the full L1 optimum.
+- Token 12837 [mistake]: The gcd-third-coordinate approach fails badly on calibration (producing unrealistic magnitudes), showing it does not solve the coupled 3-coordinate objective.
+- Token 16527 [insight]: Reframes the task as a rank-2 lattice shortest-vector problem and proposes reduced-basis candidate enumeration.
+- Token 17912 [breakthrough]: Identifies a candidate set from Gauss-reduced basis that reproduces the known `N=10` checksum, giving a correct computational route.
+- Token 22656 [questionable statement]: Infers a large-period formula from small-modulus patterns without proof.
+- Token 23543 [mistake]: Concludes a specific period (`31,000,000` in block index) from that unverified inference.
+- Token 24299 [wasted]: Additional period probing/search does not contribute to the final computation path.
+- Token 30014 [wasted]: Repeated runtime/micro-optimization speculation before locking correctness of the candidate set.
+- Token 35596 [insight]: Pinpoints the key correctness condition: L1 minimum must consider `b1`, `b2`, `b1+b2`, and `b1-b2` after reduction.
+- Token 35708 [breakthrough]: Switches to the full-candidate implementation, resolving prior mismatch and stabilizing correctness.
+- Token 42682 [verification]: Re-checks the implementation against the required `N=10` checksum `130762273722`.
+- Token 43063 [verification]: Runs the full `N=20,000,000` computation and records runtime/result before finalizing.
+- Token 43415 [final answer]: Commits to `\boxed{316558047002627270}`.

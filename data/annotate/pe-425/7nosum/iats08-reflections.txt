@@ -1,0 +1,16 @@
+## Answer: correct (80848)
+
+## Key moments
+- Token 884 [insight]: Reframes the task as prefix-threshold connectivity: for each prime `P`, check connectivity to `2` in the subgraph of primes `<= P`.
+- Token 1373 [breakthrough]: Commits to incremental DSU, unioning each new prime with already-seen connected neighbors and evaluating status at insertion time.
+- Token 5566 [questionable statement]: Treats `q = p % 10^(L-1)` as always valid for rule (2), without enforcing that the truncated suffix still has length `L-1`.
+- Token 11277 [mistake]: Accepts `2 ↔ 3 ↔ 103` by treating `103 ↔ 3` as a valid one-digit-left operation, which violates the exact one-digit prepend semantics.
+- Token 13470 [insight]: Identifies that rule (2) must reject truncations that introduce leading zeros in the suffix representation.
+- Token 14053 [breakthrough]: Patches condition-(2) neighbor generation with the length guard (`q >= 10^(L-2)`) and reruns.
+- Token 14875 [verification]: Confirms the corrected routine matches both checkpoints `F(10^3)=431` and `F(10^4)=78728`.
+- Token 23002 [questionable statement]: Builds a secondary validator using a "reachable-set" abstraction that ignores merges through previously non-relative nodes.
+- Token 24957 [mistake]: Reads mismatch from that validator as a DSU inconsistency, even though the checker itself is under-modeling connectivity.
+- Token 33497-37263 [wasted]: Spends a long span debugging DSU/checker diffs caused by the flawed validator assumption.
+- Token 38932 [breakthrough]: Resolves the discrepancy by recognizing that later primes can bridge through earlier non-relatives for larger targets, which the DSU model already handles.
+- Token 39735 [verification]: Re-runs the `N=10^7` computation with debug totals and modulo consistency checks.
+- Token 40783 [final answer]: Final commitment to `\boxed{80848}`.

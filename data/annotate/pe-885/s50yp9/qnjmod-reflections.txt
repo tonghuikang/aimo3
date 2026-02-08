@@ -1,0 +1,21 @@
+## Answer: correct (827850196)
+
+## Key moments
+- Token 249 [insight]: Identifies that `f(d)` depends only on non-zero digit multiplicities, not original digit order.
+- Token 1607 [breakthrough]: Derives the per-length count `Count(cz,ci)=k*(L-1)!/(cz!\prod ci!)` with the leading-digit constraint handled correctly.
+- Token 2552 [insight]: Recognizes the zero-count summation can be collapsed with a binomial/hockey-stick identity.
+- Token 3014 [breakthrough]: Simplifies to total multiplicity `N(c)=k!/\prod ci! * \binom{n}{k}`, giving a compact counting formula.
+- Token 5416 [questionable statement]: First `compute_S` implementation encodes `X(c)` without a direct sanity test on tiny patterns, leaving digit-place direction ambiguous.
+- Token 6210 [mistake]: Wrong intermediate totals trigger a false diagnosis that counting/bijection is broken, while the real issue is the `X(c)` placement logic.
+- Token 6210-9013 [wasted]: Long detour on n-digit-string uniqueness/overcount arguments that does not resolve the actual bug.
+- Token 6804 [missed opportunity]: Continues overcount investigations instead of immediately unit-testing `X(c)` on a minimal case like `{1,2}`.
+- Token 9215 [insight]: Spot-checks `{c1=1,c2=1}` and finds `X=21` instead of `12`, isolating a reversed place-value construction.
+- Token 9849 [breakthrough]: Pinpoints the coding error: suffix was accumulated from smaller digits, reversing sorted-digit significance.
+- Token 10493 [verification]: Implements corrected suffix handling and re-runs with the repaired `X(c)` logic.
+- Token 10666 [questionable statement]: Next draft still has recursion/base-case structure that effectively introduces an extra bucket.
+- Token 10895 [mistake]: Detects `S(1)=55`, confirming enumeration is still wrong after the first fix.
+- Token 12240 [breakthrough]: Fixes recursion depth and switches to `\sum ci \le n` enumeration, removing the extra-category/base-case bug.
+- Token 12696 [verification]: Recomputes `S(1)..S(5)` and matches known checkpoints, confirming the corrected pipeline.
+- Token 14684 [verification]: Computes `S(18) mod 1123455689` with the corrected method.
+- Token 14908-15179 [verification]: Brute-force cross-checks at `n=6` match combinatorial results, adding confidence before final commit.
+- Token 15471 [final answer]: Outputs `\boxed{827850196}`, which is correct.

@@ -1,0 +1,53 @@
+## Problem pe-656 Findings
+
+### Correct Answer
+888873503555187
+
+### Problem Summary
+For irrational α, define S_α(n) = floor(α*n) - floor(α*(n-1)). Find positions n where the sequence S_α(1)...S_α(n) is palindromic. For each non-square β from 2 to 1000, compute H_100(sqrt(β)) = sum of first 100 such n values. Return last 15 digits of the total sum.
+
+### Key Insights
+
+1. **Reduction to Binary Sturmian Word**: Since S_α(n) takes values {m, m+1} where m = floor(α), the palindrome condition for S_α reduces to palindrome condition for the binary sequence b_n = S_α(n) - m ∈ {0,1}.
+
+2. **Fractional Part Suffices**: The binary sequence depends only on the fractional part δ = α - floor(α). So for α = sqrt(β), we can work with δ = sqrt(β) - floor(sqrt(β)).
+
+3. **Palindrome Condition Equivalence**: The prefix of length n is palindromic if and only if {αn} is the maximum of {αk} for 0 ≤ k ≤ n. This means palindrome positions correspond to "record-breaking" fractional parts.
+
+4. **Connection to Continued Fractions**: The record positions correspond to denominators of best rational approximations from above (over-approximations). These include:
+   - Denominators q_i of over-convergents (odd-indexed convergents for α in (0,1))
+   - Upper semiconvergent denominators between neighboring under/over convergents
+
+5. **Algorithm**: For each α with continued fraction [0; a_1, a_2, ...]:
+   - Generate sequence of denominators q_i using recurrence: q_{-1}=0, q_0=1, q_i = a_i * q_{i-1} + q_{i-2}
+   - For each odd index i, generate the full block:
+     - n = q_{i-1} + t*q_{i-2} for t = 1, ..., a_i
+     - (the t=a_i term equals q_i, so this includes both semiconvergents and the over-convergent)
+   - Always include n=1 as the first record
+
+6. **Periodic Continued Fractions**: For sqrt(β), the continued fraction is periodic: [m; (a_1, a_2, ..., 2m) repeating]. The algorithm iterates through this periodic sequence.
+
+### Wrong Approaches and Why They Fail
+
+1. **Using only convergent denominators q_i**:
+   - Misses many valid palindromic-prefix indices that come from semiconvergents.
+   - Example pattern class missed: values like 3, 5, 44, 81, 9201, 15244.
+
+2. **Parity-only heuristic rules (e.g., fixed q_i±q_{i-1} templates)**:
+   - Can match a few early samples but are not structurally complete.
+   - Fails on cases with large partial quotients, where long arithmetic-progression blocks of valid indices appear.
+
+3. **Including only one intermediate denominator per odd block**:
+   - Incorrect when a_i is large; must include the full t=1..a_i block.
+   - This omission undercounts H_100 and leads to wrong totals.
+
+4. **Direct prefix brute force on S_α**:
+   - Not scalable for g=100 across 969 values of β; palindromic-prefix indices grow too quickly.
+   - Continued-fraction generation is required for practical computation.
+
+### Both Traces
+Both traces (3nog72.txt and nnrr3j.txt) arrive at the correct answer 888873503555187. They follow similar approaches:
+- Recognize the problem involves Sturmian words
+- Derive the palindrome condition via fractional parts
+- Connect to continued fraction theory
+- Implement algorithm to compute record positions

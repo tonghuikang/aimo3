@@ -1,0 +1,24 @@
+Correct answer: `S(3800) mod 99991 = 25079`.
+
+Correct approach (shared core idea)
+- For fixed prime `p`, the best `q` is the smallest prime `q0` with `q0^2 > p` (larger `q` only adds divisibility constraints).
+- Let `L = ∏_{r < q0, r prime} r`. Valid representations require, for each such prime `r`, either
+  - the `A` side is divisible by `r`, or
+  - the `B` side is divisible by `r`.
+- This is equivalent to CRT binary choices (`0` vs `p mod r`) across small primes.
+- Sum case (`p = A + B`): search feasible `B <= p/2` from CRT residue classes and take maximal feasible `B` (to minimize `A = p - B`).
+- Difference case (`p = A - B`): find minimal feasible `A > p` from CRT residue classes (equivalently minimal feasible `B > 0`, then `A=p+B`).
+- Validate against provided checks `V(2)=1`, `V(37)=22`, `V(151)=165`, `S(10)=10`, `S(200)=7177`, then compute `S(3800)`.
+
+Important implementation details that are required for correctness
+- For CRT classes, do not only test the base residue representative in `[0, L)`: for sum case, larger representatives `B0 + kL` may still satisfy `B <= p/2` and can improve `A`.
+- The full-subset branch (`m2=1`) can yield valid positive sum-case `B = L` when `L <= p/2`; it must not be dropped.
+
+Wrong approach observed and why it fails
+- Wrong method computed sum-case candidates using only `B = B0` in `[0, L)` and ignored both
+  - lifted representatives `B0 + kL`, and
+  - the `m2=1` positive candidate (`B=L`).
+- This overestimates `V(p)` for several small primes and produces wrong aggregate modulo result `25098` instead of `25079`.
+
+Secondary non-fatal detour seen in traces
+- A long detour tried to bound feasibility using sum-style size intuition before cleanly separating sum vs difference constraints; this increased reasoning length but was corrected later.

@@ -1,0 +1,13 @@
+## Answer: correct (86774)
+
+## Key moments
+- Token 143 [insight]: Frames the requirement as producing exactly two correlation spikes and zeros elsewhere.
+- Token 3966 [breakthrough]: Reduces the problem to signed/shifted divisors of `1+x^d` that fit inside indices `0..50`.
+- Token 9005 [insight]: Extracts the cyclotomic-family constraint: admissible factors come from one fixed 2-adic layer.
+- Token 9462 [breakthrough]: Lands on the right counting objective `2 * Σ(51 - degree)` over admissible base divisors.
+- Token 10458 [verification]: Builds DP by 2-adic groups to count subset degree sums under the `<=50` bound.
+- Token 13207 [verification]: Evaluates the DP numerically and gets the target aggregate consistent with the formula.
+- Token 22426 [verification]: Performs constructive/random witness checks showing sampled counted `α` admit valid `β`.
+- Token 29403-30782 [wasted]: Debugs an apparent counterexample that was only caused by truncating the test window.
+- Token 30782 [verification]: Rechecks with corrected interpretation and keeps the same final count.
+- Token 30826 [final answer]: Outputs `\boxed{86774}`.

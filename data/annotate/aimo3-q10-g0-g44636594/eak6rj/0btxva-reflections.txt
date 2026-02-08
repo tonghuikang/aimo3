@@ -1,0 +1,11 @@
+## Answer: correct (1165)
+
+## Key moments
+- Token 1275 [breakthrough]: Reduces `f(N)` to minimizing `lcm(a,b,c)` over distinct triples with fixed sum.
+- Token 8438 [breakthrough]: Identifies the strong low-ratio base family (`6/11`) and starts ratio-driven screening.
+- Token 16879 [breakthrough]: Establishes `2/3` as the best feasible ratio for `M` (power-of-3 divisibility setting).
+- Token 23063 [missed opportunity]: Has enough structure to pivot earlier to direct divisor-feasibility filtering for `M+c`, but keeps broad triple-search exploration.
+- Token 28120 [breakthrough]: Switches to modular/divisibility pruning for small-denominator candidates (`7,11,17,...`).
+- Token 33100 [breakthrough]: Isolates the winning feasible branch `110/167` for `M+44636594`.
+- Token 38203 [verification]: Verifies floor stability from tiny `c/M` perturbation and confirms exact `g(0), g(c)` values.
+- Token 40737 [final answer]: Commits to `\boxed{1165}`.

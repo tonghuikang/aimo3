@@ -1,0 +1,79 @@
+# Problem: aimo3-15245
+
+## Problem Statement
+p = 2 * 3^30 + 1 is prime. A positive integer is called Norwegian if it has three distinct positive divisors whose sum is equal to 6p. Let N be the smallest Norwegian positive integer. What is the remainder when N is divided by 99991?
+
+## Correct Answer
+15245
+
+## Key Values
+- p = 2 * 3^30 + 1 = 411,782,264,189,299
+- 6p = 2,470,693,585,135,794
+- N = 8 * 3^30 = 1,647,129,056,757,192
+- N mod 99991 = 15245
+
+## Correct Approach
+
+The problem reduces to minimizing LCM(a,b,c) where a+b+c = 6p with a,b,c distinct positive integers.
+
+### Key technique: Use common factor d
+If a = d*x, b = d*y, c = d*z where d divides 6p, then:
+- Sum = d*(x+y+z) = 6p, so x+y+z = 6p/d := S
+- LCM(a,b,c) = d*LCM(x,y,z)
+- N = d*LCM(x,y,z)
+
+### Minimizing LCM(x,y,z) given sum S
+For minimal LCM, use x=1, then y+z = S-1. If y divides z, then LCM(1,y,z) = z.
+So we need: y | z, y+z = S-1, and z is minimized.
+
+This means: y | (S-1-y), so y | (S-1).
+Thus y is a divisor of S-1. To minimize z = S-1-y, we maximize y.
+The largest y < (S-1)/2 that divides S-1 is (S-1)/t where t is the smallest divisor of S-1 greater than 2.
+
+### Case d = 6
+- S = p = 2*3^30 + 1
+- S - 1 = p - 1 = 2*3^30
+- Smallest divisor of 2*3^30 greater than 2 is t = 3
+- y = (p-1)/3 = 2*3^29
+- z = (p-1) - y = (p-1) * (t-1)/t = (2*3^30) * (2/3) = 4*3^29
+- LCM(1,y,z) = z = 4*3^29
+- N = d * z = 6 * 4*3^29 = 24*3^29 = 8*3^30
+
+**N = 8 * 3^30 ≈ 1.647e15**
+
+### Verification
+The three divisors of N are:
+- a = 6*1 = 6
+- b = 6 * 2*3^29 = 12*3^29
+- c = 6 * 4*3^29 = 24*3^29 = N
+
+Sum = 6 + 12*3^29 + 24*3^29 = 6 + 36*3^29 = 6 + 12*3^30 = 6(1 + 2*3^30) = 6p ✓
+
+N mod 99991 = 15245 ✓
+
+## Wrong Approaches
+
+### Wrong Answer: 58292 (trace 3fdfew)
+This trace uses a different construction: divisors {1, d, M} where M = 6p - 1 - d and d divides 6p-1.
+It factors S = 6p-1 = 12*3^30 + 5, finds that 5 divides S.
+Then constructs M = (S-1)*(5-1)/5 = (48*3^30 + 8)/5 ≈ 9.65*3^30 ≈ 1.987e15.
+
+This approach is valid but produces a LARGER N than the d=6 approach!
+The error is that the trace doesn't properly compare this with the d=6 case that yields N = 8*3^30 ≈ 1.647e15.
+
+M = (48*3^30 + 8)/5 ≈ 1.987e15 > 8*3^30 ≈ 1.647e15
+
+So the {1, d, M} approach with M as one of the divisors gives a larger N than the {d*1, d*y, d*z} approach with common factor d=6.
+
+### Wrong Answer: 87432 (trace zrfqy9)
+This trace uses yet another construction method and arrives at N = 2,964,832,302,162,942 which is also larger than 8*3^30.
+
+## Critical Decision Points
+
+1. **Recognizing that N = LCM(a,b,c)**: The smallest Norwegian integer is the LCM of the three divisors.
+
+2. **Using common factor d**: The key insight is to factor out d from all three divisors, reducing the problem to finding x+y+z = S with minimal LCM(x,y,z).
+
+3. **Choosing d = 6**: This gives S = p, and crucially p-1 = 2*3^30 which has t=3 as its smallest divisor > 2, leading to a very efficient solution.
+
+4. **Comparing approaches**: The {1, d, M} approach (where M is itself a divisor) vs the common factor approach. The common factor approach with d=6 gives smaller N.

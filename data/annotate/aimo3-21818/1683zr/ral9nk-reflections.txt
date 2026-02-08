@@ -1,0 +1,23 @@
+## Answer: correct (21818)
+
+## Key moments
+- Token 81 [breakthrough]: Notes the round scoring as descending powers of two.
+- Token 111 [breakthrough]: Interprets totals as binary sums of wins.
+- Token 457 [breakthrough]: Observes scores range from 0 to 2^{20}-1 after all rounds.
+- Token 610 [breakthrough]: Highlights that each score group stays even-sized for pairing.
+- Token 1542 [breakthrough]: Argues each binary pattern appears uniformly after i rounds.
+- Token 2058 [breakthrough]: Concludes final scores form a bijection with runners.
+- Token 2618 [breakthrough]: Introduces pairing feasibility constraints on winner subsets.
+- Token 3308 [breakthrough]: Analyzes winner-set feasibility with sorted speeds.
+- Token 4133 [breakthrough]: States the needed prefix/ballot-style condition for winners.
+- Token 4198 [breakthrough]: Connects feasibility to known ballot/Catalan results.
+- Token 5265 [breakthrough]: Formalizes the ballot condition for valid winner sets.
+- Token 5422 [breakthrough]: Identifies Catalan numbers as the winner-set count.
+- Token 6342 [breakthrough]: Models the overall process recursively across levels.
+- Token 7390 [breakthrough]: Writes the recurrence for total N.
+- Token 8212 [breakthrough]: Sets up v2/v5 valuation of N.
+- Token 8968 [verification]: Uses Python to compute valuations.
+- Token 9931 [verification]: Lists v5 values for Catalan_{2^i}.
+- Token 10839 [breakthrough]: Computes k=121,818 from v2/v5 comparison.
+- Token 10896 [breakthrough]: Applies modulo 10^5 to get 21,818.
+- Token 10957 [final answer]: Outputs \boxed{21818}.

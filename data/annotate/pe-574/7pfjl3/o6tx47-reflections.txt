@@ -1,0 +1,16 @@
+## Answer: wrong (25098)
+
+## Key moments
+- Token 765 [insight]: Identifies the key constraint `q > sqrt(p)` and starts organizing the search by prime `p` and admissible `q`.
+- Token 2231 [questionable statement]: Uses a product upper-bound argument from the sum setting to infer broad impossibility for larger `q`, which mixes constraints from different cases.
+- Token 2667-6880 [wasted]: Spends a long stretch in a contradiction loop about whether `V(p)` is even defined for large `p` before returning to a usable formulation.
+- Token 6880 [breakthrough]: Correctly notices the difference case only constrains `A-B=p<q^2`, so `A` and `B` themselves can be large.
+- Token 15841 [insight]: Rewrites the sum condition as a CRT partition (`B ≡ 0` or `B ≡ p (mod r)` for each prime `r<q`).
+- Token 16050 [questionable statement]: Treats the single residue-class representative `B0=t*m1` as the only sum candidate under `B <= p/2`, ignoring larger valid representatives `B0 + kM`.
+- Token 16607 [breakthrough]: Converts both sum and difference cases into subset/CRT enumeration with precomputed `(m1, m2, inv)`.
+- Token 21073 [questionable statement]: Concludes the `m2=1` full-subset branch is effectively unusable for the sum case because the base residue is `0`.
+- Token 22587 [mistake]: Implements sum-case evaluation with only `B=t*m1` and without lifting to `B=t*m1+kM`, which misses better feasible `B` values and overestimates `A`.
+- Token 22587 [mistake]: The `if m2 != 1` gate removes the full-subset sum candidate entirely, missing valid `B=M` when `M <= p/2`.
+- Token 23694 [verification]: Verifies only `V(2)`, `V(37)`, and `V(151)`, which is too narrow to detect the sum-case edge failures.
+- Token 26065 [missed opportunity]: Skips validating against the provided `S(10)=10` and `S(200)=7177` checkpoints before finalizing.
+- Token 26092 [final answer]: Commits to `S(3800) mod 99991 = 25098`.

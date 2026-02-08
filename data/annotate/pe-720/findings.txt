@@ -1,0 +1,23 @@
+Problem: PE 720 - Unpredictable Permutations
+Correct answer: 688081048
+
+Problem summary: Find S(2^25) mod 1,000,000,007, where S(N) is the 1-indexed lexicographic position of the first "unpredictable" permutation of {1,...,N}. A permutation is unpredictable if no three indices i<j<k have P(i), P(j), P(k) forming an arithmetic progression (P(j)-P(i) = P(k)-P(j)).
+
+Given values: S(4)=3, S(8)=2295, S(32) mod 1e9+7 = 641839205.
+
+Key insights:
+1. The AP condition forbids any triple of indices i<j<k where the values form an arithmetic progression (increasing or decreasing, since both satisfy the difference condition).
+
+2. The lexicographically smallest AP-free permutation for small N can be computed via backtracking/greedy search. For N=4: (1,3,2,4), for N=8: (1,5,3,2,7,6,4,8).
+
+3. The permutation construction involves a greedy algorithm with "forbidden" set tracking: when placing x at position pos, for each earlier value a_i, the value t=2*x-a_i (if in range and unused) becomes forbidden for future placement, since placing it later would create an AP.
+
+4. The rank S(N) is computed using the factoradic/Lehmer code: S(N) = 1 + sum_{i=1..N} c_i * (N-i)!, where c_i counts unused numbers smaller than the chosen value at position i.
+
+5. For N=2^k, the permutation has a recursive structure that enables efficient computation of the Lehmer code digits and the rank modulo 1e9+7.
+
+6. Both traces explore many dead ends (bit-reversal, Gray code, affine transformations over GF(2)) before discovering the correct recursive construction. The bit-reversal permutation is close but not identical (e.g., for N=8, bit-reversal gives [1,5,3,7,2,6,4,8] while the actual AP-free permutation is [1,5,3,2,7,6,4,8]).
+
+Correct approach: Build the lexicographically minimal AP-free permutation using a backtracking algorithm with forbidden-set pruning, discover the recursive pattern for powers of 2, then compute the rank using modular arithmetic with factorials.
+
+Both traces (dc968v and mdbius) arrive at the correct answer 688081048.

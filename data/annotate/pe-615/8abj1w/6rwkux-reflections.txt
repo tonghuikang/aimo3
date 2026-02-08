@@ -1,0 +1,21 @@
+## Answer: correct (108424772)
+
+## Key moments
+- Token 99-8599 [wasted]: Long exploratory detours (distribution heuristics, partition counting, and competing models) before settling on a concrete constructive algorithm.
+- Token 578 [questionable statement]: Leans on a log-log distribution argument that treats the target as a typical-tail counting problem, which is mismatched for this extremal ordered-construction task.
+- Token 1037 [mistake]: Derives contradictory scale intuition (`x ~ 2N`) from the probabilistic framing, sending the search down an invalid path.
+- Token 8601 [insight]: Reframes the ranking as sorting products of ratios `(p/2)` and factors out the common `2^N` term.
+- Token 8748 [breakthrough]: Commits to a heap/Hamming-style generation of the first million reduced products, enabling direct rank computation.
+- Token 12594 [insight]: Identifies compact per-node state (`t` plus modular/product tracking), making the generator implementable at target scale.
+- Token 13837 [missed opportunity]: Prime-bound handling is initially guess-driven instead of using a tighter monotone stopping criterion from the frontier.
+- Token 16010-22422 [wasted]: Extended float-duplicate and memory-layout discussion repeats concerns without materially advancing correctness checks.
+- Token 22422 [missed opportunity]: Spends effort on storage micro-choices before locking the mathematically complete generator state and transitions.
+- Token 26259 [insight]: Uses combinatorial growth estimates to narrow the practical prime-set scale needed for the millionth-ranked generation.
+- Token 32157 [verification]: Introduces incremental bound-stability tests across larger prime limits to validate convergence of the millionth candidate.
+- Token 37697 [questionable statement]: Treats interim bound stability as conclusive while the generation model is still incomplete.
+- Token 39894 [mistake]: Computes and states the wrong candidate `34,113,628` due to omitting the `×2` generator branch.
+- Token 42602 [insight]: Explicitly detects that the missing `2` branch breaks ordering and explains the mismatch.
+- Token 45213 [breakthrough]: Corrects reconstruction to `n = 2^(N - t + e) * numerator`, fixing the model.
+- Token 49282 [verification]: Checks interpretation against the `N=5` sample behavior, including that `2^N` must be the first element.
+- Token 50221 [verification]: Performs an explicit off-by-one audit to confirm the returned item is exactly rank 1,000,000.
+- Token 51045 [final answer]: Commits to `\boxed{108424772}`, which matches the correct value.

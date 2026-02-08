@@ -1,0 +1,25 @@
+## Answer: correct (161)
+
+## Key moments
+- Token 248 [wasted]: Early speculation about using {1,d,N} and N≈M without a concrete optimization criterion.
+- Token 1068 [wasted]: Tests N=M and checks whether c-1 is a power of 3, which doesn’t advance the main optimization.
+- Token 2726-3659 [wasted]: Explores bounds for sums of divisors when N<M, but no usable formula emerges.
+- Token 5123-5422 [wasted]: Further bounding of proper-divisor sums; still stuck in heuristic size arguments.
+- Token 8195-8373 [wasted]: Pursues the “smallest divisor of n−1” route (a=4) that is later abandoned.
+- Token 12122-12173 [wasted]: Argues N must appear among divisors for large sums, but still lacks a minimization framework.
+- Token 13060-13105 [wasted]: Brute-forces small n to guess patterns, which doesn’t resolve the large-n structure.
+- Token 16942-16988 [wasted]: Notes the need for a deeper approach after the n−1 factor path stalls.
+- Token 18951-19006 [insight]: Notices that factoring a common scale t from (a,b,c) converts the objective into a ratio problem.
+- Token 19006-19039 [breakthrough]: Commits to the common-divisor reduction as the right way to lower LCM.
+- Token 20147-20293 [insight]: Rewrites n=tS with objective proportional to LCM(x,y,z)/S, setting up divisor-based optimization.
+- Token 20484-20668 [breakthrough]: Formalizes f(n)=min_{g|n} g·L_min(n/g).
+- Token 21826-21911 [insight]: Recognizes M≡1 (mod p) for small p≠3, linking divisibility of n to c+1.
+- Token 22080-22232 [breakthrough]: Extracts concrete divisors of n from c+1, especially 97,103,197.
+- Token 25041-25282 [wasted]: Detours into generic ratio bounds before returning to actual divisors of n.
+- Token 29866-29991 [insight]: Observes the smallest valid divisor sum s≥6 dividing n is likely 97 (since 5 is too small).
+- Token 30012-30083 [breakthrough]: Defines h(s)=L_min(s)/s and switches to direct candidate comparison.
+- Token 32853-32882 [insight]: Targets s=97 first because it is the smallest admissible divisor and likely best ratio.
+- Token 32926-33122 [breakthrough]: Finds witness triple (1,32,64), so L_min(97)=64 and h(97)=64/97.
+- Token 36697-36800 [verification]: Checks competing s (103,197,485,...) and keeps 64/97 as minimum.
+- Token 40203-40242 [verification]: Verifies floor simplification and uses 97|2025! to keep g(c)=64/97 exactly.
+- Token 44615 [final answer]: Commits to p+q=161.

@@ -1,0 +1,43 @@
+# Project Euler 655 - Divisible Palindromes
+
+## Problem
+Count palindromes less than 10^32 divisible by p = 10,000,019, answer mod 99991.
+
+## Correct Answer
+88341
+
+## Key Facts
+- p = 10,000,019 is prime
+- 10 is a primitive root modulo p (order = p-1 = 10,000,018)
+- Total palindromes less than 10^32: 2*10^16 - 2
+- Palindromes have lengths 1 to 32, determined by first ceil(L/2) digits
+
+## Correct Approach
+Use dynamic programming with O(p) states to count exactly how many palindromes of each length L are divisible by p:
+1. For each length L, express palindrome as linear combination: N = sum(d_i * w_i) mod p
+2. Use DP with array of size p to track count of each residue
+3. Iterate through digit positions, updating residue counts
+4. Sum count[0] across all lengths to get total palindromes divisible by p
+
+The DP approach is necessary because the distribution of palindrome residues mod p is NOT uniform - leading digit constraint (1-9) creates systematic bias.
+
+Exact total (before mod 99991) is:
+- 2,000,008,332 palindromes less than 10^32 divisible by 10,000,019
+- 2,000,008,332 mod 99991 = 88341
+
+## Wrong Approach: Uniform Approximation
+Assumes residues are uniformly distributed and uses floor(total/p) or similar approximation.
+- Total palindromes / p = (2*10^16 - 2) / 10,000,019 ≈ 1,999,996,200
+- This approximation gives wrong answer (76209 mod 99991)
+- Fails because leading digit restriction breaks uniformity
+
+## Wrong Approach: Near-Uniform Floor/Ceil Reasoning
+Assumes each residue count must stay within floor/ceil of the global average for each length, then infers only tiny correction terms.
+- Leads to rejecting correct DP outputs as "too far" from floor(total/p)
+- Incorrect because constrained digit maps can create much larger residue bias than +/-1 per length
+
+## Why Approximation Fails
+- For each length L, the mapping from half-digits to residue mod p is not uniform
+- Leading digit must be 1-9 (not 0-9), creating asymmetry
+- Exact DP computation shows many lengths contribute 0 palindromes divisible by p
+- Only lengths >= 16 contribute non-zero counts

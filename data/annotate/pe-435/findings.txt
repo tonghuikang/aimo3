@@ -1,0 +1,38 @@
+## Problem: pe-435
+Compute
+`sum_{x=0}^{100} F_n(x) mod 15!`, where `F_n(x) = sum_{i=0}^n f_i x^i`, `f_i` are Fibonacci numbers, and `n = 10^15`.
+
+## Correct Answer
+`252541322550`
+
+## Correct Approach
+Set `M = 15! = 1307674368000` and compute each `F_n(x)` for `x = 0..100`, then sum mod `M`.
+
+### Approach A (telescoping identity + modular arithmetic)
+For fixed `x`, define `S_n(x)=sum_{i=0}^n f_i x^i`. Using Fibonacci recurrence,
+`(1 - x - x^2)S_n(x) = x - f_{n+1}x^{n+1} - f_n x^{n+2}`.
+So
+`S_n(x) = (x - f_{n+1}x^{n+1} - f_n x^{n+2}) / (1 - x - x^2)`.
+
+To compute mod `M` safely (denominator may not be invertible mod `M`):
+- Let `d = 1 - x - x^2`, `L = M * |d|`.
+- Compute `f_n`, `f_{n+1}` mod `L` (fast doubling), and `x^{n+1}`, `x^{n+2}` mod `L`.
+- Form numerator mod `L`, divide by `d` as an exact integer, then reduce mod `M`.
+
+### Approach B (3x3 matrix on weighted Fibonacci terms)
+Let `p_n = f_n x^n`. Then
+`p_{n+1} = x p_n + x^2 p_{n-1}`,
+and `F_n(x) = sum_{i=0}^n p_i`.
+Track `[p_n, p_{n-1}, sum_{i=0}^n p_i]` with a 3x3 linear transition matrix and exponentiate in `O(log n)`.
+
+Both approaches yield the same final value `252541322550`.
+
+## Wrong / Fragile Approaches
+- Naively pursuing periodicity of `sum_i f_i * sum_x x^i (mod M)` is impractical here; periods are too large to exploit directly.
+- Direct Binet/`phi, psi` modular computation is not suitable over `mod M` because it introduces irrational/algebraic divisions that are not directly valid in integer modular arithmetic.
+- A state model like `[f_n, f_{n+1}, x^n, S_n]` is not linear for transitions because `S_{n+1}` needs the product term `f_{n+1}x^{n+1}`; without introducing `p_n=f_n x^n`, this path fails.
+
+## Notes
+- `1 - x - x^2 != 0` for all integer `x in [0,100]`.
+- `F_n(0) = 0` since `f_0 = 0` and all higher terms have factor `x`.
+- In the provided traces for this problem, both final submitted answers are correct; no incorrect final numeric answer variant is present.

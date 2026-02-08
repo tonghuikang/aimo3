@@ -1,0 +1,18 @@
+## Answer: correct (71775)
+
+## Key moments
+- Token 1381 [insight]: Reinterprets the target as the last digit of `floor(10^N/k)` by linking decimal digits to integer truncation.
+- Token 1835 [breakthrough]: Locks in `d_N(1/k) = floor(10^N/k) mod 10`, giving a concrete computational target.
+- Token 3710 [insight]: Derives `10^N mod (10k) = 10 * (10^{N-1} mod k)`, connecting the last-digit view to remainder dynamics.
+- Token 4147 [breakthrough]: Obtains the practical digit formula `d_N(1/k) = floor(10 * (10^{N-1} mod k) / k)`.
+- Token 12946-14750 [wasted]: Long exploration of CRT/analytic/sublinear ideas without producing an executable or validated path.
+- Token 14999 [questionable statement]: Assumes denominators sharing factors with 10 force zero contribution, extending an invalid modular-inverse argument.
+- Token 15434 [mistake]: Finds a contradiction (`k=6` gives nonzero digit), showing the prior zero-contribution claim is false.
+- Token 19938 [insight]: Refactors by `k = 2^a 5^b m` and focuses on computing a small family of `10^{N-t} mod m` values per `m`.
+- Token 27980 [questionable statement]: Applies `digit = (-v * inv(m)) mod 10` to general `k`, even when noninvertible 2/5 factors are still present.
+- Token 28286 [mistake]: Wrong prediction for `k=14` (5 vs actual 4) exposes the flawed modular step.
+- Token 30070 [insight]: Re-derives remainder structure for general `k` as `r = s * ((10^{N-1-t} * D) mod m)` with `s = 2^a5^b`.
+- Token 30937 [breakthrough]: Final corrected formula: `digit = (10 * ((10^{N-1-t} mod m) * D mod m)) // m`, which works for all factor patterns.
+- Token 34717 [verification]: Confirms the corrected implementation reproduces `S(100)=418`.
+- Token 36817 [verification]: Runs random and medium-size cross-checks against direct computation, supporting correctness before scaling.
+- Token 38039 [final answer]: Submits `71775`, which matches the correct answer.

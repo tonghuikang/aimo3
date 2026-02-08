@@ -1,0 +1,15 @@
+## Answer: correct (77)
+
+## Key moments
+- Token 414 [insight]: Reframes the target as minimizing `f(N)` via divisor triples for `N=M+c`.
+- Token 7146 [breakthrough]: Derives `x=gA, y=gB` with `D'=A+B+gAB` and the key feasibility condition `D' | N`.
+- Token 10645 [missed opportunity]: Spends time on broad modular speculation before committing to a tight candidate set.
+- Token 17025 [insight]: Shifts to enumerating representable denominators `D'` that actually divide `N`.
+- Token 21451 [breakthrough]: Uses `N ≡ 1+d (mod p)` for small `p≠3` to isolate relevant factors (`5,31,47`) and their composites.
+- Token 23977 [wasted]: Runs a wider brute-force sweep than needed after the divisor structure is already mostly pinned down.
+- Token 24612 [insight]: Starts direct representable-`D` search among true divisors of `N` with ratio ranking.
+- Token 26447 [breakthrough]: Identifies the winning feasible ratio `30/47` (from `D=47`), beating `16/25` and `20/31`.
+- Token 28412 [verification]: Rechecks the best achievable ratio on the `D=31` branch and confirms it is larger.
+- Token 31953 [verification]: Extends checks to larger candidate denominators; no branch improves on `30/47`.
+- Token 34116 [verification]: Verifies floor handling and denominator divisibility in `2025!`, preserving `g(10162574)=30/47` exactly.
+- Token 35460 [final answer]: Commits to `77`.

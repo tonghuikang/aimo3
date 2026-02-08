@@ -1,0 +1,16 @@
+## Answer: correct (37557)
+
+## Key moments
+- Token 2679 [wasted]: explores using only proper divisors and bounds on their sums without advancing a concrete construction.
+- Token 5925 [breakthrough]: begins seeking triples with c divisible by a,b to minimize the LCM.
+- Token 8335 [breakthrough]: derives c = n/(1+1/p+1/q) and identifies the optimal 6/11 ratio when n is divisible by 11.
+- Token 11940 [breakthrough]: reframes the task as a divisibility condition on the denominator D and candidate (p,q) pairs.
+- Token 14761 [breakthrough]: analyzes M modulo L when L has 3-factors, preparing feasibility checks for candidate pairs.
+- Token 17859 [breakthrough]: concludes g(c) depends only on feasible (p,q) ratios, not on the tiny c/M term.
+- Token 20897 [breakthrough]: outlines an algorithm to test candidates via L = lcm(Dp,Dq) and M mod L.
+- Token 23888 [wasted]: digresses on computational cost of repeated modular exponentiation.
+- Token 25954 [breakthrough]: studies parity/odd cases for q and D to narrow candidate pairs.
+- Token 28500 [breakthrough]: computes g(265710644)=64/97 from the pair (2,64).
+- Token 28885 [verification]: double-checks that no other (p,q) yields a smaller ratio.
+- Token 29949 [breakthrough]: updates the brute-force scan over distinct p,q to confirm the best pair.
+- Token 32062 [final answer]: states 37557.

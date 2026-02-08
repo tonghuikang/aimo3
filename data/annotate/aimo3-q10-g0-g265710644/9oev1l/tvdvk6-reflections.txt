@@ -1,0 +1,11 @@
+## Answer: correct (677)
+
+## Key moments
+- Token 5167 [breakthrough]: Uses the scaling identity `f(N)=N*min_{t|N} L(t)/t`, which is the right global reduction.
+- Token 7980 [breakthrough]: Correctly derives `g(0)=2/3` from divisors of `M` (powers of `3`, with `t=9` optimal).
+- Token 11857-12459 [wasted]: Broad exploratory scan over generic `t` behavior before committing to concrete divisors of `M+c`.
+- Token 17192 [breakthrough]: Isolates valid small divisors for `M+c` and recognizes `97` as the first admissible `t>=6`.
+- Token 25656 [breakthrough]: Computes `L(97)=64`, giving `g(c)=64/97` and the correct pair.
+- Token 27867 [verification]: Explicitly compares alternatives (`103`, `197`) and checks fraction reduction.
+- Token 37789 [verification]: Revisits floor/denominator subtleties to ensure no hidden rounding change.
+- Token 42651 [final answer]: Commits to `\boxed{677}`.

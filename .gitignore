@@ -30,7 +30,5 @@ training/sample/*
 training/sample/*/*
 !training/sample/*/index.jsonl
 model/
-*reflections.txt
-findings.txt
 data/label
 data/problems.py

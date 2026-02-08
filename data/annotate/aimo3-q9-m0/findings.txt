@@ -1,0 +1,15 @@
+Correct answer: 2
+
+Correct approach:
+1. From `\alpha(m)=0` for all `m<0` and all `m>0`, `\alpha` can be nonzero only at `m=0`, so `\alpha=a\delta_0` with `a\in\mathbb Z`.
+2. Then `S_n(\alpha)(t)=a\delta_{-n}(t)`, so
+   `S_n(\alpha)\star\beta = a\beta(-n)`.
+3. The required pattern (`1` at exactly two shifts `k,l`, otherwise `0`) forces
+   `a\beta(-k)=a\beta(-l)=1` and `a\beta(-n)=0` for all other `n`.
+4. Since `\beta:\mathbb Z\to\mathbb Z`, `\beta(-k)=1/a` must be an integer, so `a\mid 1`, hence `a=\pm1`.
+5. `a=0` is impossible (would give all-zero outputs). For `a=1` choose `\beta(-k)=\beta(-l)=1`; for `a=-1` choose `\beta(-k)=\beta(-l)=-1`; both are finitely supported, so both work.
+
+Wrong approaches and why they fail:
+1. Vacuous-logic misread of the first bullet (`m<0 and m>0` as a conjunction on one `m`) treats condition (1) as no restriction and can lead to "infinitely many" answers. This is not the intended reading; the condition zeros all nonzero indices.
+2. Ignoring integer codomain of `\beta` allows non-integer values (e.g., `\beta(-k)=1/2` for `a=2`), incorrectly admitting `|a|>1`. But `\beta` must be integer-valued, so these are invalid.
+3. Keeping `a=0` as a candidate is incorrect because then `S_n(\alpha)\star\beta=0` for every `n`, so the required two `1` values cannot occur.

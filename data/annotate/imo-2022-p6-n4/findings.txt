@@ -1,0 +1,54 @@
+# Problem: imo-2022-p6-n4
+## Correct Answer: 25
+
+## Problem Summary
+Find the minimum total number of uphill paths in a 4×4 Nordic square (grid with numbers 1-16).
+- Valley: cell where all neighbors have larger numbers (local minimum)
+- Uphill path: sequence starting at a valley, moving through adjacent cells with strictly increasing numbers
+
+## Correct Approach
+1. Model as DAG: Orient each edge from smaller to larger number
+2. Valley = source (indegree 0 in the DAG)
+3. For each cell v, define f(v) = number of uphill paths ending at v
+   - f(v) = 1 if v is valley
+   - f(v) = sum of f(u) over all smaller neighbors u, otherwise
+4. Total uphill paths = sum of f(v) over all cells
+
+Key insight for lower bound:
+- Total edges in 4×4 grid = 24 (each edge contributes 1 to indegree of larger endpoint)
+- Sum of indegrees = 24
+- f(v) ≥ indegree(v) for non-valleys (since each smaller neighbor contributes at least 1 path)
+- f(v) = 1 for valleys
+- Total ≥ #valleys + 24 ≥ 1 + 24 = 25 (since at least one valley exists)
+
+Upper bound achieved:
+- Arrange so only one valley exists
+- All cells with indegree > 1 are sinks (local maxima, no larger neighbors)
+- This ensures f(v) = indegree(v) exactly (no propagation of extra paths)
+- Total = 1 + 24 = 25
+
+## Wrong Approach (trace 03bi7a)
+The wrong trace concludes answer is 16 by incorrectly reasoning that:
+- If indegree = 1 for all non-valley cells, then f(v) = 1 for all cells
+- Total would be 16 (number of cells)
+
+Error: The trace fails to recognize that indegree = 1 for all non-valley cells is IMPOSSIBLE because:
+- A spanning tree has only 15 edges
+- The grid has 24 edges
+- The extra 9 edges inevitably create cells with indegree > 1
+- Therefore, some cells must have indegree ≥ 2
+
+The trace correctly identifies that indegree = 1 requires a spanning tree structure, but incorrectly assumes this is achievable without accounting for the extra grid edges.
+
+Common variant of the same error (seen in other traces):
+- Propose a Hamiltonian snake / rooted-tree labeling and assume each non-root cell can keep exactly one smaller neighbor.
+- This ignores non-tree adjacency edges, which necessarily add extra smaller-neighbor relations for some cells.
+
+Another non-rigorous pattern:
+- Heuristic search (random/hill-climb/simulated annealing) may find candidate value 25.
+- Without the indegree lower bound proof, this is not sufficient to certify optimality.
+
+## Key Decision Points
+- Recognizing that sum of indegrees = 24 (total edges) is fixed
+- Recognizing that indegree = 1 for all non-valley cells is impossible
+- Deriving the lower bound S ≥ #valleys + 24 ≥ 25

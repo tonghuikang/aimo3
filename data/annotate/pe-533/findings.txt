@@ -1,0 +1,37 @@
+Correct answer (last 9 digits): 789453601
+
+Correct approach:
+Let N = 20,000,000. We need
+L(N) = 1 + max{k : lambda(k) < N}.
+
+For any 1 <= M < N, define K(M) as the maximum k such that lambda(k) divides M. Then
+L(N) = 1 + max_{1 <= M < N} K(M).
+
+Prime-power contribution rules:
+- For odd prime p, p^e can be included iff p^{e-1}(p-1) divides M.
+  So if (p-1) divides M, the maximal exponent is e = v_p(M)+1, contributing p^{v_p(M)+1}.
+- For p=2:
+  - if M is odd, maximal exponent is 1 (only factor 2),
+  - if M is even with v2(M)=t>=1, maximal exponent is t+2, contributing 2^{t+2}.
+
+Therefore
+K(M) = 2^{e2(M)} * product over odd primes p with (p-1)|M of p^{v_p(M)+1},
+where e2(M)=1 if M odd, else v2(M)+2.
+
+Efficient maximization:
+- Compare K(M) via logs:
+  log K(M) = e2(M) log 2 + sum_{odd p, (p-1)|M} (v_p(M)+1) log p.
+- Compute the odd-prime part with a sieve-style accumulation:
+  for each odd prime p, add log p to all multiples of (p-1)p^j (j>=0).
+- Scan all M < N, pick maximizing M, then reconstruct K(M) modulo 10^9 with the exact exponent formula.
+
+For N=20,000,000, this gives M*=18,378,360 and
+K(M*) mod 10^9 = 789,453,600,
+so L(20,000,000) mod 10^9 = 789,453,601.
+
+Wrong approaches observed:
+- Incorrect simplification:
+  K(M) = c(M) * M * product_{odd p, (p-1)|M} p  (with c(M)=2 if M odd, else 4).
+  This is not equivalent to the correct formula and can miscount odd-prime powers.
+  It leads to the wrong final value 420711201.
+- Assuming the best M is near N-1 by monotonic intuition. The objective is divisibility-structured, not monotone in M.

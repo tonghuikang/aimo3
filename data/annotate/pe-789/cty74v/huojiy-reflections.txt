@@ -1,0 +1,26 @@
+## Answer: correct (13431419535872807040)
+
+## Key moments
+- Token 661 [insight]: Recognizes the self-inverse obstruction (`1` and `p-1`) makes naive all-inverse pairing suboptimal.
+- Token 1041 [breakthrough]: Performs the four-vertex swap analysis and shows how rerouting around `±1` can strictly reduce total cost.
+- Token 2321 [verification]: Brute-forces small primes and confirms key behaviors (including the `p=11` anomaly where integer products can differ).
+- Token 3525 [insight]: Identifies the need for exact optimization (not pattern-guessing) to avoid false generalization.
+- Token 4634 [breakthrough]: Switches to exact bitmask DP for moderate `p`, giving certifiable minima and concrete optimal matchings.
+- Token 9177-15304 [wasted]: Extended heuristic algebra and partial pattern hunting adds little progress before the model is tightened.
+- Token 15349 [insight]: Correctly treats `p=23` as the critical discriminator case beyond early-prime behavior.
+- Token 20003 [verification]: Fixes pruning logic and verifies `p=23` optimum (`sum=19`, product `45`) consistently.
+- Token 25455 [insight]: Notices two-pair adjustments are insufficient in some cases (`p=17`), motivating larger local rewires.
+- Token 35287 [breakthrough]: Reframes the task as modifying the inverse matching via alternating-cycle/augmenting structures.
+- Token 42403 [insight]: Connects the chain view to minimizing a small multiset of non-1 costs whose product controls the endpoint condition.
+- Token 49917 [insight]: Shifts from congruence-pattern guessing to explicit small-factor search strategy for the target large prime.
+- Token 59016 [questionable statement]: Follows an erroneous order-of-2 computation path without immediate sanity checks.
+- Token 59700 [mistake]: Temporarily concludes a cheap all-2 representation (`2^26 ≡ -1`) from the bad order result.
+- Token 60796 [insight]: Runs a direct Euler-criterion check that contradicts the prior order claim.
+- Token 60938 [breakthrough]: Corrects to `ord_p(2)=p-1`, discarding the flawed shortcut and restoring the right search space.
+- Token 62137 [verification]: Validates the shortest-path / weighted-combination framing on smaller cases before scaling.
+- Token 66655-72950 [wasted]: Multiple bounded searches and short-depth brute-force attempts are tried and dropped before convergence.
+- Token 66953 [insight]: States the discrete-log knapsack interpretation (`Σ n_i log(q_i) ≡ (p-1)/2`) that enables controlled search.
+- Token 73563 [breakthrough]: Implements a meet-in-the-middle product search over small factors, making deep combinations tractable.
+- Token 79714 [verification]: Pruned MITM search identifies best extra-cost sum `261` and a concrete factor multiset.
+- Token 82548 [verification]: Checks constructibility/consistency of the derived representation with the chain dynamics.
+- Token 84988 [final answer]: Commits to `\boxed{13431419535872807040}`, which is correct.

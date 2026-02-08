@@ -1,0 +1,23 @@
+Correct answer: 2647787126797397063
+
+Correct approach:
+- Solve \(f(n)=n^2-3n-1\equiv 0 \pmod{p^2}\) via discriminant \(D=13\).
+- For odd \(p\neq 13\), solutions modulo \(p^2\) exist iff \((13/p)=1\).  
+  Using quadratic reciprocity (\(13\equiv 1\pmod 4\)): \((13/p)=(p/13)\), so this is equivalent to
+  \(p\bmod 13\in\{1,3,4,9,10,12\}\).
+- For each such prime, compute a root \(n_0\) modulo \(p\) (from \((3\pm \sqrt{13})/2\)), then Hensel-lift:
+  \(n=n_0+t p\), with
+  \(t\equiv -\frac{f(n_0)}{p}\,(f'(n_0))^{-1}\pmod p\), \(f'(n)=2n-3\).
+- The two lifted roots modulo \(p^2\) are complementary (\(r_1+r_2\equiv 3\pmod{p^2}\)); \(R(p)\) is the smaller positive one.
+- Special primes:
+  - \(p=2\): no solution mod \(4\), so \(R(2)=0\).
+  - \(p=13\): repeated root mod 13 does not lift to mod \(13^2\), so \(R(13)=0\).
+- Sum \(R(p)\) over all primes \(p\le 10^7\): \(SR(10^7)=2647787126797397063\).
+
+Wrong approaches and why they fail:
+- Inferring that \(r_1+r_2\equiv 3\pmod{p^2}\) forces the minimal root to be very small (e.g., \(\le 3\)).  
+  This is false: roots are residues mod \(p^2\), and one/both can be large.
+- Treating \(p=13\) as automatically contributing because the discriminant is 0 mod 13.  
+  The root is singular and fails the lift-to-\(13^2\) condition, so \(R(13)=0\).
+- Using only mod-\(p\) solvability and skipping derivative/lifting logic.  
+  This misses the special repeated-root behavior (again at \(p=13\)) and can produce wrong inclusion rules.

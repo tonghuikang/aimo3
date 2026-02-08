@@ -1,0 +1,15 @@
+## Answer: wrong (34483)
+
+## Key moments
+- Token 133 [insight]: Correctly rewrites the objective as minimizing `c/a = n/(a^2 b)`, so the search target is maximizing `a^2 b` under `a \le b \le c`.
+- Token 6332 [questionable statement]: Proposes equal-split plus greedy remainder assignment as potentially optimal without a proof of global optimality.
+- Token 6516 [mistake]: Leans on uniqueness of the final triple to justify the greedy construction as exact, which does not follow.
+- Token 12608 [breakthrough]: Moves from vague balancing intuition to an explicit optimization state over prime-copy moves between bins.
+- Token 19154 [questionable statement]: Admits exact optimality is required but still frames the current heuristic range as possibly already optimal.
+- Token 24608-27715 [wasted]: Spends a long span on repeated simulated annealing/branch-and-bound variations without reaching a proof-quality exact minimization.
+- Token 28249 [questionable statement]: Introduces large-prime enumeration with greedy filling for small primes and treats "near-optimal" behavior as sufficient.
+- Token 29434 [mistake]: Acknowledges greedy may be non-optimal, but still continues with the greedy candidate as the effective solution path.
+- Token 32684 [missed opportunity]: Explicitly identifies the need for exact DP-style verification for global optimality, but does not complete it.
+- Token 42533 [mistake]: Commits to accepting the heuristic result because of time constraints rather than completing an exact minimization check.
+- Token 43194 [missed opportunity]: States the candidate is "likely optimal" after random trials instead of proving no better `c/a` exists.
+- Token 43386 [final answer]: Outputs `\boxed{34483}`, which is the wrong value.

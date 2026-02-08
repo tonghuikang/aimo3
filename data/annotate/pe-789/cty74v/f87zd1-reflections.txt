@@ -1,0 +1,25 @@
+## Answer: wrong (12902000070960)
+
+## Key moments
+- Token 290 [insight]: Identifies inverse-pairing as the natural baseline and correctly notes the `±1` self-inverse obstruction.
+- Token 2743-3548 [verification]: Brute-force on `p=7` confirms nontrivial optimum behavior and grounds later reasoning.
+- Token 3654-4724 [verification]: Checks `p=11,13` and observes integer product can vary for optimal pairings (`p=11`), preventing an overly simple conjecture.
+- Token 7737 [questionable statement]: Leans toward `p-1` mainly because a gigantic integer product feels implausible to output.
+- Token 9177-18390 [wasted]: Long heuristic detours and debugging loops consume tokens before a stable optimization model is established.
+- Token 15349 [insight]: Correctly treats `p=23` as the key stress case where `p-1` may fail.
+- Token 20003 [verification]: Fixes pruning logic and verifies `p=23` can have optimal sum `19` with product `45`, sharpening constraints.
+- Token 25810 [breakthrough]: Recognizes the right structure: most pairs stay inverse-cost-1, with a small modified region handling `1` and `p-1`.
+- Token 32010 [insight]: Reframes optimization as breaking a small number of inverse pairs and rematching that local subset.
+- Token 36054 [breakthrough]: Formulates a general augmenting-chain construction connecting `1` to `p-1`.
+- Token 42447 [insight]: Distills the target to minimizing an augmenting-path extra-cost quantity `C`.
+- Token 49595 [questionable statement]: Claims `C` is determined by the smallest `e` with `2^e ≡ -1 (mod p)`, implying power-of-2 dominance.
+- Token 50163 [mistake]: This one-family claim conflicts with already-seen mixed-factor optima (for example, `p=23` uses `3,3,5`).
+- Token 54899 [questionable statement]: Reasserts that “2 is most efficient, so only 2s should be optimal” without proving equivalence under modular constraints.
+- Token 56006 [mistake]: Own counterexample (`p=13` improvement via factor `3`) invalidates the “only 2s” optimization logic.
+- Token 62582 [breakthrough]: Reaches a useful reduced objective: minimize `Σ(s_i-1)` with `∏ s_i ≡ -1 (mod p)`.
+- Token 63048 [questionable statement]: Jumps to minimizing prime-factor weights of `N = p t - 1` as though fully equivalent to feasible globally optimal pairings.
+- Token 68894-70509 [verification]: Runs factorization search over `t` up to `500000`, finding best observed weight at `t=6451`.
+- Token 70940 [questionable statement]: Treats bounded search evidence as near-certification of uniqueness/minimality.
+- Token 71209 [mistake]: Converts incomplete evidence (“could be better for larger `t`”) into a global-optimum conclusion.
+- Token 72544 [missed opportunity]: Stops at heuristic confidence instead of proving a lower bound or extending to a certifying method.
+- Token 72918 [final answer]: Commits to `\boxed{12902000070960}`, which is incorrect.

@@ -1,0 +1,13 @@
+## Answer: correct (54449)
+
+## Key moments
+- Token 146 [insight]: Reframes the task as computing \(S(N)=\sum_{n=1}^{N} f(n)/n\) with integer quotients.
+- Token 225-1497 [wasted]: Spends a long stretch exploring contribution-by-\(A\) formulations and bound speculation before committing to an executable plan.
+- Token 1702 [missed opportunity]: Already has a workable complexity estimate for per-\(n\) remainder-BFS, but continues theory discussion instead of implementing immediately.
+- Token 2020 [insight]: Clarifies that \(f(n)/n\) is always integer and that big-integer division is acceptable for this range.
+- Token 2404 [breakthrough]: Locks in the practical BFS design (remainder states + parent pointers) that avoids storing huge candidate numbers per state.
+- Token 3559 [insight]: Implements the final `f_of_n_brut` routine that directly realizes the chosen approach.
+- Token 3813 [verification]: Validates the implementation against the problem’s sample values (`n=2,3,7,42,89`).
+- Token 3932 [verification]: Uses the provided checksum \(S(100)=11363107\) to confirm correctness before scaling.
+- Token 4069 [verification]: Runs the full \(n=1..10000\) computation and records the total.
+- Token 4285 [final answer]: Computes `total % 99991 = 54449`, which is then committed as the boxed answer.

@@ -1,0 +1,26 @@
+## Correct answer
+- \(\sum_{n=3}^{100000000} L(n) \bmod 99991 = 10689\).
+
+## Correct approach
+- Decompose each denominator as \(n=2^a5^b m\) with \((m,10)=1\). Then \(L(n)=\operatorname{ord}_m(10)\), and \(m=1\) contributes \(0\).
+- Rewrite:
+  - \(S(N)=\sum_{n=3}^{N}L(n)=\sum_{d=2^a5^b\le N} A(\lfloor N/d\rfloor)\),
+  - \(A(x)=\sum_{\substack{m\le x\\(m,10)=1}} \operatorname{ord}_m(10)\).
+- Since only \(d=2^a5^b\) appear, the number of required \(A(\lfloor N/d\rfloor)\) queries is small (about a few hundred for \(N=10^8\)).
+- Compute \(\operatorname{ord}_m(10)\) for all \(m\le N\), \((m,10)=1\), via SPF factorization:
+  - For prime \(p\neq 2,5\), compute \(\operatorname{ord}_p(10)\) from factors of \(p-1\).
+  - For composite \(m=\prod p_i^{e_i}\), use \(\operatorname{ord}_m(10)=\mathrm{lcm}\big(\operatorname{ord}_{p_i^{e_i}}(10)\big)\).
+  - For prime powers, use lifting checks from \(p^{k-1}\) to \(p^k\) (multiply by \(p\) only when needed), not a blanket shortcut.
+- Build cumulative sums of \(A(x)\) only at required query points \(x=\lfloor N/d\rfloor\), then sum with multiplicities.
+- Validation checkpoint: the same method reproduces the provided value for \(N=10^6\) (\(55535191115\)).
+
+## Wrong approaches and why they fail
+- Incorrect prime-power rule:
+  - Assuming that \(10^{\operatorname{ord}_p(10)}\equiv 1\pmod{p^2}\) implies \(\operatorname{ord}_{p^e}(10)=\operatorname{ord}_p(10)\) for all \(e\).
+  - Counterexample: \(p=3\): \(\operatorname{ord}_3(10)=1\), \(\operatorname{ord}_9(10)=1\), but \(\operatorname{ord}_{27}(10)=3\).
+  - This undercounts many terms and gives wrong aggregate sums (including wrong mod results at intermediate validation).
+- Möbius/divisor-count reformulation over divisors of \(10^d-1\):
+  - The order range \(d\) is too large and requires intractable divisor-count bookkeeping up to \(N=10^8\).
+  - Useful conceptually, but not practical for exact computation here.
+- Prefix-query bookkeeping mistake:
+  - Failing to handle tiny query points (like \(x=1\)) correctly can leave required \(A(x)\) undefined and break final aggregation.

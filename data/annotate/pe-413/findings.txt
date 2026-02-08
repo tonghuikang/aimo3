@@ -1,0 +1,56 @@
+# Problem pe-413 Findings
+
+## Correct Answer
+64573
+
+## Problem Summary
+A d-digit positive number is a one-child number if exactly one contiguous substring is divisible by d.
+We need F(10^19) mod 99991, where F(N) counts one-child numbers less than N.
+
+## Correct Approach
+1. For each d from 1 to 19, count d-digit numbers with exactly one substring divisible by d.
+2. Use DP for fixed d with state:
+   - `c_r` for `r=0..d-1`: how many suffixes ending at current position have residue `r (mod d)`.
+   - `z` in `{0,1,>1}`: total divisible substrings seen so far (prune when `>1`).
+3. Transition when appending digit `x`:
+   - `new_c_t = [x % d == t] + Σ_r c_r * [ (10r + x) % d == t ]`
+   - `new_zeros = [x % d == 0] + Σ_{r:(10r+x)%d==0} c_r`
+   - update `z += new_zeros`, keep only states with `z <= 1`.
+4. First digit uses `1..9`; later digits use `0..9`.
+5. Count states at length d with `z=1`; sum over d=1..19.
+
+## Key Values
+Counts by digit length:
+- d=1: 9
+- d=2: 20
+- d=3: 360
+- d=4: 2701
+- d=5: 4096
+- d=6: 109466
+- d=7: 161022
+- d=8: 13068583
+- d=9: 2136960
+- d=10: 0
+- d=11: 71101800
+- d=12: 55121700430
+- d=13: 1057516028
+- d=14: 1023436651875
+- d=15: 30731637609504
+- d=16: 719883432165805
+- d=17: 195741994241
+- d=18: 2325274798835849
+- d=19: 2253334981970
+
+Total:
+- `F(10^19) = 3079418648040719`
+- `F(10^19) mod 99991 = 64573`
+
+## Wrong Approaches And Why They Fail
+1. Tracking only residue presence (set/bitmask) instead of multiplicity.
+   - Multiple suffixes can share one residue.
+   - Each such suffix is a distinct substring and must be counted separately if it maps to 0 on extension.
+   - Presence-only states undercount new zero substrings and misclassify numbers.
+
+2. Inclusion-exclusion over all substring events.
+   - There are up to 190 substring events for d=19.
+   - Exact inclusion-exclusion over subsets is combinatorially infeasible.

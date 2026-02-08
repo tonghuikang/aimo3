@@ -1,0 +1,16 @@
+## Answer: correct (99066)
+
+## Key moments
+- Token 98 [insight]: Recognizes the known Langton's-ant highway regime (period-104 behavior) and that large-`N` counting should be reduced to periodic extrapolation.
+- Token 1321 [breakthrough]: Commits to simulation-plus-extrapolation, switching from uncertain memory-based guessing to a concrete computable plan.
+- Token 1931 [questionable statement]: Assumes full relative black-set equality (relative to ant position) should directly reveal the highway period.
+- Token 2556-2893 [wasted]: Multiple iterations on snapshot/relative-configuration period detection consume effort without producing the needed counting relation.
+- Token 2894 [mistake]: Runs that global-snapshot periodic check and gets no match; this method is mismatched to a growing translated highway tail.
+- Token 3277 [missed opportunity]: Could pivot earlier to black-count deltas (`B(n+104)-B(n)`) instead of trying to match full configurations.
+- Token 4013 [insight]: Reframes to a direct stability test on `B(n+104)-B(n)` over long simulation windows.
+- Token 4804 [breakthrough]: Finds the stable onset index (`N0=9977`) where the per-104 increment is consistently `12` on the simulated tail.
+- Token 5032 [verification]: Explicitly verifies `B(N+104)-B(N)=12` for all checked `N>=9977`, validating the recurrence basis.
+- Token 5424 [verification]: Computes the 104-step remainder profile `delta(r)` needed for exact, not just asymptotic, extrapolation.
+- Token 6152 [breakthrough]: Applies `B(N)=B0+12q+delta[r]` at `N=10^18` to obtain the exact black-count integer.
+- Token 6280 [verification]: Reduces the computed exact count modulo `99991` to get the contest-required residue.
+- Token 6336 [final answer]: Commits to `\boxed{99066}`.

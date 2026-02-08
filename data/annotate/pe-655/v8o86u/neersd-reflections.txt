@@ -1,0 +1,18 @@
+## Answer: correct (88341)
+
+## Key moments
+- Token 559 [insight]: Converts the palindrome divisibility condition into a digit-coefficient linear congruence modulo `N`.
+- Token 1362 [questionable statement]: Starts leaning on a near-uniform residue heuristic as a possible shortcut for exact counting.
+- Token 3984 [mistake]: Explicitly narrows the result to a `floor(T/N)` vs `ceil(T/N)` decision, which is unjustified for this constrained map.
+- Token 4192-7073 [wasted]: Long uniformity-focused exploration and side experiments delay direct exact computation.
+- Token 9330 [insight]: Returns to a concrete high-state DP plan and quantifies practical memory/time tradeoffs.
+- Token 19294 [missed opportunity]: Switches into FFT/NTT alternatives despite already having a viable dense-DP path.
+- Token 24721 [verification]: Uses small-modulus counterexamples to confirm residue distributions can be strongly non-uniform.
+- Token 30316-36708 [wasted]: Extended low-level optimization brainstorming without executing the target computation.
+- Token 36708-42589 [wasted]: Continues feasibility analysis (complex-FFT/NTT and implementation strategy) instead of running full DP.
+- Token 42589-45236 [wasted]: NTT-prime sizing and Python-loop cost analysis further prolongs pre-computation discussion.
+- Token 48694 [insight]: Commits to full-scale numpy dense DP with `N=10,000,019` arrays.
+- Token 54008 [verification]: Validates implementation against brute-force on smaller settings.
+- Token 54627 [breakthrough]: Full run over lengths `1..32` yields `88341 (mod 99991)`.
+- Token 54754 [verification]: Additional brute checks on feasible lengths for `N=10,000,019` support correctness.
+- Token 56391 [final answer]: Commits to `\boxed{88341}`; final answer is correct.

@@ -1,0 +1,24 @@
+## Answer: wrong (407478975)
+
+## Key moments
+- Token 311 [insight]: Correctly formalizes the global condition as forced ascents on non-multiples of `k` and “at least one descent across rows” on multiples.
+- Token 820 [breakthrough]: Sets up the right inclusion-exclusion structure over multiple-of-`k` boundaries.
+- Token 4069 [breakthrough]: Derives the core per-row count `N_row(J)=N! / ∏ L_i!` from chain/run decomposition.
+- Token 9454 [breakthrough]: Reduces the subset sum to coefficient extraction `S=[x^t] B(x)/(1+A(x))`.
+- Token 13040 [insight]: Stabilizes parameterization with `(t,r)` (full-block count and tail block size), which drives later recurrences.
+- Token 20560 [insight]: Writes the coefficient recurrence `C_n = b_n - Σ_{s=1}^n a_s C_{n-s}` for `B/(1+A)`.
+- Token 21667 [verification]: Confirms series-based formula on small cases (`n=3`) against brute-force.
+- Token 25754 [questionable statement]: Suggests exact-descent counting may directly be `N!^N / (∏L_i!)^N`, glossing over boundary-descent exactness constraints.
+- Token 25886 [mistake]: That shortcut is invalid for exact descent sets and forces a return to inclusion-exclusion machinery.
+- Token 33223 [missed opportunity]: Extended attempts at closed-form compression continue without producing a computable path.
+- Token 43068 [verification]: Numerical checks of transformed identities (`S_d`, sign relations) pass on small `N`.
+- Token 46221-52044 [wasted]: Long loop of equivalent reformulations and cost debates delays implementation without reducing asymptotic difficulty.
+- Token 52063 [insight]: Correctly identifies that only small-`k` cases need heavy acceleration and motivates hybrid methods.
+- Token 57444 [questionable statement]: Claims CRT with NTT-friendly primes cannot reliably recover modulo `1000000123` under this workflow.
+- Token 57726 [mistake]: Discards the exact modular-convolution route based on that incorrect CRT conclusion.
+- Token 58759 [questionable statement]: Assumes split floating FFT (`15`-bit limbs + rounding) is sufficiently exact for the target scale without high-`N` validation.
+- Token 59891 [breakthrough]: Implements the hybrid naive/FFT Newton inversion pipeline end-to-end.
+- Token 61154 [verification]: Reproduces known checks (`Q(5)` mod and `Q(50)` mod), validating only small-instance behavior.
+- Token 61715 [mistake]: Accepts `Q(50000)=407478975`, which is incorrect.
+- Token 61715-61810 [missed opportunity]: Proceeds to finalize without an independent large-`N` cross-check (second method or consistency test).
+- Token 61811 [final answer]: Commits the wrong final answer `407478975`.

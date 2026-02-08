@@ -1,0 +1,21 @@
+## Answer: correct (57293)
+
+## Key moments
+- Token 83 [insight]: correctly frames \(S(N)\) as the sum over distinct periods appearing for any \(3 \le n \le N\).
+- Token 1867 [breakthrough]: reduces the dynamics to parity evolution under a linear GF(2) map (rule-90 style), enabling algebraic analysis.
+- Token 3107 [insight]: identifies scaling/divisibility invariance, motivating restriction to binary initial states.
+- Token 6918 [verification]: empirical checks (binary vs small non-binary enumerations) support that binary periods are sufficient.
+- Token 13093 [questionable statement]: starts assembling period sets from factor-order intuition without fully handling repeated-factor lifting and optional components.
+- Token 14241-17026 [wasted]: long local-ring/nilpotent derivation on \((x+1)^e\) behavior before converting to a practical computation rule.
+- Token 17366 [breakthrough]: isolates repeated factors \(f^{2^s}\) as the mechanism producing 2-power lifting in periods.
+- Token 24557 [insight]: translates theory into a concrete per-\(n\) implementation plan based on factorization and order computation.
+- Token 28326 [breakthrough]: forms the first full algorithm: odd LCM combinations plus 2-power multipliers.
+- Token 30292 [questionable statement]: expects standalone period 2 at \(n=10\) from the current rule.
+- Token 31334 [mistake]: this expectation conflicts with brute-force evidence for \(n=10\), exposing a modeling gap.
+- Token 34963 [insight]: refines interpretation that the 2-factor lifts odd periods (e.g., \(3 \to 6\)) rather than always creating independent period 2.
+- Token 38959 [mistake]: computed \(S(30)=20376\), missing the required \(20381\).
+- Token 40173 [insight]: traces the discrepancy to missing period 5 in the constructed set.
+- Token 41149 [breakthrough]: fixes the construction by allowing each factor to contribute either 1 (zero component) or its order-lift options, which restores the missing period.
+- Token 41530 [verification]: reruns benchmark checks after the fix, including matching the provided \(S(30)\) target.
+- Token 48402 [verification]: computes final \(S(100)\bmod 99991 = 57293\) with the corrected/optimized pipeline.
+- Token 48916 [final answer]: commits to \(\boxed{57293}\).

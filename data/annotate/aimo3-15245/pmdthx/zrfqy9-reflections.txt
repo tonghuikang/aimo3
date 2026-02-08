@@ -1,0 +1,20 @@
+## Answer: wrong (87432)
+
+## Key moments
+- Token 395 [breakthrough]: States the objective of finding the smallest N with three divisors summing to 6p.
+- Token 2240 [breakthrough]: Derives the lower bound N ≥ (36/11)p from the N + N/2 + N/3 maximum-sum argument.
+- Token 3358 [breakthrough]: Introduces N = 6p·xy/(xy+x+y) after rewriting with co-divisors.
+- Token 6023 [wasted]: Pushes the gcd(u,v) decomposition and divisibility constraints without yielding a concrete construction.
+- Token 9354 [mistake]: Assumes D' must be a multiple of p, steering into overly large x,y cases and away from the d=6 construction.
+- Token 12152 [wasted]: Revisits divisor-sum bounds without extracting new candidates.
+- Token 15008 [wasted]: Tries the S=p (pairwise product sum) route, which is not competitive for minimizing N.
+- Token 18040 [breakthrough]: Sets the congruence condition ab ≡ p (mod a+b) and targets minimizing ab/(a+b).
+- Token 20064 [breakthrough]: Reintroduces the a=1 (include N as a divisor) case and its formula.
+- Token 23026 [wasted]: Plans brute-force searches over small triples, adding little theoretical leverage.
+- Token 25137 [wasted]: Focuses on S containing factor p with small abc, but no valid minimal solution emerges.
+- Token 27706 [breakthrough]: Solves k≡4 (mod 5) for (a,b)=(2,3), yielding c=(4p-6)/5.
+- Token 28575 [mistake]: Concludes the (2,3) construction is globally minimal, missing the d=6, b|(p-1) path that gives N=8·3^30.
+- Token 32037 [wasted]: Checks (b,c)=(3,6) and (6,30) for a=1, confirming divisibility fails.
+- Token 34017 [mistake]: Doubles down on the “ratio minimal ⇒ N minimal” argument, reinforcing the wrong minimum.
+- Token 36405 [verification]: Computes N mod 99991.
+- Token 36423 [final answer]: Outputs \boxed{87432} (incorrect).

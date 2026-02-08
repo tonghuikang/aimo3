@@ -1,0 +1,14 @@
+## Answer: correct (695577663)
+
+## Key moments
+- Token 173 [insight]: The trace models row/column flips as `M_ij -> M_ij xor r_i xor c_j` and notices the `(1,1)` kernel, giving the correct flip-group size `2^(2n-1)`.
+- Token 757 [breakthrough]: It commits to Burnside’s lemma as the main counting strategy for orbit enumeration.
+- Token 2502 [insight]: It reframes fixed-point counting as linear constraints along cycles of `(i,j) -> (σ(i),τ(j))`, introducing the orbit-consistency parity condition.
+- Token 2723 [breakthrough]: It derives that each consistent orbit contributes one free bit, so `|Fix(g)|` is `0` or `2^(#orbits)`.
+- Token 4637 [insight]: It chooses cycle-partition enumeration with GF(2) rank computation, turning the `n=20` case into a finite class-by-class sum.
+- Token 8160 [questionable statement]: During normalization, it briefly shows uncertainty about the extra factor from double-counting `(r,c)` representatives.
+- Token 8664 [breakthrough]: It resolves the factor-of-2 issue and simplifies to the usable formula `c(n) = (1/(n!)^2) * Σ 2^(#orbits-rank)`.
+- Token 11753 [verification]: It runs small-`n` checks and reproduces known values including `c(3)=3` and `c(5)=39`.
+- Token 11851 [verification]: It validates the method on the provided benchmark `c(8)=656108`.
+- Token 12978 [verification]: It recomputes `c(20)` exactly and re-reduces modulo `1,001,001,011`, confirming the same residue.
+- Token 13281 [final answer]: It commits to `\boxed{695577663}`.

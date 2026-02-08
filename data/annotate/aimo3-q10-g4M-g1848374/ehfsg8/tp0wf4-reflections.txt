@@ -1,0 +1,15 @@
+## Answer: correct (373)
+
+## Key moments
+- Token 412 [insight]: Notes that the task can be reframed as minimizing an `lcm` over triples with fixed sum.
+- Token 646 [breakthrough]: Formalizes `f(n)=min lcm(a,b,c)` for distinct positive `a,b,c` with `a+b+c=n`.
+- Token 4412 [questionable statement]: Starts relying on a `(1,a,b)` reduction that allows `a=1`, which risks violating distinctness immediately.
+- Token 4418 [mistake]: Confirms the reduction fails on small checks (`n=6` case), showing the earlier setup was invalid.
+- Token 11968-14319 [wasted]: Long brute-force/pattern-hunting segment before locking into a stable general parameterization.
+- Token 17053 [insight]: Identifies that divisibility of candidate `W` values by `5M`/`M+C` is the key filter for achievable ratios.
+- Token 19557 [breakthrough]: Gets `f(5M)=(10/3)M` via admissible `W=9` and ratio `2/3`, fixing `g(4M)=10/3`.
+- Token 22053 [missed opportunity]: Spends time over-analyzing floor effects before finishing the decisive minimization for `M+1848374`.
+- Token 26698 [breakthrough]: Finds admissible `W=25` for `M+1848374`, yielding ratio `16/25` and the correct second term.
+- Token 32096 [wasted]: Continues broad candidate scans after the winning `W=25` path is already identified.
+- Token 39321 [verification]: Rechecks exclusion of lower-ratio candidates and confirms `g(1848374)=16/25` and `g(4M)=10/3`.
+- Token 40687 [final answer]: Commits to `\boxed{373}`, which is correct.

@@ -1,0 +1,12 @@
+## Answer: correct (84)
+
+## Key moments
+- Token 1529 [insight]: Introduces the generating-function representation to encode the shift-inner-product condition algebraically.
+- Token 1855 [breakthrough]: Reaches the central product equation `A(z)B'(z)=z^k+z^l`.
+- Token 3619-4475 [wasted]: Extended generic binomial-factor discussion is explored before returning to the cleaner cyclotomic route.
+- Token 7472 [insight]: Uses the cyclotomic factorization of `z^n+1` to constrain possible divisor structure.
+- Token 14945 [breakthrough]: Identifies the decisive same-`v2` rule for factors appearing in one fixed `1+z^d`.
+- Token 19943 [verification]: Computes the normalized `(Q,c)` total as `42` prior to sign handling.
+- Token 25772 [verification]: Rechecks subgroup subset admissibility and degree caps to avoid invalid mixtures.
+- Token 33720 [verification]: Applies shift multiplicity plus global sign symmetry to obtain `2*42=84`.
+- Token 33852 [final answer]: Finalizes `\boxed{84}`, which is correct.

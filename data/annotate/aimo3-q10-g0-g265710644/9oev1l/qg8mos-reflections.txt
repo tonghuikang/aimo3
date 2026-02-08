@@ -1,0 +1,11 @@
+## Answer: wrong (93101)
+
+## Key moments
+- Token 943 [mistake]: Treats the `1+a+b=n` pair reduction as effectively sufficient, missing better triple families.
+- Token 1206 [missed opportunity]: Continues with fixed-sum pair heuristics instead of validating against known counterexamples (`f(8)`-type behavior).
+- Token 2789 [mistake]: Commits to the `f(M)\approx M-3` / `3/4` branch.
+- Token 8974 [verification]: Performs arithmetic checks within that branch, reinforcing a consistent but incorrect framework.
+- Token 16636-17441 [wasted]: Long formula-repair segment (special cases and divisor conditions) that still preserves the wrong objective structure.
+- Token 25146 [verification]: Carefully rechecks floor handling and modular algebra, but only for the incorrect `3/4` model.
+- Token 25831 [final answer]: Commits to `93101`.
+- Token 26346 [verification]: Adds late congruence sanity checks (mod `4`, use of divisor `1`) without revisiting the core `f(M)` error.

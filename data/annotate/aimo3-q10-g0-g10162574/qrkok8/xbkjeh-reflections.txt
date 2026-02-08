@@ -1,0 +1,13 @@
+## Answer: correct (325)
+
+## Key moments
+- Token 470 [breakthrough]: Commits to the correct core reduction `f(n)=min lcm(a,b,c)`.
+- Token 12072 [breakthrough]: Forms the strong `n-1` divisor-based candidate mechanism for fast large-`n` reasoning.
+- Token 13684 [mistake]: Takes a wrong intermediate `4/5`-style path for `f(M)` from odd-prime-factor logic.
+- Token 13893 [missed opportunity]: Notes alternative scaled constructions but delays abandoning the incorrect `4/5` branch.
+- Token 14760 [breakthrough]: Re-centers on power-of-3 divisor-sum behavior and restores the `2/3` result for `g(0)`.
+- Token 41935 [breakthrough]: Locks the `47`-based `30/47` branch for `M+10162574`.
+- Token 44426 [verification]: Re-checks `f(M)` construction and confirms no better branch for the pure power-of-3 case.
+- Token 47010-47061 [wasted]: Repetitive post-proof reassurance after the numeric result is already fixed.
+- Token 47067 [verification]: Confirms `184/141` and `p+q=325` arithmetic.
+- Token 47099 [final answer]: Commits to `325`.

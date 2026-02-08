@@ -1,0 +1,40 @@
+# Problem pe-873 Findings
+
+## Problem Statement
+Let W(p,q,r) be the number of words that can be formed using the letter A p times, the letter B q times and the letter C r times with the condition that every A is separated from every B by at least two Cs. Find W(10^6,10^7,10^8) mod 10^9+7.
+
+## Correct Answer
+735131856
+
+## Correct Approach
+1. Exact interpretation: for every A/B pair, the number of Cs strictly between them is at least 2. The letters between them do not need to be only Cs.
+2. Reduce to the A/B projection (remove Cs). Let `n=p+q`, and let `t` be the number of adjacent transitions (`AB` or `BA`) in that projection.
+3. Cs are placed into `n+1` gaps (ends + between projected letters). Transition gaps require at least 2 Cs; other gaps require at least 0.  
+   For fixed projection with `t` transitions, number of valid C-allocations is:
+   `C(r-2t+n, n)`.
+4. Therefore:
+   `W(p,q,r) = sum_t N(p,q,t) * C(r-2t+n, n)`,
+   where `N(p,q,t)` counts A/B strings with exactly `t` transitions.
+5. Run-count formulas for `N(p,q,t)`:
+   - `t=2k-1`: `N = 2 * C(p-1,k-1) * C(q-1,k-1)`
+   - `t=2k`: `N = C(p-1,k)*C(q-1,k-1) + C(p-1,k-1)*C(q-1,k)`
+   - `N(p,q,0)=0` when `p,q>0`.
+6. Transition upper bound:
+   - if `p!=q`, `t_max = 2*min(p,q)`
+   - if `p=q`, `t_max = 2*min(p,q)-1`
+   For this problem (`p<q`), `t_max=2p=2,000,000`.
+7. Efficient evaluation modulo `1e9+7`:
+   - compute `C(r+n,n)` once via rising product,
+   - update `C_t = C(r+n-2t,n)` with
+     `C_{t+1} = C_t * ((r-2t)(r-2t-1)) / ((n+r-2t)(n+r-2t-1)) mod M`,
+   - accumulate `sum_t N(p,q,t)*C_t`.
+
+## Wrong Approaches and Why They Fail
+1. Interpreting the condition as “only Cs may appear between every A and B.”  
+   This is too strict and undercounts valid words (e.g., valid strings can have A/B inside the interval as long as at least two Cs are present).
+2. Using `t_max=2*min(p,q)` for all `(p,q)` without the `p=q` exception.  
+   This overcounts equal-count cases by allowing an impossible highest-transition term.
+3. Dropping endpoint terms in the even-transition sum (off-by-one on `k`/`t` ranges).  
+   This undercounts, especially near the maximal transition boundary.
+4. Relying on factorial tables up to `r+n` (~111M) in high-level languages.  
+   This is usually impractical in memory/time; recurrence on `C(r+n-2t,n)` is the practical path.

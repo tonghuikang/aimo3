@@ -1,0 +1,58 @@
+# Findings for aimo3-q10-g4M-g10162574
+
+## Problem
+Norwegian number problem: f(n) = smallest integer with 3 distinct divisors summing to n.
+Compute g(4M) + g(10162574) where M = 3^{2025!}.
+
+## Correct Answer: 701
+
+## Correct Approach
+Key insight: f(n) = min_{a+b+c=n} lcm(a,b,c) can be optimized using scaling.
+
+1. Define ratio r(s) = f(s)/s = min lcm / sum for base triples
+2. f(n) = n * min_{s|n} r(s) where s divides n
+3. Base triple (1,2,6) for sum 9: lcm=6, ratio 2/3
+4. Base triple (2,15,30) for sum 47: lcm=30, ratio 30/47
+
+For g(4M): n = 5M = M + 4M
+- 5M divisible by 9 (since M = 3^{2025!})
+- Use scaling of (1,2,6): triple becomes (d, 2d, 6d) where d = 5M/9
+- f(5M) = 5M * (2/3) = (10/3)M
+- g(4M) = 10/3
+
+For g(10162574): n = M + 10162574
+- n is divisible by 47 (since M + 10162574 ≡ 0 mod 47)
+- n is NOT divisible by 7, 11, 13, etc. (which would give lower ratios)
+- Smallest prime factor giving ratio < 1 is 47
+- f(n) = n * (30/47)
+- g(10162574) = 30/47
+
+Sum = 10/3 + 30/47 = (470 + 90)/141 = 560/141
+p = 560, q = 141, gcd = 1
+p + q = 701
+
+## Wrong Approach (leads to 56915)
+The wrong traces fix a=1 and reduce to f(N) = min lcm(b,c) for b+c=N-1.
+
+This gives f(N) = S - d_max where:
+- S = N - 1
+- d_max = largest proper divisor of S not equal to S/2
+
+This approach MISSES the key insight that:
+- Better triples like (1,2,6), (2,3,6), (1,2,4) give lower ratios
+- Scaling these base triples can produce smaller lcm values
+- The correct formula is f(n) = n * min_{s|n} r(s)
+
+The error comes from assuming the triple (1, b, c) is always optimal.
+In reality, triples like (d, 2d, 6d) with sum 9d give ratio 2/3 < any ratio achievable with (1, b, N-1-b) for large N.
+
+## Wrong Approach Variant (also leads to 56915)
+Another failure mode rewrites the problem via `S = n-1` and uses:
+- `t = smallest divisor of S greater than 2`
+- `f(n) = S * (t-1)/t`
+
+This produces values like `g(4M)=15/4-1/2025!` and a large-floor arithmetic chain ending at `56915`.
+
+Why it fails:
+- It optimizes a restricted divisor-parameterization, not the true global minimum over all valid triples.
+- It misses lower-ratio constructions reachable by scaling known base triples (especially the `9 -> 2/3` route for `5M`).

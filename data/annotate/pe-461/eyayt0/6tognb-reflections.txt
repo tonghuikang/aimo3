@@ -1,0 +1,15 @@
+## Answer: correct (34658)
+
+## Key moments
+- Token 337 [insight]: Restates the task as finding integer quadruples for `n=10000` and returning `g(10000) mod 99991`, establishing the concrete optimization target.
+- Token 352-7619 [wasted]: Spends a very long stretch on modeling options, asymptotics, and feasibility discussion before running a decisive computation.
+- Token 9205 [questionable statement]: Floats the idea that multiples of 200 might preserve optimality, suggesting `g(10000)` could be a simple scaling of `g(200)`.
+- Token 9447 [mistake]: Computes the scaled candidate modulo (`59544`) as a plausible answer before proving global optimality for `n=10000`.
+- Token 10908 [insight]: Chooses to test scaling behavior on another size (`n=400`) instead of trusting the scaled guess.
+- Token 12084 [breakthrough]: Concludes from the `n=400` experiment that much better-than-scaled solutions exist, invalidating the direct-scaling path for `n=10000`.
+- Token 12158-17085 [wasted]: Extended implementation/memory planning detour after deciding to do global search, delaying execution of a concrete end-to-end run.
+- Token 20644 [insight]: Specifies a full meet-in-the-middle plan with pair-sum indexing/decoding and closest-two-sum scan, making exact global search executable.
+- Token 26205 [breakthrough]: Runs `compute_g(10000)` and obtains the optimal tuple `(1433, 2147, 4903, 11363)` with `g(10000)=159820276`.
+- Token 26529 [verification]: Recomputes `a^2+b^2+c^2+d^2` from the recovered tuple to verify the reported `g(10000)` value.
+- Token 26822 [verification]: Uses high-precision `mpmath` to check the residual against `π+4`, confirming an error around `-4e-15`.
+- Token 27509 [final answer]: Commits to the final boxed result `\boxed{34658}`.

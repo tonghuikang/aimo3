@@ -1,0 +1,43 @@
+Correct answer: g(210) = 621.
+
+Key lemma for this family:
+- For k >= 4, f(k) = 3.
+
+Proof of lemma (complete):
+
+Lower bound f(k) >= 3:
+- Assume a strategy claims guaranteed success in at most 2 attempts.
+- In attempt 1, let c be the first column where Turbo enters row 2.
+  - Place the row-2 monster at (row 2, c), so attempt 1 fails there.
+- In attempt 2, Turbo must enter row 3 at some column d to have any chance to reach the bottom.
+  - Because row 2, column c is blocked, d != c.
+  - Place the row-3 monster at (row 3, d), so attempt 2 fails when entering row 3.
+- Fill remaining interior rows with monsters in distinct unused columns (always possible: rows left = k-2, columns left = k-1).
+- Therefore 2 attempts cannot guarantee success.
+
+Upper bound f(k) <= 3:
+- Attempt 1: go straight down some column A.
+  - If no monster, win.
+  - Else discover (rA, A).
+- Attempt 2: go straight down a different column B.
+  - If no monster, win.
+  - Else discover (rB, B), with rA != rB and A != B.
+- Then:
+  - A is safe in all interior rows except rA.
+  - B is safe in all interior rows except rB.
+- Attempt 3 construction:
+  - If |rA-rB| >= 2, switch between A and B on an intermediate row where both are safe.
+  - If |rA-rB| = 1, use a bridge column C not in {A, B}; this exists since k+1 >= 5.
+  - This gives a guaranteed top-to-bottom route avoiding the two known blocked cells.
+- Hence 3 attempts always suffice.
+
+So f(k) = 3 for every k >= 4.
+
+Compute g(210):
+- g(210) = sum_{k=4}^{210} f(k) = sum_{k=4}^{210} 3
+- Number of terms = 210-4+1 = 207
+- g(210) = 3 * 207 = 621.
+
+Wrong approach to reject:
+- "Need to identify all monster columns first, so f(k)=k+1."
+- Why wrong: full column elimination is unnecessary; two discovered monster columns already force a guaranteed third-attempt route.

@@ -1,0 +1,25 @@
+# Problem pe-845 Findings
+
+## Problem Statement
+Let D(n) be the n-th positive integer that has the sum of its digits a prime.
+Find D(10^16) mod 99991.
+
+## Correct Answer: 38822
+
+## Correct Approach
+1. Define a monotone counting function \(f(N)\): number of positive integers \(\le N\) whose digit sum is prime.
+2. Compute \(f(N)\) with digit DP over `(position, sum, tight)`; prime sums are at most \(9 \times \text{digits}(N)\), so state space is small.
+3. Invert \(f\) with binary search to get \(D(10^{16})\), the smallest \(N\) such that \(f(N)=10^{16}\).
+4. Equivalent length-based view: counts up to powers of 10 satisfy `cum[16] < 10^16 < cum[17]`, so the target lies in the 17-digit block.
+5. Correct computed value: \(D(10^{16}) = 45009328011709400\), and
+   \(45009328011709400 \bmod 99991 = 38822\).
+
+## Wrong Approach: Mixed Ranking Spaces In Unranking
+- Correctly computes the offset inside the 17-digit block (`offset = 10^16 - count(<10^16)`), but then un-ranks in the full `0..10^17-1` space with leading-zero strings.
+- This ranking space includes integers below `10^16`, so the offset no longer points to the intended element in `10^16..10^17-1`.
+- A common implementation symptom is allowing first digit `0` during unranking (`d` from 0 to 9 at position 0), instead of constraining the first digit to `1..9` when using a 17-digit-block offset.
+- This leads to a misranked candidate `34781285364514150` and wrong modulo result `50721`.
+
+## Key Decision Points
+- Whether to solve by direct inversion (`binary search + digit DP`) or by explicit unranking after block counting.
+- If using unranking, keep offset definition and ranking universe consistent (exact-length block vs all leading-zero strings).

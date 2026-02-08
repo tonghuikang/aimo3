@@ -1,0 +1,11 @@
+## Answer: correct (54449)
+
+## Key moments
+- Token 111 [insight]: Sets the target as computing \(\sum_{n=1}^{10000} f(n)/n \bmod 99991\) and reframes terms as integer quotients \(k_n=f(n)/n\).
+- Token 457 [insight]: Uses the \(n=89\) example to ground the search as “smallest multiple with digits in \(\{0,1,2\}\).”
+- Token 730 [verification]: Runs a brute-force generator for \(n=89\) and confirms \(f(89)=1121222\), then checks the quotient.
+- Token 818-1421 [wasted]: Spends a long stretch debating alternatives and edge complexity before committing to implementation.
+- Token 1657 [breakthrough]: Commits to the remainder-BFS plan (parent pointers + digit reconstruction), which directly scales to all \(n \le 10000\).
+- Token 3565 [verification]: Validates implementation against the provided checkpoint \(\sum_{n=1}^{100} f(n)/n = 11363107\).
+- Token 3655 [verification]: Executes the final \(n=1..10000\) modulo run and obtains 54449.
+- Token 3746 [final answer]: Commits to \(\boxed{54449}\).

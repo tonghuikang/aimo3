@@ -1,0 +1,26 @@
+Correct answer: 84
+
+Correct approach:
+- Encode `\alpha` as `A(x)=\sum_{i=0}^6 \alpha(i)x^i` and rewrite the condition as a Laurent-polynomial factorization:
+  `A(x)C(x)=x^k+x^l = x^k(1+x^d)`, `d=|k-l|>0`.
+- Therefore `\alpha` is shifty iff `A(x)=\pm x^c Q(x)` with `c\ge0`, `c+\deg(Q)\le 6`, and `Q(x)` divides `1+x^d` for some `d`.
+- Divisors of `1+x^d` are products of cyclotomic factors `\Phi_n` where `n|2d` and `n\nmid d`; equivalently all chosen `n` must share one fixed 2-adic exponent `v2(n)=v2(d)+1`.
+- With degree bound `\deg(Q)\le 6`, allowed primitive factors are:
+  - `v2=1`: `\Phi_2` (deg 1), `\Phi_6` (deg 2), `\Phi_{10}` (deg 4), `\Phi_{14}` (deg 6), `\Phi_{18}` (deg 6)
+  - `v2=2`: `\Phi_4` (deg 2), `\Phi_{12}` (deg 4)
+  - `v2=3`: `\Phi_8` (deg 4)
+- Valid monic `Q` (no cross-group mixing, total degree `\le6`) are 13:
+  `1, \Phi_2, \Phi_6, \Phi_{10}, \Phi_{14}, \Phi_{18}, \Phi_2\Phi_6, \Phi_2\Phi_{10}, \Phi_6\Phi_{10}, \Phi_4, \Phi_{12}, \Phi_4\Phi_{12}, \Phi_8`.
+- For each `Q`, shift choices are `c=0..6-\deg(Q)`, so multiplicity is `7-\deg(Q)`.
+- Total unsigned count: `\sum_Q (7-\deg(Q)) = 42`.
+- Global sign `\pm` gives final count `2*42 = 84`.
+
+Wrong approaches and why they fail:
+- Wrong answer 26:
+  - Counts only normalized base polynomials (`13`) and doubles by sign, but forgets shift multiplicity `7-\deg(Q)`.
+  - Equivalent mistake: enforcing `A(0)=\pm1` for all candidates, which incorrectly removes valid shifted forms `x^cQ` with `c>0`.
+- Wrong answer 118:
+  - Allows any degree-feasible subset of all low-degree even-index cyclotomics.
+  - Fails to enforce the required single shared `v2` class for factors in one divisor of `1+x^d`, so it overcounts invalid mixed-`v2` products.
+- Wrong answer 130:
+  - In addition to mixed-`v2` overcounting, incorrectly admits odd-index cyclotomic factors (e.g. `\Phi_1,\Phi_3,\Phi_5,\Phi_7,\Phi_9`), which never divide `x^d+1`.

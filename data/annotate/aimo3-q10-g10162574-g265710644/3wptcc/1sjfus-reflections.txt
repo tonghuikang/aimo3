@@ -1,0 +1,12 @@
+## Answer: correct (10477)
+
+## Key moments
+- Token 23810 [insight]: Rewrites the search as minimizing the ratio `d1*d2/(d1*d2+d1+d2)` over divisor pairs, tying `f(M+c)` to modular feasibility of each pair.
+- Token 24015 [questionable statement]: Treats `D' | S` (after canceling `gcd(d1*d2,D)`) as if it were sufficient for a valid pair.
+- Token 30084 [mistake]: Concludes `(d1,d2)=(2,6)` works and sets `f(S)=(3/5)S`, missing the extra requirement that resulting `N` must still be divisible by both `d1` and `d2`.
+- Token 33739 [insight]: Notices the inconsistency (`D'|S` gave integer `N` but not integer `N/2`), which exposes the hidden divisibility gap.
+- Token 39543 [breakthrough]: Switches to correct feasibility checks `D | S*d1` and `D | S*d2`, then searches pairs with those stronger constraints.
+- Token 41436 [breakthrough]: Finds valid minimizers `(2,15)` for `c=10162574` and `(2,64)` for `c=265710644`, giving `g(c)=30/47` and `64/97`.
+- Token 46015-47422 [wasted]: Long re-justification that triples not including `N` cannot beat the found ratios after the winning pairs were already identified.
+- Token 47703 [verification]: Recomputes the fraction sum and confirms floor behavior/`2025!` divisibility so `g` values are exact.
+- Token 49849 [final answer]: Commits to `\boxed{10477}` (correct).

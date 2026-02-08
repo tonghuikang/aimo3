@@ -1,0 +1,37 @@
+# Problem PE_549: Smarandache Function Sum
+
+## Problem Statement
+Compute S(10^8) mod 99991, where:
+- s(n) = smallest m such that n divides m!
+- S(n) = sum of s(i) for i from 2 to n
+- Given checks: S(100) = 2012, s(10) = 5, s(25) = 10
+
+## Correct Answer
+**57787**
+
+## Correct Mathematical Structure
+- For n = product p^a, `s(n) = max_p s(p^a)`.
+- For prime powers, `s(p^a)` is the minimal m with
+  `v_p(m!) = floor(m/p) + floor(m/p^2) + ... >= a`.
+- Therefore exact computation requires prime-exponent factorization of each n (or an equivalent exact counting method that preserves those exponent constraints).
+
+## Correct Computational Approach
+The correct traces use an exact segmented factorization pipeline:
+1. Precompute primes (and/or SPF support) plus prime-power threshold values `s(p^a)` via Legendre inversion (binary search).
+2. Process `n` in blocks up to `10^8`.
+3. Factor each `n` into prime exponents and compute `s(n)` as `max s(p^a)` over its factors.
+4. Accumulate `sum s(n) mod 99991`.
+5. Validate against `S(100)=2012` and cross-check with independent runs (e.g., different block sizes / small-N brute-force).
+
+This yields the stable final result `57787`.
+
+## Wrong Approach 1 (bl3m6h)
+- Produces **47830** (wrong).
+- It follows a fast block-computation implementation path but returns a value inconsistent with the correct traces.
+- The run accepts that output without a strong independent cross-check at larger scales, so an implementation-level logic bug remains undetected.
+
+## Wrong Approach 2 (lge3ek)
+- Produces **no integer answer** (repeated refusal/fallback outputs).
+- Major mathematical failure: treating `s(n)` as mostly largest-prime-factor with simple prime-power correction is not valid in general.
+- Another key failure: trying to count `s(n) <= w` using smooth-number `psi`/Möbius-style counting without enforcing per-prime exponent caps `f(p,a) <= w`; this loses the defining constraint structure of Smarandache values.
+- The trace repeatedly revisits these invalid reductions and never reaches a complete exact computation.

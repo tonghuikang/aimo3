@@ -1,0 +1,19 @@
+## Answer: correct (777577686)
+
+## Key moments
+- Token 13 [insight]: Reframes the task as counting Hamiltonian paths (equivalently constrained permutations) in the distance-3 path-power graph.
+- Token 7019 [insight]: Starts explicit recurrence discovery with Berlekamp-Massey on computed `f(n)` terms.
+- Token 7667 [breakthrough]: Extracts the usable order-8 recurrence `f(n)=2f(n-1)-f(n-2)+2f(n-3)+f(n-4)+f(n-5)-f(n-7)-f(n-8)`.
+- Token 7725 [verification]: Verifies the order-8 `f` recurrence on known prefix terms before building the cube-sum machinery.
+- Token 9526 [questionable statement]: Assumes `g(n)=f(n)^3` recurrence coefficients found modulo a prime can be lifted to integer coefficients by signed conversion.
+- Token 11369 [questionable statement]: Continues treating BM prime-field coefficients as directly interpretable integer recurrence coefficients.
+- Token 12588 [mistake]: Integer-domain verification fails immediately (`n=121`) for the lifted `g` recurrence.
+- Token 12637 [missed opportunity]: Spends effort hypothesizing higher true order/modular cancellation instead of immediately dropping the unsafe lifting path.
+- Token 12842-16236 [wasted]: Extended detour through BM/CRT/lifting and heavy exact-solve options without a stable recurrence usable modulo `10^9`.
+- Token 13676 [insight]: Recognizes the root problem is coefficient lifting from finite-field BM, not the cube-state dimension argument.
+- Token 16236 [breakthrough]: Switches to direct monomial-state evolution (`120` cubic monomials + sum state) and avoids explicit integer `g`-recurrence recovery.
+- Token 20747 [verification]: Validates the matrix pipeline against `S(10)=18230635`.
+- Token 22248 [verification]: Matches the published `S(1000) mod 10^9 = 225031475` checkpoint.
+- Token 22401 [verification]: Matches `S(10^6) mod 10^9 = 363486179`.
+- Token 23852 [verification]: Computes `S(10^14) mod 10^9` as `777577686` with the finalized method.
+- Token 24312 [final answer]: Commits the boxed final value `777577686`.

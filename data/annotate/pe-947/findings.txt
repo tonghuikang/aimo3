@@ -1,0 +1,47 @@
+# Problem PE_947 Findings
+
+## Problem Summary
+Compute S(10^6) mod 999999893 where S(M) = sum_{m=1}^M s(m), and s(m) = sum_{a,b} p(a,b,m)^2 where p(a,b,m) is the period of the Fibonacci-like sequence starting with (a,b) modulo m.
+
+## Correct Answer
+213731313
+
+## Key Mathematical Insights
+
+### Period and Orbit Structure
+- Period p(a,b,m) equals the orbit size of vector (a,b) under action of matrix M = [[0,1],[1,1]]
+- s(m) = sum over orbits O of |O|^3 (since each vector in orbit has period |O|)
+- s(m) = sum_{d|T} N_d * d^2 * F(T/d) where:
+  - T = pi(m) = Pisano period (order of M mod m)
+  - N_d = number of vectors fixed by M^d = |Fix(d)|
+  - F(n) = product_{p|n} (1 - p^2)
+
+### Key Formula for N_d (Fixed Point Count)
+- N_d = gcd(g,m) * gcd(det/g, m) via Smith Normal Form
+- g = gcd of entries of (M^d - I)
+- det = determinant of (M^d - I) = 2 - L_d (d even) or -L_d (d odd), where L_d is Lucas number
+
+### Critical Non-Multiplicativity
+- s(m) is NOT multiplicative for composite numbers
+- Product formula s(m1*m2) = s(m1)*s(m2) fails even for coprime factors when either is not squarefree
+- Correct approach: For composite m, must compute s(m) using correct combination formula involving gcd of divisors with component periods T_i
+
+## Common Errors
+
+### Error 1: Wrong T_factors Construction (optm60.txt gets 68048335)
+- The T_factors dictionary that holds max exponents across components may be incorrectly built
+- When Ti = pi_p * p^(alpha-1), the factor p^(alpha-1) must be correctly merged with prime factors of pi_p
+
+### Error 2: Zero Valuation Bug (fixed in 5sohcs.txt)
+- When det = 0 mod p^(2e), the valuation function must return at least 2e, not 0
+- The while loop `while x % p == 0 and x != 0` incorrectly returns 0 for x=0
+
+### Error 3: Assuming Multiplicativity (qmaavu.txt gets 976583259)
+- Cannot use s(m) = product of s(p^e) for prime powers
+- The period structure depends on lcm of component periods, creating cross-interactions
+
+## Trace Summary
+- optm60.txt: WRONG (68048335) - T_factors construction bug
+- 5sohcs.txt: CORRECT (213731313) - Fixed zero valuation bug
+- qmaavu.txt: WRONG (976583259) - Multiplicativity assumption or similar
+- 91n0dr.txt: CORRECT (213731313)

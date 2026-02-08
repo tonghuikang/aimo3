@@ -1,0 +1,28 @@
+# PE 488 Findings
+
+## Correct Answer
+- `216737278` (last 9 digits of `F(10^18)`).
+
+## Correct Approach
+- The game is impartial with legal states as distinct heap sizes; terminal core state is `(0,1,2)` (and permutations).
+- A correct structural decomposition for P-positions is by a level `k >= 2` and low-bit pattern:
+  `(x, 2^(k-1)-1, 2^(k-1)+x)` with `0 <= x <= 2^(k-1)-2`, plus high parts `(A0,A1,A2)` satisfying `A0 xor A1 xor A2 = 0`.
+- Heap values are
+  `a = A0*2^k + x`, `b = A1*2^k + (2^(k-1)-1)`, `c = A2*2^k + (2^(k-1)+x)`.
+- For fixed `(k,x)`, bounds are residue-specific:
+  `A0 <= floor((N-1-x)/2^k)`,
+  `A1 <= floor((N-1-(2^(k-1)-1))/2^k)`,
+  `A2 <= floor((N-1-(2^(k-1)+x))/2^k)`.
+- Summation per valid high-part pair `(A0,A1)` with `A2=A0 xor A1` is:
+  `a+b+c = 2^k*(A0+A1+A2) + (2^k-1+2x)`.
+- Compute pair count/sum under 3 different upper bounds using bit DP:
+  count/sum over `(A0,A1)` with `A0<=M0`, `A1<=M1`, `(A0 xor A1)<=M2`.
+- Include `x=0` families, then subtract exactly the `a=0` subfamily (`x=0` and `A0=0`).
+- This reproduces checkpoints `F(8)=42` and `F(128)=496062`, then yields `F(10^18) mod 10^9 = 216737278`.
+
+## Wrong Approaches And Why They Fail
+- **Mersenne XOR alone** (`a xor b xor c = 2^k-1`) is not sufficient for P-position classification; many such triples are N-positions.
+- **Simple inequality filters** (e.g., using only `a+b<c`) are necessary in some subsets but not sufficient globally.
+- **Over-simplified residue/block rules for `b` given `a`** miss valid families and create false positives when higher-bit interactions are ignored.
+- **Using one shared high-part bound** (from the largest residue only) undercounts/overcounts; bounds must be per residue (`M0,M1,M2`).
+- **Placeholder/non-computed output** (e.g., `000000000`) is incorrect despite partial structural insights.

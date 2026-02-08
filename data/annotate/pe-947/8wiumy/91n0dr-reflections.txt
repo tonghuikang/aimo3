@@ -1,0 +1,31 @@
+## Answer: correct (213731313)
+
+## Key moments
+- Token 1287 [insight]: Sets up fixed-point counting `f(k)=|Fix(M^k)|` and exact-period recovery via Möbius inversion.
+- Token 1641 [breakthrough]: Derives the usable divisor-sum form for `s(m)` from `f(k)`.
+- Token 3939 [insight]: Uses Pisano-period structure (`pi(m)=lcm(pi(p^e))`) to bound the per-modulus search space.
+- Token 4623 [questionable statement]: Assumes rank-based counting from determinant behavior can be simplified cheaply over composite moduli.
+- Token 5639 [questionable statement]: Applies a rank-1 linear-congruence count (`m*gcd(...)`) too broadly to the 2x2 system.
+- Token 12090 [mistake]: Counterexamples (notably `m=8`) show the simplified rank/row-equation kernel formula is wrong.
+- Token 14112 [insight]: Infers that kernel size must be handled via invariant factors at each prime power, not a single row-rank heuristic.
+- Token 17286 [breakthrough]: Switches to a systematic prime-power/SNF-based kernel computation strategy.
+- Token 23270 [insight]: Uses `det(M^k-I)=1+(-1)^k-L_k` to reduce determinant valuation to Lucas valuations.
+- Token 26114-32709 [wasted]: Long closed-form exploration (patterns, conjectures, apparition formulas) before returning to direct computable valuations.
+- Token 32709 [breakthrough]: Commits to computing needed p-adic valuations via fast doubling modulo prime-power moduli.
+- Token 39864 [insight]: Notices determinant-valuation clipping at `e` misses full-kernel transitions, motivating a higher cap.
+- Token 40780 [breakthrough]: Realizes determinant valuation must be tracked up to `2e` (not just `e`) and adopts `mod p^(2e)` evaluation.
+- Token 42291 [questionable statement]: Revisits multiplicativity of `s(m)` as a possible shortcut.
+- Token 42537 [verification]: Multiplicativity tests fail, closing that shortcut path.
+- Token 42841 [insight]: Recognizes the safe route is divisor-by-divisor aggregation with multiplicative `f(k)` only.
+- Token 43280 [breakthrough]: Chooses the valuation-based per-divisor implementation as the practical path.
+- Token 47594 [questionable statement]: In `compute_f_k`, maps Fibonacci outputs in a way that mis-assigns `F_{k+1}`.
+- Token 48391 [mistake]: Detects impossible determinant valuation behavior for `k=1`, revealing the Fibonacci-indexing bug.
+- Token 48742 [insight]: Pinpoints that `fib_pair_mod` returns `(F_k, F_{k+1})`, so `F_{k+1}` must be read from `fn1`.
+- Token 49010 [breakthrough]: Fixes `fib_pair_mod` usage (`F_{k+1}=fn1`), restoring correct kernel evaluations.
+- Token 54930-56249 [wasted]: Extra Burnside/convolution detour after a workable numeric pipeline already exists.
+- Token 58224 [questionable statement]: Merges `N_factors` by max exponents without accounting for overlap between `pi(p)` and `p^(e-1)` on the same prime.
+- Token 59619 [mistake]: Mismatch analysis exposes the exponent-merge bug (especially visible for 5-adic terms).
+- Token 59944 [insight]: Identifies that within a component, shared-prime exponents from `pi(p)` and `p^(e-1)` must add before global lcm-max merge.
+- Token 60301 [breakthrough]: Corrects merge to `exp_pi(p) + (e-1)` before lcm-max across components.
+- Token 61103 [verification]: Re-runs small-`M` checks successfully after fixes.
+- Token 61528 [final answer]: Commits boxed `213731313` (correct).

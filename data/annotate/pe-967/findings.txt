@@ -1,0 +1,41 @@
+# Problem pe-967 - B-trivisible Numbers
+
+## Problem Statement
+A positive integer n is B-trivisible if the sum of all distinct prime factors of n which are <= B is divisible by 3.
+Find F(10^18, 120) mod 99991.
+
+## Correct Answer
+37190
+
+## Key Insights
+1. Let `P` be the 30 primes `<=120`. The condition depends on which primes in `P` divide `n` (distinct-prime presence).
+2. For an exact selected set `S ⊆ P`, numbers counted are those divisible by every prime in `S` and by no prime in `P \\ S`.
+3. Counting exact sets uses inclusion-exclusion on the forbidden complement `P \\ S`.
+
+## Correct Approach
+1. Start from
+   `F(N,B) = Σ_{S⊆P, sum(S)≡0} count_exact(S)`,
+   where
+   `count_exact(S) = Σ_{U⊆P\\S} (-1)^|U| floor(N / Π_{p∈S∪U} p)`.
+2. Swap sums by setting `T = S ∪ U`:
+   `F(N,B) = Σ_{T⊆P} floor(N / Π_{p∈T} p) * c(T)`,
+   with
+   `c(T) = Σ_{S⊆T, sum(S)≡0} (-1)^{|T|-|S|}`.
+3. Write `c(T)=(-1)^|T| d(T)`, where
+   `d(T)=Σ_{S⊆T, sum(S)≡0}(-1)^|S|`.
+   Compute `d(T)` via 3-state DP on residues mod 3.
+4. Enumerate only subsets `T` with `Π_{p∈T} p <= N`; the rest have zero floor term.
+5. Accumulate modulo `99991`; this yields `37190`.
+
+## Wrong Approaches And Why They Fail
+1. Wrong decomposition:
+   `n = (Π_{p∈S} p) * m` with `m` required to be coprime to all primes in `P`.
+   This incorrectly forbids extra powers of primes already in `S` (e.g., `9` when `B=4`, `S={3}`), so it undercounts.
+2. Equivalent wrong formula:
+   `Σ_{S: sum(S)≡0} φ(N/Π_{p∈S} p, 30)` (where `φ` excludes all 30 primes) is too small for the same reason.
+   Example check: for `(N,B)=(10,4)` it gives `4`, but the correct value is `5`.
+3. Naively expanding both subset layers without coefficient compression is combinatorially intractable (`2^30`-scale subset structure), so the swapped single-sum form above is required.
+
+## Notes
+- A practical implementation can maintain DP residue state incrementally during DFS subset enumeration.
+- Both successful solutions converge to the same compressed coefficient form and final value `37190`.

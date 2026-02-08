@@ -1,0 +1,23 @@
+## Answer: correct (90471)
+
+## Key moments
+- Token 45 [insight]: Starts from the Bernoulli-form Faulhaber identity and isolates that the linear coefficient comes from the `j=k` term.
+- Token 233 [questionable statement]: Mixes conventions around `B_1=-1/2` while using a form intended for the `1..n` sum, creating sign ambiguity.
+- Token 694 [breakthrough]: Resolves the convention issue (`B_1=+1/2` form for this polynomial identity) and keeps `a_1=B_k`.
+- Token 1137 [breakthrough]: Converts the target into Bernoulli-denominator structure and invokes the von Staudt-Clausen denominator rule.
+- Token 2026 [insight]: Factors `20010 = 2*3*5*23*29`, identifying the exact required prime set in the denominator product.
+- Token 2326 [breakthrough]: Derives the base divisibility requirement `k` multiple of `lcm(2,4,22,28)=308`.
+- Token 3001 [questionable statement]: Tries to reduce admissibility mostly to prime-factor restrictions on `m`, which is weaker than the true forbidden-divisor condition.
+- Token 4402 [mistake]: Spends time on that over-simplified prime-factor framing, delaying the exact “avoid every forbidden divisor `d_q`” criterion.
+- Token 4980 [breakthrough]: Recasts the condition correctly as “`k` not divisible by any `p-1` outside the target set,” equivalent to forbidding all transformed divisors in `m`.
+- Token 5969 [insight]: Formalizes “bad” factors via `(q-1)/gcd(q-1,308)` and analyzes which factors survive gcd cancellation.
+- Token 11253 [missed opportunity]: Has enough structure to implement a sieve on forbidden divisors but continues long asymptotic/representation analysis.
+- Token 12499-13883 [wasted]: Extended algorithm brainstorming (multiple equivalent formulations) without committing to executable counting.
+- Token 14961 [verification]: Manual check at `m=2` finds divisor `88` giving prime `89`, validating the divisor-based rejection logic.
+- Token 17582 [breakthrough]: Locks in the practical method: generate forbidden `t` values and mark multiples to obtain valid `m`.
+- Token 18883-19156 [wasted]: Briefly returns to costly per-`m` divisor checking before reverting to the sieve approach.
+- Token 25270 [breakthrough]: Implements deterministic Miller-Rabin plus bad-divisor generation/counting pipeline.
+- Token 25759 [verification]: Runs a small-range benchmark (`M=20000`) to confirm density and runtime expectations.
+- Token 27508 [verification]: Scales to `M=4,000,000` and identifies the target index `m_{100000}=2,990,609`.
+- Token 28125 [verification]: Independently recomputes `D(308*m)` for the candidate and confirms it is exactly `20010`.
+- Token 28914 [final answer]: Commits to `\boxed{90471}`.

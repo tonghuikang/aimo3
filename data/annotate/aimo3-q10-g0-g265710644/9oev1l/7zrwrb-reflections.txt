@@ -1,0 +1,16 @@
+## Answer: correct (677)
+
+## Key moments
+- Token 3373 [breakthrough]: Derives a valid `2/3` ratio route from divisor-sum scaling.
+- Token 8524 [mistake]: Switches into a wrong `3/4`-based branch for both `g` values.
+- Token 14485 [mistake]: Prematurely outputs `5` from the wrong branch.
+- Token 20376 [missed opportunity]: Has enough structure to reject the `3/4` branch but keeps exploring around it.
+- Token 25778 [breakthrough]: Rebuilds divisor parametrization in a more general form, setting up later correction.
+- Token 33126 [wasted]: Long symbolic exploration continues without resolving the concrete minimizing divisor for `M+c`.
+- Token 39289 [breakthrough]: Establishes lower-bound reasoning that points back toward the right small-ratio candidates.
+- Token 43190 [missed opportunity]: Notes the `6/11` landscape but still delays direct use of the `97` divisibility path.
+- Token 49876 [breakthrough]: Re-confirms `f(M)=2M/3`, eliminating the earlier `3/4` assumption.
+- Token 54220-54673 [wasted]: Temporary side branch around `(3/5)` / incorrect intermediate totals before final consolidation.
+- Token 66816 [breakthrough]: Final correction to `g(0)=2/3` and `g(c)=64/97`, giving the right sum.
+- Token 67576 [verification]: Rechecks reduction and arithmetic consistency for `386/291`.
+- Token 67697 [final answer]: Commits to `\boxed{677}`.

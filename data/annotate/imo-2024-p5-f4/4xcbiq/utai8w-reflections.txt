@@ -1,0 +1,12 @@
+## Answer: correct (3)
+
+## Key moments
+- Token 886 [insight]: Notices there is exactly one globally monster-free column, which frames early strategy ideas.
+- Token 3370 [questionable statement]: Assumes Turbo must identify that globally safe column before he can guarantee a win.
+- Token 4170 [mistake]: Builds an incorrect lower-bound direction (`k`/`k+1` style) from the above assumption, treating non-vertical pathing as irrelevant.
+- Token 6700 [insight]: Realizes a guaranteed route can snake around known monster cells, so identifying the globally safe column is not necessary.
+- Token 8330 [breakthrough]: Uses distinct-column constraints to argue columns found in rows 1 and 2 are guaranteed safe for rows 3 and 4, enabling a 3-attempt strategy.
+- Token 12695-14585 [wasted]: Spends a long detour on side-of-column case splits after the main constructive idea is already in place.
+- Token 16154 [verification]: Runs a full column-order enumeration check to confirm the third-attempt routing condition always has a valid start/shift choice.
+- Token 17341 [verification]: Gives the lower-bound argument for `>2` attempts by showing one known monster (row 1) is insufficient to force a safe second attempt.
+- Token 18468 [final answer]: Commits to `\boxed{3}`, matching the correct value.

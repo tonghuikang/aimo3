@@ -1,0 +1,11 @@
+## Answer: wrong (73)
+
+## Key moments
+- Token 4118 [breakthrough]: Correctly frames `f(n)` as minimizing LCM over divisor-sum triples.
+- Token 13222 [breakthrough]: Derives the strong `6/11` lower-bound branch and its attractiveness.
+- Token 15056-20017 [wasted]: Extended asymptotic reasoning without concrete feasibility checks tied to this specific `c`.
+- Token 25344 [mistake]: Assumes the `6/11` branch remains valid for `M+44636594` without enforcing the decisive divisor realization.
+- Token 33411 [breakthrough]: Re-establishes `g(0)=2/3` correctly for the `M` case.
+- Token 35500 [verification]: Checks floor sensitivity from `O(1)/M` effects, but on the wrong `g(c)` branch.
+- Token 36466 [mistake]: Final rational uses incorrect `g(c)=6/11`, producing `40/33`.
+- Token 36560 [final answer]: Commits to `73`.

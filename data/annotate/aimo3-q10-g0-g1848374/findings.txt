@@ -1,0 +1,40 @@
+## Correct answer: 173
+
+## Correct approach
+
+The problem asks for the smallest n-Norwegian integer, i.e., the smallest positive integer with three distinct positive divisors summing to n.
+
+### Key reduction
+f(n) = min over distinct positive integers a,b,c with a+b+c = n of lcm(a,b,c). This is because the smallest integer having a,b,c as divisors is their lcm.
+
+### Scaling/ratio framework
+Factor out a common divisor d | n: write a=dx, b=dy, c=dz with x+y+z = n/d. Then lcm(a,b,c) = d * lcm(x,y,z). So f(n) = min_{d|n} d * L(n/d) where L(m) = min lcm of distinct positive triples summing to m. The ratio f(n)/n = min_{d|n} L(n/d)/(n/d), i.e., the minimum primitive ratio L(m)/m over divisors m of n (with m >= 6 for distinct triple).
+
+### Key primitive ratios
+- m=9: triple (1,2,6), lcm=6, ratio 2/3 ≈ 0.667
+- m=10: triple (1,3,6), lcm=6, ratio 3/5 = 0.6
+- m=11: triple (2,3,6), lcm=6, ratio 6/11 ≈ 0.545
+- m=25: triple (1,8,16), lcm=16, ratio 16/25 = 0.64
+- m=7: triple (1,2,4), lcm=4, ratio 4/7 ≈ 0.571
+
+### Computing f(M) where M = 3^(2025!)
+M is divisible by 9 (and all powers of 3) but NOT by any prime other than 3. So the only primitive sums m that divide M are powers of 3: 9, 27, 81, etc. All of these have the ratio 2/3 (via scaling of (1,2,6)). No m divisible by 5, 7, 11 etc. divides M. So f(M) = (2/3)M.
+
+### Computing g(0)
+g(0) = (1/2025!) * floor(2025! * f(M)/M) = (1/2025!) * floor(2025! * 2/3) = 2/3 (since 2025! is divisible by 3).
+
+### Computing f(M + 1848374)
+N = M + 1848374. Since M = 3^K ≡ 1 (mod p) for any prime p ≠ 3 with p-1 | K = 2025!, we have N ≡ 1 + 1848374 = 1848375 (mod p). So the small primes dividing N (other than 3) are exactly the prime factors of 1848375 that are not 3. 1848375 = 3 * 5^3 * 11 * 449 (approximately). Key: 5 | N (since 5 | 1848375) so 25 | N. The ratio for m=25 is 16/25 = 0.64. Check: 11 | 1848375 so 11 | N, giving ratio 6/11 ≈ 0.545... but we need to verify 11 actually divides N. Actually M ≡ 1 (mod 11) since 10 | 2025!, so N ≡ 1 + 1848374 = 1848375 (mod 11). 1848375 mod 11: 1848375 / 11 = 168034.09..., 11 * 168034 = 1848374, so 1848375 mod 11 = 1. So 11 does NOT divide N. Similarly check other primes.
+
+The correct solution finds that among all divisors of N with good primitive ratios, m=25 gives the best achievable ratio of 16/25 = 0.64. So f(N) = (16/25) * N.
+
+### Computing g(1848374)
+g(1848374) = 16/25 (similar floor argument, since 2025! is divisible by 25).
+
+### Final answer
+g(0) + g(1848374) = 2/3 + 16/25 = 50/75 + 48/75 = 98/75. gcd(98,75) = 1, so p=98, q=75. p+q = 173. 173 mod 99991 = 173.
+
+## Known wrong approaches
+- Getting f(M+c) wrong by using ratio 6/11 (m=11) when 11 does not actually divide M+c. This leads to wrong intermediate values.
+- Using ratio 34/53 or other sub-optimal ratios for f(M+1848374) instead of 16/25.
+- Trace nex4sc gets answer 367, likely from a wrong f(M+1848374) computation.

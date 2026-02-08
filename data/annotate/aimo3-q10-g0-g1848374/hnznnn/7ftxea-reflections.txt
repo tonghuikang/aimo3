@@ -1,0 +1,17 @@
+## Answer: correct (173)
+
+## Key moments
+- Token 685 [breakthrough]: Finds the useful `1,d,X` template with `d\mid(n-1)` and converts the construction into a divisor-maximization problem.
+- Token 7212 [verification]: Checks parity/divisibility of `M-1` and confirms the key small factors that make the `M` case tractable.
+- Token 14220 [missed opportunity]: Notes need for a broader global argument but postpones it, allowing later branches to sprawl.
+- Token 18275-19213 [wasted]: Long modular-arithmetic/mod-`99991` exploration that is disconnected from the decisive `f(M+c)` minimization step.
+- Token 23655 [verification]: Computes small congruence checks (e.g., mod 11) that support the selected divisor path for the shifted case.
+- Token 30092 [breakthrough]: Re-centers on the ratio-minimization framing (`\alpha=L/S`) rather than raw divisor-size heuristics.
+- Token 33614 [breakthrough]: Recasts candidates via `S_int` divisibility and ratio `\alpha=L/S`, which cleanly separates feasible from infeasible templates.
+- Token 36788 [mistake]: Briefly entertains broad candidate families before fully enforcing divisibility constraints for `M+1848374`.
+- Token 41997-42031 [wasted]: Extra exploration of large-`S` congruence scenarios that does not improve the chosen minimum.
+- Token 45978 [mistake]: Briefly treats sub-`0.64` ratio candidates as promising before fully enforcing the divisibility filter.
+- Token 50094 [verification]: Compares sub-`0.64` candidates and rejects them by divisibility constraints, narrowing to the eventual valid pair.
+- Token 52761 [breakthrough]: Consolidates to `g(0)=2/3`, `g(1848374)=16/25`, then gets the reduced sum `98/75`.
+- Token 55995 [verification]: Final coprime and arithmetic sanity checks (`p=98,q=75`) before output.
+- Token 56047 [final answer]: Commits to `\boxed{173}`; this final value is correct.

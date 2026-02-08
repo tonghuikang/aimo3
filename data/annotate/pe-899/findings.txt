@@ -1,0 +1,27 @@
+Correct answer
+- \(L(7^{17}) \bmod 99991 = 97849\).
+
+Correct approach
+- Work with sorted piles \((a,b)\) where \(a \le b\).
+- Let \(m = \lfloor \log_2 a \rfloor + 1\), so \(2^m\) is the smallest power of 2 strictly larger than \(a\).
+- Losing (P) positions are exactly those satisfying
+  \[
+  b \equiv 2^m-1 \pmod{2^m}
+  \quad\text{(equivalently }2^m \mid (b+1)\text{).}
+  \]
+- This reproduces the structure seen in small ranges:
+  - \(a=1\): \(b\) odd.
+  - \(a\in\{2,3\}\): \(b\equiv3\pmod4\).
+  - \(a\in[4,7]\): \(b\equiv7\pmod8\), etc.
+- Count unordered losing pairs \((a,b)\) with \(1\le a\le b\le n\) by summing valid \(b\)-counts per \(a\), then convert to ordered count:
+  \[
+  L(n)=2U(n)-D(n),
+  \]
+  where \(U(n)\) is unordered losing count and
+  \(D(n)=\lfloor\log_2(n+1)\rfloor\) (diagonal losing pairs \(a=b=2^t-1\)).
+- Evaluating this formula at \(n=7^{17}\) gives residue \(97849\) mod \(99991\), and also matches the checkpoints \(L(7)=21\), \(L(49)=221\).
+
+Wrong approaches and why they fail
+- Using the wrong period for the congruence class (e.g., treating the block \([2^k,2^{k+1}-1]\) as period \(2^{k+2}\) instead of \(2^{k+1}\)) contradicts enumerated P-positions (for example, values like 31 and 63 in the \([8,15]\) block).
+- Forcing analogies to unrelated games (e.g., Wythoff/Beatty-style formulas) does not match this move rule and does not produce the required sample values.
+- Counting only unordered losing pairs without converting to ordered pairs (or forgetting the diagonal correction) gives wrong \(L(n)\).

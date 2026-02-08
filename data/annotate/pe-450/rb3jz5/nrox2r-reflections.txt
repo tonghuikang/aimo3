@@ -1,0 +1,32 @@
+## Answer: wrong (no final answer)
+
+## Key moments
+- Token 119 [insight]: Correctly frames rational-angle points as rational points on the unit circle.
+- Token 1478 [insight]: Explicitly sets the required target `T(10^6) mod 99991`, anchoring computational scale.
+- Token 2056 [insight]: Uses Chebyshev-style reasoning for integer-angle multiples, a valid tool for part of the structure.
+- Token 3091 [breakthrough]: Moves to complex/Gaussian representation, enabling divisor-style conditions instead of raw trig search.
+- Token 5666 [insight]: Recognizes the special `q=2` square-root structure and its arithmetic implications.
+- Token 7990 [insight]: Attempts to re-express points via rational unit powers, pushing toward a factorization-based method.
+- Token 10373 [insight]: Builds explicit power/denominator expressions needed for Gaussian divisibility checks.
+- Token 14202 [questionable statement]: Assumes a broad Gaussian divisibility simplification before fully controlling conjugate-factor behavior.
+- Token 17052 [questionable statement]: Suggests integer points may only occur for `q=1` or `q=2` without a complete proof.
+- Token 20196 [mistake]: Treats that restriction as effectively resolved, over-pruning the search space.
+- Token 25121 [breakthrough]: Derives a cleaner divisibility-condition formulation in terms of Gaussian exponents for `r` and `R-r`.
+- Token 33350 [insight]: Re-centers on the direct `x+iy` expression from `w=e^{-it}` after earlier notation drift.
+- Token 39933 [insight]: Acknowledges brute-force infeasibility for `N=10^6`, forcing a closed-form or strongly bounded sum.
+- Token 42374 [breakthrough]: Proposes the key filter `D^p | r` and `D^q | (R-r)` as an inclusion criterion for nontrivial contributions.
+- Token 48945 [questionable statement]: Introduces parity-based simplifications that later clash with explicit unit-point checks.
+- Token 54491 [insight]: Brings in primitive sum-of-two-squares counting facts for organizing `D`-level contributions.
+- Token 59470 [questionable statement]: Leans on asymptotic-constant guessing (`~7/12`) despite unresolved exact arithmetic.
+- Token 66974 [mistake]: Uses a wrong base (`D=1`) contribution formula, producing immediate checkpoint inconsistencies.
+- Token 70685 [mistake]: Confirms the even-case (`s ≡ 2 mod 4`) formula is incomplete after explicit small-case checks.
+- Token 73908 [insight]: Corrects sign handling for `Z=±i`, clarifying why earlier base formulas failed.
+- Token 78200-84779 [wasted]: Extended cycle of conjectural fitting and decomposition attempts without converging to a stable executable method.
+- Token 79417 [missed opportunity]: Continues speculative global-pattern work while local parity/base-case inconsistencies remain unresolved.
+- Token 86064 [insight]: Verifies baseline-sum identities and pinpoints decomposition mismatch rather than raw implementation bugs.
+- Token 90502 [insight]: Produces a plausible bounded-complexity summation plan over `(p,q,D,t)` that could have been executed end-to-end.
+- Token 97379 [breakthrough]: Starts implementing a full modular algorithm with sieve + structured contribution loops.
+- Token 100101 [questionable statement]: Misclassifies a correction condition in the `E0` path, leading to further reconciliation confusion.
+- Token 104689 [missed opportunity]: Admits current split is still inconsistent but reopens algebra instead of locking and running the coherent partial pipeline.
+- Token 105247 [mistake]: Ends in unfinished diagnostic code (`H_one`) without obtaining a validated value.
+- Token 105851 [final answer]: Trace terminates at an unevaluated code call and never commits a boxed numeric answer.

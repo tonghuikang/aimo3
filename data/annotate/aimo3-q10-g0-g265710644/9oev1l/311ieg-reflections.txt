@@ -1,0 +1,11 @@
+## Answer: wrong (1375)
+
+## Key moments
+- Token 809 [breakthrough]: Correctly reframes the objective as minimizing `lcm(a,b,c)` over distinct triples with fixed sum `n`.
+- Token 2408 [mistake]: Assumes the optimum should generally include divisor `1`, narrowing the search too aggressively.
+- Token 7410 [missed opportunity]: Continues pair-based heuristics instead of committing to broader triple families that later produce the true `97` branch.
+- Token 15079-17098 [wasted]: Extended optimization detour around the restricted parameterization without resolving the key structural gap.
+- Token 22096 [breakthrough]: Shifts to divisor/congruence filtering for admissible `(p,q,D)` candidates on `M+c`.
+- Token 30165 [mistake]: Selects `D=197` and `130/197` as optimal, missing the better `D=97` route (`64/97`).
+- Token 33252 [verification]: Checks fraction arithmetic and reduction for `2/3 + 130/197`, but only within the incorrect branch.
+- Token 36166 [final answer]: Commits to `1375`.

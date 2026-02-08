@@ -1,0 +1,33 @@
+Correct answer: 451822602 (mod 1111211113)
+
+Correct approach
+- Let a period have length P, entries a_1..a_P, and period sum S = a_1+...+a_P.
+- Let B be the set of prefix sums within one period modulo S:
+  B = {0, a_1, a_1+a_2, ..., a_1+...+a_{P-1}}. Then |B| = P.
+- The clock condition is equivalent to requiring all triangular residues mod S to be present in B:
+  R_S = { n(n+1)/2 mod S : n >= 1 }, and R_S ⊆ B.
+- Therefore for fixed S and period length k (not necessarily minimal), the number of valid B is:
+  C(S - r(S), k - r(S)), where r(S)=|R_S|.
+- So A(k), the count of valid period-k words (allowing smaller minimal period), is:
+  A(k) = sum over S with r(S) <= k of C(S - r(S), k - r(S)).
+- Extract minimal-period counts by Möbius inversion:
+  B(k) = sum_{d|k} mu(d) * A(k/d),
+  and C(N) = sum_{k=1..N} B(k) mod M.
+
+How to compute r(S)
+- Use 8T_n+1 = (2n+1)^2, so triangular residues mod S correspond to odd squares mod 8S.
+- If S = 2^e * product p_i^{a_i} (odd primes p_i), then r(S) is multiplicative in these factors:
+  r(S) = 2^e * product f(p_i^{a_i}),
+  where f(p^a) is the number of square residues modulo p^a.
+- A robust formula for odd p^a:
+  f(p^a) = 1 + sum_{j=0..floor((a-1)/2)} phi(p^{a-2j})/2.
+  (Equivalent piecewise closed forms are fine.)
+
+Validation checkpoints
+- Must reproduce C(3)=3, C(4)=7, C(10)=561 before running N=10^4.
+- Final computed value: C(10^4) mod 1111211113 = 451822602.
+
+Wrong approaches and why they fail
+- Wrong odd-prime-power residue formula: using (p^a + p^{a-1})/2 for square-residue count gives contradictions (e.g., modulo 9/27) and breaks r(S).
+- Over-restrictive coset condition: assuming contributions are zero unless R_S itself is already a union of e-cosets undercounts; supersets can include full intersecting cosets even when R_S is not a full union at that level.
+- Naive brute force over period entries/value bounds is only usable for tiny N; it does not scale remotely to N=10^4.

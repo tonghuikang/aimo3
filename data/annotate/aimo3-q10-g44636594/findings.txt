@@ -1,0 +1,33 @@
+# Findings: aimo3-q10-g44636594
+
+## Correct answer
+- \(g(44636594)=\frac{110}{167}\), so \(p=110\), \(q=167\), and
+- \((p+q) \bmod 99991 = 277\).
+
+## Correct approach
+- Rewrite
+  - \(f(n)=\min\{\operatorname{lcm}(a,b,c): a,b,c\text{ distinct positive integers},\ a+b+c=n\}\).
+- Use a two-parameter divisor form for the optimal constructions:
+  - choose divisors \(N,\ N/p,\ N/q\) with distinct \(p,q>1\), giving
+  - \(n = N\left(1+\frac1p+\frac1q\right)=N\frac{pq+p+q}{pq}\), hence
+  - \(N = n\cdot \frac{pq}{pq+p+q}\).
+- Let \(D=pq+p+q\). For this problem (\(n=M+c\), \(M=3^{2025!}\), \(c=44636594\)), feasible \(D\) are constrained by divisibility against \(n\), which reduces to divisibility against \(c+1\) for the relevant cases.
+- The best feasible ratio is obtained at \((p,q)=(2,55)\):
+  - \(D=167\),
+  - \(\frac{pq}{D}=\frac{110}{167}\),
+  - so \(f(M+c)=\frac{110}{167}(M+c)\).
+- Then
+  - \(\frac{2025!\,f(M+c)}{M}=\frac{2025!\cdot110}{167}\left(1+\frac{c}{M}\right)\),
+  - with \(\frac{c}{M}\) tiny and \(167\mid 2025!\), so the floor is exactly \(\frac{2025!\cdot110}{167}\),
+  - hence \(g(c)=\frac{110}{167}\).
+
+## Wrong approaches and why they fail
+- Restricting to the \((1,b,N)\) family only (equivalently using only \(k-1\) divisor logic):
+  - gives \(f\)-ratio \(16/17\), leading to \(g=16/17\) and answer \(33\),
+  - fails because it ignores better constructions with two nontrivial proper divisors (e.g. the \((2,55)\) branch).
+- Prematurely choosing the \(103\)-based candidate:
+  - yields \(g=68/103\) and answer \(171\),
+  - fails because \(167\)-based construction gives strictly smaller ratio \(110/167<68/103\).
+- Using only integrality of \(N = n\cdot pq/(pq+p+q)\) without enforcing divisor compatibility (\(p\mid N\), \(q\mid N\)):
+  - can suggest invalid lower ratios such as \(3/5\),
+  - fails because those pairs do not correspond to actual divisors \(N/p, N/q\) of the constructed \(N\).

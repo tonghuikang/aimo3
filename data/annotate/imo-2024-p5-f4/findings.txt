@@ -1,0 +1,41 @@
+Correct answer: f(4) = 3.
+
+Complete proof:
+
+Lower bound (f(4) >= 3):
+- Assume a strategy claims guaranteed success in at most 2 attempts.
+- Adversarial placement against attempt 1:
+  - Let c be the first column where Turbo enters row 2.
+  - Place the row-2 monster at (row 2, c). Attempt 1 fails there.
+- Now Turbo has only one discovered monster.
+- In attempt 2, to reach the bottom he must enter row 3 at some column d.
+  - Since (row 2, c) is blocked, d != c.
+  - Place the row-3 monster at (row 3, d). Attempt 2 fails when entering row 3.
+- Rows 4 and 5 monsters can be assigned to two other columns distinct from c and d (possible since there are 5 columns total).
+- Therefore some legal placement forces failure within 2 attempts, so f(4) >= 3.
+
+Upper bound (f(4) <= 3):
+- Attempt 1: move straight down any column A.
+  - If no monster, Turbo already wins.
+  - Otherwise discover monster (rA, A).
+- Attempt 2: move straight down a different column B.
+  - If no monster, Turbo wins.
+  - Otherwise discover monster (rB, B), with rA != rB and A != B.
+- Then:
+  - A is safe in every interior row except rA.
+  - B is safe in every interior row except rB.
+- Third-attempt route:
+  - If |rA-rB| >= 2, descend in one known column and switch to the other on an intermediate row where both are safe.
+  - If |rA-rB| = 1, use a bridge column C not in {A, B} (exists since 5 columns):
+    - switch known-column -> C on one blocked row,
+    - move down to the other blocked row in C,
+    - switch C -> other known-column there,
+    - continue to the bottom.
+  - All switches are made on rows where the used columns are guaranteed safe.
+- So attempt 3 is always guaranteed, hence f(4) <= 3.
+
+Conclusion: f(4) = 3.
+
+Wrong approach to reject:
+- "Must identify all 4 monster columns first, so answer is 5."
+- Why wrong: identifying all monsters is unnecessary; after two discovered monster columns, a guaranteed route exists on attempt 3.

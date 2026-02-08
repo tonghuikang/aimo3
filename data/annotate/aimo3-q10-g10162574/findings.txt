@@ -1,0 +1,39 @@
+# Findings: aimo3-q10-g10162574
+
+## Correct Answer
+- `g(10162574) = 30/47`
+- In lowest terms, `p=30`, `q=47`, so `(p+q) mod 99991 = 77`.
+
+## Correct Approach (Problem-Level)
+- Let `n = M + c` with `M = 3^(2025!)`, `c = 10162574`.
+- Write candidate divisors as `(m, m/alpha, m/beta)` with `alpha,beta > 1` and distinct.
+- Then
+  - `n = m * (1 + 1/alpha + 1/beta)`
+  - `m = n * (alpha*beta) / (alpha*beta + alpha + beta)`.
+- Feasibility requires divisibility constraints equivalent to requiring certain denominator terms divide `n`.
+- The unconstrained best pair `(2,3)` gives ratio `6/11`, but it is infeasible here because `11 ∤ n`.
+- Checking feasible low-ratio pairs, the best feasible one is `(alpha,beta) = (2,15)`, giving
+  - ratio `30/47`
+  - `m = (30/47) n`.
+- For this instance, `47 | n`, so this `m` is integral and feasible.
+- Therefore `f(n) = (30/47)n`.
+- In `g(c) = (1/2025!) floor(2025! f(n)/M)`, the additive correction from `(M+c)/M = 1 + c/M` is tiny; and because `47 | 2025!`, floor simplifies exactly to `30/47`.
+
+## Wrong Approaches and Why They Fail
+- `n-1` smallest-odd-prime-factor model:
+  - Uses a restricted family based on `1 + d + m = n` and concludes `f(n)` from the smallest odd prime divisor of `n-1`.
+  - This is not globally exhaustive over all valid divisor triples.
+  - It produces the wrong branch (e.g., final residue `93194` in one trace).
+
+- Restricted `D = 1+u+v` search model:
+  - Over-constrains feasible constructions to a narrower denominator family.
+  - Misses valid better constructions that lead to the `30/47` optimum.
+  - Leads to wrong output `g(c)=16/25` and residue `41`.
+
+- Overgeneralized `n+1` branch yielding `f(n)=2(n-2)/3`:
+  - Finds a valid-looking construction family but treats it as globally minimal without adequate exclusion of better feasible pairs.
+  - Ends at wrong `g(c)=2/3` and residue `5`.
+
+## Trace Outcome Summary
+- Correct traces: `f3a5vi`, `flziaa`, `lgl1gv`, `xuy13n`.
+- Wrong traces: `5qer37` (93194), `ii3zvh` (5), `kz7htf` (41).

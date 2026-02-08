@@ -1,0 +1,19 @@
+## Answer: correct (789107601)
+
+## Key moments
+- Token 782 [insight]: Sets up the right outer reduction: count ordered distinct tuples `D(n,k)` first, then use `W=D/k!`.
+- Token 2305 [questionable statement]: Assumes the partition-lattice term `F(π)` depends only on the number of blocks `r`, replacing block-size structure by `O_n(r)`.
+- Token 2820 [mistake]: Derives a Stirling-number-only formula `D = Σ_r O_n(r)(-1)^{k-r}c(k,r)`, which is incorrect because block sizes weight exponents.
+- Token 3458 [missed opportunity]: Starts large-instance computation before validating the simplified formula on small brute-force cases.
+- Token 6258-8683 [wasted]: Long sign/Möbius debugging loop while the core issue is the wrong `F(π)` dependency.
+- Token 10383 [breakthrough]: Identifies the actual bug: `F(σ)` is not a function of `r` alone; weighted block sizes must be retained.
+- Token 11249 [insight]: Rewrites constraints correctly as `∏_B x_B^{|B|}=n`, giving per-prime weighted equations `Σ |B| a_B = e_p`.
+- Token 12327 [breakthrough]: Produces the corrected sum over integer partitions `λ` with multiplicity count `N_λ`, Möbius factor `μ_λ`, and `f_λ`.
+- Token 14956-18493 [wasted]: Extended optimization brainstorming before implementing the corrected formula.
+- Token 18493-22427 [wasted]: More complexity analysis/alternative DP ideas without new correctness progress.
+- Token 25571 [insight]: Uses exponent-frequency compression (`∏_e dp[e]^{freq_e}`) to speed the leaf product across primes.
+- Token 26917 [breakthrough]: Implements the full recursive partition-DP for the corrected formula.
+- Token 28478 [verification]: Small-`N` brute-force checks pass, validating the implementation logic.
+- Token 28950 [verification]: Matches the provided benchmark `W(100!,10)=287549200`.
+- Token 29024 [verification]: Re-runs `W(10000!,30)` and confirms the same output.
+- Token 29984 [final answer]: Commits `\boxed{789107601}`.

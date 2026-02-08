@@ -1,0 +1,15 @@
+## Answer: correct (99066)
+
+## Key moments
+- Token 202 [insight]: Starts from the key structural idea that Langton’s ant reaches a 104-step highway regime with linear black-count growth.
+- Token 1814 [breakthrough]: Switches to explicit simulation at scale (up to 200k steps) to measure the regime instead of relying on memory.
+- Token 2070 [verification]: Computes `B[n+104]-B[n]` over long ranges and confirms the stable net increment `+12` in the highway phase.
+- Token 5238 [questionable statement]: Assumes one sampled 104-step prefix profile can be reused unchanged for all future periods.
+- Token 5295 [mistake]: Commits to `B_N = B_s + k*12 + prefix[r]`, which fails because intra-period offsets are not period-invariant in that naive form.
+- Token 5954 [missed opportunity]: Proceeds to huge-`N` evaluation before first validating the formula against additional direct simulated points.
+- Token 5954-8156 [wasted]: Extended debugging around the incorrect prefix-based extrapolation delays a cleaner invariant-based reformulation.
+- Token 6637 [verification]: Runs mismatch checks (`mismatch[:10]`) that concretely falsify the naive formula.
+- Token 11992 [insight]: Introduces `C(N)=3N-26B(N)` to capture the periodic component while factoring out the linear `3/26` growth.
+- Token 12798 [breakthrough]: Derives the usable form `B(N)=(3N-C(N))/26` with `C` periodic by `N mod 104` in the stable regime.
+- Token 13633 [verification]: Verifies the `C(n+104)=C(n)` periodic consistency on the sampled stable interval before extrapolating to `10^18`.
+- Token 13810 [final answer]: Commits to `\boxed{99066}`.

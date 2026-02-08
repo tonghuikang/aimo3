@@ -1,0 +1,15 @@
+## Answer: correct (10477)
+
+## Key moments
+- Token 7991 [insight]: Establishes the key optimization form `f(N)=N*min_{S|N} h(S)/S`.
+- Token 12865 [verification]: Checks low-ratio base cases (`11`, `7`, etc.) against modular constraints to rule them out early.
+- Token 20343 [insight]: Moves to explicit candidate-sum divisibility testing for each offset.
+- Token 25943 [breakthrough]: Gets provisional values `g(c1)=30/47`, `g(c2)=64/97` from divisor-based ratio minimization.
+- Token 30875 [questionable statement]: Flags concern that sums with factor `3` might be missed by a `c+1`-divisor-only shortcut.
+- Token 31950 [breakthrough]: Resolves that concern by directly scanning `N mod S` and confirming the same minima.
+- Token 33462 [insight]: Cross-checks all relevant divisors of `c+1` and their ratios, reinforcing `47` and `97` as best feasible sums.
+- Token 37124 [mistake]: Briefly drifts in prime-ratio arithmetic reasoning, creating local confusion about expected magnitude.
+- Token 37571 [breakthrough]: Returns to computed `best_triple` outputs and settles the correct prime-factor comparisons.
+- Token 37930 [verification]: Confirms floor exactness using `2025!` divisibility and tiny `c/M` correction.
+- Token 38678-39037 [wasted]: Additional heuristic/base-pattern discussion after the minimizing feasible sums were already fixed.
+- Token 39432 [final answer]: Commits to `\boxed{10477}` (correct).

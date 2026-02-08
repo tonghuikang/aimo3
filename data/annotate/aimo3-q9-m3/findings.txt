@@ -1,0 +1,32 @@
+Correct answer: 24
+
+Correct approach:
+1. Let
+   A(x)=\sum_{i=0}^3 \alpha(i)x^i,
+   and rewrite the condition as a convolution/product equation in Laurent polynomials:
+   A(x)B(x)=x^k+x^l=x^{\min(k,l)}(1+x^d), d=|k-l|>0.
+2. So (up to monomial/sign units) \alpha is shifty iff A(x)=\pm x^e D(x), where D(x) divides some 1+x^d in \mathbb{Z}[x].
+3. With support width at most 4 (degree at most 3 after shift), only low-degree cyclotomic possibilities matter. The valid primitive D are:
+   - 1
+   - x+1
+   - x^2+1
+   - x^2-x+1
+   - x^3+1=(x+1)(x^2-x+1)
+4. Count shifts/signs under support {0,1,2,3}:
+   - \pm x^e (e=0,1,2,3): 8
+   - \pm x^e(x+1) (e=0,1,2): 6
+   - \pm x^e(x^2+1) (e=0,1): 4
+   - \pm x^e(x^2-x+1) (e=0,1): 4
+   - \pm(x^3+1): 2
+   Total = 8+6+4+4+2 = 24.
+
+Wrong approaches seen:
+1. Wrong answer 26:
+   - Incorrectly allowing D=(x+1)(x^2+1)=\Phi_2\Phi_4 as a divisor of some 1+x^d.
+   - Why wrong: \Phi_2 and \Phi_4 do not occur together in a single x^d+1 (2-adic index constraint in x^d+1 factorization).
+   - This adds 2 fake signed cases and inflates 24 -> 26.
+2. Wrong answer 10:
+   - Incorrectly enforcing constant-term \pm1 on the full A(x), which excludes shifted monomial families (e.g., \pm x, \pm x^2, \pm x^3).
+   - Why wrong: monomial factors are Laurent units in the binomial-divisibility formulation and must be allowed.
+3. Auxiliary pitfall:
+   - Brute-force divisibility checks that accept rational quotients (instead of integer quotients) create false positives; quotient integrality must be enforced in \mathbb{Z}[x].

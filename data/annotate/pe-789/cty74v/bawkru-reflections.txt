@@ -1,0 +1,27 @@
+## Answer: wrong (2000000010)
+
+## Key moments
+- Token 898 [insight]: Notices pairing `1` with `2` is far cheaper than pairing `1` with `p-1`, opening a path away from naive inverse pairing.
+- Token 1391 [breakthrough]: Builds candidate construction `(1,2)`, `(p-1,p-2)`, others inverse-paired, and derives candidate total `(p+3)/2`.
+- Token 1862 [verification]: Gives a local lower-bound check that pairs containing `±1` cannot achieve cost `1`, so each must be at least `2`.
+- Token 4219 [questionable statement]: Assumes the remaining set after fixing `(1,2)` and `(p-1,p-2)` can still be fully decomposed into cost-1 inverse pairs.
+- Token 4824 [mistake]: A contradiction appears (`(p+1)/2` cannot find its inverse partner in the remaining set), invalidating the claimed global structure.
+- Token 5727-6548 [verification]: Brute-force checks on small primes (`p=7,11`) correctly falsify the earlier formula and force reconsideration.
+- Token 6548-15536 [wasted]: Long speculative exploration repeats heuristics and partial ideas without a stable objective.
+- Token 16444 [insight]: Reframes the search as breaking inverse pairs to integrate `1` and `p-1`, which is structurally useful.
+- Token 16711 [breakthrough]: Computes a concrete repaired construction for `p=13` that matches known optimum, validating the reframe on one case.
+- Token 18885 [questionable statement]: Promotes a specific three-pair repair formula as if broadly optimal before proving it across prime classes.
+- Token 19585 [mistake]: The same scheme fails for `p=17`, confirming the over-generalization.
+- Token 25071 [questionable statement]: Infers a global congruence-class pattern ("`p mod 8 = 1` always gives `p-1`") from sparse samples.
+- Token 25190 [mistake]: Continues pattern extrapolation despite counterexamples and no proof criterion.
+- Token 28571 [insight]: Defines an extra-cost objective (deviation from baseline cost-1 inverse matching), a better optimization lens.
+- Token 37013 [insight]: Rewrites edge scores as extra weight `ab mod p - 1`, clarifying why augmenting-path cost is the right quantity to minimize.
+- Token 41290 [breakthrough]: Models the repair process as alternating augmenting paths, linking combinatorics to shortest-path style reasoning.
+- Token 46850 [insight]: Connects alternating updates to powers/order behavior, suggesting an algebraic direction.
+- Token 55729 [breakthrough]: States the right reduced target: minimize `Σ(c_i-1)` subject to `∏ c_i ≡ -1 (mod p)`.
+- Token 60879 [verification]: Correctly computes that `2` has full order `p-1`, ruling out short all-2 representations.
+- Token 62880-71762 [wasted]: Repeated capped searches and reformulations fail to close the objective; no certified optimum is produced.
+- Token 71878 [questionable statement]: Starts treating `p-1` as likely mainly from trend intuition, not from a solved optimization.
+- Token 77978 [mistake]: Makes a final unsupported leap that the product is likely `p-1`.
+- Token 78092 [missed opportunity]: Acknowledges uncertainty but chooses based on plausibility instead of proving or validating.
+- Token 78121 [final answer]: Commits to `\boxed{2000000010}`, which is incorrect.

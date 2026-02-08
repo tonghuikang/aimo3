@@ -1,0 +1,34 @@
+# Problem pe-877 - XOR Product Equation
+
+## Correct Answer
+- `X(10^18) = 336785000760344621`
+- `X(10^18) mod 99991 = 17095`
+
+## Correct Approach
+- Model XOR-product as polynomial multiplication over `GF(2)`.
+- With `A(x), B(x)` the bit-polynomials of `a,b`, rewrite:
+  - `A(x^2) + xA(x)B(x) + B(x^2) = 1 + x^2`.
+- Split by parity (one variable even, the other odd) and solve bit-coefficient constraints linearly.
+  - Example even/odd form: `a = 2u`, `b` odd.
+  - Then `b0=b1=1`, plus linear recurrences from coefficient matching, including the crucial degree index `2m-2` in shifted terms.
+  - Symmetric equations handle odd/even steps.
+- The valid `(a,b)` pairs form a single increasing chain of consecutive terms:
+  - `0, 3, 6, 15, 24, 63, 102, 243, 384, 1011, ...`
+  - and each solution is `(x_n, x_{n+1})`.
+- Therefore:
+  - `X(N)` is XOR of all chain terms `x_k <= N` with `k >= 1`.
+  - For `N=10^18`, this yields `336785000760344621`, hence modulo `99991` gives `17095`.
+
+## Wrong Approaches And Why They Fail
+- **Over-restrictive parity-family classification for `A(x)B(x)`**:
+  - Assuming `s_even=0` forces strict parity-separated supports (one polynomial only even indices, the other only odd) is false.
+  - Even-degree coefficients can cancel across multiple convolution terms (e.g. the valid sample `(3,6)`).
+- **Wrong coefficient indexing in shifted term matching**:
+  - Using `(m-1)` instead of degree `2m-2` when reading coefficients of `x^2*(u^2 + uB)` gives incorrect recurrences.
+  - This falsely rejects real solutions (notably `(24,63)`).
+- **Underconstrained linear solve without the `b>a`/bit-length selection rule**:
+  - The affine system may contain extra formal solutions (including `b <= a`).
+  - The required chain successor is the unique valid solution above the current term.
+
+## Useful Sanity Check
+- The computation must reproduce the given check: `X(10) = 5`.

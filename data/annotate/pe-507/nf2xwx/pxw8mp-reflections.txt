@@ -1,0 +1,17 @@
+## Answer: wrong (318293154948310412)
+
+## Key moments
+- Token 50 [insight]: Correctly reframes the task as block-wise computation over non-overlapping windows of 12 tribonacci residues, which sets up scalable processing.
+- Token 1944 [questionable statement]: Starts treating cancellation of the third coordinate (or gcd-style reasoning on one coordinate) as the central path to the global L1 minimum.
+- Token 4289 [mistake]: Commits to an invalid reduction of S(n) using forced third-coordinate cancellation, which does not solve the full coupled 3-coordinate objective.
+- Token 4886 [missed opportunity]: Observes the n=1 contradiction against the derived formula but does not fully reset the core assumption immediately.
+- Token 6645-7081 [wasted]: Long speculative argument about whether the minimum is just one basis vector, without a sound criterion and after already seeing contradictions.
+- Token 10680 [missed opportunity]: Notes that strong cancellations are required but still delays moving to an exact shortest-vector criterion under L1.
+- Token 17760 [insight]: Shifts to Euclidean/Gauss-style lattice reduction as a practical route to short integer combinations.
+- Token 22131 [breakthrough]: Verifies on small cases that reduced-basis candidates can recover expected small-n behavior, enabling a fast per-block algorithm.
+- Token 25960 [questionable statement]: Overgeneralizes that the reduced basis short vector alone gives S(n), without proving L1 optimality conditions.
+- Token 29294-33479 [wasted]: Extensive period and runtime speculation that does not resolve correctness of the L1 candidate set.
+- Token 37468 [mistake]: Implements `sum_S_fast_int` with candidate set `{a,b,V,W}` only, omitting critical `b1+b2` / `b1-b2` L1 candidates, causing systematic overestimation.
+- Token 38218 [missed opportunity]: Validation is limited to `N=10`, which is insufficient to catch the missing-candidate bug that appears at larger N.
+- Token 38723 [missed opportunity]: Cross-checks against an earlier method that shares the same assumption, so verification is not independent.
+- Token 39054 [final answer]: Boxes `318293154948310412`, which is incorrect.

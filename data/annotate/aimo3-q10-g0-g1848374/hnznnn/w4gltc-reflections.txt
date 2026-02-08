@@ -1,0 +1,13 @@
+## Answer: correct (173)
+
+## Key moments
+- Token 725 [breakthrough]: Correctly reduces the task to minimizing `lcm(a,b,c)` over distinct positive triples with fixed sum.
+- Token 1633-3823 [wasted]: Spends a long stretch re-deriving scaling/ratio behavior and testing broad heuristics before committing to concrete divisibility checks.
+- Token 4433 [breakthrough]: Identifies the key ratio objective `lcm/sum` and the divisibility-of-sum constraint for `f(n)`.
+- Token 8031 [mistake]: Over-constrains structure by treating some coefficient-sum forms as effectively impossible, which risks pruning valid constructions too early.
+- Token 12135 [verification]: Uses brute-force checks on power-of-3 sums to support the `2/3` candidate for the `M` case.
+- Token 17343 [breakthrough]: Connects `M \equiv 1 \pmod p` (for many small `p\neq3`) to divisors of `c+1`, enabling targeted divisor search for `M+1848374`.
+- Token 20492 [breakthrough]: Lands on the `25`-based construction (ratio `16/25`) as the governing case for the shifted input.
+- Token 26026 [verification]: Revisits the small-prime congruence logic to justify why the divisor search can focus on factors inherited from `c+1`.
+- Token 28984 [verification]: Explicitly checks floor/integrality behavior in `g(c)` so tiny `c/M` perturbations do not alter the integer floors.
+- Token 29210 [final answer]: Commits to `\boxed{173}`; this final value is correct.

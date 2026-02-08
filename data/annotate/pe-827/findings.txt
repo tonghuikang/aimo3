@@ -1,0 +1,43 @@
+# PE 827 Findings
+
+## Correct Answer
+- \(\sum_{k=1}^{18} Q(10^k) \bmod 409120391 = 397289979\)
+
+## Correct Counting Model
+- Let \(r(N)\) be the number of Pythagorean triples \((a,b,c)\), \(a<b<c\), that contain \(N\) as a side.
+- Write
+  - \(N = 2^e \prod_{p\ \text{odd}} p^{\alpha_p}\)
+  - \(X = \prod_{p\ \text{odd},\ \alpha_p>0} (1+2\alpha_p)\)
+  - \(Y = \prod_{p\equiv 1 \pmod 4,\ \alpha_p>0} (1+2\alpha_p)\)
+- Decomposition:
+  - Odd-leg part: \(O(N)=\frac{X-1}{2}\)
+  - Even-leg part: \(E(N)=\max(e-1,0)\,X\)
+  - Hypotenuse part: \(H(N)=\frac{Y-1}{2}\)
+- Total:
+  - \(r(N)=O(N)+E(N)+H(N)\)
+  - For \(e\ge 1\): \(r(N)=\frac{(2e-1)X+Y-2}{2}\)
+
+## Critical Hypotenuse Condition
+- Primitive hypotenuse divisors must use only primes \(1 \bmod 4\).
+- A prime \(3 \bmod 4\) cannot appear in a primitive hypotenuse divisor at all (not even with even exponent).
+- This is the key correction that makes \(r(8064000)=1000\) consistent with the anchor.
+
+## Inversion Strategy for \(Q(10^k)\)
+- Solve \(r(N)=10^k\) by using
+  - \((2e-1)X + Y = 2(10^k+1)\), with \(Y\mid X\).
+  - Let \(X=YB\), \(t=2e-1\) (odd): \(Y(tB+1)=2(10^k+1)\).
+- Enumerate factorizations of \(2(10^k+1)\), map factors to \((Y,t,B)\), and construct the minimal \(N\):
+  - \(Y\)-side exponents go to primes \(1\bmod 4\),
+  - \(B\)-side exponents go to primes \(3\bmod 4\),
+  - assign larger exponents to smaller eligible primes.
+- This reproduces known anchors such as \(Q(10)=48\) and \(Q(10^3)=8064000\), then yields the final modulo sum above.
+
+## Wrong Approaches and Why They Fail
+- Wrong hypotenuse rule:
+  - Using "primes \(3\bmod 4\) allowed with even exponent" for primitive hypotenuse counting overcounts \(H(N)\).
+  - This causes wrong counts near the anchor (e.g., \(1005\) or \(1003\) instead of \(1000\) for \(N=8064000\)).
+- Unjustified search restriction:
+  - Restricting candidate structures heuristically (for example, limiting \(Y\) choices) loses valid minima.
+  - This produced an incorrect final modulo result \(244992485\).
+- Unresolved-contradiction fallback:
+  - Treating anchor/model mismatch as a pattern-guessing problem instead of completing a corrected derivation led to placeholder output \(0\).

@@ -1,0 +1,20 @@
+Correct answer: 794394453
+
+Correct approach:
+- Write `n! = ∏_{q <= n} q^{e_q}`, where `e_q = v_q(n!)`.
+- For each odd prime `q`, let `d_q = ord_q(p)` and `t_q = v_q(p^{d_q} - 1)`. Then
+  `ord_{q^{e_q}}(p) = d_q * q^{max(0, e_q - t_q)}`.
+- Handle `q = 2` separately (non-cyclic unit group). For `p = 10^9+7`, `v2(p-1)=1`, `v2(p+1)=3`, and with `e2 = v2(10^7!) = 9,999,992`, we get
+  `ord_{2^{e2}}(p) = 2^{e2-3}`.
+- The final order is
+  `R(p,n) = lcm_{q <= n} ord_{q^{e_q}}(p)`.
+  Compute it by prime-exponent maxima:
+  for each prime `r`, take the maximum exponent of `r` appearing across all `ord_{q^{e_q}}(p)`.
+- Efficient implementation:
+  sieve primes up to `10^7`, factor `q-1` with SPF to get `d_q`, compute `t_q` by checking lifting (`q^2`, `q^3`, ...), and aggregate max exponents; then multiply prime powers modulo `10^9+7`.
+- For this base and range, odd primes with `t_q > 1` are `3, 5, 43, 109` (each with `t_q=2`).
+
+Wrong approaches and why they fail:
+- Assuming `R(p,n) = λ(n!)` (or near-`λ(n!)`) is wrong. Example: for `n=12`, `λ(12!) = 103680` but the true value is `17280`.
+- Replacing LCM structure with direct products (for example using `∏ d_q`, or multiplying separate components without max-exponent merging) overcounts shared prime factors and gives incorrect outputs (e.g. `69120` for `n=12`, and wrong large-`n` candidates such as `631550145` and `505423849`).
+- Using `e_q-1` unconditionally for odd-prime power growth ignores cases `t_q > 1`, causing incorrect prime exponents in the final LCM.

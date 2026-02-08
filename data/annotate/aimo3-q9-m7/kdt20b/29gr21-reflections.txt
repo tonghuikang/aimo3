@@ -1,0 +1,14 @@
+## Answer: correct (116)
+
+## Key moments
+- Token 1737 [insight]: Switches from sequence notation to generating functions so the condition becomes a polynomial product problem.
+- Token 3425 [breakthrough]: Identifies the core structure `A(t)=t^mP(t)` with `P | (1+t^d)` (up to Laurent shifts/sign), which is the key reduction.
+- Token 8244 [insight]: Narrows admissible cyclotomic factors to a fixed 2-adic layer for each `1+t^d`, enabling finite casework.
+- Token 10626 [verification]: Checks uniqueness of the `t^m` shift decomposition and the endpoint `\pm1` constraint for candidate `\alpha`.
+- Token 15401 [breakthrough]: Derives the counting formula `2\sum_P (8-\deg P)` after separating divisor-pattern choice from shift/sign choice.
+- Token 22180 [verification]: Computes per-pattern shift contributions and confirms the subtotal `\sum_P(8-\deg P)=58`.
+- Token 26951 [missed opportunity]: Already has the closed-form count logic, but delays commitment and reopens broad brute-force exploration.
+- Token 26951-37002 [wasted]: Large block of brute-force planning/runs/timeouts that does not materially change the already-established count.
+- Token 36950 [verification]: Verifies constructed candidates satisfy the required two-spike correlation behavior.
+- Token 38923 [verification]: Performs edge checks (zero function exclusion and sign-pair handling) consistent with the final count.
+- Token 39149 [final answer]: Commits to `\boxed{116}`.

@@ -1,0 +1,58 @@
+# Problem PE_785 Findings
+
+## Problem Description
+Find S(10^9) where S(N) = sum of (x+y+z) for all primitive solutions (x,y,z) with 1 <= x <= y <= z <= N, gcd(x,y,z)=1.
+Diophantine equation: 15(x^2 + y^2 + z^2) = 34(xy + yz + zx)
+Answer modulo 99991.
+
+## Correct Answer
+**39390**
+
+## Known Wrong Values
+- 35563 (computed by an incomplete representative filter that missed valid primitive families)
+- 0 (traces that failed to produce a final answer)
+
+## Trace Status
+- bxi7lk.txt: CORRECT (39390) - initially got 35563, then self-corrected
+- 8auth0.txt: CORRECT (39390)
+- 12o64z.txt: WRONG (0/timeout)
+- 0vyj1u.txt: WRONG (0/timeout)
+
+## Key Insights
+
+### Mathematical Structure
+1. The equation defines a quadratic cone Q = v^T A v = 0 where A = [[15,-17,-17],[-17,15,-17],[-17,-17,15]]
+2. Matrix has eigenvalues: -19 (eigenvector (1,1,1)) and 32 (double, orthogonal to (1,1,1))
+3. A rational parametrization leads to integer representatives (p,q), but primitive triples are not captured by a naive coprime-only filter.
+
+### Parametric Solution
+- x0 = q(17q - 2p)
+- y0 = p^2 - q^2
+- z0 = (3p^2 + 34pq + 88q^2)/5
+- Primitive triple is obtained by dividing (x0, y0, z0) by gcd(x0, y0, z0), then ordering x <= y <= z.
+
+### Weight Formula
+For valid minimal representatives, the primitive contribution simplifies to:
+- x + y + z = (8/25) * (p^2 + 3pq + 21q^2)
+with bound:
+- 3p^2 + 34pq + 88q^2 <= 25N  (equivalent to z <= N for ordered triples)
+
+### Critical Conditions for Valid Solutions
+1. p > q > 0 (ensures y positive)
+2. p < (17/2)q = 8.5q (ensures x positive)
+3. p % 5 == q % 5 (integrality condition)
+4. Minimal representative gcd condition: gcd(p,q) is 1 or 5
+5. If gcd(p,q) = 5, then after dividing by 5, residues must differ modulo 5:
+   (p/5) % 5 != (q/5) % 5
+6. Exclude (p+q) % 19 == 0 in the minimal-representative count (these correspond to non-minimal representations with an extra factor 19)
+
+### Key Error Leading to Wrong Answer 35563
+The 35563 method counted only coprime representatives and therefore missed valid primitive families whose minimal representative has gcd(p,q)=5 (for example, families represented by pairs like (10,5) under the minimality rule).
+
+### Difference Between Correct and Wrong Approaches
+- WRONG (35563): Uses an incomplete representative filter (coprime-only), causing undercount.
+- CORRECT (39390): Uses the full minimal representative conditions (including the gcd=5 branch and 5-adic minimality check), then sums with the weight formula and bound.
+
+## Errors in Wrong Traces
+- 12o64z: Did not complete computation, likely timed out or got lost in exploration
+- 0vyj1u: Similar - did not reach final computation

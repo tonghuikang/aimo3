@@ -1,0 +1,16 @@
+## Answer: correct (189)
+
+## Key moments
+- Token 2417 [insight]: Formulates the exact optimization correctly: for each divisor `a \le n^{1/3}`, choose the best feasible `b` and maximize `a^2 b` (equivalently minimize `c/a`).
+- Token 10089 [missed opportunity]: Considers branch-and-bound but still hesitates between exact search and near-target heuristics instead of committing immediately to the exact objective-driven route.
+- Token 11180 [questionable statement]: Leans on the idea that taking `a` as close as possible to `n^{1/3}` should dominate, which is only an upper-bound intuition when divisor gaps for `b` matter.
+- Token 11972-12484 [wasted]: Spends a long interval testing shortcut rules around largest-divisor heuristics before switching to a fully rigorous solver.
+- Token 17891 [insight]: Recognizes the heuristic rule is insufficient and that the full optimization must be solved exactly.
+- Token 17929 [breakthrough]: Commits to a thorough branch-and-bound search for the true objective instead of heuristic candidate ranking.
+- Token 21444 [insight]: Derives a branch upper bound for `a^2 b` from partial states, enabling safe pruning with correctness preserved.
+- Token 30483 [questionable statement]: Briefly considers using greedy for the `b` subproblem (largest divisor under a bound), which is not guaranteed exact.
+- Token 30611 [breakthrough]: Switches to exact recursive `max_divisor_leq` for `b`, removing the remaining correctness risk in the inner step.
+- Token 32603 [verification]: Re-runs the same method on `20!` and matches the known value `4034872`.
+- Token 34918 [verification]: Verifies against `165` and `100100`, reproducing `19` and `142`.
+- Token 35007 [verification]: Computes the `43!` triple with the exact solver and confirms the modulo result `189`.
+- Token 35120 [final answer]: Commits to `\boxed{189}`, which is correct.

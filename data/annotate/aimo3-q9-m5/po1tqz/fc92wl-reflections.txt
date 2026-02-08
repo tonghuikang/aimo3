@@ -1,0 +1,13 @@
+## Answer: correct (58)
+
+## Key moments
+- Token 605-1966 [wasted]: Extended setup/reindexing without committing to the algebraic representation that actually drives the solution.
+- Token 2178 [insight]: Introduces generating functions and maps the correlation constraint to polynomial/Laurent multiplication.
+- Token 3361 [breakthrough]: Uses the right structural form `A(x)=x^m C(x)` with `C | (1+x^d)`, preserving shifted supports inside `[0,5]`.
+- Token 11215 [questionable statement]: Counts subsets across all six low-degree even-index cyclotomics as if they are jointly compatible in one `x^N+1` factorization.
+- Token 12486 [mistake]: Reaches an incorrect interim total of 28 from that incompatibility-blind counting.
+- Token 14156 [breakthrough]: Restores the same-`v2` compatibility constraint and corrects the mixed-factor issue.
+- Token 16859 [mistake]: Still undercounts at 18 by counting only unshifted monic divisor cores.
+- Token 17339 [breakthrough]: Adds the missing shift multiplicity (`2*(6-deg(C))` over valid cores) and recovers the correct total 58.
+- Token 18020-18360 [verification]: Runs consistency checks on coefficient bounds and finite candidate structure, aligning with the 58 count.
+- Token 18392 [final answer]: Moves to the `\boxed{58}` conclusion.

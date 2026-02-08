@@ -1,0 +1,39 @@
+## Problem: pe-795
+For a positive integer n, define
+\[
+g(n)=\sum_{i=1}^{n}(-1)^i\gcd(n,i^2),\qquad G(N)=\sum_{n=1}^{N}g(n).
+\]
+Find \(G(12345678)\bmod 99991\).
+
+## Correct Answer
+84047
+
+## Correct Approach
+- Use the identity
+  \(\gcd(n,i^2)=\sum_{d\mid n,\,d\mid i^2}\varphi(d)\),
+  then separate odd/even structure.
+- For odd n, pair i with n-i. The gcd terms match and signs cancel for i=1..n-1; only i=n remains. Therefore:
+  \(g(n)=-n\) for odd n.
+- For even n, write \(n=2^e m\) with m odd (e>=1). Then
+  \(g(2^e m)=B(e)\,t(m)\), where
+  \(t(m)=\sum_{i=1}^{m}\gcd(m,i^2)\) (odd m).
+- The 2-adic factor is:
+  - If e is odd: \(B(e)=2^{(3e+1)/2}-3\cdot 2^{e-1}\)
+  - If e is even: \(B(e)=3\cdot 2^{e-1}(2^{e/2}-1)\)
+- \(t(m)\) is multiplicative on odd m. For odd prime powers \(p^a\):
+  - \(a=2u\): \(t(p^a)=(p+1)p^{3u-1}-p^{2u-1}\)
+  - \(a=2u+1\): \(t(p^a)=2p^{3u+1}-p^{2u}\)
+- Hence
+  \[
+  G(N)= -\left\lceil\frac N2\right\rceil^2
+  +\sum_{e\ge1} B(e)\,S\!\left(\left\lfloor\frac{N}{2^e}\right\rfloor\right),
+  \quad S(K)=\sum_{\substack{m\le K\\ m\text{ odd}}} t(m).
+  \]
+- Compute t(m) for odd m up to \(\lfloor N/2\rfloor\) with a sieve/factorization pass, build odd-prefix sums S, and evaluate the finite e-sum (up to \(\lfloor\log_2 N\rfloor\)).
+- Validation checkpoint: reproduces \(G(1234)=2194708\), then yields \(G(12345678)\bmod 99991=84047\).
+
+## Wrong Approaches And Why They Fail
+- Pairing odd-n terms as i with n+1-i: these indices have the same parity, so alternating signs do not cancel. Correct cancellation uses i with n-i.
+- Treating grouped terms like \(A_t\) as functions of t alone when swapping summations: invalid because admissible divisor exponents depend on n (the \(d\mid n\) constraint), so \(A_t\) is n-dependent.
+- Pattern-guessing formulas for even n (using only small-value fits) is insufficient; it misses exponent constraints from the condition \(d\mid i^2\).
+- In this state, both traces eventually correct these issues and end at the correct final value.

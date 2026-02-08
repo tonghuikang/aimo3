@@ -1,0 +1,20 @@
+## Answer: correct (777577686)
+
+## Key moments
+- Token 1299 [insight]: Stops trying ad-hoc combinatorial guesses and commits to a bounded-frontier DP plus recurrence-discovery strategy.
+- Token 9750 [breakthrough]: Formulates the introduce/forget-window DP over the last four active vertices, which makes exact counting tractable.
+- Token 17243 [insight]: Pins down the crucial forgetting-degree rule (start/end degree 1, other forgotten vertices degree 2), stabilizing the DP state transitions.
+- Token 21681 [breakthrough]: Implements `compute_f_up_to` and gets a working exact counter for `f(n)`.
+- Token 24289 [questionable statement]: Proceeds with a sequence that treats `f(1)=0`, even though the trivial path at `n=1` should count.
+- Token 24322 [mistake]: Uses the wrong base case in the first `S(10)` cube-sum check path.
+- Token 24466 [breakthrough]: Corrects to `f(1)=1`, restoring consistency with the problem’s sample totals.
+- Token 25409 [questionable statement]: Assumes BM coefficients obtained modulo a prime can be treated directly as integer recurrence coefficients.
+- Token 26437 [missed opportunity]: Moves to integer validation before first checking the same recurrence strictly in modular arithmetic.
+- Token 26580 [mistake]: Integer-side recurrence validation fails (`Recurrence holds for seq200: False`) because coefficients are still modular.
+- Token 26947 [verification]: Confirms the BM recurrence does hold modulo `10^9+7`, isolating the issue to coefficient lifting, not BM itself.
+- Token 27145 [breakthrough]: Switches to exact integer linear algebra to recover the true integer recurrence.
+- Token 28072 [verification]: Verifies `f(n)` recurrence coefficients `[2,-1,2,1,1,0,-1,-1]` on a long prefix.
+- Token 35228 [verification]: Validates the sum-of-cubes pipeline against the published `S(1000) mod 10^9 = 225031475` sample.
+- Token 38647 [verification]: Rechecks all published checkpoints (`S(10)`, `S(20)`, `S(1000)`, `S(10^6)`), all matching.
+- Token 39437-39890 [wasted]: Extended late-stage rehash of already-verified concerns without adding new discriminating tests.
+- Token 39947 [final answer]: Commits the boxed result `777577686`.

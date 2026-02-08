@@ -1,0 +1,19 @@
+## Answer: correct (173)
+
+## Key moments
+- Token 981 [breakthrough]: Establishes the core minimization as `f(n)=\min \operatorname{lcm}(d_1,d_2,d_3)` over distinct triples summing to `n`.
+- Token 5498 [mistake]: Treats the `d=(n-1)/2` style choice as a near-optimal generic route, but this conflicts with distinctness (`b=c`) and needs correction.
+- Token 11350 [verification]: Returns to the `a=1,b\mid(n-1)` construction and checks how far it can legitimately push the `M` case.
+- Token 13673 [breakthrough]: Uses repunit factorization of `(3^K-1)/2` to reason about accessible small divisors of `M-1`.
+- Token 14990 [breakthrough]: Corrects to using divisor `4` (not just smallest odd factors), yielding the stronger `M`-case value.
+- Token 17304-21139 [wasted]: Prolonged attempt to generalize a formula from `n-1` divisor heuristics before validating against full triple-minimization conditions.
+- Token 23272 [mistake]: Overfocuses on one divisor-family criterion for `M+c-1`, missing competing constructions and leading to a wrong intermediate result.
+- Token 30747 [missed opportunity]: Flags that the derived `f(M)` formula may be non-global but does not immediately resolve the discrepancy with a full competitor sweep.
+- Token 34657 [mistake]: Produces an incorrect intermediate final (`31759`) from the flawed branch.
+- Token 38027 [wasted]: Continues optimizing within an already suspect parameterization instead of first reconciling with the failed intermediate answer.
+- Token 42937 [breakthrough]: Re-parameterizes the shifted case with a cleaner divisor-form search, opening a path away from the earlier dead end.
+- Token 50094 [verification]: Rechecks the candidate-ratio frontier against small-divisor templates before final arithmetic consolidation.
+- Token 52859 [breakthrough]: Later recomputes with corrected `g` components, recovering `98/75` and `p+q=173`.
+- Token 57798 [verification]: Performs another ratio sanity pass against larger candidate families before final consolidation.
+- Token 61244 [verification]: Explicitly checks that `98/75` is reduced before extracting `p,q`.
+- Token 61302 [final answer]: Commits to `\boxed{173}`; this final value is correct.

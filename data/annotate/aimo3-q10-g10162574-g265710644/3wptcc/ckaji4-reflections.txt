@@ -1,0 +1,14 @@
+## Answer: wrong (21279)
+
+## Key moments
+- Token 3406 [insight]: Correctly frames the task via triples where two proper divisors of `L` sum with `L` to `N`.
+- Token 12935 [insight]: Introduces ratio-based candidate comparison and ties feasibility to modular checks.
+- Token 20721 [insight]: Sets a concrete plan: sort candidate constructions by ratio, then test divisibility.
+- Token 25846 [insight]: Starts careful gcd/reduction analysis (`D,g,p'`) for when denominators can be canceled.
+- Token 28729 [questionable statement]: Decides to enforce `D | N` as the practical condition, treating it as the main search criterion.
+- Token 35017 [breakthrough]: Implements the modular scan over candidate `D` values and gets a strong first term candidate.
+- Token 38352 [mistake]: Commits to `g(c2)=130/197` as optimal under the over-restrictive `D | N` filter, missing valid unreduced-denominator cases.
+- Token 39640-40805 [wasted]: Spends a long segment proving search-range sufficiency inside the same flawed criterion.
+- Token 43057 [missed opportunity]: Notices `D=97` divisibility but does not revisit unreduced constructions (the key route to `64/97`).
+- Token 44463 [verification]: Checks floor exactness and fraction reduction carefully, but for already-wrong `g` inputs.
+- Token 44712 [final answer]: Commits to `\boxed{21279}` (incorrect).

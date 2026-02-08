@@ -1,0 +1,13 @@
+## Answer: wrong (45548)
+
+## Key moments
+- Token 80-1116 [wasted]: Spends a long stretch reinterpreting geometry and stack mechanics before pinning down a computable state variable.
+- Token 1178 [questionable statement]: Models escape with the top condition `H - h_i + l_i >= D`, setting up a fragile deadline derivation.
+- Token 3470 [mistake]: Commits to the `H_rem - h_i + l_i >= D` rule as the core transition, which later fails against the provided sanity targets.
+- Token 12953 [verification]: Brute-force checks for `N=5` expose mismatch (`328` under current model vs given `401`), correctly signaling a modeling bug.
+- Token 14605 [insight]: Notices the missing geometric term: the escaping troll’s own `h_i` contributes to shoulder height.
+- Token 15305 [breakthrough]: Rewrites the constraint as `H_rem + l_i >= D` and derives the updated prefix bound `S <= C + l_i`.
+- Token 15615 [questionable statement]: Treats `cap_i = C + l_i` as the full scheduling key and effectively drops `h_i` from the per-job deadline structure.
+- Token 16048 [mistake]: Declares the cap-only DP finalized after matching small examples, but this misses the needed `h_i + l_i` deadline form for large `N`.
+- Token 16077-16138 [wasted]: Jumps straight to `N=1000` with no alternative-form cross-check once the revised DP is in place.
+- Token 16138 [final answer]: Commits to `45548`, which is incorrect.

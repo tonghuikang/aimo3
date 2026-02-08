@@ -1,0 +1,15 @@
+## Answer: correct (238413705)
+
+## Key moments
+- Token 1157 [questionable statement]: Briefly frames odd-digit constraints as “basically no parity restriction,” which is only partially true.
+- Token 1157 [mistake]: That framing would overcount by allowing positive even counts for odd digits if used directly.
+- Token 2419 [breakthrough]: Clarifies the final-count requirement and explicitly notes parity-only states cannot separate zero from positive-even for odd digits.
+- Token 3121 [insight]: Introduces the EGF setup with per-digit allowed count sets, which cleanly models order-sensitive counting.
+- Token 7188 [breakthrough]: Converts the EGF into a finite exponential sum \(\sum_{m=-10}^{10} C_m e^{mx}\), yielding power-sum formulas for \(N(L)\).
+- Token 9536 [breakthrough]: Derives coefficient-polynomial forms for both \(N(L)\) and the leading-zero subtraction term \(N_0(L)\).
+- Token 11499 [verification]: Computes \(Q(7)\) and matches the provided reference value.
+- Token 11555 [verification]: Computes \(Q(100)\bmod 1{,}000{,}000{,}123\) and matches the provided reference value.
+- Token 12144-12355 [wasted]: Over-extended edge-case walkthrough for \(m=0\) geometric sums after the main formula was already stable.
+- Token 13037 [verification]: Evaluates \(\sum_{u=1}^{39} Q(2^u)\) via the closed-form implementation.
+- Token 13121 [verification]: Cross-checks closed-form and direct-prefix implementations on smaller powers to confirm consistency.
+- Token 13430 [final answer]: Commits to the final value \(238413705\).

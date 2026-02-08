@@ -1,0 +1,23 @@
+## Answer: correct (243559751)
+
+## Key moments
+- Token 350 [insight]: Establishes the fixed move count (`n-1`) from the total-stones invariant, which anchors later combinatorial modeling.
+- Token 2405 [verification]: Uses brute force on small `n` (`n=3`) to ground the search in exact values.
+- Token 3414 [verification]: Extends brute checks through `n=8`, confirming the computational baseline matches the given anchor `F(8)`.
+- Token 5121 [breakthrough]: Identifies the successful-sequence count pattern `A_n = (n-1)! * n^{n-2}` (ordered-edge Cayley structure).
+- Token 7135 [insight]: Reframes the target as expected score times `A_n`, enabling separation of counting and scoring.
+- Token 9265-15372 [wasted]: Long heuristic ratio/harmonic-pattern exploration that does not produce a provable formula.
+- Token 16872 [insight]: Recognizes edge contributions are not trivially “leaf-only” and must be solved globally.
+- Token 22489 [verification]: Checks the linear constraints on the small path case, supporting uniqueness of edge-side amounts.
+- Token 23222 [breakthrough]: Formalizes that each tree has a unique half-edge amount solution under per-vertex sums and edge complement constraints.
+- Token 24557 [insight]: Concludes any edge ordering is feasible once that unique assignment is fixed, reducing total score sum to `(n-1)! * G(n)`.
+- Token 24941 [insight]: Defines the new objective `G(n)` (sum of per-tree edge mins), turning the problem into pure tree-statistic aggregation.
+- Token 27784 [insight]: Hypothesizes per-edge contribution depends only on component split size after cutting the edge.
+- Token 28597 [breakthrough]: Confirms the per-edge score is `min(s, n-s)` for split size `s`, converting scoring to a cut-size statistic.
+- Token 30094 [breakthrough]: Derives the edge-split counting formula `C(n-2,s-1) s^{s-2} (n-s)^{n-s-2}` and assembles a closed form for `G(n)`.
+- Token 32392 [questionable statement]: Treats a brute mismatch (`G(4)=58` vs expected) as evidence against the formula before validating the enumeration tooling.
+- Token 33204 [mistake]: Proceeds under the assumption the analytic formula is inconsistent, when the inconsistency is actually from implementation.
+- Token 37451 [breakthrough]: Finds the Prüfer-decoder bug (leaf removal order bug), which fixes tree enumeration correctness.
+- Token 38552 [verification]: Re-tests corrected brute enumeration and confirms the closed form for `G(n)` on small `n`.
+- Token 39922 [verification]: Validates modular computation against provided anchors before extrapolating to `n=100`.
+- Token 39990 [final answer]: Commits to `\boxed{243559751}`.

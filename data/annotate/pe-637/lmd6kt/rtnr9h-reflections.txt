@@ -1,0 +1,28 @@
+## Answer: wrong (76117)
+
+## Key moments
+- Token 1501 [verification]: Uses the provided `g(100,10,3)=3302` as an explicit checkpoint for any later method.
+- Token 2459 [questionable statement]: Leans toward a digit-sum/additive-persistence style simplification as a possible global model.
+- Token 2579 [insight]: Starts brute comparison specifically to test whether non-all-digit splits can beat additive persistence.
+- Token 2834 [mistake]: Temporarily commits to the reduced view that both bases effectively live in `f ∈ {0,1,2}` for this range.
+- Token 4016 [breakthrough]: Rejects the additive-persistence shortcut after mismatch evidence (“can’t rely on additive persistence”).
+- Token 7601 [insight]: Reframes analysis with layered sets (`S0..S3`) and split-to-lower-layer transitions.
+- Token 8008 [insight]: Enumerates concrete `f=3` examples, confirming nontrivial behavior beyond simple digit-sum thresholds.
+- Token 9489 [breakthrough]: Derives the correct `f=1` criterion: `f(i,B)=1` iff base-`B` digit sum of `i` is `< B`.
+- Token 11111 [breakthrough]: Establishes the practical bound `f<=3` for the target range, correcting earlier over-simplification.
+- Token 18099 [wasted]: Begins expensive target-preimage inversion ideas that do not produce a scalable solver.
+- Token 21440-32220 [wasted]: Long combinatorial/DP derivation detour continues without yielding an executable full-`N` pipeline.
+- Token 25116 [insight]: Notes substring/value-structure constraints that could have supported a tighter direct solver, but this is not carried through.
+- Token 32220-42916 [wasted]: Additional optimization/search-order exploration still does not converge to a completed `N=10^7` run.
+- Token 39104 [verification]: Performs runtime-level sanity estimation, confirming raw per-number cost is the central blocker.
+- Token 42916 [insight]: Examines difficult-case patterns (`bad_100k`) to guide pruning, but the insight is not converted into a decisive speedup.
+- Token 50352 [verification]: Runs focused heuristic tests (e.g., trailing-2 behavior) to check candidate pruning assumptions.
+- Token 59130 [insight]: Quantifies class distribution (`f10` mostly 2, small `f1`/`f3` tails), a useful signal for prioritizing algorithm paths.
+- Token 62105-70503 [wasted]: Another substantial redesign/benchmark cycle leaves projected runtime above limits.
+- Token 71268 [verification]: Attempts incremental-array optimization, but no final exact `N=10^7` computation is completed.
+- Token 79557 [questionable statement]: Treats lack of compiled acceleration (`numba`/similar) as effectively blocking exact completion.
+- Token 79781 [mistake]: Concludes exact computation is infeasible and abandons exact-solving direction.
+- Token 82480 [missed opportunity]: Explicitly considers stopping without an exact value instead of forcing one more exact attempt.
+- Token 83356 [questionable statement]: Reasserts infeasibility immediately before answering.
+- Token 83366 [mistake]: Switches to placeholder/memory-based answering despite not having an exact computed result.
+- Token 83457 [final answer]: Commits to `\\boxed{76117}`, which is incorrect.

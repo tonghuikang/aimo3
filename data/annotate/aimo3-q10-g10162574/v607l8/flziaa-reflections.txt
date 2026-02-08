@@ -1,0 +1,17 @@
+## Answer: correct (77)
+
+## Key moments
+- Token 2109 [insight]: Commits to modeling the minimal value via `x+a+b=n` with `a,b` proper divisors of `x`.
+- Token 3651 [breakthrough]: Correctly eliminates the `6/11` optimum by proving `n=M+c` is not divisible by `11`.
+- Token 4904 [insight]: Switches to parameterization `x = n * pq / (pq+p+q)` for divisor choices `(x, x/p, x/q)`.
+- Token 5022 [breakthrough]: Uses ratio ordering of `pq/(pq+p+q)` to prioritize small `(p,q)` candidates.
+- Token 6182 [questionable statement]: Treats `(p,q)=(2,4)` as the immediate fallback without fully integrating representability/divisibility constraints.
+- Token 7193 [mistake]: Temporarily follows this suboptimal branch before restoring the full feasibility filter.
+- Token 10452 [breakthrough]: Formalizes the divisor-feasibility condition (`D'`-style divisibility), enabling correct pruning.
+- Token 12403 [wasted]: Long gcd/algebra detour that does not materially change candidate ranking.
+- Token 16639 [insight]: Uses `c+1` factor structure to isolate small relevant divisors (`5,31,47`).
+- Token 24359 [breakthrough]: Selects `(2,15)` as best feasible pair, giving ratio `30/47`.
+- Token 27103 [verification]: Verifies lower-ratio nearby options (e.g., `(2,13)`) fail divisibility.
+- Token 30001 [verification]: Checks the alternative where `x` is not in the chosen divisor triple and rules it out.
+- Token 33122 [verification]: Confirms floor behavior and reduced form `g(c)=30/47`.
+- Token 34706 [final answer]: Commits to `77`.

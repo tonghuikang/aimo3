@@ -1,0 +1,31 @@
+## Answer: wrong (992935855)
+
+## Key moments
+- Token 1067 [insight]: Reframes the task as row-level forced ascents on non-multiples of `k` plus coverage of descents on multiples.
+- Token 6596 [insight]: Identifies the run/block decomposition induced by required ascents.
+- Token 6935 [breakthrough]: Derives per-row counting in closed form, `g(T)=n! / ∏ block_len!`, enabling subset-based inclusion-exclusion.
+- Token 13203 [breakthrough]: Sets up inclusion-exclusion over uncovered multiple-of-`k` positions to count exact coverage.
+- Token 13563 [questionable statement]: Leaves a sign-convention ambiguity between two equivalent-looking subset formulations.
+- Token 17103 [insight]: Moves to a segment-composition DP over `d=floor((n-1)/k)` to avoid explicit subset enumeration.
+- Token 20122 [breakthrough]: Obtains the key recurrence `c_0=1`, `c_m=-Σ_{i=1..m} a_i c_{m-i}` and convolution form for `s(k)`.
+- Token 24873 [missed opportunity]: A rational-check mismatch appears, but the root sign issue is not immediately isolated.
+- Token 30361 [mistake]: Computes `-99999` for a small case (`n=5,k=3`), contradicting direct positive counting.
+- Token 30898 [insight]: Uses a `d=1` manual expansion to localize where the sign enters the formula.
+- Token 31178 [breakthrough]: Corrects the sign to the direct subset form (`(-1)^{|D|-|U|}`), resolving the negative-count contradiction.
+- Token 40246 [insight]: Rewrites `s(k)` as a convolution with coefficients of `C(z)=1/(1+A(z))`, preparing fast inversion.
+- Token 46221-57990 [wasted]: Long detour through equivalent transforms and complexity discussions without landing a stable executable path.
+- Token 58525 [questionable statement]: Assumes residues of normalized series values can be reconstructed via CRT from auxiliary NTT primes.
+- Token 60186 [questionable statement]: Frames prime selection mainly by exceeding `M`, not by convolution coefficient bounds.
+- Token 61916 [mistake]: Implements `CRT(s_i)` then multiplies by `(n!)^n`, mixing modulus-dependent inverses and causing inconsistency.
+- Token 66848 [missed opportunity]: Starts full Q(50000) implementation before proving the modular reconstruction is mathematically valid.
+- Token 70309 [verification]: Small-case coefficient checks expose mismatches in the NTT-based pipeline.
+- Token 78053 [questionable statement]: Investigates precomputation details instead of first rejecting the flawed reconstruction model.
+- Token 80047 [mistake]: Confirms CRT-combined `s` disagrees with direct modular computation, invalidating that pathway.
+- Token 81876 [insight]: Realizes only the integer term `P(k)` is modulus-invariant across primes, not normalized `s` values.
+- Token 82110 [breakthrough]: Switches to computing `term_i=(n!^n mod p_i)*s_i` first, then CRT on terms directly.
+- Token 83201 [verification]: Re-runs known checks (`Q(5)`, `Q(50)`) on the revised pipeline.
+- Token 92020 [missed opportunity]: After identifying CRT-on-rationals as invalid, does not lock one rigorously validated fallback method.
+- Token 100134 [mistake]: Finds two-prime CRT convolution is insufficient for exact mod-`M` recovery (product bound too small for coefficients).
+- Token 107763-108318 [wasted]: Spends a late stretch on alternate counting ideas, then abandons derivation due complexity/time.
+- Token 108351 [missed opportunity]: Falls back to an ad-hoc sample run instead of producing `Q(50000)`.
+- Token 108403 [final answer]: Last committed numeric result is `compute_Q_modM_new(50)=992935855`; no valid `Q(50000)` answer is produced.

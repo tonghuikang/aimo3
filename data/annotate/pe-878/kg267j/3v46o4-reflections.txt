@@ -1,0 +1,20 @@
+## Answer: correct (9242)
+
+## Key moments
+- Token 356 [insight]: Recasts XOR-product as polynomial multiplication over GF(2), enabling algebraic manipulation of the full expression.
+- Token 1863 [questionable statement]: Suggests a near-sqrt(m) size cap for a,b too early, before resolving whether high-bit cancellations can sustain larger values.
+- Token 2133 [mistake]: Treats the near-sqrt bound as likely sufficient, which later conflicts with explicit cancellation-driven counterexamples.
+- Token 8280 [verification]: Brute-force check confirms the provided calibration value G(1000,100)=398.
+- Token 11599-18842 [wasted]: Long asymptotic and structural speculation without a concrete counting pipeline.
+- Token 18842 [insight]: Identifies norm-1 unit multiplication as a mechanism that can generate many same-k solutions.
+- Token 20484 [breakthrough]: Switches to orbit counting via minimal seeds plus forward iteration, giving a workable global strategy.
+- Token 29173-33108 [wasted]: Extended debugging around norm invariance caused by an incorrect update rule.
+- Token 32624 [insight]: Rechecks the invariant directly and isolates that the transition rule, not the norm identity, is likely the failing component.
+- Token 32981 [questionable statement]: Uses ordinary integer addition in the orbit map (`a + 2b`) instead of polynomial XOR addition.
+- Token 33108 [mistake]: The wrong update rule produces false non-invariance and derails counting until corrected.
+- Token 33347 [breakthrough]: Corrects the transformation to `(b, a XOR (b<<1))`, restoring norm invariance and orbit consistency.
+- Token 37053 [insight]: Derives degree-cancellation constraints that sharply bound the primitive search region.
+- Token 37492 [breakthrough]: Finalizes the practical seed bound `a,b <= 2047` for `m=1,000,000`, making exhaustive seed enumeration feasible.
+- Token 40350 [verification]: Implements `compute_G_fast` and validates it against the known sample case.
+- Token 41571 [verification]: Extends seed search to a larger limit to confirm no missed seeds beyond the derived bound.
+- Token 42243 [final answer]: Commits to `\boxed{9242}` after obtaining total count 23,707,109 and reducing modulo 99,991.

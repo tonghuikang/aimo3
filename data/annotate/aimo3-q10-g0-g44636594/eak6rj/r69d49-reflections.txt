@@ -1,0 +1,11 @@
+## Answer: correct (1165)
+
+## Key moments
+- Token 2204 [breakthrough]: Establishes the key upper-sum bound logic that motivates minimizing `N` via large proper divisors.
+- Token 6502 [mistake]: Over-focuses on the `n-1` divisor route (`1,a,N` form), which is not the global minimization strategy.
+- Token 13182-23062 [wasted]: Long algebraic/gcd development before switching to a cleaner ratio-feasibility search.
+- Token 23062 [breakthrough]: Moves to `(p,q)`/`D=pq+p+q` parameterization and candidate-ratio generation.
+- Token 28011 [missed opportunity]: Has nearly enough structure to jump directly to `c+1` divisor screening, but keeps broad candidate analysis running.
+- Token 33043 [verification]: Confirms `g(0)=2/3` exactly from factorial divisibility and floor behavior.
+- Token 38026 [breakthrough]: Enumerates relevant divisors for `M+c` and selects the `110/167` optimum.
+- Token 40958 [final answer]: Commits to `\boxed{1165}`.

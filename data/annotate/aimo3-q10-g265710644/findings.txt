@@ -1,0 +1,57 @@
+# Problem: aimo3-q10-g265710644
+
+## Correct Answer
+- \(g(265710644)=\frac{64}{97}\)
+- \(p+q=64+97=161\)
+- Remainder modulo \(99991\): **161**
+
+## Correct Approach
+1. Reframe the objective:
+- For each target sum \(n\),
+- \(f(n)=\min \operatorname{lcm}(a,b,c)\) over distinct positive integers \(a,b,c\) with \(a+b+c=n\).
+
+2. Use scaling by divisor sums:
+- For each \(s\mid n\), let \(L_{\min}(s)\) be the minimum lcm among distinct triples summing to \(s\).
+- Then
+- \[
+  f(n)=n\cdot \min_{s\mid n,\;s\ge 6} \frac{L_{\min}(s)}{s}.
+  \]
+
+3. Compute relevant divisors for \(n=M+c\), where \(M=3^{2025!}\), \(c=265710644\):
+- \(c+1=265710645=3^3\cdot 5\cdot 97\cdot 103\cdot 197\).
+- For odd primes \(p\le 2025,\;p\neq 3\), \(M\equiv 1\pmod p\), so \(n\equiv c+1\pmod p\).
+- Hence \(97,103,197\) (and products with 5) divide \(n\).
+- Since \(s\ge 6\), divisor 5 is unusable; first key candidate is \(s=97\).
+
+4. Compare \(L_{\min}(s)/s\):
+- For \(s=97\): triple \((1,32,64)\) gives lcm \(64\), ratio \(64/97\).
+- For \(s=103\): best ratio \(68/103\) (larger).
+- For \(s=197\): best ratio \(130/197\) (larger).
+- Composite candidates (e.g., 485, 515, 985) do not beat \(64/97\).
+- Therefore
+- \[
+  \min_{s\mid n,\;s\ge 6} \frac{L_{\min}(s)}{s}=\frac{64}{97},
+  \quad
+  f(M+c)=\frac{64}{97}(M+c).
+  \]
+
+5. Evaluate \(g(c)\):
+- \(97\mid 2025!\), so \(2025!\cdot 64/97\) is integer.
+- Also \(c\ll M\), so the \((M+c)/M\) perturbation does not change the floor after scaling.
+- Thus
+- \[
+  g(c)=\frac{64}{97}.
+  \]
+
+## Wrong Approaches and Why They Fail
+1. **Forcing the triple to include 1 and reducing to \(a+b=n-1\)**:
+- This solves only a restricted subfamily, not the global minimum over all triples.
+- It yields formulas like \(f(n)\approx 3(n-1)/4\), giving \(g=3/4\) and answer 7 (wrong).
+
+2. **Optimizing only local \((p,q)\) constructions (e.g., concluding \(X=3k/5\))**:
+- Local ratio improvements are treated as global without checking all valid divisor-sum families.
+- This leads to \(g=3/5\) and answer 8 (wrong).
+
+3. **Shift arithmetic mistakes (mixing \(c\), \(c+1\), \(k+1\))**:
+- Wrong shifted constants produce wrong divisibility candidates,
+- which misidentifies the best divisor-sum \(s\) and final ratio.

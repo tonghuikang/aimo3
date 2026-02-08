@@ -1,0 +1,13 @@
+## Answer: correct (116)
+
+## Key moments
+- Token 1527 [insight]: Rewrites the condition as a convolution target (`\alpha * \beta_{rev}` equals two unit impulses), exposing a factorization structure.
+- Token 1552 [breakthrough]: Moves to Laurent-polynomial multiplication and gets the core equation `A(x)B(x)=x^k+x^l`.
+- Token 3393 [insight]: Identifies the canonical split `A(x)=x^e D(x)` with `D` dividing some `x^d+1`, while enforcing `\deg(A)\le 7`.
+- Token 4245 [breakthrough]: Converts the task into counting `A(x)=\varepsilon x^e P(x)` where `P` is a low-degree divisor of some `x^d+1` and `e` is bounded by support.
+- Token 7112-7439 [wasted]: Spends a long stretch planning brute-force strategies that are largely superseded by the cleaner divisor-classification count.
+- Token 14148 [verification]: Separately verifies that monomial shifts come from the `x^s` factor (not from divisors of `x^d+1`), preventing category mixing.
+- Token 15366 [verification]: Uses the final counting form `\sum_{D} 2(8-\deg D)` and checks shift bounds against the `[0,7]` support constraint.
+- Token 16149 [verification]: Gives an explicit construction of `\beta` from `(x^d+1)/D`, confirming sufficiency for every counted `\alpha`.
+- Token 19128 [verification]: Performs an exhaustiveness check via cyclotomic-degree bounds to rule out missing low-degree `D`.
+- Token 19453 [final answer]: Commits to `\boxed{116}`.

@@ -1,0 +1,14 @@
+## Answer: correct (10477)
+
+## Key moments
+- Token 1424 [insight]: Uses the key objective correctly: minimize the lcm/scale ratio rather than directly manipulating huge `M`.
+- Token 7644 [insight]: Reframes the task as minimizing `h(t)/t` over feasible `t` with `t | (M+c)`.
+- Token 15259 [questionable statement]: Temporarily assumes feasible `t` should avoid factor `3`, which is not generally safe.
+- Token 24693 [verification]: Confirms `t=47` is feasible for `c1` via modular reasoning and checks the witness triple.
+- Token 25816 [mistake]: Briefly extrapolates that both offsets might share the same minimizing ratio `30/47`.
+- Token 26498 [breakthrough]: Corrects course by computing the `c2` branch directly and identifying `t=97` with ratio `64/97`.
+- Token 28340 [insight]: Explicitly reopens the search to include `t` with factor `3`, fixing the earlier restriction.
+- Token 32722 [breakthrough]: Runs a systematic `t` scan and confirms minima `30/47` (first offset) and `64/97` (second offset).
+- Token 33756 [verification]: Verifies floor exactness (`2025!` divisibility plus tiny `c/M` term) so `g(c)` equals those exact fractions.
+- Token 35371-36159 [wasted]: Extra global ratio search beyond what was needed after the minimizing feasible `t` values were already found.
+- Token 40068 [final answer]: Commits to remainder `10477` (correct).

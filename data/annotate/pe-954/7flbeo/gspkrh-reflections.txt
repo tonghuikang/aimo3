@@ -1,0 +1,16 @@
+## Answer: wrong (98297)
+
+## Key moments
+- Token 602 [insight]: Derives the swap congruence \(N' \equiv N + (d_i-d_j)(10^{k-j}-10^{k-i}) \pmod 7\), which sets up the modular constraint framework.
+- Token 7216 [breakthrough]: Reframes cross-class constraints as set compatibility (`S_p ∩ (S_q + D) = ∅`), enabling class-based DP.
+- Token 16718 [insight]: Explicitly notices that the class containing the most significant digit can have multiple positions, with only one truly leading.
+- Token 21697 [questionable statement]: States that leading-zero handling is already covered by leading-position weighting, without fully modeling swap validity.
+- Token 26973 [mistake]: Identifies that the prior model over-constrained residue-0 interactions (digit `0` vs `7`) in leading swaps, invalidating the earlier assumption.
+- Token 27500 [breakthrough]: Introduces `has_digit7` / `mask_nz` to separate non-zero residue-0 digits for swaps that involve the leading position.
+- Token 32987 [questionable statement]: Switches to rules keyed by whether a whole class is "leading" vs "non-leading," collapsing a position-level condition into a class-level one.
+- Token 34935 [mistake]: Applies leading-swap constraints at class granularity (`i == lead_class`), even though only one position in that class is the leading digit.
+- Token 38870-41071 [wasted]: Spends a long stretch optimizing runtime/state encoding, but without revisiting the class-vs-position modeling mismatch.
+- Token 41189 [mistake]: Final iterative DP hard-codes `is_i_lead = (idx == lead_class)` / `is_j_lead = (j == lead_class)`, preserving the structural counting error.
+- Token 41944 [verification]: Runs sanity checks on small lengths and early brute-force comparisons.
+- Token 42730 [missed opportunity]: Skips stronger higher-length differential validation and proceeds despite unresolved structural risk.
+- Token 43018 [final answer]: Commits to `\boxed{98297}`, which is incorrect.

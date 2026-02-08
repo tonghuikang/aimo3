@@ -1,0 +1,21 @@
+## Answer: correct (6)
+
+## Key moments
+- Token 538 [insight]: Encodes \(\alpha\) as \((a,b)=(\alpha(0),\alpha(1))\), reducing the object count problem to integer-pair feasibility.
+- Token 727 [breakthrough]: Derives the core equation \(C(n)=a\beta(-n)+b\beta(1-n)\), turning the task into a linear sequence constraint.
+- Token 1434 [questionable statement]: Treats out-of-target indices as forcing each individual term to vanish, implicitly ignoring cross-index cancellation between neighboring \(\beta\) entries.
+- Token 1906 [mistake]: Concludes the two spikes must be consecutive and that only a single \(\beta\) index can be active in the nonzero-nonzero branch.
+- Token 3873 [breakthrough]: Correctly resolves one-zero-coefficient branches, yielding four valid families \((\pm1,0),(0,\pm1)\).
+- Token 4722 [verification]: Explicitly checks constructions for \((1,1)\) and \((-1,-1)\) (adjacent-spike witness), confirming they are feasible.
+- Token 8113 [insight]: Recognizes cancellation in \(a\beta(-n)+b\beta(1-n)\) can occur, invalidating the earlier “each term must vanish separately” shortcut.
+- Token 8502 [breakthrough]: Recasts to recurrence form \(a y_m + b y_{m+1}=g_m\), which supports global finite-support analysis.
+- Token 8933-12011 [wasted]: Long operator/Green-function digression repeats recurrence facts without materially tightening the classification.
+- Token 13789 [verification]: Directly tests mixed-sign unit case \((1,-1)\) via discrete-derivative/telescoping behavior and finds finite-support impossibility.
+- Token 15410 [insight]: Boundary equations from a finite support interval imply endpoint zeros and unit constraints, giving a cleaner path to necessary conditions.
+- Token 16582 [breakthrough]: Finishes the nonzero-nonzero branch: odd source spacing and \(a=b=\pm1\), excluding opposite-sign pairs.
+- Token 17602 [verification]: Builds an explicit odd-distance example (not just adjacent) to validate the corrected condition.
+- Token 20326 [insight]: Uses extremal-index reasoning to consolidate the unit constraints in a globally consistent way.
+- Token 24065 [verification]: Performs a final sanity check against larger non-unit coefficients and reaffirms exclusion.
+- Token 24431-24796 [wasted]: Starts a brute-force search idea after the classification is already established, adding little new evidence.
+- Token 25258 [insight]: Formal left-boundary argument confirms why pre-source finite nonzero tails cannot persist when coefficients are nonzero.
+- Token 25577 [final answer]: Commits to \(\boxed{6}\).

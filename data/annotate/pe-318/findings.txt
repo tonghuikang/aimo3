@@ -1,0 +1,25 @@
+## Problem: PE 318
+Correct answer: 77726
+
+## Correct Approach
+1. Let a = sqrt(p)+sqrt(q), b = sqrt(q)-sqrt(p). Then a^{2n} + b^{2n} is an integer for every n>=1.
+2. So a^{2n} = I_n - b^{2n} with I_n in Z. If 0 < b < 1, fractional part(a^{2n}) = 1 - b^{2n}, which tends to 1.
+3. Therefore the admissible pairs are exactly those with b < 1, i.e. sqrt(q)-sqrt(p) < 1.
+4. This inequality is q < p + 2*sqrt(p) + 1.
+5. Integer upper bound:
+   - non-square p: q <= ceil(p + 2*sqrt(p)) = p + floor(2*sqrt(p)) + 1
+   - square p: q <= p + 2*sqrt(p) (the next-square case gives b=1 and is excluded)
+6. If b in (0,1), the leading-9 count is C(p,q,n) = floor(-2n*log10(b)).
+7. N(p,q) is the minimum n with C>=2011, so N(p,q)=ceil(2011/(-2*log10(b))) (equivalently floor(X)+1 with X=(2011 ln 10)/(-2 ln b)).
+8. Sum N(p,q) over p<q, p+q<=2011, and sqrt(q)-sqrt(p)<1.
+9. Total sum is 709,313,889, hence modulo 99991 the answer is 77726.
+
+## Key Details
+- Total number of valid pairs: 41,987.
+- Maximum N value is about 5,933,985 (near p=931, q=993, where b is very close to 1).
+- The subtle point is the integer bound from q < p + 2*sqrt(p) + 1: non-squares get an extra +1 case, squares do not.
+
+## Wrong Approaches And Why They Fail
+- Using q <= p + floor(2*sqrt(p)) as the full condition. This misses valid non-square cases with q = p + floor(2*sqrt(p)) + 1.
+- Numerical consequence of that miss: 943 pairs are dropped, giving wrong total 322,767,817 and wrong modulo result 96860.
+- Treating b=1 boundary as admissible (pairs (k^2,(k+1)^2)) is also wrong: then a is integer, fractional parts are 0, and they do not approach 1.

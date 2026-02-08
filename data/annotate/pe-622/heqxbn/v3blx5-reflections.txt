@@ -1,0 +1,13 @@
+## Answer: correct (43260)
+
+## Key moments
+- Token 113 [insight]: Correctly classifies the shuffle as an out-shuffle with top and bottom cards fixed.
+- Token 572 [breakthrough]: Derives the core reduction `s(n) = ord_{n-1}(2)` from the position map `i -> 2i (mod n-1)`.
+- Token 1576 [insight]: Recasts the target as odd `m=n-1` with exact order 60, linking candidates to divisors of `2^60-1`.
+- Token 3131 [breakthrough]: Sets up CRT/prime-power decomposition so `ord_m(2)` can be checked via LCM of component orders.
+- Token 3519 [verification]: Computes the prime/prime-power order table (including `ord_61(2)=60` and `ord_1321(2)=60`).
+- Token 4666 [verification]: Enumerates all divisor exponent combinations and filters to `ord_m(2)=60`, producing the aggregate sum over `m+1`.
+- Token 5355 [verification]: Confirms the required reduction modulo `99991`, obtaining `43260`.
+- Token 6808 [missed opportunity]: After already obtaining the target modulo value, continues exploring alternative derivations instead of finalizing.
+- Token 7194-9500 [wasted]: Extended Möbius-inversion detour re-derives consistency but does not change the computed result.
+- Token 9806 [final answer]: Commits to `\boxed{43260}`.

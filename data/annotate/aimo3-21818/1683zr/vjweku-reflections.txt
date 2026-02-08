@@ -1,0 +1,26 @@
+## Answer: wrong (121818)
+
+## Key moments
+- Token 33 [breakthrough]: Restates tournament structure and equal-score pairing rule.
+- Token 85 [breakthrough]: Notes scores are sums of powers of two from wins.
+- Token 172 [breakthrough]: Represents scores as 20-bit win/loss vectors.
+- Token 285 [breakthrough]: Emphasizes the pairing constraint by equal current score.
+- Token 479 [breakthrough]: Walks through the first two rounds’ score groups.
+- Token 965 [breakthrough]: Argues final scores are distinct binary patterns.
+- Token 1801 [breakthrough]: Recasts the task as counting feasible permutations/bijections.
+- Token 1990 [breakthrough]: Models the process as a binary tree of splits by round.
+- Token 2412 [breakthrough]: Connects total count to per-node winner-subset counts.
+- Token 3259 [breakthrough]: Identifies the Dyck/ballot condition for valid winner subsets.
+- Token 3600 [breakthrough]: Recognizes Catalan numbers as the per-node counts.
+- Token 4082 [breakthrough]: Builds the product formula for N across levels.
+- Token 4931 [breakthrough]: Sets up k=min(v2,v5) for the trailing-zero count.
+- Token 5261 [breakthrough]: Acknowledges the need to take k mod 100,000.
+- Token 6007 [breakthrough]: Sets up the weighted sum for v5(N).
+- Token 6543 [verification]: Checks the winner-subset condition on a small m=2 example.
+- Token 7302 [breakthrough]: Writes N as ∏ C_{2^b}^{2^{19-b}}.
+- Token 7394 [verification]: Uses Python to compute v5(C_{2^b}) values.
+- Token 10099 [verification]: Starts computing the v5 list for b=0..19.
+- Token 10555 [verification]: Records the v5(C_{2^b}) values.
+- Token 10911 [breakthrough]: Sets up the final weighted v5 sum and mod step.
+- Token 11838 [mistake]: Computes k=121,818 but forgets to apply the required mod 10^5.
+- Token 11901 [final answer]: Outputs \boxed{121818}.

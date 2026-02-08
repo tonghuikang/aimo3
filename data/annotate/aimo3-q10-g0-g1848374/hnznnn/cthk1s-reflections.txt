@@ -1,0 +1,14 @@
+## Answer: correct (173)
+
+## Key moments
+- Token 434 [breakthrough]: Correctly reformulates `f(n)` as the minimum LCM over distinct triples summing to `n`.
+- Token 5085 [verification]: Starts brute-force scans of small sums/ratios to calibrate which primitive ratios are actually competitive.
+- Token 12162 [mistake]: Overstates when `3^K \equiv 1 \pmod m` should hold, then has to back off and restrict to safer ranges.
+- Token 12162-14570 [wasted]: Extended detour on broad modular-order generality before narrowing to the small divisors that matter for the minimum.
+- Token 14968 [breakthrough]: Uses `c+1` factor structure (excluding 3-factors) to characterize relevant divisor candidates for `M+1848374`.
+- Token 21872 [verification]: Re-checks global primitive-ratio baselines (especially the `6/11` benchmark) before locking onto admissible divisors.
+- Token 26323 [breakthrough]: Re-confirms the `M` case through power-of-3 divisor logic, stabilizing `f(M)` behavior.
+- Token 30095 [verification]: Cross-checks that tempting small-ratio templates needing factor 2 (like `m=10`) are invalid because admissible divisors here are odd.
+- Token 37409 [breakthrough]: Fixes on the `(1,8,16)` scaled construction for divisor `25`, giving ratio `16/25` for the shifted input.
+- Token 37609 [verification]: Validates `g(0)+g(1848374)=98/75` and coprimality before concluding.
+- Token 37705 [final answer]: Commits to `\boxed{173}`; this final value is correct.

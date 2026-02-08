@@ -1,0 +1,10 @@
+## Answer: correct (2)
+
+## Key moments
+- Token 80 [insight]: Interprets the support condition correctly and rewrites every shift as `S_n(\alpha)=c\,\delta_{-n}`, reducing the dot product to `c\,\beta(-n)`.
+- Token 729 [breakthrough]: Converts the target pattern (two ones, otherwise zero) into integer constraints on `\beta`, identifying that only two positions of `\beta` can be nonzero.
+- Token 1009 [verification]: Checks the negative-sign case explicitly and confirms `\alpha(0)=-1` is feasible with `\beta(-k)=\beta(-l)=-1`.
+- Token 1304 [verification]: Rules out all `|c|\neq 1` values by integrality (`\beta(-k)=1/c` must be an integer), locking the candidate set to `c\in\{\pm1\}`.
+- Token 1456 [questionable statement]: Reopens a potential ambiguity in the wording of the first bullet; this could have caused a derail if interpreted vacuously.
+- Token 1456-1717 [wasted]: Repeats the same ambiguity/sign checks multiple times without adding new constraints after the core argument was already complete.
+- Token 1789 [final answer]: Commits to `\boxed{2}`.

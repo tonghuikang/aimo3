@@ -1,0 +1,17 @@
+## Answer: correct (84290)
+
+## Key moments
+- Token 385 [insight]: The trace identifies the base-12 lower bound (`12^11`) and recognizes that naive integer-by-integer scanning is not practical.
+- Token 2647 [breakthrough]: It reduces the search space to length-12 base-12 pandigital numbers, i.e., permutations of digits `0..11` with nonzero leading digit.
+- Token 11274-12968 [wasted]: A best-first heap search over partial permutations is implemented and tuned, but it burns time on internal nodes without reaching useful candidates.
+- Token 12968 [verification]: The capped 5,000,000-node run returns zero solutions, confirming that this search strategy is ineffective here.
+- Token 18009 [insight]: Random sampling finds a genuine valid candidate, proving the target set exists in the explored magnitude range.
+- Token 19803-22455 [wasted]: The trace spends a long stretch on random-sampling probability arguments that cannot guarantee minimality.
+- Token 24716 [breakthrough]: It introduces `pandigital_all_bases_fast` (base-10-first rejection), enabling practical exhaustive permutation scans by leading digit.
+- Token 27408 [questionable statement]: It assumes the smallest valid leading digit is likely `7`, creating risk of skipping smaller valid regions.
+- Token 34379 [mistake]: It briefly treats lead-6 findings as minimal before fully validating lower leading digits (`1..5`).
+- Token 36659 [breakthrough]: It corrects course to ordered exhaustive lead-by-lead enumeration, which restores minimality guarantees.
+- Token 38357 [verification]: Full scans are consolidated by lead (`2:2`, `3:3`, `4:1`, `5:10`), producing a complete candidate pool for ranking.
+- Token 39028 [verification]: The ten smallest values are selected and summed, then reduced modulo `99991`.
+- Token 39404 [verification]: Each of the selected top-10 values is rechecked against the full 12-super-pandigital condition.
+- Token 39532 [final answer]: The trace commits to `\boxed{84290}` after the final consistency checks.

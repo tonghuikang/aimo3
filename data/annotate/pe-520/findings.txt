@@ -1,0 +1,28 @@
+Correct answer
+- \((\sum_{1 \le u \le 39} Q(2^u)) \bmod 1{,}000{,}000{,}123 = 238413705\).
+
+Correct approach
+- Let \(N(L)\) be the number of valid simbers with exactly \(L\) digits.
+- Use EGF-by-digit-count constraints (order-sensitive counting):
+- For even digits \(\{0,2,4,6,8\}\): allowed counts are even, so \(f_{\text{even}}(x)=\sum_{k\ge0}x^{2k}/(2k)!=(e^x+e^{-x})/2\).
+- For odd digits \(\{1,3,5,7,9\}\): allowed counts are \(0\) or odd, so \(f_{\text{odd}}(x)=1+\sum_{k\ge0}x^{2k+1}/(2k+1)! = 1+(e^x-e^{-x})/2\).
+- Total length-\(L\) strings with constraints but allowing leading zero:
+  \(F(x)=f_{\text{even}}(x)^5 f_{\text{odd}}(x)^5\), and count is \(L![x^L]F(x)\).
+- Subtract leading-zero strings by fixing first digit to 0 and counting the remaining \(L-1\) digits:
+  \(F_0(x)=((e^x-e^{-x})/2)\,f_{\text{even}}(x)^4 f_{\text{odd}}(x)^5\), and count is \((L-1)![x^{L-1}]F_0(x)\).
+- Therefore
+  \(N(L)=L![x^L]F(x) - (L-1)![x^{L-1}]F_0(x)\).
+- With \(t=e^x\), both \(F,F_0\) become \(2^{-10} t^{-10}\) times degree-20 polynomials in \(t\), so:
+  \(N(L)=2^{-10}\left(\sum_{m=-10}^{10} p_{m+10}m^L - \sum_{m=-10}^{10} q_{m+10}m^{L-1}\right)\),
+  where \(p_k\) are coefficients of \((t^2+1)^5(t^2+2t-1)^5\), and \(q_k\) are coefficients of \((t^2-1)(t^2+1)^4(t^2+2t-1)^5\).
+- Then \(Q(n)=\sum_{L=1}^n N(L)\) is computed via geometric sums of \(m^L\) (special case \(m=1\)).
+- This matches the provided checks:
+  \(Q(7)=287975\), \(Q(100)\bmod 1{,}000{,}000{,}123=123864868\).
+
+Wrong approaches (and why they fail)
+- Ignoring the leading-digit restriction (counting all parity-valid strings of length \(L\), including those starting with 0):
+  overcounts because parity constraints do not forbid leading-zero strings with an even total number of zeros (e.g. `00`).
+  This gives \(Q(7)=320900\) (wrong; correct is \(287975\)).
+- Treating odd digits as parity-free / allowing even positive counts for odd digits (equivalently, using parity-only states without distinguishing zero vs even-positive for odd digits):
+  violates “odd digit, if present, appears an odd number of times.”
+  This gives \(Q(7)=767600\) (wrong; correct is \(287975\)).

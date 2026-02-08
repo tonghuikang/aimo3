@@ -1,0 +1,25 @@
+## Correct answer: 84452
+
+## Correct approach
+- Let `R` be the number of `r` moves and `S` the number of `s` moves. If total moves are `d=R+S`, path length is `n=d+1`.
+- For odd path length, `d` must be even.
+- Endpoint equality can be written as
+  - `N = 45*2^S + sum_r 2^{(# of s after that r)}`
+  - `N = 90*2^R + sum_s 2^{(# of r after that s)}`
+- The key difficulty is that these two exponent multisets are not independent; they must come from one shared operation sequence. So loose interval/popcount feasibility is insufficient.
+- Enforcing the shared-ordering constraints and searching constructively shows the first valid even move count is `d=96` (so minimal odd length is `n=97`), yielding
+  - `N = 25332747903959376`
+  - `N mod 99991 = 84452`.
+
+## Wrong approaches and why they fail
+1. `R=S=46` with loose feasibility only (wrong answer `21075`):
+- Uses independent representability/range checks and concludes a `92`-move solution with `N = 90*2^46 + 46`.
+- Fails because no single operation ordering satisfies both endpoint-contribution systems simultaneously.
+
+2. Alternate `R=S=46` decomposition (wrong answer `21093`):
+- Produces `N = 90*2^46 + 64` from inconsistent exponent assignments.
+- The assigned exponent counts cannot be realized by one shared sequence (ordering/count coupling is violated).
+
+3. Non-constructive balancing arguments:
+- Signed power-of-two balancing or term-splitting arguments can produce plausible numeric candidates, but without explicit constructive validation they can be invalid.
+- Full constructive checks reject all `92`-move candidates.

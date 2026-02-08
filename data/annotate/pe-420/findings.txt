@@ -1,0 +1,31 @@
+Problem: Count 2x2 positive integer matrices M with trace < N that have at least two distinct positive-integer square roots. Given checks: F(50)=7 and F(1000)=1019.
+
+Correct answer:
+- F(10^7) mod 99991 = 72391.
+
+Core identities (for A=[[a,b],[c,d]] and M=A^2):
+- tr(M) = a^2 + d^2 + 2bc = (a+d)^2 - 2(ad-bc)
+- det(M) = (ad-bc)^2
+- Let T=a+d and Delta=ad-bc, then tr(M)=T^2-2Delta and det(M)=Delta^2.
+
+Correct counting approach:
+- Parameterize paired roots using integers u<v with u^2+v^2 < N.
+- Let delta = v-u and S = u+v, then g = gcd(S,delta), s' = S/g.
+- Valid t are integers in the intersection of:
+  - t_low = floor(u/s') + 1
+  - t_high = floor((v-1)/s')
+  - 1 <= t <= g-1
+- For each valid t, contribution is d(t*(g-t)) where d(.) is the divisor-count function.
+- Sum over all u<v (with delta>=2), then reduce mod 99991.
+- This reproduces F(50)=7 and F(1000)=1019, and gives 72391 for N=10^7.
+
+Wrong approaches and why they fail:
+- Over-broad root counting from (u,v,t,b,c):
+  - Counting all positive A from t and factor pairs of t(v-u-t) while assuming a second positive root always exists overcounts badly (for example, giving F(50)=43 instead of 7).
+  - Failure mode: missing divisibility/integrality constraints for the second root construction.
+- Treating g as a free interval parameter:
+  - Some derivations sum over a range of g values for fixed primitive data, which inflates counts (for example, giving 19 for N=50 instead of 7).
+  - Failure mode: full equality constraints force g to be uniquely determined in valid tuples.
+- Ad-hoc duplicate corrections on tau-based sums:
+  - Heuristics such as subtracting only perfect-square-f duplicate cases lead to contradictory small-N totals (examples seen: 62, 107, 675, 860 for checks that should be 78 or 1019 depending on N).
+  - Failure mode: correction is not derived from a consistent one-to-one mapping between parameter tuples and valid matrices.

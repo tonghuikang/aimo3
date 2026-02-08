@@ -1,0 +1,26 @@
+Problem: PE 546 - The Floor's Revenge
+Correct answer: 215656873
+
+Correct approach (problem-level):
+- Start from
+  - `f_k(0)=1`
+  - `f_k(n)=f_k(n-1)+f_k(floor(n/k))`
+  - and for `n = kq+r` (`0<=r<k`): `f_k(n)=k*F_k(q-1)+(r+1)*f_k(q)`, where `F_k(t)=sum_{j=0}^t f_k(j)`.
+- Reinterpret `f_k(N)` as counting constrained carry configurations / k-ary partition states induced by base-`k` digits of `N`.
+- Let `N` have base-`k` digits `a_0..a_L`. Use nested-sum DP:
+  - `C_0(t)=a_0+k*t+1`
+  - `C_i(t)=sum_{x=0}^{a_i+k*t} C_{i-1}(x)` for `1<=i<=L-1`
+  - `f_k(N)=sum_{t=0}^{a_L} C_{L-1}(t)`
+- Evaluate these transforms as low-degree polynomials modulo `M=10^9+7`.
+  - Critical detail: binomial/polynomial factors require modular inverses for factorial division; plain integer-division polynomial handling is not reliable modulo `M`.
+- Validate against direct DP on small `N` and given checkpoints (`f_5(10)=18`, `f_7(100)=1003`, `f_2(10^3)=264830889564`), then compute `k=2..10` and sum mod `M`.
+
+Wrong approaches (and failure modes):
+- Confusing `p_k` and `f_k` targets:
+  - Treating the objective as `p_k(10^14)` instead of `f_k(10^14)` is an index mismatch. The relation is shifted (`p_k(n)` corresponds to `f_k(floor(n/k))`), so this can solve the wrong quantity.
+- Non-closing higher-prefix recursion:
+  - Expanding `f -> S -> H -> J -> ...` without a finite closure leads to infeasible recursion and no computable endpoint for `N=10^14`.
+- Unproven path/bijection reformulations:
+  - Counting subtract/divide paths or carry choices without a proven bijection undercounts/overcounts and fails even on small checks.
+- Concession/placeholder output:
+  - Producing `0` without a derived computation yields the wrong final answer (`0`).

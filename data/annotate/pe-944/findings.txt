@@ -1,0 +1,22 @@
+# pe-944 Findings
+
+## Correct answer
+- `S(10^14) mod 1234567891 = 1228599511`.
+
+## Correct approach
+- Count contributions per element `x` instead of per subset.
+- For fixed `x`, let `m = floor(n/x) - 1` (multiples of `x` in `[1..n]` excluding `x`).
+- Number of subsets where `x` is an elevisor:
+  - `f(x) = (2^m - 1) * 2^(n-1-m) = 2^(n-1) - 2^(n-floor(n/x))`.
+- Therefore:
+  - `S(n) = sum_{x=1}^n x * (2^(n-1) - 2^(n-floor(n/x)))`
+  - Equivalent forms used in correct derivations:
+    - `S(n) = 2^(n-1) * n(n+1)/2 - sum_x x * 2^(n-floor(n/x))`
+    - `S(n) = 2^(n-1) * (n(n+1)/2 - 2U)`, where `U = sum_x x * inv2^(floor(n/x))`.
+- Compute floor-sums by grouping ranges where `floor(n/x)` is constant (`O(sqrt(n))` intervals), and compute interval arithmetic sums in O(1).
+- For practical speed, avoid per-interval expensive exponentiation by using precomputed/block power tables for base `2` (or equivalent cached power transitions), then evaluate needed powers in O(1)-ish time per interval.
+
+## Wrong approaches and failure modes
+- Pair-based counting over `(x, y)` with `x | y` overcounts, because each `x` should be counted once per subset even if multiple multiples of `x` are present.
+- Algebra mix-up between transformed sums (`U`, `C`, `V`) can silently produce wrong values; one incorrect branch set `U = C` directly and failed the sanity check `S(10)=4927`.
+- Even with correct math, an implementation that calls modular `pow` for every floor-interval is too slow at this scale (`n=10^14`) and needs a faster power lookup strategy.

@@ -1,0 +1,42 @@
+# PE 882 Findings
+
+## Problem Summary
+- Initial position: one `1`, two `2`s, ..., `n` copies of `n`.
+- Left (Dr. One) deletes one `1` digit from a chosen binary string.
+- Right (Dr. Zero) deletes one `0` digit from a chosen binary string.
+- After deletion, interpret the result canonically (strip leading zeros; `0` is terminal).
+- Right may pass; `S(n)` is the minimum number of passes needed for Right to force a win.
+
+## Correct Answer
+- `S(100000) mod 99991 = 84456`
+- Exact value: `S(100000) = 15800662276`
+
+## Correct Approach
+- Treat each number `x` as a partizan game with numeric value `G(x)`:
+  - `G(0)=0`
+  - Left options: all values reachable by deleting one `1` from binary(`x`)
+  - Right options: all values reachable by deleting one `0` from binary(`x`)
+  - `G(x)` is the simplest dyadic rational strictly between max(left options) and min(right options).
+- The whole start position is a disjoint sum of numbers, so total value is:
+  - `V(n) = sum_{i=1..n} i * G(i)`
+- A Right pass is equivalent to subtracting `1` from the numeric game value, so Right wins with `k` passes iff `V(n)-k <= 0`.
+- Therefore:
+  - `S(n) = ceil(V(n))`
+
+## Known Check Values
+- `S(2) = 2`
+- `S(5) = 17`
+- `S(10) = 64`
+- `S(100000) = 15800662276`
+- `S(100000) mod 99991 = 84456`
+
+## Wrong Approaches And Why They Fail
+- Misreading legality of leading zeros after deletion:
+  - Incorrectly treating outcomes like `101 -> 01` as illegal (instead of canonicalizing to `1`) removes legal moves.
+  - This corrupts `G(x)` values (notably around `x=5`) and propagates to wrong totals.
+- Modeling the game as a simple ones-vs-zeros count race:
+  - Left deletions can erase multiple zeros via canonicalization, so naive token-balance formulas are invalid.
+- Heuristic block/capture formulas without full game-value consistency:
+  - Local greedy rules can look plausible on small cases but diverge from checkpoint values (`S(5), S(10)`).
+- Guessing/curve-fitting from partial small-`n` outputs:
+  - Produces unstable extrapolations and wrong large-`n` answers.

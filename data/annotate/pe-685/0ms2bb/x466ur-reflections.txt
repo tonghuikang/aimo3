@@ -1,0 +1,24 @@
+## Answer: correct (662878999)
+
+## Key moments
+- Token 56 [insight]: Frames the task as ranking the m-th number with fixed digit sum under extreme scales (`s<=10^12`, `m<=10^16`).
+- Token 2387 [insight]: Realizes `m` is tiny relative to combinatorial counts at near-minimal length, motivating a deficit-based shortcut.
+- Token 10036 [breakthrough]: Validates unranking mechanics on a concrete small case (`d=2` block subtraction), confirming rank-update direction.
+- Token 15061 [insight]: Re-expresses the divisible-by-9 branch as `a(L,9t)` with `L=q+t`, which clarifies the length-offset parameterization.
+- Token 20115 [breakthrough]: Pins down the `s ≡ 0 (mod 9)` branch and shows one extra length (`t=1`) is needed for `n>=3`.
+- Token 25237 [breakthrough]: Derives the shifted rank formula (`rank = m - (q+1)`) for the difficult `D=1` branch.
+- Token 30288 [insight]: Switches to direct modulo construction of the number, avoiding explicit huge-integer materialization.
+- Token 35702 [questionable statement]: Notes an `n=2` offset/rank inconsistency while still keeping partially inconsistent branch logic.
+- Token 40761 [breakthrough]: Corrects digit-choice ordering so positive deficits are processed before `d=0`, aligning with numeric order.
+- Token 45805 [insight]: Clarifies why capped counting is safe for comparisons (`cnt > rank` only needs saturation, not exact huge values).
+- Token 50839 [missed opportunity]: Flags potential long iteration paths from repeated leading-9 handling, but the skip policy is not yet fully resolved there.
+- Token 56359 [breakthrough]: Extracts the `S=2` closed-form block size (`a(R-1,1)=R-1`), enabling analytical zero-skip behavior.
+- Token 62214-72430 [wasted]: Repeated `fast6/fast7` refactors and helper rewrites consume a long span before settling one consistent skip logic.
+- Token 67220 [breakthrough]: Derives the skip inequality `rank - Σ(R-i) <= R-t`, turning many zero steps into a binary-search target.
+- Token 75122 [questionable statement]: Uses a binary-search predicate that returns impossible `t=R` behavior in a case where `t=0` is required.
+- Token 79355 [mistake]: Applies a reversed block interpretation (treating deficit-0 as an early block), producing incorrect leading-digit decisions.
+- Token 80162 [breakthrough]: Fixes order semantics: larger deficits correspond to earlier/smaller numbers; deficit-0 is a suffix block.
+- Token 81327 [breakthrough]: Finalizes the `sum_nonzero` gate plus specialized `S=1/S=2` skip formulas, stabilizing the constructor.
+- Token 82768 [verification]: Regression-checks the optimized routine against the reference implementation up to 200.
+- Token 83070 [verification]: Runs the final routine for `S(10000)` after matching the known `S(10)` checkpoint.
+- Token 83311 [final answer]: Commits `\boxed{662878999}`.

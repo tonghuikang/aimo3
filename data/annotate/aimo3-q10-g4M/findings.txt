@@ -1,0 +1,61 @@
+# Findings: aimo3-q10-g4M
+
+## Problem Summary
+- Compute `g(4M)` where `M = 3^(2025!)`.
+- `f(n)` is the smallest integer having three distinct positive divisors summing to `n`.
+- `g(c) = (1/2025!) * floor(2025! * f(M+c) / M)`.
+- For this problem, `c=4M`, so the target is `f(5M)`.
+- **Correct final answer:** `13`.
+
+## Correct Solution Shape
+1. Reformulate:
+   - `f(n) = min lcm(a,b,c)` over distinct positive `a,b,c` with `a+b+c=n`.
+2. Use scaling:
+   - For `a=dx, b=dy, c=dz`, we get
+     `lcm(a,b,c) = d*lcm(x,y,z)` and `n=d(x+y+z)`.
+   - Therefore `f(n) = n * min_{s|n, s>=6} f(s)/s`.
+3. Apply to `n=5*3^K`:
+   - Candidate divisor-sums are `3^b` or `5*3^b`.
+   - The minimal achievable ratio is `2/3` (for example from `(1,2,6)` scaled to sum `9`, or `(5,10,30)` scaled to sum `45`).
+4. Conclude:
+   - `f(5M) = (2/3)*(5M) = (10/3)M`.
+   - `g(4M) = (1/2025!)*floor((10/3)*2025!) = 10/3` since `3 | 2025!`.
+   - `p=10, q=3`, so `p+q = 13`.
+
+## Main Wrong Families Seen In This State
+
+### Family A: Over-restricting 3-adic divisibility (trace `2frsp7`, answer `5`)
+- Core mistake:
+  - Enforces that both smaller divisors must be multiples of `3^(K-1)`.
+- Why wrong:
+  - Divisibility of `a+b` by `3^(K-1)` can come from cancellation in coefficients, not only from each term carrying `3^(K-1)`.
+  - Example mechanism: terms with valuation `K-2` can still sum to valuation `K-1` if coefficient sum is divisible by `3`.
+- Effect:
+  - Misses the optimal mixed pattern and settles on `f(5M)=4M`, giving `g(4M)=4` and `p+q=5`.
+
+### Family B: Incorrect normalization after factoring min valuation (trace `pw4l31`, answer `127`)
+- Core mistake:
+  - After factoring `3^r` with `r=min(v3(a),v3(b),v3(c))`, it wrongly requires all normalized terms to be non-multiples of `3`.
+- Why wrong:
+  - Only terms achieving the minimum valuation must be non-multiples of `3`; other normalized terms may still be divisible by `3`.
+- Effect:
+  - Rejects valid mixed-valuation candidates (like normalized forms containing `30`), and converges to wrong ratio `100/27`.
+
+### Family C: Importing ratios from inadmissible base sums
+- Core mistake:
+  - Uses low ratios (such as `6/11` from sum `11`, or `3/5` from sum `10`) without checking whether that base sum can scale to `5*3^K`.
+- Why wrong:
+  - In the scaling formula, the base sum `s=x+y+z` must divide the target `n`.
+  - For `n=5*3^K`, admissible `s` are only of the form `3^b` or `5*3^b`; sums containing prime `2` or `11` are not usable.
+- Effect:
+  - Produces unattainable candidate ratios and can drive wrong `f(5M)`/`g(4M)` conclusions.
+
+## Annotation Guidance For This Problem
+- Mark as **better** when a completion:
+  - Uses the LCM reformulation plus scaling/ratio invariance.
+  - Correctly handles mixed 3-adic valuations.
+  - Justifies the floor step with `3 | 2025!`.
+- Mark as **worse** when a completion:
+  - Forces all terms to share the same 3-adic valuation.
+  - Assumes each term must carry `3^(K-1)` rather than allowing cancellation in sums.
+  - Produces `g(4M)=4` (answer `5`) or `g(4M)=100/27` (answer `127`) from those constraints.

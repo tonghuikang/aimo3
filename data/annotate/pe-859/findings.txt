@@ -1,0 +1,40 @@
+# Problem pe-859 Findings
+
+## Problem
+Count partitions of `N` (unordered pile sizes) such that Even has a winning strategy, with Odd moving first.
+Given checks: `C(5)=2`, `C(16)=64`.
+Need: `C(300) mod 99991`.
+
+## Correct Answer
+`98582`
+
+## Correct Approach
+1. Treat each pile size `n` as a partizan game value `V(n)` and the full position as a disjunctive sum over piles.
+2. The single-pile values satisfy the corrected recurrence:
+   - `V(0)=0`
+   - For odd `n=2k+1`:
+     - if `V(k) >= 0`, then `V(n)=2*V(k)+1`
+     - else `V(n)=0`
+   - For even `n=2k`:
+     - if `V(k-1) > 0`, then `V(n)=0`
+     - if `V(k-1) = 0`, then `V(n)=-1`
+     - if `V(k-1) < 0`, then `V(n)=2*V(k-1)-1`
+3. For a partition `n1+...+nt=N`, total value is additive:
+   - `S = V(n1)+...+V(nt)`
+4. With Odd starting, Even wins iff `S <= 0`.
+5. Count partitions with `S <= 0` using partition DP with two dimensions:
+   - size (`0..N`)
+   - value sum (`[-N/2 .. N]` is sufficient for `N=300`)
+   - Unbounded-partition update by part size to avoid order overcounting.
+6. Verify against provided checks:
+   - `C(5)=2`
+   - `C(16)=64`
+7. Compute `C(300) mod 99991 = 98582`.
+
+## Wrong Approaches And Why They Fail
+- Using naive predecessor/successor rules for `{|r}` as `r-1` for positive `r`:
+  - This gives wrong pile values (e.g., predicts `V(4)=1` instead of `0`) and fails the given check (`C(16)=44` instead of `64`).
+- Restricting Even-winning starts to only P-positions (`S=0`) instead of `S<=0`:
+  - Misses valid Right-win (R) starts where Even still wins when Odd starts.
+- Debating partition ordering/composition interpretation after a failed check:
+  - The statement/example clearly imply unordered partitions; mismatch must be fixed in game-value modeling, not counting semantics.

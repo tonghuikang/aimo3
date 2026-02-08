@@ -1,0 +1,30 @@
+Problem: pe-461 - Project Euler 461
+
+Correct answer:
+- Optimal quadruple for `n=10000`: `(1433, 2147, 4903, 11363)`
+- `g(10000) = 1433^2 + 2147^2 + 4903^2 + 11363^2 = 159820276`
+- `g(10000) mod 99991 = 34658`
+
+Correct approach:
+- Rewrite the target as
+  - minimize `|exp(a/n) + exp(b/n) + exp(c/n) + exp(d/n) - (pi + 4)|` with nonnegative integers.
+- Bound search space using positivity of the other three terms:
+  - `k <= floor(n * ln(pi + 1))` for each index.
+- Use a global meet-in-the-middle search:
+  - build `E[k] = exp(k/n)` for `k in [0, Kmax]`
+  - enumerate all unordered pair sums `E[i] + E[j]`
+  - find two pair sums whose total is closest to `pi + 4` (sorted + closest-two-sum scan / binary-search complement)
+  - reconstruct `(a,b,c,d)` and compute `g(n)`.
+- Why it works: it is exhaustive over the full discrete space (via pair decomposition), so it certifies global optimality instead of a local best.
+
+Wrong approaches and why they fail:
+- Direct scaling from `n=200`:
+  - assumes the `n=200` optimum scales to `n=10000`.
+  - gives tuple `(300, 3750, 4450, 11300)`, `g=161645000`, modulo `59544`.
+  - fails because finer discretization at `n=10000` admits a different tuple with much smaller error.
+- Local or region-limited search treated as global:
+  - example tuple `(387, 3736, 4644, 11178)`, `g=160621885`, modulo `36339`.
+  - fails because it is only a strong local candidate; no full-space optimality proof.
+- Restricted-pattern search (e.g., forcing repeated indices like `(a,a,b,c)`):
+  - example tuple `(6086, 6086, 6324, 4598)`, `g=135213372`, modulo `25540`.
+  - fails because the true optimum is outside that restricted family.

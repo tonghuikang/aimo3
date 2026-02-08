@@ -1,0 +1,15 @@
+## Answer: wrong (791)
+
+## Key moments
+- Token 789 [insight]: Sets up the core minimization view in terms of `lcm` over divisor triples with fixed sum.
+- Token 2087 [breakthrough]: Uses the “make the lcm equal the largest divisor when possible” idea to reduce structural complexity.
+- Token 6953 [insight]: Identifies the reciprocal-sum extremal pattern (`1/2+1/3`) underlying the best theoretical ratio.
+- Token 7472 [breakthrough]: Derives the strong `6/11` benchmark and notes it is attainable only under divisibility conditions.
+- Token 10853 [missed opportunity]: Treats divisibility requirements too rigidly early, instead of separating necessary vs sufficient conditions for integrality after cancellation.
+- Token 19353 [verification]: Correctly settles the `5M` branch with `f(5M)=(10/3)M`, supporting `g(4M)=10/3`.
+- Token 26267 [insight]: Shifts to scanning admissible `D` values and pairs, but still within an increasingly narrow filter.
+- Token 33336 [questionable statement]: Imposes `D|S` (equivalently narrowing to divisors of `k+1` for `S=M+k`) as the defining admissibility rule.
+- Token 38081 [mistake]: Chooses the `34/53` route from that restricted search space, missing valid smaller constructions like `16/25`.
+- Token 33336-43039 [wasted]: Extensive enumeration over the restricted `D` set is internally consistent but aimed at the wrong feasible region.
+- Token 43371 [verification]: Rechecks arithmetic and floor handling thoroughly, but only for the suboptimal candidate.
+- Token 44850 [final answer]: Finalizes `\boxed{791}`, so the trace ends with the wrong answer.

@@ -1,0 +1,23 @@
+Correct answer:
+- The required sum of primes \(q < 1{,}000{,}000\) with \(P(q)=1\), modulo \(99991\), is \(53375\).
+
+Correct approach:
+- Represent each allowed term as \(2^i3^j\) with exponent pair \((i,j)\).
+- The non-divisibility condition is exactly the antichain condition in the product order:
+  - \(2^{i_1}3^{j_1} \mid 2^{i_2}3^{j_2}\) iff \(i_1 \le i_2\) and \(j_1 \le j_2\).
+  - So in any valid partition, sorting by increasing \(i\) forces strictly decreasing \(j\).
+- For sums below \(10^6\), exponents are bounded (\(i \le 19\), \(j \le 12\)).
+- Enumerate all valid antichains with a recursive/DP scan over \(i\):
+  - At each \(i\), either skip or choose one \(j < \text{prev\_j}\) with \(2^i3^j\) in range.
+  - Exclude \(1 = 2^0 3^0\) for prime targets (it would violate non-divisibility with any other term).
+  - Prune branches when partial sum exceeds \(10^6\).
+- Accumulate counts \(P(n)\) for all \(n \le 10^6\), then sum primes with \(P(q)=1\).
+- Sanity check: for \(q<100\), the sum is \(233\), matching the prompt.
+
+Wrong approaches and why they fail:
+- Assuming special-form sums (for example level sums like \(3^{k+1}-2^{k+1}\)) are automatically unique partitions is false.
+  - A prime can have additional antichain representations outside that family (e.g., \(19\) has more than one valid partition).
+- Computing only the total number of antichains/order ideals in the lattice does not solve the problem.
+  - The task needs weighted counts by sum value \(P(n)\), not just how many antichains exist overall.
+- Extrapolating from a few small-prime examples is unreliable.
+  - Many primes admit multiple valid partitions, so uniqueness must be determined by full counting, not pattern guesses.

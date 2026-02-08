@@ -1,0 +1,49 @@
+# Problem pe-770 Findings
+
+## Problem Statement
+A and B play a game. A starts with 1 gram of gold. Each round, A chooses x (0 <= x <= current wealth), then B decides TAKE (A loses x) or GIVE (A gains x). B must TAKE exactly n times and GIVE exactly n times over 2n rounds. g(X) is the minimal n such that A can guarantee ending with at least X grams. Given g(1.7)=10, find g(1.9999) mod 99991.
+
+## Correct Answer
+22680
+
+## Correct Approach
+
+### Key Insight 1: Homogeneous Value Function
+The game value V(w, T, G) (wealth w, T takes left, G gives left) satisfies homogeneity: V(λw, T, G) = λ * V(w, T, G). So V(w, T, G) = w * a(T, G) for some factor a(T, G).
+
+### Key Insight 2: Harmonic Mean Recurrence
+The optimal strategy for A is to choose x such that both branches (TAKE/GIVE) yield equal value. This leads to:
+- a(T, G) = 2*a(T-1,G)*a(T,G-1) / (a(T-1,G) + a(T,G-1)) = harmonic mean of neighbors
+- Base cases: a(0, G) = 2^G, a(T, 0) = 1
+
+### Key Insight 3: Transform to Linear Recurrence
+Define b(T, G) = 1/a(T, G). Then the harmonic mean recurrence becomes:
+- b(T, G) = (b(T-1, G) + b(T, G-1)) / 2
+This is a simple averaging recurrence (like discrete harmonic function).
+
+### Key Insight 4: Closed Form
+b(n, n) = 0.5 + C(2n-1, n-1) / 2^{2n}
+
+Since C(2n-1, n-1) = C(2n, n) / 2, this simplifies to:
+b(n, n) = 0.5 + C(2n, n) / 2^{2n+1}
+
+### Key Insight 5: Final Condition
+a(n, n) >= X is equivalent to:
+- b(n, n) <= 1/X
+- For X = 1.9999 = 19999/10000: 1/X - 0.5 = 1/(2*19999)
+- Need: C(2n, n) / 2^{2n} <= 1/19999
+- Equivalently: binom(2n, n) <= 4^n / 19999
+
+### Key Insight 6: Asymptotic Analysis
+Using Stirling's approximation: binom(2n, n) ~ 4^n / sqrt(π*n)
+So we need: sqrt(π*n) >= 19999
+Therefore: n >= 19999^2 / π ≈ 127,311,222.4
+
+### Key Insight 7: Precise Computation
+Using high-precision arithmetic (mpmath), the exact minimal n is 127311223.
+127311223 mod 99991 = 22680
+
+## Verification
+- Computed V_n values match g(1.7)=10 (V_9 < 1.7, V_10 >= 1.7)
+- D_exact(127311222) < 0 (inequality not satisfied)
+- D_exact(127311223) > 0 (inequality satisfied)

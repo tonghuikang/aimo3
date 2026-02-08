@@ -1,0 +1,26 @@
+# Findings: aimo3-q10-g10162574-g265710644
+
+## Correct answer
+- `(p+q) mod 99991 = 10477`
+
+## Correct values
+- `g(10162574) = 30/47`
+- `g(265710644) = 64/97`
+- Sum: `30/47 + 64/97 = 5918/4559`
+- So `p+q = 5918+4559 = 10477`
+
+## Correct approach
+- For `n = M+c` with `M = 3^(2025!)`, compute `f(n)` by minimizing `lcm(a,b,d)` over triples `a+b+d=n` that are divisors of the same integer.
+- A practical reduction is to search feasible divisor-sums `t` of `n` and minimize the ratio `h(t)/t`, where `h(t)` is the minimum LCM among triples summing to `t`.
+- Feasibility is modular: check `M+c ≡ 0 (mod t)` using `M mod t` (not just `t | (c+1)` in all cases).
+- For this pair, the minimizing feasible sums are:
+  - `t=47` with optimal triple `(2,15,30)`, ratio `30/47`
+  - `t=97` with optimal triple `(1,32,64)`, ratio `64/97`
+- Because `47,97 <= 2025`, `2025! * (30/47)` and `2025! * (64/97)` are integers, and the tiny `(c/M)` correction cannot change floors. Hence `g(c)` equals those exact fractions.
+
+## Wrong approaches seen in traces
+- **`n-1` smallest-odd-prime formula** (`9904`): assumes `(1,d,N)`-style construction is always optimal, giving inflated `f(n)`.
+- **Force `f(M+c)` to be a multiple of `M`** (`59586`): incorrectly concludes `g(c)` must be large integers and misses lower-ratio feasible constructions.
+- **Restricted `(p,q)` search with wrong feasibility condition** (`21279`): treats `D | (M+c)` (or equivalent reduced-denominator shortcuts) as sufficient, so it accepts `130/197` and misses the valid lower value `64/97`.
+- **Assume universal `3/5` branch** (`11`): uses `(2,6)` with a reduced divisibility test but skips full integrality constraints for the associated divisors.
+- **Assume universal `2/3` from `n+1` factorization** (`7`): finds a valid `2/3` candidate family and incorrectly treats it as globally minimal, ignoring better feasible ratios (`30/47`, `64/97`).

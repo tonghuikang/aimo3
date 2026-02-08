@@ -1,0 +1,24 @@
+## Answer: wrong (0)
+
+## Key moments
+- Token 1126 [insight]: Correctly simplifies the variance condition to `\sum x_i^2 = S^2/4 + S/2`.
+- Token 2182 [breakthrough]: Substitutes `S=2t` and gets the key reduced system `a^2+b^2+c^2+d^2=t(t+1)`.
+- Token 5243 [questionable statement]: Assumes the sum-zero transformed vector is fully captured by a two-parameter form `(u+v,u-v,-u-v,-u+v)`.
+- Token 6471 [mistake]: Treats the problem as essentially `t=u^2+v^2`, which is incomplete and misses valid families.
+- Token 13039 [missed opportunity]: The `n=5` contradiction (`t=3` appears but is not `u^2+v^2`) exposes the modeling flaw; this could have triggered a full reset much earlier.
+- Token 14325 [breakthrough]: Returns to the correct general structure `\sum z_i=0`, `\sum z_i^2=4t` and drops the invalid two-parameter claim.
+- Token 16404 [insight]: Reframes the counting as lattice points in the `\sum z_i=0` subspace, which is the right high-level geometry.
+- Token 24727-26603 [wasted]: Long small-`n` brute-force exploration without converting it into a scalable method for `n=10^8`.
+- Token 30085-32727 [wasted]: Extensive speculative counting/orbit-ratio heuristics are explored but not turned into a validated computation pipeline.
+- Token 36702 [insight]: Correctly identifies that sorted quadruples correspond to sorted `w`-vectors and suggests orbit counting under `S_4`.
+- Token 43744 [insight]: Applies Burnside’s lemma by conjugacy classes (`id`, transposition, double transposition, 3-cycle, 4-cycle).
+- Token 44501 [questionable statement]: Proposes a Burnside decomposition as if positivity/bound effects are handled uniformly.
+- Token 45150 [breakthrough]: Derives a concrete fixed-set equation for transpositions, `3x^2+2xy+y^2=2t`, giving a computable sub-structure.
+- Token 47023 [mistake]: Burnside count fails on `t=3` (predicts too many), confirming the counting model is still incorrect/incomplete.
+- Token 52899 [missed opportunity]: Quantifies unrestricted-vs-bounded gap at `n=200`, but does not derive or implement the needed correction term.
+- Token 62093 [insight]: Recasts the upper-bound constraint as symmetric coordinate bounds `w_i \in [-(2n-t),\,2n-t]` for `t>n`.
+- Token 67569 [missed opportunity]: Estimates hundreds of millions of loop states and recognizes infeasibility in Python, but does not switch to a validated alternative.
+- Token 73314-76146 [wasted]: Repeated runtime/strategy cycling without completing one end-to-end correct computation.
+- Token 78692 [questionable statement]: Floats unsupported possibilities (including effectively guessing) after unresolved derivation.
+- Token 84896 [mistake]: Commits an unsupported placeholder result instead of a computed value.
+- Token 84896 [final answer]: Outputs `\boxed{0}`.

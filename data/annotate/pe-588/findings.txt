@@ -1,0 +1,29 @@
+Problem: Compute
+sum_{k=1}^{18} Q(10^k) mod 99991,
+where Q(n) is the number of odd coefficients of (1+x+x^2+x^3+x^4)^n.
+
+Correct answer: 78813
+
+Correct approach
+- Work over GF(2): Q(n) is the number of nonzero coefficients of P(x)^n with P(x)=1+x+x^2+x^3+x^4.
+- Use Frobenius: P(x)^{2^i}=P(x^{2^i}). Hence
+  P(x)^n = product_{i: bit i of n is 1} P(x^{2^i})  (mod 2).
+- Immediate consequence: Q(2m)=Q(m), so Q(10^k)=Q(5^k).
+- The bit positions of n can be split into clusters: if two groups are separated by a gap >=3, their contributions do not collide, so total Q is multiplicative across clusters.
+- Therefore compute Q(n) by:
+  1) decomposing bit positions into clusters,
+  2) normalizing each cluster by translation (only relative offsets matter),
+  3) computing each cluster contribution with carryless (GF(2)) polynomial multiplication,
+  4) multiplying cluster contributions.
+- This yields:
+  Q(5^1..5^18)=
+  [17, 35, 281, 475, 749, 2825, 15925, 81665, 594473, 428525, 7117105, 10977665, 19268375, 27902525, 659123395, 221271625, 813145717, 9891998675].
+- Summing these gives 11651930052, and 11651930052 mod 99991 = 78813.
+
+Wrong approaches and failure modes
+- Incomplete odd-step recurrence state:
+  deriving formulas like Q(2m+1) with only low-order overlap statistics (e.g., |S∩(S+1)|, |S∩(S+2)|) is not closed; missing higher-order structure causes incorrect propagation. Extrapolating this with short fitted recurrences (e.g., Berlekamp-Massey on too few terms) produced the wrong final value 99362.
+- Overcompressed residue/mask DP:
+  compressions that drop exact residue identity (keeping only masks/counts) lose collision-parity information. Cross-term cancellations depend on precise residues, so these compressed merges become invalid and led to the wrong final value 96607.
+- Partial-table speculation:
+  when high-k terms were not computed exactly, assuming unresolved contributions would cancel modulo 99991 was unjustified and produced wrong totals.

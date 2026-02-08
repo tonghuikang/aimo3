@@ -1,0 +1,11 @@
+## Answer: correct (1453)
+
+## Key moments
+- Token 14529 [breakthrough]: Uses small-`K` analog experiments to spot and support the pattern `f(5M)=(10/3)M`, giving a workable first-term structure.
+- Token 18847 [mistake]: Briefly argues a potentially smaller `(6/11)n` route (via `N/2,N/3`) without first enforcing integrality/divisibility for `n=5M`, creating a temporary contradiction.
+- Token 19461 [breakthrough]: Resolves the contradiction by enforcing integer feasibility (`11 \nmid 5M`) and restores the valid `f(5M)=(2/3)\cdot 5M` path.
+- Token 24938-35908 [wasted]: Extended exploration of alternative constructions and representability checks delays convergence on the second term despite already having strong structural tools.
+- Token 37607 [breakthrough]: Identifies the valid pair `(2,64)` for `n=M+265710644`, yielding the decisive factor `64/97` and unlocking `g(265710644)=64/97`.
+- Token 44364 [verification]: Performs explicit off-by-one/floor validation for both `g(4M)` and `g(265710644)`, checking divisibility and tiny-error terms.
+- Token 46276 [verification]: Adds a final minimality check (reciprocal-sum threshold argument) to rule out better pairs than `(2,64)`.
+- Token 46678 [final answer]: Commits to `\boxed{1453}`, which is correct.

@@ -1,0 +1,31 @@
+Problem: pe-447 - Retractions of affine functions
+
+Correct Answer: 530553372
+
+Problem Summary:
+- Count retractions f_{n,a,b}(x) = ax + b (mod n) where f(f(x)) = f(x) for all x
+- R(n) = number of such pairs (a,b) with 0 < a < n, 0 <= b < n
+- Compute F(N) = sum_{n=2}^N R(n) for N = 10^14, mod 10^9+7
+
+Correct Approach:
+1. Derive conditions for retraction:
+   - f(f(x)) = f(x) requires: a^2 = a (mod n) and ab = 0 (mod n)
+   - a must be idempotent mod n: a(a-1) = 0 (mod n)
+   - For each valid a, number of valid b = gcd(a,n)
+
+2. Key insight: idempotents mod n correspond to choosing 0 or 1 mod each prime power p^e || n
+   - There are 2^{omega(n)} idempotents, excluding a=0 gives 2^{omega(n)} - 1 valid a's
+   - R(n) = sum over valid a of gcd(a,n) = product_{p^e||n}(1 + p^e) - n
+   - This equals sigma*(n) - n, where sigma* is sum of unitary divisors
+
+3. F(N) = sum_{n=2}^N (sigma*(n) - n) = sum_{n=1}^N sigma*(n) - N(N+1)/2
+
+4. Efficient computation:
+   - Use identity: sum_{n<=N} sigma*(n) = sum_{k=1}^{sqrt(N)} mu(k) * k * T(N/k^2)
+   - Where T(L) = sum_{t=1}^L t * floor(L/t)
+   - T(L) is computable in O(sqrt(L)) using integer division grouping
+   - Group k values by L = N/k^2 to reduce computation
+
+5. Algorithm complexity: O(N^{1/2} log N) which is feasible for N = 10^14
+
+Both traces in this problem correctly derive the formula and compute the answer.

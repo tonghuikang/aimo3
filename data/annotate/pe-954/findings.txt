@@ -1,0 +1,43 @@
+# PE 954: Heptaphobic Numbers Annotation Findings
+
+## Problem Summary
+Count heptaphobic numbers < 10^13 (mod 99991). A heptaphobic number is not divisible by 7 and no swap of two digits produces a multiple of 7.
+
+## Correct Answer
+- **C(10^13) mod 99991 = 30108**
+
+## Correct Approach
+- Count by exact length `L = 1..13`, then sum.
+- For length `L`, let position weights be `w_i = 10^(L-i) mod 7` (period 6).
+- If `S = N mod 7`, swapping digits at positions `i,j` gives:
+  - `S' = S + (d_j - d_i) * (w_i - w_j) (mod 7)`.
+- Heptaphobic requires:
+  - `S != 0`, and
+  - for every valid swap, `S' != 0`.
+- If `w_i = w_j` (positions differ by a multiple of 6), swap does not change mod 7, so these pairs never create a new multiple of 7 when `S != 0`.
+- Leading-zero legality is essential: swaps that move digit `0` into the MSD are invalid and must be excluded.
+  - This requires distinguishing digit `0` from digit `7` even though both are residue `0 mod 7`.
+- Efficient counting is done with residue-based DP/backtracking using class masks and swap-forbidden conditions, with multiplicity weights:
+  - residues `0,1,2` have two digit realizations in non-leading positions,
+  - residues `3,4,5,6` have one,
+  - leading residue `0` has only digit `7` (not `0`).
+- Verified against provided checks:
+  - `C(100) = 74`
+  - `C(10^4) = 3737`
+- Final total:
+  - `C(10^13) = 736463823`
+  - `736463823 mod 99991 = 30108`.
+
+## Wrong Approaches And Failure Modes
+- **Wrong answer 98297**:
+  - Treated the whole mod-6 class containing the MSD as if every position in that class were the unique leading position.
+  - Applied leading-swap legality filters at class level instead of MSD-position level.
+  - This mis-modeled valid/invalid swaps for lengths where that class has multiple positions (e.g., `L > 6`).
+- **Wrong answer 12480**:
+  - Used class-level forbidden-product aggregation with a class-level MSD/zero shortcut.
+  - Skipped contributions from non-MSD digits that share the MSD class when new digit was zero.
+  - Under-counted bad swaps and over-counted heptaphobic numbers.
+
+## Practical Validation Criteria
+- Any correct method must reproduce both provided checkpoints (`74`, `3737`) and handle MSD swap legality with true digit-zero semantics.
+- Methods that conflate MSD position with MSD class, or that do not distinguish `0` vs `7` in MSD-involving swaps, fail on longer lengths.

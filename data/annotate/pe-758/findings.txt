@@ -1,0 +1,23 @@
+# Problem PE_758 Findings
+
+## Correct Answer
+331196954
+
+## Correct Approach
+- Define `P(a,b)` as the minimal pours from state `(a,b,0)` with capacities `(a,b,a+b)`.
+- The optimal-count formula is:
+  If `c/d` is the penultimate convergent of the continued fraction of `b/a` (`a<b`, `gcd(a,b)=1`), then
+  `P(a,b) = 2*(c+d) - 2`.
+- This matches all provided checks:
+  `P(3,5)=4`, `P(7,31)=20`, `P(1234,4321)=2780`.
+- For `a=2^m-1`, `b=2^n-1` (Mersenne form):
+  - Euclidean remainders stay Mersenne, with exponent remainder `n mod m`.
+  - Step quotients are geometric-sum forms, e.g. `q = (2^N - 2^R)/(2^M - 1)` when `N = kM + R`.
+  - Use these quotients to update convergents directly (mod `1,000,000,007`) without constructing huge integers.
+- Summing `P(2^{p^5}-1, 2^{q^5}-1)` over primes `p<q<1000` gives `331196954 (mod 1,000,000,007)`.
+
+## Wrong Approaches And Why They Fail
+- Overfitting small-case data to simple templates (`sum q_i`, `2*sum q_i + c`, `2*ceil((b-1)/a)`, residue-only factors) fails on broader counterexamples.
+- Treating the puzzle as identical to the classic two-jug-from-empty process gives wrong costs; start-state and occupancy constraints here are different.
+- Ad hoc exponent recurrences with guessed offsets (`Q*f+4`, `Q*f+f(...)`, `2*ΣQ_i`, etc.) do not survive consistency checks on small-exponent instances.
+- Both wrong traces eventually output `0`, which is not consistent with validated formulas/checks.

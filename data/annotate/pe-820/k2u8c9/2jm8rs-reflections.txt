@@ -1,0 +1,15 @@
+## Answer: correct (71775)
+
+## Key moments
+- Token 251 [insight]: Reframes the target digit as `floor(10^n * frac(1/k)) mod 10`, including terminating-decimal behavior.
+- Token 908 [breakthrough]: Simplifies to `d_n(1/k) = floor(10^n/k) mod 10` and handles the `k=1` edge case correctly.
+- Token 1324 [insight]: Rewrites the sum as `S(n) = A - 10B` instead of incorrectly reducing only after summing.
+- Token 1598 [breakthrough]: Establishes `floor(floor(x)/10) = floor(x/10)`, giving `B = sum floor(10^{n-1}/k)`.
+- Token 2370 [questionable statement]: Treats the huge size of `10^{10^7}` as implying direct per-`k` computation is infeasible.
+- Token 2741 [mistake]: Prematurely labels the per-`k` modular-exponent approach as too heavy before benchmarking built-in `pow`.
+- Token 5928 [insight]: Revisits the direct-scan idea and recognizes that C-level `pow(10, n-1, k)` may still be practical at this scale.
+- Token 7293-7363 [wasted]: Spends time on asymptotic/distribution speculation that does not advance the exact modular computation.
+- Token 7363 [breakthrough]: Switches to direct evaluation `digit = (10 * pow(10, n-1, k)) // k`, enabling a practical O(N) scan.
+- Token 8157 [verification]: Validates the method against provided checkpoints `S(7)=10` and `S(100)=418`.
+- Token 9167 [verification]: Runs additional small-`N` and edge-case checks to confirm no off-by-one issues.
+- Token 9351 [final answer]: Commits `71775`, which is correct.

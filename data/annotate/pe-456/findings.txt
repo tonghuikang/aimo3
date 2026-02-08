@@ -1,0 +1,46 @@
+# Problem pe-456 Findings
+
+## Problem Summary
+Count triangles containing the origin among points P_n defined by modular exponentiation sequences.
+
+## Correct Answer
+333333208685971546
+
+## Key Insight: Opposite-Side Pairs vs Antipodal Pairs
+
+The critical distinction between correct and wrong traces is how they handle pairs of points that are collinear with the origin but on opposite sides.
+
+### Wrong Approach A (gives 333333208685812397)
+Uses `M = number of exact antipodal pairs` (where antipodal means (x,y) and (-x,-y) are both present).
+Formula: `C(N) = total - sumk - M*(N-2) + T2`
+
+This is WRONG because it only counts pairs where the coordinates are exact negatives.
+
+### Wrong Approach B (gives 333333208685812398)
+Starts from the same antipodal-only correction model, then patches the result by adding 1 to force agreement with a benchmark mismatch.
+Formula pattern: `C_patched(N) = (total - sumk - M*(N-2) + T2) + 1`
+
+This is WRONG because the `+1` is an ad hoc fix, not a derivation from the counting structure. The underlying opposite-side pair model is still incomplete.
+
+### Correct Approach (gives 333333208685971546)
+Uses `sum_ab = sum over all direction lines of (a*b)` where:
+- a = number of points on positive side of line through origin
+- b = number of points on negative side of same line
+Formula: `C(N) = total - sumk - sum_ab*(N-2) + T2`
+
+This is CORRECT because it counts ALL pairs of points that are collinear with origin but on opposite sides, not just exact negatives. Two points at angles θ and θ+π are on opposite sides even if they're not exact negatives (different magnitudes).
+
+### Why the Difference Matters
+For points (x,y) and (k*x, k*y) where k<0, they are on opposite sides of the origin but only exact negatives (-x,-y) are counted by M. Points like (2x, 2y) and (-x, -y) are on the same line through origin but opposite sides, yet not captured by the simple antipodal count.
+
+The difference between approaches: ~160,000 triangles for N=2,000,000.
+
+## Algorithm Components
+1. `sumk`: Count triples in open half-plane using two-pointer sliding window on sorted angles
+2. `sum_ab`: Sum of a*b across all direction lines (correct) OR M = exact antipodal pairs (wrong base model)
+3. `T2`: Correction for double-counting triples where all 3 points are on same line with both sides occupied
+
+## Trace Summary
+- pdvhmm.txt: CORRECT - discovers the sum_ab fix through careful analysis
+- 8j92c8.txt: WRONG - uses only M (antipodal pairs)
+- xnuh3w.txt: WRONG - starts with the M-only model and then applies an unjustified +1 patch

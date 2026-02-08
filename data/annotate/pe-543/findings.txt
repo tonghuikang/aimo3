@@ -1,0 +1,34 @@
+# Problem pe-543 Findings
+
+## Problem Summary
+- Compute
+  - `P(n,k)=1` if `n` is representable as a sum of exactly `k` primes (repetition allowed), else `0`.
+  - `S(n)=sum_{1<=i,k<=n} P(i,k)`.
+- Return `sum_{k=3}^{44} S(F(k)) mod 99991`, with `F(0)=0, F(1)=1`.
+
+## Correct Answer
+- `89776`
+
+## Correct Approach
+- Characterize valid `k` for each fixed `i`:
+  - `k=1`: valid iff `i` is prime.
+  - `k=2`: valid for all even `i>=4` (Goldbach on this verified range) and for odd `i` iff `i-2` is prime.
+  - `k>=3`: for each `k`, all `i>=2k` are valid in the needed range.
+- Therefore,
+  - `S(n) = pi(n) + E2(n) + O2(n) + sum_{k=3}^{floor(n/2)} (n-2k+1)`
+  - `E2(n)=max(0,floor(n/2)-1)`
+  - `O2(n)=max(0,pi(n-2)-1)`
+- Closed form for the `k>=3` block:
+  - Let `m=floor(n/2)`.
+  - If `m<3`, the block is `0`.
+  - Else `sum_{k=3}^{m}(n-2k+1)=m*(n-m)-2*n+4`.
+- Evaluate `S(F(k))` for `k=3..44`, using fast prime counting (Lehmer) for `pi(x)` at `x=F(k)` and `x=F(k)-2`, then reduce mod `99991`.
+- Sanity checks that must match: `S(10)=20`, `S(100)=2402`, `S(1000)=248838`.
+
+## Wrong Approaches and Why They Fail
+- Treating `k=2` as “all `i>=4` are representable” overcounts odd values.
+  - This yields inflated totals (e.g., `S(100)=2426` instead of `2402`).
+- Using a single simplified formula without boundary guards (`n<6`, or `O(n)` without `max(0,...)`) causes small-`n` errors (e.g., miscomputing `S(3)`).
+- Algebra slip in the arithmetic block:
+  - Incorrect: `m*(n-m+1)-2*n+4`
+  - Correct: `m*(n-m)-2*n+4`

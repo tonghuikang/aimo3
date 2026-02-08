@@ -1,0 +1,18 @@
+## Answer: correct (99107)
+
+## Key moments
+- Token 4348 [questionable statement]: Tries to justify that minimizing the immediate split sum (digit-sum path) should also minimize future `f`, leaning on an implicit monotonicity claim.
+- Token 5513 [mistake]: Confirms with the `199 -> 100` style case that a larger split sum can have smaller `f`, so digit-sum-only DP is invalid.
+- Token 6128-14366 [wasted]: Spends a long reverse-edge/BFS-preimage design detour that does not yield a practical scalable algorithm.
+- Token 12893 [insight]: Notices the reverse-adjacency idea would need expensive preimage generation, motivating a direct per-number existence test instead.
+- Token 16737 [insight]: Reframes the core decision as set membership: whether any split reaches a low-digit-sum target layer.
+- Token 24891 [insight]: Stabilizes and empirically validates the `f in {0,1,2,3}` layer classification via “exists split to `S0`” checks on larger ranges.
+- Token 27244 [breakthrough]: Finalizes the scalable rule: precompute digit sums and use early-exit split search for membership in `S0_10`/`S0_3`.
+- Token 35214 [verification]: First integrated `compute_g_fast` run matches the sample checkpoint `g(100,10,3)=3302` and gives workable mid-scale timing.
+- Token 36010-42618 [wasted]: Continues substantial optimization brainstorming even after a functioning path is available, delaying full-run execution.
+- Token 44347 [insight]: Measures low average DFS state exploration per number, giving confidence that full `N=10^7` is tractable.
+- Token 44824 [breakthrough]: Implements the streamlined DFS split-checker and complete `compute_g_dfs` pipeline.
+- Token 45761 [verification]: Runs the full `N=10^7` computation and obtains modulo result `99107`.
+- Token 46992 [verification]: Re-checks sample agreement and inclusive range (`i=1..N`) to rule out off-by-one errors.
+- Token 48788 [missed opportunity]: Large-number brute validation is abandoned due branching cost, leaving the `f<=3` assumption only partially justified empirically.
+- Token 49354 [final answer]: Commits to `\\boxed{99107}`, which is correct.

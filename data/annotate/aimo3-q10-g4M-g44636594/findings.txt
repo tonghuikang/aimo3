@@ -1,0 +1,63 @@
+# Problem: aimo3-q10-g4M-g44636594
+
+## Correct Answer
+2501
+
+## Core formulation
+For fixed \(n\),
+\[
+f(n)=\min_{a,b,c\text{ distinct},\ a+b+c=n}\operatorname{lcm}(a,b,c).
+\]
+Equivalently, if a triple is written as \(a=gd_1,b=gd_2,c=gd_3\) with \(d_1+d_2+d_3=K\) and \(K\mid n\), then
+\[
+f(n)=\min_{K\mid n}\frac{n}{K}\,h(K),\quad
+h(K):=\min_{d_1+d_2+d_3=K\atop d_i\text{ distinct}}\operatorname{lcm}(d_1,d_2,d_3).
+\]
+So the key is minimizing the ratio \(h(K)/K\) over divisors \(K\) of the target \(n\).
+
+## Correct approach
+Let \(M=3^{2025!}\).
+
+1. For \(n_1=M+4M=5M\): divisors \(K\) of \(n_1\) are built from primes \(3,5\). The best achievable ratio is \(2/3\), giving
+\[
+f(5M)=\frac{2}{3}(5M)=\frac{10}{3}M.
+\]
+Hence
+\[
+g(4M)=\frac1{2025!}\left\lfloor\frac{2025!f(5M)}M\right\rfloor=\frac{10}{3}.
+\]
+
+2. For \(n_2=M+44636594\): since \(M\equiv1\pmod p\) for relevant small primes \(p\neq3\), divisors of \(44636595\) generate key divisor candidates for \(n_2\). The best ratio among valid divisor sums is
+\[
+\frac{110}{167}
+\]
+(from the \(K=167\) structure), so
+\[
+f(n_2)=\frac{110}{167}n_2.
+\]
+Then
+\[
+g(44636594)=\frac{110}{167}
+\]
+because \(167\mid 2025!\) and the \(M\)-scaled correction term is too small to change the floor.
+
+3. Final computation:
+\[
+g(4M)+g(44636594)=\frac{10}{3}+\frac{110}{167}=\frac{2000}{501}.
+\]
+So \(p=2000, q=501\), and
+\[
+(p+q)\bmod 99991=2501.
+\]
+
+## Wrong approaches and why they fail
+
+1. Treating \(f(n)\le \frac{2}{3}(n-2)\) (from triples like \((2,k,2k)\)) as an exact optimum for \(n\equiv2\pmod3\).
+- This only gives an upper bound.
+- For \(n_2=M+44636594\), a better divisor-ratio construction exists: \(110/167<2/3\).
+- This mistake yields \(g(44636594)=2/3\), then total \(4\), then wrong final answer \(5\).
+
+2. Over-restricting to triples effectively of the form \((1,a,N)\) (or equivalent near-\(N\) constructions) and optimizing inside that restricted family.
+- This misses lower-lcm families not requiring that structure.
+- It leads to an inflated first term model (e.g., \(g(4M)=5-1/2025!\)) and wrong modular arithmetic downstream.
+- This mistake yields the wrong final answer \(15300\).

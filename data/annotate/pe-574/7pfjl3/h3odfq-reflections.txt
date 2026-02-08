@@ -1,0 +1,16 @@
+## Answer: correct (25079)
+
+## Key moments
+- Token 559 [insight]: Reframes the condition as forcing divisibility coverage of all primes up to roughly `sqrt(p)` via a suitable `q`.
+- Token 912 [breakthrough]: Chooses `q0` as the smallest prime above `sqrt(p)` to minimize required prime factors in `AB`.
+- Token 1768 [insight]: Simplifies gcd handling by observing `gcd(A,p-A)=gcd(A,p)` (sum) and `gcd(A,A-p)=gcd(A,p)` (difference), so the prime case is mostly automatic.
+- Token 2910 [breakthrough]: Recognizes sum and difference reduce to the same CRT residue structure for `A` modulo `L`; only interval constraints differ.
+- Token 4912-5382 [wasted]: Spends time on symmetry of `d` versus `L/d` without using it in the final implementation path.
+- Token 5510 [insight]: Converts each prime constraint into a binary residue choice (`A ≡ 0` or `A ≡ p mod r`).
+- Token 6455 [breakthrough]: Derives linear CRT decomposition `A ≡ p * u_T (mod L)`, enabling subset-precompute reuse.
+- Token 15581 [breakthrough]: Switches to precomputing `U={u_T}` once per `L` and reusing it across many `p`, making the brute-force tractable.
+- Token 19161 [verification]: Verifies core examples `V(2)=1`, `V(37)=22`, and `V(151)=165`.
+- Token 19300 [verification]: Confirms benchmark checks `S(10)=10` and `S(200)=7177` before final target computation.
+- Token 19400 [verification]: Computes `S(3800) mod 99991` and checks runtime feasibility.
+- Token 20289 [verification]: Recomputes full-sum and modulo values as a consistency sanity check.
+- Token 20675 [final answer]: Commits to the boxed final result `25079`.

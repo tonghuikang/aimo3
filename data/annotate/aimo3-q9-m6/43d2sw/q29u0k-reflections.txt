@@ -1,0 +1,11 @@
+## Answer: correct (84)
+
+## Key moments
+- Token 1796 [insight]: Recasts the correlation condition into polynomial/generating-function language.
+- Token 2334 [breakthrough]: Writes the target factorization `A(x)B'(x)=x^k+x^l`, reducing the task to divisor structure.
+- Token 8954 [insight]: Explicitly frames necessity and sufficiency around divisors of `1+x^d` plus monomial shifts.
+- Token 14984 [breakthrough]: Locks the core structural rule that admissible cyclotomic factors must come from one shared 2-adic class.
+- Token 17383-17746 [wasted]: Additional exhaustive-construction discussion adds little after the classification is already complete.
+- Token 19168 [verification]: Applies the shift/sign multiplicity formula over the valid base-polynomial set.
+- Token 20362 [verification]: Numeric check confirms the aggregate count reaches `84`.
+- Token 26054 [final answer]: Commits to `\boxed{84}`, which is correct.

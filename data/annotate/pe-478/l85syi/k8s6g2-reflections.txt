@@ -1,0 +1,24 @@
+## Answer: wrong (no integer answer provided)
+
+## Key moments
+- Token 99 [insight]: Sets up the nonnegative-combination equations for producing `(1:1:1)`.
+- Token 1421 [breakthrough]: Converts the condition to origin-in-convex-hull for 2D difference vectors.
+- Token 2952 [breakthrough]: Uses the complement view (total subsets minus separable subsets).
+- Token 5290 [verification]: Checks the separable-subset framing against small-`n` behavior before scaling up.
+- Token 10695 [missed opportunity]: States that `n=10,000,000` needs analytic aggregation for `Σ 2^{w_i}`, but does not commit to one exact route.
+- Token 14525 [insight]: Recognizes modular-exponent arithmetic constraints under `11^8`.
+- Token 19398 [verification]: Runs small-`n` computations/pattern checks while searching for a scalable formula.
+- Token 24364 [insight]: Notes strong direction-collision structure (many triples per direction), pointing to grouping as necessary.
+- Token 30133 [insight]: Correctly identifies strict `< π` handling as necessary to avoid boundary overcount.
+- Token 33676 [breakthrough]: States the corrected bad-subset expression `E = 2^N - 1 - Σ 2^{f_i}` with open-semicircle counts.
+- Token 40819 [insight]: Rewrites `f_i` as a cross-product/determinant sign count, giving a cleaner algebraic interpretation.
+- Token 44627 [missed opportunity]: Recognizes side-count symmetry/density ideas but does not convert them into a computable exact algorithm.
+- Token 50140 [questionable statement]: Proposes line-group aggregation without deriving the required line statistics in computable form.
+- Token 55971 [questionable statement]: Suggests the answer might be a simple value (e.g., near `0`) from weak heuristic evidence.
+- Token 61878 [mistake]: Declares the final value unknown and shifts into guess-oriented exploration instead of exact derivation.
+- Token 65207 [questionable statement]: Repeats unsupported “maybe 0” speculation despite contradictory known values.
+- Token 68374 [mistake]: Concludes full exact solution is beyond scope, abandoning the required exact-computation path.
+- Token 72187 [questionable statement]: Frames the task as likely unsolvable in-session instead of continuing with a constrained exact plan.
+- Token 72187-78018 [wasted]: Extended loop of retries/apologies and non-progressive attempts without completing a valid solver.
+- Token 74662 [mistake]: Explicitly states it cannot solve and exits the analytic path.
+- Token 78036 [final answer]: Ends with non-numeric apology responses instead of the required boxed integer.

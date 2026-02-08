@@ -1,0 +1,44 @@
+# Findings: aimo3-q10-g1848374
+
+## Correct Result
+- Let \(N=M+c\) with \(M=3^{2025!}\) and \(c=1848374\).
+- \(g(c)=\dfrac{16}{25}\).
+- Reduced fraction: \(p=16, q=25\), so \(p+q=41\) and the remainder mod \(99991\) is **41**.
+
+## Correct Approach
+1. Represent a valid divisor triple as \(\{k/p,\;k/q,\;k\}\) with integers \(p,q>1\), \(p\neq q\):
+   - \(N = k\left(1+\frac1p+\frac1q\right)\)
+   - \(k = N\cdot\dfrac{pq}{pq+p+q}\).
+
+2. Define \(D=pq+p+q\). Validity needs all of the following:
+   - \(k\in\mathbb{Z}\)
+   - \(k/p\in\mathbb{Z}\)
+   - \(k/q\in\mathbb{Z}\)
+   - The last two conditions are frequently missed; checking only \(D/\gcd(D,pq)\mid N\) is not enough.
+
+3. Use congruences for \(N=M+c\):
+   - For primes \(r\le 2025, r\neq 3\): \(M\equiv 1\pmod r\), so \(N\equiv c+1\pmod r\).
+   - \(c+1=1848375=3^2\cdot5^3\cdot31\cdot53\), and \(N\) is odd.
+
+4. Best feasible pair is \((p,q)=(2,16)\):
+   - \(D=50\), \(pq=32\), ratio \(k/N=32/50=16/25\).
+   - Requires \(25\mid N\), which holds because \(N\equiv c+1\equiv0\pmod{25}\).
+   - Then \(k=(16/25)N\), \(k/2\) and \(k/16\) are integers, so the construction is valid.
+
+5. Compute \(g(c)\):
+   - \(\frac{2025!\,f(N)}{M}=2025!\cdot\frac{16}{25}\left(1+\frac{c}{M}\right)=A+\varepsilon\),
+   - with \(A=2025!\cdot\frac{16}{25}\in\mathbb{Z}\) and \(0<\varepsilon<1\),
+   - so floor is \(A\), hence \(g(c)=\frac{A}{2025!}=\frac{16}{25}\).
+
+## Common Wrong Approaches
+1. **Using only reduced divisibility \(D'\mid N\) and accepting \((2,6)\):**
+   - Gives candidate ratio \(3/5\), but fails because \(k\) is odd (\(N\) odd), so \(k/2\notin\mathbb{Z}\).
+   - Root cause: not enforcing both \(k/p\) and \(k/q\) integrality.
+
+2. **Over-restricting to “must include divisor \(M\)” and minimizing \(M\cdot e\):**
+   - Leads to \(e=254051\), so \(f(N)=254051M\), \(g(c)=254051\), and remainder 54070.
+   - Fails because global optimum can come from other divisor-shape families with much smaller ratio (\(16/25\)).
+
+3. **Assuming \(f(N)=M-1\) from the valid triple \(\{1,c,M-1\}\):**
+   - Produces \(g(c)=\frac{2025!-1}{2025!}\) and remainder 14486.
+   - Fails because this is only a feasible construction, not minimal.

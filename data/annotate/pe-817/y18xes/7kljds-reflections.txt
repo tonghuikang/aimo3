@@ -1,0 +1,16 @@
+## Answer: correct (65910)
+
+## Key moments
+- Token 647 [insight]: It separates the two key mechanisms, least-significant digit (`m^2 ≡ -d mod p`) versus higher-digit placement (`floor(m^2/p)` behavior).
+- Token 2603 [questionable statement]: It temporarily compresses the problem to only the congruence `m^2 ≡ p-d (mod p)`.
+- Token 2921 [mistake]: It effectively treats the congruence route as sufficient, which would miss non-residue `d` values where no such root exists.
+- Token 3068 [insight]: It recovers by explicitly reintroducing the high-digit fallback for non-residue cases.
+- Token 11985 [insight]: It rewrites the middle-digit condition as `floor(m^2/p) ≡ -d (mod p)`, setting up the interval-based search logic.
+- Token 20019 [breakthrough]: The `m = p*q + r` decomposition yields a concrete expression for the `p^1` digit and makes constructive search feasible.
+- Token 27994 [missed opportunity]: It spends time worrying about higher-position digits before fully exploiting the already sufficient `p^1` interval check.
+- Token 29732 [breakthrough]: It commits to scanning `k` intervals and checking square hits with integer-square-root bounds.
+- Token 33393-33682 [wasted]: It spends many tokens debating existence/loop bounds for the high-digit branch before implementation.
+- Token 33920 [breakthrough]: It uses `p % 4 == 3` to replace generic Tonelli-Shanks with the fast square-root exponent formula.
+- Token 34450 [breakthrough]: The final `solve_sum` implementation cleanly combines Legendre test, modular root branch, and interval-`k` fallback.
+- Token 34705 [verification]: It validates the algorithm against brute force on a smaller prime (`p=10007, D=200`), confirming exact agreement.
+- Token 35033 [final answer]: It outputs `\boxed{65910}`.

@@ -1,0 +1,14 @@
+## Answer: correct (238413705)
+
+## Key moments
+- Token 2482 [insight]: Switches from raw count-assignment thinking to character-sum/parity-filter counting on full digit strings.
+- Token 4018 [breakthrough]: States the root-of-unity formula for fixed parity vectors, enabling closed-form terms of the form \(B^N\).
+- Token 4884 [questionable statement]: Claims leading-zero cases are automatically excluded by zero-digit even-parity requirements.
+- Token 4884 [mistake]: Uses that claim as if always true, which would miss valid-parity strings like `00` that still violate the no-leading-zero rule.
+- Token 5143 [breakthrough]: Corrects the leading-zero handling with a counterexample and redefines counting via first-digit fixing and parity toggling.
+- Token 11334 [breakthrough]: Compresses the count into \(a_L=\sum_b c_b b^{L-1}\) and then \(Q(N)\) via geometric sums, making huge \(N\) tractable.
+- Token 11634 [verification]: Checks \(Q(7)\) against the provided value and matches.
+- Token 11670 [verification]: Checks \(Q(100)\bmod 1{,}000{,}000{,}123\) against the provided value and matches.
+- Token 11850 [missed opportunity]: Could finalize after both official checks passed, but continues adding extra validation loops.
+- Token 12945-17386 [wasted]: Extended recurrence/DP cross-check detour that does not change the derived formula or output.
+- Token 17989 [final answer]: Commits to the final boxed value \(238413705\).

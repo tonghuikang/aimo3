@@ -1,0 +1,15 @@
+## Answer: correct (65910)
+
+## Key moments
+- Token 249 [insight]: It correctly frames the base-`p` digit structure and starts from the two-digit decomposition for `m < p`.
+- Token 1075 [insight]: It catches the `d=1` edge case early (`-1` is non-residue mod `p`), so least-significant-digit matching cannot work there.
+- Token 1881 [questionable statement]: It suggests that for most `d>=2`, the fallback can be handled by enforcing `floor(m^2/p)=p-d` directly.
+- Token 8021 [insight]: It reformulates the hard cases as `floor(m^2/p) ≡ -d (mod p)`, pointing toward a `k`-indexed family of intervals.
+- Token 15949 [mistake]: It temporarily commits to `m2 = ceil(sqrt(p*(p-d)))` as a general residue-branch rule, which fails on odd-residue cases where `k=0` has no square hit.
+- Token 20069 [insight]: It shifts to a mod-`p^2` view of the second-digit condition, making clear that modulo class, not only `k=0`, matters.
+- Token 27348 [breakthrough]: It fixes the condition to the correct interval test `m^2 ∈ [p*(k p + (p-d)), p*(k p + (p-d)+1))` and searches minimal `k`.
+- Token 29926-30737 [wasted]: It spends many tokens debating probabilistic existence after already having an effective constructive `k`-search.
+- Token 31984 [breakthrough]: It states the final combined rule cleanly: modular-root branch when `-d` is QR, otherwise minimal-`k` interval branch.
+- Token 32568 [verification]: It executes the full `sum_M(100000)` computation from the finalized algorithm.
+- Token 32659 [verification]: It validates sampled `M(d)` values by digit-presence checks and limited minimality checks for small `m`.
+- Token 33370 [final answer]: It commits to `\boxed{65910}`.

@@ -1,0 +1,13 @@
+## Answer: correct (1165)
+
+## Key moments
+- Token 941 [breakthrough]: Builds the LCM-based minimization model from divisor-sum constraints.
+- Token 4627 [breakthrough]: Restates `g(c)` cleanly in floor form, setting up later exactness checks.
+- Token 13647 [missed opportunity]: Early ratio heuristics overemphasize broad patterns before strict feasibility filtering.
+- Token 23087 [breakthrough]: Parameterizes candidate pairs and integrality conditions for attainable ratios.
+- Token 33000 [breakthrough]: Introduces the `D'` divisibility framework that correctly governs feasibility.
+- Token 40109 [mistake]: Temporarily commits to the invalid `3/5` branch for `f(M+c)`.
+- Token 49150 [breakthrough]: Corrects course by isolating `110/167` as the best feasible branch.
+- Token 53009 [breakthrough]: Finalizes `f(M+c)=(110/167)(M+c)` and propagates it into `g(c)`.
+- Token 57001 [verification]: Verifies `g(0)=2/3`, `g(c)=110/167`, and reduced sum arithmetic.
+- Token 59269 [final answer]: Commits to `\boxed{1165}`.

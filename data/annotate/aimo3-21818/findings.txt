@@ -1,0 +1,55 @@
+# Problem aimo3-21818 Findings
+
+## Problem Summary
+Tournament with 2^20 runners, each with different speeds. 20 rounds, each round pairs runners with same score. Winner gets 2^(20-i) points in round i. Find k mod 10^5 where k is the largest power of 10 dividing N (number of possible orderings).
+
+## Correct Answer: 21818
+
+## Key Insights
+
+### 1. Tournament Structure
+- This is equivalent to building a binary tree where at each node, we choose which participants become "winners" (get higher score bit)
+- At each internal node of size 2^h, the number of valid winner sets = Catalan number C_{2^{h-1}}
+- The Hall condition for matching: for each k, the k-th slowest winner cannot be among the bottom k positions
+- NOT all permutations are achievable - this is the critical insight
+
+### 2. Formula for N
+N = product_{i=0}^{19} C_{2^i}^{2^{19-i}}
+
+where C_n is the n-th Catalan number.
+
+### 3. Computing k
+- k = min(v_2(N), v_5(N)) where v_p denotes the p-adic valuation
+- v_5(N) = sum_{i=0}^{19} 2^{19-i} * v_5(C_{2^i})
+- v_2(N) = sum_{i=0}^{19} 2^{19-i} * v_2(C_{2^i})
+- For C_n: v_p(C_n) = v_p((2n)!) - 2*v_p(n!) - v_p(n+1)
+- v_5(N) < v_2(N), so k = v_5(N) = 121818
+- k mod 10^5 = 21818
+
+## Common Errors in Traces
+
+### Wrong answer 62140 (traces: 1ahtx7, ay3ljs)
+- **Root cause**: Assumes N = (2^20)! instead of product of Catalan numbers
+- Misses that not all permutations are achievable due to Hall's matching condition
+- Key error token: where trace claims "any permutation is achievable" without verifying Hall condition
+
+### Wrong answer 121818 (trace: vjweku)
+- Correct computation of k = 121818
+- Forgot to take k mod 10^5
+
+## Key Tokens to Look For
+
+### Tokens likely to be `original_is_worse`
+- Claims "any permutation is achievable" without proof
+- States N = (2^20)! without deriving it properly
+- Misses Hall's matching condition when one alternate catches it
+
+### Tokens likely to be `original_is_better`
+- Identifies Catalan number structure
+- Recognizes Hall's matching condition limits valid winner sets
+- Correctly derives N as product of Catalan numbers
+
+### Tokens likely `no_significant_difference`
+- Final answer tokens where all options give the same wrong answer
+- Mechanical computations where all options compute the same thing
+- Transition statements

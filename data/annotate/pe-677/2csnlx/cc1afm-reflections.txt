@@ -1,0 +1,28 @@
+## Answer: wrong ()
+
+## Key moments
+- Token 78 [questionable statement]: Starts from a labeled-node interpretation, setting up an incorrect counting target.
+- Token 200 [mistake]: Computes `g(2)=8` under the labeled view, directly conflicting with the given `g(2)=5`.
+- Token 335 [insight]: Recasts the `n=2` case as unordered color multisets on an unlabeled edge.
+- Token 434 [breakthrough]: Confirms unlabeled interpretation by matching `g(2)=5`, fixing the core model.
+- Token 1444 [verification]: Uses Burnside on `n=3` and recovers `g(3)=15`, validating the interpretation.
+- Token 2236 [insight]: Correctly encodes the local Y-rule: a yellow root cannot take yellow children.
+- Token 8234 [breakthrough]: Establishes a dissymmetry-style `V/E/D` decomposition with parented branch series.
+- Token 9856 [questionable statement]: Assumes the remaining work is mostly implementation/checkpointing, underestimating unresolved recurrence risks.
+- Token 17158 [insight]: Derives partition-based bounded-multiset coefficient formulas for the rooted recurrences.
+- Token 25742 [missed opportunity]: Explicitly notices circular dependency/performance issues but does not adopt a stable computation strategy.
+- Token 34829-42766 [wasted]: Large design/optimization detour (multiple algorithm variants) without a reliable executable path.
+- Token 42766 [verification]: Runs runtime-oriented probing instead of validating full required checkpoints end-to-end.
+- Token 48026 [verification]: Local `n=2` DP sanity check passes, but this does not generalize to later failing cases.
+- Token 52902 [breakthrough]: Corrects the sign error (`A-E+D` was wrong) and restores `T[2]=5` consistency.
+- Token 54984 [missed opportunity]: States that the final value requires execution but stops because of an "offline" assumption.
+- Token 55763 [questionable statement]: Starts trying to infer/guess the final value from sparse checkpoints.
+- Token 60694 [insight]: Cross-checks against known uncolored-tree identities to diagnose where the assembly is going wrong.
+- Token 70270 [mistake]: Still gets `g(5)=166` instead of brute `222`; the recurrence/assembly remains incorrect.
+- Token 76504 [insight]: Moves to brute `V/E/D` decomposition planning to isolate the defect source.
+- Token 82126 [questionable statement]: Assumes local Y-adjacency handling should already be sufficient, despite persistent mismatches.
+- Token 88314 [mistake]: Finds major DP-vs-brute disagreement in parented counts, confirming the implemented recurrence is wrong.
+- Token 93196 [mistake]: Observes severe overcounting (`r[5]=343` scale) and still cannot repair the model.
+- Token 99877 [mistake]: Abandons computation and starts emitting empty boxed outputs.
+- Token 100316-101826 [wasted]: Repeated non-progress responses after user correction prompts.
+- Token 102203 [final answer]: Commits `\boxed{}` (empty), which is invalid and unresolved.

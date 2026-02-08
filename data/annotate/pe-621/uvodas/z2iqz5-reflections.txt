@@ -1,0 +1,15 @@
+## Answer: correct (30738)
+
+## Key moments
+- Token 335 [insight]: Reframes the triangular-number equation as a sum of three odd squares, which is the structural reduction used by the successful route.
+- Token 960 [questionable statement]: Suggests an incorrect simple divisor-sum formula for `r_3(n)` (confusing three-square and four-square formulas).
+- Token 1312 [mistake]: Continues with the wrong divisor-sum model for `r_3`, creating contradictions with known small values.
+- Token 1428 [verification]: Uses small-`n` brute-force checks (`r_3(1)=6`, `r_3(2)=12`) to test the formula and expose the mismatch.
+- Token 1766-2292 [wasted]: Spends a long stretch cycling through ad hoc divisor/character formulas before committing to the class-number framework.
+- Token 2292 [breakthrough]: Switches to the correct viewpoint that `r_3` is governed by Hurwitz class numbers, not an elementary divisor sum.
+- Token 3697 [insight]: Uses the `mod 8` residue argument to show all coordinates must be odd when `S \equiv 3 \pmod 8`.
+- Token 4185 [breakthrough]: Concludes `O = r_3(S)` and therefore `G(N) = r_3(S)/8`, fixing the counting normalization cleanly.
+- Token 11495 [verification]: Locks the exact identity `r_3(n) = 12H(-4n)`, resolving prior sign/factor ambiguity.
+- Token 18309 [breakthrough]: Derives the key simplification `G(N) = 483 * h(D0)` after the corrected conductor/divisor sum.
+- Token 24382 [verification]: Computes `h(D0)=23664` via reduced-form enumeration, providing the decisive numeric check.
+- Token 24517 [final answer]: Evaluates `483 * 23664 \bmod 99991 = 30738` and commits to the correct final value.

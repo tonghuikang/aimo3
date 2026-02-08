@@ -1,0 +1,36 @@
+# Problem pe-442: Eleven-free Numbers
+
+## Problem Summary
+Find \(E(10^{18}) \bmod 99991\), where \(E(n)\) is the \(n\)-th positive integer whose decimal expansion does **not** contain any substring equal to a power of 11 (excluding 1).
+
+## Correct Answer
+- \(E(10^{18}) = 1{,}295{,}552{,}661{,}530{,}920{,}149\)
+- \(E(10^{18}) \bmod 99991 = 79026\)
+
+## Correct Approach
+1. Build an Aho-Corasick automaton over forbidden patterns \(11^k\) (as decimal strings), excluding 1.
+2. For this target, the answer has 19 digits, so powers with length \(\le 19\) are sufficient (up to \(11^{18}\)).
+3. Use suffix DP on automaton states:
+   - \(dp[0][s]=1\) for non-bad states, else 0
+   - \(dp[\ell][s]=\sum_{d=0}^{9} dp[\ell-1][\text{next}(s,d)]\) over non-bad transitions
+4. Count valid numbers by length with first digit \(1..9\), then accumulate:
+   - cumulative up to length 18: 841,554,882,081,858,997
+   - cumulative up to length 19: 8,330,534,513,536,466,030
+   - so \(E(10^{18})\) is the 158,445,117,918,141,003-rd valid 19-digit number
+5. Construct that rank digit-by-digit using DP completion counts for each candidate next digit.
+
+## Verification Facts
+- Matches given checks: \(E(3)=3\), \(E(200)=213\), \(E(500000)=531563\)
+- Constructed value is eleven-free and gives modulo 79026.
+
+## Wrong Approaches And Why They Fail
+1. **Forbid only `"11"` and ignore other powers of 11**.
+   - Fails because patterns like `"121"`, `"1331"`, etc. are still illegal and must be excluded.
+   - Produces wrong result: \(E(10^{18}) \bmod 99991 = 43111\) (incorrect).
+2. **Truncate forbidden list too aggressively (e.g., only powers with \(\le 10\) or \(\le 12\) digits)**.
+   - Fails because longer forbidden powers can still appear in 19-digit candidates and affect ranking.
+   - Example wrong mod outputs:
+     - patterns \(\le 10\) digits: 10591
+     - patterns \(\le 12\) digits: 35685
+3. **Heuristic probability/density estimates instead of exact automaton DP**.
+   - Fails because the task is exact rank selection, not asymptotic counting; even small counting errors change the selected number.

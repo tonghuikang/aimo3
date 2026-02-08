@@ -1,0 +1,13 @@
+## Answer: correct (24777)
+
+## Key moments
+- Token 868 [insight]: Sets the correct baseline optimization view: maximize by starting from all `a_i = k-1` and minimize loss needed to satisfy the modulo constraint.
+- Token 2388 [questionable statement]: Suggests a single replacement is “likely optimal” because it uses the minimal raw reduction amount.
+- Token 2604 [mistake]: Treats the one-change construction as plausibly minimal in score loss, which is not generally justified for irregular prime-gap costs.
+- Token 2793 [insight]: Recognizes the critical possibility that multiple small reductions can beat one large reduction on total loss.
+- Token 5683-7811 [wasted]: Spends a long stretch on ratio heuristics and hand estimates that are later superseded by exact DP.
+- Token 8398 [breakthrough]: Formulates the decisive unbounded-knapsack DP `dp[w] = min(dp[w-r] + c_r)` to compute the true minimal loss for `D=6337`.
+- Token 9369 [verification]: Extends DP to `D + t*k` and confirms no larger congruent reduction beats the `D=6337` solution.
+- Token 10254-10487 [verification]: Backtracks DP to recover an explicit optimal composition and confirms both reduction total and loss value.
+- Token 11090 [verification]: Recomputes final score and modulo arithmetic from the derived optimal loss (`60202`) to validate `24777`.
+- Token 11101 [final answer]: Commits to `\boxed{24777}`.

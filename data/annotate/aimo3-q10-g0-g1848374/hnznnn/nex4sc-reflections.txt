@@ -1,0 +1,25 @@
+## Answer: wrong (367)
+
+## Key moments
+- Token 955 [breakthrough]: Starts with a valid high-level reduction linking the problem to maximizing divisor-sum structure for a fixed target sum.
+- Token 3235 [mistake]: The `a=1` branch is pushed too far as if globally characterizing minima, which biases later selections.
+- Token 3235-13785 [wasted]: Large stretch of divisor-order casework and secondary-divisor comparisons that does not cleanly tie back to the true global minimum criterion.
+- Token 8638 [breakthrough]: Derives a useful congruence form for `a=2` candidates (`b\mid N-2`, parity constraints), but this remains only a partial search space.
+- Token 14019 [breakthrough]: Extracts a second-largest-divisor heuristic for `N-1`, which is useful locally but still not a full global criterion.
+- Token 19404 [verification]: Correctly checks small prime-order conditions (e.g., ord-based divisibility) for factors of expressions like `3^K-1`.
+- Token 22555 [verification]: Performs concrete modular checks (`mod 5,7,11`) to identify plausible small divisors for the shifted instance.
+- Token 24368 [breakthrough]: Identifies `11` as a key small divisor in one branch and derives a candidate closed form from it.
+- Token 26094 [mistake]: Commits to an incorrect symbolic formula for the final modular expression, propagating arithmetic from the wrong branch.
+- Token 33592 [mistake]: Converts the flawed branch into a concrete modular result, reinforcing a wrong intermediate endpoint.
+- Token 34657 [mistake]: Outputs an incorrect intermediate final (`31759`) but keeps exploring instead of reconciling with the core minimization condition.
+- Token 41731 [breakthrough]: Starts a new parameterized search path for `N=M`, partially recovering structure after the bad branch.
+- Token 45934 [verification]: Derives additional parameter bounds for this new branch, but they still do not certify global optimality.
+- Token 50095 [mistake]: Locks onto the `6/11`-style baseline too strongly for later transitions, without proving it survives the shifted-divisor constraints.
+- Token 57607 [mistake]: Later pivots to a different template (`T=50`/`34/53` branch) that still lacks proof of global optimality for `f(M+1848374)`.
+- Token 61990 [verification]: Checks specific `Q/T` candidates by divisibility, yet the search remains locally filtered rather than globally exhaustive.
+- Token 65948 [missed opportunity]: Explicitly questions whether `16/25` could beat the active branch but does not complete a decisive global comparison.
+- Token 69902 [verification]: Runs additional search output checks, but they are not translated into a complete global-minimum proof.
+- Token 73850-74069 [missed opportunity]: Finds contradictory signals against earlier assumptions but does not perform a decisive global competitor check before finalizing.
+- Token 77998 [breakthrough]: Recovers the `f(M)=2M/3` piece late, but this correction is not mirrored by a fully corrected shifted-case minimum.
+- Token 82124 [verification]: Only verifies coprimality/internal arithmetic of the chosen fraction, not correctness of the underlying `f` selection.
+- Token 82159 [final answer]: Commits to `\boxed{367}`, which is incorrect.

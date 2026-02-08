@@ -1,0 +1,33 @@
+Problem: Count starting positions where Alice can win on an n×n board with c coins. Coins can move left/up by 2, 3, 5, or 7 squares. Player who can't move loses.
+
+Correct Answer: 924668016
+
+## Correct Approach
+
+1. **Game Theory Reduction**: This is an impartial combinatorial game. Each coin's position is independent. The Grundy number of a configuration is the XOR of all individual coin Grundy values. Alice wins iff total XOR ≠ 0.
+
+2. **2D to 1D Reduction**: A coin at position (i,j) is equivalent to two independent subtraction games (one for each coordinate). The Grundy value g(i,j) = g_1D(i) XOR g_1D(j) where g_1D is the Grundy for 1D subtraction game with move set {2,3,5,7}.
+
+3. **Periodicity of Grundy Numbers**: The 1D Grundy sequence has period 9:
+   - g(1)=0, g(2)=0, g(3)=1, g(4)=1, g(5)=2, g(6)=2, g(7)=3, g(8)=3, g(9)=4
+   - Then repeats: g(10)=0, g(11)=0, g(12)=1, etc.
+   - Pattern: g(i) = floor(((i-1) mod 9) / 2)
+
+4. **Counting via XOR Convolution**: For c coins, overall XOR = Xc XOR Xr where:
+   - Xc = XOR of all column Grundy values
+   - Xr = XOR of all row Grundy values
+   - Alice wins iff Xc ≠ Xr (i.e., Xc XOR Xr ≠ 0)
+   - Total losing positions = Σ_v A_v² where A_v = count of sequences with XOR = v
+   - M(n,c) = n^{2c} - Σ_v A_v²
+
+5. **Computation**:
+   - Compute frequency distribution of Grundy values 0-4 among coordinates 1..n
+   - Use Walsh-Hadamard Transform (FWHT) to efficiently compute XOR convolution counts
+   - For N=10000019: q=1111113 full blocks of 9, remainder r=2
+   - Frequencies: f0=2222228, f1=f2=f3=2222226, f4=1111113
+
+## Key Verification Points
+- M(3,1) = 4 ✓
+- M(3,2) = 40 ✓
+- M(9,3) = 450304 ✓
+- M(10000019, 100) mod 10^9 = 924668016 ✓

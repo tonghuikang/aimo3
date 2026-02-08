@@ -1,0 +1,29 @@
+## Answer: correct (552506775824935461)
+
+## Key moments
+- Token 91 [insight]: Sets up `S(b)` as a sum of iteration counts with special zero cases (repdigits and `C_b`).
+- Token 563 [wasted]: Repeats brute-force infeasibility arguments before committing to a concrete reduced-state method.
+- Token 3951 [insight]: Moves from ad hoc exploration to fixed-point structure in sorted-digit space.
+- Token 11185 [breakthrough]: Derives the closed-form sorted digits of `C_b` for `b=6t+3`.
+- Token 12880 [verification]: Runs the first state-distance implementation against the `S(15)` anchor.
+- Token 14135 [verification]: Detects a mismatch and confirms the need for a deeper correction to state-to-number mapping.
+- Token 21464 [insight]: Recognizes `sb(i)` depends on state distance plus a permutation-level correction near the constant state.
+- Token 29559 [breakthrough]: Obtains an explicit transition-digit form for `(x,y)` states, enabling systematic successor computation.
+- Token 37487 [questionable statement]: Imposes overly restrictive predecessor constraints for states mapping directly to `C_b`.
+- Token 41010 [mistake]: Concludes those predecessor states all contribute `sb=2`, which later contradicts enumeration.
+- Token 43377 [breakthrough]: Enumerates predecessors and shows the earlier direct-predecessor characterization was wrong.
+- Token 47843 [missed opportunity]: Detours into searching a closed-form distance law instead of finishing the validated computational pipeline.
+- Token 53531 [insight]: Re-parameterizes multiplicity weights by equality-flag patterns, simplifying counting.
+- Token 58595 [verification]: Tests edge/degenerate cases (`x=y`, boundary flags) against brute-force counts.
+- Token 61796 [breakthrough]: Finalizes key weight formulas (including `W(x,x)=30x-10`) for fast `M(x,y)` evaluation.
+- Token 71258 [verification]: Builds and validates all-state depth computation for the `(x,y)` graph.
+- Token 77549 [questionable statement]: Applies an over-strong correction term for the constant-state bucket.
+- Token 80128 [mistake]: That correction incorrectly zeroes the constant-state contribution, conflicting with brute totals.
+- Token 84241 [insight]: Identifies the core combinatorial fact: only one ordered number is exactly `C_b`, while other permutations contribute `sb=1`.
+- Token 84673 [breakthrough]: Fixes the correction (`-1` rather than subtracting the whole permutation block), restoring agreement.
+- Token 86787 [breakthrough]: States the final efficient formula `S(b)=Σ_{(x,y)≠(0,0)}(D(x,y)+1)M(x,y)-1`.
+- Token 88121 [verification]: Implements `compute_S_fast` and validates it against known checks.
+- Token 94278 [verification]: Executes full-range accumulation over `k=2..300` with progress/runtime checks.
+- Token 95670 [wasted]: Continues optimization brainstorming after obtaining a stable full-sum result.
+- Token 97789 [verification]: Re-checks `S(111)` and modulo-`10^18` consistency before finalizing.
+- Token 98008 [final answer]: Commits the final value `552506775824935461` and emits the boxed answer.

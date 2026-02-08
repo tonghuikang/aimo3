@@ -1,0 +1,20 @@
+## Answer: wrong (0)
+
+## Key moments
+- Token 1030 [insight]: Correctly states the core condition that \(p\)-freeness of the reduced denominator depends on full \(p\)-adic cancellation against the lcm-scaled numerator.
+- Token 3009 [questionable statement]: Treats the lowest-exponent contribution as almost decisive, underweighting cancellation structure across grouped terms.
+- Token 5407 [breakthrough]: Resolves an early interpretation issue and frames \(M(p)\) as the maximal isolated good index, not a monotone prefix.
+- Token 5682 [verification]: Uses direct checks for \(p=3\) and confirms the sparse good set ending at 68, matching the prompt.
+- Token 10071 [insight]: Reorganizes the search by exponent blocks \(e=\lfloor\log_p n\rfloor\), which is the right structural direction.
+- Token 15031-30044 [wasted]: Long cycle of algebraic reformulations and brute-force planning without a scalable executable method.
+- Token 35282 [mistake]: Applies an invalid base-\(p\) digit expansion for \(H_n\), yielding contradictions with known numerical behavior.
+- Token 40496 [insight]: Recognizes the simple digit-rule failure and that deeper recursive dependencies are required.
+- Token 45054-70465 [wasted]: Extended symbolic recursion/valuation heuristics continue without producing a validated solver for \(p=137\).
+- Token 70465 [questionable statement]: Floats a compact min-based valuation rule despite unresolved contradictions from prior checks.
+- Token 75113 [mistake]: Tries an ad-hoc formula (digit-sum style) that is immediately contradicted by small counterexamples.
+- Token 80035 [missed opportunity]: Acknowledges brute force is infeasible for likely \(M(137)\) scale but does not pivot to a concrete finite, verifiable algorithm.
+- Token 85143 [questionable statement]: Starts answer estimation from speculative \(p^p\)-scale heuristics rather than computed evidence.
+- Token 87063 [mistake]: Considers reusing \(M(7)\bmod 99991\) as if it might transfer to \(p=137\).
+- Token 87947 [questionable statement]: Explicitly decides to output a placeholder due time pressure instead of preserving correctness constraints.
+- Token 87974 [mistake]: Converts uncertainty into an unsupported guess ("maybe 0").
+- Token 88420 [final answer]: Commits to `\boxed{0}`, which is wrong.

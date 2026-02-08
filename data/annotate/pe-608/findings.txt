@@ -1,0 +1,45 @@
+# PE 608 Divisor-Sum Over Factorial Divisors - Findings
+
+## Problem
+Compute
+\[
+D(m,n)=\sum_{d\mid m}\sum_{k=1}^{n}\tau(kd),\quad \tau=\sigma_0,
+\]
+for \(m=200!\), \(n=10^{12}\), modulo \(10^9+7\).
+
+## Given Checks
+- \(D(3!,10^2)=3398\)
+- \(D(4!,10^6)=268882292\)
+
+## Correct Answer
+439689828
+
+## Correct Approach
+- Let \(M=200!\), \(N=10^{12}\), and \(e_p=v_p(M)\) for primes \(p\le 200\).
+- After prime-wise factorization and Möbius-style expansion, the computation reduces to:
+  \[
+  D(M,N)=C\sum_{d\in\mathcal U,\ d\le N} h(d)\,T\!\left(\left\lfloor\frac N d\right\rfloor\right),
+  \]
+  where:
+  - \(\mathcal U\): squarefree numbers made from primes \(p\le 200\),
+  - \(C=\prod_{p\le 200}\frac{(e_p+1)(e_p+2)}{2}\),
+  - \(h(d)=\mu(d)\prod_{p\mid d}\frac{e_p}{e_p+2}\),
+  - \(T(x)=\sum_{n\le x}\tau(n)=\sum_{i=1}^{x}\left\lfloor \frac{x}{i}\right\rfloor\).
+- Evaluate modulo \(10^9+7\) using modular inverses for denominators.
+- Practical computation:
+  - enumerate squarefree \(d\le N\) from primes \(\le 200\),
+  - aggregate by quotient \(q=\lfloor N/d\rfloor\),
+  - compute \(T(q)\) with floor-division grouping (and memoization),
+  - sum \(C\cdot \sum h(d)T(\lfloor N/d\rfloor)\).
+- This reproduces both provided checks and yields the final residue \(439689828\).
+
+## Wrong Approaches and Why They Fail
+- **Missing denominator after subset-sum swap**:
+  - Using weight \(\prod_{p\mid d}\alpha_p\) (with \(\alpha_p=e_p/2\)) instead of \(\prod_{p\mid d}\alpha_p/(1+\alpha_p)\) drops a required factor.
+  - This fails sanity checks (including the provided small test identities) and can even produce non-integral intermediate predictions.
+- **Incorrect alternative weight branch \(w_p=-A_p^{-1}\)**:
+  - Substituting \(w_p=-\big((e_p+1)(e_p+2)/2\big)^{-1}\) into the same final sum is not equivalent to the validated \(h(d)\)-weight formula.
+  - In trace testing this branch produced the wrong target residue \(921800137\) (instead of \(439689828\)).
+- **Implementation-level sign/Möbius handling errors**:
+  - Incorrect \(\mu(d)\) sign handling can falsely indicate the formula is broken (e.g., “works for \(m=6\), fails for \(m=24\)”).
+  - Once signs are corrected, the same derived formula matches all checks.

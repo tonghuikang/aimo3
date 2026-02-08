@@ -1,0 +1,27 @@
+Problem: IMO 2025 P6 Simplified 9
+Correct Answer: 12
+
+Problem Summary:
+- We choose 9 uncovered cells on a 9x9 grid, with exactly one uncovered cell in each row and each column.
+- So uncovered cells form a permutation pattern.
+- The other 72 cells must be partitioned into non-overlapping axis-aligned rectangles.
+
+Correct Approach:
+- Model rows and columns as the two sides of a bipartite graph; uncovered cells are a perfect matching M.
+- Covered cells correspond to edges of K_{n,n} \ M, and each tile is a biclique block in an edge partition (not just an edge cover).
+- The exact minimum for this problem family is
+  n + ceil(log2 n) - 1.
+- For n = 9:
+  9 + ceil(log2 9) - 1 = 9 + 4 - 1 = 12.
+- An explicit construction achieves 12, and the matching lower bound is given by the same biclique-partition theory.
+
+Wrong Approaches:
+- Wrong 16 via diagonal-only reasoning:
+  - Assume holes are on the main diagonal and separately tile strict upper/lower triangles.
+  - This gives 2(n-1) = 16, but it is only for that restricted layout and is not globally optimal over all permutations.
+- Wrong 16 via forced left/right strip decomposition:
+  - Argue each side always needs 8 strips (8+8).
+  - This overconstrains rectangle structure and misses better multi-row/multi-column packings available for other permutations.
+- Wrong 5 via overlap-allowed biclique cover:
+  - Solve the easier edge-cover version (rectangles may overlap), then claim 5.
+  - Invalid because the task requires a disjoint rectangle partition (each cell covered by at most one tile).

@@ -1,0 +1,11 @@
+## Answer: wrong (0)
+
+## Key moments
+- Token 478 [insight]: Uses a closure-on-graph interpretation of the two allowed moves.
+- Token 3957 [questionable statement]: Assumes a fixed finite closure set `S` captures all long-run reachable structure.
+- Token 8000-13000 [wasted]: Extended repetition of prime-availability arguments without a new proof ingredient.
+- Token 15876 [questionable statement]: Treats observed deadlocks in exponent construction as universally binding.
+- Token 20755 [mistake]: Concludes global non-creativity from the finite-prime-support heuristic.
+- Token 22300-24000 [wasted]: Adds bounded closure computation detail that is not tied back to a rigorous theorem.
+- Token 25200 [mistake]: Repeats the impossibility conclusion after incomplete computational validation.
+- Token 26444 [final answer]: Commits to `\\boxed{0}`.

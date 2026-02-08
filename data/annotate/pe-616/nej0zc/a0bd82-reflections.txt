@@ -1,0 +1,11 @@
+## Answer: wrong (0)
+
+## Key moments
+- Token 288 [insight]: Frames the moves as a reversible structural system and looks for algebraic invariants.
+- Token 1054 [questionable statement]: Introduces an exponent-vector/scalar model that assumes the game is controlled by a finite exponent seed.
+- Token 7000-9600 [wasted]: Spends a long derivation on scalar-closure mechanics that are later treated as conclusive without full justification.
+- Token 12382 [mistake]: Claims reachable integers are restricted to prime support from a fixed `e_max`-style set.
+- Token 15534 [questionable statement]: States prime-generation is closed under existing prime support for all future decompositions.
+- Token 16381 [mistake]: Uses that closure claim to conclude no creative integers exist.
+- Token 17542 [missed opportunity]: Notes potential overreach but does not perform a hard counterexample search against the invariant assumptions.
+- Token 20629 [final answer]: Commits to `\\boxed{0}`.

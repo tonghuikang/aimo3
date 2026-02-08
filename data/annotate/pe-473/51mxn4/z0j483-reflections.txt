@@ -1,0 +1,24 @@
+## Answer: correct (96175)
+
+## Key moments
+- Token 1360 [insight]: Establishes that palindrome must be evaluated on the full phigital string (including the point), so point-centered symmetry matters.
+- Token 3688 [breakthrough]: Derives the key cross-point constraint: in point-palindromes the exponent-0 bit is mirrored at exponent -1, forcing \(a_0=0\).
+- Token 4614 [insight]: Clarifies the no-point case: among integer-only strings, only \("1"\) contributes an integer palindrome value.
+- Token 9532 [verification]: Checks counting structure for valid left halves and pins down the minimal point-palindrome length behavior.
+- Token 15504 [questionable statement]: Concludes broad enumeration is infeasible and starts steering toward aggressive closed-form restriction.
+- Token 21915 [insight]: Separates odd-side contributions (including the special \(i=1\) behavior), sharpening the algebraic balance equation.
+- Token 30496 [insight]: Re-expresses solutions in index/block terms, preparing a combinatorial interpretation of valid bit placements.
+- Token 40378 [questionable statement]: Overrestricts the solution space to two narrow families (simple repeated patterns + trivial cases).
+- Token 48483 [missed opportunity]: Continues extending the restricted-family formulas before first validating them against the provided \(N=1000\) benchmark.
+- Token 53505 [mistake]: Benchmark check fails badly (derived subtotal 997 vs expected 4345), proving the family characterization is incomplete.
+- Token 53885-70343 [wasted]: Large detour of re-derivations, ad hoc generators, and partial grammars before converging on a robust construction.
+- Token 61801 [insight]: Identifies shift/zero-append effects and broadens beyond the overly rigid early-family assumption.
+- Token 70343 [questionable statement]: Proposes an initial grammar with optional prefix that still mishandles ordering and canonical-string constraints.
+- Token 72723 [insight]: Detects leading-zero/canonical-form leakage when generated candidates include spurious values.
+- Token 77125 [insight]: Finds the composition-direction bug (prefix bits are low-significance), explaining missing valid values like 38.
+- Token 80589 [mistake]: Finds validation gap: generator accepts/omits cases due to weak integer/equality filtering and prefix-gap edge handling.
+- Token 80589-84145 [wasted]: Additional correction loop on tolerance/equality/grammar interactions before the final clean generator is stabilized.
+- Token 84189 [breakthrough]: Rebuilds with explicit validity checks (no-\(11\), balance condition, integer tolerance) and correct block/suffix construction.
+- Token 87166 [verification]: Reproduces the known \(N=1000\) target sum 4345 with the 15 expected values.
+- Token 88289 [verification]: High-precision rerun confirms unchanged count/mod result, ruling out decimal-rounding artifacts.
+- Token 88358 [final answer]: Commits to the boxed final result \(96175\).

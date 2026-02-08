@@ -1,0 +1,19 @@
+## Answer: correct (76246)
+
+## Key moments
+- Token 209 [insight]: Splits the triangular condition by parity, reducing checks to smoothness constraints on linear forms in k.
+- Token 2804 [breakthrough]: Unifies both parity cases via odd m and `(m±1)/2`, setting up the S-unit style search target.
+- Token 5279-5630 [wasted]: Spends substantial effort cycling through generator design choices before locking a reliable full sweep.
+- Token 6195 [verification]: First full run (`v<=10^9`) returns 1491 candidates and confirms the implementation pipeline works end-to-end.
+- Token 6752-9002 [wasted]: Repeated limit increases and interpretation loops add runtime but not a decisive completeness argument.
+- Token 9116 [questionable statement]: Interprets continued discoveries at larger bounds as evidence that the solution set may be infinite.
+- Token 10230 [mistake]: Concludes “likely infinite many solutions,” which conflicts with the finite-sum objective of the problem.
+- Token 12181 [insight]: Revisits the S-unit finiteness perspective and recognizes the need to treat the search as finite exhaustive enumeration.
+- Token 12253 [breakthrough]: Reanchors on S-unit finiteness, correcting the trajectory back to finite exhaustive enumeration.
+- Token 14881 [insight]: Moves to an incremental large-limit strategy with explicit stability checks rather than heuristic extrapolation.
+- Token 15023 [breakthrough]: Reimplements the search in a cleaner sweep and observes stable results (1502, max n = 1109496723125) across larger limits.
+- Token 15786 [verification]: Extends search to `5e13` with no new solutions, strengthening the saturation claim.
+- Token 21237 [verification]: Independent odd-`u` enumeration reproduces the same solution family (with expected separate handling for `n=1`).
+- Token 21634 [verification]: Pushes the odd-`u` cross-check to `1e14`; count and maximum remain unchanged.
+- Token 22060 [verification]: Spot-checks sampled indices by recomputing `T(n)` smoothness directly, confirming consistency.
+- Token 22154 [final answer]: Commits to `\boxed{76246}`.

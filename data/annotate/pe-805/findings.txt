@@ -1,0 +1,21 @@
+Correct answer: 119719335
+
+Problem summary:
+- For n with D digits, leftmost digit a, remaining b: n = a*10^{D-1} + b
+- s(n) = b*10 + a (shift leftmost digit to rightmost)
+- N(r) = smallest n such that s(n) = r*n, or 0 if none exists
+- T(M) = sum of N(u^3/v^3) for coprime (u,v) with 1 <= u,v <= M
+
+Key derivation:
+- s(n) = r*n leads to: (10-r)b = a(r*10^{D-1} - 1)
+- For r = p/q (reduced), condition becomes: (10q-p) | a(p*10^{D-1} - q)
+- Simplifies to: need 10^D = 1 (mod d') where d' = (10q-p)/gcd(10q-p, a)
+- N(r) = 0 if r >= 10 (since denominator becomes non-positive)
+
+Formula for n:
+- n = (a/g) * q * ((10^D - 1) / d')
+- where g = gcd(10q-p, a), d' = (10q-p)/g, D = ord_{d'}(10)
+- Need gcd(d', 10) = 1 for solution to exist
+- Also need b < 10^{D-1}, which constrains valid values of a
+
+Both traces correctly derive and implement this formula, arriving at answer 119719335.

@@ -1,0 +1,46 @@
+Correct answer: f(3) = 3.
+
+Complete proof:
+
+Lower bound (f(3) >= 3):
+- Suppose a strategy claims guaranteed success in at most 2 attempts.
+- Adversarial placement against attempt 1:
+  - Let c be the first column where Turbo enters row 2.
+  - Put the row-2 monster at (row 2, column c). Then attempt 1 fails immediately at that cell.
+- Now Turbo knows only one monster location.
+- In attempt 2, Turbo must enter row 3 at some column d to have any chance to reach the bottom.
+  - Because (row 2, c) is known monster, he cannot come down through column c at row 2, so d != c.
+  - Put the row-3 monster at (row 3, column d). Then attempt 2 fails when entering row 3.
+- Fill row-4 monster in any remaining column not equal to c or d (possible since there are 4 columns).
+- So there exists a legal monster placement that forces failure within 2 attempts. Hence f(3) >= 3.
+
+Upper bound (f(3) <= 3):
+- Attempt 1: go straight down any column A.
+  - If no monster, win.
+  - Otherwise discover monster at (rA, A).
+- Attempt 2: go straight down a different column B.
+  - If no monster, win.
+  - Otherwise discover monster at (rB, B), with rA != rB and A != B.
+- Facts now known:
+  - Column A is safe in every interior row except rA.
+  - Column B is safe in every interior row except rB.
+- Construct attempt 3:
+  - If |rA-rB| >= 2, descend in one known column and switch to the other on an intermediate row where both are safe, then continue to bottom.
+  - If |rA-rB| = 1 (adjacent blocked rows), use a third column C (exists because there are 4 columns):
+    - At row rA use the column not blocked there, switch to C on that row,
+    - Move down one row to rB in C,
+    - Switch from C to the other known column on row rB, then continue down.
+  - Each switch is done on a row where the involved columns are guaranteed safe.
+- Therefore a third-attempt route is always guaranteed. Hence f(3) <= 3.
+
+Conclusion: f(3) = 3.
+
+Wrong approach to reject:
+- "Need to identify all three monster columns before a guaranteed run, so answer is 4."
+- Why wrong: full elimination is unnecessary; two discovered monster columns are enough to build a guaranteed path on attempt 3.
+
+Additional wrong approaches to reject:
+- "After two failures, the remaining two columns force a guess in row r3, so attempt 3 cannot be guaranteed."
+- Why wrong: with two known monster columns A,B at distinct rows rA,rB, Turbo can route row-by-row using columns known safe at each row and avoid any guess at the unknown-monster row.
+- "Adversary can pick the third monster column after seeing Turbo's third-attempt route."
+- Why wrong: monster placement is fixed before play; lower-bound arguments must use one fixed placement consistent with all earlier observations.

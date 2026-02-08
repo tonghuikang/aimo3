@@ -1,0 +1,42 @@
+# Problem pe-712 Findings
+
+## Problem Statement
+For any integer n>0 and prime number p, define ν_p(n) as the greatest integer r such that p^r divides n.
+Define D(n,m) = Σ_{p prime} |ν_p(n) - ν_p(m)|.
+Define S(N) = Σ_{1≤n,m≤N} D(n,m).
+Given S(10)=210 and S(100)=37018, find S(10^12) mod 1,000,000,007.
+
+## Correct Answer
+413876461
+
+## Correct Approach
+
+1. **Core identity**  
+   \(D(n,m)=\Omega(n)+\Omega(m)-2\Omega(\gcd(n,m))\), where \(\Omega\) is big-Omega (prime factors with multiplicity).
+
+2. **Prime-power sum form**  
+   \[
+   S(N)=2\sum_{p\ \text{prime}}\sum_{k\ge1,\ p^k\le N}
+   \Big\lfloor\frac N{p^k}\Big\rfloor\Big(N-\Big\lfloor\frac N{p^k}\Big\rfloor\Big)
+   =2\sum_{q\le N,\ q\ \text{prime power}}
+   \Big\lfloor\frac Nq\Big\rfloor\Big(N-\Big\lfloor\frac Nq\Big\rfloor\Big).
+   \]
+
+3. **Efficient evaluation strategy**
+   - Handle \(k=1\) (primes) by grouping equal values of \(\lfloor N/p\rfloor\), i.e. intervals \((N/(v+1),N/v]\), and count primes in each interval via \(\pi(x)\).
+   - Handle \(k\ge2\) by enumerating primes up to \(\sqrt N\) and iterating powers \(p^k\).
+   - Use modular arithmetic at accumulation time (mod \(10^9+7\)).
+
+This path gives \(S(10^{12}) \bmod (10^9+7)=413876461\).
+
+## Wrong Approach 1 (ut3xbg.txt -> 413963527)
+- Uses the same high-level prime-power formula with an \(X=N^{2/3}\) split:
+  - direct prime loop for \(p\le X\),
+  - interval counting for \(p>X\) using \(\pi\) queries.
+- The implementation mixes/reuses cached prime-counting states across variants instead of one clean exact \(\pi\)-pipeline.
+- Small checks (10/100/200) pass, but large-\(N\) counting is slightly off, producing `413963527`.
+
+## Wrong Approach 2 (s1we08.txt -> 68459529)
+- Rewrites through \(A(N)=\sum_{n\le N}\Omega(n)\), \(B(N)=\sum_{a,b\le N}\Omega(\gcd(a,b))\), then computes prime terms via weighted \(\pi(N//k)\) splits.
+- One double-counting split bug is found and fixed, but remaining large-\(N\) counting/\(\pi\)-evaluation logic is still incorrect.
+- Many tiny-\(N\) tests pass, yet \(N=10^{12}\) remains wrong, yielding `68459529`.

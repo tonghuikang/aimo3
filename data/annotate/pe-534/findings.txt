@@ -1,0 +1,33 @@
+# Problem PE-534 - Weak Queens
+
+## Correct Answer
+75393 (mod 99991)
+
+## Correct Approach
+- Re-parameterize with \(D=n-1-w\), so \(D\in[0,n-1]\).
+- Place one queen per row and let \(c_i\in\{0,\dots,n-1\}\) be the column in row \(i\).
+- For a fixed \(D\), a placement is valid iff for every pair \(i<j\) with \(j-i\le D\):
+  - \(c_i \ne c_j\) (no vertical attack in range),
+  - \(|c_i-c_j| \ne j-i\) (no diagonal attack in range).
+- Let \(M(D)\) be the number of valid placements for that \(D\). Then
+  \[
+  S(n)=\sum_{w=0}^{n-1}Q(n,w)=\sum_{D=0}^{n-1} M(D).
+  \]
+- Compute each \(M(D)\) with row-by-row DP/backtracking using state = last \(D\) columns (sliding window), since only those rows can attack the next row.
+- For \(n=14\), summing all \(M(D)\) and reducing mod \(99991\) gives \(75393\).
+- Sanity checks:
+  - Reproduces given values \(S(4)=276\), \(S(5)=3347\).
+  - For \(D=13\) (full queen), matches classical 14-queens count \(365596\).
+
+## Wrong Approaches And Why They Fail
+- Treating placements as permutations for all \(w\):
+  - Incorrect because repeated columns are allowed when row distance \(>D\).
+- Direct brute force over all \(14^{14}\) row-to-column assignments:
+  - Computationally infeasible.
+- Purely symbolic/inclusion-exclusion reformulations without executable counting:
+  - Do not close the computation and tend to stall before producing exact modular counts.
+- Unoptimized state enumeration assumptions:
+  - Naively assuming only \(n^D\) worst-case structure without practical pruning/memoization can make mid/high \(D\) cases appear intractable, while windowed memoized search does finish.
+
+## Trace Outcome Note
+- In the available traces for this problem, final submitted answers are correct; observed errors are intermediate modeling/runtime strategy mistakes rather than final-answer mistakes.

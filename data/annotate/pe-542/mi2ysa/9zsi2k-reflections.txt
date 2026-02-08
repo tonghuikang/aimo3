@@ -1,0 +1,23 @@
+## Answer: correct (57609)
+
+## Key moments
+- Token 526 [insight]: Derives the integrality structure `a_i = t p^i q^{m-1-i}` from `r=p/q`, giving the right parameterization of integer GP terms.
+- Token 1516 [breakthrough]: Converts the task to maximizing `floor(k / max(p^{m-1}, q^{m-1})) * (p^m - q^m)/(p-q)`.
+- Token 3240 [insight]: Identifies `S(k)` as an upper envelope of step functions `floor(k/d) * s`, which frames the later interval strategy.
+- Token 5037 [questionable statement]: Introduces a flawed simplification of `s/d` that overstates growth behavior.
+- Token 5260 [mistake]: Concludes from that simplification that `S(k)` may behave superlinearly (`~k^{3/2}`-style), sending the search down an incorrect asymptotic path.
+- Token 7559 [insight]: Re-focuses on interval dominance of candidates instead of pure asymptotics.
+- Token 10766 [breakthrough]: Corrects the coefficient analysis (`L=3` case) and resolves the earlier inconsistency that caused the superlinear claim.
+- Token 13049-15414 [wasted]: Extended speculation on parity/closed forms without executable progress toward `T(10^17)`.
+- Token 16663 [insight]: Detects that `S(k)` changes at sparse jump points and starts analyzing change locations.
+- Token 19544 [breakthrough]: Empirically recognizes structure at powers (`k=p^{m-1}`) and recurring optimal-family behavior.
+- Token 21060 [breakthrough]: Verifies (on tested range) that optimal ratios use consecutive integers (`q=p-1`), sharply reducing candidate complexity.
+- Token 27488 [missed opportunity]: Spends substantial time on local approximations for single `k` values instead of immediately exploiting the sparse-jump structure globally.
+- Token 35911 [insight]: Quantifies that effective coefficient growth is limited, supporting a finite-candidate/change-point approach.
+- Token 44560-53969 [wasted]: Long exploratory detour (pattern hunting and alternative models) before committing to a computable event-driven method.
+- Token 53969 [insight]: Uses measured jump sparsity to justify a change-point/event-driven summation strategy.
+- Token 57256 [insight]: Forms the key plan to sum `(-1)^k S(k)` over constant-`S` intervals between change points.
+- Token 58796 [breakthrough]: Successfully generates change points at large scales and confirms runtime feasibility for very large `N`.
+- Token 60087 [verification]: Checks monotonicity assumptions needed for binary-search jump detection.
+- Token 60542 [verification]: Reproduces the provided checkpoint `T(1000)=2268` with the implemented method.
+- Token 60664 [final answer]: Commits to `57609` as `T(10^17) mod 99991`.

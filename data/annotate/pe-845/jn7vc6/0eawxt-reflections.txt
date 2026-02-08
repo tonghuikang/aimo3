@@ -1,0 +1,12 @@
+## Answer: correct (38822)
+
+## Key moments
+- Token 117 [insight]: Reframes the task as inverting a monotone counting function \(f(N)\) for prime digit sums.
+- Token 900-1549 [wasted]: Long asymptotic/density speculation and digit-length estimation that does not materially affect the final computation.
+- Token 1549-1674 [wasted]: Side check about whether `99991` is prime is unnecessary for computing `D(10^16) mod 99991`.
+- Token 1957 [breakthrough]: Commits to a concrete solvable method: binary search on \(N\) with digit-DP counting.
+- Token 2145 [insight]: Sets a bounded prime-sum state space (\(\le 9 \cdot 20\)), making the DP finite and small.
+- Token 3124 [breakthrough]: Implements `get_D` end-to-end (prime set + count function + binary search), turning the plan into executable logic.
+- Token 3281 [verification]: Verifies against the provided small example `D(61)=157`.
+- Token 3313 [verification]: Verifies against the provided benchmark `D(10^8)=403539364`.
+- Token 3738 [final answer]: Commits to `\boxed{38822}` after computing `D(10^16)` and reducing modulo `99991`.

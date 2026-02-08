@@ -1,0 +1,9 @@
+## Answer: correct (677)
+
+## Key moments
+- Token 11245 [breakthrough]: Finds the key `f(M)` construction using the `9`-sum scaling, giving ratio `2/3`.
+- Token 14158 [breakthrough]: Uses global ratio structure (`6/11`, `4/7`, `8/13`, `2/3`) to organize admissible cases.
+- Token 21899 [breakthrough]: Factors `c+1` and applies congruence filtering to isolate relevant divisors of `M+c`.
+- Token 24745 [mistake]: Spends time patching a prime-`S` edge case that is not needed for this instance.
+- Token 28971 [verification]: Explicitly checks gcd reduction and confirms `p+q=677`.
+- Token 29006 [final answer]: Commits to `\boxed{677}`.

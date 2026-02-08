@@ -1,0 +1,21 @@
+## Answer: correct (18527)
+
+## Key moments
+- Token 72 [insight]: Clarifies ordering by start value `a` and validates the length-4 example gap structure.
+- Token 694 [breakthrough]: Formulates the problem as perfect matching under divisibility constraints.
+- Token 6535 [questionable statement]: Initially expects a moderate brute-force bound to be enough for the 36th hit.
+- Token 7908 [verification]: Confirms experimentally that valid starts are extremely sparse for `L=36`.
+- Token 13220 [insight]: Updates the expectation that nontrivial solutions may be very large.
+- Token 19574 [verification]: Uses scaling checks against smaller `L` to confirm brute-force extrapolation is unreliable.
+- Token 24065-50620 [wasted]: Continues with broad scan/injection heuristics and growth speculation without a complete rank-safe method.
+- Token 30154 [breakthrough]: Refocuses on constraint-based candidate generation rather than pure linear scanning.
+- Token 39253 [missed opportunity]: Notices the need for stronger completeness guarantees but stays in partial-filter approaches for too long.
+- Token 45227 [missed opportunity]: Continues speculative pattern hunting instead of immediately switching to complete residue construction.
+- Token 50620 [insight]: Explicitly ties progress to building a full constructive enumeration rather than more bound pushing.
+- Token 56130 [breakthrough]: Implements CSP/CRT residue enumeration, enabling exhaustive generation of base solutions modulo the period.
+- Token 65750 [insight]: Recognizes that sorting base residues in one period is sufficient to recover early ranks like the 36th.
+- Token 68604 [breakthrough]: Uses branch-and-bound style reasoning to target small-`a` solutions efficiently within the constructive framework.
+- Token 73816 [verification]: Completes full `L=36` enumeration and obtains 18,240 valid base starts.
+- Token 74348 [verification]: Extracts the 36th smallest start `a = 274229635640`.
+- Token 74442 [verification]: Validates representative starts (including the 36th) with direct matching checks.
+- Token 74587 [final answer]: Computes `a mod 99991 = 18527` and commits to the correct final answer.

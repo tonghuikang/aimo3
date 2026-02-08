@@ -1,0 +1,11 @@
+## Answer: correct (2501)
+
+## Key moments
+- Token 1170-5373 [wasted]: Long early detour tries to force the sum structure through \((1,a,N)\)-style reasoning and exception handling before returning to the general optimization form.
+- Token 5757 [breakthrough]: Correctly resets the objective to “any three distinct divisors of one integer,” removing the mistaken requirement that the integer itself must appear in the sum.
+- Token 6107 [breakthrough]: Re-establishes the right reduction \(f(n)=\min \operatorname{lcm}(a,b,c)\) with \(a+b+c=n\).
+- Token 37580 [missed opportunity]: Treats \(K=103\) as the first strong candidate for the second case, delaying recognition that \(K=167\) gives a better ratio.
+- Token 40621 [breakthrough]: Confirms the first term cleanly via divisor-structured candidates, landing on \(f(5M)=\frac{10}{3}M\).
+- Token 41774 [breakthrough]: Finds the tighter second-term ratio \(\frac{110}{167}\), which drives the final correct sum.
+- Token 43220 [verification]: Performs explicit cross-checks against nearby divisors/ratios and confirms no improvement over the \(167\)-based construction.
+- Token 45166 [final answer]: Finalizes \(p+q=2501\), consistent with the correct output.

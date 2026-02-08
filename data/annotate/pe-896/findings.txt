@@ -1,0 +1,39 @@
+# PE 896 - Divisible Ranges
+
+## Problem
+A contiguous range of positive integers [a..a+L-1] is a "divisible range" if the integers can be arranged such that the n-th term is divisible by n.
+
+Find the 36th divisible range of length 36. Answer: smallest number in the range, mod 99991.
+
+## Correct Answer
+**18527**
+
+## Correct Approach
+1. Convert to perfect matching / SDR:
+   - Positions `1..36` on one side, numbers in `[a..a+35]` on the other
+   - Edge `(i, x)` exists iff `i | x`
+2. Use offset form over one period:
+   - Let `N = lcm(1..36)`
+   - Enumerate valid offset assignments (`0..35`) with gcd-compatibility constraints and solve corresponding CRT systems for `a (mod N)`
+3. Enumerate all valid base residues in `[0, N-1]`, sort positive residues, and take the 36th smallest.
+4. The 36th start is `274229635640`, and `274229635640 mod 99991 = 18527`.
+
+## Key Implementation Details
+- Direct scan with matching works as a checker, but the 6th valid start is already huge, so naive linear search is not practical for ranking to 36.
+- Periodic residue enumeration is tractable here and yields a complete ranked list in one period.
+- Independent matching verification of selected residues confirms correctness.
+
+## Wrong Approaches
+- `l66xep` gets `19677` (wrong):
+  - Uses a time-limited branch-and-bound search and collects 36 candidate values.
+  - Assumes completeness after timeout, even though unresolved branches could contain smaller missing solutions.
+  - This rank-completeness failure leads to the wrong 36th start and wrong modulo.
+- `rzjx1g` gets `81935` (wrong):
+  - Assumes only classes `a ≡ 1..5 (mod M)` with `M = lcm(19..36)` are valid.
+  - Derives `a_36 = 7M + 1`, which is false because many other valid residue classes exist.
+  - Full residue enumeration shows 18,240 valid base residues; the 36th is not from that 5-class assumption.
+
+## Correct Traces
+- `vzz6th` and `5afa6i` are correct:
+  - Both converge to complete CRT/CSP-style residue enumeration and then rank sorted base residues.
+  - Both verify the candidate 36th start by matching checks and output `18527`.

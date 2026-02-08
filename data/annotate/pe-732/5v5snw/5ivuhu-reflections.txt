@@ -1,0 +1,16 @@
+## Answer: correct (45609)
+
+## Key moments
+- Token 373 [insight]: Writes the geometric escape condition as shoulder height plus arm reach, `sum_below + h_i + l_i >= D`.
+- Token 1134 [breakthrough]: Reframes the process as sequential removals and moves toward a state-based optimization over remaining trolls.
+- Token 1448-1715 [wasted]: Spends a long detour debating subset/support reuse mechanics before collapsing to a simpler total-height state.
+- Token 1843 [insight]: Expresses feasibility via support height inequalities and starts algebraic simplification of the state condition.
+- Token 2150 [breakthrough]: Cancels terms cleanly and derives that escape depends on current remaining total height and `l_i`.
+- Token 2418 [insight]: Converts the condition into a monotone threshold form (`l_i >= D - H_current`) suitable for scheduling logic.
+- Token 3538 [breakthrough]: Maps the process to weighted scheduling/knapsack with processing time `h_i` and deadline structure derived from the threshold.
+- Token 4295 [insight]: Focuses on integer/irrational boundary handling (`floor`/`ceil`) so DP constraints are represented exactly.
+- Token 12886 [verification]: States and applies the deadline-constrained 1D DP transition.
+- Token 15224 [verification]: Confirms the model reproduces the provided checks `Q(5)=401` and `Q(15)=941`.
+- Token 15934 [verification]: Computes `Q(1000)=45609` from the finalized DP.
+- Token 15986-16715 [verification]: Performs additional precision and consistency checks (high-precision `ceil(D_N)` and derived constants).
+- Token 16833 [final answer]: Commits to `\boxed{45609}`.

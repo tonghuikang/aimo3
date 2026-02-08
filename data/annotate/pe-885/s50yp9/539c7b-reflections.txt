@@ -1,0 +1,14 @@
+## Answer: correct (827850196)
+
+## Key moments
+- Token 111 [insight]: Reframes the target as `S(n)=\sum_{d=1}^{10^n-1} f(d)` and explicitly organizes by true decimal length (no leading-zero numbers).
+- Token 1343 [breakthrough]: Simplifies the valid-permutation count to `((L-1)!/(c0!c1!\cdots c9!))*(L-c0)`, cleanly encoding the leading-digit constraint.
+- Token 1826 [missed opportunity]: Starts a position-by-position contribution derivation for sorted digits instead of using the cleaner count-grouping route already available.
+- Token 1826-2721 [wasted]: Spends a long stretch on intricate positional expansions (`offset`, exponent bookkeeping, `N*g` reinterpretations) that are later abandoned.
+- Token 2849 [insight]: Notices direct composition enumeration is feasible for `n=18` (millions of states, still tractable).
+- Token 3098 [breakthrough]: Commits to a concrete recursive composition enumerator with exact combinatorial weights plus direct `g(c1..c9)` construction.
+- Token 4763 [questionable statement]: Performs an uncertain hand subtraction for `S(5) mod M` and flags a likely arithmetic slip.
+- Token 6145 [verification]: Runs the implementation on `S(1)` and `S(5)` checkpoints to validate the formula before the target computation.
+- Token 7245 [verification]: Brute-force checks `S(2..4)` against the combinatorial method and gets exact matches.
+- Token 7601 [verification]: Extends brute-force confirmation to `S(6)`, further validating correctness.
+- Token 7784 [final answer]: Outputs `\boxed{827850196}`, matching the correct value.

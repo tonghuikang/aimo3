@@ -1,0 +1,13 @@
+## Answer: correct (53375)
+
+## Key moments
+- Token 1001 [insight]: Reframes divisibility as coordinate-wise order on exponent pairs, so valid partitions are antichains in the \((i,j)\) lattice.
+- Token 1548 [missed opportunity]: Starts speculating that unique-prime cases may mostly come from two-term sums, which delays direct exhaustive counting.
+- Token 3726 [questionable statement]: Treats the \(3^{k+1}-2^{k+1}\) level-sum family as likely "qualifying" for uniqueness without checking alternative antichains.
+- Token 3944 [mistake]: Concludes \(19\) is a unique case from \(\{4,6,9\}\), missing the second valid partition \(\{3,16\}\).
+- Token 5258-12625 [wasted]: Long detour into order-ideal / path-count framing without directly producing \(P(n)\) counts needed for primes under \(10^6\).
+- Token 12634 [insight]: Narrows antichain structure to "increasing \(i\), strictly decreasing \(j\), one choice per column," which enables a practical recursion state.
+- Token 17044 [breakthrough]: Implements `compute_counts(limit)` recursion with pruning, producing full partition counts up to \(10^6\).
+- Token 18049 [verification]: Checks the known benchmark \(\sum_{q<100,\,P(q)=1}=233\), confirming the counting method is consistent with the prompt.
+- Token 18557 [verification]: Investigates the \(P(19)\) discrepancy by explicitly enumerating partitions and confirms the earlier uniqueness claim was wrong.
+- Token 19208 [final answer]: Commits to \(\boxed{53375}\), consistent with computed totals and modulo step.

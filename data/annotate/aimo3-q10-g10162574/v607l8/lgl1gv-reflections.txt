@@ -1,0 +1,16 @@
+## Answer: correct (77)
+
+## Key moments
+- Token 214 [insight]: Correctly reframes `f(n)` as minimizing an LCM over triples summing to `N`.
+- Token 3940 [questionable statement]: Introduces an over-restrictive `N-3d` heuristic family as if it could characterize the global minimum.
+- Token 4191 [mistake]: Commits to that heuristic branch, which is not generally valid for the full search space.
+- Token 8592 [verification]: Detects and fixes a local strict-inequality issue inside the heuristic analysis.
+- Token 12511 [insight]: Pivots toward direct modulus/divisibility filtering for `N=M+c`.
+- Token 15106-20877 [wasted]: Extended small-`N` analog loops before settling on a scalable ranking framework.
+- Token 20877 [breakthrough]: Switches to divisor-scaling via `r(q)=L_min(q)/q`, aligning with the successful strategy.
+- Token 25002 [insight]: Narrows admissible divisors to the `5,31,47`-based family from `c+1` structure.
+- Token 28648 [breakthrough]: Computes key candidate ratios (`16/25`, `20/31`, `30/47`) and identifies `47` as best.
+- Token 33594 [verification]: Confirms lower-known ratios require absent factors (`7`, `11`, `13`, ...), eliminating hidden better branches.
+- Token 37644 [verification]: Rechecks factor-availability assumptions to close remaining ambiguity.
+- Token 40051 [verification]: Final floor/divisibility step confirms `g(10162574)=30/47` exactly.
+- Token 40491 [final answer]: Commits to `77`.

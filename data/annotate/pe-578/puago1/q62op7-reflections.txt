@@ -1,0 +1,20 @@
+## Answer: correct (46740)
+
+## Key moments
+- Token 151 [insight]: Frames the target as counting prime tuples with nonincreasing exponent partitions under a product bound.
+- Token 937 [verification]: Uses primorial-size reasoning to bound feasible distinct-prime depth for `N=10^13`.
+- Token 1364 [questionable statement]: Still entertains node-by-node recursive generation despite count-scale signals that direct enumeration is infeasible.
+- Token 9004 [insight]: Re-centers on deriving a counting recurrence instead of explicit construction of each valid integer.
+- Token 12006 [questionable statement]: Writes a recursion/summation form that is mathematically natural but too large if applied naively.
+- Token 21039-30082 [wasted]: Extended inclusion-exclusion reformulations and alternative encodings before settling on an implementable core counter.
+- Token 30009 [questionable statement]: Revisits direct enumerator-style strategy despite already recognizing that enumeration scale is unsafe.
+- Token 39063 [breakthrough]: Locks in the key optimization to treat exponent-1 tails with rough squarefree counting (`S`) rather than explicit prime branching.
+- Token 42560 [verification]: Runs checkpoint computations on small `N` to validate implementation direction.
+- Token 48304 [questionable statement]: Notes recursion-depth risks in `phi` handling but initially keeps high-depth recursion assumptions in play.
+- Token 49025 [questionable statement]: Introduces shortcut `S(M,a)=1+π(M)-a` when `p_a>sqrt(M)` without handling the `p_a>M` edge case.
+- Token 53980-56333 [wasted]: Long compare-and-debug cycle between two `C(N)` variants driven by the flawed `S` shortcut.
+- Token 56512 [mistake]: Identifies the shortcut failure (`p_a>M` can make `1+π(M)-a` invalid), which caused undercounting.
+- Token 56766 [breakthrough]: Corrects the `S` branching logic and restores consistency with known checks.
+- Token 57272 [verification]: Rechecks against `C(10^6)=922052`.
+- Token 57306 [verification]: Computes full `C(10^13)` and modulo successfully.
+- Token 57502 [final answer]: Commits to `\boxed{46740}`, which is correct.

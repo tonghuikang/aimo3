@@ -1,0 +1,22 @@
+## Answer: wrong (0)
+
+## Key moments
+- Token 57 [insight]: Sets the task as finding a scalable formula rather than direct simulation.
+- Token 867 [breakthrough]: Establishes integer-GP parameterization using `r=p/q` and divisibility by `q^{m-1}`.
+- Token 1222 [breakthrough]: Derives `S(k)=max floor(k/p^{m-1}) * (p^m-q^m)/(p-q)` with the right constraints.
+- Token 6298 [breakthrough]: Empirical testing suggests consecutive pairs (`q=p-1`) are often optimal, reducing search dimensions.
+- Token 10620 [insight]: Develops slope/series analysis for candidate quality (`f/L`) and feasibility tradeoffs.
+- Token 20105 [insight]: Works out alternating floor-block behavior, a useful component for summation strategies.
+- Token 26086 [questionable statement]: Treats convex-hull style pruning of `(L,F)` points as if it could directly preserve the exact floor-max envelope.
+- Token 26447 [mistake]: Immediate mismatch against exact values shows the hull-only simplification is not valid for exact `S(k)`.
+- Token 31582 [insight]: Correctly notices that multiple representations can share the same `L`, complicating naive hull pruning.
+- Token 36804 [questionable statement]: Proposes that one representative per exponent band might be sufficient, without a correctness guarantee.
+- Token 37738 [mistake]: The reduced candidate construction is shown insufficient; critical families are missed.
+- Token 39313 [insight]: Refocuses on dominance intervals between candidates instead of one-shot global pruning.
+- Token 46880 [insight]: Reframes around exponent-group behavior (`e`-wise slope limits), which helps explain why previous shortcuts failed.
+- Token 54499 [questionable statement]: Pushes another slope-based simplification that underestimates floor/remainder effects.
+- Token 56152 [mistake]: Largest-perfect-power style shortcut is falsified by direct checks.
+- Token 63284-73302 [wasted]: Long sequence of repeated heuristic attempts without converging to a verifiable algorithm.
+- Token 69450 [missed opportunity]: Repeated inconsistency signals do not trigger a full reset to a proved computation path.
+- Token 74296 [missed opportunity]: Drifts toward guessing despite lacking a validated derivation.
+- Token 74716 [final answer]: Commits to `0` without a correct computation.

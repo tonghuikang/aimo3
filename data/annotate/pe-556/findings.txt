@@ -1,0 +1,41 @@
+Problem: Count proper squarefree Gaussian integers z = a + bi with a > 0, b >= 0 and a^2 + b^2 <= N for N = 10^14, modulo 99991.
+
+Correct answer: 39756
+
+Correct approach:
+1. Use Gaussian Möbius inclusion-exclusion:
+   f(N) = sum_{d in Z[i], proper} mu_G(d) * C(floor(N / N(d)^2)),
+   where C(Y) = # {(a,b): a>0, b>=0, a^2+b^2 <= Y}.
+2. Group by integer norm m = N(d):
+   f(N) = sum_{m <= sqrt(N)} g(m) * C(floor(N/m^2)),
+   g(m) = sum_{N(d)=m} mu_G(d).
+3. g is multiplicative over rational prime powers p^e with local factors:
+   - p = 2: e=0 -> 1, e=1 -> -1, e>=2 -> 0
+   - p ≡ 1 (mod 4): e=0 -> 1, e=1 -> -2, e=2 -> 1, e>=3 -> 0
+   - p ≡ 3 (mod 4): e=0 -> 1, e=2 -> -1, otherwise 0
+   Then g(n) = product of local factors from n's prime exponents.
+4. Compute C(Y) by quarter-circle counting:
+   C(Y) = sum_{a=1..floor(sqrt(Y))} (floor(sqrt(Y-a^2)) + 1).
+5. Optimize by grouping equal values of floor(N/m^2):
+   S[Y] = sum_{m: floor(N/m^2)=Y} g(m), then
+   f(N) = sum_Y S[Y] * C(Y) (mod 99991).
+6. Validate on checkpoints:
+   f(10^2)=54, f(10^4)=5218, and f(10^8) mod 99991 = 31595.
+
+Important mathematical notes:
+1. Proper representatives (a>0,b>=0) give exactly one element per unit orbit.
+2. Gaussian-squarefree is not the same as integer-squarefree norm:
+   inert primes p ≡ 3 (mod 4) contribute norm p^2 even when the Gaussian prime appears only once.
+3. Asymptotically:
+   f(N) ~ (pi/4) * (1/zeta_{Q(i)}(2)) * N, where
+   zeta_{Q(i)}(2) = zeta(2) * L(2, chi_{-4}), and 1/zeta_{Q(i)}(2) = 6/(pi^2 * Catalan).
+
+Wrong approaches and why they fail:
+1. Using a split-prime density factor with only one (1-1/p^2) for p ≡ 1 (mod 4):
+   each split rational prime contributes two Gaussian prime ideals, so the squared split factor is required in the full Euler product.
+2. Propagating multiplicative coefficients through states where intermediate local factor is zero (linear update via previous value):
+   this can incorrectly kill valid e=2 cases (notably p ≡ 3 (mod 4)); exponent-based SPF decomposition is required.
+3. Reducing g(m) (or equivalent B(m)) modulo 99991 before finishing multiplicative construction:
+   signs/cancellations are corrupted; keep exact signed integers for g and apply modulo only in the final accumulated sum.
+4. Comparing modular outputs against raw (non-mod) benchmark values:
+   can produce false "wrong answer" diagnostics even when the modular algorithm is correct.

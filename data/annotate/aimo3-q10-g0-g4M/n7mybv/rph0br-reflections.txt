@@ -1,0 +1,10 @@
+## Answer: wrong (no final answer)
+
+## Key moments
+- Token 625 [breakthrough]: Correctly derives the core reduction `f(n)=min lcm(a,b,c)` over distinct triples summing to `n`.
+- Token 2084 [mistake]: Pushes an over-strong lower-bound heuristic toward `f(M)≈(M+1)/2`, which is not justified for this structure.
+- Token 2281 [missed opportunity]: Briefly notes `f(M)` might be near `2M/3` but does not pursue that promising direction.
+- Token 14894-16869 [wasted]: Performs lengthy magnitude/floor speculation before establishing exact values for `f(M)` and `f(5M)`.
+- Token 15138 [verification]: Runs size checks comparing `2025!` and `M`, but this verifies the wrong target quantity and leads to misleading intuition.
+- Token 26231-29942 [wasted]: Continues heuristic fitting around `6n/11` for huge `n` without reaching a valid closed-form for this instance.
+- Token 32658 [final answer]: The trace ends mid-computation (residue-table brute force) with no committed final answer.

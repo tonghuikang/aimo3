@@ -1,0 +1,17 @@
+## Answer: wrong (81935)
+
+## Key moments
+- Token 107 [insight]: Correctly interprets the task as ranking valid starts `a` for length-36 ranges.
+- Token 656 [breakthrough]: Identifies the bipartite perfect-matching formulation.
+- Token 1513 [verification]: Uses small-length examples to validate Hall-style failure modes and confirm nontrivial gaps.
+- Token 7908 [verification]: Empirically finds only `a=1..5` in early brute-force windows, establishing sparsity.
+- Token 13220 [insight]: Recognizes that the target rank likely lies far beyond naive scan limits.
+- Token 20697-38170 [wasted]: Spends a long stretch on density heuristics and conjectural growth arguments without constructing a complete rank-safe method.
+- Token 29066 [insight]: Extracts periodic structure via `lcm(19..36)` and links large-index constraints to residue behavior.
+- Token 38170 [questionable statement]: Conjectures the solution set is probably only residue classes `a ≡ 1..5 (mod M)`.
+- Token 45048 [missed opportunity]: Briefly notes that this assumption is unsafe but does not pivot to exhaustive residue enumeration.
+- Token 46320 [mistake]: Computes the 36th start as if there are exactly 5 solutions per period (`a_36 = 7M+1`), which is false.
+- Token 50040 [questionable statement]: Reasserts that only the constant-pattern classes likely work, despite lacking a completeness proof.
+- Token 51902 [missed opportunity]: Describes an offset-CRT enumeration route that could settle completeness, but does not execute it.
+- Token 53038 [mistake]: Finalizes the unsupported "only constant pattern works" claim.
+- Token 53732 [final answer]: Commits to `\boxed{81935}`, which is incorrect.

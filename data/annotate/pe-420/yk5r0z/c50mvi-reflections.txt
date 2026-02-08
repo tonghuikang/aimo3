@@ -1,0 +1,19 @@
+## Answer: correct (72391)
+
+## Key moments
+- Token 78 [insight]: Sets the task to compute F(10^7) modulo 99991.
+- Token 640 [breakthrough]: Uses tr(A^2)=tr(A)^2-2det(A) to express the trace constraint in root invariants.
+- Token 1235 [breakthrough]: Shows that distinct square roots cannot share the same (trace, determinant) pair, forcing the opposite-determinant case.
+- Token 5395 [questionable statement]: Assumes every counted positive root A automatically yields a valid second positive root, so counting A directly should give F(N).
+- Token 10279 [verification]: Moves to explicit small-N checks against F(50)=7 and F(1000)=1019.
+- Token 15484 [mistake]: The derived formula gives F(50)=43, a clear overcount versus the required value 7.
+- Token 16560-19971 [wasted]: Spends a long interval on injectivity/eigenvalue arguments and interpretation instead of immediately enforcing second-root integrality constraints.
+- Token 18796 [missed opportunity]: Continues trying to reconcile F(50)=43 with problem interpretation even after the mismatch already indicates a structural counting error.
+- Token 21155 [insight]: Identifies the missing divisibility/integrality requirements needed for the second root B to have positive integer entries.
+- Token 25196 [breakthrough]: Derives the corrected integer-window constraints using gcd-based parameterization and strict bounds on t.
+- Token 25985 [insight]: Implements `compute_F_fast` with the repaired conditions.
+- Token 26581 [verification]: Corrected implementation matches F(50)=7.
+- Token 26643 [verification]: Corrected implementation also matches F(1000)=1019.
+- Token 28453 [verification]: Brute-force validation with explicit root checks agrees on smaller N.
+- Token 29397 [verification]: Recomputes for N=10^7 and confirms 72391.
+- Token 29589 [final answer]: Commits to \boxed{72391}.

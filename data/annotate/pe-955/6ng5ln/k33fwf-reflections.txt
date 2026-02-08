@@ -1,0 +1,18 @@
+## Answer: wrong (87384)
+
+## Key moments
+- Token 1724 [insight]: Correctly models post-hit evolution as adding triangular increments, i.e. searching for `T_m + T_j` that is triangular again.
+- Token 2270 [breakthrough]: Transforms the triangular-sum condition into a factorization equation via `Z^2 - Y^2 = X^2 - 1`.
+- Token 10485 [insight]: Recasts the step as “find minimal positive odd `Y`” for fixed `X`, which is the right optimization target.
+- Token 16376 [questionable statement]: Proposes that the next divisor can be approximated by `max(a/p_a, (a+1)/p_{a+1})`, treating the search as a two-candidate shortcut.
+- Token 16587 [mistake]: Applying that shortcut at `a=3` yields a parity-invalid branch (`Y` even), showing the rule does not characterize valid transitions.
+- Token 21908 [questionable statement]: Again narrows the valid search to just two candidate families (`x_A`, `x_B`), without proving completeness.
+- Token 30376-30727 [wasted]: Long implementation/planning detour on divisor-enumeration performance while the candidate-completeness issue remains unresolved.
+- Token 30452 [mistake]: Encodes `cand_even = two_pow * (u // sp_u)`, which omits valid full-`2^t` divisors that also include odd-term factors; this biases later transition selection.
+- Token 31074 [questionable statement]: Claims trivial odd candidates do not need explicit exclusion.
+- Token 33336 [mistake]: Picks `x=3` for `m=3`, causing a `j=0` self-loop (`next_m=3`) before patching.
+- Token 33741 [insight]: Identifies the self-loop source: odd candidate selection must exclude the trivial `x=m` branch when `m` is odd.
+- Token 33948 [breakthrough]: Patches odd-candidate exclusion and restores agreement with the first 10 known checkpoints.
+- Token 35639 [verification]: Confirms prefix behavior (`(m_{10}, n_{10}) = (1696, 2964)`), but this check only covers early steps.
+- Token 36477 [missed opportunity]: Notes that full direct simulation is impossible at large `n` and does not add an independent mathematical cross-check of the transition rule beyond the prefix.
+- Token 36914 [final answer]: Commits to `87384`, which is wrong because the generator remains flawed after step 10.

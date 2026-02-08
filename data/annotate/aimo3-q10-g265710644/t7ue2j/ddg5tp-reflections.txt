@@ -1,0 +1,31 @@
+## Answer: correct (161)
+
+## Key moments
+- Token 183-259 [wasted]: Restates g(c) structure without progress on f(n).
+- Token 766-1148 [wasted]: Spends time on the `a=1` special case before proving global optimality conditions.
+- Token 1257-1370 [insight]: Re-centers the objective on minimizing the LCM over all distinct triples with fixed sum.
+- Token 1370-1398 [breakthrough]: Correctly sets `f(n)=min lcm(a,b,c)` for `a+b+c=n`.
+- Token 3115-3257 [wasted]: Returns to `b+c=n-1` heuristics without using divisor constraints from `n`.
+- Token 6511-6599 [wasted]: Introduces `S=n-1` and follows a long branch that is not tied to the true optimization target.
+- Token 8397-8422 [questionable statement]: Assumes the `n-1` factor route should determine the optimum via smallest odd prime factor.
+- Token 8422-8456 [mistake]: Concludes `f(n)=S-S/p_odd`, which is not valid for the full triple-LCM problem.
+- Token 12944-13003 [wasted]: Continues modular arithmetic on the wrong `S=n-1` branch.
+- Token 15165 [missed opportunity]: Derives `D<=n/6` but does not connect it to searching valid divisor sums `s|n`.
+- Token 17731-17890 [insight]: Introduces the scaled-base-triple view `n=D·S0` with objective `N=D·lcm(x,y,z)`.
+- Token 17926-18001 [breakthrough]: Formalizes `f(n)=min_{S0|n}(n/S0)·L_min(S0)`, enabling a divisor-sum search.
+- Token 19798-19823 [wasted]: Brute-force ratio search proceeds without first pinning down which `S0` divide `n`.
+- Token 22003 [wasted]: More ratio enumeration without divisibility filtering.
+- Token 24800-24860 [questionable statement]: Sets up the divisor extraction step but with an incorrect `c+1` value.
+- Token 24860-24942 [mistake]: Uses `c+1=265710644` (actually `c`), producing a wrong prime list and wrong branches.
+- Token 25997-26011 [wasted]: Follows the false `29|n` implication from the prior arithmetic error.
+- Token 29761-29805 [wasted]: Reverts again to the invalid `S-G` formula.
+- Token 30589-30666 [insight]: Realizes the `a=1` path cannot be globally optimal after observing lower candidate ratios.
+- Token 30666-30697 [breakthrough]: Explicitly pivots to searching global triple ratios rather than the `n-1` shortcut.
+- Token 34362-34456 [wasted]: Checks small sums that fail divisibility and still lacks the decisive divisor set.
+- Token 34480-34547 [insight]: Switches to “enumerate low-ratio base triples, then test `s0|n`”.
+- Token 36639-36813 [breakthrough]: Correctly identifies viable small divisors of `n` (notably `97,103,197,...`) and narrows to `s=97`.
+- Token 36896-36940 [insight]: Decides to compute `L_min(97)` exactly via direct triple search.
+- Token 37385-37441 [breakthrough]: Finds witness `(1,32,64)` so `L_min(97)=64`, giving ratio `64/97`.
+- Token 38158-38348 [verification]: Compares against other candidate `s` and keeps `64/97` as best.
+- Token 38874-39055 [verification]: Uses asymptotic ratio behavior to rule out larger-`s` improvements.
+- Token 42387 [final answer]: Commits to `g(c)=64/97` and `p+q=161`.

@@ -1,0 +1,15 @@
+## Answer: wrong (76279)
+
+## Key moments
+- Token 2873 [breakthrough]: notes M is a pure power of 3 and begins analyzing n-1 via its small prime factors.
+- Token 5993 [breakthrough]: proposes scanning small primes p with 3^k ≡ -(c-1) (mod p) to find divisors of n-1.
+- Token 8934 [breakthrough]: derives the construction N = n-1 - (n-1)/p from divisors of n-1.
+- Token 11986 [breakthrough]: sets up algebra for the general N + N/p + N/q structure and related ratio formulae.
+- Token 14846 [mistake]: assumes the minimal N always comes from a (1,d,N) construction tied to the smallest divisor of n-1, ignoring other triples that can yield smaller N.
+- Token 17943 [wasted]: spends time bounding sums of proper divisors to justify including N without proving minimality.
+- Token 20969 [breakthrough]: derives the divisibility constraints D | nq and D | np for N = n·pq/D.
+- Token 23168 [mistake]: incorrectly assumes M ≡ 1 (mod D) for any small D, reducing feasibility to D | (c+1) and dropping the real dependence on M.
+- Token 23931 [breakthrough]: minimizes pq/D over D | (c+1) (built on the faulty congruence assumption).
+- Token 26987 [breakthrough]: restricts to D = AB−1 with small A to minimize the ratio.
+- Token 29975 [verification]: checks a sample pair (p=4,q=6) to compare ratios, but within the already flawed constraint set.
+- Token 32062 [final answer]: reports 76279.

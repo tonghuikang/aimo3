@@ -1,0 +1,26 @@
+## Problem: aimo3-q9-m50
+
+### Correct answer
+86774
+
+### Correct approach
+Model the condition as convolution:
+- `S_n(α)⋆β = δ_k(n) + δ_l(n)` is equivalent to `α * γ = δ_k + δ_l` for a reversed helper sequence `γ`.
+- In Laurent-polynomial form, this is `A(x)C(x)=x^k+x^l=x^k(1+x^m)` with `m=|l-k|`.
+- Therefore `A(x)` must be of the form `± x^v D(x)`, where `D(x)` is an integer divisor of `1+x^m` for some `m>0`.
+
+Cyclotomic structure:
+- `1+x^m = \prod_{d\mid 2m,\ d\nmid m} \Phi_d(x)`.
+- For fixed `m`, every allowed cyclotomic index `d` in this factorization has the same 2-adic valuation: `v2(d)=v2(m)+1`.
+- So any valid non-monomial `D` is a product of distinct cyclotomics from a single shared-`v2` family.
+
+Counting:
+- If `deg(D)=w`, then shifts `v` have `0<=v<=50-w`, giving `51-w` placements.
+- Each such polynomial has two sign choices (`±`).
+- Valid `D` (degree `<=50`) are counted by subset-sum DP inside each shared-`v2` family, with one global empty-subset correction.
+- Total count is
+  - `2 * \sum_D (51-deg(D)) = 2 * 43387 = 86774`.
+
+### Wrong approaches and why they fail
+- **Undercount to 8722**: counts only distinct monic divisors (`4361`) and doubles for sign, but forgets that each divisor contributes multiple shifts (`51-deg(D)`).
+- **Overcount to 2256318**: treats all even-index cyclotomic factors as one global pool and allows arbitrary mixtures; this violates the shared-`v2` requirement needed for factors to divide one common `1+x^m`.

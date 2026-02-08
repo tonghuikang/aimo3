@@ -1,0 +1,30 @@
+# PE 487 Findings
+
+## Correct Answer
+- `106650212746`
+
+## Correct Approach
+- Let `f_t(n) = sum_{j=1..n} j^t`. Then
+  `S_k(n) = sum_{i=1..n} f_k(i) = (n+1)f_k(n) - f_{k+1}(n)`.
+- For each target prime `p` (all near `2*10^9`), we have `p-1 > 10001`, so
+  `sum_{a=1..p-1} a^10000 ≡ 0 (mod p)` and `sum_{a=1..p-1} a^10001 ≡ 0 (mod p)`.
+  Full length-`p` blocks therefore contribute `0` modulo `p`.
+- With `r = 10^12 mod p`, the residue depends only on `r`, and we can evaluate
+  `S_10000(r) (mod p)`.
+- `S_10000(x)` is a polynomial in `x` of degree `10002`. Since each target prime
+  satisfies `p > 10002`, we can safely evaluate this polynomial modulo `p` via
+  Lagrange interpolation from values at `x=0..10002` in `O(10002)` per prime.
+- Summing `S_10000(10^12) mod p` across all primes `p` in
+  `[2,000,000,000, 2,000,002,000]` (100 primes total) gives `106650212746`.
+
+## Wrong Approaches And Why They Fail
+- Treating complete `p`-blocks as contributing `-1` for exponents `10000/10001`
+  (instead of `0`, because `p-1` does not divide those exponents) introduces a
+  spurious block term and gives the wrong total `103702001757`.
+- Using factorial-based Lagrange interpolation when `p <= 10002` is invalid
+  (factorial denominators are not invertible modulo `p`). Example failure:
+  for `p=101`, this invalid setup can output `0`, while direct computation gives
+  `S_10000(10^12) mod 101 = 1`.
+- Attempting direct summation up to `r = 10^12 mod p` (often near `2*10^9`) for
+  each prime is computationally infeasible and typically does not produce a
+  final numeric answer.

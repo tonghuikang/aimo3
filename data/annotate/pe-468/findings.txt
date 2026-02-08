@@ -1,0 +1,51 @@
+# Problem pe-468 - B-smooth Divisors
+
+## Correct Answer
+852950321
+
+## Correct Approach
+For fixed m, S_B(m) is a step function in B:
+- S_B(m) = product over primes p <= B of p^{v_p(m)}
+- It changes only when B crosses a prime
+
+This gives the weighted-prime decomposition:
+- F(n) = sum_{p in D} w_p * G(p)
+- D = {1} U {primes <= n}
+- w_1 = 1
+- w_p = next_prime(p) - p for internal primes
+- w_{p_last} = n + 1 - p_last
+- G(p) = sum_{r=0}^n S_p(C(n,r))
+
+To compute efficiently, iterate r from 0 to n:
+- Maintain prime exponents of C(n,r) incrementally using
+  C(n,r+1) = C(n,r) * (n-r) / (r+1)
+- Factor (n-r) and (r+1) with SPF
+- Each prime-factor event is a suffix multiplicative update on prime-indexed prefix products
+- Use a lazy segment tree over prime indices; root stores weighted sum for current r
+- Accumulate root over all r
+
+This matches all checkpoints and yields 852950321 for n = 11,111,111.
+
+## Wrong Approaches
+
+### Wrong approach A (trace 73z2s7 -> 933863359)
+The implementation applies range updates only at prime powers p^e (threshold-based),
+instead of for every multiple of p^e.
+
+Why this fails:
+- v_p(k!) = sum_e floor(k / p^e) counts all multiples of each p^e
+- Updating only at p^e undercounts contributions from non-power multiples
+- The resulting transformed arrays are inconsistent, producing 933863359
+
+### Wrong approach B (trace 5w6lip -> 0)
+The trace mixes an unstable algebraic D(C) reformulation with buggy lazy range-update logic:
+- Sign/term confusion around the correction decomposition (P(C), n terms)
+- Repeated lazy propagation/rebuild inconsistencies in the segment tree
+- Failed small-case validation was not converted into a corrected implementation
+- The run ends with placeholder output 0 instead of a derived value
+
+## Complexity Notes (correct method)
+- SPF sieve: O(n)
+- Per r: factor two integers via SPF (small average factor count)
+- Each factor event: one segment-tree suffix multiply O(log pi(n))
+- Total practical behavior: near O(n log log n log pi(n)), fast enough in C++

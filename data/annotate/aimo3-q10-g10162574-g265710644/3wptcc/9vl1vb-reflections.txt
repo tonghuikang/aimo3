@@ -1,0 +1,16 @@
+## Answer: wrong (21279)
+
+## Key moments
+- Token 2421 [insight]: Recasts `f(n)` as minimizing `lcm(a,b,c)` over divisor triples summing to `n`.
+- Token 8609 [insight]: Focuses on the largest-divisor parameterization (`a+b=s-c`), setting up the later `p,q` ratio search.
+- Token 14920 [insight]: Derives the `a=1` family `c=T-T/m` from `T=s-1`, giving one valid but not necessarily optimal branch.
+- Token 24443 [questionable statement]: Prematurely commits to `g(c2)=3/4` from the `T`-divisor branch before comparing against broader constructions.
+- Token 27499 [verification]: Checks modular divisibility for small `m` values of `T`, confirming details of that branch.
+- Token 33222-34516 [wasted]: Extends arithmetic on the soon-abandoned `g(c1)+g(c2)` formulation from the `T`-divisor-only route.
+- Token 37077 [questionable statement]: Imposes `D=pq+p+q` must divide `s` as the feasibility rule for the `p,q` family.
+- Token 38310 [insight]: Builds a systematic `p,q` scan around that rule to minimize the factor `pq/(pq+p+q)`.
+- Token 43050 [breakthrough]: Correctly finds the first term via `(p,q)=(2,15)`, giving `g(c1)=30/47`.
+- Token 44680 [mistake]: Sets `g(c2)=130/197` from `(2,65)` under the over-restrictive `D|s` condition, missing a better feasible case.
+- Token 45308 [missed opportunity]: Attempts exhaustiveness but never checks the gcd-cancellation feasibility path (e.g., `D/g` logic), so `64/97` is not found.
+- Token 49887 [verification]: Recomputes fraction addition carefully, but only for the incorrect pair of `g` values.
+- Token 50445 [final answer]: Commits to `\boxed{21279}` (incorrect).

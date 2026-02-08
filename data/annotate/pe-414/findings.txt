@@ -1,0 +1,31 @@
+# Problem pe-414: Kaprekar Routine for 5-digit numbers in bases b = 6k+3
+
+## Correct Answer
+552506775824935461
+
+## Correct approach
+- Work base-by-base for `b=6k+3`, `k=2..300`, then sum and keep modulo `10^18`.
+- For `b=6t+3`, the Kaprekar constant has sorted digits
+  `(b-1, b-(2t+1), b-(2t+2), b-(4t+2), b-(4t+3))`,
+  so the target reduced state is `(x_c,y_c)=(2b/3,b/3)`.
+- Reduce each sorted 5-digit state to two gaps:
+  `x = d1-d5`, `y = d2-d4` (`d1>=...>=d5`).
+  The Kaprekar step depends only on `(x,y)`, giving an `O(b^2)` state graph.
+- Compute depth `D(x,y)` to `(x_c,y_c)` (and `D(0,0)=0`) from this successor map.
+- Count multiplicities with
+  `M(x,y) = (b-x) * W(x,y)`, where:
+  - `W(x,0) = 20x - 10`
+  - `W(x,x) = 30x - 10` for `x>0`
+  - `W(x,y) = 120*((x-y-1)*(y-1) + x - 2) + 100` for `0<y<x`
+- Correct total for one base:
+  `S(b) = sum_{(x,y)!=(0,0)} (D(x,y)+1)*M(x,y) - 1`
+  (the `-1` handles that only one ordered number is exactly `C_b`).
+- This reproduces anchors `S(15)=5274369` and `S(111)=400668930299`, and yields the final 18-digit answer above.
+
+## Wrong approaches and failures
+- Using only `sum M(x,y)*D(x,y)` (missing the global `+1` term for non-uniform starts) undercounts badly; for `b=15` this gives `4515010` instead of `5274369`.
+- Treating all permutations of the constant’s digit multiset as `sb=0` is wrong.
+  Only one ordered number is exactly `C_b`; other permutations have `sb=1`.
+  This causes small but critical offsets (e.g., `119` error in the `(x_c,y_c)` bucket for `b=15`).
+- Over-correcting the constant-state bucket by subtracting an entire permutation block can zero out valid contributions and produce wrong totals.
+- Incorrect second-minimum extraction under duplicate digits can create false fixed points in the reduced graph (e.g., spurious `(8,7)` at `b=15`), corrupting all depths.

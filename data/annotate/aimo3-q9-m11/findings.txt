@@ -1,0 +1,21 @@
+Correct answer: 338
+
+Correct approach:
+- Encode sequences as Laurent polynomials so the condition becomes
+  A(x)B'(x) = x^k + x^l = x^c(1 + x^d), with d>0.
+- Therefore admissible A(x) have form A(x)=\pm x^s D(x), where D divides 1+x^d in Z[x], and support bound gives deg(A)\le 11.
+- Divisors of 1+x^d are products of cyclotomic factors Phi_m with m|2d and m not dividing d. For fixed d, these m all share one 2-adic layer: v2(m)=v2(d)+1.
+- So D is any product of distinct cyclotomic polynomials from a single v2-layer, with total degree <=11.
+- Enumerating even m with phi(m)<=11 gives layers:
+  - v2=1: m={2,6,10,14,18,22,30}, degrees {1,2,4,6,6,10,8}
+  - v2=2: m={4,12,20}, degrees {2,4,8}
+  - v2=3: m={8,24}, degrees {4,8}
+  - v2=4: m={16}, degree {8}
+- Count valid subset products D per layer (degree <=11), deduplicate the empty product once globally, giving 34 distinct D.
+- For each D of degree r, shifts s=0..11-r and signs \pm contribute 2(12-r) functions alpha.
+- Summing over all 34 D gives total 338.
+
+Wrong approaches and why they fail:
+- Wrong answer 752: overcounts by allowing cyclotomic factors from different 2-adic layers to be combined in one D. Those combinations cannot all divide a single 1+x^d.
+- Wrong answer 68: undercounts by forcing A(0)=\pm1 and then counting only signed divisors D, which drops the monomial-shift family x^sD. The full family is A(x)=\pm x^s D(x), so missing shifts removes many valid alpha.
+- Interim overcount patterns (e.g., 410): can happen if the empty-subset divisor D=1 is counted once per layer instead of once globally.

@@ -1,0 +1,15 @@
+## Answer: correct (373)
+
+## Key moments
+- Token 1536-3876 [wasted]: Long early exploration around `n-1` divisor constructions before settling on the general optimization form.
+- Token 4219 [insight]: Recasts the task as minimizing `lcm(a,b,c)` over distinct triples with fixed sum.
+- Token 4379 [breakthrough]: Commits to the correct objective `f(n)=min lcm(a,b,c)` with `a+b+c=n`.
+- Token 9457 [questionable statement]: Treats `4/7` as if it were the global best ratio, without a complete extremal argument.
+- Token 10073 [mistake]: Detects that assumption is wrong after broader search, so the earlier global-minimum claim fails.
+- Token 11256 [insight]: Uses the “largest proper divisors of `L`” reciprocal argument to bound achievable ratio.
+- Token 11837 [breakthrough]: Establishes the stronger global benchmark `6/11` and ties attainability to divisibility constraints.
+- Token 17053 [verification]: Checks candidate sums dividing `5M` and confirms the `W=9` path giving `f(5M)` ratio `2/3`.
+- Token 22747 [verification]: Confirms exactness of `g(1848374)` once `2025! * r` is integral for the chosen rational ratio.
+- Token 27279 [missed opportunity]: After identifying the `s=25`/`16/25` route, continues with extra checks that do not materially change the conclusion.
+- Token 29901 [verification]: Re-validates both floor steps and the combined fraction computation.
+- Token 33016 [final answer]: Finalizes `\boxed{373}`, which is correct.

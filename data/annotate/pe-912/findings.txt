@@ -1,0 +1,27 @@
+Correct answer
+- `F(10^16) mod (10^9+7) = 674045136`.
+
+Correct approach
+- View valid numbers as binary strings with no substring `111`, leading bit fixed to `1`.
+- Numeric order equals shortlex/lex order on these fixed-length blocks, so process by length `L`.
+- Use DP state `s in {0,1,2}` = trailing run length of `1`s in the built prefix, with `r` bits remaining.
+- For each `(s,r)`, compute:
+- `cnt(s,r)`: number of completions.
+- `odd(s,r)`: number of completions ending in `1`.
+- `sum_i(s,r)`: sum of 0-index positions `i` of odd completions in lex order.
+- `sum_i2(s,r)`: sum of `i^2` for odd completions.
+- Recurrence combines branch `0` first, then branch `1` (if `s<2`) with offset by left-branch size `C0`:
+- `sum_i = sum_i_left + (sum_i_right + odd_right*C0)`.
+- `sum_i2 = sum_i2_left + (sum_i2_right + 2*C0*sum_i_right + odd_right*C0^2)`.
+- For full length block `L`, with global base `B` (count of all prior valid numbers), contribution is:
+- `odd(L)*(B+1)^2 + 2*(B+1)*sum_i(L) + sum_i2(L)`.
+- Since `N=10^16` falls inside the length-61 block, use a prefix query `prefixDP(s,r,K)` (same offset logic) to take only the first `K` strings of that final block.
+- Complexity is `O(L)` states and one `O(L)` prefix walk (`L` about 61 here), so it is easily feasible.
+
+Wrong approaches (and why they fail)
+- Treating auxiliary recurrences (for ending-with-1 counts) as universally valid without boundary handling causes wrong small-length counts and can corrupt downstream formulas.
+- Summing only complete length blocks is incorrect for this input, because `10^16` does not end at a block boundary.
+- Brute-force enumeration of all candidates up to the target rank is infeasible at this scale; combinatorial DP with prefix handling is required.
+
+Note
+- Both available traces for `pe-912` reach the correct final value; the “wrong approaches” above are observed pitfalls/intermediate failure modes rather than wrong submitted finals.

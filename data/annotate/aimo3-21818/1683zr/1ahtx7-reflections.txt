@@ -1,0 +1,18 @@
+## Answer: wrong (62140)
+
+## Key moments
+- Token 99 [breakthrough]: Lays out the equal-score pairing rule and that every runner plays each round.
+- Token 261 [breakthrough]: Recognizes scores are sums of powers of two, i.e., 20-bit patterns.
+- Token 802 [breakthrough]: Formalizes the binary-bit interpretation of wins across rounds.
+- Token 1022 [breakthrough]: Models the tournament as a binary tree that splits by win/loss each round.
+- Token 1885 [breakthrough]: Reframes the task as counting possible final permutations (orderings).
+- Token 3012 [breakthrough]: Argues each binary pattern appears exactly once, so final scores are distinct.
+- Token 3296 [breakthrough]: Interprets N as the number of possible total orderings of runners by score.
+- Token 4259 [breakthrough]: Links rankings to leaf values in a binary tree/bijection view.
+- Token 5272 [wasted]: Spends a long detour on an n=2 example beyond what’s needed for the general argument.
+- Token 5932 [missed opportunity]: Suggests “likely achieve all permutations” without checking dominance constraints.
+- Token 6845 [breakthrough]: Proceeds under the assumption that any permutation is achievable, setting N=(2^{20})!.
+- Token 7653 [mistake]: Claims any subset of half the runners can be winners, ignoring fixed speed-order feasibility.
+- Token 11183 [mistake]: Concludes N=(2^{20})! and commits to factorial-based trailing-zero count.
+- Token 11384 [verification]: Computes v5((2^{20})!) via Python/Legendre sum.
+- Token 11626 [final answer]: Reports \boxed{62140}.

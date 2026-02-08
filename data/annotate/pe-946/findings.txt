@@ -1,0 +1,16 @@
+Correct answer: 39729 (mod 99991)
+
+Correct approach:
+- Model \(\alpha\) as continued-fraction coefficients
+  - \(a_0=2\)
+  - then repeating blocks \(1^{p_k},2\), where \(p_k\) are consecutive primes \(2,3,5,7,\dots\).
+- Write \(\beta=(2\alpha+3)/(3\alpha+2)\) as an integer Möbius transform and compute CF digits of \(\beta\) with a streaming transducer (matrix/LFT method), not by floating-point approximation.
+- Use a stability test for digit emission: the next quotient is emitted only when lower/upper floor bounds from the current LFT interval agree; otherwise consume more input digits from \(\alpha\).
+- After emitting a quotient, apply the corresponding left Euclidean-style update; after refinement, apply right update with the next \(\alpha\)-digit.
+- This gives an efficient exact generator for \(\beta\)'s CF digits, allowing accumulation of the first \(10^8\) coefficients modulo \(99991\).
+
+Wrong approaches and failure modes:
+- Truncating \(\alpha\) to a finite convergent and converting resulting rational \(\beta\): only gives a finite CF and cannot certify the first \(10^8\) true digits.
+- Emitting quotients via a naive per-step rule (e.g., direct \(\lfloor A/C\rfloor\) without interval agreement): can output wrong digits because the unresolved tail of \(\alpha\) still changes the integer part.
+- Forcing a one-input-digit-to-one-output-digit mapping: transformation can require multiple extractions or multiple refinements; fixed one-to-one scheduling causes state/order bugs.
+- Pattern guessing from early \(\beta\) coefficients (blocks/runs/heuristics) without invariant-based proof: unreliable for exact large-\(N\) sums.

@@ -1,0 +1,17 @@
+## Answer: correct (811141860)
+
+## Key moments
+- Token 3526 [insight]: Rewrites the target as `B(a_n)=a_n+\delta_n`, identifying suffix-local permutation change as the key quantity.
+- Token 6685-7570 [wasted]: Spends a long stretch on Chebyshev/closed-form transformations that are not used in the final computation.
+- Token 15550 [insight]: Pivots to tail-modulus simulation (`a_n mod 10^k`) to recover permutation behavior from low digits.
+- Token 23990 [breakthrough]: Finds the `a_n mod (10^9+7)` cycle (start near 39911, period 21353), making `\sum a_n` computable for huge `N`.
+- Token 33020 [insight]: Separates the objective into `\sum a_n + \sum \delta_n`, enabling independent periodic handling.
+- Token 39042 [insight]: Recognizes that summing the two periodic parts separately avoids needing a huge combined-state LCM cycle.
+- Token 46612 [questionable statement]: Assumes `k=9` tail digits are sufficient to compute all `\delta_n`.
+- Token 52615 [mistake]: Finds a concrete counterexample (`n≈429120`) where suffix length exceeds 9 digits, invalidating the `k=9` model.
+- Token 57125 [questionable statement]: Tries `k=10` as likely sufficient without full validation.
+- Token 58896 [mistake]: `k=10` implementation fails the `U(10)` check, proving the model is still underspecified.
+- Token 59259 [breakthrough]: Upgrades to `k=11`, gets stable cycle data (period 15625000) and consistent delta computation.
+- Token 60553 [verification]: Reconstructs `U(10)` from `\sum a_n` and `\sum \delta_n` and matches the provided reference value.
+- Token 61120 [verification]: Confirms additional small-`N` exact matches (`N=10,15,20`) between brute force and fast method.
+- Token 61390 [final answer]: Commits to `811141860` (correct).

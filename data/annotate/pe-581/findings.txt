@@ -1,0 +1,34 @@
+# PE 581 - 47-smooth Triangular Numbers
+
+## Problem
+Find the sum of all indices `n` such that `T(n)=n(n+1)/2` has no prime factor larger than 47, then report the sum modulo 99991.
+
+## Correct Answer
+76246
+
+## Correct Approach
+- Split by parity:
+  - If `n=2a`, then `T(n)=a(2a+1)`. Need both `a` and `2a+1` to be 47-smooth.
+  - If `n=2a+1`, then `T(n)=(a+1)(2a+1)`. Need both `a+1` and `2a+1` to be 47-smooth.
+- Equivalent odd-`b` formulation (`b=2a+1`, odd and 47-smooth):
+  - Even index candidate: `n=b-1`, valid iff `(b-1)/2` is 47-smooth.
+  - Odd index candidate: `n=b`, valid iff `(b+1)/2` is 47-smooth.
+- Enumerate odd 47-smooth `b` and test smoothness of the half-neighbors by trial division over primes `<=47`.
+
+## Verified Global Results
+- Total valid indices: 1502
+- Largest valid index: 1109496723125
+- Sum of all valid indices: 2227616372734
+- `2227616372734 mod 99991 = 76246`
+
+## Wrong Approaches and Why They Fail
+- Incorrect odd-case condition:
+  - Wrong reduction requires both `a` and `a+1` to be smooth for odd `n`.
+  - Correct odd condition only requires `a+1` and `2a+1` smooth.
+  - This drops many valid odd indices (only 128 counted instead of 758), giving 872 total indices and wrong sums.
+- Partial-sum patching:
+  - Using the undercounted total `331571164118` gives `8208 mod 99991`.
+  - Manually adding `n=1` gives `331571164119`, i.e. `8209 mod 99991`, still wrong because the structural undercount remains.
+- Fragile smoothness checks:
+  - Bounded set-membership checks can miss valid candidates when queried values exceed the precomputed bound.
+  - A faulty smoothness predicate that exits at `p*p > num` and only accepts `num==1` can incorrectly reject allowed remaining primes (e.g., 43). A correct check must fully divide by allowed primes or accept a leftover prime `<=47`.

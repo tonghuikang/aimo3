@@ -1,0 +1,17 @@
+# Problem: aimo3-q10-g0-g10162574
+## Correct Answer: 325
+
+## Key Concepts
+- n-Norwegian: positive integer with 3 distinct divisors summing to n
+- f(n) = smallest n-Norwegian integer
+- M = 3^{2025!}
+- g(c) = floor(2025! * f(M+c) / M) / 2025!
+- Find g(0) + g(10162574) = p/q in lowest terms, then (p+q) mod 99991
+
+## Key Formula
+For f(n): If d is a divisor of n-1 with 1 < d < (n-1)/2, then X = n-1-d is a candidate.
+The minimal X is achieved when d is the largest such divisor (n-1 divided by its smallest prime factor > 2).
+
+## Common Error
+The trace arrives at 65684 (incorrect) instead of 325.
+The error likely involves the computation of f(M+c) or the modular arithmetic.

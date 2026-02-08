@@ -1,0 +1,13 @@
+## Answer: wrong (2951)
+
+## Key moments
+- Token 437 [breakthrough]: Introduces the LCM-based view (minimize a constructed number while enforcing divisor-sum constraints), which is a useful structural shift.
+- Token 713 [mistake]: Assumes the minimizing configuration is effectively of the form `1 + d + N = S`, reducing everything to divisors of `S-1`; this is too restrictive.
+- Token 5747 [missed opportunity]: Correctly notes both targets are odd and starts careful divisor-parity analysis, but does not yet challenge the “must include 1” restriction.
+- Token 11255-16691 [wasted]: Long brute-force/pattern exploration is spent validating the restricted `d_max` framework before a concrete counterexample is used to reject it.
+- Token 16899 [breakthrough]: Uses `S=11` (`N=6`, divisors `2,3,6`) to identify the key flaw: optimal triples need not include `1`.
+- Token 24592 [breakthrough]: Reparameterizes with `S = N + N/p1 + N/p2`, giving `D=p1p2+p1+p2` and a cleaner optimization criterion via divisibility and ratio.
+- Token 34131 [missed opportunity]: Compares candidate ratios but does not fully secure global minimality for the second target before committing to a specific divisor family.
+- Token 41988 [mistake]: Locks onto the `D=197` branch (`f(S2)=130S2/197`) as optimal for `S2`, missing a better valid construction that yields the correct second term.
+- Token 43529 [verification]: Performs detailed floor/epsilon checks for the final arithmetic phase; these checks are internally consistent given the chosen (but wrong) `f(S2)`.
+- Token 44926 [final answer]: Commits to `p+q=2951`, which is incorrect.

@@ -1,0 +1,21 @@
+Correct answer: `L(10^7, 10^7) mod 1,000,000,007 = 994345168`.
+
+Correct approach:
+- Use Sprague-Grundy: a `k`-pile position is losing iff XOR of single-pile Grundy values is 0.
+- For Coprime Nim single-pile size `s`:
+  - `G(s)=0` if `s` is even.
+  - `G(1)=1`.
+  - If `s>1` is odd and `p` is the smallest odd prime divisor of `s`, then `G(s)=pi(p)` (prime index including 2).
+- Build frequency vector `f[g]` over sizes `1..n-1`:
+  - `f[0]=floor((n-1)/2)` (all evens), `f[1]=1` (size 1).
+  - For each odd prime `p`, count odd numbers whose smallest odd prime divisor is `p`; add that count to `f[pi(p)]`.
+  - This can be done with a sieve/visited-marking pass over odd multiples.
+- Number of losing `k`-tuples is the XOR-convolution power value at 0:
+  - `L(n,k) = (f^(xor k))[0]`.
+  - Compute via FWHT: transform `f`, raise each component to power `k`, inverse FWHT (multiply by inverse length), read index 0.
+
+Wrong approaches and why they fail:
+- Off-by-one odd-index sizing (`odd_len = N//2 + 1`) for even `N`: introduces a phantom odd value `>N`, corrupts frequencies (e.g., wrong `L(5,2)` output).
+- Mis-parameterizing checks (`L(10^3,10^3)` tested with `k=999`): creates fake sample mismatches.
+- Reinterpreting the problem as unordered piles, including initial size 0, or using range `1..n` instead of `1..n-1`: contradicts the `L(5,2)` example and gives wrong counts.
+- Guess formulas such as `G(p)=(p+1)/2` for odd primes: fails beyond small primes (e.g., `p=11`).

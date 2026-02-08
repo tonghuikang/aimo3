@@ -1,0 +1,15 @@
+## Answer: wrong (384101118)
+
+## Key moments
+- Token 3898 [insight]: Reframes the objective as `B(a_n)=a_n+d_n` and notes that `d_n` may be recoverable from a short trailing suffix.
+- Token 4067 [breakthrough]: Switches to a modular-tail strategy (`a_n mod 10^k`) with cycle detection, which is the right global direction.
+- Token 5011-6244 [wasted]: Spends substantial effort on Chebyshev/hyperbolic closed-form transformations that are never used.
+- Token 6511 [insight]: Notices sampled `d_n` values are multiples of 9 and starts building explicit digit-level formulas.
+- Token 16505 [breakthrough]: Correctly derives the suffix-length 1 and suffix-length 2 next-permutation update rules.
+- Token 17558 [questionable statement]: Generalizes too early that `B(a_n)` is determined only by the last three digits.
+- Token 17942 [questionable statement]: Extends that assumption into a global “`d_n` has period 40 from `a_n mod 1000`” claim.
+- Token 20743 [mistake]: Commits to the false rule that for all `n>=3`, `d_n` is determined by `a_n mod 1000`, excluding longer non-increasing suffix cases.
+- Token 21498 [mistake]: Uses the wrong period-40 `d_n` model inside the final summation pipeline, which corrupts `D(N)` and the final total.
+- Token 27052 [missed opportunity]: Verifies only tiny `N` values, which cannot detect rare but decisive longer-suffix permutations.
+- Token 27916 [missed opportunity]: Treats the mod-1000 argument as fully proven without any higher-modulus or exact-permutation cross-check.
+- Token 29079 [final answer]: Commits to `384101118` (wrong).

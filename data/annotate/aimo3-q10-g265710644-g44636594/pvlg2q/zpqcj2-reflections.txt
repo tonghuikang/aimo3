@@ -1,0 +1,17 @@
+## Answer: correct (37557)
+
+## Key moments
+- Token 2995 [wasted]: speculates the minimal LCM might be a power of 3 without evidence.
+- Token 4888 [breakthrough]: notes scaling by a common divisor d and frames the ratio minimization over divisors of n.
+- Token 6923-7063 [wasted]: runs a brute-force helper script before the theoretical reduction is complete.
+- Token 8980 [breakthrough]: searches for lower ratios by considering alternative multiples beyond powers of 3.
+- Token 11973 [breakthrough]: defines r_min(n)=min_{d|n} r(Q), establishing the divisor‑based framework.
+- Token 13991 [verification]: computes M mod 17 via order arguments to test divisibility patterns.
+- Token 15996 [breakthrough]: uses scaling triples to show ratios persist for multiples of a base construction.
+- Token 18974 [breakthrough]: narrows candidates to divisors of c+1 that are ≥6.
+- Token 20973 [breakthrough]: factors c1+1 and lists primes that must divide n1.
+- Token 22942 [wasted]: drops into helper-code setup for computing f and ratios instead of pushing the divisor argument.
+- Token 24846 [wasted]: pauses to consider brute-force computation of r(Q) for large Q instead of leveraging divisor structure.
+- Token 26978 [verification]: checks composite divisors like 515 and confirms 64/97 remains minimal.
+- Token 29990 [breakthrough]: computes g(c2)=110/167.
+- Token 30892 [final answer]: sums to 37557 and prepares the boxed output.

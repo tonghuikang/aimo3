@@ -1,0 +1,27 @@
+Correct answer: 1453
+
+Correct approach (problem-level)
+- Let n = M + c. If divisors used in the sum are written as N/x1, N/x2, N/x3 (distinct), then
+  n = N(1/x1 + 1/x2 + 1/x3), so N = n * (L/S), where L = lcm(x1,x2,x3) and S = L/x1 + L/x2 + L/x3.
+- Therefore f(n) is obtained by minimizing L/S among valid triples with S | n.
+- For n1 = 5M:
+  - Best valid ratio is L/S = 2/3 (e.g., x-triple (1,3,6), equivalently divisors N, N/3, N/6).
+  - So f(5M) = (2/3) * 5M = (10/3)M.
+  - g(4M) = (1/2025!) * floor(2025! * (10/3)) = 10/3, since 3 | 2025!.
+- For n2 = M + 265710644:
+  - Best valid ratio is L/S = 64/97 via (x1,x2,x3) = (1,2,64), where S=97 and L=64.
+  - Need S | n2: M = 3^(2025!), and 3^(2025!) ≡ 1 (mod 97) (because 96 | 2025!), while 265710644 ≡ 96 (mod 97), so n2 ≡ 0 (mod 97).
+  - Hence f(n2) = (64/97)n2 and g(265710644)=64/97 (97 | 2025!, and the c/M correction is too small to change floor).
+- Sum:
+  - g(4M) + g(265710644) = 10/3 + 64/97 = 1162/291 (already reduced).
+  - p+q = 1162+291 = 1453, so remainder mod 99991 is 1453.
+
+Wrong approaches and why they fail
+- Forcing the triple to be of form (1, d, N) and optimizing only via divisors of n-1:
+  - This is not globally valid; optimal triples need not include 1.
+  - It leads to incorrect f(n) models (often of type based on "smallest divisor > 2 of n-1") and wrong finals such as 64836.
+- Locking onto D=197 for n2 (giving ratio 130/197):
+  - This misses the better valid construction S=97, L=64, ratio 64/97.
+  - Produces wrong final 2951.
+- Using attractive ratios (like 6/11 for n1) without divisibility/integrality checks:
+  - Even if reciprocal sum is better, N must be integer and S must divide n; otherwise the candidate is invalid.

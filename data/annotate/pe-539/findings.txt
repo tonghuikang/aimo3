@@ -1,0 +1,28 @@
+# pe-539 Findings
+
+## Correct answer
+- `S(10^18) mod 987654321 = 426334056`.
+
+## Correct approach
+- Let `P(n)` be the last remaining value.
+- Core recurrence:
+  - `P(1) = 1`
+  - `P(n) = 2 * (floor(n/2) + 1 - P(floor(n/2)))` for `n > 1`
+- Key structural fact:
+  - `P(2m) = P(2m+1) = g(m)` where `g(m) = 2 * (m + 1 - P(m))`.
+  - This pair-constancy is what makes summation tractable.
+- Define `S(n) = sum_{k=1}^n P(k)`, `S(0)=0`.
+- Recurrences for fast `S` computation:
+  - If `N = 2M+1` (odd):  
+    `S(N) = 2*(M+1)*(M+2) - 4*S(M) - 3`
+  - If `N = 2M` (even):  
+    `S(N) = 2*M^2 + 4*M - 1 - 2*P(M) - 4*S(M-1)`
+- Evaluate these with memoization (`O(log N)` states).  
+  Checks: `P(9)=6`, `P(1000)=510`, `S(1000)=268271`.
+
+## Wrong approaches and why they fail
+- Using classic Josephus closed form (`2*(n-2^{floor(log2 n)})+1`) for this problem is wrong because this is alternating-direction elimination, not the circular Josephus process.
+  - Wrong outputs: at `n=9`, Josephus gives `3` (actual `P(9)=6`); at `n=1000`, Josephus gives `977` (actual `P(1000)=510`).
+- Using ad-hoc `P(n)=2*(l+1)` with `n=2^m+l` (from mismatched pattern intuition) is wrong.
+  - Wrong output example: `n=16` would give `2`, but actual `P(16)=6`.
+- Deriving `S(2M)` by naively pairing terms without handling `n=1` and the unpaired tail at `2M` causes double counting and yields incorrect intermediate recurrences.

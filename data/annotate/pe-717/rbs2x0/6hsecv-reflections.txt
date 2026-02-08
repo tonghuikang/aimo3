@@ -1,0 +1,20 @@
+## Answer: correct (1603036763131)
+
+## Key moments
+- Token 80 [insight]: Rewrites the target as `((A - (A mod p)) / p) mod 2^p`, establishing the quotient-remainder framing.
+- Token 1546 [breakthrough]: Uses CRT (`s = a_p + p t`) and derives `t ≡ (a_2p - a_p) * p^{-1} (mod 2^p)`, reducing the core computation to one congruence.
+- Token 1837 [verification]: Correctly confirms `2^{2^p} mod 2^p = 0`, simplifying `f(p)` to `(-a_p * inv_p) mod 2^p`.
+- Token 2251 [questionable statement]: Starts treating `inv_p mod p` as directly usable from `p * inv_p ≡ 1 (mod 2^p)`, which is not a safe reduction.
+- Token 2552 [mistake]: Commits to computing `g(p)` through `inv_p % p`, creating a contradiction path.
+- Token 3763 [missed opportunity]: Recognizes that direct work modulo `2^p` is infeasible for large `p`, but does not immediately pivot to the cleaner route.
+- Token 3904-4490 [wasted]: Long detour around `t = -a_p * inv_p + k*2^p` and `floor(A/p) mod p`, mixing in a side quantity that is not the required `g(p)`.
+- Token 5942 [questionable statement]: Explicitly sets `g(p) = floor(A/p) mod p`, dropping the required intermediate reduction modulo `2^p`.
+- Token 6388 [insight]: Recomputes `f(3)=5` and `g(3)=2`, giving the concrete signal that the current formula target is wrong.
+- Token 6573 [mistake]: Confirms the mismatch (`floor(256/3) mod 3 = 1` vs required `g(3)=2`), exposing the definition error.
+- Token 6880 [breakthrough]: Resets to the correct definition `g(p) = (floor(A/p) mod 2^p) mod p` and proceeds with a new derivation.
+- Token 9862 [insight]: Uses `p*t = -a + k*2^p` with `c = 2^p mod p^2`, obtaining the key condition `2k ≡ a (mod p)`.
+- Token 10277 [breakthrough]: Derives computable `t0 = ((-a + k0*c) mod p^2) // p`, which avoids ever constructing gigantic `2^p` moduli.
+- Token 10645 [verification]: Implements and checks `g_compute`, including sample-prime validation (notably `g(31)=17`).
+- Token 11146 [verification]: Verifies `G(10^4)=2819236`, matching the provided benchmark.
+- Token 12291 [verification]: Runs the full `N=10^7` computation.
+- Token 12877 [final answer]: Commits to `\boxed{1603036763131}`.

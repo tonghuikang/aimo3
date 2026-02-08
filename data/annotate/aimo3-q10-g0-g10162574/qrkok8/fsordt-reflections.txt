@@ -1,0 +1,15 @@
+## Answer: correct (325)
+
+## Key moments
+- Token 470 [breakthrough]: Converts the objective into minimizing `lcm(a,b,c)` under `a+b+c=n`.
+- Token 1487 [mistake]: Over-restricts to power-of-3-style thinking tied to `M` itself rather than arbitrary candidate integers.
+- Token 3284 [breakthrough]: Explicitly corrects that restriction and returns to the general LCM framework.
+- Token 6280 [breakthrough]: Introduces the scaled-sum/divisor parameterization (`T` dividing target sum) to compare ratios cleanly.
+- Token 6563 [breakthrough]: Finds the `2/3` baseline via `T=9` construction for the `g(0)` side.
+- Token 38372 [breakthrough]: For `M+10162574`, compares feasible divisor families and isolates `47` with ratio `30/47`.
+- Token 40007 [missed opportunity]: Hesitates on factor-certainty despite already having a decisive feasible candidate and ranking.
+- Token 41375-42676 [wasted]: Heavy exhaustive checking after the core minimum argument is already established.
+- Token 39575 [verification]: Verifies floor behavior and exactness for `g(10162574)=30/47`.
+- Token 39668 [verification]: Verifies `g(0)=2/3` exactly.
+- Token 41617 [verification]: Adds to `184/141` and validates final reduction.
+- Token 46156 [final answer]: Commits to `325`.

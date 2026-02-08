@@ -1,0 +1,42 @@
+# PE 489 Findings
+
+## Problem Summary
+For fixed `a,b`, define
+- `f(n) = n^3 + b`
+- `g(n) = (n+a)^3 + b`
+- `G(a,b)` = smallest `n >= 0` where `gcd(f(n), g(n))` is maximized.
+
+Then `H(m,n) = sum_{1<=a<=m, 1<=b<=n} G(a,b)`.
+
+## Correct Answer
+`H(18,1900) mod 99991 = 47602`.
+
+## Correct Approach
+- Reduce the gcd value at fixed `n`:
+  - `gcd(f(n), g(n)) = gcd(n^3+b, a(3n^2+3an+a^2))`.
+- Use the resultant bound:
+  - `Res_n(f,g) = a^3(a^6 + 27b^2)`.
+  - For every integer `n`, `gcd(f(n), g(n))` divides this resultant.
+  - So the maximum gcd is finite and determined prime-by-prime.
+- For each prime `p | a^3(a^6+27b^2)`, compute the largest exponent `e_p` such that there exists `n` with
+  - `v_p(n^3+b) >= e_p`, and
+  - `v_p(a) + v_p(3n^2+3an+a^2) >= e_p`.
+- Find `e_p` by modular lifting (`mod p, p^2, ...`) of feasible residues.
+- The maximal gcd is `D = prod p^{e_p}`.
+- Compute `G(a,b)` as the smallest non-negative `n` satisfying all local prime-power congruence constraints for `D`; combine local residues with CRT.
+- Sum all `G(a,b)` for `1<=a<=18, 1<=b<=1900` and reduce mod `99991`.
+
+## Wrong Approaches And Why They Fail
+- Assuming the maximum gcd is unbounded because `a(3n^2+3an+a^2)` grows with `n`:
+  - False; gcd values are globally bounded by the resultant.
+- Assuming maximum gcd always equals full resultant `a^3(a^6+27b^2)`:
+  - False; some prime powers in the resultant are not simultaneously achievable by congruence constraints.
+- Inferring a universal formula from ratio patterns (`resultant / max_gcd`) on sampled pairs:
+  - Unreliable; local `p`-adic feasibility differs by `(a,b)` and must be checked directly.
+- Brute-forcing `n` only up to a fixed cutoff:
+  - Can miss the true maximizing `n` and therefore produce wrong `G(a,b)`.
+
+## Validation Targets
+A correct implementation reproduces:
+- `H(5,5) = 128878`
+- `H(10,10) = 32936544`

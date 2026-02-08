@@ -1,0 +1,10 @@
+## Answer: correct (701)
+
+## Key moments
+- Token 75 [breakthrough]: Correctly frames `g(c)` as floor of a scaled `f(M+c)/M` quantity.
+- Token 8037 [mistake]: Early near-`N/2` divisor-sum heuristic overconstrains the search and leads to unnecessary algebraic detours.
+- Token 16061 [missed opportunity]: Could have switched sooner to the cleaner `(p,q,D)` parameterization once divisibility constraints were visible.
+- Token 24021 [breakthrough]: Introduces a systematic pair search for minimizing `\alpha=pq/(pq+p+q)` under divisor constraints.
+- Token 32044-40092 [wasted]: Performs broad scans and repeated candidate checks after `(2,15)` and `(3,6)` already effectively determine both terms.
+- Token 40414 [verification]: Correctly resolves floor/integrality for `g(10162574)=30/47` and combines with `g(4M)=10/3`.
+- Token 41921 [final answer]: Commits to `\boxed{701}`.

@@ -1,0 +1,18 @@
+## Answer: wrong (127)
+
+## Key moments
+- Token 250 [insight]: Identifies that the target is `g(4M)` through `f(5M)`.
+- Token 281 [breakthrough]: Switches to minimizing `f(5M)` via divisor-triple/LCM reasoning.
+- Token 4213 [insight]: Starts 3-adic valuation factoring to control admissible triple structure.
+- Token 4349 [questionable statement]: Frames the search as if optimal triples should share a high common 3-power in a rigid way.
+- Token 4400 [mistake]: Enforces an over-strong normalization rule (treated as “not divisible by 3” globally), excluding valid mixed-valuation constructions.
+- Token 11176 [missed opportunity]: Encounters candidate families like `(5,10,30)` but discards them only because of the invalid restriction.
+- Token 20138 [verification]: Performs local ratio checks (`k=2` branch), but still inside the constrained model.
+- Token 25529 [verification]: Adds gcd/divisibility filtering to prune candidates, again without fixing the model-level assumption.
+- Token 31192 [verification]: Finds an internal LCM-exponent inconsistency in the computation logic.
+- Token 31538 [verification]: Repairs that local bug, but the global valuation constraint remains.
+- Token 33688 [questionable statement]: Treats `100/27` as the likely global optimum before model validity is established.
+- Token 33688-42443 [wasted]: Large brute-force and casework runs over the wrong constrained search space.
+- Token 40265 [mistake]: Commits to `g(4M)=100/27` from that invalid global model.
+- Token 42452 [verification]: Verifies only coprimality of `(100,27)`, not correctness of the underlying minimization.
+- Token 42491 [final answer]: Outputs boxed `127`.

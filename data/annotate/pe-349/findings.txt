@@ -1,0 +1,23 @@
+# PE 349 Findings
+
+## Correct Answer
+- `99066`
+
+## Correct Approach
+- Let `B(n)` be the number of black squares after `n` moves.
+- Simulate Langton’s ant with a sparse black-set representation until the highway regime is clearly active (around `10^4` steps).
+- In the stable regime, `B(n+104)-B(n)=12` (net +12 black squares per 104 moves).
+- Use the invariant-style transform `C(n)=3n-26B(n)`. In the stable regime:
+  `C(n+104)=C(n)`, so `C` is periodic by `n mod 104`.
+- Build `C_mod[r]` for `r=0..103` from any stable sample with residue `r`.
+- For `N=10^18`, compute `r=N mod 104`, then:
+  `B(N)=(3N-C_mod[r])/26`, and finally reduce modulo `99991`.
+- This yields `B(10^18) mod 99991 = 99066`.
+- Equivalent valid extrapolation: choose a stable baseline `N0` (e.g., `9977`) where the 104-step recurrence is active, then use
+  `B(N)=B(N0)+12q+delta[r]`, with `q=(N-N0)//104`, `r=(N-N0)%104`, `delta[r]=B(N0+r)-B(N0)`.
+
+## Wrong Approaches And Why They Fail
+- Using a single 104-step prefix profile from one period for all later periods:
+  `B(N)=B(s)+12k+prefix[r]`. This is not generally valid; direct simulation gives contradictions (for example, it predicts `B(9940)=716` while simulation gives `714`).
+- Trusting remembered highway constants (period, growth, offsets) without verification can produce wrong extrapolation constants and wrong final modulo.
+- Focusing on exact global translated-set matching is unnecessary for this counting question; the robust path is periodic black-count/invariant verification.

@@ -1,0 +1,21 @@
+Problem: pe-725 - DS-numbers (Digit Sum Numbers)
+
+A DS-number is a number where one digit equals the sum of all other digits.
+
+Correct Answer: 4598797036650685
+
+Correct approach:
+1. Let total digit sum be T. DS condition is `d_i = T - d_i`, so `T = 2*d_i`.
+2. Therefore T must be even and `T/2` must appear as a digit; since digits are 0..9, `T/2 <= 9`, so `T <= 18`.
+3. For each length `L` and each even `T in {2,4,...,18}`, let `H = T/2`, then compute:
+   - `A(L,T)`: sum of all L-digit numbers with digit sum T (leading digit non-zero).
+   - `B(L,T)`: sum of all L-digit numbers with digit sum T and no digit equal to H.
+   - DS contribution is `A(L,T) - B(L,T)`.
+4. Sum over all `L <= 2020` and all valid T.
+5. DP state only needs digit-sum dimension `0..18`, and tracks both count and value-sum modulo `10^16`.
+6. Use `10^p mod 10^16`; for `p >= 16`, this is 0, so high-place value terms vanish modulo `10^16` (while counts still matter).
+
+Wrong approaches and failure modes:
+1. Propagating "most significant digit must be non-zero" during incremental length extension (instead of only on the final leading digit) undercounts by forbidding internal zeros in longer numbers. This misses valid DS numbers such as patterns like `101`, `202`, etc.
+2. For lengths above 16, treating the high block with an unrestricted first digit (allowing zero) overcounts by including representations that are not truly length-L numbers and are already counted at smaller lengths.
+3. Skipping checkpoint validation (`S(3)=63270`, `S(7)=85499991450`) allows both bugs above to survive and produce wrong intermediate outputs (for example `6852283509705795` before the high-block fix).

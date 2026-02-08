@@ -1,0 +1,22 @@
+## Correct answer: 37557
+
+## Problem summary
+Given n >= 6, an integer N is "n-Norwegian" if it has three distinct positive divisors summing to n. f(n) is the smallest such N. With M = 3^{2025!}, compute g(c) = floor(2025! * f(M+c) / M) / 2025! for c1 = 265710644 and c2 = 44636594, then find (p+q) mod 99991 where g(c1)+g(c2) = p/q in lowest terms.
+
+## Correct approach
+1. **Key reduction**: For large n, f(n) = min over triples {a,b,c} of distinct divisors of N with a+b+c = n of the value N = lcm(a,b,c). The optimal triples use {1, d, N} where 1+d+N = n, so N = n-1-d where d | N. This makes f(n)/n approach a ratio alpha.
+
+2. **Ratio framework**: For a triple using divisors (1, p, pq) with sum 1+p+pq = S, ratio = pq/S = pq/(1+p+pq). More generally, parametrize by coprime (p,q) pairs: ratio = pq/(pq+p+q). The goal is to minimize this ratio over feasible (p,q) pairs.
+
+3. **Feasibility for M+c**: A pair (p,q) is feasible for n = M+c when the denominator D = pq+p+q divides n (or more precisely, when there exists a valid N). Since M = 3^{2025!}, the key constraint is D | (M+c), which for small D means checking 3^{2025!} mod D. Since 2025! is divisible by phi(D) for any D with prime factors <= 2025, we get M = 3^{2025!} mod D can be computed via Fermat's little theorem.
+
+4. **For c1 = 265710644**: c1 + 1 = 265710645 = 3^3 * 5 * 97 * 103 * 197. The relevant divisors >= 6 are checked. The minimum ratio comes from the pair (p,q) = (2,64) giving D = 194 = 2*97, ratio = 128/194 = 64/97. Checking: 97 divides c1+1, and M mod 97 can be verified. Result: g(c1) = 64/97.
+
+5. **For c2 = 44636594**: c2 + 1 = 44636595 = 3 * 5 * 103 * 167 * 173. The minimum ratio comes from (p,q) = (2,55) giving D = 167, ratio = 110/167. Result: g(c2) = 110/167.
+
+6. **Final computation**: g(c1) + g(c2) = 64/97 + 110/167 = (64*167 + 110*97)/(97*167) = (10688 + 10670)/16199 = 21358/16199. Since gcd(21358, 16199) = 1, p = 21358, q = 16199. p + q = 37557. 37557 mod 99991 = 37557.
+
+## Known wrong approaches
+1. **"Second-largest divisor" model (answer 183)**: Incorrectly assumes f(n) = n-1-p where p is the largest proper divisor of n-1 below n/2. This ignores that triples other than {1, d, n-1-d} can yield smaller N. Leads to g(c) = 3/4 type answers.
+
+2. **"D divides c+1" oversimplification (answer 76279)**: Correctly sets up the pq/D ratio framework but incorrectly assumes M = 1 (mod D) for ALL small D, reducing the feasibility check to just D | (c+1). This drops the real dependence on M mod D and leads to wrong feasible pairs.

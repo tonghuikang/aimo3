@@ -1,0 +1,15 @@
+## Answer: correct (18029)
+
+## Key moments
+- Token 204 [insight]: Identifies that the main target is exact evaluation of \(g(c)\) through understanding \(f(M+c)\), including floor and reduction behavior.
+- Token 1227-10348 [wasted]: Extended brute-force and heuristic exploration on small values without locking the full algebraic characterization needed for this large-parameter instance.
+- Token 4214 [questionable statement]: Temporarily narrows attention to the \(1+d+N\) pattern, which does not cover all optimal triples.
+- Token 4840 [mistake]: Overextends that restricted pattern into broad claims about \(f(n)\), which conflicts with known small-\(n\) behavior.
+- Token 10348 [breakthrough]: Reframes to the general structure \(n=N+a+b\) with \(a,b\mid N\), opening the correct optimization route.
+- Token 13584 [insight]: Derives \(N=n\cdot pq/(pq+p+q)\), turning the search into minimizing the ratio under divisibility constraints.
+- Token 16722 [verification]: Systematically checks candidate divisors \(D=pq+p+q\) via modular conditions on \(M+c\), replacing guesswork with explicit tests.
+- Token 24904 [verification]: Confirms the floor simplification \(g(c)=\lfloor F\cdot\text{prod}/D\rfloor/F\) by bounding the \(c/M\) perturbation term.
+- Token 28258 [breakthrough]: Pins down optimal choices \(D=47\) (prod \(=30\)) for \(c_1\) and \(D=167\) (prod \(=110\)) for \(c_2\).
+- Token 28673 [verification]: Executes exact big-integer computation of \(a_1,a_2\), reduces \((a_1+a_2)/F\), and computes \((p+q)\bmod 99991\).
+- Token 30069 [verification]: Late consistency check that alternative non-\(N\)-including constructions do not beat the obtained ratios for this instance.
+- Token 37772 [final answer]: Commits to \(\boxed{18029}\), which is correct.

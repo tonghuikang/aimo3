@@ -1,0 +1,27 @@
+# Problem: pe-552
+
+## Correct answer
+- `S(300000) = 326227335`.
+
+## Correct approach
+- Let `p_i` be the `i`-th prime and `A_n` satisfy `A_n ≡ i (mod p_i)` for `1 <= i <= n`.
+- For a prime `q = p_k`, divisibility `q | A_n` is only possible for `n < k` (once `q` is in the modulus set, `A_n ≡ k (mod q) != 0`).
+- Use incremental CRT:
+  - `A_n = A_{n-1} + M_{n-1} * t_n`, where `M_{n-1} = Π_{i=1}^{n-1} p_i` and
+  - `t_n ≡ (n - A_{n-1}) * (M_{n-1}^{-1} mod p_n) (mod p_n)`.
+- Avoid huge integers by tracking only residues for primes up to the bound:
+  - `r_j = A_{n-1} mod p_j`
+  - `m_j = M_{n-1} mod p_j`
+  - update for future primes `j > n-1`:
+    - `r_j = (r_j + m_j * t_n) mod p_j`
+    - `m_j = (m_j * p_n) mod p_j`
+  - if `r_j == 0` at any step before index `j+1`, then `p_j` contributes to `S`.
+- This is `O(pi(N)^2)` with `N=300000`, and reproduces the sample `S(50)=69`.
+
+## Wrong approaches and why they fail
+- **Forgetting to update the running product `M` in the recurrence**:
+  - Using stale `M` computes wrong `t_n` and wrong residues (even early terms no longer match sample behavior).
+- **Assuming a q-independent closed form after factoring `M_n`**:
+  - Expressions using `inv(p_i)` modulo `q` still depend on `q`; treating them as global constants gives invalid divisibility criteria.
+- **Dropping a prime from residue tracking immediately after first hit**:
+  - Later `t_n` calculations need correct `A_{n-1} mod p_n` for each upcoming modulus; removing state early corrupts subsequent updates.

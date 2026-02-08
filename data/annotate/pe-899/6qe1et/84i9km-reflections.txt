@@ -1,0 +1,14 @@
+## Answer: correct (97849)
+
+## Key moments
+- Token 70 [insight]: Correctly formalizes the move constraints (split equals smaller pile, no pile can be emptied), which sets up the later state-transition model.
+- Token 969-4235 [wasted]: Long speculative discussion (Wythoff/Euclid comparisons and informal pattern guessing) before switching to direct computation.
+- Token 4235 [breakthrough]: Starts brute-force DP enumeration of P/N states, which gives reliable structure to analyze.
+- Token 5239 [insight]: Notices block-like periodic behavior in the enumerated P-positions (e.g., repeated residue classes for fixed ranges of `a`).
+- Token 12575 [questionable statement]: Proposes a modulus scale that is too large for the observed block (treating the period like `2^{k+2}` behavior).
+- Token 13359 [mistake]: Applies that wrong modulus to `[8,15]` and gets contradictions with observed values (`31,63,95`), showing the hypothesis is inconsistent.
+- Token 13564 [breakthrough]: Corrects the pattern to `b ≡ 2^{k+1}-1 (mod 2^{k+1})` for `a in [2^k, 2^{k+1}-1]`, giving the right global characterization.
+- Token 14854 [verification]: Runs `test_rule(200)` to check rule-vs-DP agreement; mismatch counts are zero.
+- Token 19619 [verification]: Confirms the counting formula reproduces the given checkpoint `L(49)=221`.
+- Token 20555-21042 [wasted]: Repeats several already-settled sanity checks after obtaining the final value, without changing the method or result.
+- Token 21399 [final answer]: Commits to `\boxed{97849}` (correct).

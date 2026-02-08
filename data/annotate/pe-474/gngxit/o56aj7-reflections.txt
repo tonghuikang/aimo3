@@ -1,0 +1,25 @@
+## Answer: wrong (5824404569480022)
+
+## Key moments
+- Token 182 [insight]: Correctly restates the task as counting divisor residues modulo `10^5`.
+- Token 560 [breakthrough]: Uses CRT split into `mod 32` and `mod 3125`, setting up the right arithmetic structure.
+- Token 1888 [insight]: Analyzes 2-adic behavior of residue `24 (mod 32)` and narrows feasible `v_2` patterns.
+- Token 2399 [breakthrough]: Fixes `v_5=0` and (with the prior step) locks the divisor shape to the intended valuation case.
+- Token 3201 [insight]: Computes the `8^{-1}` transformation in the `mod 3125` component to isolate the odd/unit part.
+- Token 3447 [breakthrough]: Consolidates unit-part congruence constraints into a single target system for the remaining primes.
+- Token 9975 [missed opportunity]: Moves into a much heavier character/transform pipeline instead of committing early to a simpler validated count route.
+- Token 15082 [insight]: Derives the reduced geometric-sum form (`order` + remainder) for character contributions.
+- Token 25054 [breakthrough]: Chooses finite-field CRT reconstruction across several prime moduli as the practical compute strategy.
+- Token 35010 [insight]: Defines the per-character `λ`-array accumulation plan that drives the implementation.
+- Token 44491 [breakthrough]: Implements the full `compute_answer_modQ` pipeline.
+- Token 50002 [wasted]: Spends a long span on runtime/engineering concerns before stabilizing correctness checks.
+- Token 54996 [insight]: Introduces the vectorized NumPy implementation used to generate modular residues.
+- Token 59968 [questionable statement]: Questions whether missing `v_2/v_5` constraints explain discrepancies, even though those constraints were already encoded earlier.
+- Token 64971 [verification]: Performs an invariant-style check using residue-sum vs total-divisors consistency.
+- Token 67317 [questionable statement]: Treats intermediate modulus outputs as “correct” before global congruence consistency is established.
+- Token 67529 [verification]: Correctly checks CRT reconstruction against `Q4` and finds a contradiction.
+- Token 67874 [missed opportunity]: After detecting inconsistency, does not reset to a clean trusted computation path (e.g., recompute all chosen moduli via one validated method).
+- Token 68884 [mistake]: Proceeds with ad-hoc residue selection (“likely correct” subset) despite unresolved contradictions across moduli.
+- Token 70333 [questionable statement]: Uses partial slow/fast agreement as a basis to trust a subset of residues.
+- Token 70903 [mistake]: Declares `Q1,Q2,Q3` CRT result trustworthy and commits to that branch without resolving conflicting modulus evidence.
+- Token 71157 [final answer]: Outputs `\boxed{5824404569480022}`, which is not the correct value for this problem.

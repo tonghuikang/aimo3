@@ -1,0 +1,42 @@
+Problem: Supernatural Pythagorean Triangles
+
+Correct answer: 1050923942 (mod 1234567891)
+
+Correct approach:
+1. Classify all supernatural triples into two families.
+- Family A (consecutive legs): `(n, n+1, c)` with `c^2 = 2n^2 + 2n + 1`.
+  Using `x=2n+1, y=c`, this becomes Pell `x^2 - 2y^2 = -1`.
+  Perimeter is `P_A = x + y`.
+- Family B (leg and hypotenuse consecutive):
+  `((k^2-1)/2, k, (k^2+1)/2)` for odd `k >= 3`.
+  Perimeter is `P_B = k(k+1)`.
+
+2. Handle overlap correctly.
+- The only triangle in both families is `(3,4,5)` with perimeter `12`.
+- Therefore:
+  `S(N) = sum_A + sum_B - 12` (for `N >= 12`).
+
+3. Compute Family A efficiently.
+- Pell-family perimeters satisfy recurrence `p_{i+2} = 6p_{i+1} - p_i` with `p_0=2, p_1=12`.
+- Sum up to the largest valid index via 3x3 matrix exponentiation modulo `1234567891`.
+- For `N = 10^{10^{10}}`, the last valid Pell index is `K_A = 13062480693` (from high-precision log bound check).
+
+4. Compute Family B in closed form.
+- Let `M = sqrt(N) = 10^{5*10^9}`.
+- Largest odd `k` with `k(k+1) <= N` is `k_max = M-1`.
+- `sum_B = sum_{odd k=3..M-1} k(k+1) = (2M^3 + 3M^2 - 2M - 24)/12`.
+- Evaluate modulo `1234567891` using modular inverses and fast exponentiation for `10^{5*10^9} mod p`.
+
+5. Final combination.
+- `S(N) mod p = (sum_A + sum_B - 12) mod p = 1050923942`.
+
+Wrong approaches and why they fail:
+1. Treating Family A and Family B as disjoint.
+- Wrong formula: `S = sum_A + sum_B`.
+- This double-counts `(3,4,5)` and gives `1050923954`, which is too large by `12`.
+
+2. Forgetting degenerate exclusion in Family B (`k=1`).
+- `k=1` corresponds to non-triangle (`a=0`) and must be excluded (or corrected by subtracting its contribution in equivalent summations).
+
+3. Off-by-one Pell cutoff from unchecked log rounding.
+- `K_A` must be validated at the boundary (`p_{K_A} <= N < p_{K_A+1}`), otherwise matrix-summed Family A can be shifted by one term.

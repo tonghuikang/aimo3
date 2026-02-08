@@ -1,0 +1,26 @@
+## Correct answer: 1165
+
+## Problem summary
+For `n >= 6`, `f(n)` is the smallest integer having three distinct divisors that sum to `n`.  
+With `M = 3^{2025!}`, define
+`g(c) = floor(2025! * f(M+c) / M) / 2025!`.
+Need `(p+q) mod 99991` where
+`g(0) + g(44636594) = p/q` in lowest terms.
+
+## Correct approach
+1. Rewrite `f(n)` as minimizing `lcm(a,b,c)` over distinct positive integers `a,b,c` with `a+b+c=n`.
+2. For `n = M`, the optimal ratio is `f(M)/M = 2/3`, so `g(0)=2/3`.
+3. For `n = M+44636594`, reduce feasibility to divisor-conditioned ratio candidates and use divisors of `c+1 = 44636595 = 3*5*103*167*173`.
+4. The best feasible branch is `110/167`, giving `g(44636594)=110/167`.
+5. Then
+`g(0)+g(44636594) = 2/3 + 110/167 = 664/501`.
+So `p+q = 664+501 = 1165`, and modulo `99991` is still `1165`.
+
+## Wrong approaches seen in traces
+1. **Wrong answer 23**: treats a `6/11`-type formula as universally optimal for `M+c`, so it sets the second term to `6/11` and gets `2/3 + 6/11 = 40/33`, hence `p+q=23`.
+2. **Wrong answer 73**: similarly locks onto the same wrong `6/11` branch for `M+44636594`, yielding `40/33` and `p+q=73`.
+
+## Why those wrong approaches fail
+1. They do not enforce the actual divisibility feasibility for the chosen ratio branch against `M+44636594`.
+2. They skip the decisive divisor search that exposes the `167` branch with ratio `110/167`.
+3. Their verification only checks floor arithmetic after assuming the wrong `f(M+c)/M` ratio.

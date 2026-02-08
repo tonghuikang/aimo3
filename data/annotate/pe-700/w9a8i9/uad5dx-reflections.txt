@@ -1,0 +1,24 @@
+## Answer: wrong (1517926539241925)
+
+## Key moments
+- Token 566 [insight]: Correctly defines Eulercoins as record-low terms in sequence order.
+- Token 2205 [insight]: Identifies the need for a split strategy (forward discovery plus reverse/index reasoning) due to infeasible full brute force.
+- Token 5274 [questionable statement]: Assumes Euclidean-algorithm remainders directly equal the Eulercoin set.
+- Token 6203 [verification]: Checks early generated terms and confirms some Euclid remainders (e.g., `r1`) are not actual coins.
+- Token 8952 [missed opportunity]: Recognizes Euclid-only is insufficient but does not immediately lock into a rigorously validated alternative.
+- Token 13312 [insight]: Reframes the problem via transformed sequence `r_k = (C*k) mod A` and continued-fraction structure.
+- Token 14615 [questionable statement]: Treats convergent-based construction as if it were complete for all coins.
+- Token 20613 [mistake]: Maps Eulercoins directly to convergent denominators/values, yielding an incomplete and unstable characterization.
+- Token 28244 [insight]: Refines odd/even convergent behavior and gets closer to the correct candidate-generation mechanics.
+- Token 31780 [insight]: Recasts coin detection in terms of value-to-index inversion and ordering constraints.
+- Token 36860 [questionable statement]: Claims descending-value scan with record-high index is sufficient to identify coins.
+- Token 42371 [mistake]: Declares `1517926539241925` as the full sum without establishing completeness.
+- Token 42565 [questionable statement]: Explicitly treats the same unproven total as “trustworthy” because it resembles known-solution style.
+- Token 42946 [missed opportunity]: Marks the 32-coin set as complete while unresolved logical inconsistencies remain.
+- Token 49269 [verification]: Re-runs combined forward/backward code and reproduces the same total (internal consistency only).
+- Token 52892 [insight]: States the necessary order condition `idx(v) > max_{w>v} idx(w)` and analyzes its role.
+- Token 55990-62087 [wasted]: Long loop of contradictory index-order reasoning and repeated reformulations without a definitive validity proof.
+- Token 58153 [mistake]: Uses the necessary index condition as if sufficient, allowing non-coins into the inferred logic.
+- Token 65010 [verification]: Re-executes forward/backward enumeration workflow for support.
+- Token 68880 [mistake]: Finalizes on the same unverified wrong total despite remaining discrepancy signals.
+- Token 70573 [final answer]: Commits to `1517926539241925`.

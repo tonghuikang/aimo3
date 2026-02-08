@@ -1,0 +1,20 @@
+## Answer: correct (3679796)
+
+## Key moments
+- Token 290 [insight]: Identifies de Bruijn indices as the right representation to quotient out alpha-equivalence while preserving binding structure.
+- Token 869 [questionable statement]: Treats abstraction overhead as `4 + |M|`, which undercounts the abstraction syntax symbols.
+- Token 1999 [mistake]: Uses the wrong abstraction shift (`s-4`) in the recurrence, propagating the size-model error into the DP formula.
+- Token 2569-3042 [breakthrough]: Re-checks symbol counting against `(lambda x.x)` / `Lambda(6)` and corrects abstraction cost to `5 + |M|`.
+- Token 3620 [verification]: Validates the corrected recurrence against given small checkpoints before scaling.
+- Token 4786 [missed opportunity]: Moves quickly toward advanced convolution machinery before first testing whether a bounded direct DP would already be sufficient.
+- Token 14269-19308 [wasted]: Extended algorithm-design loop (FFT/online-convolution variants) without producing new validated counts.
+- Token 20101 [missed opportunity]: Continues heavy modular-convolution design after identifying CRT limitations instead of pivoting earlier to a simpler baseline validation path.
+- Token 24794-30502 [wasted]: Large implementation effort on custom FFT + Newton-series infrastructure before any end-to-end numeric confirmation.
+- Token 31980 [questionable statement]: Builds `diff` as `1 - sqrt[i]` for every coefficient, implicitly treating the constant polynomial `1` as if it had `1` in all degrees.
+- Token 35675 [verification]: Starts focused instrumentation/debugging of the implementation behavior on very small `N` to isolate the defect.
+- Token 45048 [mistake]: Obtains `Lambda(6)=5`, confirming the current implementation is incorrect.
+- Token 47539 [insight]: Uses explicit series expansion (`sqrt(1-4x^8)`) to reason about the expected coefficient pattern in the numerator.
+- Token 49186 [breakthrough]: Pinpoints the exact bug: only degree 0 should use `1 - sqrt[0]`; higher degrees should use `-sqrt[i]`.
+- Token 49332 [verification]: Applies the fix and re-runs checks, recovering `Lambda(6)=1` and then `Lambda(2000)=3679796`.
+- Token 49975 [verification]: Cross-validates fast and naive implementations on multiple `N` values (including given checkpoints).
+- Token 51543 [final answer]: Commits `\boxed{3679796}`; final answer is correct.
