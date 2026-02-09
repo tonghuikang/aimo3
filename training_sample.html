@@ -428,25 +428,40 @@
             try {
                 const logpath = sample.logpath || 'default';
                 const basePath = `training/sample/${logpath}/${sample.problem_id}/${sample.state_hash}/${sample.action_hash}/${sample.span}/${sample.trace_id}`;
-                const trainingPath = `data/training/${sample.problem_id}/${sample.state_hash}/${sample.action_hash}/${sample.span}/${sample.trace_id}.jsonl`;
+                const alternatePath = `data/alternate/${sample.problem_id}/${sample.state_hash}/${sample.action_hash}.jsonl`;
 
-                const [initialResp, tunedResp, trainingResp] = await Promise.all([
+                const [initialResp, tunedResp, alternateResp] = await Promise.all([
                     fetch(`${basePath}/initial.jsonl`),
                     fetch(`${basePath}/tuned.jsonl`),
-                    fetch(trainingPath)
+                    fetch(alternatePath)
                 ]);
 
                 const initialData = JSON.parse((await initialResp.text()).trim());
                 const tunedData = JSON.parse((await tunedResp.text()).trim());
-                const trainingData = JSON.parse((await trainingResp.text()).trim());
+
+                // Parse alternate format: each line is {"spanStart": [{traceId: [tokens]}, ...]}
+                const spanStart = sample.span.split('-')[0];
+                const alternateText = await alternateResp.text();
+                let completionTokens = null;
+                for (const line of alternateText.trim().split('\n')) {
+                    const obj = JSON.parse(line);
+                    if (obj[spanStart]) {
+                        for (const entry of obj[spanStart]) {
+                            if (entry[sample.trace_id]) {
+                                completionTokens = entry[sample.trace_id];
+                                break;
+                            }
+                        }
+                        if (completionTokens) break;
+                    }
+                }
+                if (!completionTokens) throw new Error(`Trace ${sample.trace_id} not found in alternate data`);
 
                 const initialLogprobs = initialData.logprobs;
                 const tunedLogprobs = tunedData.logprobs;
-                const promptTokens = trainingData.prompt_tokens;
-                const completionTokens = trainingData.tokens;
+                const promptLen = initialLogprobs.length - completionTokens.length + 1;
 
                 const render = () => {
-                    const promptLen = promptTokens.length;
                     const tokenData = [];
                     let html = '';
 
