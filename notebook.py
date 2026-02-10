@@ -1,20 +1,12 @@
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
-# References
-# - https://www.kaggle.com/code/huikang/arc-agi-2-code-approach
-# - https://www.kaggle.com/code/huikang/r1-distill-qwen-tir
-#
-# ```
-# uv run python3 kaggle.py
-# ```
-
-# %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Configuration
 
 # %% [code] {"jupyter":{"outputs_hidden":false}}
 run_all_questions_on_kaggle = False  # ignored for submissions
-replication_count_for_commit_runs = 2
+replication_count_for_commit_runs = 50
+kaggle_model_dir = "/kaggle/input/gpt-oss-120b/transformers/default/1"
 
-# %% [code] {"jupyter":{"outputs_hidden":false}}
+# %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2026-01-13T01:08:08.224517Z","iopub.execute_input":"2026-01-13T01:08:08.225269Z","iopub.status.idle":"2026-01-13T01:08:08.239209Z","shell.execute_reply.started":"2026-01-13T01:08:08.225236Z","shell.execute_reply":"2026-01-13T01:08:08.238251Z"}}
 import os
 import time
 from collections.abc import Callable
@@ -25,7 +17,7 @@ secrets = UserSecretsClient()
 
 
 start_time = time.time()
-final_cutoff_time = start_time + (4 * 60 + 50) * 60  # 5 hours from start time
+final_cutoff_time = start_time + (8 * 60 + 58) * 60
 
 
 def is_on_kaggle_commit() -> bool:
@@ -44,19 +36,34 @@ def is_on_kaggle() -> bool:
     return bool(os.getenv("KAGGLE_KERNEL_RUN_TYPE"))
 
 
+if not is_on_kaggle_commit():
+    # safeguard
+    final_cutoff_time = start_time + (4 * 60 + 58) * 60  # < 5 hours from start time
+
+
 INFERENCE_URL = "NOT_AVAILABLE"
 INFERENCE_API_KEY = "sk-local"
 MODEL_NAME = "vllm-model"
 
-model_provider = "fireworks"  # modal, fireworks, tinker?
+# model_provider = "modal"
+# model_provider = "fireworks"  # please start ./relay.sh
+# model_provider = "tinker"  # please start ./relay.sh
+model_provider = "modal-merged"
 
 if not is_on_kaggle():
     if model_provider == "modal":
         INFERENCE_URL = secrets.get_secret("MODAL_INFERENCE_URL")
+    elif model_provider == "modal-merged":
+        INFERENCE_URL = secrets.get_secret("MODAL_INFERENCE_URL_MERGED")
     elif model_provider == "fireworks":
         INFERENCE_URL = "https://api.fireworks.ai/inference/v1"
         INFERENCE_API_KEY = secrets.get_secret("FIREWORKS_API_KEY")
         MODEL_NAME = "accounts/fireworks/models/gpt-oss-120b"
+    elif model_provider == "tinker":
+        # Relay must be started separately with ./relay.sh
+        INFERENCE_URL = "http://localhost:8100/v1"
+        INFERENCE_API_KEY = "sk-relay"  # Not used by relay
+        MODEL_NAME = secrets.get_secret("TINKER_MODEL_NAME")
     else:
         raise ValueError(f"Unknown model_provider: {model_provider}")
 
@@ -65,11 +72,14 @@ os.environ["PYDEVD_DISABLE_FILE_VALIDATION"] = "1"
 
 # %% [code] {"_kg_hide-output":true,"jupyter":{"outputs_hidden":false}}
 # print settings
-print(f"{is_on_kaggle()=}")
-print(f"{is_on_kaggle_interactive()=}")
-print(f"{is_on_kaggle_commit()=}")
-print(f"{run_all_questions_on_kaggle=}")
-print(f"{INFERENCE_URL[::-1][:13][::-1]=}")
+if __name__ == "__main__":
+    print(f"{is_on_kaggle()=}")
+    print(f"{is_on_kaggle_interactive()=}")
+    print(f"{is_on_kaggle_commit()=}")
+    print(f"{model_provider=}")
+    print(f"{run_all_questions_on_kaggle=}")
+    print(f"{INFERENCE_URL[::-1][:20][::-1]=}")
+    print(f"{MODEL_NAME=}")
 
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Setup
@@ -89,7 +99,6 @@ if is_on_kaggle():
             "scikit-learn",
         ]
     )
-
 
 # %% [code] {"_kg_hide-output":true,"jupyter":{"outputs_hidden":false}}
 import os
@@ -173,7 +182,7 @@ def cache_model(
 
 if is_on_kaggle():
     cache_model(
-        "/kaggle/input/gpt-oss-120b/transformers/default/1",
+        kaggle_model_dir,
         num_workers=16,
         chunk_mb=1024,
     )
@@ -184,7 +193,7 @@ import numpy as np
 
 
 cutoff_times = [
-    int(x) for x in np.linspace(final_cutoff_time, start_time + 30 * 60, 50 + 1)
+    int(x) for x in np.linspace(final_cutoff_time, start_time + 60 * 60, 50 + 1)
 ]  # generous allowance at the start
 cutoff_times.pop()
 
@@ -248,9 +257,11 @@ if is_on_kaggle():
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Serve vLLM
 
-# %% [code] {"execution":{"iopub.status.busy":"2025-11-25T11:14:04.106282Z","iopub.execute_input":"2025-11-25T11:14:04.106474Z","iopub.status.idle":"2025-11-25T11:14:04.121482Z","shell.execute_reply.started":"2025-11-25T11:14:04.106461Z","shell.execute_reply":"2025-11-25T11:14:04.12108Z"},"jupyter":{"outputs_hidden":false}}
+# %% [code] {"execution":{"iopub.status.busy":"2026-01-13T01:08:26.318338Z","iopub.execute_input":"2026-01-13T01:08:26.318631Z","iopub.status.idle":"2026-01-13T01:08:26.325822Z","shell.execute_reply.started":"2026-01-13T01:08:26.318611Z","shell.execute_reply":"2026-01-13T01:08:26.325108Z"},"jupyter":{"outputs_hidden":false},"_kg_hide-output":true}
+import subprocess
+
 if is_on_kaggle():
-    subprocess.run(["ls", "/kaggle/usr/lib/pip_install_aimo3_1/tiktoken_encodings"])
+    subprocess.run(["ls", "/kaggle/usr/lib/pip-install-aimo3-2/tiktoken_encodings"])
 
 # %% [code] {"execution":{"iopub.status.busy":"2025-11-25T11:23:00.401889Z","iopub.execute_input":"2025-11-25T11:23:00.402121Z","iopub.status.idle":"2025-11-25T11:23:00.405096Z","shell.execute_reply.started":"2025-11-25T11:23:00.402105Z","shell.execute_reply":"2025-11-25T11:23:00.404686Z"},"jupyter":{"outputs_hidden":false}}
 with open("a-vllm.log", "w") as f:
@@ -267,12 +278,11 @@ def start_vllm_server() -> subprocess.Popen[bytes]:
     """Start vLLM server in the background"""
     os.environ["TRANSFORMERS_NO_TF"] = "1"
     os.environ["TRANSFORMERS_NO_FLAX"] = "1"
-    os.environ["VLLM_ATTENTION_BACKEND"] = "TRITON_ATTN"
     os.environ["TRITON_PTXAS_PATH"] = "/usr/local/cuda/bin/ptxas"
     os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-    # https://docs.vllm.ai/projects/recipes/en/latest/OpenAI/GPT-OSS.html#troubleshooting
+    # # https://docs.vllm.ai/projects/recipes/en/latest/OpenAI/GPT-OSS.html#troubleshooting
     os.environ["TIKTOKEN_ENCODINGS_BASE"] = (
-        "/kaggle/usr/lib/pip_install_aimo3_1/tiktoken_encodings"
+        "/kaggle/usr/lib/pip-install-aimo3-2/tiktoken_encodings"
     )
 
     command: list[str] = [
@@ -280,7 +290,7 @@ def start_vllm_server() -> subprocess.Popen[bytes]:
         "-m",
         "vllm.entrypoints.openai.api_server",
         "--model",
-        "/kaggle/input/gpt-oss-120b/transformers/default/1",
+        kaggle_model_dir,
         "--served-model-name",
         "vllm-model",
         "--tensor-parallel-size",
@@ -288,13 +298,16 @@ def start_vllm_server() -> subprocess.Popen[bytes]:
         "--max-num-seqs",
         f"{num_generations}",
         "--gpu-memory-utilization",
-        "0.96",  # any higher may not have enough for graph capture
+        "0.94",  # any higher may not have enough for graph capture
         "--host",
         "0.0.0.0",
         "--port",
         "8000",
         "--dtype",
         "auto",
+        "--async-scheduling",
+        "--attention-backend",
+        "FLASH_ATTN",
         "--max-model-len",
         f"{max_model_len}",
     ]
@@ -332,8 +345,7 @@ def await_client(printing: bool = False):
     else:
         raise
 
-
-# %% [code]
+# %% [code] {"jupyter":{"outputs_hidden":false}}
 import os
 from openai import OpenAI, Stream
 from openai.types import Completion
@@ -342,10 +354,24 @@ from openai.types import Completion
 if is_on_kaggle():
     INFERENCE_URL = "http://127.0.0.1:8000/v1"
 
+# Configure timeout based on provider (Tinker can take longer)
+client_timeout = 1800 if model_provider == "tinker" else None  # 30 minutes for Tinker
+
 openai_client: OpenAI = OpenAI(
     base_url=INFERENCE_URL,
     api_key=INFERENCE_API_KEY,
+    timeout=client_timeout,
 )
+
+# Alternate client (fireworks) for >32k tokens - only needed in tinker mode
+alternate_client: OpenAI = openai_client
+ALTERNATE_MODEL_NAME = ""
+if model_provider == "tinker" and not is_on_kaggle():
+    alternate_client = OpenAI(
+        base_url="https://api.fireworks.ai/inference/v1",
+        api_key=secrets.get_secret("FIREWORKS_API_KEY"),
+    )
+    ALTERNATE_MODEL_NAME = "accounts/fireworks/models/gpt-oss-120b"
 
 if is_on_kaggle():
     # inference server needs to start within 15 minutes
@@ -355,15 +381,17 @@ if is_on_kaggle():
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Code execution
 
-
 # %% [code] {"jupyter":{"outputs_hidden":false}}
+import queue
+
+
 class LocalJupyterSession:
     """Stateful helper that proxies execution through a local Jupyter kernel.
     Extracted from gpt_oss.tools.python_docker.docker_tool.
     Thread-safe: creates its own ZMQ context for use within a single thread.
     """
 
-    def __init__(self, timeout: float = 10.0) -> None:
+    def __init__(self, timeout: float = 120.0) -> None:
         import zmq
         from jupyter_client.blocking.client import BlockingKernelClient
         from jupyter_client.manager import KernelManager
@@ -372,7 +400,9 @@ class LocalJupyterSession:
         # Create a dedicated ZMQ context for this session (thread-safe)
         self._zmq_context = zmq.Context()
         self._km = KernelManager(context=self._zmq_context)
-        self._km.start_kernel()
+        # Disable IPython history to avoid SQLite "database is locked" errors
+        # when multiple kernels run concurrently
+        self._km.start_kernel(extra_arguments=["--HistoryManager.enabled=False"])
         self._client: BlockingKernelClient = self._km.blocking_client()
         self._client.start_channels()
         self._client.wait_for_ready(timeout=None)
@@ -383,9 +413,24 @@ class LocalJupyterSession:
         self._client.execute("%xmode Plain", store_history=False)
         # Track msg_id of a timed-out execution that may still be running
         self._pending_msg_id: str | None = None
+        # Track if kernel may be stuck in uninterruptible C code
+        self._kernel_may_be_stuck: bool = False
 
     def _drain_pending_output(self) -> str:
-        """Drain output from a previous timed-out execution. Interrupts if still running."""
+        """Drain output from a previous timed-out execution. Interrupts if still running.
+
+        If the kernel doesn't respond to interrupt (e.g., stuck in C code like BLAS),
+        restarts the kernel to ensure the next execution can proceed.
+        """
+        # Check if kernel is stuck from a previous immediate interrupt that didn't respond
+        # This flag is ONLY set when we sent an interrupt and waited 2s without getting
+        # a KeyboardInterrupt or idle status - meaning the kernel is truly stuck in C code
+        if self._kernel_may_be_stuck:
+            self._kernel_may_be_stuck = False
+            # Kernel already didn't respond to interrupt - restart it
+            self._restart_kernel()
+            return "[Previous execution killed - kernel restarted due to unresponsive C code]\n"
+
         if self._pending_msg_id is None:
             return ""
 
@@ -404,62 +449,79 @@ class LocalJupyterSession:
             except queue.Empty:
                 break
 
-            if msg.get("parent_header", {}).get("msg_id") != msg_id:
+            parent_header = msg["parent_header"]
+            if (
+                not parent_header
+                or "msg_id" not in parent_header
+                or parent_header["msg_id"] != msg_id
+            ):
                 continue
 
-            msg_type = msg.get("msg_type")
-            content = msg.get("content", {})
+            msg_type = msg["msg_type"]
+            content = msg["content"]
 
             if msg_type == "stream":
-                text = content.get("text", "")
-                if content.get("name") == "stdout":
+                text = content["text"]
+                if content["name"] == "stdout":
                     stdout_parts.append(text)
                 else:
                     stderr_parts.append(text)
             elif msg_type == "error":
-                traceback_data = content.get("traceback")
-                if traceback_data:
-                    stderr_parts.append("\n".join(traceback_data))
+                traceback_data = content["traceback"]
+                stderr_parts.append("\n".join(traceback_data))
             elif msg_type in {"execute_result", "display_data"}:
-                data = content.get("data", {})
-                text = data.get("text/plain")
-                if text:
+                data = content["data"]
+                if "text/plain" in data:
+                    text = data["text/plain"]
                     stdout_parts.append(text if text.endswith("\n") else f"{text}\n")
-            elif msg_type == "status" and content.get("execution_state") == "idle":
+            elif msg_type == "status" and content["execution_state"] == "idle":
                 execution_finished = True
                 break
 
-        # If still running, interrupt it
+        # If still running, try to interrupt it
         if not execution_finished:
             self._km.interrupt_kernel()
-            # Collect interrupt traceback
+            # Wait for interrupt to take effect (with timeout)
+            interrupt_timeout = 2.0  # seconds to wait for interrupt response
             while True:
                 try:
-                    msg = client.get_iopub_msg(timeout=1.0)
+                    msg = client.get_iopub_msg(timeout=interrupt_timeout)
                 except queue.Empty:
-                    break
-                if msg.get("parent_header", {}).get("msg_id") != msg_id:
+                    # Kernel didn't respond to interrupt - it's stuck in C code
+                    # Restart kernel to ensure next execution can proceed
+                    self._restart_kernel()
+                    return "[Previous execution killed - kernel restarted due to unresponsive C code]\n"
+                parent_header = msg["parent_header"]
+                if (
+                    not parent_header
+                    or "msg_id" not in parent_header
+                    or parent_header["msg_id"] != msg_id
+                ):
                     continue
-                msg_type = msg.get("msg_type")
-                content = msg.get("content", {})
+                msg_type = msg["msg_type"]
+                content = msg["content"]
                 if msg_type == "stream":
-                    text = content.get("text", "")
-                    if content.get("name") == "stdout":
+                    text = content["text"]
+                    if content["name"] == "stdout":
                         stdout_parts.append(text)
                     else:
                         stderr_parts.append(text)
                 elif msg_type == "error":
-                    traceback_data = content.get("traceback")
-                    if traceback_data:
-                        stderr_parts.append("\n".join(traceback_data))
-                elif msg_type == "status" and content.get("execution_state") == "idle":
+                    traceback_data = content["traceback"]
+                    stderr_parts.append("\n".join(traceback_data))
+                elif msg_type == "status" and content["execution_state"] == "idle":
                     break
 
         # Drain shell channel
         while True:
             try:
                 reply = client.get_shell_msg(timeout=0.1)
-                if reply.get("parent_header", {}).get("msg_id") == msg_id:
+                parent_header = reply["parent_header"]
+                if (
+                    parent_header
+                    and "msg_id" in parent_header
+                    and parent_header["msg_id"] == msg_id
+                ):
                     break
             except queue.Empty:
                 break
@@ -481,6 +543,33 @@ class LocalJupyterSession:
             )
             return f"[Previous execution output]\n{output.rstrip()}\n{end_marker}\n"
         return ""
+
+    def _restart_kernel(self) -> None:
+        """Restart the kernel, preserving the session but losing state."""
+        import contextlib
+
+        from jupyter_client.blocking.client import BlockingKernelClient
+
+        print("[LocalJupyterSession] Restarting kernel due to unresponsive state")
+
+        # Clear stuck flag
+        self._kernel_may_be_stuck = False
+        self._pending_msg_id = None
+
+        # Stop current client channels
+        with contextlib.suppress(Exception):
+            self._client.stop_channels()
+
+        # Restart the kernel (kills current process, starts new one)
+        self._km.restart_kernel(now=True)
+
+        # Create new client and reconnect
+        self._client: BlockingKernelClient = self._km.blocking_client()
+        self._client.start_channels()
+        self._client.wait_for_ready(timeout=None)
+        # Re-apply color/traceback settings
+        self._client.execute("%colors NoColor", store_history=False)
+        self._client.execute("%xmode Plain", store_history=False)
 
     def execute(self, code: str, continue_executing_on_timeout: bool = False) -> str:
         """Execute code in the kernel, returning combined stdout/stderr output."""
@@ -505,8 +594,40 @@ class LocalJupyterSession:
                     self._pending_msg_id = msg_id
                     error_msg = "[TIMEOUT] Execution still running. Will drain remaining output on next call."
                 else:
-                    # Immediate interruption
+                    # Immediate interruption - send interrupt and wait for response
                     self._km.interrupt_kernel()
+                    # Wait up to 2 seconds for interrupt to take effect
+                    interrupt_responded = False
+                    interrupt_timeout = 2.0
+                    while True:
+                        try:
+                            int_msg = client.get_iopub_msg(timeout=interrupt_timeout)
+                        except queue.Empty:
+                            # No response - kernel stuck in C code
+                            break
+                        parent_header = int_msg["parent_header"]
+                        if (
+                            not parent_header
+                            or "msg_id" not in parent_header
+                            or parent_header["msg_id"] != msg_id
+                        ):
+                            continue
+                        int_msg_type = int_msg["msg_type"]
+                        int_content = int_msg["content"]
+                        if int_msg_type == "error":
+                            # Got KeyboardInterrupt - kernel responded
+                            traceback_data = int_content["traceback"]
+                            stderr_parts.append("\n".join(traceback_data))
+                            interrupt_responded = True
+                        elif (
+                            int_msg_type == "status"
+                            and int_content["execution_state"] == "idle"
+                        ):
+                            interrupt_responded = True
+                            break
+                    if not interrupt_responded:
+                        # Kernel didn't respond to interrupt - stuck in C code
+                        self._kernel_may_be_stuck = True
                     error_msg = "[TIMEOUT] Execution interrupted."
                 # Return partial output with timeout message
                 partial_output = "".join(stdout_parts)
@@ -519,32 +640,32 @@ class LocalJupyterSession:
                 result = f"{partial_output.rstrip()}\n{error_msg}".lstrip()
                 return f"{pending_output}{result}" if pending_output else result
 
-            if msg.get("parent_header", {}).get("msg_id") != msg_id:
+            parent_header = msg["parent_header"]
+            if (
+                not parent_header
+                or "msg_id" not in parent_header
+                or parent_header["msg_id"] != msg_id
+            ):
                 continue
 
-            msg_type = msg.get("msg_type")
-            content = msg.get("content", {})
+            msg_type = msg["msg_type"]
+            content = msg["content"]
 
             if msg_type == "stream":
-                text = content.get("text", "")
-                if content.get("name") == "stdout":
+                text = content["text"]
+                if content["name"] == "stdout":
                     stdout_parts.append(text)
                 else:
                     stderr_parts.append(text)
             elif msg_type == "error":
-                traceback_data = content.get("traceback")
-                if traceback_data:
-                    stderr_parts.append("\n".join(traceback_data))
-                else:
-                    ename = content.get("ename", "")
-                    evalue = content.get("evalue", "")
-                    stderr_parts.append(f"{ename}: {evalue}".strip())
+                traceback_data = content["traceback"]
+                stderr_parts.append("\n".join(traceback_data))
             elif msg_type in {"execute_result", "display_data"}:
-                data = content.get("data", {})
-                text = data.get("text/plain")
-                if text:
+                data = content["data"]
+                if "text/plain" in data:
+                    text = data["text/plain"]
                     stdout_parts.append(text if text.endswith("\n") else f"{text}\n")
-            elif msg_type == "status" and content.get("execution_state") == "idle":
+            elif msg_type == "status" and content["execution_state"] == "idle":
                 break
 
         # Drain the shell channel to capture final execution status
@@ -557,8 +678,11 @@ class LocalJupyterSession:
                     self._pending_msg_id = msg_id
                     error_msg = "[TIMEOUT] Execution still running. Will drain remaining output on next call."
                 else:
-                    # Immediate interruption
+                    # Immediate interruption - kernel may be stuck in C code
                     self._km.interrupt_kernel()
+                    self._kernel_may_be_stuck = (
+                        True  # Will check and restart on next execute()
+                    )
                     error_msg = "[TIMEOUT] Execution interrupted."
                 partial_output = "".join(stdout_parts)
                 if stderr_parts:
@@ -570,7 +694,12 @@ class LocalJupyterSession:
                 result = f"{partial_output.rstrip()}\n{error_msg}".lstrip()
                 return f"{pending_output}{result}" if pending_output else result
 
-            if reply.get("parent_header", {}).get("msg_id") == msg_id:
+            reply_parent = reply["parent_header"]
+            if (
+                reply_parent
+                and "msg_id" in reply_parent
+                and reply_parent["msg_id"] == msg_id
+            ):
                 break
 
         stdout = "".join(stdout_parts)
@@ -621,7 +750,6 @@ def execute_python_code(session: LocalJupyterSession, script: str) -> str:
     except TimeoutError as exc:
         return f"[ERROR] {exc}"
 
-
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Token processing
 
@@ -641,11 +769,14 @@ from openai_harmony import (
 
 harmony_encoding = load_harmony_encoding(HarmonyEncodingName.HARMONY_GPT_OSS)
 stop_token_ids: list[int] = list(harmony_encoding.stop_tokens_for_assistant_actions())
+START_TOKEN = 200006  # <|start|> token
+ASSISTANT_TOKEN = (
+    173781  # 'assistant' token - look for [START_TOKEN, ASSISTANT_TOKEN] sequence
+)
 
 # Python tool configuration for gpt-oss (extracted from gpt_oss.tools.python_docker.docker_tool)
 # Using dangerously_use_local_jupyter backend - stateful execution via Jupyter kernel
 from openai_harmony import Author, TextContent, ToolNamespaceConfig
-import queue
 
 # Stateful Python tool instruction (matches how the model was trained)
 PYTHON_TOOL_INSTRUCTION = """
@@ -715,7 +846,6 @@ def append_tool_response_token_ids(
     )
     return all_token_ids + tool_tokens
 
-
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-25T11:23:07.544491Z","iopub.execute_input":"2025-11-25T11:23:07.544919Z","iopub.status.idle":"2025-11-25T11:23:07.550311Z","shell.execute_reply.started":"2025-11-25T11:23:07.5449Z","shell.execute_reply":"2025-11-25T11:23:07.549876Z"}}
 from cachetools import cached, TTLCache
 import os
@@ -723,8 +853,8 @@ import time
 import requests
 
 
-@cached(cache=TTLCache(maxsize=50, ttl=20))
-def get_gpu_kv_cache_usage(question_id: str | None) -> float:
+@cached(cache=TTLCache(maxsize=50, ttl=10))
+def get_gpu_kv_cache_perc(question_id: str | None) -> float:
     # question_id is used as cache key
     # Parse vLLM /metrics endpoint using configured base URL
     try:
@@ -738,10 +868,9 @@ def get_gpu_kv_cache_usage(question_id: str | None) -> float:
                 value = float(line.split()[-1])
                 return value * 100  # convert to percentage
     except (requests.RequestException, ValueError, IndexError) as e:
-        print(f"get_gpu_kv_cache_usage: {e}")
+        print(f"get_gpu_kv_cache_perc: {e}")
         pass
     return -1
-
 
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:22:55.289753Z","iopub.execute_input":"2025-11-24T08:22:55.289878Z","iopub.status.idle":"2025-11-24T08:23:00.176618Z","shell.execute_reply.started":"2025-11-24T08:22:55.289861Z","shell.execute_reply":"2025-11-24T08:23:00.176183Z"}}
 if is_on_kaggle_interactive():
@@ -767,7 +896,6 @@ if is_on_kaggle_interactive():
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Text processing
 
-
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:23:00.326586Z","iopub.execute_input":"2025-11-24T08:23:00.326712Z","iopub.status.idle":"2025-11-24T08:23:00.333663Z","shell.execute_reply.started":"2025-11-24T08:23:00.326702Z","shell.execute_reply":"2025-11-24T08:23:00.333234Z"}}
 def extract_boxed_text(text: str) -> str:
     """Extract text inside \\boxed{} from LaTeX-formatted text"""
@@ -785,20 +913,21 @@ def extract_boxed_text(text: str) -> str:
 
 def is_valid_answer_string(text: str) -> bool:
     try:
-        if int(text) == float(text):
-            if 0 <= int(text) <= 99_999:
-                # now AIMO answers no longer need modulo
-                return True
-    except Exception:
+        # Check if the string represents a valid non-negative integer
+        # Using int() directly - it will raise ValueError for non-integers like "3.14"
+        value = int(text)
+        if value >= 0 and (str(value) == text.lstrip("0") or text == "0"):
+            return True
+    except (ValueError, TypeError):
         pass
     return False
-
 
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:23:00.334105Z","iopub.execute_input":"2025-11-24T08:23:00.334228Z","iopub.status.idle":"2025-11-24T08:23:00.341278Z","shell.execute_reply.started":"2025-11-24T08:23:00.334218Z","shell.execute_reply":"2025-11-24T08:23:00.340907Z"}}
 
 completed_question_ids: set[str] = set()
 question_id_to_solver_to_length: dict[str, dict[int, int]] = {"": {}}
 question_id_to_solver_to_answer: dict[str, dict[int, int]] = {"": {}}
+question_id_to_active_solver_indexes: dict[str, set[int]] = {"": set()}
 
 
 def vote_answer(question_id: str, force_answer: bool = False) -> int | None:
@@ -806,7 +935,7 @@ def vote_answer(question_id: str, force_answer: bool = False) -> int | None:
     solver_to_answer = question_id_to_solver_to_answer[question_id]
     answer_counter = Counter(solver_to_answer.values())
     if force_answer and not answer_counter:
-        print(f"Current GPU usage {get_gpu_kv_cache_usage(question_id):.1f}")
+        print(f"Current GPU usage {get_gpu_kv_cache_perc(question_id):.1f}")
         print("force_answer=True but no answer recorded")
         completed_question_ids.add(question_id)
         return 12453
@@ -818,27 +947,27 @@ def vote_answer(question_id: str, force_answer: bool = False) -> int | None:
 
     if force_answer:
         print(f"Votes over {sum(answer_counter.values())} attempts")
-        print(f"Current GPU usage {get_gpu_kv_cache_usage(question_id):.1f}")
+        print(f"Current GPU usage {get_gpu_kv_cache_perc(question_id):.1f}")
         for value, count in sorted_answers:
             print(f"{value:10}   {count:8d}")
+        completed_question_ids.add(question_id)
         return sorted_answers[0][0]
 
-    # Mark as completed as long as there's any answer
-    if sorted_answers:
+    if sorted_answers and sorted_answers[0][1] >= 1:
         completed_question_ids.add(question_id)
 
     return None
 
-
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Generate solution
-
 
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:26:53.213762Z","iopub.execute_input":"2025-11-24T08:26:53.214218Z","iopub.status.idle":"2025-11-24T08:26:53.221603Z","shell.execute_reply.started":"2025-11-24T08:26:53.214205Z","shell.execute_reply":"2025-11-24T08:26:53.221218Z"}}
 def rollout_given_state(
     all_token_ids: list[int],
     jupyter_session: LocalJupyterSession,
     should_stop: Callable[[], bool] = lambda: False,
+    should_hold: Callable[[list[int]], bool] = lambda _: False,
+    should_continue: Callable[[], bool] = lambda: False,
 ) -> list[int]:
     """
     Rollout function that generates tokens and handles tool calls given existing state.
@@ -853,21 +982,45 @@ def rollout_given_state(
     """
     tool_call_count = 0
 
-    for iteration in range(64):
+    for iteration in range(16):
         # Loop until we get an answer
         while True:
             # Loop to handle tool calls within each iteration
             text_response = ""
             breaking = False
 
+            if should_hold(all_token_ids):
+                while True:
+                    if should_stop() or should_continue():
+                        break
+                    time.sleep(1)
+
+            if should_stop():
+                breaking = True
+                break
+
             if len(all_token_ids) > max_model_len - 8192 * 3:
                 return all_token_ids
 
+            client = openai_client
+            model_name = MODEL_NAME
+            max_tokens = max_model_len - len(all_token_ids) - 8192 * 2
+            if model_provider == "tinker":
+                # You cannot infer more than 32k tokens from Tinker
+                if len(all_token_ids) <= 24000:
+                    max_tokens = 32000 - len(all_token_ids)
+                else:
+                    # need to use alternate client for long context
+                    client = alternate_client
+                    model_name = ALTERNATE_MODEL_NAME
+
             # Use streaming with completions API
-            stream: Stream[Completion] = openai_client.completions.create(
-                model=MODEL_NAME,
+            stream: Stream[Completion] = client.completions.create(
+                model=model_name,
                 prompt=all_token_ids,
-                max_tokens=max_model_len - len(all_token_ids) - 8192 * 2,
+                max_tokens=max_tokens,
+                # to test if breaking down completions interrupts anything
+                # max_tokens=min(100, max_tokens),
                 temperature=1.0,
                 stream=True,
                 extra_body=dict(return_token_ids=True),
@@ -876,11 +1029,25 @@ def rollout_given_state(
             # Use StreamableParser to process streaming tokens
             stream_parser = StreamableParser(harmony_encoding, role=Role.ASSISTANT)
 
+            # this is required as we are switching provider mid-completion 
+            last_assistant_start_idx = None
+            for i in range(len(all_token_ids) - 1):
+                if (
+                    all_token_ids[i] == START_TOKEN
+                    and all_token_ids[i + 1] == ASSISTANT_TOKEN
+                ):
+                    last_assistant_start_idx = i + 2
+            if last_assistant_start_idx is not None:
+                for t in all_token_ids[last_assistant_start_idx:]:
+                    stream_parser.process(t)
+
+            continue_stream = False
             for chunk in stream:
                 # Get token IDs from the chunk (vLLM extension)
                 chunk_token_ids = getattr(chunk.choices[0], "token_ids", None)
                 token_id = None
                 if chunk_token_ids:
+                    continue_stream = True
                     # Process tokens through harmony parser for text
                     for token_id in chunk_token_ids:
                         all_token_ids.append(token_id)
@@ -893,16 +1060,22 @@ def rollout_given_state(
                 if chunk_text:
                     text_response += chunk_text
 
-                # Check finish_reason to see if generation completed naturally
-                finish_reason = chunk.choices[0].finish_reason
-                if finish_reason:
+                # We are using completions API, we should check stop tokens
+                if token_id in stop_token_ids:
+                    continue_stream = False
                     break
 
-                if token_id in stop_token_ids:
+                # Check finish_reason to see if generation completed naturally
+                finish_reason = chunk.choices[0].finish_reason
+                if finish_reason == "length":
+                    print("Stream terminated due to length")
+                    # there will be another length check before starting a new stream
+                    continue_stream = True
                     break
 
                 if should_stop():
                     breaking = True
+                    continue_stream = False
                     break
 
                 # Stop early if we found a valid boxed answer
@@ -911,6 +1084,7 @@ def rollout_given_state(
                     and "}" in chunk_text
                     and is_valid_answer_string(extract_boxed_text(text_response))
                 ):
+                    continue_stream = False
                     break
 
             # Append response token IDs to prompt for multi-turn
@@ -955,6 +1129,9 @@ def rollout_given_state(
                         )
                         continue
 
+            if continue_stream:
+                continue
+
             # Exit inner loop
             break
 
@@ -968,7 +1145,7 @@ def rollout_given_state(
         )
         if not is_valid_answer_string(boxed_text):
             print("follow-up - ask boxed answer")
-            user_follow_up = "The answer is expected to be an integer between 0 and 99999 inclusive. Place your final answer in \\boxed{}. Do not guess the answer."
+            user_follow_up = "The answer is expected to be an integer. Place your final answer in \\boxed{}. Do not give up. Do not guess the answer. Do not output placeholder."
         else:
             # answer found, no issues detected, proceed to answering
             break
@@ -988,16 +1165,14 @@ random.seed(42)
 np.random.seed(42)
 """
 
-SYSTEM_CONTENT = (
-    "You will solve the problem and return the final answer in \\boxed{}. "
-    "The answer is expected to be an integer between 0 and 99999, inclusive. "
-    "Do not guess the answer, unless specifically given permission to."
-)
+SYSTEM_CONTENT = "You will solve the problem and return the final answer in \\boxed{}."
 
 
 def rollout(
     all_token_ids: list[int],
     should_stop: Callable[[], bool] = lambda: False,
+    should_hold: Callable[[list[int]], bool] = lambda _: False,
+    should_continue: Callable[[], bool] = lambda: False,
 ) -> list[int]:
     """
     Rollout function that creates session state and generates tokens.
@@ -1017,6 +1192,8 @@ def rollout(
             all_token_ids=all_token_ids,
             jupyter_session=jupyter_session,
             should_stop=should_stop,
+            should_hold=should_hold,
+            should_continue=should_continue,
         )
     except RuntimeError as e:
         print(f"rollout: {e}")
@@ -1025,7 +1202,6 @@ def rollout(
         if jupyter_session is not None:
             print("Cleaning up Jupyter session")
             jupyter_session.close()
-
 
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:26:53.213762Z","iopub.execute_input":"2025-11-24T08:26:53.214218Z","iopub.status.idle":"2025-11-24T08:26:53.221603Z","shell.execute_reply.started":"2025-11-24T08:26:53.214205Z","shell.execute_reply":"2025-11-24T08:26:53.221218Z"}}
 def solve_single(
@@ -1045,17 +1221,53 @@ def solve_single(
         user_content=question_text,
     )
 
+    def get_current_kv_usage() -> int:
+        current_kv_usage = 0
+        for solver_index_for_question, length in question_id_to_solver_to_length[
+            question_id
+        ].items():
+            if (
+                solver_index_for_question
+                in question_id_to_active_solver_indexes[question_id]
+            ):
+                # allocation for sliding window attention, and some buffer
+                current_kv_usage += length + 8192
+        return current_kv_usage
+
     # Define stop condition callback
     def should_stop() -> bool:
         if question_id in completed_question_ids:
             return True
         if time.time() >= cutoff_times[-1]:
             return True
-        solver_index_to_gpu_threshold = [95, 90, 85, 80, 75, 70, 65, 60, 55]
-        solver_index_mod = solver_index % len(solver_index_to_gpu_threshold)
-        gpu_kv_cache_usage = get_gpu_kv_cache_usage(question_id)
-        if gpu_kv_cache_usage > solver_index_to_gpu_threshold[solver_index_mod]:
-            print(f"Terminated Solver {solver_index} at {gpu_kv_cache_usage:.1f}")
+        return False
+
+    def should_hold(all_token_ids_for_attempt: list[int]) -> bool:
+        length = len(all_token_ids_for_attempt)
+        question_id_to_solver_to_length[question_id][solver_index] = length
+        current_kv_usage = get_current_kv_usage()
+        # 4G memory / (32768 page_size * 18 layers) * 16 block_size * 2 KV
+        if current_kv_usage >= 200_000:
+            gpu_kv_cache_perc = get_gpu_kv_cache_perc(question_id)
+            print(
+                f"Holding Solver {solver_index} at {current_kv_usage=} {gpu_kv_cache_perc=:.1f} {length=}"
+            )
+            question_id_to_active_solver_indexes[question_id].discard(solver_index)
+            return True
+        return False
+
+    def should_continue() -> bool:
+        length = question_id_to_solver_to_length[question_id][solver_index]
+        current_kv_usage = get_current_kv_usage()
+        # allocation for sliding window attention, and more buffer
+        current_kv_usage += length + 8192 * 3 + 20_000
+        # 4G memory / (32768 page_size * 18 layers) * 16 block_size * 2 KV
+        if current_kv_usage < 200_000:
+            gpu_kv_cache_perc = get_gpu_kv_cache_perc(question_id)
+            print(
+                f"Continuing Solver {solver_index} at {current_kv_usage=} {gpu_kv_cache_perc=:.1f} {length=}"
+            )
+            question_id_to_active_solver_indexes[question_id].add(solver_index)
             return True
         return False
 
@@ -1063,11 +1275,14 @@ def solve_single(
     all_token_ids = rollout(
         all_token_ids=all_token_ids,
         should_stop=should_stop,
+        should_hold=should_hold,
+        should_continue=should_continue,
     )
 
     # Process results and handle side effects
     detokenized_text = harmony_encoding.decode(all_token_ids)
     boxed_text = extract_boxed_text(detokenized_text)
+    print(f"Solver {solver_index} boxed {boxed_text} at {len(all_token_ids)=}")
 
     if question_id and all_token_ids:
         answer_suffix = "NA"
@@ -1075,6 +1290,7 @@ def solve_single(
             answer_suffix = f"{boxed_text}"
         total_tokens = len(all_token_ids)
         question_id_to_solver_to_length[question_id][solver_index] = total_tokens
+        question_id_to_active_solver_indexes[question_id].discard(solver_index)
         # Count tool calls from the token stream
         tool_call_count = detokenized_text.count("to=python code")
         base_path = f"{SOLUTIONS_DIR}/{question_id}/{solver_index:02d}-{total_tokens:05d}-{tool_call_count:02d}-{answer_suffix}"
@@ -1092,7 +1308,6 @@ def solve_single(
 
     return boxed_text
 
-
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:26:54.553208Z","iopub.execute_input":"2025-11-24T08:26:54.553692Z","iopub.status.idle":"2025-11-24T08:27:03.475341Z","shell.execute_reply.started":"2025-11-24T08:26:54.553671Z","shell.execute_reply":"2025-11-24T08:27:03.474837Z"}}
 if is_on_kaggle_interactive():
     solve_single("What is 1+1?")
@@ -1105,19 +1320,25 @@ def solve(question_text: str, question_id: str = "") -> int:
     print(f"Processing {question_id}")
     question_start_time = time.time()
     time_available = cutoff_times[-1] - question_start_time if cutoff_times else 0
+    maximum_time_available = 750
+    if not is_on_kaggle() and model_provider == "tinker":
+        maximum_time_available = 3600
+    if time_available > maximum_time_available:
+        cutoff_times[-1] = int(time.time()) + maximum_time_available
+        time_available = cutoff_times[-1] - question_start_time if cutoff_times else 0
     print(f"time_available {time_available:.1f}s")
     os.makedirs(f"{SOLUTIONS_DIR}/{question_id}", exist_ok=True)
     question_id_to_solver_to_length[question_id] = {}
     question_id_to_solver_to_answer[question_id] = {}
+    question_id_to_active_solver_indexes[question_id] = set(range(num_generations))
     completed_question_ids.discard(question_id)  # just in case question_id collides
 
     if question_id and time.time() > cutoff_times[-1]:
         print("timeout did not solve")
         return 12314
 
-    get_gpu_kv_cache_usage(
-        question_id
-    )  # run once to prevent running in the first batch of execution
+    # run once to prevent running in the first batch of execution
+    get_gpu_kv_cache_perc(question_id)
 
     # Start solver threads
     # I suspect that init LocalJupyterSession(timeout=10.0) can stall
@@ -1152,7 +1373,6 @@ def solve(question_text: str, question_id: str = "") -> int:
 
     return final_answer
 
-
 # %% [code] {"jupyter":{"outputs_hidden":false},"execution":{"iopub.status.busy":"2025-11-24T08:27:06.481067Z","iopub.execute_input":"2025-11-24T08:27:06.481501Z","iopub.status.idle":"2025-11-24T08:27:19.404564Z","shell.execute_reply.started":"2025-11-24T08:27:06.481486Z","shell.execute_reply":"2025-11-24T08:27:19.404121Z"}}
 if is_on_kaggle_interactive():
     solve("What is 1+1?")
@@ -1163,11 +1383,11 @@ if not is_on_kaggle() and __name__ == "__main__":
 
     question_id = "dd7f5e"
     question_text = """
-Let $\\mathcal{F}$ be the set of functions $\\alpha \\colon \\mathbb{Z}\\to \\mathbb{Z}$ for which there are only finitely many $n \\in \\mathbb{Z}$ such that $\\alpha(n) \\neq 0$. 
+Let $\\mathcal{F}$ be the set of functions $\\alpha \\colon \\mathbb{Z}\\to \\mathbb{Z}$ for which there are only finitely many $n \\in \\mathbb{Z}$ such that $\\alpha(n) \\neq 0$.
 
 For two functions $\\alpha$ and $\\beta$ in $\\mathcal{F}$, define their product $\\alpha\\star\\beta$ to be $\\sum\\limits_{n\\in\\mathbb{Z}} \\alpha(n)\\cdot \\beta(n)$. Also, for $n\\in\\mathbb{Z}$, define a shift operator $S_n \\colon \\mathcal{F}\\to \\mathcal{F}$ by $S_n(\\alpha)(t)=\\alpha(t+n)$ for all $t \\in \\mathbb{Z}$.
 
-A function $\\alpha \\in \\mathcal{F}$ is called \\emph{shifty} if 
+A function $\\alpha \\in \\mathcal{F}$ is called \\emph{shifty} if
 \\begin{itemize}
     \\item $\\alpha(m)=0$ for all integers $m<0$ and $m>8$ and
     \\item There exists $\\beta \\in \\mathcal{F}$ and integers $k \\neq l$ such that for all $n \\in \\mathbb{Z}$
@@ -1208,9 +1428,9 @@ How many shifty functions are there in $\\mathcal{F}$?
     # where $p$ and $q$ are coprime positive integers. What is the remainder when $p+q$ is divided by $99991$?
     # """.strip()
 
-    os.makedirs(f"{SOLUTIONS_DIR}/{question_id}", exist_ok=True)
-    solve(question_text, question_id)
-    exit()
+    # os.makedirs(f"{SOLUTIONS_DIR}/{question_id}", exist_ok=True)
+    # solve(question_text, question_id)
+    # exit()
 
 # %% [markdown] {"jupyter":{"outputs_hidden":false}}
 # # Submission server
@@ -1226,14 +1446,17 @@ if is_on_kaggle():
     df = pd.read_csv(
         "/kaggle/input/ai-mathematical-olympiad-progress-prize-3/reference.csv"
     ).drop("answer", axis=1)
+else:
+    df = pd.read_csv(
+        "aimo3.csv"
+    ).drop("answer", axis=1)
 
-    dfs = []
-    for replication_idx in range(replication_count_for_commit_runs):
-        df_copy = df.copy()
-        df_copy["id"] = df_copy["id"] + f"_{replication_idx}"
-        dfs.append(df_copy)
-    pd.concat(dfs, ignore_index=True).to_csv("reference.csv", index=False)
-
+dfs = []
+for replication_idx in range(replication_count_for_commit_runs):
+    df_copy = df.copy()
+    df_copy["id"] = df_copy["id"] + f"_{replication_idx}"
+    dfs.append(df_copy)
+pd.concat(dfs, ignore_index=True).to_csv("reference.csv", index=False)
 
 # %% [code] {"_kg_hide-output":true,"_kg_hide-input":false,"jupyter":{"outputs_hidden":false},"execution":{"execution_failed":"2025-11-24T02:04:57.769Z"}}
 
@@ -1247,14 +1470,25 @@ def predict(id_: pl.Series, problem: pl.Series) -> pl.DataFrame | pd.DataFrame:
     question_text: str = problem.item(0)
 
     if not run_all_questions_on_kaggle:  # should be ignored for submissions
+        if not is_on_kaggle():
+            if not (
+                # "Norwe" in question_text
+                "shifty" in question_text  # noqa: E713
+                # or "tournament" in question_text
+                # or "KNK" in question_text
+                # or "Alice" in question_text
+            ):
+                print("on local, skipping question")
+                # not popping cutoff_times
+                return pl.DataFrame({"id": id_, "answer": 12315})
         if is_on_kaggle_commit():
             # to only run for hard problems
             if not (
+                # "Norwe" in question_text
                 "shifty" in question_text  # noqa: E713
-                or "tournament" in question_text
-                or "KNK" in question_text
-                or "Norwe" in question_text
-                or "Alice" in question_text
+                # or "tournament" in question_text
+                # or "KNK" in question_text
+                # or "Alice" in question_text
             ):
                 print("on kaggle commit, skipping question")
                 # not popping cutoff_times
@@ -1278,8 +1512,8 @@ inference_server = kaggle_evaluation.aimo_3_inference_server.AIMO3InferenceServe
     predict  # type: ignore[arg-type]
 )
 
-print("Starting submission server")
 if __name__ == "__main__":
+    print("Starting submission server")
     if os.getenv("KAGGLE_IS_COMPETITION_RERUN"):
         inference_server.serve()
     else:
