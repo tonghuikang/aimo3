@@ -519,8 +519,8 @@
 
     <script>
         let indexData = null;
-        let sortColumn = 'timestamp';
-        let sortAsc = false;
+        let sortColumn = 'problem_id';
+        let sortAsc = true;
         let currentState = null;
         let currentProblemId = null;
         let currentStateHash = null;
@@ -824,16 +824,29 @@
 
                 // Load state from hierarchical structure
                 const stateResp = await fetch(`data/raw/${problemId}/${stateHash}/state.json`);
+                if (!stateResp.ok) {
+                    throw new Error('State data not found');
+                }
                 const stateData = parseJsonBigInt(await stateResp.text());
                 timings.stateJson = performance.now() - t0; t0 = performance.now();
 
-                // Load actions from their directories
+                // Load actions from their directories (may fail for redacted problems)
                 const actions = [];
+                let actionsAvailable = true;
                 for (const actionHash of actionHashes) {
-                    const actionResp = await fetch(`data/raw/${problemId}/${stateHash}/${actionHash}/action.json`);
-                    const actionData = parseJsonBigInt(await actionResp.text());
-                    timings[`action_${actionHash}`] = performance.now() - t0; t0 = performance.now();
-                    actions.push(actionData);
+                    try {
+                        const actionResp = await fetch(`data/raw/${problemId}/${stateHash}/${actionHash}/action.json`);
+                        if (!actionResp.ok) {
+                            actionsAvailable = false;
+                            break;
+                        }
+                        const actionData = parseJsonBigInt(await actionResp.text());
+                        timings[`action_${actionHash}`] = performance.now() - t0; t0 = performance.now();
+                        actions.push(actionData);
+                    } catch (e) {
+                        actionsAvailable = false;
+                        break;
+                    }
                 }
                 console.log('Load timings (ms):', timings);
 
@@ -847,9 +860,19 @@
                 };
 
                 timings.renderModal = performance.now() - t0; t0 = performance.now();
-                renderModal(currentState, completionIdx);
-                timings.renderModalDone = performance.now() - t0; t0 = performance.now();
-                await updateUrl(completionIdx !== null ? completionIdx : 0);
+                if (actionsAvailable && actions.length > 0) {
+                    renderModal(currentState, completionIdx);
+                    timings.renderModalDone = performance.now() - t0; t0 = performance.now();
+                    await updateUrl(completionIdx !== null ? completionIdx : 0);
+                } else {
+                    // Show problem statement only (actions not available)
+                    renderProblemOnly(currentState);
+                    // Update URL with state only (no action)
+                    const url = new URL(window.location);
+                    url.searchParams.set('state', currentStateHash);
+                    url.searchParams.delete('action');
+                    history.pushState(null, '', url);
+                }
                 timings.updateUrl = performance.now() - t0;
                 console.log('Final timings (ms):', timings);
                 window.lastTimings = timings;
@@ -1178,6 +1201,33 @@
             });
         }
 
+        function renderProblemOnly(state) {
+            document.getElementById('modal-title').textContent = `Problem ${state.problem.id}`;
+
+            const html = `
+                <div class="section-title">Problem Statement</div>
+                <div class="problem-text" id="problem-text">${escapeHtml(state.problem.statement)}</div>
+                <div style="margin-top:20px;padding:15px;background:#f8fafc;border:1px solid #e0e0e0;border-radius:8px;color:#666;">
+                    <em>Action data not available for this problem.</em>
+                </div>
+            `;
+
+            document.getElementById('modal-body').innerHTML = html;
+
+            renderMathInElement(document.getElementById('problem-text'), {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false},
+                    {left: '\\[', right: '\\]', display: true},
+                    {left: '\\(', right: '\\)', display: false},
+                    {left: '\\begin{equation*}', right: '\\end{equation*}', display: true},
+                    {left: '\\begin{equation}', right: '\\end{equation}', display: true},
+                    {left: '\\begin{align*}', right: '\\end{align*}', display: true},
+                    {left: '\\begin{align}', right: '\\end{align}', display: true}
+                ],
+                throwOnError: false
+            });
+        }
 
         async function navigateCompletion(delta) {
             if (!currentState) return;

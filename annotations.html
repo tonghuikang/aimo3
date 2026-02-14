@@ -636,42 +636,72 @@
             getRightPanel().innerHTML = '<div class="empty">Click a colored span to view alternates</div>';
 
             try {
-                const [stateResp, actionResp, labelResp, altResp] = await Promise.all([
-                    fetch(`data/raw/${currentEntry.problem_id}/${currentEntry.state_hash}/state.json`),
+                // Fetch state first to get problem statement
+                const stateResp = await fetch(`data/raw/${currentEntry.problem_id}/${currentEntry.state_hash}/state.json`);
+
+                // Handle missing state data
+                if (!stateResp.ok) {
+                    getLeftPanel().innerHTML = `<div style="padding: 20px; color: #666; font-style: italic;">State data not available for this problem.</div>`;
+                    getRightPanel().innerHTML = '<div class="empty">State data not available</div>';
+                    sizeInlinePanels();
+                    return;
+                }
+
+                const stateData = await stateResp.json();
+                currentPromptTokens = stateData.tokens || [];
+
+                // Try to fetch action, label, and alternate data
+                const [actionResp, labelResp, altResp] = await Promise.all([
                     fetch(`data/raw/${currentEntry.problem_id}/${currentEntry.state_hash}/${currentEntry.action_hash}/action.json`),
                     fetch(`data/label/${currentEntry.problem_id}/${currentEntry.state_hash}/${currentEntry.action_hash}.jsonl`),
                     fetch(`data/alternate/${currentEntry.problem_id}/${currentEntry.state_hash}/${currentEntry.action_hash}.jsonl`)
                 ]);
 
-                const stateData = await stateResp.json();
-                currentPromptTokens = stateData.tokens || [];
+                // Handle missing action data gracefully - show problem statement
+                if (!actionResp.ok) {
+                    getLeftPanel().innerHTML = `
+                        <div style="padding: 20px;">
+                            <h3 style="margin-bottom: 10px;">Problem ${currentEntry.problem_id}</h3>
+                            <div style="margin-bottom: 15px;">${escapeHtml(stateData.problem?.statement || 'Problem statement not available')}</div>
+                            <div style="color: #666; font-style: italic;">Action data not available for this problem.</div>
+                        </div>
+                    `;
+                    getRightPanel().innerHTML = '<div class="empty">Action data not available</div>';
+                    sizeInlinePanels();
+                    return;
+                }
+
                 const actionData = await actionResp.json();
                 currentTokens = actionData.tokens;
 
                 currentLabels = {};
                 currentSpans = {};
-                const labelText = await labelResp.text();
-                for (const line of labelText.trim().split('\n')) {
-                    if (line) {
-                        const data = JSON.parse(line);
-                        for (const [spanKey, labelData] of Object.entries(data)) {
-                            const parts = spanKey.split('-');
-                            const start = parseInt(parts[0]);
-                            currentLabels[start] = labelData;
-                            if (parts.length > 1) currentSpans[start] = parseInt(parts[1]);
+                if (labelResp.ok) {
+                    const labelText = await labelResp.text();
+                    for (const line of labelText.trim().split('\n')) {
+                        if (line) {
+                            const data = JSON.parse(line);
+                            for (const [spanKey, labelData] of Object.entries(data)) {
+                                const parts = spanKey.split('-');
+                                const start = parseInt(parts[0]);
+                                currentLabels[start] = labelData;
+                                if (parts.length > 1) currentSpans[start] = parseInt(parts[1]);
+                            }
                         }
                     }
                 }
 
                 currentAlternates = {};
-                const altText = await altResp.text();
-                for (const line of altText.trim().split('\n')) {
-                    if (line) {
-                        const data = JSON.parse(line);
-                        for (const [posKey, alts] of Object.entries(data)) {
-                            const pos = parseInt(posKey);
-                            if (!currentAlternates[pos]) currentAlternates[pos] = [];
-                            currentAlternates[pos].push(...alts);
+                if (altResp.ok) {
+                    const altText = await altResp.text();
+                    for (const line of altText.trim().split('\n')) {
+                        if (line) {
+                            const data = JSON.parse(line);
+                            for (const [posKey, alts] of Object.entries(data)) {
+                                const pos = parseInt(posKey);
+                                if (!currentAlternates[pos]) currentAlternates[pos] = [];
+                                currentAlternates[pos].push(...alts);
+                            }
                         }
                     }
                 }

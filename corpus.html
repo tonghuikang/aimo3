@@ -434,6 +434,23 @@
                 // Load prompt and completion tokens from training file
                 const tracePath = `data/corpus/${entry.problem_id}/${entry.state_hash}/${entry.action_hash}/${entry.span}/${entry.trace_id}.jsonl`;
                 const traceResp = await fetch(tracePath);
+
+                // Handle missing corpus data - try to show problem statement from state.json
+                if (!traceResp.ok) {
+                    try {
+                        const stateResp = await fetch(`data/raw/${entry.problem_id}/${entry.state_hash}/state.json`);
+                        if (stateResp.ok) {
+                            const stateData = await stateResp.json();
+                            completionContent.textContent = 'Corpus data not available for this problem.';
+                            promptContent.textContent = stateData.problem?.statement || 'Problem statement not available';
+                            return;
+                        }
+                    } catch (e) {}
+                    completionContent.textContent = 'Corpus data not available for this problem.';
+                    promptContent.textContent = 'Problem data not available';
+                    return;
+                }
+
                 const traceText = await traceResp.text();
                 const traceData = JSON.parse(traceText.trim());
 
