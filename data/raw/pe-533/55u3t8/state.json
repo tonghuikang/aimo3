@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-533",
-    "statement": "The Carmichael function $\\lambda(n)$ is defined as the smallest positive integer $m$ such that $a^m = 1$ modulo $n$ for all integers $a$ coprime with $n$.\n\nFor example $\\lambda(8) = 2$ and $\\lambda(240) = 4$.\n\nDefine $L(n)$ as the smallest positive integer $m$ such that $\\lambda(k) \\ge n$ for all $k \\ge m$.\n\nFor example, $L(6) = 241$ and $L(100) = 20\\,174\\,525\\,281$.\n\nFind $L(20\\,000\\,000)$. Give the last $9$ digits of your answer.",
-    "answer": 789453601
+    "statement": "The Carmichael function $\\lambda(n)$ is defined as the smallest positive integer $m$ such that $a^m = 1$ modulo $n$ for all integers $a$ coprime with $n$.\n\nFor example $\\lambda(8) = 2$ and $\\lambda(240) = 4$.\n\nDefine $L(n)$ as the smallest positive integer $m$ such that $\\lambda(k) \\ge n$ for all $k \\ge m$.\n\nFor example, $L(6) = 241$ and $L(100) = 20\\,174\\,525\\,281$.\n\nFind $L(20\\,000\\,000)$. Give the last $9$ digits of your answer."
   },
   "tokens": [
     200006,

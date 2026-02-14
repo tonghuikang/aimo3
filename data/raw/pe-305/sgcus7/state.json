@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-305",
-    "statement": "Let's call $S$ the (infinite) string that is made by concatenating the consecutive positive integers (starting from $1$)  written down in base $10$.\n \nThus, $S = 1234567891011121314151617181920212223242\\cdots$\n\nIt's easy to see that any number will show up an infinite number of times in $S$.\n\nLet's call $f(n)$ the starting position of the $n$th occurrence of $n$ in $S$.\n \nFor example, $f(1)=1$, $f(5)=81$, $f(12)=271$ and $f(7780)=111111365$.\n\nFind $\\sum f(3^k)$ for $1 \\le k \\le 13$.\n\nGive your answer modulo $99991$.",
-    "answer": 31966
+    "statement": "Let's call $S$ the (infinite) string that is made by concatenating the consecutive positive integers (starting from $1$)  written down in base $10$.\n \nThus, $S = 1234567891011121314151617181920212223242\\cdots$\n\nIt's easy to see that any number will show up an infinite number of times in $S$.\n\nLet's call $f(n)$ the starting position of the $n$th occurrence of $n$ in $S$.\n \nFor example, $f(1)=1$, $f(5)=81$, $f(12)=271$ and $f(7780)=111111365$.\n\nFind $\\sum f(3^k)$ for $1 \\le k \\le 13$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

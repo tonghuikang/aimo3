@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-356",
-    "statement": "Let $a_n$ be the largest real root of a polynomial $g(x) = x^3 - 2^n \\cdot x^2 + n$.\n\nFor example, $a_2 = 3.86619826\\cdots$\n\nFind the last eight digits of $\\sum \\limits_{i = 1}^{30} \\lfloor a_i^{987654321} \\rfloor$.\n\nNote: $\\lfloor a \\rfloor$ represents the floor function.",
-    "answer": 28010159
+    "statement": "Let $a_n$ be the largest real root of a polynomial $g(x) = x^3 - 2^n \\cdot x^2 + n$.\n\nFor example, $a_2 = 3.86619826\\cdots$\n\nFind the last eight digits of $\\sum \\limits_{i = 1}^{30} \\lfloor a_i^{987654321} \\rfloor$.\n\nNote: $\\lfloor a \\rfloor$ represents the floor function."
   },
   "tokens": [
     200006,

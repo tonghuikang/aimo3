@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-793",
-    "statement": "Let $S_i$ be an integer sequence produced with the following pseudo-random number generator:\n\n- $S_0 = 290797$\n\n-  $S_{i+1} = S_i ^2 \\bmod 50515093$\n\nLet $M(n)$ be the median of the pairwise products $ S_i S_j $ for $0 \\le i \\lt j \\lt n$.\n\nYou are given $M(3) = 3878983057768$ and $M(103) = 492700616748525$.\n\nFind $M(1\\,000\\,003)$.",
-    "answer": 475808650131120
+    "statement": "Let $S_i$ be an integer sequence produced with the following pseudo-random number generator:\n\n- $S_0 = 290797$\n\n-  $S_{i+1} = S_i ^2 \\bmod 50515093$\n\nLet $M(n)$ be the median of the pairwise products $ S_i S_j $ for $0 \\le i \\lt j \\lt n$.\n\nYou are given $M(3) = 3878983057768$ and $M(103) = 492700616748525$.\n\nFind $M(1\\,000\\,003)$."
   },
   "tokens": [
     200006,

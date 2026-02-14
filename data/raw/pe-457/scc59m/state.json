@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-457",
-    "statement": "Let $f(n) = n^2 - 3n - 1$.\n\nLet $p$ be a prime.\n\nLet $R(p)$ be the smallest positive integer $n$ such that $f(n) \\bmod p^2 = 0$ if such an integer $n$ exists, otherwise $R(p) = 0$.\n\nLet $SR(L)$ be $\\sum R(p)$ for all primes not exceeding $L$.\n\nFind $SR(10^7)$.",
-    "answer": 2647787126797397063
+    "statement": "Let $f(n) = n^2 - 3n - 1$.\n\nLet $p$ be a prime.\n\nLet $R(p)$ be the smallest positive integer $n$ such that $f(n) \\bmod p^2 = 0$ if such an integer $n$ exists, otherwise $R(p) = 0$.\n\nLet $SR(L)$ be $\\sum R(p)$ for all primes not exceeding $L$.\n\nFind $SR(10^7)$."
   },
   "tokens": [
     200006,

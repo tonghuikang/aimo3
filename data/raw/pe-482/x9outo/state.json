@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-482",
-    "statement": "$ABC$ is an integer sided triangle with incenter $I$ and perimeter $p$.\n\nThe segments $IA$, $IB$ and $IC$ have integral length as well. \n\nLet $L = p + |IA| + |IB| + |IC|$. \n\nLet $S(P) = \\sum L$ for all such triangles where $p \\le P$. For example, $S(10^3) = 3619$.\n\nFind $S(10^7)$.\n\nGive your answer modulo $99991$.",
-    "answer": 64728
+    "statement": "$ABC$ is an integer sided triangle with incenter $I$ and perimeter $p$.\n\nThe segments $IA$, $IB$ and $IC$ have integral length as well. \n\nLet $L = p + |IA| + |IB| + |IC|$. \n\nLet $S(P) = \\sum L$ for all such triangles where $p \\le P$. For example, $S(10^3) = 3619$.\n\nFind $S(10^7)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

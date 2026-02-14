@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-694",
-    "statement": "A positive integer $n$ is considered cube-full, if for every prime $p$ that divides $n$, so does $p^3$. Note that $1$ is considered cube-full.\n\nLet $s(n)$ be the function that counts the number of cube-full divisors of $n$. For example, $1$, $8$ and $16$ are the three cube-full divisors of $16$. Therefore, $s(16)=3$.\n\nLet $S(n)$ represent the summatory function of $s(n)$, that is $S(n)=\\displaystyle\\sum_{i=1}^n s(i)$.\n\nYou are given $S(16) = 19$, $S(100) = 126$ and $S(10000) = 13344$.\n\nFind $S(10^{18})$.\n\nGive your answer modulo $99991$.",
-    "answer": 8217
+    "statement": "A positive integer $n$ is considered cube-full, if for every prime $p$ that divides $n$, so does $p^3$. Note that $1$ is considered cube-full.\n\nLet $s(n)$ be the function that counts the number of cube-full divisors of $n$. For example, $1$, $8$ and $16$ are the three cube-full divisors of $16$. Therefore, $s(16)=3$.\n\nLet $S(n)$ represent the summatory function of $s(n)$, that is $S(n)=\\displaystyle\\sum_{i=1}^n s(i)$.\n\nYou are given $S(16) = 19$, $S(100) = 126$ and $S(10000) = 13344$.\n\nFind $S(10^{18})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

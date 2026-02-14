@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-492",
-    "statement": "Define the sequence $a_1, a_2, a_3, \\dots$ as:\n\n- $a_1 = 1$\n\n- $a_{n+1} = 6a_n^2 + 10a_n + 3$ for $n \\ge 1$.\n\nExamples:\n\n$a_3 = 2359$\n\n$a_6 = 269221280981320216750489044576319$\n\n$a_6 \\bmod 1\\,000\\,000\\,007 = 203064689$\n\n$a_{100} \\bmod 1\\,000\\,000\\,007 = 456482974$\n\nDefine $B(x,y,n)$ as $\\sum (a_n \\bmod p)$ for every prime $p$ such that $x \\le p \\le x+y$.\n\nExamples:\n\n$B(10^9, 10^3, 10^3) = 23674718882$\n\n$B(10^9, 10^3, 10^{15}) = 20731563854$\n\nFind $B(10^9, 10^7, 10^{15})$.",
-    "answer": 242586962923928
+    "statement": "Define the sequence $a_1, a_2, a_3, \\dots$ as:\n\n- $a_1 = 1$\n\n- $a_{n+1} = 6a_n^2 + 10a_n + 3$ for $n \\ge 1$.\n\nExamples:\n\n$a_3 = 2359$\n\n$a_6 = 269221280981320216750489044576319$\n\n$a_6 \\bmod 1\\,000\\,000\\,007 = 203064689$\n\n$a_{100} \\bmod 1\\,000\\,000\\,007 = 456482974$\n\nDefine $B(x,y,n)$ as $\\sum (a_n \\bmod p)$ for every prime $p$ such that $x \\le p \\le x+y$.\n\nExamples:\n\n$B(10^9, 10^3, 10^3) = 23674718882$\n\n$B(10^9, 10^3, 10^{15}) = 20731563854$\n\nFind $B(10^9, 10^7, 10^{15})$."
   },
   "tokens": [
     200006,

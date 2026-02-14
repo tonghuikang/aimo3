@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-541",
-    "statement": "The $n$th harmonic number $H_n$ is defined as the sum of the multiplicative inverses of the first $n$ positive integers, and can be written as a reduced fraction $a_n/b_n$.\n\n$H_n = \\displaystyle \\sum_{k=1}^n \\frac 1 k = \\frac {a_n} {b_n}$, with $\\gcd(a_n, b_n)=1$.\n\nLet $M(p)$ be the largest value of $n$ such that $b_n$ is not divisible by $p$.\n\nFor example, $M(3) = 68$ because $H_{68} = \\frac {a_{68}} {b_{68}} = \\frac {14094018321907827923954201611} {2933773379069966367528193600}$, $b_{68}=2933773379069966367528193600$ is not divisible by $3$, but all larger harmonic numbers have denominators divisible by $3$.\n\nYou are given $M(7) = 719102$.\n\nFind $M(137)$.\n\nGive your answer modulo $99991$.",
-    "answer": 63128
+    "statement": "The $n$th harmonic number $H_n$ is defined as the sum of the multiplicative inverses of the first $n$ positive integers, and can be written as a reduced fraction $a_n/b_n$.\n\n$H_n = \\displaystyle \\sum_{k=1}^n \\frac 1 k = \\frac {a_n} {b_n}$, with $\\gcd(a_n, b_n)=1$.\n\nLet $M(p)$ be the largest value of $n$ such that $b_n$ is not divisible by $p$.\n\nFor example, $M(3) = 68$ because $H_{68} = \\frac {a_{68}} {b_{68}} = \\frac {14094018321907827923954201611} {2933773379069966367528193600}$, $b_{68}=2933773379069966367528193600$ is not divisible by $3$, but all larger harmonic numbers have denominators divisible by $3$.\n\nYou are given $M(7) = 719102$.\n\nFind $M(137)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

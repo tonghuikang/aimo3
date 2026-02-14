@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-864",
-    "statement": "Let $C(n)$ be the number of squarefree integers of the form $x^2 + 1$ such that $1 \\le x \\le n$.\n\nFor example, $C(10) = 9$ and $C(1000) = 895$.\n\nFind $C(123567101113)$.\n\nGive your answer modulo $99991$.",
-    "answer": 88629
+    "statement": "Let $C(n)$ be the number of squarefree integers of the form $x^2 + 1$ such that $1 \\le x \\le n$.\n\nFor example, $C(10) = 9$ and $C(1000) = 895$.\n\nFind $C(123567101113)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

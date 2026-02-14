@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-759",
-    "statement": "The function $f$ is defined for all positive integers as follows:\n\n$$\\begin{align*}\nf(1) &amp;=  1\\\\\nf(2n) &amp;= 2f(n)\\\\\nf(2n+1) &amp;= 2n+1 + 2f(n)+\\tfrac 1n f(n)\n\\end{align*}$$\nIt can be proven that $f(n)$ is integer for all values of $n$.\n\nThe function $S(n)$ is defined as $S(n) = \\displaystyle \\sum_{i=1}^n f(i) ^2$.\n\nFor example, $S(10)=1530$ and $S(10^2)=4798445$.\n\nFind $S(10^{16})$. Give your answer modulo $1\\,000\\,000\\,007$.",
-    "answer": 282771304
+    "statement": "The function $f$ is defined for all positive integers as follows:\n\n$$\\begin{align*}\nf(1) &amp;=  1\\\\\nf(2n) &amp;= 2f(n)\\\\\nf(2n+1) &amp;= 2n+1 + 2f(n)+\\tfrac 1n f(n)\n\\end{align*}$$\nIt can be proven that $f(n)$ is integer for all values of $n$.\n\nThe function $S(n)$ is defined as $S(n) = \\displaystyle \\sum_{i=1}^n f(i) ^2$.\n\nFor example, $S(10)=1530$ and $S(10^2)=4798445$.\n\nFind $S(10^{16})$. Give your answer modulo $1\\,000\\,000\\,007$."
   },
   "tokens": [
     200006,

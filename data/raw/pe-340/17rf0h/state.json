@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-340",
-    "statement": "For fixed integers $a, b, c$, define the crazy function $F(n)$ as follows:\n\n$F(n) = n - c$ for all $n \\gt b$\n\n$F(n) = F(a + F(a + F(a + F(a + n))))$ for all $n \\le b$.\n\nAlso, define $S(a, b, c) = \\sum \\limits_{n = 0}^b F(n)$.\n\nFor example, if $a = 50$, $b = 2000$ and $c = 40$, then $F(0) = 3240$ and $F(2000) = 2040$.\n\nAlso, $S(50, 2000, 40) = 5204240$.\n\nFind the last $9$ digits of $S(21^7, 7^{21}, 12^7)$.",
-    "answer": 291504964
+    "statement": "For fixed integers $a, b, c$, define the crazy function $F(n)$ as follows:\n\n$F(n) = n - c$ for all $n \\gt b$\n\n$F(n) = F(a + F(a + F(a + F(a + n))))$ for all $n \\le b$.\n\nAlso, define $S(a, b, c) = \\sum \\limits_{n = 0}^b F(n)$.\n\nFor example, if $a = 50$, $b = 2000$ and $c = 40$, then $F(0) = 3240$ and $F(2000) = 2040$.\n\nAlso, $S(50, 2000, 40) = 5204240$.\n\nFind the last $9$ digits of $S(21^7, 7^{21}, 12^7)$."
   },
   "tokens": [
     200006,

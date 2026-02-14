@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-378",
-    "statement": "Let $T(n)$ be the nth triangle number, so $T(n) = \\dfrac{n(n + 1)}{2}$.\n\nLet $dT(n)$ be the number of divisors of $T(n)$.\n\nE.g.: $T(7) = 28$ and $dT(7) = 6$.\n\nLet $Tr(n)$ be the number of triples $(i, j, k)$ such that $1 \\le i \\lt j \\lt k \\le n$ and $dT(i) \\gt dT(j) \\gt dT(k)$.\n\n$Tr(20) = 14$, $Tr(100) = 5772$, and $Tr(1000) = 11174776$.\n\nFind $Tr(60 000 000)$. \n\nGive the last 18 digits of your answer.",
-    "answer": 147534623725724718
+    "statement": "Let $T(n)$ be the nth triangle number, so $T(n) = \\dfrac{n(n + 1)}{2}$.\n\nLet $dT(n)$ be the number of divisors of $T(n)$.\n\nE.g.: $T(7) = 28$ and $dT(7) = 6$.\n\nLet $Tr(n)$ be the number of triples $(i, j, k)$ such that $1 \\le i \\lt j \\lt k \\le n$ and $dT(i) \\gt dT(j) \\gt dT(k)$.\n\n$Tr(20) = 14$, $Tr(100) = 5772$, and $Tr(1000) = 11174776$.\n\nFind $Tr(60 000 000)$. \n\nGive the last 18 digits of your answer."
   },
   "tokens": [
     200006,

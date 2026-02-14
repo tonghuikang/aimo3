@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-755",
-    "statement": "Consider the Fibonacci sequence $\\{1,2,3,5,8,13,21,\\ldots\\}$.\n\nWe let $f(n)$ be the number of ways of representing an integer $n\\ge 0$ as the sum of different Fibonacci numbers.\n\nFor example, $16 = 3+13 = 1+2+13 = 3+5+8 = 1+2+5+8$ and hence $f(16) = 4$. \nBy convention $f(0) = 1$.\n\nFurther we define\n$$S(n) = \\sum_{k=0}^n f(k).$$\nYou are given $S(100) = 415$ and $S(10^4) = 312807$.\n\nFind $\\displaystyle S(10^{13})$.\n\nGive your answer modulo $99991$.",
-    "answer": 92255
+    "statement": "Consider the Fibonacci sequence $\\{1,2,3,5,8,13,21,\\ldots\\}$.\n\nWe let $f(n)$ be the number of ways of representing an integer $n\\ge 0$ as the sum of different Fibonacci numbers.\n\nFor example, $16 = 3+13 = 1+2+13 = 3+5+8 = 1+2+5+8$ and hence $f(16) = 4$. \nBy convention $f(0) = 1$.\n\nFurther we define\n$$S(n) = \\sum_{k=0}^n f(k).$$\nYou are given $S(100) = 415$ and $S(10^4) = 312807$.\n\nFind $\\displaystyle S(10^{13})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

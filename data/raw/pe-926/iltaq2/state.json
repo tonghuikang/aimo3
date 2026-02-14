@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-926",
-    "statement": "A round number is a number that ends with one or more zeros in a given base.\n\nLet us define the roundness of a number $n$ in base $b$ as the number of zeros at the end of the base $b$ representation of $n$.\n\nFor example, $20$ has roundness $2$ in base $2$, because the base $2$ representation of $20$ is $10100$, which ends with $2$ zeros.\n\nAlso define $R(n)$, the total roundness of a number $n$, as the sum of the roundness of $n$ in base $b$ for all $b &gt; 1$.\n\nFor example, $20$ has roundness $2$ in base $2$ and roundness $1$ in base $4$, $5$, $10$, $20$, hence we get $R(20)=6$.\n\nYou are also given $R(10!) = 312$.\n\nFind $R(10\\,000\\,000!)$. Give your answer modulo $10^9 + 7$.",
-    "answer": 40410219
+    "statement": "A round number is a number that ends with one or more zeros in a given base.\n\nLet us define the roundness of a number $n$ in base $b$ as the number of zeros at the end of the base $b$ representation of $n$.\n\nFor example, $20$ has roundness $2$ in base $2$, because the base $2$ representation of $20$ is $10100$, which ends with $2$ zeros.\n\nAlso define $R(n)$, the total roundness of a number $n$, as the sum of the roundness of $n$ in base $b$ for all $b &gt; 1$.\n\nFor example, $20$ has roundness $2$ in base $2$ and roundness $1$ in base $4$, $5$, $10$, $20$, hence we get $R(20)=6$.\n\nYou are also given $R(10!) = 312$.\n\nFind $R(10\\,000\\,000!)$. Give your answer modulo $10^9 + 7$."
   },
   "tokens": [
     200006,

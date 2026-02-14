@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-713",
-    "statement": "Turan has the electrical water heating system outside his house in a shed. The electrical system uses two fuses in series, one in the house and one in the shed. (Nowadays old fashioned fuses are often replaced with reusable mini circuit breakers, but Turan's system still uses old fashioned fuses.)\nFor the heating system to work both fuses must work.\n\nTuran has $N$ fuses. He knows that $m$ of them are working and the rest are blown. However, he doesn't know which ones are blown. So he tries different combinations until the heating system turns on.\n\nWe denote by $T(N,m)$ the smallest number of tries required to ensure the heating system turns on.\n\n$T(3,2)=3$ and $T(8,4)=7$.\n\nLet $L(N)$ be the sum of all $T(N, m)$ for $2 \\leq m \\leq N$.\n\n$L(10^3)=3281346$.\n\nFind $L(10^7)$.\n\nGive your answer modulo $99991$.",
-    "answer": 99973
+    "statement": "Turan has the electrical water heating system outside his house in a shed. The electrical system uses two fuses in series, one in the house and one in the shed. (Nowadays old fashioned fuses are often replaced with reusable mini circuit breakers, but Turan's system still uses old fashioned fuses.)\nFor the heating system to work both fuses must work.\n\nTuran has $N$ fuses. He knows that $m$ of them are working and the rest are blown. However, he doesn't know which ones are blown. So he tries different combinations until the heating system turns on.\n\nWe denote by $T(N,m)$ the smallest number of tries required to ensure the heating system turns on.\n\n$T(3,2)=3$ and $T(8,4)=7$.\n\nLet $L(N)$ be the sum of all $T(N, m)$ for $2 \\leq m \\leq N$.\n\n$L(10^3)=3281346$.\n\nFind $L(10^7)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-501",
-    "statement": "The eight divisors of $24$ are $1, 2, 3, 4, 6, 8, 12$ and $24$.\nThe ten numbers not exceeding $100$ having exactly eight divisors are $24, 30, 40, 42, 54, 56, 66, 70, 78$ and $88$.\nLet $f(n)$ be the count of numbers not exceeding $n$ with exactly eight divisors.\n\nYou are given $f(100) = 10$, $f(1000) = 180$ and $f(10^6) = 224427$.\n\nFind $f(10^{12})$.\n\nGive your answer modulo $99991$.",
-    "answer": 26424
+    "statement": "The eight divisors of $24$ are $1, 2, 3, 4, 6, 8, 12$ and $24$.\nThe ten numbers not exceeding $100$ having exactly eight divisors are $24, 30, 40, 42, 54, 56, 66, 70, 78$ and $88$.\nLet $f(n)$ be the count of numbers not exceeding $n$ with exactly eight divisors.\n\nYou are given $f(100) = 10$, $f(1000) = 180$ and $f(10^6) = 224427$.\n\nFind $f(10^{12})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

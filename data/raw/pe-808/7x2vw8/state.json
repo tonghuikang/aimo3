@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-808",
-    "statement": "Both $169$ and $961$ are the square of a prime. $169$ is the reverse of $961$.\n\nWe call a number a reversible prime square if:\n\n- It is not a palindrome, and\n\n- It is the square of a prime, and\n\n- Its reverse is also the square of a prime.\n\n$169$ and $961$ are not palindromes, so both are reversible prime squares.\n\nFind the sum of the first $50$ reversible prime squares.\n\nGive your answer modulo $99991$.",
-    "answer": 25882
+    "statement": "Both $169$ and $961$ are the square of a prime. $169$ is the reverse of $961$.\n\nWe call a number a reversible prime square if:\n\n- It is not a palindrome, and\n\n- It is the square of a prime, and\n\n- Its reverse is also the square of a prime.\n\n$169$ and $961$ are not palindromes, so both are reversible prime squares.\n\nFind the sum of the first $50$ reversible prime squares.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

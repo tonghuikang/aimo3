@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-769",
-    "statement": "Consider the following binary quadratic form:\n\n$$\n\\begin{align}\nf(x,y)=x^2+5xy+3y^2\n\\end{align}\n$$\nA positive integer $q$ has a primitive representation if there exist positive integers $x$ and $y$ such that $q = f(x,y)$ and $\\gcd(x,y)=1$.\n\nWe are interested in primitive representations of perfect squares. For example:\n\n$17^2=f(1,9)$\n\n$87^2=f(13,40) = f(46,19)$\n\nDefine $C(N)$ as the total number of primitive representations of $z^2$ for $0 &lt; z \\leq N$.\n \nMultiple representations are counted separately, so for example $z=87$ is counted twice.\n\nYou are given $C(10^3)=142$ and $C(10^{6})=142463$.\n\nFind $C(10^{14})$.\n\nGive your answer modulo $99991$.",
-    "answer": 31047
+    "statement": "Consider the following binary quadratic form:\n\n$$\n\\begin{align}\nf(x,y)=x^2+5xy+3y^2\n\\end{align}\n$$\nA positive integer $q$ has a primitive representation if there exist positive integers $x$ and $y$ such that $q = f(x,y)$ and $\\gcd(x,y)=1$.\n\nWe are interested in primitive representations of perfect squares. For example:\n\n$17^2=f(1,9)$\n\n$87^2=f(13,40) = f(46,19)$\n\nDefine $C(N)$ as the total number of primitive representations of $z^2$ for $0 &lt; z \\leq N$.\n \nMultiple representations are counted separately, so for example $z=87$ is counted twice.\n\nYou are given $C(10^3)=142$ and $C(10^{6})=142463$.\n\nFind $C(10^{14})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

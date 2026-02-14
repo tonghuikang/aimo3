@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-461",
-    "statement": "Let $f_n(k) = e^{k/n} - 1$, for all non-negative integers $k$.\n\nRemarkably, $f_{200}(6)+f_{200}(75)+f_{200}(89)+f_{200}(226)=\\underline{3.1415926}44529\\cdots\\approx\\pi$.\n\nIn fact, it is the best approximation of $\\pi$ of the form $f_n(a) + f_n(b) + f_n(c) + f_n(d)$ for $n=200$.\n\nLet $g(n)=a^2 + b^2 + c^2 + d^2$ for $a, b, c, d$ that minimize the error: $|f_n(a) + f_n(b) + f_n(c) + f_n(d) - \\pi|$\n\n(where $|x|$ denotes the absolute value of $x$).\n\nYou are given $g(200)=6^2+75^2+89^2+226^2=64658$.\n\nFind $g(10000)$.\n\nGive your answer modulo $99991$.",
-    "answer": 34658
+    "statement": "Let $f_n(k) = e^{k/n} - 1$, for all non-negative integers $k$.\n\nRemarkably, $f_{200}(6)+f_{200}(75)+f_{200}(89)+f_{200}(226)=\\underline{3.1415926}44529\\cdots\\approx\\pi$.\n\nIn fact, it is the best approximation of $\\pi$ of the form $f_n(a) + f_n(b) + f_n(c) + f_n(d)$ for $n=200$.\n\nLet $g(n)=a^2 + b^2 + c^2 + d^2$ for $a, b, c, d$ that minimize the error: $|f_n(a) + f_n(b) + f_n(c) + f_n(d) - \\pi|$\n\n(where $|x|$ denotes the absolute value of $x$).\n\nYou are given $g(200)=6^2+75^2+89^2+226^2=64658$.\n\nFind $g(10000)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

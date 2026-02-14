@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-675",
-    "statement": "Let $\\omega(n)$ denote the number of distinct prime divisors of a positive integer $n$.\n\nSo  $\\omega(1) = 0$ and  $\\omega(360) = \\omega(2^{3} \\times 3^{2} \\times 5) = 3$.\n\nLet $S(n)$ be $ \\sum_{d \\mid n} 2^{\\omega(d)}  $.\n\nE.g. $S(6) = 2^{\\omega(1)}+2^{\\omega(2)}+2^{\\omega(3)}+2^{\\omega(6)} = 2^0+2^1+2^1+2^2 = 9$.\n\nLet $F(n)=\\sum_{i=2}^n S(i!)$.\n$F(10)=4821.$\n\nFind $F(10\\,000\\,000)$. Give your answer modulo  $1\\,000\\,000\\,087$.",
-    "answer": 416146418
+    "statement": "Let $\\omega(n)$ denote the number of distinct prime divisors of a positive integer $n$.\n\nSo  $\\omega(1) = 0$ and  $\\omega(360) = \\omega(2^{3} \\times 3^{2} \\times 5) = 3$.\n\nLet $S(n)$ be $ \\sum_{d \\mid n} 2^{\\omega(d)}  $.\n\nE.g. $S(6) = 2^{\\omega(1)}+2^{\\omega(2)}+2^{\\omega(3)}+2^{\\omega(6)} = 2^0+2^1+2^1+2^2 = 9$.\n\nLet $F(n)=\\sum_{i=2}^n S(i!)$.\n$F(10)=4821.$\n\nFind $F(10\\,000\\,000)$. Give your answer modulo  $1\\,000\\,000\\,087$."
   },
   "tokens": [
     200006,

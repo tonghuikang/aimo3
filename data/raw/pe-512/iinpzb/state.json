@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-512",
-    "statement": "Let $\\varphi(n)$ be Euler's totient function.\n\nLet $f(n)=(\\sum_{i=1}^{n}\\varphi(n^i)) \\bmod (n+1)$.\n\nLet $g(n)=\\sum_{i=1}^{n} f(i)$.\n\n$g(100)=2007$.\n\nFind $g(5 \\times 10^8)$.",
-    "answer": 50660591862310323
+    "statement": "Let $\\varphi(n)$ be Euler's totient function.\n\nLet $f(n)=(\\sum_{i=1}^{n}\\varphi(n^i)) \\bmod (n+1)$.\n\nLet $g(n)=\\sum_{i=1}^{n} f(i)$.\n\n$g(100)=2007$.\n\nFind $g(5 \\times 10^8)$."
   },
   "tokens": [
     200006,

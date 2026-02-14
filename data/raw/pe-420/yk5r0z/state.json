@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-420",
-    "statement": "A positive integer matrix is a matrix whose elements are all positive integers.\n\nSome positive integer matrices can be expressed as a square of a positive integer matrix in two different ways. Here is an example:\n\n$$\\begin{pmatrix}\n40 &amp; 12\\\\\n48 &amp; 40\n\\end{pmatrix} =\n\\begin{pmatrix}\n2 &amp; 3\\\\\n12 &amp; 2\n\\end{pmatrix}^2 =\n\\begin{pmatrix}\n6 &amp; 1\\\\\n4 &amp; 6\n\\end{pmatrix}^2\n$$\n\nWe define $F(N)$ as the number of the $2\\times 2$ positive integer matrices which have a tracethe sum of the elements on the main diagonal less than $N$ and which can be expressed as a square of a positive integer matrix in two different ways.\n\nWe can verify that $F(50) = 7$ and $F(1000) = 1019$.\n\nFind $F(10^7)$.\n\nGive your answer modulo $99991$.",
-    "answer": 72391
+    "statement": "A positive integer matrix is a matrix whose elements are all positive integers.\n\nSome positive integer matrices can be expressed as a square of a positive integer matrix in two different ways. Here is an example:\n\n$$\\begin{pmatrix}\n40 &amp; 12\\\\\n48 &amp; 40\n\\end{pmatrix} =\n\\begin{pmatrix}\n2 &amp; 3\\\\\n12 &amp; 2\n\\end{pmatrix}^2 =\n\\begin{pmatrix}\n6 &amp; 1\\\\\n4 &amp; 6\n\\end{pmatrix}^2\n$$\n\nWe define $F(N)$ as the number of the $2\\times 2$ positive integer matrices which have a tracethe sum of the elements on the main diagonal less than $N$ and which can be expressed as a square of a positive integer matrix in two different ways.\n\nWe can verify that $F(50) = 7$ and $F(1000) = 1019$.\n\nFind $F(10^7)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

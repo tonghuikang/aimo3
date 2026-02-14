@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-850",
-    "statement": "Any positive real number $x$ can be decomposed into integer and fractional parts $\\lfloor x \\rfloor + \\{x\\}$, where $\\lfloor x \\rfloor$ (the floor function) is an integer, and $0\\le \\{x\\} &lt; 1$.\n\nFor positive integers $k$ and $n$, define the function\n$$\\begin{align}\nf_k(n) = \\sum_{i=1}^{n}\\left\\{ \\frac{i^k}{n} \\right\\}\n\\end{align}$$\nFor example, $f_5(10)=4.5$ and $f_7(1234)=616.5$.\n\nLet\n$$\\begin{align}\nS(N) = \\sum_{\\substack{k=1 \\\\ k\\text{ odd}}}^{N} \\sum_{n=1}^{N}  f_k(n)\n\\end{align}$$\nYou are given that $S(10)=100.5$ and $S(10^3)=123687804$.\n\nFind $\\lfloor S(33557799775533) \\rfloor$. Give your answer modulo 977676779.",
-    "answer": 878255725
+    "statement": "Any positive real number $x$ can be decomposed into integer and fractional parts $\\lfloor x \\rfloor + \\{x\\}$, where $\\lfloor x \\rfloor$ (the floor function) is an integer, and $0\\le \\{x\\} &lt; 1$.\n\nFor positive integers $k$ and $n$, define the function\n$$\\begin{align}\nf_k(n) = \\sum_{i=1}^{n}\\left\\{ \\frac{i^k}{n} \\right\\}\n\\end{align}$$\nFor example, $f_5(10)=4.5$ and $f_7(1234)=616.5$.\n\nLet\n$$\\begin{align}\nS(N) = \\sum_{\\substack{k=1 \\\\ k\\text{ odd}}}^{N} \\sum_{n=1}^{N}  f_k(n)\n\\end{align}$$\nYou are given that $S(10)=100.5$ and $S(10^3)=123687804$.\n\nFind $\\lfloor S(33557799775533) \\rfloor$. Give your answer modulo 977676779."
   },
   "tokens": [
     200006,

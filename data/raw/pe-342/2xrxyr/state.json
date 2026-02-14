@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-342",
-    "statement": "Consider the number $50$.\n\n$50^2 = 2500 = 2^2 \\times 5^4$, so $\\phi(2500) = 2 \\times 4 \\times 5^3 = 8 \\times 5^3 = 2^3 \\times 5^3$. 1\n\nSo $2500$ is a square and $\\phi(2500)$ is a cube.\n\nFind the sum of all numbers $n$, $1 \\lt n \\lt 10^{10}$ such that $\\phi(n^2)$ is a cube.\n\n1 $\\phi$ denotes Euler's totient function.\n\nGive your answer modulo $99991$.",
-    "answer": 7466
+    "statement": "Consider the number $50$.\n\n$50^2 = 2500 = 2^2 \\times 5^4$, so $\\phi(2500) = 2 \\times 4 \\times 5^3 = 8 \\times 5^3 = 2^3 \\times 5^3$. 1\n\nSo $2500$ is a square and $\\phi(2500)$ is a cube.\n\nFind the sum of all numbers $n$, $1 \\lt n \\lt 10^{10}$ such that $\\phi(n^2)$ is a cube.\n\n1 $\\phi$ denotes Euler's totient function.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

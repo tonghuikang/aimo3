@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-871",
-    "statement": "Let $f$ be a function from a finite set $S$ to itself. A drifting subset for $f$ is a subset $A$ of $S$ such that the number of elements in the union $A \\cup f(A)$ is equal to twice the number of elements of $A$.\n\nWe write $D(f)$ for the maximal number of elements among all drifting subsets for $f$.\n\nFor a positive integer $n$, define $f_n$ as the function from $\\{0, 1, \\dots, n - 1\\}$ to itself sending $x$ to $x^3 + x + 1 \\bmod n$.\n\nYou are given $D(f_5) = 1$ and $D(f_{10}) = 3$.\n\nFind $\\displaystyle\\sum_{i = 1}^{100} D(f_{10^5 + i})$.",
-    "answer": 2848790
+    "statement": "Let $f$ be a function from a finite set $S$ to itself. A drifting subset for $f$ is a subset $A$ of $S$ such that the number of elements in the union $A \\cup f(A)$ is equal to twice the number of elements of $A$.\n\nWe write $D(f)$ for the maximal number of elements among all drifting subsets for $f$.\n\nFor a positive integer $n$, define $f_n$ as the function from $\\{0, 1, \\dots, n - 1\\}$ to itself sending $x$ to $x^3 + x + 1 \\bmod n$.\n\nYou are given $D(f_5) = 1$ and $D(f_{10}) = 3$.\n\nFind $\\displaystyle\\sum_{i = 1}^{100} D(f_{10^5 + i})$."
   },
   "tokens": [
     200006,

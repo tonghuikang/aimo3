@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-917",
-    "statement": "The sequence $s_n$ is defined by $s_1 = 102022661$ and $s_n = s_{n-1}^2 \\bmod {998388889}$ for $n &gt; 1$.\n\nLet $a_n = s_{2n - 1}$ and $b_n = s_{2n}$ for $n=1,2,...$\n\nDefine an $N \\times N$ matrix whose values are $M_{i,j} = a_i + b_j$.\n\nLet $A(N)$ be the minimal path sum from $M_{1,1}$ (top left) to $M_{N,N}$ (bottom right), where each step is either right or down.\n\nYou are given $A(1) = 966774091$, $A(2) = 2388327490$ and $A(10) = 13389278727$.\n\nFind $A(10^7)$.",
-    "answer": 9986212680734636
+    "statement": "The sequence $s_n$ is defined by $s_1 = 102022661$ and $s_n = s_{n-1}^2 \\bmod {998388889}$ for $n &gt; 1$.\n\nLet $a_n = s_{2n - 1}$ and $b_n = s_{2n}$ for $n=1,2,...$\n\nDefine an $N \\times N$ matrix whose values are $M_{i,j} = a_i + b_j$.\n\nLet $A(N)$ be the minimal path sum from $M_{1,1}$ (top left) to $M_{N,N}$ (bottom right), where each step is either right or down.\n\nYou are given $A(1) = 966774091$, $A(2) = 2388327490$ and $A(10) = 13389278727$.\n\nFind $A(10^7)$."
   },
   "tokens": [
     200006,

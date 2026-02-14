@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-582",
-    "statement": "Let $a, b$ and $c$ be the sides of an integer sided triangle with one angle of $120$ degrees, $a \\le b \\le c$ and $b-a \\le 100$.\n\nLet $T(n)$ be the number of such triangles with $c \\le n$.\n\n$T(1000)=235$ and $T(10^8)=1245$.\n\nFind $T(10^{100})$.\n\nGive your answer modulo $99991$.",
-    "answer": 19903
+    "statement": "Let $a, b$ and $c$ be the sides of an integer sided triangle with one angle of $120$ degrees, $a \\le b \\le c$ and $b-a \\le 100$.\n\nLet $T(n)$ be the number of such triangles with $c \\le n$.\n\n$T(1000)=235$ and $T(10^8)=1245$.\n\nFind $T(10^{100})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

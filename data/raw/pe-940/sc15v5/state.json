@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-940",
-    "statement": "The Fibonacci sequence $(f_i)$ is the unique sequence such that\n\n- $f_0=0$\n\n- $f_1=1$\n\n- $f_{i+1}=f_i+f_{i-1}$\n\nSimilarly, there is a unique function $A(m,n)$ such that\n\n- $A(0,0)=0$\n\n- $A(0,1)=1$\n\n- $A(m+1,n)=A(m,n+1)+A(m,n)$\n\n- $A(m+1,n+1)=2A(m+1,n)+A(m,n)$\n\nDefine $S(k)=\\displaystyle\\sum_{i=2}^k\\sum_{j=2}^k A(f_i,f_j)$. For example\n$$\n\\begin{align}\nS(3)&amp;=A(1,1)+A(1,2)+A(2,1)+A(2,2)\\\\\n&amp;=2+5+7+16\\\\\n&amp;=30\n\\end{align}\n$$You are also given $S(5)=10396$.\n\nFind $S(50)$, giving your answer modulo $1123581313$.",
-    "answer": 969134784
+    "statement": "The Fibonacci sequence $(f_i)$ is the unique sequence such that\n\n- $f_0=0$\n\n- $f_1=1$\n\n- $f_{i+1}=f_i+f_{i-1}$\n\nSimilarly, there is a unique function $A(m,n)$ such that\n\n- $A(0,0)=0$\n\n- $A(0,1)=1$\n\n- $A(m+1,n)=A(m,n+1)+A(m,n)$\n\n- $A(m+1,n+1)=2A(m+1,n)+A(m,n)$\n\nDefine $S(k)=\\displaystyle\\sum_{i=2}^k\\sum_{j=2}^k A(f_i,f_j)$. For example\n$$\n\\begin{align}\nS(3)&amp;=A(1,1)+A(1,2)+A(2,1)+A(2,2)\\\\\n&amp;=2+5+7+16\\\\\n&amp;=30\n\\end{align}\n$$You are also given $S(5)=10396$.\n\nFind $S(50)$, giving your answer modulo $1123581313$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-859",
-    "statement": "Odd and Even are playing a game with $N$ cookies.\n\nThe game begins with the $N$ cookies divided into one or more piles, not necessarily of the same size. They then make moves in turn, starting with Odd.\n\nOdd's turn: Odd may choose any pile with an odd number of cookies, eat one and divide the remaining (if any) into two equal piles.\n\nEven's turn: Even may choose any pile with an even number of cookies, eat two of them and divide the remaining (if any) into two equal piles.\n\nThe player that does not have a valid move loses the game.\n\nLet $C(N)$ be the number of ways that $N$ cookies can be divided so that Even has a winning strategy.\n\nFor example, $C(5) = 2$ because there are two winning configurations for Even: a single pile containing all five cookies; three piles containing one, two and two cookies.\n\nYou are also given $C(16) = 64$.\n\nFind $C(300)$.\n\nGive your answer modulo $99991$.",
-    "answer": 98582
+    "statement": "Odd and Even are playing a game with $N$ cookies.\n\nThe game begins with the $N$ cookies divided into one or more piles, not necessarily of the same size. They then make moves in turn, starting with Odd.\n\nOdd's turn: Odd may choose any pile with an odd number of cookies, eat one and divide the remaining (if any) into two equal piles.\n\nEven's turn: Even may choose any pile with an even number of cookies, eat two of them and divide the remaining (if any) into two equal piles.\n\nThe player that does not have a valid move loses the game.\n\nLet $C(N)$ be the number of ways that $N$ cookies can be divided so that Even has a winning strategy.\n\nFor example, $C(5) = 2$ because there are two winning configurations for Even: a single pile containing all five cookies; three piles containing one, two and two cookies.\n\nYou are also given $C(16) = 64$.\n\nFind $C(300)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

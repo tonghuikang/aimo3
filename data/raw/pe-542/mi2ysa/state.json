@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-542",
-    "statement": "Let $S(k)$ be the sum of three or more distinct positive integers having the following properties:\n\n- No value exceeds $k$.\n\n- The values form a geometric progression.\n\n- The sum is maximal.\n\n$S(4) = 4 + 2 + 1 = 7$\n\n$S(10) = 9 + 6 + 4 = 19$\n\n$S(12) = 12 + 6 + 3 = 21$\n\n$S(1000) = 1000 + 900 + 810 + 729 = 3439$\n\nLet $T(n) = \\sum_{k=4}^n (-1)^k S(k)$.\n\n$T(1000) = 2268$\n\nFind $T(10^{17})$.\n\nGive your answer modulo $99991$.",
-    "answer": 57609
+    "statement": "Let $S(k)$ be the sum of three or more distinct positive integers having the following properties:\n\n- No value exceeds $k$.\n\n- The values form a geometric progression.\n\n- The sum is maximal.\n\n$S(4) = 4 + 2 + 1 = 7$\n\n$S(10) = 9 + 6 + 4 = 19$\n\n$S(12) = 12 + 6 + 3 = 21$\n\n$S(1000) = 1000 + 900 + 810 + 729 = 3439$\n\nLet $T(n) = \\sum_{k=4}^n (-1)^k S(k)$.\n\n$T(1000) = 2268$\n\nFind $T(10^{17})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

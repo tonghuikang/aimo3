@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-968",
-    "statement": "Define\n$$P(X_{a,b},X_{a,c},X_{a,d},X_{a,e},X_{b,c},X_{b,d},X_{b,e},X_{c,d},X_{c,e},X_{d,e})$$\nas the sum of $2^a3^b5^c7^d11^e$ over all quintuples of non-negative integers $(a, b, c, d, e)$ such that the sum of each two of the five variables is restricted by a given value. In other words, $a+b \\le X_{a,b}$, $a+d \\le X_{a,d}$, $b+e \\le X_{b,e}$ etc.\n\nFor example, $P(2,2,2,2,2,2,2,2,2,2)=7120$ and $P(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) \\equiv 799809376 \\pmod{10^9 + 7}$.\n\nDefine a sequence $A$ as follows:\n\n- $A_0 = 1$, $A_1 = 7$;\n\n- $A_n =(7A_{n\u22121}+A_{n-2}^2) \\bmod(10^9+7)$ for $n \\ge 2$.\n\nAlso define $Q(n) = P(A_{10n}, A_{10n+1}, A_{10n+2}, \\dots , A_{10n+9})$.\n\nFind $\\displaystyle\\sum_{0 \\le n \\lt 100}Q(n)$. Give your answer modulo $10^9+7$.",
-    "answer": 885362394
+    "statement": "Define\n$$P(X_{a,b},X_{a,c},X_{a,d},X_{a,e},X_{b,c},X_{b,d},X_{b,e},X_{c,d},X_{c,e},X_{d,e})$$\nas the sum of $2^a3^b5^c7^d11^e$ over all quintuples of non-negative integers $(a, b, c, d, e)$ such that the sum of each two of the five variables is restricted by a given value. In other words, $a+b \\le X_{a,b}$, $a+d \\le X_{a,d}$, $b+e \\le X_{b,e}$ etc.\n\nFor example, $P(2,2,2,2,2,2,2,2,2,2)=7120$ and $P(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) \\equiv 799809376 \\pmod{10^9 + 7}$.\n\nDefine a sequence $A$ as follows:\n\n- $A_0 = 1$, $A_1 = 7$;\n\n- $A_n =(7A_{n\u22121}+A_{n-2}^2) \\bmod(10^9+7)$ for $n \\ge 2$.\n\nAlso define $Q(n) = P(A_{10n}, A_{10n+1}, A_{10n+2}, \\dots , A_{10n+9})$.\n\nFind $\\displaystyle\\sum_{0 \\le n \\lt 100}Q(n)$. Give your answer modulo $10^9+7$."
   },
   "tokens": [
     200006,

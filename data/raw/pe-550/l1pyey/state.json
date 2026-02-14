@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-550",
-    "statement": "Two players are playing a game, alternating turns. There are $k$ piles of stones.\nOn each turn, a player has to choose a pile and replace it with two piles of stones under the following two conditions:\n\n-  Both new piles must have a number of stones more than one and less than the number of stones of the original pile.\n\n-  The number of stones of each of the new piles must be a divisor of the number of stones of the original pile.\n\nThe first player unable to make a valid move loses.\n\nLet $f(n,k)$ be the number of winning positions for the first player, assuming perfect play, when the game is played with $k$ piles each having between $2$ and $n$ stones (inclusively).\n$f(10,5)=40085$.\n\nFind $f(10^7,10^{12})$.\nGive your answer modulo $987654321$.",
-    "answer": 328104836
+    "statement": "Two players are playing a game, alternating turns. There are $k$ piles of stones.\nOn each turn, a player has to choose a pile and replace it with two piles of stones under the following two conditions:\n\n-  Both new piles must have a number of stones more than one and less than the number of stones of the original pile.\n\n-  The number of stones of each of the new piles must be a divisor of the number of stones of the original pile.\n\nThe first player unable to make a valid move loses.\n\nLet $f(n,k)$ be the number of winning positions for the first player, assuming perfect play, when the game is played with $k$ piles each having between $2$ and $n$ stones (inclusively).\n$f(10,5)=40085$.\n\nFind $f(10^7,10^{12})$.\nGive your answer modulo $987654321$."
   },
   "tokens": [
     200006,

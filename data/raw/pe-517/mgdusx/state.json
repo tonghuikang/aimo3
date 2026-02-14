@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-517",
-    "statement": "For every real number $a \\gt 1$ is given the sequence $g_a$ by:\n\n$g_{a}(x)=1$ for $x \\lt a$\n\n$g_{a}(x)=g_{a}(x-1)+g_a(x-a)$ for $x \\ge a$\n\n$G(n)=g_{\\sqrt {n}}(n)$\n\n$G(90)=7564511$.\n\nFind $\\sum G(p)$ for $p$ prime and $10000000 \\lt p \\lt 10010000$\n\nGive your answer modulo $1000000007$.",
-    "answer": 581468882
+    "statement": "For every real number $a \\gt 1$ is given the sequence $g_a$ by:\n\n$g_{a}(x)=1$ for $x \\lt a$\n\n$g_{a}(x)=g_{a}(x-1)+g_a(x-a)$ for $x \\ge a$\n\n$G(n)=g_{\\sqrt {n}}(n)$\n\n$G(90)=7564511$.\n\nFind $\\sum G(p)$ for $p$ prime and $10000000 \\lt p \\lt 10010000$\n\nGive your answer modulo $1000000007$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-942",
-    "statement": "Given a natural number $q$, let $p = 2^q - 1$ be the $q$-th Mersenne number.\n\nLet $R(q)$ be the minimal square root of $q$ modulo $p$, if one exists. In other words, $R(q)$ is the smallest positive integer $x$ such that $x^2 - q$ is divisible by $p$.\n\nFor example, $R(5)=6$ and $R(17)=47569$.\n\nFind $R(74\\,207\\,281)$. Give your answer modulo $10^9 + 7$.\n\nNote: $2^{74207281}-1$ is prime.",
-    "answer": 557539756
+    "statement": "Given a natural number $q$, let $p = 2^q - 1$ be the $q$-th Mersenne number.\n\nLet $R(q)$ be the minimal square root of $q$ modulo $p$, if one exists. In other words, $R(q)$ is the smallest positive integer $x$ such that $x^2 - q$ is divisible by $p$.\n\nFor example, $R(5)=6$ and $R(17)=47569$.\n\nFind $R(74\\,207\\,281)$. Give your answer modulo $10^9 + 7$.\n\nNote: $2^{74207281}-1$ is prime."
   },
   "tokens": [
     200006,

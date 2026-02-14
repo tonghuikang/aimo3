@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-627",
-    "statement": "Consider the set $S$ of all possible products of $n$ positive integers not exceeding $m$, that is\n \n$S=\\{ x_1x_2\\cdots x_n \\mid 1 \\le x_1, x_2, \\dots, x_n \\le m \\}$.\n\nLet $F(m,n)$ be the number of the distinct elements of the set $S$.\n\nFor example, $F(9, 2) = 36$ and $F(30,2)=308$.\n\nFind $F(30, 10001) \\bmod 1\\,000\\,000\\,007$.",
-    "answer": 220196142
+    "statement": "Consider the set $S$ of all possible products of $n$ positive integers not exceeding $m$, that is\n \n$S=\\{ x_1x_2\\cdots x_n \\mid 1 \\le x_1, x_2, \\dots, x_n \\le m \\}$.\n\nLet $F(m,n)$ be the number of the distinct elements of the set $S$.\n\nFor example, $F(9, 2) = 36$ and $F(30,2)=308$.\n\nFind $F(30, 10001) \\bmod 1\\,000\\,000\\,007$."
   },
   "tokens": [
     200006,

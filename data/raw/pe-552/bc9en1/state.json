@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-552",
-    "statement": "Let $A_n$ be the smallest positive integer satisfying $A_n \\bmod p_i = i$ for all $1 \\le i \\le n$, where $p_i$ is the\n$i$-th prime.\n\nFor example $A_2 = 5$, since this is the smallest positive solution of the system of equations\n\n-  $A_2 \\bmod 2 = 1$ \n\n-  $A_2 \\bmod 3 = 2$ \n\nThe system of equations for $A_3$ adds another constraint. That is, $A_3$ is the smallest positive solution of\n\n-  $A_3 \\bmod 2 = 1$ \n\n-  $A_3 \\bmod 3 = 2$ \n\n-  $A_3 \\bmod 5 = 3$ \n\nand hence $A_3 = 23$. Similarly, one gets $A_4 = 53$ and $A_5 = 1523$.\n\nLet $S(n)$ be the sum of all primes up to $n$ that divide at least one element in the sequence $A$.\n\nFor example, $S(50) = 69 = 5 + 23 + 41$, since $5$ divides $A_2$, $23$ divides $A_3$ and $41$ divides $A_{10} = 5765999453$. No other prime number up to $50$ divides an element in $A$.\n\nFind $S(300000)$.",
-    "answer": 326227335
+    "statement": "Let $A_n$ be the smallest positive integer satisfying $A_n \\bmod p_i = i$ for all $1 \\le i \\le n$, where $p_i$ is the\n$i$-th prime.\n\nFor example $A_2 = 5$, since this is the smallest positive solution of the system of equations\n\n-  $A_2 \\bmod 2 = 1$ \n\n-  $A_2 \\bmod 3 = 2$ \n\nThe system of equations for $A_3$ adds another constraint. That is, $A_3$ is the smallest positive solution of\n\n-  $A_3 \\bmod 2 = 1$ \n\n-  $A_3 \\bmod 3 = 2$ \n\n-  $A_3 \\bmod 5 = 3$ \n\nand hence $A_3 = 23$. Similarly, one gets $A_4 = 53$ and $A_5 = 1523$.\n\nLet $S(n)$ be the sum of all primes up to $n$ that divide at least one element in the sequence $A$.\n\nFor example, $S(50) = 69 = 5 + 23 + 41$, since $5$ divides $A_2$, $23$ divides $A_3$ and $41$ divides $A_{10} = 5765999453$. No other prime number up to $50$ divides an element in $A$.\n\nFind $S(300000)$."
   },
   "tokens": [
     200006,

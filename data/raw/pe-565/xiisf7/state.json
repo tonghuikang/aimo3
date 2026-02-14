@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-565",
-    "statement": "Let $\\sigma(n)$ be the sum of the divisors of $n$.\n\nE.g. the divisors of $4$ are $1$, $2$ and $4$, so $\\sigma(4)=7$.\n\nThe numbers $n$ not exceeding $20$ such that $7$ divides  $\\sigma(n)$ are:  $4$, $12$, $13$ and $20$, the sum of these numbers being $49$.\n\nLet $S(n, d)$ be the sum of the numbers $i$ not exceeding $n$ such that $d$ divides $\\sigma(i)$.\n\nSo $S(20 , 7)=49$.\n\nYou are given: $S(10^6,2017)=150850429$ and $S(10^9, 2017)=249652238344557$.\n\nFind $S(10^{11}, 2017)$.\n\nGive your answer modulo $99991$.",
-    "answer": 63696
+    "statement": "Let $\\sigma(n)$ be the sum of the divisors of $n$.\n\nE.g. the divisors of $4$ are $1$, $2$ and $4$, so $\\sigma(4)=7$.\n\nThe numbers $n$ not exceeding $20$ such that $7$ divides  $\\sigma(n)$ are:  $4$, $12$, $13$ and $20$, the sum of these numbers being $49$.\n\nLet $S(n, d)$ be the sum of the numbers $i$ not exceeding $n$ such that $d$ divides $\\sigma(i)$.\n\nSo $S(20 , 7)=49$.\n\nYou are given: $S(10^6,2017)=150850429$ and $S(10^9, 2017)=249652238344557$.\n\nFind $S(10^{11}, 2017)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

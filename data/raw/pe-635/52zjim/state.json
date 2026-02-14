@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-635",
-    "statement": "Let $A_q(n)$ be the number of subsets, $B$, of the set $\\{1, 2, ..., q \\cdot n\\}$ that satisfy two conditions:\n\n1) $B$ has exactly $n$ elements;\n\n2) the sum of the elements of $B$ is divisible by $n$.\n\nE.g. $A_2(5)=52$ and $A_3(5)=603$.\n\nLet $S_q(L)$ be $\\sum A_q(p)$ where the sum is taken over all primes $p \\le L$.\n\nE.g. $S_2(10)=554$, $S_2(100)$ mod $1\\,000\\,000\\,009=100433628$ and\n $S_3(100)$ mod $1\\,000\\,000\\,009=855618282$.\n\nFind $S_2(10^8)+S_3(10^8)$. Give your answer modulo $1\\,000\\,000\\,009$.",
-    "answer": 689294705
+    "statement": "Let $A_q(n)$ be the number of subsets, $B$, of the set $\\{1, 2, ..., q \\cdot n\\}$ that satisfy two conditions:\n\n1) $B$ has exactly $n$ elements;\n\n2) the sum of the elements of $B$ is divisible by $n$.\n\nE.g. $A_2(5)=52$ and $A_3(5)=603$.\n\nLet $S_q(L)$ be $\\sum A_q(p)$ where the sum is taken over all primes $p \\le L$.\n\nE.g. $S_2(10)=554$, $S_2(100)$ mod $1\\,000\\,000\\,009=100433628$ and\n $S_3(100)$ mod $1\\,000\\,000\\,009=855618282$.\n\nFind $S_2(10^8)+S_3(10^8)$. Give your answer modulo $1\\,000\\,000\\,009$."
   },
   "tokens": [
     200006,

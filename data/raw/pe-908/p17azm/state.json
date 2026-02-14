@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-908",
-    "statement": "A clock sequence is a periodic sequence of positive integers that can be broken into contiguous segments such that the sum of the $n$-th segment is equal to $n$.\n\nFor example, the sequence $$1\\ 2\\ 3\\ 4\\ 3\\ 2\\ 1\\ 2\\ 3\\ 4\\ 3\\ 2\\ 1\\ 2\\ 3\\ 4\\ 3\\ 2\\ 1\\ \\cdots$$ is a clock sequence with period $6$, as it can be broken into $$1\\Big |2\\Big |3\\Big |4\\Big |3\\ 2\\Big |1\\ 2\\ 3\\Big |4\\ 3\\Big |2\\ 1\\ 2\\ 3\\Big |4\\ 3\\ 2\\Big |1\\ 2\\ 3\\ 4\\Big |3\\ 2\\ 1\\ 2\\ 3\\Big |\\cdots$$\nLet $C(N)$ be the number of different clock sequences with period at most $N$.\nFor example, $C(3) = 3$, $C(4) = 7$ and $C(10) = 561$.\n\nFind $C(10^4) \\bmod 1111211113$.",
-    "answer": 451822602
+    "statement": "A clock sequence is a periodic sequence of positive integers that can be broken into contiguous segments such that the sum of the $n$-th segment is equal to $n$.\n\nFor example, the sequence $$1\\ 2\\ 3\\ 4\\ 3\\ 2\\ 1\\ 2\\ 3\\ 4\\ 3\\ 2\\ 1\\ 2\\ 3\\ 4\\ 3\\ 2\\ 1\\ \\cdots$$ is a clock sequence with period $6$, as it can be broken into $$1\\Big |2\\Big |3\\Big |4\\Big |3\\ 2\\Big |1\\ 2\\ 3\\Big |4\\ 3\\Big |2\\ 1\\ 2\\ 3\\Big |4\\ 3\\ 2\\Big |1\\ 2\\ 3\\ 4\\Big |3\\ 2\\ 1\\ 2\\ 3\\Big |\\cdots$$\nLet $C(N)$ be the number of different clock sequences with period at most $N$.\nFor example, $C(3) = 3$, $C(4) = 7$ and $C(10) = 561$.\n\nFind $C(10^4) \\bmod 1111211113$."
   },
   "tokens": [
     200006,

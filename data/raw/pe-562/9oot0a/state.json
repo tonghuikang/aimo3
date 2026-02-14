@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-562",
-    "statement": "Construct triangle $ABC$ such that:\n\n- Vertices $A$, $B$ and $C$ are lattice points inside or on the circle of radius $r$ centered at the origin;\n\n- the triangle contains no other lattice point inside or on its edges;\n\n- the perimeter is maximum.\n\nLet $R$ be the circumradius of triangle $ABC$ and $T(r) = R/r$.\n\nFor $r = 5$, one possible triangle has vertices $(-4,-3)$, $(4,2)$ and $(1,0)$ with perimeter $\\sqrt{13}+\\sqrt{34}+\\sqrt{89}$ and circumradius $R = \\sqrt {\\frac {19669} 2 }$, so $T(5) = \\sqrt {\\frac {19669} {50} }$.\n\nYou are given $T(10) \\approx 97.26729$ and $T(100) \\approx 9157.64707$.\n\nFind $T(10^7)$. Give your answer rounded to the nearest integer.\n\nGive your answer modulo $99991$.",
-    "answer": 15157
+    "statement": "Construct triangle $ABC$ such that:\n\n- Vertices $A$, $B$ and $C$ are lattice points inside or on the circle of radius $r$ centered at the origin;\n\n- the triangle contains no other lattice point inside or on its edges;\n\n- the perimeter is maximum.\n\nLet $R$ be the circumradius of triangle $ABC$ and $T(r) = R/r$.\n\nFor $r = 5$, one possible triangle has vertices $(-4,-3)$, $(4,2)$ and $(1,0)$ with perimeter $\\sqrt{13}+\\sqrt{34}+\\sqrt{89}$ and circumradius $R = \\sqrt {\\frac {19669} 2 }$, so $T(5) = \\sqrt {\\frac {19669} {50} }$.\n\nYou are given $T(10) \\approx 97.26729$ and $T(100) \\approx 9157.64707$.\n\nFind $T(10^7)$. Give your answer rounded to the nearest integer.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

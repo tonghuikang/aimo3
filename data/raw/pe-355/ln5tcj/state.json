@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-355",
-    "statement": "Define $\\operatorname{Co}(n)$ to be the maximal possible sum of a set of mutually co-prime elements from $\\{1,2,\\dots,n\\}$.\n For example $\\operatorname{Co}(10)$ is $30$ and hits that maximum on the subset $\\{1,5,7,8,9\\}$.\n\nYou are given that $\\operatorname{Co}(30) = 193$ and $\\operatorname{Co}(100) = 1356$. \n\nFind $\\operatorname{Co}(200000)$.\n\nGive your answer modulo $99991$.",
-    "answer": 410
+    "statement": "Define $\\operatorname{Co}(n)$ to be the maximal possible sum of a set of mutually co-prime elements from $\\{1,2,\\dots,n\\}$.\n For example $\\operatorname{Co}(10)$ is $30$ and hits that maximum on the subset $\\{1,5,7,8,9\\}$.\n\nYou are given that $\\operatorname{Co}(30) = 193$ and $\\operatorname{Co}(100) = 1356$. \n\nFind $\\operatorname{Co}(200000)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

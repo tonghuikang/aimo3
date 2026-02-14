@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-708",
-    "statement": "A positive integer, $n$, is factorised into prime factors. We define $f(n)$ to be the product when each prime factor is replaced with $2$. In addition we define $f(1)=1$.\n\nFor example, $90 = 2\\times 3\\times 3\\times 5$, then replacing the primes, $2\\times 2\\times 2\\times 2 = 16$, hence $f(90) = 16$.\n\n \n \nLet $\\displaystyle S(N)=\\sum_{n=1}^{N} f(n)$. You are given $S(10^8)=9613563919$.\n\n \n\nFind $S(10^{14})$.\n\nGive your answer modulo $99991$.",
-    "answer": 3595
+    "statement": "A positive integer, $n$, is factorised into prime factors. We define $f(n)$ to be the product when each prime factor is replaced with $2$. In addition we define $f(1)=1$.\n\nFor example, $90 = 2\\times 3\\times 3\\times 5$, then replacing the primes, $2\\times 2\\times 2\\times 2 = 16$, hence $f(90) = 16$.\n\n \n \nLet $\\displaystyle S(N)=\\sum_{n=1}^{N} f(n)$. You are given $S(10^8)=9613563919$.\n\n \n\nFind $S(10^{14})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

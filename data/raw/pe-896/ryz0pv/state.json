@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-896",
-    "statement": "A contiguous range of positive integers is called a divisible range if all the integers in the range can be arranged in a row such that the $n$-th term is a multiple of $n$.\n\nFor example, the range $[6..9]$ is a divisible range because we can arrange the numbers as $7,6,9,8$.\n\nIn fact, it is the $4$th divisible range of length $4$, the first three being $[1..4], [2..5], [3..6]$.\n\nFind the $36$th divisible range of length $36$.\n\nGive as answer the smallest number in the range.\n\nGive your answer modulo $99991$.",
-    "answer": 18527
+    "statement": "A contiguous range of positive integers is called a divisible range if all the integers in the range can be arranged in a row such that the $n$-th term is a multiple of $n$.\n\nFor example, the range $[6..9]$ is a divisible range because we can arrange the numbers as $7,6,9,8$.\n\nIn fact, it is the $4$th divisible range of length $4$, the first three being $[1..4], [2..5], [3..6]$.\n\nFind the $36$th divisible range of length $36$.\n\nGive as answer the smallest number in the range.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

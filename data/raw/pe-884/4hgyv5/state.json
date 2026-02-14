@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-884",
-    "statement": "Starting from a positive integer $n$, at each step we subtract from $n$ the largest perfect cube not exceeding $n$, until $n$ becomes $0$.\n\nFor example, with $n = 100$ the procedure ends in $4$ steps:\n$$100 \\xrightarrow{-4^3} 36 \\xrightarrow{-3^3} 9 \\xrightarrow{-2^3} 1 \\xrightarrow{-1^3} 0.$$\nLet $D(n)$ denote the number of steps of the procedure. Thus $D(100) = 4$.\n\nLet $S(N)$ denote the sum of $D(n)$ for all positive integers $n$ strictly less than $N$.\n\nFor example, $S(100) = 512$.\n\nFind $S(10^{17})$.\n\nGive your answer modulo $99991$.",
-    "answer": 56395
+    "statement": "Starting from a positive integer $n$, at each step we subtract from $n$ the largest perfect cube not exceeding $n$, until $n$ becomes $0$.\n\nFor example, with $n = 100$ the procedure ends in $4$ steps:\n$$100 \\xrightarrow{-4^3} 36 \\xrightarrow{-3^3} 9 \\xrightarrow{-2^3} 1 \\xrightarrow{-1^3} 0.$$\nLet $D(n)$ denote the number of steps of the procedure. Thus $D(100) = 4$.\n\nLet $S(N)$ denote the sum of $D(n)$ for all positive integers $n$ strictly less than $N$.\n\nFor example, $S(100) = 512$.\n\nFind $S(10^{17})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

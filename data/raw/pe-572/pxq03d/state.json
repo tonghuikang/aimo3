@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-572",
-    "statement": "A matrix $M$ is called idempotent if $M^2 = M$.\n\nLet $M$ be a three by three matrix : \n$M=\\begin{pmatrix} \n  a &amp; b &amp; c\\\\ \n  d &amp; e &amp; f\\\\\n  g &amp;h &amp;i\\\\\n\\end{pmatrix}$.\n\nLet $C(n)$ be the number of idempotent three by three matrices $M$ with integer elements such that\n\n$ -n \\le a,b,c,d,e,f,g,h,i \\le n$.\n\n$C(1)=164$ and $C(2)=848$.\n\nFind $C(200)$.\n\nGive your answer modulo $99991$.",
-    "answer": 39429
+    "statement": "A matrix $M$ is called idempotent if $M^2 = M$.\n\nLet $M$ be a three by three matrix : \n$M=\\begin{pmatrix} \n  a &amp; b &amp; c\\\\ \n  d &amp; e &amp; f\\\\\n  g &amp;h &amp;i\\\\\n\\end{pmatrix}$.\n\nLet $C(n)$ be the number of idempotent three by three matrices $M$ with integer elements such that\n\n$ -n \\le a,b,c,d,e,f,g,h,i \\le n$.\n\n$C(1)=164$ and $C(2)=848$.\n\nFind $C(200)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

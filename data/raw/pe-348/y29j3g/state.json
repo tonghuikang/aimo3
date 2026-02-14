@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-348",
-    "statement": "Many numbers can be expressed as the sum of a square and a cube. Some of them in more than one way.\n\nConsider the palindromic numbers that can be expressed as the sum of a square and a cube, both greater than $1$, in exactly $4$ different ways.\n\nFor example, $5229225$ is a palindromic number and it can be expressed in exactly $4$ different ways:\n\n$2285^2 + 20^3$\n\n$2223^2 + 66^3$\n\n$1810^2 + 125^3$\n\n$1197^2 + 156^3$\n\n \nFind the sum of the five smallest such palindromic numbers.\n\nGive your answer modulo $99991$.",
-    "answer": 85439
+    "statement": "Many numbers can be expressed as the sum of a square and a cube. Some of them in more than one way.\n\nConsider the palindromic numbers that can be expressed as the sum of a square and a cube, both greater than $1$, in exactly $4$ different ways.\n\nFor example, $5229225$ is a palindromic number and it can be expressed in exactly $4$ different ways:\n\n$2285^2 + 20^3$\n\n$2223^2 + 66^3$\n\n$1810^2 + 125^3$\n\n$1197^2 + 156^3$\n\n \nFind the sum of the five smallest such palindromic numbers.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

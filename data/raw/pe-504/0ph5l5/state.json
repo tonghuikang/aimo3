@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-504",
-    "statement": "Let $ABCD$ be a quadrilateral whose vertices are lattice points lying on the coordinate axes as follows:\n\n$A(a, 0)$, $B(0, b)$, $C(-c, 0)$, $D(0, -d)$, where $1 \\le a, b, c, d \\le m$ and $a, b, c, d, m$ are integers.\n\nIt can be shown that for $m = 4$ there are exactly $256$ valid ways to construct $ABCD$. Of these $256$ quadrilaterals, $42$ of them strictly contain a square number of lattice points.\n\nHow many quadrilaterals $ABCD$ strictly contain a square number of lattice points for $m = 100$?\n\nGive your answer modulo $99991$.",
-    "answer": 94741
+    "statement": "Let $ABCD$ be a quadrilateral whose vertices are lattice points lying on the coordinate axes as follows:\n\n$A(a, 0)$, $B(0, b)$, $C(-c, 0)$, $D(0, -d)$, where $1 \\le a, b, c, d \\le m$ and $a, b, c, d, m$ are integers.\n\nIt can be shown that for $m = 4$ there are exactly $256$ valid ways to construct $ABCD$. Of these $256$ quadrilaterals, $42$ of them strictly contain a square number of lattice points.\n\nHow many quadrilaterals $ABCD$ strictly contain a square number of lattice points for $m = 100$?\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

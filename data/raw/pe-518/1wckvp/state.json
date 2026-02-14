@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-518",
-    "statement": "Let $S(n) = \\sum a + b + c$ over all triples $(a, b, c)$ such that:\n\n- $a$, $b$ and $c$ are prime numbers.\n\n- $a \\lt b \\lt c \\lt n$.\n\n- $a+1$, $b+1$, and $c+1$ form a geometric sequence.\n\nFor example, $S(100) = 1035$ with the following triples: \n\n$(2, 5, 11)$, $(2, 11, 47)$, $(5, 11, 23)$, $(5, 17, 53)$, $(7, 11, 17)$, $(7, 23, 71)$, $(11, 23, 47)$, $(17, 23, 31)$, $(17, 41, 97)$, $(31, 47, 71)$, $(71, 83, 97)$\n\nFind $S(10^8)$.\n\nGive your answer modulo $99991$.",
-    "answer": 13548
+    "statement": "Let $S(n) = \\sum a + b + c$ over all triples $(a, b, c)$ such that:\n\n- $a$, $b$ and $c$ are prime numbers.\n\n- $a \\lt b \\lt c \\lt n$.\n\n- $a+1$, $b+1$, and $c+1$ form a geometric sequence.\n\nFor example, $S(100) = 1035$ with the following triples: \n\n$(2, 5, 11)$, $(2, 11, 47)$, $(5, 11, 23)$, $(5, 17, 53)$, $(7, 11, 17)$, $(7, 23, 71)$, $(11, 23, 47)$, $(17, 23, 31)$, $(17, 41, 97)$, $(31, 47, 71)$, $(71, 83, 97)$\n\nFind $S(10^8)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

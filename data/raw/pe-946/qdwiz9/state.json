@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-946",
-    "statement": "Given the representation of a continued fraction\n$$ a_0+ \\cfrac 1{a_1+ \\cfrac 1{a_2+\\cfrac 1{a_3+\\ddots }}}= [a_0;a_1,a_2,a_3,\\ldots] $$\n\n$\\alpha$ is a real number with continued fraction representation:\n$\\alpha = [2;1,1,2,1,1,1,2,1,1,1,1,1,2,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,2,\\ldots]$\n where the number of $1$'s between each of the $2$'s are consecutive prime numbers.\n\n$\\beta$ is another real number defined as\n$$\t\\beta = \\frac{2\\alpha+3}{3\\alpha+2} $$\n\nThe first ten coefficients of the continued fraction of $\\beta$ are $[0;1,5,6,16,9,1,10,16,11]$ with sum $75$.\n\nFind the sum of the first $10^8$ coefficients of the continued fraction of $\\beta$.\n\nGive your answer modulo $99991$.",
-    "answer": 39729
+    "statement": "Given the representation of a continued fraction\n$$ a_0+ \\cfrac 1{a_1+ \\cfrac 1{a_2+\\cfrac 1{a_3+\\ddots }}}= [a_0;a_1,a_2,a_3,\\ldots] $$\n\n$\\alpha$ is a real number with continued fraction representation:\n$\\alpha = [2;1,1,2,1,1,1,2,1,1,1,1,1,2,1,1,1,1,1,1,1,2,1,1,1,1,1,1,1,1,1,1,1,2,\\ldots]$\n where the number of $1$'s between each of the $2$'s are consecutive prime numbers.\n\n$\\beta$ is another real number defined as\n$$\t\\beta = \\frac{2\\alpha+3}{3\\alpha+2} $$\n\nThe first ten coefficients of the continued fraction of $\\beta$ are $[0;1,5,6,16,9,1,10,16,11]$ with sum $75$.\n\nFind the sum of the first $10^8$ coefficients of the continued fraction of $\\beta$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

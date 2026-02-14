@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-914",
-    "statement": "For a given integer $R$ consider all primitive Pythagorean triangles that can fit inside, without touching, a circle with radius $R$. Define $F(R)$ to be the largest inradius of those triangles. You are given $F(100) = 36$.\n\nFind $F(10^{18})$.\n\nGive your answer modulo $99991$.",
-    "answer": 50612
+    "statement": "For a given integer $R$ consider all primitive Pythagorean triangles that can fit inside, without touching, a circle with radius $R$. Define $F(R)$ to be the largest inradius of those triangles. You are given $F(100) = 36$.\n\nFind $F(10^{18})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

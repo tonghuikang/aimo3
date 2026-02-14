@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-811",
-    "statement": "Let $b(n)$ be the largest power of 2 that divides $n$. For example $b(24) = 8$.\n\nDefine the recursive function:\n$$\\begin{align*}\n\\begin{split}\nA(0) &amp;= 1\\\\\nA(2n) &amp;= 3A(n) + 5A\\big(2n - b(n)\\big)  \\qquad n \\gt 0\\\\\nA(2n+1) &amp;= A(n)\n\\end{split}\n\\end{align*}$$\nand let $H(t,r) = A\\big((2^t+1)^r\\big)$.\n\nYou are given $H(3,2) = A(81) = 636056$.\n\nFind $H(10^{14}+31,62)$. Give your answer modulo $1\\,000\\,062\\,031$.",
-    "answer": 327287526
+    "statement": "Let $b(n)$ be the largest power of 2 that divides $n$. For example $b(24) = 8$.\n\nDefine the recursive function:\n$$\\begin{align*}\n\\begin{split}\nA(0) &amp;= 1\\\\\nA(2n) &amp;= 3A(n) + 5A\\big(2n - b(n)\\big)  \\qquad n \\gt 0\\\\\nA(2n+1) &amp;= A(n)\n\\end{split}\n\\end{align*}$$\nand let $H(t,r) = A\\big((2^t+1)^r\\big)$.\n\nYou are given $H(3,2) = A(81) = 636056$.\n\nFind $H(10^{14}+31,62)$. Give your answer modulo $1\\,000\\,062\\,031$."
   },
   "tokens": [
     200006,

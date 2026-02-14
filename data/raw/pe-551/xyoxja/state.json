@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-551",
-    "statement": "Let $a_0, a_1, \\dots$ be an integer sequence defined by:\n\n- $a_0 = 1$;\n\n- for $n \\ge 1$, $a_n$ is the sum of the digits of all preceding terms.\n\nThe sequence starts with $1, 1, 2, 4, 8, 16, 23, 28, 38, 49, \\dots$\n\nYou are given $a_{10^6} = 31054319$.\n\nFind $a_{10^{15}}$.\n\nGive your answer modulo $99991$.",
-    "answer": 4690
+    "statement": "Let $a_0, a_1, \\dots$ be an integer sequence defined by:\n\n- $a_0 = 1$;\n\n- for $n \\ge 1$, $a_n$ is the sum of the digits of all preceding terms.\n\nThe sequence starts with $1, 1, 2, 4, 8, 16, 23, 28, 38, 49, \\dots$\n\nYou are given $a_{10^6} = 31054319$.\n\nFind $a_{10^{15}}$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

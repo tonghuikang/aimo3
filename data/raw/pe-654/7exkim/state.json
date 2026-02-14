@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-654",
-    "statement": "Let $T(n, m)$ be the number of $m$-tuples of positive integers such that the sum of any two neighbouring elements of the tuple is $\\le n$.\n\nFor example, $T(3, 4)=8$, via the following eight $4$-tuples:\n\n$(1, 1, 1, 1)$\n\n$(1, 1, 1, 2)$\n\n$(1, 1, 2, 1)$\n\n$(1, 2, 1, 1)$\n\n$(1, 2, 1, 2)$\n\n$(2, 1, 1, 1)$\n\n$(2, 1, 1, 2)$\n\n$(2, 1, 2, 1)$\n\nYou are also given that $T(5, 5)=246$, $T(10, 10^{2}) \\equiv 862820094 \\pmod{1\\,000\\,000\\,007}$ and  $T(10^2, 10) \\equiv 782136797 \\pmod{1\\,000\\,000\\,007}$.\n\nFind $T(5000, 10^{12}) \\bmod 1\\,000\\,000\\,007$.",
-    "answer": 815868280
+    "statement": "Let $T(n, m)$ be the number of $m$-tuples of positive integers such that the sum of any two neighbouring elements of the tuple is $\\le n$.\n\nFor example, $T(3, 4)=8$, via the following eight $4$-tuples:\n\n$(1, 1, 1, 1)$\n\n$(1, 1, 1, 2)$\n\n$(1, 1, 2, 1)$\n\n$(1, 2, 1, 1)$\n\n$(1, 2, 1, 2)$\n\n$(2, 1, 1, 1)$\n\n$(2, 1, 1, 2)$\n\n$(2, 1, 2, 1)$\n\nYou are also given that $T(5, 5)=246$, $T(10, 10^{2}) \\equiv 862820094 \\pmod{1\\,000\\,000\\,007}$ and  $T(10^2, 10) \\equiv 782136797 \\pmod{1\\,000\\,000\\,007}$.\n\nFind $T(5000, 10^{12}) \\bmod 1\\,000\\,000\\,007$."
   },
   "tokens": [
     200006,

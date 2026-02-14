@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-540",
-    "statement": "A Pythagorean triple consists of three positive integers $a, b$ and $c$ satisfying $a^2+b^2=c^2$.\n\nThe triple is called primitive if $a, b$ and $c$ are relatively prime.\n\nLet $P(n)$ be the number of primitive Pythagorean triples with $a \\lt b \\lt c \\le n$.\n\nFor example $P(20) = 3$, since there are three triples: $(3,4,5)$, $(5,12,13)$ and $(8,15,17)$.\n\nYou are given that $P(10^6) = 159139$.\n\nFind $P(3141592653589793)$.\n\nGive your answer modulo $99991$.",
-    "answer": 53205
+    "statement": "A Pythagorean triple consists of three positive integers $a, b$ and $c$ satisfying $a^2+b^2=c^2$.\n\nThe triple is called primitive if $a, b$ and $c$ are relatively prime.\n\nLet $P(n)$ be the number of primitive Pythagorean triples with $a \\lt b \\lt c \\le n$.\n\nFor example $P(20) = 3$, since there are three triples: $(3,4,5)$, $(5,12,13)$ and $(8,15,17)$.\n\nYou are given that $P(10^6) = 159139$.\n\nFind $P(3141592653589793)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

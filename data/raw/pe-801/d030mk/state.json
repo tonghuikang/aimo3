@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-801",
-    "statement": "The positive integral solutions of the equation $x^y=y^x$ are $(2,4)$, $(4,2)$ and $(k,k)$ for all $k &gt; 0$.\n\nFor a given positive integer $n$, let $f(n)$ be the number of integral values $0 &lt; x,y \\leq n^2-n$ such that\n$$x^y\\equiv y^x \\pmod n.$$\nFor example, $f(5)=104$ and $f(97)=1614336$.\n\nLet $S(M,N)=\\sum f(p)$ where the sum is taken over all primes $p$ satisfying $M\\le p\\le N$.\n\nYou are given $S(1,10^2)=7381000$ and $S(1,10^5) \\equiv 701331986 \\pmod{993353399}$.\n\nFind $S(10^{16}, 10^{16}+10^6)$. Give your answer modulo $993353399$.",
-    "answer": 638129754
+    "statement": "The positive integral solutions of the equation $x^y=y^x$ are $(2,4)$, $(4,2)$ and $(k,k)$ for all $k &gt; 0$.\n\nFor a given positive integer $n$, let $f(n)$ be the number of integral values $0 &lt; x,y \\leq n^2-n$ such that\n$$x^y\\equiv y^x \\pmod n.$$\nFor example, $f(5)=104$ and $f(97)=1614336$.\n\nLet $S(M,N)=\\sum f(p)$ where the sum is taken over all primes $p$ satisfying $M\\le p\\le N$.\n\nYou are given $S(1,10^2)=7381000$ and $S(1,10^5) \\equiv 701331986 \\pmod{993353399}$.\n\nFind $S(10^{16}, 10^{16}+10^6)$. Give your answer modulo $993353399$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-809",
-    "statement": "The following is a function defined for all positive rational values of $x$.\n\n$$\tf(x)=\\begin{cases} x  &amp;x\\text{ is integral}\\\\\n\t\t\t\t\tf(\\frac 1{1-x})\t&amp;x \\lt 1\\\\\n\t\t\t\t\tf\\Big(\\frac 1{\\lceil x\\rceil -x}-1+f(x-1)\\Big)\t&amp;\\text{otherwise}\\end{cases}\t$$\n\nFor example, $f(3/2)=3$, $f(1/6) = 65533$ and $f(13/10) = 7625597484985$.\n\nFind $f(22/7)$. Give your answer modulo $10^{15}$.",
-    "answer": 75353432948733
+    "statement": "The following is a function defined for all positive rational values of $x$.\n\n$$\tf(x)=\\begin{cases} x  &amp;x\\text{ is integral}\\\\\n\t\t\t\t\tf(\\frac 1{1-x})\t&amp;x \\lt 1\\\\\n\t\t\t\t\tf\\Big(\\frac 1{\\lceil x\\rceil -x}-1+f(x-1)\\Big)\t&amp;\\text{otherwise}\\end{cases}\t$$\n\nFor example, $f(3/2)=3$, $f(1/6) = 65533$ and $f(13/10) = 7625597484985$.\n\nFind $f(22/7)$. Give your answer modulo $10^{15}$."
   },
   "tokens": [
     200006,

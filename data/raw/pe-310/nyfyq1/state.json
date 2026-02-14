@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-310",
-    "statement": "Alice and Bob play the game Nim Square.\n\nNim Square is just like ordinary three-heap normal play Nim, but the players may only remove a square number of stones from a heap.\n\nThe number of stones in the three heaps is represented by the ordered triple $(a,b,c)$.\n\nIf $0 \\le a \\le b \\le c \\le 29$ then the number of losing positions for the next player is $1160$.\n\nFind the number of losing positions for the next player if $0 \\le a \\le b \\le c \\le 100\\,000$.\n\nGive your answer modulo $99991$.",
-    "answer": 70309
+    "statement": "Alice and Bob play the game Nim Square.\n\nNim Square is just like ordinary three-heap normal play Nim, but the players may only remove a square number of stones from a heap.\n\nThe number of stones in the three heaps is represented by the ordered triple $(a,b,c)$.\n\nIf $0 \\le a \\le b \\le c \\le 29$ then the number of losing positions for the next player is $1160$.\n\nFind the number of losing positions for the next player if $0 \\le a \\le b \\le c \\le 100\\,000$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-438",
-    "statement": "For an $n$-tuple of integers $t = (a_1, \\dots, a_n)$, let $(x_1, \\dots, x_n)$ be the solutions of the polynomial equation $x^n + a_1 x^{n-1} + a_2 x^{n-2} + \\cdots + a_{n-1}x + a_n = 0$.\n\nConsider the following two conditions:\n\n- $x_1, \\dots, x_n$ are all real.\n\n- If $x_1, \\dots, x_n$ are sorted, $\\lfloor x_i\\rfloor = i$ for $1 \\leq i \\leq n$. ($\\lfloor \\cdot \\rfloor$: floor function.)\n\nIn the case of $n = 4$, there are $12$ $n$-tuples of integers which satisfy both conditions.\n\nWe define $S(t)$ as the sum of the absolute values of the integers in $t$.\n\nFor $n = 4$ we can verify that $\\sum S(t) = 2087$ for all $n$-tuples $t$ which satisfy both conditions.\n\nFind $\\sum S(t)$ for $n = 7$.\n\nGive your answer modulo $99991$.",
-    "answer": 10251
+    "statement": "For an $n$-tuple of integers $t = (a_1, \\dots, a_n)$, let $(x_1, \\dots, x_n)$ be the solutions of the polynomial equation $x^n + a_1 x^{n-1} + a_2 x^{n-2} + \\cdots + a_{n-1}x + a_n = 0$.\n\nConsider the following two conditions:\n\n- $x_1, \\dots, x_n$ are all real.\n\n- If $x_1, \\dots, x_n$ are sorted, $\\lfloor x_i\\rfloor = i$ for $1 \\leq i \\leq n$. ($\\lfloor \\cdot \\rfloor$: floor function.)\n\nIn the case of $n = 4$, there are $12$ $n$-tuples of integers which satisfy both conditions.\n\nWe define $S(t)$ as the sum of the absolute values of the integers in $t$.\n\nFor $n = 4$ we can verify that $\\sum S(t) = 2087$ for all $n$-tuples $t$ which satisfy both conditions.\n\nFind $\\sum S(t)$ for $n = 7$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

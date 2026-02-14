@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-743",
-    "statement": "A window into a matrix is a contiguous sub matrix.\n\nConsider a $2\\times n$ matrix where every entry is either 0 or 1.\n\nLet $A(k,n)$ be the total number of these matrices such that the sum of the entries in every $2\\times k$ window is $k$.\n\nYou are given that $A(3,9) = 560$ and $A(4,20) = 1060870$.\n\nFind $A(10^8,10^{16})$. Give your answer modulo $1\\,000\\,000\\,007$.",
-    "answer": 259158998
+    "statement": "A window into a matrix is a contiguous sub matrix.\n\nConsider a $2\\times n$ matrix where every entry is either 0 or 1.\n\nLet $A(k,n)$ be the total number of these matrices such that the sum of the entries in every $2\\times k$ window is $k$.\n\nYou are given that $A(3,9) = 560$ and $A(4,20) = 1060870$.\n\nFind $A(10^8,10^{16})$. Give your answer modulo $1\\,000\\,000\\,007$."
   },
   "tokens": [
     200006,

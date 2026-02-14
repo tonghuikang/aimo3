@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-782",
-    "statement": "The complexity of an $n\\times n$ binary matrix is the number of distinct rows and columns.\n\nFor example, consider the $3\\times 3$ matrices\n$$\t\t\\mathbf{A} = \\begin{pmatrix} 1&amp;0&amp;1\\\\0&amp;0&amp;0\\\\1&amp;0&amp;1\\end{pmatrix}\t\\quad\n\t\t\\mathbf{B} = \\begin{pmatrix} 0&amp;0&amp;0\\\\0&amp;0&amp;0\\\\1&amp;1&amp;1\\end{pmatrix}\t$$\n$\\mathbf{A}$ has complexity $2$ because the set of rows and columns is $\\{000,101\\}$.\n$\\mathbf{B}$ has complexity $3$ because the set of rows and columns is $\\{000,001,111\\}$.\n\nFor $0 \\le k \\le n^2$, let $c(n, k)$ be the minimum complexity of an $n\\times n$ binary matrix with exactly $k$ ones.\n\nLet\n$$C(n) = \\sum_{k=0}^{n^2} c(n, k)$$\nFor example, $C(2) = c(2, 0) + c(2, 1) + c(2, 2) + c(2, 3) + c(2, 4) = 1 + 2 + 2 + 2 + 1 = 8$.\n\nYou are given $C(5) = 64$, $C(10) = 274$ and $C(20) = 1150$.\n\nFind $C(10^4)$.\n\nGive your answer modulo $99991$.",
-    "answer": 41851
+    "statement": "The complexity of an $n\\times n$ binary matrix is the number of distinct rows and columns.\n\nFor example, consider the $3\\times 3$ matrices\n$$\t\t\\mathbf{A} = \\begin{pmatrix} 1&amp;0&amp;1\\\\0&amp;0&amp;0\\\\1&amp;0&amp;1\\end{pmatrix}\t\\quad\n\t\t\\mathbf{B} = \\begin{pmatrix} 0&amp;0&amp;0\\\\0&amp;0&amp;0\\\\1&amp;1&amp;1\\end{pmatrix}\t$$\n$\\mathbf{A}$ has complexity $2$ because the set of rows and columns is $\\{000,101\\}$.\n$\\mathbf{B}$ has complexity $3$ because the set of rows and columns is $\\{000,001,111\\}$.\n\nFor $0 \\le k \\le n^2$, let $c(n, k)$ be the minimum complexity of an $n\\times n$ binary matrix with exactly $k$ ones.\n\nLet\n$$C(n) = \\sum_{k=0}^{n^2} c(n, k)$$\nFor example, $C(2) = c(2, 0) + c(2, 1) + c(2, 2) + c(2, 3) + c(2, 4) = 1 + 2 + 2 + 2 + 1 = 8$.\n\nYou are given $C(5) = 64$, $C(10) = 274$ and $C(20) = 1150$.\n\nFind $C(10^4)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

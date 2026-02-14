@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-770",
-    "statement": "A and B play a game. A has originally $1$ gram of gold and B has an unlimited amount.\nEach round goes as follows:\n\n- \nA chooses and displays, $x$, a nonnegative real number no larger than the amount of gold that A has.\n\n- \nEither B chooses to TAKE. Then A gives B $x$ grams of gold.\n\n- \nOr B chooses to GIVE. Then B gives A $x$ grams of gold.\n\nB TAKEs $n$ times and GIVEs $n$ times after which the game finishes.\n\nDefine $g(X)$ to be the smallest value of $n$ so that A can guarantee to have at least $X$ grams of gold at the end of the game. You are given $g(1.7) = 10$.\n\nFind $g(1.9999)$.\n\nGive your answer modulo $99991$.",
-    "answer": 22680
+    "statement": "A and B play a game. A has originally $1$ gram of gold and B has an unlimited amount.\nEach round goes as follows:\n\n- \nA chooses and displays, $x$, a nonnegative real number no larger than the amount of gold that A has.\n\n- \nEither B chooses to TAKE. Then A gives B $x$ grams of gold.\n\n- \nOr B chooses to GIVE. Then B gives A $x$ grams of gold.\n\nB TAKEs $n$ times and GIVEs $n$ times after which the game finishes.\n\nDefine $g(X)$ to be the smallest value of $n$ so that A can guarantee to have at least $X$ grams of gold at the end of the game. You are given $g(1.7) = 10$.\n\nFind $g(1.9999)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

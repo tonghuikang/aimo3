@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-880",
-    "statement": "$(x,y)$ is called a nested radical pair if $x$ and $y$ are non-zero integers such that $\\dfrac{x}{y}$ is not a cube of a rational number, and there exist integers $a$, $b$ and $c$ such that:\n\n$$\\sqrt{\\sqrt[3]{x}+\\sqrt[3]{y}}=\\sqrt[3]{a}+\\sqrt[3]{b}+\\sqrt[3]{c}$$\nFor example, both $(-4,125)$ and $(5,5324)$ are nested radical pairs:\n\n$$\n\\begin{align*}\n\\begin{split}\n\\sqrt{\\sqrt[3]{-4}+\\sqrt[3]{125}}\t&amp;= \\sqrt[3]{-1}+\\sqrt[3]{2}+\\sqrt[3]{4}\\\\\n\\sqrt{\\sqrt[3]{5}+\\sqrt[3]{5324}}\t&amp;= \\sqrt[3]{-2}+\\sqrt[3]{20}+\\sqrt[3]{25}\\\\\n\\end{split}\n\\end{align*}\n$$\n\nLet $H(N)$ be the sum of $|x|+|y|$ for all the nested radical pairs $(x, y)$ where $|x| \\leq |y|\\leq N$.\n \nFor example, $H(10^3)=2535$.\n\nFind $H(10^{15})$. Give your answer modulo $1031^3+2$.",
-    "answer": 522095328
+    "statement": "$(x,y)$ is called a nested radical pair if $x$ and $y$ are non-zero integers such that $\\dfrac{x}{y}$ is not a cube of a rational number, and there exist integers $a$, $b$ and $c$ such that:\n\n$$\\sqrt{\\sqrt[3]{x}+\\sqrt[3]{y}}=\\sqrt[3]{a}+\\sqrt[3]{b}+\\sqrt[3]{c}$$\nFor example, both $(-4,125)$ and $(5,5324)$ are nested radical pairs:\n\n$$\n\\begin{align*}\n\\begin{split}\n\\sqrt{\\sqrt[3]{-4}+\\sqrt[3]{125}}\t&amp;= \\sqrt[3]{-1}+\\sqrt[3]{2}+\\sqrt[3]{4}\\\\\n\\sqrt{\\sqrt[3]{5}+\\sqrt[3]{5324}}\t&amp;= \\sqrt[3]{-2}+\\sqrt[3]{20}+\\sqrt[3]{25}\\\\\n\\end{split}\n\\end{align*}\n$$\n\nLet $H(N)$ be the sum of $|x|+|y|$ for all the nested radical pairs $(x, y)$ where $|x| \\leq |y|\\leq N$.\n \nFor example, $H(10^3)=2535$.\n\nFind $H(10^{15})$. Give your answer modulo $1031^3+2$."
   },
   "tokens": [
     200006,

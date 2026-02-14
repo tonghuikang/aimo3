@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-912",
-    "statement": "Let $s_n$ be the $n$-th positive integer that does not contain three consecutive ones in its binary representation.\n\nFor example, $s_1 = 1$ and $s_7 = 8$.\n\nDefine $F(N)$ to be the sum of $n^2$ for all $n\\leq N$ where $s_n$ is odd. You are given $F(10)=199$.\n\nFind $F(10^{16})$ giving your answer modulo $10^9+7$.",
-    "answer": 674045136
+    "statement": "Let $s_n$ be the $n$-th positive integer that does not contain three consecutive ones in its binary representation.\n\nFor example, $s_1 = 1$ and $s_7 = 8$.\n\nDefine $F(N)$ to be the sum of $n^2$ for all $n\\leq N$ where $s_n$ is odd. You are given $F(10)=199$.\n\nFind $F(10^{16})$ giving your answer modulo $10^9+7$."
   },
   "tokens": [
     200006,

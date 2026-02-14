@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-581",
-    "statement": "A number is $p$-smooth if it has no prime factors larger than $p$.\n\nLet $T$ be the sequence of triangular numbers, i.e. $T(n)=n(n+1)/2$.\n\nFind the sum of all indices $n$ such that $T(n)$ is $47$-smooth.\n\nGive your answer modulo $99991$.",
-    "answer": 76246
+    "statement": "A number is $p$-smooth if it has no prime factors larger than $p$.\n\nLet $T$ be the sequence of triangular numbers, i.e. $T(n)=n(n+1)/2$.\n\nFind the sum of all indices $n$ such that $T(n)$ is $47$-smooth.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

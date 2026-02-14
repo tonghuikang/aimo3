@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-853",
-    "statement": "For every positive integer $n$ the Fibonacci sequence modulo \n$n$ is periodic. The period depends on the value of $n$.\nThis period is called the Pisano period for $n$, often shortened to $\\pi(n)$.\n\nThere are three values of $n$ for which \n$\\pi(n)$ equals $18$: $19$, $38$ and $76$. The sum of those smaller than $50$ is $57$.\n\nFind the sum of the values of $n$ smaller than $1\\,000\\,000\\,000$ for which $\\pi(n)$ equals $120$.",
-    "answer": 44511058204
+    "statement": "For every positive integer $n$ the Fibonacci sequence modulo \n$n$ is periodic. The period depends on the value of $n$.\nThis period is called the Pisano period for $n$, often shortened to $\\pi(n)$.\n\nThere are three values of $n$ for which \n$\\pi(n)$ equals $18$: $19$, $38$ and $76$. The sum of those smaller than $50$ is $57$.\n\nFind the sum of the values of $n$ smaller than $1\\,000\\,000\\,000$ for which $\\pi(n)$ equals $120$."
   },
   "tokens": [
     200006,

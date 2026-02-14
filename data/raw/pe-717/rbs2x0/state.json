@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-717",
-    "statement": "For an odd prime $p$, define $f(p) = \\left\\lfloor\\frac{2^{(2^p)}}{p}\\right\\rfloor\\bmod{2^p}$\n\nFor example, when $p=3$, $\\lfloor 2^8/3\\rfloor = 85 \\equiv 5 \\pmod 8$ and so $f(3) = 5$.\n\n \n\nFurther define $g(p) = f(p)\\bmod p$. You are given $g(31) = 17$.\n\nNow define $G(N)$ to be the summation of $g(p)$ for all odd primes less than $N$.\n\nYou are given $G(100) = 474$ and $G(10^4) = 2819236$.\n\nFind $G(10^7)$.",
-    "answer": 1603036763131
+    "statement": "For an odd prime $p$, define $f(p) = \\left\\lfloor\\frac{2^{(2^p)}}{p}\\right\\rfloor\\bmod{2^p}$\n\nFor example, when $p=3$, $\\lfloor 2^8/3\\rfloor = 85 \\equiv 5 \\pmod 8$ and so $f(3) = 5$.\n\n \n\nFurther define $g(p) = f(p)\\bmod p$. You are given $g(31) = 17$.\n\nNow define $G(N)$ to be the summation of $g(p)$ for all odd primes less than $N$.\n\nYou are given $G(100) = 474$ and $G(10^4) = 2819236$.\n\nFind $G(10^7)$."
   },
   "tokens": [
     200006,

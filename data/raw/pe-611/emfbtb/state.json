@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-611",
-    "statement": "Peter moves in a hallway with $N + 1$ doors consecutively numbered from $0$ through $N$. All doors are initially closed. Peter starts in front of door $0$, and repeatedly performs the following steps:\n\n- First, he walks a positive square number of doors away from his position.\n\n- Then he walks another, larger square number of doors away from his new position.\n\n- He toggles the door he faces (opens it if closed, closes it if open).\n\n- And finally returns to door $0$.\n\nWe call an action any sequence of those steps. Peter never performs the exact same action twice, and makes sure to perform all possible actions that don't bring him past the last door.\n\nLet $F(N)$ be the number of doors that are open after Peter has performed all possible actions. You are given that $F(5) = 1$, $F(100) = 27$, $F(1000) = 233$ and $F(10^6) = 112168$.\n\nFind $F(10^{12})$.\n\nGive your answer modulo $99991$.",
-    "answer": 69784
+    "statement": "Peter moves in a hallway with $N + 1$ doors consecutively numbered from $0$ through $N$. All doors are initially closed. Peter starts in front of door $0$, and repeatedly performs the following steps:\n\n- First, he walks a positive square number of doors away from his position.\n\n- Then he walks another, larger square number of doors away from his new position.\n\n- He toggles the door he faces (opens it if closed, closes it if open).\n\n- And finally returns to door $0$.\n\nWe call an action any sequence of those steps. Peter never performs the exact same action twice, and makes sure to perform all possible actions that don't bring him past the last door.\n\nLet $F(N)$ be the number of doors that are open after Peter has performed all possible actions. You are given that $F(5) = 1$, $F(100) = 27$, $F(1000) = 233$ and $F(10^6) = 112168$.\n\nFind $F(10^{12})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-749",
-    "statement": "A positive integer, $n$, is a near power sum if there exists a positive integer, $k$, such that the sum of the $k$th powers of the digits in its decimal representation is equal to either $n+1$ or $n-1$. For example $35$ is a near power sum number because $3^2+5^2 = 34$.\n\nDefine $S(d)$ to be the sum of all near power sum numbers of $d$ digits or less. \nThen $S(2) = 110$ and $S(6) = 2562701$.\n\nFind $S(16)$.\n\nGive your answer modulo $99991$.",
-    "answer": 79236
+    "statement": "A positive integer, $n$, is a near power sum if there exists a positive integer, $k$, such that the sum of the $k$th powers of the digits in its decimal representation is equal to either $n+1$ or $n-1$. For example $35$ is a near power sum number because $3^2+5^2 = 34$.\n\nDefine $S(d)$ to be the sum of all near power sum numbers of $d$ digits or less. \nThen $S(2) = 110$ and $S(6) = 2562701$.\n\nFind $S(16)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

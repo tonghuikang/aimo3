@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-506",
-    "statement": "Consider the infinite repeating sequence of digits:\n\n1234321234321234321...\n\nAmazingly, you can break this sequence of digits into a sequence of integers such that the sum of the digits in the $n$-th value is $n$.\n\nThe sequence goes as follows:\n\n1, 2, 3, 4, 32, 123, 43, 2123, 432, 1234, 32123, ...\n\nLet $v_n$ be the $n$-th value in this sequence. For example, $v_2=2$, $v_5=32$ and $v_{11}=32123$.\n\nLet $S(n)$ be $v_1+v_2+\\cdots+v_n$. For example, $S(11)=36120$, and $S(1000)\\bmod 123454321=18232686$.\n\nFind $S(10^{14})\\bmod 123454321$.",
-    "answer": 18934502
+    "statement": "Consider the infinite repeating sequence of digits:\n\n1234321234321234321...\n\nAmazingly, you can break this sequence of digits into a sequence of integers such that the sum of the digits in the $n$-th value is $n$.\n\nThe sequence goes as follows:\n\n1, 2, 3, 4, 32, 123, 43, 2123, 432, 1234, 32123, ...\n\nLet $v_n$ be the $n$-th value in this sequence. For example, $v_2=2$, $v_5=32$ and $v_{11}=32123$.\n\nLet $S(n)$ be $v_1+v_2+\\cdots+v_n$. For example, $S(11)=36120$, and $S(1000)\\bmod 123454321=18232686$.\n\nFind $S(10^{14})\\bmod 123454321$."
   },
   "tokens": [
     200006,

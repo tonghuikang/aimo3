@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-642",
-    "statement": "Let $f(n)$ be the largest prime factor of $n$ and $\\displaystyle F(n) = \\sum_{i=2}^n f(i)$.\n\nFor example $F(10)=32$, $F(100)=1915$ and $F(10000)=10118280$.\n\nFind $F(201820182018)$. Give your answer modulus $10^9$.\n\nGive your answer modulo $99991$.",
-    "answer": 55879
+    "statement": "Let $f(n)$ be the largest prime factor of $n$ and $\\displaystyle F(n) = \\sum_{i=2}^n f(i)$.\n\nFor example $F(10)=32$, $F(100)=1915$ and $F(10000)=10118280$.\n\nFind $F(201820182018)$. Give your answer modulus $10^9$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

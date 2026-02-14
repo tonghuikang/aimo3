@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-955",
-    "statement": "A sequence $(a_n)_{n \\ge 0}$ starts with $a_0 = 3$ and for each $n \\ge 0$,\n\n- if $a_n$ is a triangle numberA triangle number is a number of the form $m(m + 1)/2$ for some integer $m$., then $a_{n + 1} = a_n + 1$;\n\n- otherwise, $a_{n + 1} = 2a_n - a_{n - 1} + 1$.\n\nThe sequence begins:\n$${\\color{red}3}, 4, {\\color{red}6}, 7, 9, 12, 16, {\\color{red}21}, 22, 24, 27, 31, {\\color{red}36}, 37, 39, 42, \\dots$$\nwhere triangle numbers are marked red.\n\nThe $10$th triangle number in the sequence is $a_{2964} = 1439056$.\n\nFind the index $n$ such that $a_n$ is the $70$th triangle number in the sequence.\n\nGive your answer modulo $99991$.",
-    "answer": 99862
+    "statement": "A sequence $(a_n)_{n \\ge 0}$ starts with $a_0 = 3$ and for each $n \\ge 0$,\n\n- if $a_n$ is a triangle numberA triangle number is a number of the form $m(m + 1)/2$ for some integer $m$., then $a_{n + 1} = a_n + 1$;\n\n- otherwise, $a_{n + 1} = 2a_n - a_{n - 1} + 1$.\n\nThe sequence begins:\n$${\\color{red}3}, 4, {\\color{red}6}, 7, 9, 12, 16, {\\color{red}21}, 22, 24, 27, 31, {\\color{red}36}, 37, 39, 42, \\dots$$\nwhere triangle numbers are marked red.\n\nThe $10$th triangle number in the sequence is $a_{2964} = 1439056$.\n\nFind the index $n$ such that $a_n$ is the $70$th triangle number in the sequence.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

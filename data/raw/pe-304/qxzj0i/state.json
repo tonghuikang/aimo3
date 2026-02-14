@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-304",
-    "statement": "For any positive integer $n$ the function $\\operatorname{next\\_prime}(n)$ returns the smallest prime $p$ such that $p \\gt n$.\n\nThe sequence $a(n)$ is defined by:\n\n$a(1)=\\operatorname{next\\_prime}(10^{14})$ and $a(n)=\\operatorname{next\\_prime}(a(n-1))$ for $n \\gt 1$.\n\nThe Fibonacci sequence $f(n)$ is defined by:\n$f(0)=0$, $f(1)=1$ and $f(n)=f(n-1)+f(n-2)$ for $n \\gt 1$.\n\nThe sequence $b(n)$ is defined as $f(a(n))$.\n\nFind $\\sum b(n)$ for $1 \\le n \\le 100\\,000$. \nGive your answer mod $1234567891011$.",
-    "answer": 283988410192
+    "statement": "For any positive integer $n$ the function $\\operatorname{next\\_prime}(n)$ returns the smallest prime $p$ such that $p \\gt n$.\n\nThe sequence $a(n)$ is defined by:\n\n$a(1)=\\operatorname{next\\_prime}(10^{14})$ and $a(n)=\\operatorname{next\\_prime}(a(n-1))$ for $n \\gt 1$.\n\nThe Fibonacci sequence $f(n)$ is defined by:\n$f(0)=0$, $f(1)=1$ and $f(n)=f(n-1)+f(n-2)$ for $n \\gt 1$.\n\nThe sequence $b(n)$ is defined as $f(a(n))$.\n\nFind $\\sum b(n)$ for $1 \\le n \\le 100\\,000$. \nGive your answer mod $1234567891011$."
   },
   "tokens": [
     200006,

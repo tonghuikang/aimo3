@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-591",
-    "statement": "Given a non-square integer $d$, any real $x$ can be approximated arbitrarily close by quadratic integers $a+b\\sqrt{d}$, where $a,b$ are integers. For example, the following inequalities approximate $\\pi$ with precision $10^{-13}$:\n\n$$4375636191520\\sqrt{2}-6188084046055 &lt; \\pi &lt; 721133315582\\sqrt{2}-1019836515172 $$\n \nWe call $BQA_d(x,n)$ the quadratic integer closest to $x$ with the absolute values of $a,b$ not exceeding $n$.\n We also define the integral part of a quadratic integer as $I_d(a+b\\sqrt{d}) = a$.\n\nYou are given that:\n\n- $BQA_2(\\pi,10) = 6 - 2\\sqrt{2}$\n\n- $BQA_5(\\pi,100)=26\\sqrt{5}-55$\n\n- $BQA_7(\\pi,10^6)=560323 - 211781\\sqrt{7}$\n\n- $I_2(BQA_2(\\pi,10^{13}))=-6188084046055$\n\nFind the sum of $|I_d(BQA_d(\\pi,10^{13}))|$ for all  non-square positive integers less than 100.\n\nGive your answer modulo $99991$.",
-    "answer": 5630
+    "statement": "Given a non-square integer $d$, any real $x$ can be approximated arbitrarily close by quadratic integers $a+b\\sqrt{d}$, where $a,b$ are integers. For example, the following inequalities approximate $\\pi$ with precision $10^{-13}$:\n\n$$4375636191520\\sqrt{2}-6188084046055 &lt; \\pi &lt; 721133315582\\sqrt{2}-1019836515172 $$\n \nWe call $BQA_d(x,n)$ the quadratic integer closest to $x$ with the absolute values of $a,b$ not exceeding $n$.\n We also define the integral part of a quadratic integer as $I_d(a+b\\sqrt{d}) = a$.\n\nYou are given that:\n\n- $BQA_2(\\pi,10) = 6 - 2\\sqrt{2}$\n\n- $BQA_5(\\pi,100)=26\\sqrt{5}-55$\n\n- $BQA_7(\\pi,10^6)=560323 - 211781\\sqrt{7}$\n\n- $I_2(BQA_2(\\pi,10^{13}))=-6188084046055$\n\nFind the sum of $|I_d(BQA_d(\\pi,10^{13}))|$ for all  non-square positive integers less than 100.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

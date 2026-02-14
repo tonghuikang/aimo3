@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-548",
-    "statement": "A gozinta chain for $n$ is a sequence $\\{1,a,b,\\dots,n\\}$ where each element properly divides the next.\n\nThere are eight gozinta chains for $12$:\n\n$\\{1,12\\}$, $\\{1,2,12\\}$, $\\{1,2,4,12\\}$, $\\{1,2,6,12\\}$, $\\{1,3,12\\}$, $\\{1,3,6,12\\}$, $\\{1,4,12\\}$ and $\\{1,6,12\\}$.\n \nLet $g(n)$ be the number of gozinta chains for $n$, so $g(12)=8$.\n\n$g(48)=48$ and $g(120)=132$.\n\nFind the sum of the numbers $n$  not exceeding $10^{16}$ for which $g(n)=n$.\n\nGive your answer modulo $99991$.",
-    "answer": 71212
+    "statement": "A gozinta chain for $n$ is a sequence $\\{1,a,b,\\dots,n\\}$ where each element properly divides the next.\n\nThere are eight gozinta chains for $12$:\n\n$\\{1,12\\}$, $\\{1,2,12\\}$, $\\{1,2,4,12\\}$, $\\{1,2,6,12\\}$, $\\{1,3,12\\}$, $\\{1,3,6,12\\}$, $\\{1,4,12\\}$ and $\\{1,6,12\\}$.\n \nLet $g(n)$ be the number of gozinta chains for $n$, so $g(12)=8$.\n\n$g(48)=48$ and $g(120)=132$.\n\nFind the sum of the numbers $n$  not exceeding $10^{16}$ for which $g(n)=n$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

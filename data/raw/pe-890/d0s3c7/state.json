@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-890",
-    "statement": "Let $p(n)$ be the number of ways to write $n$ as the sum of powers of two, ignoring order.\n\nFor example, $p(7) = 6$, the partitions being\n$$\n\\begin{align}\n7 &amp;= 1+1+1+1+1+1+1 \\\\\n&amp;=1+1+1+1+1+2 \\\\\n&amp;=1+1+1+2+2 \\\\\n&amp;=1+1+1+4 \\\\\n&amp;=1+2+2+2 \\\\\n&amp;=1+2+4\n\\end{align}\n$$\nYou are also given $p(7^7) \\equiv 144548435 \\pmod {10^9+7}$.\n\nFind $p(7^{777})$. Give your answer modulo $10^9 + 7$.",
-    "answer": 820442179
+    "statement": "Let $p(n)$ be the number of ways to write $n$ as the sum of powers of two, ignoring order.\n\nFor example, $p(7) = 6$, the partitions being\n$$\n\\begin{align}\n7 &amp;= 1+1+1+1+1+1+1 \\\\\n&amp;=1+1+1+1+1+2 \\\\\n&amp;=1+1+1+2+2 \\\\\n&amp;=1+1+1+4 \\\\\n&amp;=1+2+2+2 \\\\\n&amp;=1+2+4\n\\end{align}\n$$\nYou are also given $p(7^7) \\equiv 144548435 \\pmod {10^9+7}$.\n\nFind $p(7^{777})$. Give your answer modulo $10^9 + 7$."
   },
   "tokens": [
     200006,

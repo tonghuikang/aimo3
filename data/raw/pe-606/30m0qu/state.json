@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-606",
-    "statement": "A gozinta chain for $n$ is a sequence $\\{1,a,b,\\dots,n\\}$ where each element properly divides the next. \n\nFor example, there are eight distinct gozinta chains for $12$:\n\n$\\{1,12\\}$, $\\{1,2,12\\}$, $\\{1,2,4,12\\}$, $\\{1,2,6,12\\}$, $\\{1,3,12\\}$, $\\{1,3,6,12\\}$, $\\{1,4,12\\}$ and $\\{1,6,12\\}$.\n\nLet $S(n)$ be the sum of all numbers, $k$, not exceeding $n$, which have $252$ distinct gozinta chains. \n\nYou are given $S(10^6)=8462952$ and $S(10^{12})=623291998881978$.\n\nFind $S(10^{36})$, giving the last nine digits of your answer.",
-    "answer": 158452775
+    "statement": "A gozinta chain for $n$ is a sequence $\\{1,a,b,\\dots,n\\}$ where each element properly divides the next. \n\nFor example, there are eight distinct gozinta chains for $12$:\n\n$\\{1,12\\}$, $\\{1,2,12\\}$, $\\{1,2,4,12\\}$, $\\{1,2,6,12\\}$, $\\{1,3,12\\}$, $\\{1,3,6,12\\}$, $\\{1,4,12\\}$ and $\\{1,6,12\\}$.\n\nLet $S(n)$ be the sum of all numbers, $k$, not exceeding $n$, which have $252$ distinct gozinta chains. \n\nYou are given $S(10^6)=8462952$ and $S(10^{12})=623291998881978$.\n\nFind $S(10^{36})$, giving the last nine digits of your answer."
   },
   "tokens": [
     200006,

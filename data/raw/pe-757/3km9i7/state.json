@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-757",
-    "statement": "A positive integer $N$ is stealthy, if there exist positive integers $a$, $b$, $c$, $d$ such that $ab = cd = N$ and $a+b = c+d+1$.\n\nFor example, $36 = 4\\times 9 = 6\\times 6$ is stealthy.\n\nYou are also given that there are 2851 stealthy numbers not exceeding $10^6$.\n\nHow many stealthy numbers  are there that don't exceed $10^{14}$?\n\nGive your answer modulo $99991$.",
-    "answer": 44166
+    "statement": "A positive integer $N$ is stealthy, if there exist positive integers $a$, $b$, $c$, $d$ such that $ab = cd = N$ and $a+b = c+d+1$.\n\nFor example, $36 = 4\\times 9 = 6\\times 6$ is stealthy.\n\nYou are also given that there are 2851 stealthy numbers not exceeding $10^6$.\n\nHow many stealthy numbers  are there that don't exceed $10^{14}$?\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

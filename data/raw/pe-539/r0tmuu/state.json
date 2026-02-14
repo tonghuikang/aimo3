@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-539",
-    "statement": "Start from an ordered list of all integers from $1$ to $n$. Going from left to right, remove the first number and every other number afterward until the end of the list. Repeat the procedure from right to left, removing the right most number and every other number from the numbers left. Continue removing every other numbers, alternating left to right and right to left, until a single number remains.\n\nStarting with $n = 9$, we have:\n\n$\\underline 1\\,2\\,\\underline 3\\,4\\,\\underline 5\\,6\\,\\underline 7\\,8\\,\\underline 9$\n\n$2\\,\\underline 4\\,6\\,\\underline 8$\n\n$\\underline 2\\,6$\n\n$6$\n\nLet $P(n)$ be the last number left starting with a list of length $n$.\n\nLet $\\displaystyle S(n) = \\sum_{k=1}^n P(k)$.\n\nYou are given $P(1)=1$, $P(9) = 6$, $P(1000)=510$, $S(1000)=268271$.\n\nFind $S(10^{18}) \\bmod 987654321$.",
-    "answer": 426334056
+    "statement": "Start from an ordered list of all integers from $1$ to $n$. Going from left to right, remove the first number and every other number afterward until the end of the list. Repeat the procedure from right to left, removing the right most number and every other number from the numbers left. Continue removing every other numbers, alternating left to right and right to left, until a single number remains.\n\nStarting with $n = 9$, we have:\n\n$\\underline 1\\,2\\,\\underline 3\\,4\\,\\underline 5\\,6\\,\\underline 7\\,8\\,\\underline 9$\n\n$2\\,\\underline 4\\,6\\,\\underline 8$\n\n$\\underline 2\\,6$\n\n$6$\n\nLet $P(n)$ be the last number left starting with a list of length $n$.\n\nLet $\\displaystyle S(n) = \\sum_{k=1}^n P(k)$.\n\nYou are given $P(1)=1$, $P(9) = 6$, $P(1000)=510$, $S(1000)=268271$.\n\nFind $S(10^{18}) \\bmod 987654321$."
   },
   "tokens": [
     200006,

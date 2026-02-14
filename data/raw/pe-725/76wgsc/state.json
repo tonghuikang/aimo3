@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-725",
-    "statement": "A number where one digit is the sum of the other digits is called a digit sum number or DS-number for short. For example, $352$, $3003$ and $32812$ are DS-numbers.\n\nWe define $S(n)$ to be the sum of all DS-numbers of $n$ digits or less.\n\nYou are given $S(3) = 63270$ and $S(7) = 85499991450$.\n\nFind $S(2020)$. Give your answer modulo $10^{16}$.",
-    "answer": 4598797036650685
+    "statement": "A number where one digit is the sum of the other digits is called a digit sum number or DS-number for short. For example, $352$, $3003$ and $32812$ are DS-numbers.\n\nWe define $S(n)$ to be the sum of all DS-numbers of $n$ digits or less.\n\nYou are given $S(3) = 63270$ and $S(7) = 85499991450$.\n\nFind $S(2020)$. Give your answer modulo $10^{16}$."
   },
   "tokens": [
     200006,

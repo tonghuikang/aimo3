@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-961",
-    "statement": "This game starts with a positive integer. Two players take turns to remove a single digit from that integer. After the digit is removed any resulting leading zeros are removed.\n\nFor example, removing a digit from $105$ results in either $5$, $10$ or $15$.\n\nThe winner is the person who removes the last nonzero digit.\n\nDefine $W(N)$ to be how many positive integers less than $N$ for which the first player can guarantee a win given optimal play. You are given $W(100) = 18$ and $W(10^4) = 1656$.\n\nFind $W(10^{18})$.",
-    "answer": 166666666689036288
+    "statement": "This game starts with a positive integer. Two players take turns to remove a single digit from that integer. After the digit is removed any resulting leading zeros are removed.\n\nFor example, removing a digit from $105$ results in either $5$, $10$ or $15$.\n\nThe winner is the person who removes the last nonzero digit.\n\nDefine $W(N)$ to be how many positive integers less than $N$ for which the first player can guarantee a win given optimal play. You are given $W(100) = 18$ and $W(10^4) = 1656$.\n\nFind $W(10^{18})$."
   },
   "tokens": [
     200006,

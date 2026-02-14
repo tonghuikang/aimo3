@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-876",
-    "statement": "Starting with three numbers $a, b, c$, at each step do one of the three operations:\n\n- change $a$ to $2(b + c) - a$;\n\n- change $b$ to $2(c + a) - b$;\n\n- change $c$ to $2(a + b) - c$;\n\nDefine $f(a, b, c)$ to be the minimum number of steps required for one number to become zero. If this is not possible then $f(a, b, c)=0$.\n\nFor example, $f(6,10,35)=3$:\n$$(6,10,35) \\to (6,10,-3) \\to (8,10,-3) \\to (8,0,-3).$$\nHowever, $f(6,10,36)=0$ as no series of operations leads to a zero number.\n\nAlso define $F(a, b)=\\sum_{c=1}^\\infty f(a,b,c)$.\nYou are given $F(6,10)=17$ and $F(36,100)=179$.\n\nFind $\\displaystyle\\sum_{k=1}^{18}F(6^k,10^k)$.\n\nGive your answer modulo $99991$.",
-    "answer": 54049
+    "statement": "Starting with three numbers $a, b, c$, at each step do one of the three operations:\n\n- change $a$ to $2(b + c) - a$;\n\n- change $b$ to $2(c + a) - b$;\n\n- change $c$ to $2(a + b) - c$;\n\nDefine $f(a, b, c)$ to be the minimum number of steps required for one number to become zero. If this is not possible then $f(a, b, c)=0$.\n\nFor example, $f(6,10,35)=3$:\n$$(6,10,35) \\to (6,10,-3) \\to (8,10,-3) \\to (8,0,-3).$$\nHowever, $f(6,10,36)=0$ as no series of operations leads to a zero number.\n\nAlso define $F(a, b)=\\sum_{c=1}^\\infty f(a,b,c)$.\nYou are given $F(6,10)=17$ and $F(36,100)=179$.\n\nFind $\\displaystyle\\sum_{k=1}^{18}F(6^k,10^k)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

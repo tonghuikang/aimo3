@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-734",
-    "statement": "The logical-OR of two bits is $0$ if both bits are $0$, otherwise it is $1$.\n\nThe bitwise-OR of two positive integers performs a logical-OR operation on each pair of corresponding bits in the binary expansion of its inputs.\n\nFor example, the bitwise-OR of $10$ and $6$ is $14$ because $10 = 1010_2$, $6 = 0110_2$ and $14 = 1110_2$.\n\nLet $T(n, k)$ be the number of $k$-tuples $(x_1, x_2,\\cdots,x_k)$ such that\n\n- every $x_i$ is a prime $\\leq n$\n\n- the bitwise-OR of the tuple is a prime $\\leq n$\n\nFor example, $T(5, 2)=5$. The five $2$-tuples are $(2, 2)$, $(2, 3)$, $(3, 2)$, $(3, 3)$ and $(5, 5)$.\n\nYou are given $T(100, 3) = 3355$ and $T(1000, 10) \\equiv 2071632 \\pmod{1\\,000\\,000\\,007}$.\n\nFind $T(10^6,999983)$. Give your answer modulo $1\\,000\\,000\\,007$.",
-    "answer": 557988060
+    "statement": "The logical-OR of two bits is $0$ if both bits are $0$, otherwise it is $1$.\n\nThe bitwise-OR of two positive integers performs a logical-OR operation on each pair of corresponding bits in the binary expansion of its inputs.\n\nFor example, the bitwise-OR of $10$ and $6$ is $14$ because $10 = 1010_2$, $6 = 0110_2$ and $14 = 1110_2$.\n\nLet $T(n, k)$ be the number of $k$-tuples $(x_1, x_2,\\cdots,x_k)$ such that\n\n- every $x_i$ is a prime $\\leq n$\n\n- the bitwise-OR of the tuple is a prime $\\leq n$\n\nFor example, $T(5, 2)=5$. The five $2$-tuples are $(2, 2)$, $(2, 3)$, $(3, 2)$, $(3, 3)$ and $(5, 5)$.\n\nYou are given $T(100, 3) = 3355$ and $T(1000, 10) \\equiv 2071632 \\pmod{1\\,000\\,000\\,007}$.\n\nFind $T(10^6,999983)$. Give your answer modulo $1\\,000\\,000\\,007$."
   },
   "tokens": [
     200006,

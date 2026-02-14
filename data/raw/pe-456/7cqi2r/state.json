@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-456",
-    "statement": "Define:\n$x_n = (1248^n \\bmod 32323) - 16161$\n$y_n = (8421^n \\bmod 30103) - 15051$\n\n$P_n = \\{(x_1, y_1), (x_2, y_2), \\dots, (x_n, y_n)\\}$\n\nFor example, $P_8 = \\{(-14913, -6630),$$(-10161, 5625),$$(5226, 11896),$$(8340, -10778),$$(15852, -5203),$$(-15165, 11295),$$(-1427, -14495),$$(12407, 1060)\\}$.\n\nLet $C(n)$ be the number of triangles whose vertices are in $P_n$ which contain the origin in the interior.\n\nExamples:\n\n$C(8) = 20$\n\n$C(600) = 8950634$\n\n$C(40\\,000) = 2666610948988$\n\nFind $C(2\\,000\\,000)$.",
-    "answer": 333333208685971546
+    "statement": "Define:\n$x_n = (1248^n \\bmod 32323) - 16161$\n$y_n = (8421^n \\bmod 30103) - 15051$\n\n$P_n = \\{(x_1, y_1), (x_2, y_2), \\dots, (x_n, y_n)\\}$\n\nFor example, $P_8 = \\{(-14913, -6630),$$(-10161, 5625),$$(5226, 11896),$$(8340, -10778),$$(15852, -5203),$$(-15165, 11295),$$(-1427, -14495),$$(12407, 1060)\\}$.\n\nLet $C(n)$ be the number of triangles whose vertices are in $P_n$ which contain the origin in the interior.\n\nExamples:\n\n$C(8) = 20$\n\n$C(600) = 8950634$\n\n$C(40\\,000) = 2666610948988$\n\nFind $C(2\\,000\\,000)$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-973",
-    "statement": "A game is played with $n$ cards.\nAt the start the cards are dealt out onto a table to get $n$ piles of size one.\n\nEach round proceeds as follows:\n\n- Select a pile at random and pick it up.\n\n- Randomly choose a pile from the table and add the top card of the picked-up pile to it.\n\n- Redistribute any remaining cards from the picked-up pile by dealing them into new single-card piles.\n\nThe game ends when all cards are in a single pile.\n\nAt the end of each round a score is obtained by bitwise-XORing the size of each pile. The score is summed across the rounds. Let $X(n)$ be the expected total score at the end of the game.\n\nYou are given $X(2) = 2$, $X(4) = 14$ and $X(10) = 1418$.\n\nFind $X(10^4)$. Give your answer modulo $10^9+7$.",
-    "answer": 427278142
+    "statement": "A game is played with $n$ cards.\nAt the start the cards are dealt out onto a table to get $n$ piles of size one.\n\nEach round proceeds as follows:\n\n- Select a pile at random and pick it up.\n\n- Randomly choose a pile from the table and add the top card of the picked-up pile to it.\n\n- Redistribute any remaining cards from the picked-up pile by dealing them into new single-card piles.\n\nThe game ends when all cards are in a single pile.\n\nAt the end of each round a score is obtained by bitwise-XORing the size of each pile. The score is summed across the rounds. Let $X(n)$ be the expected total score at the end of the game.\n\nYou are given $X(2) = 2$, $X(4) = 14$ and $X(10) = 1418$.\n\nFind $X(10^4)$. Give your answer modulo $10^9+7$."
   },
   "tokens": [
     200006,

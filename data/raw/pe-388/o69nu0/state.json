@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-388",
-    "statement": "Consider all lattice points $(a,b,c)$ with $0 \\le a,b,c \\le N$.\n\nFrom the origin $O(0,0,0)$ all lines are drawn to the other lattice points.\n\nLet $D(N)$ be the number of distinct such lines.\n\nYou are given that $D(1\\,000\\,000) = 831909254469114121$.\n\nFind $D(10^{10})$. Give as your answer the first nine digits followed by the last nine digits.",
-    "answer": 831907372805129931
+    "statement": "Consider all lattice points $(a,b,c)$ with $0 \\le a,b,c \\le N$.\n\nFrom the origin $O(0,0,0)$ all lines are drawn to the other lattice points.\n\nLet $D(N)$ be the number of distinct such lines.\n\nYou are given that $D(1\\,000\\,000) = 831909254469114121$.\n\nFind $D(10^{10})$. Give as your answer the first nine digits followed by the last nine digits."
   },
   "tokens": [
     200006,

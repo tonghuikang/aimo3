@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-468",
-    "statement": "An integer is called B-smooth if none of its prime factors is greater than $B$.\n\nLet $S_B(n)$ be the largest $B$-smooth divisor of $n$.\n\nExamples:\n\n$S_1(10)=1$\n\n$S_4(2100) = 12$\n\n$S_{17}(2496144) = 5712$\n\nDefine $\\displaystyle F(n)=\\sum_{B=1}^n \\sum_{r=0}^n S_B(\\binom n r)$. Here, $\\displaystyle \\binom n r$ denotes the binomial coefficient.\n\nExamples:\n\n$F(11) = 3132$\n\n$F(1111) \\mod 1\\,000\\,000\\,993 = 706036312$\n\n$F(111\\,111) \\mod 1\\,000\\,000\\,993 = 22156169$\n\nFind $F(11\\,111\\,111)  \\mod 1\\,000\\,000\\,993$.",
-    "answer": 852950321
+    "statement": "An integer is called B-smooth if none of its prime factors is greater than $B$.\n\nLet $S_B(n)$ be the largest $B$-smooth divisor of $n$.\n\nExamples:\n\n$S_1(10)=1$\n\n$S_4(2100) = 12$\n\n$S_{17}(2496144) = 5712$\n\nDefine $\\displaystyle F(n)=\\sum_{B=1}^n \\sum_{r=0}^n S_B(\\binom n r)$. Here, $\\displaystyle \\binom n r$ denotes the binomial coefficient.\n\nExamples:\n\n$F(11) = 3132$\n\n$F(1111) \\mod 1\\,000\\,000\\,993 = 706036312$\n\n$F(111\\,111) \\mod 1\\,000\\,000\\,993 = 22156169$\n\nFind $F(11\\,111\\,111)  \\mod 1\\,000\\,000\\,993$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-686",
-    "statement": "$2^7=128$ is the first power of two whose leading digits are \"12\".\n\nThe next power of two whose leading digits are \"12\" is $2^{80}$.\n\nDefine $p(L, n)$ to be the $n$th-smallest value of $j$ such that the base 10 representation of $2^j$ begins with the digits of $L$.\n\nSo $p(12, 1) = 7$ and $p(12, 2) = 80$.\n\nYou are also given that $p(123, 45) = 12710$.\n\nFind $p(123, 678910)$.\n\nGive your answer modulo $99991$.",
-    "answer": 77593
+    "statement": "$2^7=128$ is the first power of two whose leading digits are \"12\".\n\nThe next power of two whose leading digits are \"12\" is $2^{80}$.\n\nDefine $p(L, n)$ to be the $n$th-smallest value of $j$ such that the base 10 representation of $2^j$ begins with the digits of $L$.\n\nSo $p(12, 1) = 7$ and $p(12, 2) = 80$.\n\nYou are also given that $p(123, 45) = 12710$.\n\nFind $p(123, 678910)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

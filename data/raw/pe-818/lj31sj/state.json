@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-818",
-    "statement": "The SET\u00ae card game is played with a pack of $81$ distinct cards. Each card has four features (Shape, Color, Number, Shading). Each feature has three different variants (e.g. Color can be red, purple, green).\n\nA SET consists of three different cards such that each feature is either the same on each card or different on each card.\n\nFor a collection $C_n$ of $n$ cards, let $S(C_n)$ denote the number of SETs in $C_n$. Then define $F(n) = \\sum\\limits_{C_n} S(C_n)^4$ where $C_n$ ranges through all collections of $n$ cards (among the $81$ cards).\nYou are given $F(3) = 1080$ and $F(6) = 159690960$.\n\nFind $F(12)$.\n\n$\\scriptsize{\\text{SET is a registered trademark of Cannei, LLC.  All rights reserved.  \nUsed with permission from PlayMonster, LLC.}}$\n\nGive your answer modulo $99991$.",
-    "answer": 91400
+    "statement": "The SET\u00ae card game is played with a pack of $81$ distinct cards. Each card has four features (Shape, Color, Number, Shading). Each feature has three different variants (e.g. Color can be red, purple, green).\n\nA SET consists of three different cards such that each feature is either the same on each card or different on each card.\n\nFor a collection $C_n$ of $n$ cards, let $S(C_n)$ denote the number of SETs in $C_n$. Then define $F(n) = \\sum\\limits_{C_n} S(C_n)^4$ where $C_n$ ranges through all collections of $n$ cards (among the $81$ cards).\nYou are given $F(3) = 1080$ and $F(6) = 159690960$.\n\nFind $F(12)$.\n\n$\\scriptsize{\\text{SET is a registered trademark of Cannei, LLC.  All rights reserved.  \nUsed with permission from PlayMonster, LLC.}}$\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

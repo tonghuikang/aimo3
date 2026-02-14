@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-393",
-    "statement": "An $n \\times n$ grid of squares contains $n^2$ ants, one ant per square.\n\nAll ants decide to move simultaneously to an adjacent square (usually $4$ possibilities, except for ants on the edge of the grid or at the corners).\n\nWe define $f(n)$ to be the number of ways this can happen without any ants ending on the same square and without any two ants crossing the same edge between two squares.\n\nYou are given that $f(4) = 88$.\n\nFind $f(10)$.\n\nGive your answer modulo $99991$.",
-    "answer": 53273
+    "statement": "An $n \\times n$ grid of squares contains $n^2$ ants, one ant per square.\n\nAll ants decide to move simultaneously to an adjacent square (usually $4$ possibilities, except for ants on the edge of the grid or at the corners).\n\nWe define $f(n)$ to be the number of ways this can happen without any ants ending on the same square and without any two ants crossing the same edge between two squares.\n\nYou are given that $f(4) = 88$.\n\nFind $f(10)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

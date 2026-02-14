@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-721",
-    "statement": "Given is the function $f(a,n)=\\lfloor (\\lceil \\sqrt a \\rceil + \\sqrt a)^n \\rfloor$.\n\n$\\lfloor \\cdot \\rfloor$ denotes the floor function and $\\lceil \\cdot \\rceil$ denotes the ceiling function.\n\n$f(5,2)=27$ and $f(5,5)=3935$.\n\n$G(n) = \\displaystyle \\sum_{a=1}^n f(a, a^2).$\n\n$G(1000) \\bmod 999\\,999\\,937=163861845. $\n\nFind $G(5\\,000\\,000).$ Give your answer modulo $999\\,999\\,937$.",
-    "answer": 700792959
+    "statement": "Given is the function $f(a,n)=\\lfloor (\\lceil \\sqrt a \\rceil + \\sqrt a)^n \\rfloor$.\n\n$\\lfloor \\cdot \\rfloor$ denotes the floor function and $\\lceil \\cdot \\rceil$ denotes the ceiling function.\n\n$f(5,2)=27$ and $f(5,5)=3935$.\n\n$G(n) = \\displaystyle \\sum_{a=1}^n f(a, a^2).$\n\n$G(1000) \\bmod 999\\,999\\,937=163861845. $\n\nFind $G(5\\,000\\,000).$ Give your answer modulo $999\\,999\\,937$."
   },
   "tokens": [
     200006,

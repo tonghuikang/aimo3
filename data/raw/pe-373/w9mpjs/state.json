@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-373",
-    "statement": "Every triangle has a circumscribed circle that goes through the three vertices.\nConsider all integer sided triangles for which the radius of the circumscribed circle is integral as well.\n\nLet $S(n)$ be the sum of the radii of the circumscribed circles of all such triangles for which the radius does not exceed $n$.\n\n$S(100)=4950$ and $S(1200)=1653605$.\n\nFind $S(10^7)$.\n\nGive your answer modulo $99991$.",
-    "answer": 12505
+    "statement": "Every triangle has a circumscribed circle that goes through the three vertices.\nConsider all integer sided triangles for which the radius of the circumscribed circle is integral as well.\n\nLet $S(n)$ be the sum of the radii of the circumscribed circles of all such triangles for which the radius does not exceed $n$.\n\n$S(100)=4950$ and $S(1200)=1653605$.\n\nFind $S(10^7)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

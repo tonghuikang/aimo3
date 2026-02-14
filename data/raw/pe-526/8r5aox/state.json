@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-526",
-    "statement": "Let $f(n)$ be the largest prime factor of $n$.\n\nLet $g(n) = f(n) + f(n + 1) + f(n + 2) + f(n + 3) + f(n + 4) + f(n + 5) + f(n + 6) + f(n + 7) + f(n + 8)$, the sum of the largest prime factor of each of nine consecutive numbers starting with $n$.\n\nLet $h(n)$ be the maximum value of $g(k)$ for $2 \\le k \\le n$.\n\nYou are given:\n\n- $f(100) = 5$\n\n- $f(101) = 101$\n\n- $g(100) = 409$\n\n- $h(100) = 417$\n\n- $h(10^9) = 4896292593$\n\nFind $h(10^{16})$.\n\nGive your answer modulo $99991$.",
-    "answer": 82308
+    "statement": "Let $f(n)$ be the largest prime factor of $n$.\n\nLet $g(n) = f(n) + f(n + 1) + f(n + 2) + f(n + 3) + f(n + 4) + f(n + 5) + f(n + 6) + f(n + 7) + f(n + 8)$, the sum of the largest prime factor of each of nine consecutive numbers starting with $n$.\n\nLet $h(n)$ be the maximum value of $g(k)$ for $2 \\le k \\le n$.\n\nYou are given:\n\n- $f(100) = 5$\n\n- $f(101) = 101$\n\n- $g(100) = 409$\n\n- $h(100) = 417$\n\n- $h(10^9) = 4896292593$\n\nFind $h(10^{16})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

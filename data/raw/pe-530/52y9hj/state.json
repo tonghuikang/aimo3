@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-530",
-    "statement": "Every divisor $d$ of a number $n$ has a complementary divisor $n/d$.\n\nLet $f(n)$ be the sum of the greatest common divisor of $d$ and $n/d$ over all positive divisors $d$ of $n$, that is\n$f(n)=\\displaystyle\\sum_{d\\mid n}\\gcd(d,\\frac n d)$.\n\nLet $F$ be the summatory function of $f$, that is\n$F(k)=\\displaystyle\\sum_{n=1}^k f(n)$.\n\nYou are given that $F(10)=32$ and $F(1000)=12776$.\n\nFind $F(10^{15})$.\n\nGive your answer modulo $99991$.",
-    "answer": 40745
+    "statement": "Every divisor $d$ of a number $n$ has a complementary divisor $n/d$.\n\nLet $f(n)$ be the sum of the greatest common divisor of $d$ and $n/d$ over all positive divisors $d$ of $n$, that is\n$f(n)=\\displaystyle\\sum_{d\\mid n}\\gcd(d,\\frac n d)$.\n\nLet $F$ be the summatory function of $f$, that is\n$F(k)=\\displaystyle\\sum_{n=1}^k f(n)$.\n\nYou are given that $F(10)=32$ and $F(1000)=12776$.\n\nFind $F(10^{15})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

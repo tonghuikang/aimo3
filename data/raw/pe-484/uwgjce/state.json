@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-484",
-    "statement": "The arithmetic derivative is defined by\n\n- $p^\\prime = 1$ for any prime $p$\n\n- $(ab)^\\prime = a^\\prime b + ab^\\prime$ for all integers $a, b$ (Leibniz rule)\n\nFor example, $20^\\prime = 24$.\n\nFind $\\sum \\operatorname{\\mathbf{gcd}}(k,k^\\prime)$ for $1 \\lt k \\le 5 \\times 10^{15}$.\n\nNote: $\\operatorname{\\mathbf{gcd}}(x,y)$ denotes the greatest common divisor of $x$ and $y$.\n\nGive your answer modulo $99991$.",
-    "answer": 57421
+    "statement": "The arithmetic derivative is defined by\n\n- $p^\\prime = 1$ for any prime $p$\n\n- $(ab)^\\prime = a^\\prime b + ab^\\prime$ for all integers $a, b$ (Leibniz rule)\n\nFor example, $20^\\prime = 24$.\n\nFind $\\sum \\operatorname{\\mathbf{gcd}}(k,k^\\prime)$ for $1 \\lt k \\le 5 \\times 10^{15}$.\n\nNote: $\\operatorname{\\mathbf{gcd}}(x,y)$ denotes the greatest common divisor of $x$ and $y$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-464",
-    "statement": "The M\u00f6bius function, denoted $\\mu(n)$, is defined as:\n\n- $\\mu(n) = (-1)^{\\omega(n)}$ if $n$ is squarefree (where $\\omega(n)$ is the number of distinct prime factors of $n$)\n\n- $\\mu(n) = 0$ if $n$ is not squarefree.\n\nLet $P(a, b)$ be the number of integers $n$ in the interval $[a, b]$ such that $\\mu(n) = 1$.\n\nLet $N(a, b)$ be the number of integers $n$ in the interval $[a, b]$ such that $\\mu(n) = -1$.\n\nFor example, $P(2,10) = 2$ and $N(2,10) = 4$.\n\nLet $C(n)$ be the number of integer pairs $(a, b)$ such that:\n\n-  $1\\le a \\le b \\le n$,\n\n-  $99 \\cdot N(a, b) \\le 100 \\cdot P(a, b)$, and\n\n-  $99 \\cdot P(a, b) \\le 100 \\cdot N(a, b)$.\n\nFor example, $C(10) = 13$, $C(500) = 16676$ and $C(10\\,000) = 20155319$.\n\nFind $C(20\\,000\\,000)$.\n\nGive your answer modulo $99991$.",
-    "answer": 19852
+    "statement": "The M\u00f6bius function, denoted $\\mu(n)$, is defined as:\n\n- $\\mu(n) = (-1)^{\\omega(n)}$ if $n$ is squarefree (where $\\omega(n)$ is the number of distinct prime factors of $n$)\n\n- $\\mu(n) = 0$ if $n$ is not squarefree.\n\nLet $P(a, b)$ be the number of integers $n$ in the interval $[a, b]$ such that $\\mu(n) = 1$.\n\nLet $N(a, b)$ be the number of integers $n$ in the interval $[a, b]$ such that $\\mu(n) = -1$.\n\nFor example, $P(2,10) = 2$ and $N(2,10) = 4$.\n\nLet $C(n)$ be the number of integer pairs $(a, b)$ such that:\n\n-  $1\\le a \\le b \\le n$,\n\n-  $99 \\cdot N(a, b) \\le 100 \\cdot P(a, b)$, and\n\n-  $99 \\cdot P(a, b) \\le 100 \\cdot N(a, b)$.\n\nFor example, $C(10) = 13$, $C(500) = 16676$ and $C(10\\,000) = 20155319$.\n\nFind $C(20\\,000\\,000)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

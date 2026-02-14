@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-536",
-    "statement": "Let $S(n)$ be the sum of all positive integers $m$ not exceeding $n$ having the following property:\n\n$a^{m + 4} \\equiv a \\pmod m$ for all integers $a$.\n\nThe values of $m \\le 100$ that satisfy this property are $1, 2, 3, 5$ and $21$, thus $S(100) = 1+2+3+5+21 = 32$.\n\nYou are given $S(10^6) = 22868117$.\n\nFind $S(10^{12})$.",
-    "answer": 3557005261906288
+    "statement": "Let $S(n)$ be the sum of all positive integers $m$ not exceeding $n$ having the following property:\n\n$a^{m + 4} \\equiv a \\pmod m$ for all integers $a$.\n\nThe values of $m \\le 100$ that satisfy this property are $1, 2, 3, 5$ and $21$, thus $S(100) = 1+2+3+5+21 = 32$.\n\nYou are given $S(10^6) = 22868117$.\n\nFind $S(10^{12})$."
   },
   "tokens": [
     200006,

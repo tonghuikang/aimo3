@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-322",
-    "statement": "Let $T(m, n)$ be the number of the binomial coefficients $^iC_n$ that are divisible by $10$ for $n \\le i \\lt m$ ($i$, $m$ and $n$ are positive integers).\n\nYou are given that $T(10^9, 10^7-10) = 989697000$.\n\nFind $T(10^{18}, 10^{12}-10)$.\n\nGive your answer modulo $99991$.",
-    "answer": 62111
+    "statement": "Let $T(m, n)$ be the number of the binomial coefficients $^iC_n$ that are divisible by $10$ for $n \\le i \\lt m$ ($i$, $m$ and $n$ are positive integers).\n\nYou are given that $T(10^9, 10^7-10) = 989697000$.\n\nFind $T(10^{18}, 10^{12}-10)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

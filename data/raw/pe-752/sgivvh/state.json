@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-752",
-    "statement": "When $(1+\\sqrt 7)$ is raised to an integral power, $n$, we always get a number of the form $(a+b\\sqrt 7)$.\n\nWe write $(1+\\sqrt 7)^n = \\alpha(n) + \\beta(n)\\sqrt 7$.\n\nFor a given number $x$ we  define $g(x)$ to be the smallest positive integer $n$ such that:\n$$\\begin{align}\n\\alpha(n) &amp;\\equiv 1 \\pmod x\\qquad \\text{and }\\\\\n\\beta(n) &amp;\\equiv 0 \\pmod x\\end{align}\n$$\nand $g(x) = 0$ if there is no such value of $n$. For example, $g(3) = 0$, $g(5) = 12$.\n\nFurther define\n$$ G(N) = \\sum_{x=2}^N g(x)$$\nYou are given $G(10^2) = 28891$ and $G(10^3)  = 13131583$.\n\nFind $G(10^6)$.",
-    "answer": 5610899769745488
+    "statement": "When $(1+\\sqrt 7)$ is raised to an integral power, $n$, we always get a number of the form $(a+b\\sqrt 7)$.\n\nWe write $(1+\\sqrt 7)^n = \\alpha(n) + \\beta(n)\\sqrt 7$.\n\nFor a given number $x$ we  define $g(x)$ to be the smallest positive integer $n$ such that:\n$$\\begin{align}\n\\alpha(n) &amp;\\equiv 1 \\pmod x\\qquad \\text{and }\\\\\n\\beta(n) &amp;\\equiv 0 \\pmod x\\end{align}\n$$\nand $g(x) = 0$ if there is no such value of $n$. For example, $g(3) = 0$, $g(5) = 12$.\n\nFurther define\n$$ G(N) = \\sum_{x=2}^N g(x)$$\nYou are given $G(10^2) = 28891$ and $G(10^3)  = 13131583$.\n\nFind $G(10^6)$."
   },
   "tokens": [
     200006,

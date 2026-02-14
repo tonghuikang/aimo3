@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-730",
-    "statement": "For a non-negative integer $k$, the triple $(p,q,r)$ of positive integers is called a $k$-shifted Pythagorean triple if $$p^2 + q^2 + k = r^2$$\n\n$(p, q, r)$ is said to be primitive if $\\gcd(p, q, r)=1$.\n\nLet $P_k(n)$ be the number of primitive $k$-shifted Pythagorean triples such that $1 \\le p \\le q \\le r$ and $p + q + r \\le n$. \n For example, $P_0(10^4) = 703$ and $P_{20}(10^4) = 1979$. \n\nDefine \n$$\\displaystyle S(m,n)=\\sum_{k=0}^{m}P_k(n).$$\nYou are given that $S(10,10^4) = 10956$. \n\nFind $S(10^2,10^8)$.\n\nGive your answer modulo $99991$.",
-    "answer": 84364
+    "statement": "For a non-negative integer $k$, the triple $(p,q,r)$ of positive integers is called a $k$-shifted Pythagorean triple if $$p^2 + q^2 + k = r^2$$\n\n$(p, q, r)$ is said to be primitive if $\\gcd(p, q, r)=1$.\n\nLet $P_k(n)$ be the number of primitive $k$-shifted Pythagorean triples such that $1 \\le p \\le q \\le r$ and $p + q + r \\le n$. \n For example, $P_0(10^4) = 703$ and $P_{20}(10^4) = 1979$. \n\nDefine \n$$\\displaystyle S(m,n)=\\sum_{k=0}^{m}P_k(n).$$\nYou are given that $S(10,10^4) = 10956$. \n\nFind $S(10^2,10^8)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

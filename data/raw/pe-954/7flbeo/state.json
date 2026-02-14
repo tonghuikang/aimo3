@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-954",
-    "statement": "A positive integer is called heptaphobic if it is not divisible by seven and no number divisible by seven can be produced by swapping two of its digits. Note that leading zeros are not allowed before or after the swap.\n\nFor example, $17$ and $1305$ are heptaphobic, but $14$ and $132$ are not because $14$ and $231$ are divisible by seven.\n\nLet $C(N)$ count heptaphobic numbers smaller than $N$. You are given $C(100) = 74$ and $C(10^4) = 3737$.\n\nFind $C(10^{13})$.\n\nGive your answer modulo $99991$.",
-    "answer": 30108
+    "statement": "A positive integer is called heptaphobic if it is not divisible by seven and no number divisible by seven can be produced by swapping two of its digits. Note that leading zeros are not allowed before or after the swap.\n\nFor example, $17$ and $1305$ are heptaphobic, but $14$ and $132$ are not because $14$ and $231$ are divisible by seven.\n\nLet $C(N)$ count heptaphobic numbers smaller than $N$. You are given $C(100) = 74$ and $C(10^4) = 3737$.\n\nFind $C(10^{13})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

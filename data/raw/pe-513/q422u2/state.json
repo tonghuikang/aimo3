@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-513",
-    "statement": "$ABC$ is an integral sided triangle with sides $a \\le b \\le c$.\n\n$m_C$ is the median connecting $C$ and the midpoint of $AB$. \n\n$F(n)$ is the number of such triangles with  $c \\le n$ for which $m_C$ has integral length as well.\n\n$F(10)=3$ and $F(50)=165$.\n\nFind $F(100000)$.\n\nGive your answer modulo $99991$.",
-    "answer": 82518
+    "statement": "$ABC$ is an integral sided triangle with sides $a \\le b \\le c$.\n\n$m_C$ is the median connecting $C$ and the midpoint of $AB$. \n\n$F(n)$ is the number of such triangles with  $c \\le n$ for which $m_C$ has integral length as well.\n\n$F(10)=3$ and $F(50)=165$.\n\nFind $F(100000)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-830",
-    "statement": "Let $\\displaystyle S(n)=\\sum\\limits_{k=0}^{n}\\binom{n}{k}k^n$.\n\nYou are given, $S(10)=142469423360$.\n\nFind $S(10^{18})$. Submit your answer modulo $83^3 89^3 97^3$.",
-    "answer": 254179446930484376
+    "statement": "Let $\\displaystyle S(n)=\\sum\\limits_{k=0}^{n}\\binom{n}{k}k^n$.\n\nYou are given, $S(10)=142469423360$.\n\nFind $S(10^{18})$. Submit your answer modulo $83^3 89^3 97^3$."
   },
   "tokens": [
     200006,

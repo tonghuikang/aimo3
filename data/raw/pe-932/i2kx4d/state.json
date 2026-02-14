@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-932",
-    "statement": "For the year $2025$\n\n$$2025 = (20 + 25)^2$$\nGiven positive integers $a$ and $b$, the concatenation $ab$ we call a $2025$-number if $ab = (a+b)^2$.\n\nOther examples are $3025$ and $81$.\n\nNote $9801$ is not a $2025$-number because the concatenation of $98$ and $1$ is $981$.\n\nLet $T(n)$ be the sum of all $2025$-numbers with $n$ digits or less. You are given $T(4) = 5131$.\n\nFind $T(16)$.\n\nGive your answer modulo $99991$.",
-    "answer": 36960
+    "statement": "For the year $2025$\n\n$$2025 = (20 + 25)^2$$\nGiven positive integers $a$ and $b$, the concatenation $ab$ we call a $2025$-number if $ab = (a+b)^2$.\n\nOther examples are $3025$ and $81$.\n\nNote $9801$ is not a $2025$-number because the concatenation of $98$ and $1$ is $981$.\n\nLet $T(n)$ be the sum of all $2025$-numbers with $n$ digits or less. You are given $T(4) = 5131$.\n\nFind $T(16)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

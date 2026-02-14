@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-921",
-    "statement": "Consider the following recurrence relation:\n$$\\begin{align}\na_0 &amp;= \\frac{\\sqrt 5 + 1}2\\\\\na_{n+1} &amp;= \\dfrac{a_n(a_n^4 + 10a_n^2 + 5)}{5a_n^4 + 10a_n^2 + 1}\n\\end{align}$$\n\nNote that $a_0$ is the golden ratio.\n\n$a_n$ can always be written in the form $\\dfrac{p_n\\sqrt{5}+1}{q_n}$, where $p_n$ and $q_n$ are positive integers.\n\nLet $s(n)=p_n^5+q_n^5$. So, $s(0)=1^5+2^5=33$.\n\nThe Fibonacci sequence is defined as: $F_1=1$, $F_2=1$, $F_n=F_{n-1}+F_{n-2}$ for $n &gt; 2$.\n\nDefine $\\displaystyle S(m)=\\sum_{i=2}^{m}s(F_i)$.\n\nFind $S(1618034)$. Submit your answer modulo $398874989$.",
-    "answer": 378401935
+    "statement": "Consider the following recurrence relation:\n$$\\begin{align}\na_0 &amp;= \\frac{\\sqrt 5 + 1}2\\\\\na_{n+1} &amp;= \\dfrac{a_n(a_n^4 + 10a_n^2 + 5)}{5a_n^4 + 10a_n^2 + 1}\n\\end{align}$$\n\nNote that $a_0$ is the golden ratio.\n\n$a_n$ can always be written in the form $\\dfrac{p_n\\sqrt{5}+1}{q_n}$, where $p_n$ and $q_n$ are positive integers.\n\nLet $s(n)=p_n^5+q_n^5$. So, $s(0)=1^5+2^5=33$.\n\nThe Fibonacci sequence is defined as: $F_1=1$, $F_2=1$, $F_n=F_{n-1}+F_{n-2}$ for $n &gt; 2$.\n\nDefine $\\displaystyle S(m)=\\sum_{i=2}^{m}s(F_i)$.\n\nFind $S(1618034)$. Submit your answer modulo $398874989$."
   },
   "tokens": [
     200006,

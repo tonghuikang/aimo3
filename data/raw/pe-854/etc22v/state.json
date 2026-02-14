@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-854",
-    "statement": "For every positive integer $n$ the Fibonacci sequence modulo $n$ is periodic. The period depends on the value of $n$.\nThis period is called the Pisano period for $n$, often shortened to $\\pi(n)$.\n\nDefine $M(p)$ as the largest integer $n$ such that $\\pi(n) = p$, and define $M(p) = 1$ if there is no such $n$.\n\nFor example, there are three values of $n$ for which $\\pi(n)$ equals $18$: $19, 38, 76$. Therefore $M(18) = 76$.\n\nLet the product function $P(n)$ be: $$P(n)=\\prod_{p = 1}^{n}M(p).$$\nYou are given: $P(10)=264$.\n\nFind $P(1\\,000\\,000)\\bmod 1\\,234\\,567\\,891$.",
-    "answer": 29894398
+    "statement": "For every positive integer $n$ the Fibonacci sequence modulo $n$ is periodic. The period depends on the value of $n$.\nThis period is called the Pisano period for $n$, often shortened to $\\pi(n)$.\n\nDefine $M(p)$ as the largest integer $n$ such that $\\pi(n) = p$, and define $M(p) = 1$ if there is no such $n$.\n\nFor example, there are three values of $n$ for which $\\pi(n)$ equals $18$: $19, 38, 76$. Therefore $M(18) = 76$.\n\nLet the product function $P(n)$ be: $$P(n)=\\prod_{p = 1}^{n}M(p).$$\nYou are given: $P(10)=264$.\n\nFind $P(1\\,000\\,000)\\bmod 1\\,234\\,567\\,891$."
   },
   "tokens": [
     200006,

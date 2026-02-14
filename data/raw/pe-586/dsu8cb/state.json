@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-586",
-    "statement": "The number $209$ can be expressed as $a^2 + 3ab + b^2$ in two distinct ways:\n\n$ \\qquad 209 = 8^2 + 3\\cdot 8\\cdot 5 + 5^2$ \n\n$ \\qquad 209 = 13^2 + 3\\cdot13\\cdot 1 + 1^2$\n\nLet $f(n,r)$ be the number of integers $k$ not exceeding $n$ that can be expressed as $k=a^2 + 3ab + b^2$, with $a \\gt b \\gt 0$ integers, in exactly $r$ different ways.\n\nYou are given that $f(10^5, 4) = 237$ and $f(10^8, 6) = 59517$.\n\nFind $f(10^{15}, 40)$.\n\nGive your answer modulo $99991$.",
-    "answer": 97629
+    "statement": "The number $209$ can be expressed as $a^2 + 3ab + b^2$ in two distinct ways:\n\n$ \\qquad 209 = 8^2 + 3\\cdot 8\\cdot 5 + 5^2$ \n\n$ \\qquad 209 = 13^2 + 3\\cdot13\\cdot 1 + 1^2$\n\nLet $f(n,r)$ be the number of integers $k$ not exceeding $n$ that can be expressed as $k=a^2 + 3ab + b^2$, with $a \\gt b \\gt 0$ integers, in exactly $r$ different ways.\n\nYou are given that $f(10^5, 4) = 237$ and $f(10^8, 6) = 59517$.\n\nFind $f(10^{15}, 40)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

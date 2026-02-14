@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-379",
-    "statement": "Let $f(n)$ be the number of couples $(x, y)$ with $x$ and $y$ positive integers, $x \\le y$ and the least common multiple of $x$ and $y$ equal to $n$.\n\nLet $g$ be the summatory function of $f$, i.e.: \n$g(n) = \\sum f(i)$ for $1 \\le i \\le n$.\n\nYou are given that $g(10^6) = 37429395$.\n\nFind $g(10^{12})$.\n\nGive your answer modulo $99991$.",
-    "answer": 82334
+    "statement": "Let $f(n)$ be the number of couples $(x, y)$ with $x$ and $y$ positive integers, $x \\le y$ and the least common multiple of $x$ and $y$ equal to $n$.\n\nLet $g$ be the summatory function of $f$, i.e.: \n$g(n) = \\sum f(i)$ for $1 \\le i \\le n$.\n\nYou are given that $g(10^6) = 37429395$.\n\nFind $g(10^{12})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

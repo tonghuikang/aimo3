@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-858",
-    "statement": "Define $G(N) = \\sum_S \\operatorname{lcm}(S)$ where $S$ ranges through all subsets of $\\{1, \\dots, N\\}$ and $\\operatorname{lcm}$ denotes the lowest common multiple. Note that the $\\operatorname{lcm}$ of the empty set is $1$.\n\nYou are given $G(5) = 528$ and $G(20) = 8463108648960$.\n\nFind $G(800)$. Give your answer modulo $10^9 + 7$.",
-    "answer": 973077199
+    "statement": "Define $G(N) = \\sum_S \\operatorname{lcm}(S)$ where $S$ ranges through all subsets of $\\{1, \\dots, N\\}$ and $\\operatorname{lcm}$ denotes the lowest common multiple. Note that the $\\operatorname{lcm}$ of the empty set is $1$.\n\nYou are given $G(5) = 528$ and $G(20) = 8463108648960$.\n\nFind $G(800)$. Give your answer modulo $10^9 + 7$."
   },
   "tokens": [
     200006,

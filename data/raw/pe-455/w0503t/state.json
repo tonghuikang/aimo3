@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-455",
-    "statement": "Let $f(n)$ be the largest positive integer $x$ less than $10^9$ such that the last $9$ digits of $n^x$ form the number $x$ (including leading zeros), or zero if no such integer exists.\n\nFor example:\n\n- $f(4) = 411728896$ ($4^{411728896} = \\cdots 490\\underline{411728896}$) \n\n- $f(10) = 0$\n\n- $f(157) = 743757$ ($157^{743757} = \\cdots 567\\underline{000743757}$)\n\n- $\\sum_{2 \\le n \\le 10^3} f(n) = 442530011399$\n\nFind $\\sum_{2 \\le n \\le 10^6}f(n)$.",
-    "answer": 450186511399999
+    "statement": "Let $f(n)$ be the largest positive integer $x$ less than $10^9$ such that the last $9$ digits of $n^x$ form the number $x$ (including leading zeros), or zero if no such integer exists.\n\nFor example:\n\n- $f(4) = 411728896$ ($4^{411728896} = \\cdots 490\\underline{411728896}$) \n\n- $f(10) = 0$\n\n- $f(157) = 743757$ ($157^{743757} = \\cdots 567\\underline{000743757}$)\n\n- $\\sum_{2 \\le n \\le 10^3} f(n) = 442530011399$\n\nFind $\\sum_{2 \\le n \\le 10^6}f(n)$."
   },
   "tokens": [
     200006,

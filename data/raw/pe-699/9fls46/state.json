@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-699",
-    "statement": "Let $\\sigma(n)$ be the sum of all the divisors of the positive integer $n$, for example:\n\n$\\sigma(10) = 1+2+5+10 = 18$.\n\nDefine $T(N)$ to be the sum of all numbers $n \\le N$ such that when the fraction $\\frac{\\sigma(n)}{n}$ is written in its lowest form $\\frac ab$, the denominator is a power of 3 i.e. $b = 3^k, k &gt; 0$.\n\nYou are given $T(100) = 270$ and $T(10^6) = 26089287$.\n\nFind $T(10^{14})$.\n\nGive your answer modulo $99991$.",
-    "answer": 68805
+    "statement": "Let $\\sigma(n)$ be the sum of all the divisors of the positive integer $n$, for example:\n\n$\\sigma(10) = 1+2+5+10 = 18$.\n\nDefine $T(N)$ to be the sum of all numbers $n \\le N$ such that when the fraction $\\frac{\\sigma(n)}{n}$ is written in its lowest form $\\frac ab$, the denominator is a power of 3 i.e. $b = 3^k, k &gt; 0$.\n\nYou are given $T(100) = 270$ and $T(10^6) = 26089287$.\n\nFind $T(10^{14})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

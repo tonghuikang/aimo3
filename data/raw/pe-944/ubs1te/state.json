@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-944",
-    "statement": "Given a set $E$ of positive integers, an element $x$ of $E$ is called an element divisor (elevisor) of $E$ if $x$ divides another element of $E$.\n\nThe sum of all elevisors of $E$ is denoted $\\operatorname{sev}(E)$.\n\nFor example, $\\operatorname{sev}(\\{1, 2, 5, 6\\}) = 1 + 2 = 3$.\n\nLet $S(n)$ be the sum of $\\operatorname{sev}(E)$ for all subsets $E$ of $\\{1, 2, \\dots, n\\}$.\n\nYou are given $S(10) = 4927$.\n\nFind $S(10^{14}) \\bmod 1234567891$.",
-    "answer": 1228599511
+    "statement": "Given a set $E$ of positive integers, an element $x$ of $E$ is called an element divisor (elevisor) of $E$ if $x$ divides another element of $E$.\n\nThe sum of all elevisors of $E$ is denoted $\\operatorname{sev}(E)$.\n\nFor example, $\\operatorname{sev}(\\{1, 2, 5, 6\\}) = 1 + 2 = 3$.\n\nLet $S(n)$ be the sum of $\\operatorname{sev}(E)$ for all subsets $E$ of $\\{1, 2, \\dots, n\\}$.\n\nYou are given $S(10) = 4927$.\n\nFind $S(10^{14}) \\bmod 1234567891$."
   },
   "tokens": [
     200006,

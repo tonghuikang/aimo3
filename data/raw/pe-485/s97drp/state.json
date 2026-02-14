@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-485",
-    "statement": "Let $d(n)$ be the number of divisors of $n$.\n\nLet $M(n,k)$ be the maximum value of $d(j)$ for $n \\le j \\le n+k-1$.\n\nLet $S(u,k)$ be the sum of $M(n,k)$ for $1 \\le n \\le u-k+1$.\n\nYou are given that $S(1000,10)=17176$.\n\nFind $S(100\\,000\\,000, 100\\,000)$.\n\nGive your answer modulo $99991$.",
-    "answer": 90062
+    "statement": "Let $d(n)$ be the number of divisors of $n$.\n\nLet $M(n,k)$ be the maximum value of $d(j)$ for $n \\le j \\le n+k-1$.\n\nLet $S(u,k)$ be the sum of $M(n,k)$ for $1 \\le n \\le u-k+1$.\n\nYou are given that $S(1000,10)=17176$.\n\nFind $S(100\\,000\\,000, 100\\,000)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

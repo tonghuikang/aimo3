@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-372",
-    "statement": "Let $R(M, N)$ be the number of lattice points $(x, y)$ which satisfy $M\\!\\lt\\!x\\!\\le\\!N$, $M\\!\\lt\\!y\\!\\le\\!N$ and $\\large\\left\\lfloor\\!\\frac{y^2}{x^2}\\!\\right\\rfloor$ is odd.\n\nWe can verify that $R(0, 100) = 3019$ and $R(100, 10000) = 29750422$.\n\nFind $R(2\\cdot10^6, 10^9)$.\n\nNote: $\\lfloor x\\rfloor$ represents the floor function.\n\nGive your answer modulo $99991$.",
-    "answer": 81156
+    "statement": "Let $R(M, N)$ be the number of lattice points $(x, y)$ which satisfy $M\\!\\lt\\!x\\!\\le\\!N$, $M\\!\\lt\\!y\\!\\le\\!N$ and $\\large\\left\\lfloor\\!\\frac{y^2}{x^2}\\!\\right\\rfloor$ is odd.\n\nWe can verify that $R(0, 100) = 3019$ and $R(100, 10000) = 29750422$.\n\nFind $R(2\\cdot10^6, 10^9)$.\n\nNote: $\\lfloor x\\rfloor$ represents the floor function.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-918",
-    "statement": "The sequence $a_n$ is defined by $a_1=1$, and then recursively for $n\\geq1$:\n$$\\begin{align*}\na_{2n}  &amp;=2a_n\\\\\na_{2n+1} &amp;=a_n-3a_{n+1}\n\\end{align*}$$\nThe first ten terms are $1, 2, -5, 4, 17, -10, -17, 8, -47, 34$.\n\nDefine $\\displaystyle S(N) = \\sum_{n=1}^N a_n$. You are given $S(10) = -13$.\n\nFind $S(10^{12})$.\n\nGive your answer modulo $99991$.",
-    "answer": 67703
+    "statement": "The sequence $a_n$ is defined by $a_1=1$, and then recursively for $n\\geq1$:\n$$\\begin{align*}\na_{2n}  &amp;=2a_n\\\\\na_{2n+1} &amp;=a_n-3a_{n+1}\n\\end{align*}$$\nThe first ten terms are $1, 2, -5, 4, 17, -10, -17, 8, -47, 34$.\n\nDefine $\\displaystyle S(N) = \\sum_{n=1}^N a_n$. You are given $S(10) = -13$.\n\nFind $S(10^{12})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

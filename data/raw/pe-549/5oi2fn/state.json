@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-549",
-    "statement": "The smallest number $m$ such that $10$ divides $m!$ is $m=5$.\n\nThe smallest number $m$ such that $25$ divides $m!$ is $m=10$.\n \n\nLet $s(n)$ be the smallest number $m$ such that $n$ divides $m!$.\n\nSo $s(10)=5$ and $s(25)=10$.\n\nLet $S(n)$ be $\\sum s(i)$ for $2 \\le i \\le n$.\n\n$S(100)=2012$.\n\nFind $S(10^8)$.\n\nGive your answer modulo $99991$.",
-    "answer": 57787
+    "statement": "The smallest number $m$ such that $10$ divides $m!$ is $m=5$.\n\nThe smallest number $m$ such that $25$ divides $m!$ is $m=10$.\n \n\nLet $s(n)$ be the smallest number $m$ such that $n$ divides $m!$.\n\nSo $s(10)=5$ and $s(25)=10$.\n\nLet $S(n)$ be $\\sum s(i)$ for $2 \\le i \\le n$.\n\n$S(100)=2012$.\n\nFind $S(10^8)$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

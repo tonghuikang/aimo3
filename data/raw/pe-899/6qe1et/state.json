@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-899",
-    "statement": "Two players play a game with two piles of stones. The players alternately take stones from one or both piles, subject to:\n\n- the total number of stones taken is equal to the size of the smallest pile before the move;\n\n- the move cannot take all the stones from a pile.\n\nThe player that is unable to move loses.\n\nFor example, if the piles are of sizes 3 and 5 then there are three possible moves.\n$$(3,5) \\xrightarrow{(2,1)} (1,4)\\qquad\\qquad (3,5) \\xrightarrow{(1,2)} (2,3)\\qquad\\qquad (3,5) \\xrightarrow{(0,3)} (3,2)$$\n\nLet $L(n)$ be the number of ordered pairs $(a,b)$ with $1 \\leq a,b \\leq n$ such that the initial game position with piles of sizes $a$ and $b$ is losing for the first player assuming optimal play.\n\nYou are given $L(7) = 21$ and $L(7^2) = 221$.\n\nFind $L(7^{17})$.\n\nGive your answer modulo $99991$.",
-    "answer": 97849
+    "statement": "Two players play a game with two piles of stones. The players alternately take stones from one or both piles, subject to:\n\n- the total number of stones taken is equal to the size of the smallest pile before the move;\n\n- the move cannot take all the stones from a pile.\n\nThe player that is unable to move loses.\n\nFor example, if the piles are of sizes 3 and 5 then there are three possible moves.\n$$(3,5) \\xrightarrow{(2,1)} (1,4)\\qquad\\qquad (3,5) \\xrightarrow{(1,2)} (2,3)\\qquad\\qquad (3,5) \\xrightarrow{(0,3)} (3,2)$$\n\nLet $L(n)$ be the number of ordered pairs $(a,b)$ with $1 \\leq a,b \\leq n$ such that the initial game position with piles of sizes $a$ and $b$ is losing for the first player assuming optimal play.\n\nYou are given $L(7) = 21$ and $L(7^2) = 221$.\n\nFind $L(7^{17})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

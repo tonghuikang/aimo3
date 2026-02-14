@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-529",
-    "statement": "A $10$-substring of a number is a substring of its digits that sum to $10$. For example, the $10$-substrings of the number $3523014$ are:\n\n- 3523014\n\n- 3523014\n\n- 3523014\n\n- 3523014\n\nA number is called $10$-substring-friendly if every one of its digits belongs to a $10$-substring. For example, $3523014$ is $10$-substring-friendly, but $28546$ is not.\n\nLet $T(n)$ be the number of $10$-substring-friendly numbers from $1$ to $10^n$ (inclusive).\n\nFor example $T(2) = 9$ and $T(5) = 3492$.\n\nFind $T(10^{18}) \\bmod 1\\,000\\,000\\,007$.",
-    "answer": 23624465
+    "statement": "A $10$-substring of a number is a substring of its digits that sum to $10$. For example, the $10$-substrings of the number $3523014$ are:\n\n- 3523014\n\n- 3523014\n\n- 3523014\n\n- 3523014\n\nA number is called $10$-substring-friendly if every one of its digits belongs to a $10$-substring. For example, $3523014$ is $10$-substring-friendly, but $28546$ is not.\n\nLet $T(n)$ be the number of $10$-substring-friendly numbers from $1$ to $10^n$ (inclusive).\n\nFor example $T(2) = 9$ and $T(5) = 3492$.\n\nFind $T(10^{18}) \\bmod 1\\,000\\,000\\,007$."
   },
   "tokens": [
     200006,

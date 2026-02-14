@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-320",
-    "statement": "Let $N(i)$ be the smallest integer $n$ such that $n!$ is divisible by $(i!)^{1234567890}$\n\nLet $S(u)=\\sum N(i)$ for $10 \\le i \\le u$.\n\n$S(1000)=614538266565663$.\n\nFind $S(1\\,000\\,000) \\bmod 10^{18}$.",
-    "answer": 278157919195482643
+    "statement": "Let $N(i)$ be the smallest integer $n$ such that $n!$ is divisible by $(i!)^{1234567890}$\n\nLet $S(u)=\\sum N(i)$ for $10 \\le i \\le u$.\n\n$S(1000)=614538266565663$.\n\nFind $S(1\\,000\\,000) \\bmod 10^{18}$."
   },
   "tokens": [
     200006,

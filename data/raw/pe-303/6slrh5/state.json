@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-303",
-    "statement": "For a positive integer $n$, define $f(n)$ as the least positive multiple of $n$ that, written in base $10$, uses only digits $\\le 2$.\n\nThus $f(2)=2$, $f(3)=12$, $f(7)=21$, $f(42)=210$, $f(89)=1121222$.\n\nAlso, $\\sum \\limits_{n = 1}^{100} {\\dfrac{f(n)}{n}} = 11363107$.\n\nFind $\\sum \\limits_{n=1}^{10000} {\\dfrac{f(n)}{n}}$.\n\nGive your answer modulo $99991$.",
-    "answer": 54449
+    "statement": "For a positive integer $n$, define $f(n)$ as the least positive multiple of $n$ that, written in base $10$, uses only digits $\\le 2$.\n\nThus $f(2)=2$, $f(3)=12$, $f(7)=21$, $f(42)=210$, $f(89)=1121222$.\n\nAlso, $\\sum \\limits_{n = 1}^{100} {\\dfrac{f(n)}{n}} = 11363107$.\n\nFind $\\sum \\limits_{n=1}^{10000} {\\dfrac{f(n)}{n}}$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,

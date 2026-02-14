@@ -1,8 +1,7 @@
 {
   "problem": {
     "id": "pe-845",
-    "statement": "Let $D(n)$ be the $n$-th positive integer that has the sum of its digits a prime.\n\nFor example, $D(61) = 157$ and $D(10^8) = 403539364$.\n\nFind $D(10^{16})$.\n\nGive your answer modulo $99991$.",
-    "answer": 38822
+    "statement": "Let $D(n)$ be the $n$-th positive integer that has the sum of its digits a prime.\n\nFor example, $D(61) = 157$ and $D(10^8) = 403539364$.\n\nFind $D(10^{16})$.\n\nGive your answer modulo $99991$."
   },
   "tokens": [
     200006,
