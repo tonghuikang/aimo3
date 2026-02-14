@@ -492,8 +492,8 @@
                     <th data-tooltip="Findings file exists and is non-empty" onclick="sortTable('has_findings')">Findings</th>
                     <th onclick="sortTable('reward')">Accuracy</th>
                     <th onclick="sortTable('prompt_tokens')">Prompt</th>
-                    <th data-tooltip="Token length of shortest correct completion" onclick="sortTable('shortest')">Shortest</th>
-                    <th data-tooltip="Token length of longest correct completion" onclick="sortTable('longest')">Longest</th>
+                    <th data-tooltip="Token length of shortest correct (incorrect) completion" onclick="sortTable('shortest')">Shortest</th>
+                    <th data-tooltip="Token length of longest correct (incorrect) completion" onclick="sortTable('longest')">Longest</th>
                 </tr>
             </thead>
             <tbody id="table-body"></tbody>
@@ -727,8 +727,8 @@
                 <td>${item.has_findings ? `<a href="data/annotate/${item.problem_id}/findings.txt" style="text-decoration:none" onclick="event.stopPropagation()">✓</a>` : ''}</td>
                 <td><span class="reward-badge ${item.reward >= 1 ? 'high' : item.reward > 0 ? 'medium' : 'low'}">${item.reward.toFixed(3)}</span></td>
                 <td>${item.prompt_tokens.toLocaleString()}</td>
-                <td>${item.shortest != null ? item.shortest.toLocaleString() : '—'}</td>
-                <td>${item.longest != null ? item.longest.toLocaleString() : '—'}</td>
+                <td>${item.shortest != null ? (item.shortest < 0 ? '(' + Math.abs(item.shortest).toLocaleString() + ')' : item.shortest.toLocaleString()) : '—'}</td>
+                <td>${item.longest != null ? (item.longest < 0 ? '(' + Math.abs(item.longest).toLocaleString() + ')' : item.longest.toLocaleString()) : '—'}</td>
             `;
 
             // Cache the TR element
